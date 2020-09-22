@@ -16,4 +16,16 @@
     <className>com/google/**/*OrBuilder</className>
     <method>boolean has*(*)</method>
   </difference>
+
+  <!-- TODO: remove after 2.0.0 -->
+  <difference>
+    <differenceType>6011</differenceType>
+    <className>com/google/api/Endpoint</className>
+    <field>FEATURES_FIELD_NUMBER</field>
+  </difference>
+  <difference>
+    <differenceType>7002</differenceType>
+    <className>com/google/api/Endpoint*</className>
+    <method>* *Features*(*)</method>
+  </difference>
 </differences>
