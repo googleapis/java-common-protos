@@ -19,7 +19,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "969a2340e74c73227e7c1638ed7650abcac22ee4"
+        "sha": "55cdc844877d97139f25004229842624a6a86a02"
       }
     }
   ],
@@ -28,6 +28,7 @@
     ".github/ISSUE_TEMPLATE/feature_request.md",
     ".github/ISSUE_TEMPLATE/support_request.md",
     ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ci.yaml",
     ".github/release-please.yml",
     ".github/trusted-contribution.yml",
     ".kokoro/build.bat",
