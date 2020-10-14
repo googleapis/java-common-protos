@@ -1,11 +1,74 @@
-# Google Common Protos
+# Google Common Protos Client for Java
 
-Java protobuf classes for Google's common protos.
+Java idiomatic client for [Common Protos][product-docs].
 
 [![Maven][maven-version-image]][maven-version-link]
 ![Stability][stability-image]
 
+- [Product Documentation][product-docs]
 - [Client Library Documentation][javadocs]
+
+## Quickstart
+
+
+If you are using Maven, add this to your pom.xml file:
+
+```xml
+<dependency>
+  <groupId>com.google.api.grpc</groupId>
+  <artifactId>proto-google-common-protos</artifactId>
+  <version>1.18.1</version>
+</dependency>
+```
+
+If you are using Gradle, add this to your dependencies
+```Groovy
+compile 'com.google.api.grpc:proto-google-common-protos:1.18.1'
+```
+If you are using SBT, add this to your dependencies
+```Scala
+libraryDependencies += "com.google.api.grpc" % "proto-google-common-protos" % "1.18.1"
+```
+
+## Authentication
+
+See the [Authentication][authentication] section in the base directory's README.
+
+## Getting Started
+
+### Prerequisites
+
+You will need a [Google Cloud Platform Console][developer-console] project with the Common Protos [API enabled][enable-api].
+You will need to [enable billing][enable-billing] to use Google Common Protos.
+[Follow these instructions][create-project] to get your project set up. You will also need to set up the local development environment by
+[installing the Google Cloud SDK][cloud-sdk] and running the following commands in command line:
+`gcloud auth login` and `gcloud config set project [YOUR PROJECT ID]`.
+
+### Installation and setup
+
+You'll need to obtain the `proto-google-common-protos` library.  See the [Quickstart](#quickstart) section
+to add `proto-google-common-protos` as a dependency in your code.
+
+## About Common Protos
+
+
+[Common Protos][product-docs] n/a
+
+See the [Common Protos client library docs][javadocs] to learn how to
+use this Common Protos Client Library.
+
+
+
+
+
+
+## Troubleshooting
+
+To get help, follow the instructions in the [shared Troubleshooting document][troubleshooting].
+
+## Transport
+
+Common Protos uses gRPC for the transport layer.
 
 ## Java Versions
 
@@ -13,9 +76,12 @@ Java 7 or above is required for using this client.
 
 ## Versioning
 
+
 This library follows [Semantic Versioning](http://semver.org/).
 
+
 ## Contributing
+
 
 Contributions to this library are always welcome and highly encouraged.
 
@@ -31,15 +97,16 @@ Apache 2.0 - See [LICENSE][license] for more information.
 
 ## CI Status
 
-| Java Version   | Status                                                    |
-| -------------- | --------------------------------------------------------- |
-| Java 7         | [![Kokoro CI][kokoro-badge-image-1]][kokoro-badge-link-1] |
-| Java 8         | [![Kokoro CI][kokoro-badge-image-2]][kokoro-badge-link-2] |
-| Java 8 OSX     | [![Kokoro CI][kokoro-badge-image-3]][kokoro-badge-link-3] |
-| Java 8 Windows | [![Kokoro CI][kokoro-badge-image-4]][kokoro-badge-link-4] |
-| Java 11        | [![Kokoro CI][kokoro-badge-image-5]][kokoro-badge-link-5] |
+Java Version | Status
+------------ | ------
+Java 7 | [![Kokoro CI][kokoro-badge-image-1]][kokoro-badge-link-1]
+Java 8 | [![Kokoro CI][kokoro-badge-image-2]][kokoro-badge-link-2]
+Java 8 OSX | [![Kokoro CI][kokoro-badge-image-3]][kokoro-badge-link-3]
+Java 8 Windows | [![Kokoro CI][kokoro-badge-image-4]][kokoro-badge-link-4]
+Java 11 | [![Kokoro CI][kokoro-badge-image-5]][kokoro-badge-link-5]
 
-[javadocs]: https://googleapis.dev/java/google-common-protos/latest/index.html
+[product-docs]: n/a
+[javadocs]: https://googleapis.dev/java/proto-google-common-protos/latest/index.html
 [kokoro-badge-image-1]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-common-protos/java7.svg
 [kokoro-badge-link-1]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-common-protos/java7.html
 [kokoro-badge-image-2]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-common-protos/java8.svg
@@ -62,4 +129,6 @@ Apache 2.0 - See [LICENSE][license] for more information.
 [code-of-conduct]: https://github.com/googleapis/java-common-protos/blob/master/CODE_OF_CONDUCT.md#contributor-code-of-conduct
 [license]: https://github.com/googleapis/java-common-protos/blob/master/LICENSE
 [enable-billing]: https://cloud.google.com/apis/docs/getting-started#enabling_billing
+
 [libraries-bom]: https://github.com/GoogleCloudPlatform/cloud-opensource-java/wiki/The-Google-Cloud-Platform-Libraries-BOM
+[shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
