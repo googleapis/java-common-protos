@@ -4,7 +4,7 @@
   <groupId>com.google.api.grpc</groupId>
   <artifactId>google-common-protos-parent</artifactId>
   <packaging>pom</packaging>
-  <version>2.0.1-SNAPSHOT</version><!-- {x-version-update:proto-google-common-protos:current} -->
+  <version>2.0.1</version><!-- {x-version-update:proto-google-common-protos:current} -->
   <name>Google Common Protos Parent</name>
   <url>https://github.com/googleapis/java-iam</url>
   <description>
@@ -14,7 +14,7 @@
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-shared-config</artifactId>
-    <version>0.9.3</version>
+    <version>0.9.4</version>
   </parent>
 
   <developers>
@@ -66,8 +66,8 @@
     <google.common-protos.version>1.17.0</google.common-protos.version>
     <protobuf.version>3.13.0</protobuf.version>
     <junit.version>4.13.1</junit.version>
-    <grpc.version>1.32.2</grpc.version>
-    <guava.version>29.0-android</guava.version>
+    <grpc.version>1.33.1</grpc.version>
+    <guava.version>30.0-android</guava.version>
   </properties>
 
   <dependencyManagement>
@@ -89,7 +89,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-common-protos</artifactId>
-        <version>2.0.1-SNAPSHOT</version><!-- {x-version-update:proto-google-common-protos:current} -->
+        <version>2.0.1</version><!-- {x-version-update:proto-google-common-protos:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.guava</groupId>
