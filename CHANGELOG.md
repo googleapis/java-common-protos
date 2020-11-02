@@ -1,5 +1,13 @@
 # Changelog
 
+### [2.0.2](https://www.github.com/googleapis/java-common-protos/compare/v2.0.1...v2.0.2) (2020-11-02)
+
+
+### Documentation
+
+* regenerate javadocs from protos ([#69](https://www.github.com/googleapis/java-common-protos/issues/69)) ([1759fe7](https://www.github.com/googleapis/java-common-protos/commit/1759fe7650869500e0d7b712fe8ef1bcc346d27a))
+* Update inclusive language in the documentation. Also other latest doc updates. ([#78](https://www.github.com/googleapis/java-common-protos/issues/78)) ([fda2e7b](https://www.github.com/googleapis/java-common-protos/commit/fda2e7be4961ef27fc0908f5dffd63b6248f0507))
+
 ### [2.0.1](https://www.github.com/googleapis/java-common-protos/compare/v2.0.0...v2.0.1) (2020-11-02)
 
 
