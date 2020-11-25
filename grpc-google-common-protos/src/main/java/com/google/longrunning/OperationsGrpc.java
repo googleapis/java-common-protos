@@ -22,20 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * Manages long-running operations with an API service.
- * When an API method normally takes long time to complete, it can be designed
- * to return [Operation][google.longrunning.Operation] to the client, and the client can use this
- * interface to receive the real response asynchronously by polling the
- * operation resource, or pass the operation resource to another API (such as
- * Google Cloud Pub/Sub API) to receive the response.  Any API service that
- * returns long-running operations should implement the `Operations` interface
- * so developers can have a consistent client experience.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/longrunning/operations.proto")
@@ -294,37 +281,10 @@ public final class OperationsGrpc {
     return OperationsFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages long-running operations with an API service.
-   * When an API method normally takes long time to complete, it can be designed
-   * to return [Operation][google.longrunning.Operation] to the client, and the client can use this
-   * interface to receive the real response asynchronously by polling the
-   * operation resource, or pass the operation resource to another API (such as
-   * Google Cloud Pub/Sub API) to receive the response.  Any API service that
-   * returns long-running operations should implement the `Operations` interface
-   * so developers can have a consistent client experience.
-   * </pre>
-   */
+  /** */
   public abstract static class OperationsImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists operations that match the specified filter in the request. If the
-     * server doesn't support this method, it returns `UNIMPLEMENTED`.
-     * NOTE: the `name` binding allows API services to override the binding
-     * to use different resource name schemes, such as `users/&#42;&#47;operations`. To
-     * override the binding, API services can add a binding such as
-     * `"/v1/{name=users/&#42;}/operations"` to their service configuration.
-     * For backwards compatibility, the default name includes the operations
-     * collection id, however overriding users must ensure the name binding
-     * is the parent resource, without the operations collection id.
-     * </pre>
-     */
+    /** */
     public void listOperations(
         com.google.longrunning.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.ListOperationsResponse>
@@ -332,74 +292,28 @@ public final class OperationsGrpc {
       asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the latest state of a long-running operation.  Clients can use this
-     * method to poll the operation result at intervals as recommended by the API
-     * service.
-     * </pre>
-     */
+    /** */
     public void getOperation(
         com.google.longrunning.GetOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getGetOperationMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a long-running operation. This method indicates that the client is
-     * no longer interested in the operation result. It does not cancel the
-     * operation. If the server doesn't support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.
-     * </pre>
-     */
+    /** */
     public void deleteOperation(
         com.google.longrunning.DeleteOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteOperationMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts asynchronous cancellation on a long-running operation.  The server
-     * makes a best effort to cancel the operation, but success is not
-     * guaranteed.  If the server doesn't support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
-     * [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
-     * other methods to check whether the cancellation succeeded or whether the
-     * operation completed despite cancellation. On successful cancellation,
-     * the operation is not deleted; instead, it becomes an operation with
-     * an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-     * corresponding to `Code.CANCELLED`.
-     * </pre>
-     */
+    /** */
     public void cancelOperation(
         com.google.longrunning.CancelOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getCancelOperationMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Waits for the specified long-running operation until it is done or reaches
-     * at most a specified timeout, returning the latest state.  If the operation
-     * is already done, the latest state is immediately returned.  If the timeout
-     * specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
-     * timeout is used.  If the server does not support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.
-     * Note that this method is on a best-effort basis.  It may return the latest
-     * state before the specified timeout (including immediately), meaning even an
-     * immediate response is no guarantee that the operation is done.
-     * </pre>
-     */
+    /** */
     public void waitOperation(
         com.google.longrunning.WaitOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -444,20 +358,7 @@ public final class OperationsGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages long-running operations with an API service.
-   * When an API method normally takes long time to complete, it can be designed
-   * to return [Operation][google.longrunning.Operation] to the client, and the client can use this
-   * interface to receive the real response asynchronously by polling the
-   * operation resource, or pass the operation resource to another API (such as
-   * Google Cloud Pub/Sub API) to receive the response.  Any API service that
-   * returns long-running operations should implement the `Operations` interface
-   * so developers can have a consistent client experience.
-   * </pre>
-   */
+  /** */
   public static final class OperationsStub extends io.grpc.stub.AbstractAsyncStub<OperationsStub> {
     private OperationsStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -468,21 +369,7 @@ public final class OperationsGrpc {
       return new OperationsStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists operations that match the specified filter in the request. If the
-     * server doesn't support this method, it returns `UNIMPLEMENTED`.
-     * NOTE: the `name` binding allows API services to override the binding
-     * to use different resource name schemes, such as `users/&#42;&#47;operations`. To
-     * override the binding, API services can add a binding such as
-     * `"/v1/{name=users/&#42;}/operations"` to their service configuration.
-     * For backwards compatibility, the default name includes the operations
-     * collection id, however overriding users must ensure the name binding
-     * is the parent resource, without the operations collection id.
-     * </pre>
-     */
+    /** */
     public void listOperations(
         com.google.longrunning.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.ListOperationsResponse>
@@ -493,15 +380,7 @@ public final class OperationsGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the latest state of a long-running operation.  Clients can use this
-     * method to poll the operation result at intervals as recommended by the API
-     * service.
-     * </pre>
-     */
+    /** */
     public void getOperation(
         com.google.longrunning.GetOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -511,16 +390,7 @@ public final class OperationsGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a long-running operation. This method indicates that the client is
-     * no longer interested in the operation result. It does not cancel the
-     * operation. If the server doesn't support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.
-     * </pre>
-     */
+    /** */
     public void deleteOperation(
         com.google.longrunning.DeleteOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -530,22 +400,7 @@ public final class OperationsGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts asynchronous cancellation on a long-running operation.  The server
-     * makes a best effort to cancel the operation, but success is not
-     * guaranteed.  If the server doesn't support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
-     * [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
-     * other methods to check whether the cancellation succeeded or whether the
-     * operation completed despite cancellation. On successful cancellation,
-     * the operation is not deleted; instead, it becomes an operation with
-     * an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-     * corresponding to `Code.CANCELLED`.
-     * </pre>
-     */
+    /** */
     public void cancelOperation(
         com.google.longrunning.CancelOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -555,21 +410,7 @@ public final class OperationsGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Waits for the specified long-running operation until it is done or reaches
-     * at most a specified timeout, returning the latest state.  If the operation
-     * is already done, the latest state is immediately returned.  If the timeout
-     * specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
-     * timeout is used.  If the server does not support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.
-     * Note that this method is on a best-effort basis.  It may return the latest
-     * state before the specified timeout (including immediately), meaning even an
-     * immediate response is no guarantee that the operation is done.
-     * </pre>
-     */
+    /** */
     public void waitOperation(
         com.google.longrunning.WaitOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -580,20 +421,7 @@ public final class OperationsGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages long-running operations with an API service.
-   * When an API method normally takes long time to complete, it can be designed
-   * to return [Operation][google.longrunning.Operation] to the client, and the client can use this
-   * interface to receive the real response asynchronously by polling the
-   * operation resource, or pass the operation resource to another API (such as
-   * Google Cloud Pub/Sub API) to receive the response.  Any API service that
-   * returns long-running operations should implement the `Operations` interface
-   * so developers can have a consistent client experience.
-   * </pre>
-   */
+  /** */
   public static final class OperationsBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<OperationsBlockingStub> {
     private OperationsBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -606,111 +434,38 @@ public final class OperationsGrpc {
       return new OperationsBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists operations that match the specified filter in the request. If the
-     * server doesn't support this method, it returns `UNIMPLEMENTED`.
-     * NOTE: the `name` binding allows API services to override the binding
-     * to use different resource name schemes, such as `users/&#42;&#47;operations`. To
-     * override the binding, API services can add a binding such as
-     * `"/v1/{name=users/&#42;}/operations"` to their service configuration.
-     * For backwards compatibility, the default name includes the operations
-     * collection id, however overriding users must ensure the name binding
-     * is the parent resource, without the operations collection id.
-     * </pre>
-     */
+    /** */
     public com.google.longrunning.ListOperationsResponse listOperations(
         com.google.longrunning.ListOperationsRequest request) {
       return blockingUnaryCall(getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the latest state of a long-running operation.  Clients can use this
-     * method to poll the operation result at intervals as recommended by the API
-     * service.
-     * </pre>
-     */
+    /** */
     public com.google.longrunning.Operation getOperation(
         com.google.longrunning.GetOperationRequest request) {
       return blockingUnaryCall(getChannel(), getGetOperationMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a long-running operation. This method indicates that the client is
-     * no longer interested in the operation result. It does not cancel the
-     * operation. If the server doesn't support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteOperation(
         com.google.longrunning.DeleteOperationRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteOperationMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts asynchronous cancellation on a long-running operation.  The server
-     * makes a best effort to cancel the operation, but success is not
-     * guaranteed.  If the server doesn't support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
-     * [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
-     * other methods to check whether the cancellation succeeded or whether the
-     * operation completed despite cancellation. On successful cancellation,
-     * the operation is not deleted; instead, it becomes an operation with
-     * an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-     * corresponding to `Code.CANCELLED`.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty cancelOperation(
         com.google.longrunning.CancelOperationRequest request) {
       return blockingUnaryCall(getChannel(), getCancelOperationMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Waits for the specified long-running operation until it is done or reaches
-     * at most a specified timeout, returning the latest state.  If the operation
-     * is already done, the latest state is immediately returned.  If the timeout
-     * specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
-     * timeout is used.  If the server does not support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.
-     * Note that this method is on a best-effort basis.  It may return the latest
-     * state before the specified timeout (including immediately), meaning even an
-     * immediate response is no guarantee that the operation is done.
-     * </pre>
-     */
+    /** */
     public com.google.longrunning.Operation waitOperation(
         com.google.longrunning.WaitOperationRequest request) {
       return blockingUnaryCall(getChannel(), getWaitOperationMethod(), getCallOptions(), request);
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages long-running operations with an API service.
-   * When an API method normally takes long time to complete, it can be designed
-   * to return [Operation][google.longrunning.Operation] to the client, and the client can use this
-   * interface to receive the real response asynchronously by polling the
-   * operation resource, or pass the operation resource to another API (such as
-   * Google Cloud Pub/Sub API) to receive the response.  Any API service that
-   * returns long-running operations should implement the `Operations` interface
-   * so developers can have a consistent client experience.
-   * </pre>
-   */
+  /** */
   public static final class OperationsFutureStub
       extends io.grpc.stub.AbstractFutureStub<OperationsFutureStub> {
     private OperationsFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -722,21 +477,7 @@ public final class OperationsGrpc {
       return new OperationsFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists operations that match the specified filter in the request. If the
-     * server doesn't support this method, it returns `UNIMPLEMENTED`.
-     * NOTE: the `name` binding allows API services to override the binding
-     * to use different resource name schemes, such as `users/&#42;&#47;operations`. To
-     * override the binding, API services can add a binding such as
-     * `"/v1/{name=users/&#42;}/operations"` to their service configuration.
-     * For backwards compatibility, the default name includes the operations
-     * collection id, however overriding users must ensure the name binding
-     * is the parent resource, without the operations collection id.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.longrunning.ListOperationsResponse>
         listOperations(com.google.longrunning.ListOperationsRequest request) {
@@ -744,74 +485,28 @@ public final class OperationsGrpc {
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the latest state of a long-running operation.  Clients can use this
-     * method to poll the operation result at intervals as recommended by the API
-     * service.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         getOperation(com.google.longrunning.GetOperationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetOperationMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a long-running operation. This method indicates that the client is
-     * no longer interested in the operation result. It does not cancel the
-     * operation. If the server doesn't support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteOperation(com.google.longrunning.DeleteOperationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteOperationMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts asynchronous cancellation on a long-running operation.  The server
-     * makes a best effort to cancel the operation, but success is not
-     * guaranteed.  If the server doesn't support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
-     * [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
-     * other methods to check whether the cancellation succeeded or whether the
-     * operation completed despite cancellation. On successful cancellation,
-     * the operation is not deleted; instead, it becomes an operation with
-     * an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-     * corresponding to `Code.CANCELLED`.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         cancelOperation(com.google.longrunning.CancelOperationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCancelOperationMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Waits for the specified long-running operation until it is done or reaches
-     * at most a specified timeout, returning the latest state.  If the operation
-     * is already done, the latest state is immediately returned.  If the timeout
-     * specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
-     * timeout is used.  If the server does not support this method, it returns
-     * `google.rpc.Code.UNIMPLEMENTED`.
-     * Note that this method is on a best-effort basis.  It may return the latest
-     * state before the specified timeout (including immediately), meaning even an
-     * immediate response is no guarantee that the operation is done.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         waitOperation(com.google.longrunning.WaitOperationRequest request) {
       return futureUnaryCall(
