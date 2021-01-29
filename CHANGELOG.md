@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.1.0](https://www.github.com/googleapis/java-common-protos/compare/v2.0.1...v2.1.0) (2021-01-29)
+
+
+### Features
+
+* add Interval, Month, PhoneNumber type protos ([#80](https://www.github.com/googleapis/java-common-protos/issues/80)) ([696083b](https://www.github.com/googleapis/java-common-protos/commit/696083b83bd3ba906d13cfdd50846971a74b165f))
+* Add the `UNORDERED_LIST` enum value for `google.api.field_behavior`. ([#95](https://www.github.com/googleapis/java-common-protos/issues/95)) ([51d6ae0](https://www.github.com/googleapis/java-common-protos/commit/51d6ae0b02c9c7dd32cf55dd0a67181a3f8618fe))
+
+
+### Documentation
+
+* regenerate javadocs from protos ([#69](https://www.github.com/googleapis/java-common-protos/issues/69)) ([1759fe7](https://www.github.com/googleapis/java-common-protos/commit/1759fe7650869500e0d7b712fe8ef1bcc346d27a))
+* update generated logging type javadoc ([#87](https://www.github.com/googleapis/java-common-protos/issues/87)) ([9f122e8](https://www.github.com/googleapis/java-common-protos/commit/9f122e82982d96c91343ee6c082f1687570fa15b))
+* Update inclusive language in the documentation. Also other latest doc updates. ([#78](https://www.github.com/googleapis/java-common-protos/issues/78)) ([fda2e7b](https://www.github.com/googleapis/java-common-protos/commit/fda2e7be4961ef27fc0908f5dffd63b6248f0507))
+
+
+### Dependencies
+
+* update dependency com.google.guava:guava to v30.1-android ([#96](https://www.github.com/googleapis/java-common-protos/issues/96)) ([ad6beb6](https://www.github.com/googleapis/java-common-protos/commit/ad6beb636c6fbd6ede923db4b2132cc2b1c2b5b3))
+* update dependency com.google.protobuf:protobuf-bom to v3.14.0 ([#86](https://www.github.com/googleapis/java-common-protos/issues/86)) ([ad85e3a](https://www.github.com/googleapis/java-common-protos/commit/ad85e3a9e0becdb0873a3aa474bb45ecbe02b7d6))
+
 ### [2.0.1](https://www.github.com/googleapis/java-common-protos/compare/v2.0.0...v2.0.1) (2020-11-02)
 
 
