@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-common-protos.git",
-        "sha": "ad6beb636c6fbd6ede923db4b2132cc2b1c2b5b3"
+        "sha": "7e4ab09940f790a07403c5c025f641b560ce2816"
       }
     },
     {
@@ -19,7 +19,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "6133907dbb3ddab204a17a15d5c53ec0aae9b033"
+        "sha": "2414b817065726eae0bc525346c7e874f969369d"
       }
     }
   ],
@@ -47,7 +47,6 @@
     ".kokoro/continuous/java8.cfg",
     ".kokoro/continuous/readme.cfg",
     ".kokoro/dependencies.sh",
-    ".kokoro/linkage-monitor.sh",
     ".kokoro/nightly/common.cfg",
     ".kokoro/nightly/integration.cfg",
     ".kokoro/nightly/java11.cfg",
@@ -79,6 +78,8 @@
     ".kokoro/release/promote.sh",
     ".kokoro/release/publish_javadoc.cfg",
     ".kokoro/release/publish_javadoc.sh",
+    ".kokoro/release/publish_javadoc11.cfg",
+    ".kokoro/release/publish_javadoc11.sh",
     ".kokoro/release/snapshot.cfg",
     ".kokoro/release/snapshot.sh",
     ".kokoro/release/stage.cfg",
