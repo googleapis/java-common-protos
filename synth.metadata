@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-common-protos.git",
-        "sha": "347d858fef7f7182683a35e0c1f2a3cee75abfaf"
+        "sha": "70a872e3cdf3141d745028f4774574019c2eb7df"
       }
     },
     {
