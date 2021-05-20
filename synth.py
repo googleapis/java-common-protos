@@ -57,7 +57,6 @@ def build_proto(target):
     )
 
     src_output = Path(tempfile.mkdtemp())
-    print(src_output)
     for proto_jar in output.glob("*-speed-src.jar"):
         logger.debug(f"unzipping: {os.path.basename(proto_jar)}")
         shell.run(["unzip", "-o", proto_jar, "-d", src_output / "src"])
@@ -65,7 +64,6 @@ def build_proto(target):
     java.fix_proto_headers(src_output)
     s.copy(src_output / "src/com", "proto-google-common-protos/src/main/java/com")
     proto_path = (target.split(":")[0])[2:]
-    print(proto_path)
     s.copy(googleapis / proto_path / "*.proto", "proto-google-common-protos/src/main/proto/" + proto_path)
 
 def build_grpc(target):
