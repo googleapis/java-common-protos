@@ -1,5 +1,55 @@
 # Changelog
 
+## [2.3.0](https://www.github.com/googleapis/java-common-protos/compare/v2.2.2...v2.3.0) (2021-05-20)
+
+
+### Features
+
+* update protos in the repo from googleapis ([#169](https://www.github.com/googleapis/java-common-protos/issues/169)) ([abd8291](https://www.github.com/googleapis/java-common-protos/commit/abd8291f0983f3412b3a259444845530163f6643)), closes [#134](https://www.github.com/googleapis/java-common-protos/issues/134)
+
+### [2.2.2](https://www.github.com/googleapis/java-common-protos/compare/v2.2.1...v2.2.2) (2021-05-19)
+
+
+### Dependencies
+
+* update dependency io.grpc:grpc-bom to v1.38.0 ([#164](https://www.github.com/googleapis/java-common-protos/issues/164)) ([7710d09](https://www.github.com/googleapis/java-common-protos/commit/7710d091a47499100525253ac575d4249a5818e5))
+
+### [2.2.1](https://www.github.com/googleapis/java-common-protos/compare/v2.2.0...v2.2.1) (2021-05-14)
+
+
+### Dependencies
+
+* update dependency com.google.protobuf:protobuf-bom to v3.17.0 ([#160](https://www.github.com/googleapis/java-common-protos/issues/160)) ([c0f7e07](https://www.github.com/googleapis/java-common-protos/commit/c0f7e074749aa962f7c0035d6c3f25d876403765))
+
+## [2.2.0](https://www.github.com/googleapis/java-common-protos/compare/v2.1.0...v2.2.0) (2021-05-12)
+
+
+### Features
+
+* **generator:** update protoc to v3.15.3 ([#123](https://www.github.com/googleapis/java-common-protos/issues/123)) ([6e4c513](https://www.github.com/googleapis/java-common-protos/commit/6e4c513c736d03deddd4d61d98969a866e2a2600))
+* introduce google.type.Decimal ([#133](https://www.github.com/googleapis/java-common-protos/issues/133)) ([2602033](https://www.github.com/googleapis/java-common-protos/commit/2602033ac638869765c331a6431940302c0a9147))
+* Publish visibility.proto ([#148](https://www.github.com/googleapis/java-common-protos/issues/148)) ([70a872e](https://www.github.com/googleapis/java-common-protos/commit/70a872e3cdf3141d745028f4774574019c2eb7df))
+
+
+### Bug Fixes
+
+* correct maven artifact metadata ([#145](https://www.github.com/googleapis/java-common-protos/issues/145)) ([15f5c4a](https://www.github.com/googleapis/java-common-protos/commit/15f5c4a51124ce2d193f3947c1ef63710e25e7af)), closes [#72](https://www.github.com/googleapis/java-common-protos/issues/72)
+* release scripts from issuing overlapping phases ([#142](https://www.github.com/googleapis/java-common-protos/issues/142)) ([36fedec](https://www.github.com/googleapis/java-common-protos/commit/36fedec9122adf95dfc4171311d4161867f8c8a6))
+* typo ([#140](https://www.github.com/googleapis/java-common-protos/issues/140)) ([e05c3f9](https://www.github.com/googleapis/java-common-protos/commit/e05c3f9ada5fe444dd782dd7297b210e6c617b10))
+
+
+### Documentation
+
+* correct label format for monitored_resource and log_entry labels for managed monitored_resource should not have forward slash labels for log_entry should not have forward slash ([#128](https://www.github.com/googleapis/java-common-protos/issues/128)) ([05cfd8c](https://www.github.com/googleapis/java-common-protos/commit/05cfd8ca8f574502aa66b5be491eaaf7c1a01539))
+
+
+### Dependencies
+
+* update dependency com.google.protobuf:protobuf-bom to v3.15.6 ([#122](https://www.github.com/googleapis/java-common-protos/issues/122)) ([3fe8289](https://www.github.com/googleapis/java-common-protos/commit/3fe8289816924b9d4fdcefa49f225fc456c44064))
+* update dependency com.google.protobuf:protobuf-bom to v3.15.8 ([#137](https://www.github.com/googleapis/java-common-protos/issues/137)) ([e3315de](https://www.github.com/googleapis/java-common-protos/commit/e3315debecbfd08db73b9c7303e0760024ff7504))
+* update dependency com.google.protobuf:protobuf-bom to v3.16.0 ([#152](https://www.github.com/googleapis/java-common-protos/issues/152)) ([fe2b858](https://www.github.com/googleapis/java-common-protos/commit/fe2b8584a72cd8ca2adeb311f2a4b5cd2b642983))
+* update dependency io.grpc:grpc-bom to v1.37.0 ([#131](https://www.github.com/googleapis/java-common-protos/issues/131)) ([5f6476a](https://www.github.com/googleapis/java-common-protos/commit/5f6476a8d3c88f97aa033b95b65d65b9a2de1421))
+
 ## [2.1.0](https://www.github.com/googleapis/java-common-protos/compare/v2.0.1...v2.1.0) (2021-02-24)
 
 
