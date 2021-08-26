@@ -5,7 +5,6 @@
 
 ### Features
 
-* Add BigQueryAuditMetadata proto. The BigQueryAuditMetadata proto is used by BigQuery Cloud Audit Logging. It is encoded as a google.protobuf.Struct message inside the metadata field of the AuditLog proto ([#198](https://www.github.com/googleapis/java-common-protos/issues/198)) ([1def450](https://www.github.com/googleapis/java-common-protos/commit/1def450aadabbdb319eec44341184244ddafd666))
 * add new FieldBehavior NON_EMPTY_DEFAULT ([#191](https://www.github.com/googleapis/java-common-protos/issues/191)) ([acb2206](https://www.github.com/googleapis/java-common-protos/commit/acb2206e4dbe0b94c4ebbbe6bd924a258469f836))
 * Add the `principal` field to the ServiceAccountDelegationInfo proto ([#183](https://www.github.com/googleapis/java-common-protos/issues/183)) ([b558909](https://www.github.com/googleapis/java-common-protos/commit/b558909b0355e5878e4785b76105735e2ca25422))
 * generate java files for extended_operations.proto ([#200](https://www.github.com/googleapis/java-common-protos/issues/200)) ([fec9c81](https://www.github.com/googleapis/java-common-protos/commit/fec9c8140c1a03f823d69a787b8c1f59d45879a6))
