@@ -89,6 +89,7 @@ build_proto("//google/longrunning:longrunning_java_proto")
 build_proto("//google/rpc:rpc_java_proto")
 build_proto("//google/rpc/context:attribute_context_java_proto")
 build_proto("//google/type:type_java_proto")
+build_proto("//google/cloud:extended_operations_java_proto")
 
 build_grpc("//google/longrunning:longrunning_java_grpc")
 
