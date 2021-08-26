@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-common-protos.git",
-        "sha": "4942688dbe02580ea0be48e9a9366d489bb3c9d6"
+        "sha": "66db02e9b97c724179a2110671a51bc2ce92b3df"
       }
     },
     {
@@ -141,6 +141,8 @@
     "proto-google-common-protos/src/main/java/com/google/api/Endpoint.java",
     "proto-google-common-protos/src/main/java/com/google/api/EndpointOrBuilder.java",
     "proto-google-common-protos/src/main/java/com/google/api/EndpointProto.java",
+    "proto-google-common-protos/src/main/java/com/google/api/ErrorReason.java",
+    "proto-google-common-protos/src/main/java/com/google/api/ErrorReasonProto.java",
     "proto-google-common-protos/src/main/java/com/google/api/FieldBehavior.java",
     "proto-google-common-protos/src/main/java/com/google/api/FieldBehaviorProto.java",
     "proto-google-common-protos/src/main/java/com/google/api/Http.java",
@@ -229,6 +231,9 @@
     "proto-google-common-protos/src/main/java/com/google/cloud/audit/AuthenticationInfoOrBuilder.java",
     "proto-google-common-protos/src/main/java/com/google/cloud/audit/AuthorizationInfo.java",
     "proto-google-common-protos/src/main/java/com/google/cloud/audit/AuthorizationInfoOrBuilder.java",
+    "proto-google-common-protos/src/main/java/com/google/cloud/audit/BigQueryAuditMetadata.java",
+    "proto-google-common-protos/src/main/java/com/google/cloud/audit/BigQueryAuditMetadataOrBuilder.java",
+    "proto-google-common-protos/src/main/java/com/google/cloud/audit/BigQueryAuditMetadataProto.java",
     "proto-google-common-protos/src/main/java/com/google/cloud/audit/RequestMetadata.java",
     "proto-google-common-protos/src/main/java/com/google/cloud/audit/RequestMetadataOrBuilder.java",
     "proto-google-common-protos/src/main/java/com/google/cloud/audit/ResourceLocation.java",
@@ -317,6 +322,9 @@
     "proto-google-common-protos/src/main/java/com/google/type/LatLng.java",
     "proto-google-common-protos/src/main/java/com/google/type/LatLngOrBuilder.java",
     "proto-google-common-protos/src/main/java/com/google/type/LatLngProto.java",
+    "proto-google-common-protos/src/main/java/com/google/type/LocalizedText.java",
+    "proto-google-common-protos/src/main/java/com/google/type/LocalizedTextOrBuilder.java",
+    "proto-google-common-protos/src/main/java/com/google/type/LocalizedTextProto.java",
     "proto-google-common-protos/src/main/java/com/google/type/Money.java",
     "proto-google-common-protos/src/main/java/com/google/type/MoneyOrBuilder.java",
     "proto-google-common-protos/src/main/java/com/google/type/MoneyProto.java",
