@@ -11,15 +11,15 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "aa136fa6649f7d999bf3873d0e5fca75cb2354a5",
-        "internalRef": "382337225"
+        "sha": "ed739492993c4a99629b6430affdd6c0fb59d435",
+        "internalRef": "391764852"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "1a2878d6909dd10ca4e3c1b5943d6622e996054e"
+        "sha": "31728d872f50e439ded2f67fa8d67955b26a4e35"
       }
     }
   ],
@@ -367,6 +367,7 @@
     "proto-google-common-protos/src/main/proto/google/api/usage.proto",
     "proto-google-common-protos/src/main/proto/google/api/visibility.proto",
     "proto-google-common-protos/src/main/proto/google/cloud/audit/audit_log.proto",
+    "proto-google-common-protos/src/main/proto/google/cloud/audit/bigquery_audit_metadata.proto",
     "proto-google-common-protos/src/main/proto/google/geo/type/viewport.proto",
     "proto-google-common-protos/src/main/proto/google/logging/type/http_request.proto",
     "proto-google-common-protos/src/main/proto/google/logging/type/log_severity.proto",
