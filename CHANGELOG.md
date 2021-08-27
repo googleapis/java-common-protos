@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://www.github.com/googleapis/java-common-protos/compare/v2.3.2...v2.4.0) (2021-08-27)
+
+
+### Features
+
+* configure initial sp version ([#202](https://www.github.com/googleapis/java-common-protos/issues/202)) ([0b66762](https://www.github.com/googleapis/java-common-protos/commit/0b667626cafcfda40fd3f5953a0d2f203720b296))
+
 ### [2.3.2](https://www.github.com/googleapis/java-common-protos/compare/v2.3.1...v2.3.2) (2021-06-03)
 
 
