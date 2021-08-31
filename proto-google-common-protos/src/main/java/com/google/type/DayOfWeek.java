@@ -19,18 +19,15 @@
 package com.google.type;
 
 /**
- *
- *
  * <pre>
  * Represents a day of the week.
  * </pre>
  *
  * Protobuf enum {@code google.type.DayOfWeek}
  */
-public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
+public enum DayOfWeek
+    implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   *
-   *
    * <pre>
    * The day of the week is unspecified.
    * </pre>
@@ -39,8 +36,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   DAY_OF_WEEK_UNSPECIFIED(0),
   /**
-   *
-   *
    * <pre>
    * Monday
    * </pre>
@@ -49,8 +44,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   MONDAY(1),
   /**
-   *
-   *
    * <pre>
    * Tuesday
    * </pre>
@@ -59,8 +52,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   TUESDAY(2),
   /**
-   *
-   *
    * <pre>
    * Wednesday
    * </pre>
@@ -69,8 +60,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   WEDNESDAY(3),
   /**
-   *
-   *
    * <pre>
    * Thursday
    * </pre>
@@ -79,8 +68,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   THURSDAY(4),
   /**
-   *
-   *
    * <pre>
    * Friday
    * </pre>
@@ -89,8 +76,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   FRIDAY(5),
   /**
-   *
-   *
    * <pre>
    * Saturday
    * </pre>
@@ -99,8 +84,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   SATURDAY(6),
   /**
-   *
-   *
    * <pre>
    * Sunday
    * </pre>
@@ -112,8 +95,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
   ;
 
   /**
-   *
-   *
    * <pre>
    * The day of the week is unspecified.
    * </pre>
@@ -122,8 +103,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int DAY_OF_WEEK_UNSPECIFIED_VALUE = 0;
   /**
-   *
-   *
    * <pre>
    * Monday
    * </pre>
@@ -132,8 +111,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int MONDAY_VALUE = 1;
   /**
-   *
-   *
    * <pre>
    * Tuesday
    * </pre>
@@ -142,8 +119,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int TUESDAY_VALUE = 2;
   /**
-   *
-   *
    * <pre>
    * Wednesday
    * </pre>
@@ -152,8 +127,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int WEDNESDAY_VALUE = 3;
   /**
-   *
-   *
    * <pre>
    * Thursday
    * </pre>
@@ -162,8 +135,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int THURSDAY_VALUE = 4;
   /**
-   *
-   *
    * <pre>
    * Friday
    * </pre>
@@ -172,8 +143,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int FRIDAY_VALUE = 5;
   /**
-   *
-   *
    * <pre>
    * Saturday
    * </pre>
@@ -182,8 +151,6 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int SATURDAY_VALUE = 6;
   /**
-   *
-   *
    * <pre>
    * Sunday
    * </pre>
@@ -191,6 +158,7 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    * <code>SUNDAY = 7;</code>
    */
   public static final int SUNDAY_VALUE = 7;
+
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -216,59 +184,54 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static DayOfWeek forNumber(int value) {
     switch (value) {
-      case 0:
-        return DAY_OF_WEEK_UNSPECIFIED;
-      case 1:
-        return MONDAY;
-      case 2:
-        return TUESDAY;
-      case 3:
-        return WEDNESDAY;
-      case 4:
-        return THURSDAY;
-      case 5:
-        return FRIDAY;
-      case 6:
-        return SATURDAY;
-      case 7:
-        return SUNDAY;
-      default:
-        return null;
+      case 0: return DAY_OF_WEEK_UNSPECIFIED;
+      case 1: return MONDAY;
+      case 2: return TUESDAY;
+      case 3: return WEDNESDAY;
+      case 4: return THURSDAY;
+      case 5: return FRIDAY;
+      case 6: return SATURDAY;
+      case 7: return SUNDAY;
+      default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<DayOfWeek> internalGetValueMap() {
+  public static com.google.protobuf.Internal.EnumLiteMap<DayOfWeek>
+      internalGetValueMap() {
     return internalValueMap;
   }
+  private static final com.google.protobuf.Internal.EnumLiteMap<
+      DayOfWeek> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<DayOfWeek>() {
+          public DayOfWeek findValueByNumber(int number) {
+            return DayOfWeek.forNumber(number);
+          }
+        };
 
-  private static final com.google.protobuf.Internal.EnumLiteMap<DayOfWeek> internalValueMap =
-      new com.google.protobuf.Internal.EnumLiteMap<DayOfWeek>() {
-        public DayOfWeek findValueByNumber(int number) {
-          return DayOfWeek.forNumber(number);
-        }
-      };
-
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+  public final com.google.protobuf.Descriptors.EnumValueDescriptor
+      getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
-
-  public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+  public final com.google.protobuf.Descriptors.EnumDescriptor
+      getDescriptorForType() {
     return getDescriptor();
   }
-
-  public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.EnumDescriptor
+      getDescriptor() {
     return com.google.type.DayOfWeekProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final DayOfWeek[] VALUES = values();
 
-  public static DayOfWeek valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+  public static DayOfWeek valueOf(
+      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+      throw new java.lang.IllegalArgumentException(
+        "EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -284,3 +247,4 @@ public enum DayOfWeek implements com.google.protobuf.ProtocolMessageEnum {
 
   // @@protoc_insertion_point(enum_scope:google.type.DayOfWeek)
 }
+

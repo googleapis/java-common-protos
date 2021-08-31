@@ -19,8 +19,6 @@
 package com.google.api;
 
 /**
- *
- *
  * <pre>
  * Billing related configuration of the service.
  * The following example shows how to configure monitored resources and metrics
@@ -55,31 +53,31 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Billing}
  */
-public final class Billing extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class Billing extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.api.Billing)
     BillingOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use Billing.newBuilder() to construct.
   private Billing(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private Billing() {
     consumerDestinations_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new Billing();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private Billing(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -99,31 +97,29 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 66:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                consumerDestinations_ =
-                    new java.util.ArrayList<com.google.api.Billing.BillingDestination>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              consumerDestinations_.add(
-                  input.readMessage(
-                      com.google.api.Billing.BillingDestination.parser(), extensionRegistry));
-              break;
+          case 66: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              consumerDestinations_ = new java.util.ArrayList<com.google.api.Billing.BillingDestination>();
+              mutable_bitField0_ |= 0x00000001;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            consumerDestinations_.add(
+                input.readMessage(com.google.api.Billing.BillingDestination.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         consumerDestinations_ = java.util.Collections.unmodifiableList(consumerDestinations_);
@@ -132,8 +128,8 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.api.BillingProto.internal_static_google_api_Billing_descriptor;
   }
 
@@ -145,96 +141,78 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
             com.google.api.Billing.class, com.google.api.Billing.Builder.class);
   }
 
-  public interface BillingDestinationOrBuilder
-      extends
+  public interface BillingDestinationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.api.Billing.BillingDestination)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * The monitored resource type. The type must be defined in
      * [Service.monitored_resources][google.api.Service.monitored_resources] section.
      * </pre>
      *
      * <code>string monitored_resource = 1;</code>
-     *
      * @return The monitoredResource.
      */
     java.lang.String getMonitoredResource();
     /**
-     *
-     *
      * <pre>
      * The monitored resource type. The type must be defined in
      * [Service.monitored_resources][google.api.Service.monitored_resources] section.
      * </pre>
      *
      * <code>string monitored_resource = 1;</code>
-     *
      * @return The bytes for monitoredResource.
      */
-    com.google.protobuf.ByteString getMonitoredResourceBytes();
+    com.google.protobuf.ByteString
+        getMonitoredResourceBytes();
 
     /**
-     *
-     *
      * <pre>
      * Names of the metrics to report to this billing destination.
      * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
-     *
      * @return A list containing the metrics.
      */
-    java.util.List<java.lang.String> getMetricsList();
+    java.util.List<java.lang.String>
+        getMetricsList();
     /**
-     *
-     *
      * <pre>
      * Names of the metrics to report to this billing destination.
      * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
-     *
      * @return The count of metrics.
      */
     int getMetricsCount();
     /**
-     *
-     *
      * <pre>
      * Names of the metrics to report to this billing destination.
      * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
-     *
      * @param index The index of the element to return.
      * @return The metrics at the given index.
      */
     java.lang.String getMetrics(int index);
     /**
-     *
-     *
      * <pre>
      * Names of the metrics to report to this billing destination.
      * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
-     *
      * @param index The index of the value to return.
      * @return The bytes of the metrics at the given index.
      */
-    com.google.protobuf.ByteString getMetricsBytes(int index);
+    com.google.protobuf.ByteString
+        getMetricsBytes(int index);
   }
   /**
-   *
-   *
    * <pre>
    * Configuration of a specific billing destination (Currently only support
    * bill against consumer project).
@@ -242,16 +220,15 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.api.Billing.BillingDestination}
    */
-  public static final class BillingDestination extends com.google.protobuf.GeneratedMessageV3
-      implements
+  public static final class BillingDestination extends
+      com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.api.Billing.BillingDestination)
       BillingDestinationOrBuilder {
-    private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
     // Use BillingDestination.newBuilder() to construct.
     private BillingDestination(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private BillingDestination() {
       monitoredResource_ = "";
       metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -259,15 +236,16 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
       return new BillingDestination();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
       return this.unknownFields;
     }
-
     private BillingDestination(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -287,36 +265,35 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-                monitoredResource_ = s;
-                break;
+              monitoredResource_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                metrics_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
               }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  metrics_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                metrics_.add(s);
-                break;
+              metrics_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
               }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           metrics_ = metrics_.getUnmodifiableView();
@@ -325,34 +302,28 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.api.BillingProto
-          .internal_static_google_api_Billing_BillingDestination_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.api.BillingProto.internal_static_google_api_Billing_BillingDestination_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.BillingProto
-          .internal_static_google_api_Billing_BillingDestination_fieldAccessorTable
+      return com.google.api.BillingProto.internal_static_google_api_Billing_BillingDestination_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.api.Billing.BillingDestination.class,
-              com.google.api.Billing.BillingDestination.Builder.class);
+              com.google.api.Billing.BillingDestination.class, com.google.api.Billing.BillingDestination.Builder.class);
     }
 
     public static final int MONITORED_RESOURCE_FIELD_NUMBER = 1;
     private volatile java.lang.Object monitoredResource_;
     /**
-     *
-     *
      * <pre>
      * The monitored resource type. The type must be defined in
      * [Service.monitored_resources][google.api.Service.monitored_resources] section.
      * </pre>
      *
      * <code>string monitored_resource = 1;</code>
-     *
      * @return The monitoredResource.
      */
     @java.lang.Override
@@ -361,30 +332,30 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         monitoredResource_ = s;
         return s;
       }
     }
     /**
-     *
-     *
      * <pre>
      * The monitored resource type. The type must be defined in
      * [Service.monitored_resources][google.api.Service.monitored_resources] section.
      * </pre>
      *
      * <code>string monitored_resource = 1;</code>
-     *
      * @return The bytes for monitoredResource.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getMonitoredResourceBytes() {
+    public com.google.protobuf.ByteString
+        getMonitoredResourceBytes() {
       java.lang.Object ref = monitoredResource_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         monitoredResource_ = b;
         return b;
       } else {
@@ -395,45 +366,37 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     public static final int METRICS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList metrics_;
     /**
-     *
-     *
      * <pre>
      * Names of the metrics to report to this billing destination.
      * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
-     *
      * @return A list containing the metrics.
      */
-    public com.google.protobuf.ProtocolStringList getMetricsList() {
+    public com.google.protobuf.ProtocolStringList
+        getMetricsList() {
       return metrics_;
     }
     /**
-     *
-     *
      * <pre>
      * Names of the metrics to report to this billing destination.
      * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
-     *
      * @return The count of metrics.
      */
     public int getMetricsCount() {
       return metrics_.size();
     }
     /**
-     *
-     *
      * <pre>
      * Names of the metrics to report to this billing destination.
      * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
-     *
      * @param index The index of the element to return.
      * @return The metrics at the given index.
      */
@@ -441,24 +404,21 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return metrics_.get(index);
     }
     /**
-     *
-     *
      * <pre>
      * Names of the metrics to report to this billing destination.
      * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
-     *
      * @param index The index of the value to return.
      * @return The bytes of the metrics at the given index.
      */
-    public com.google.protobuf.ByteString getMetricsBytes(int index) {
+    public com.google.protobuf.ByteString
+        getMetricsBytes(int index) {
       return metrics_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -470,7 +430,8 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (!getMonitoredResourceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, monitoredResource_);
       }
@@ -505,16 +466,17 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.api.Billing.BillingDestination)) {
         return super.equals(obj);
       }
-      com.google.api.Billing.BillingDestination other =
-          (com.google.api.Billing.BillingDestination) obj;
+      com.google.api.Billing.BillingDestination other = (com.google.api.Billing.BillingDestination) obj;
 
-      if (!getMonitoredResource().equals(other.getMonitoredResource())) return false;
-      if (!getMetricsList().equals(other.getMetricsList())) return false;
+      if (!getMonitoredResource()
+          .equals(other.getMonitoredResource())) return false;
+      if (!getMetricsList()
+          .equals(other.getMetricsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -537,94 +499,88 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return hash;
     }
 
-    public static com.google.api.Billing.BillingDestination parseFrom(java.nio.ByteBuffer data)
+    public static com.google.api.Billing.BillingDestination parseFrom(
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Billing.BillingDestination parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Billing.BillingDestination parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Billing.BillingDestination parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Billing.BillingDestination parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Billing.BillingDestination parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Billing.BillingDestination parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.api.Billing.BillingDestination parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.google.api.Billing.BillingDestination parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.api.Billing.BillingDestination parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.api.Billing.BillingDestination parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
-
+    public static com.google.api.Billing.BillingDestination parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
     public static com.google.api.Billing.BillingDestination parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.api.Billing.BillingDestination parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.api.Billing.BillingDestination prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -634,8 +590,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return builder;
     }
     /**
-     *
-     *
      * <pre>
      * Configuration of a specific billing destination (Currently only support
      * bill against consumer project).
@@ -643,24 +597,21 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
      *
      * Protobuf type {@code google.api.Billing.BillingDestination}
      */
-    public static final class Builder
-        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.api.Billing.BillingDestination)
         com.google.api.Billing.BillingDestinationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.api.BillingProto
-            .internal_static_google_api_Billing_BillingDestination_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.api.BillingProto.internal_static_google_api_Billing_BillingDestination_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.api.BillingProto
-            .internal_static_google_api_Billing_BillingDestination_fieldAccessorTable
+        return com.google.api.BillingProto.internal_static_google_api_Billing_BillingDestination_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.api.Billing.BillingDestination.class,
-                com.google.api.Billing.BillingDestination.Builder.class);
+                com.google.api.Billing.BillingDestination.class, com.google.api.Billing.BillingDestination.Builder.class);
       }
 
       // Construct using com.google.api.Billing.BillingDestination.newBuilder()
@@ -668,15 +619,16 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -688,9 +640,9 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.api.BillingProto
-            .internal_static_google_api_Billing_BillingDestination_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.api.BillingProto.internal_static_google_api_Billing_BillingDestination_descriptor;
       }
 
       @java.lang.Override
@@ -709,8 +661,7 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
 
       @java.lang.Override
       public com.google.api.Billing.BillingDestination buildPartial() {
-        com.google.api.Billing.BillingDestination result =
-            new com.google.api.Billing.BillingDestination(this);
+        com.google.api.Billing.BillingDestination result = new com.google.api.Billing.BillingDestination(this);
         int from_bitField0_ = bitField0_;
         result.monitoredResource_ = monitoredResource_;
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -726,41 +677,38 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
-      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
-      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index,
-          java.lang.Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.api.Billing.BillingDestination) {
-          return mergeFrom((com.google.api.Billing.BillingDestination) other);
+          return mergeFrom((com.google.api.Billing.BillingDestination)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -811,26 +759,23 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
         }
         return this;
       }
-
       private int bitField0_;
 
       private java.lang.Object monitoredResource_ = "";
       /**
-       *
-       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
-       *
        * @return The monitoredResource.
        */
       public java.lang.String getMonitoredResource() {
         java.lang.Object ref = monitoredResource_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           monitoredResource_ = s;
           return s;
@@ -839,22 +784,21 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
-       *
        * @return The bytes for monitoredResource.
        */
-      public com.google.protobuf.ByteString getMonitoredResourceBytes() {
+      public com.google.protobuf.ByteString
+          getMonitoredResourceBytes() {
         java.lang.Object ref = monitoredResource_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           monitoredResource_ = b;
           return b;
         } else {
@@ -862,118 +806,101 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
-       *
        * @param value The monitoredResource to set.
        * @return This builder for chaining.
        */
-      public Builder setMonitoredResource(java.lang.String value) {
+      public Builder setMonitoredResource(
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         monitoredResource_ = value;
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMonitoredResource() {
-
+        
         monitoredResource_ = getDefaultInstance().getMonitoredResource();
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
-       *
        * @param value The bytes for monitoredResource to set.
        * @return This builder for chaining.
        */
-      public Builder setMonitoredResourceBytes(com.google.protobuf.ByteString value) {
+      public Builder setMonitoredResourceBytes(
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         monitoredResource_ = value;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList metrics_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
-
+      private com.google.protobuf.LazyStringList metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureMetricsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           metrics_ = new com.google.protobuf.LazyStringArrayList(metrics_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
       /**
-       *
-       *
        * <pre>
        * Names of the metrics to report to this billing destination.
        * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
-       *
        * @return A list containing the metrics.
        */
-      public com.google.protobuf.ProtocolStringList getMetricsList() {
+      public com.google.protobuf.ProtocolStringList
+          getMetricsList() {
         return metrics_.getUnmodifiableView();
       }
       /**
-       *
-       *
        * <pre>
        * Names of the metrics to report to this billing destination.
        * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
-       *
        * @return The count of metrics.
        */
       public int getMetricsCount() {
         return metrics_.size();
       }
       /**
-       *
-       *
        * <pre>
        * Names of the metrics to report to this billing destination.
        * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
-       *
        * @param index The index of the element to return.
        * @return The metrics at the given index.
        */
@@ -981,95 +908,85 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
         return metrics_.get(index);
       }
       /**
-       *
-       *
        * <pre>
        * Names of the metrics to report to this billing destination.
        * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
-       *
        * @param index The index of the value to return.
        * @return The bytes of the metrics at the given index.
        */
-      public com.google.protobuf.ByteString getMetricsBytes(int index) {
+      public com.google.protobuf.ByteString
+          getMetricsBytes(int index) {
         return metrics_.getByteString(index);
       }
       /**
-       *
-       *
        * <pre>
        * Names of the metrics to report to this billing destination.
        * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
-       *
        * @param index The index to set the value at.
        * @param value The metrics to set.
        * @return This builder for chaining.
        */
-      public Builder setMetrics(int index, java.lang.String value) {
+      public Builder setMetrics(
+          int index, java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMetricsIsMutable();
+    throw new NullPointerException();
+  }
+  ensureMetricsIsMutable();
         metrics_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Names of the metrics to report to this billing destination.
        * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
-       *
        * @param value The metrics to add.
        * @return This builder for chaining.
        */
-      public Builder addMetrics(java.lang.String value) {
+      public Builder addMetrics(
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMetricsIsMutable();
+    throw new NullPointerException();
+  }
+  ensureMetricsIsMutable();
         metrics_.add(value);
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Names of the metrics to report to this billing destination.
        * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
-       *
        * @param values The metrics to add.
        * @return This builder for chaining.
        */
-      public Builder addAllMetrics(java.lang.Iterable<java.lang.String> values) {
+      public Builder addAllMetrics(
+          java.lang.Iterable<java.lang.String> values) {
         ensureMetricsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, metrics_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, metrics_);
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Names of the metrics to report to this billing destination.
        * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMetrics() {
@@ -1079,29 +996,26 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Names of the metrics to report to this billing destination.
        * Each name must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
-       *
        * @param value The bytes of the metrics to add.
        * @return This builder for chaining.
        */
-      public Builder addMetricsBytes(com.google.protobuf.ByteString value) {
+      public Builder addMetricsBytes(
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         ensureMetricsIsMutable();
         metrics_.add(value);
         onChanged();
         return this;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1114,12 +1028,12 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:google.api.Billing.BillingDestination)
     }
 
     // @@protoc_insertion_point(class_scope:google.api.Billing.BillingDestination)
     private static final com.google.api.Billing.BillingDestination DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.api.Billing.BillingDestination();
     }
@@ -1128,16 +1042,16 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<BillingDestination> PARSER =
-        new com.google.protobuf.AbstractParser<BillingDestination>() {
-          @java.lang.Override
-          public BillingDestination parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            return new BillingDestination(input, extensionRegistry);
-          }
-        };
+    private static final com.google.protobuf.Parser<BillingDestination>
+        PARSER = new com.google.protobuf.AbstractParser<BillingDestination>() {
+      @java.lang.Override
+      public BillingDestination parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BillingDestination(input, extensionRegistry);
+      }
+    };
 
     public static com.google.protobuf.Parser<BillingDestination> parser() {
       return PARSER;
@@ -1152,13 +1066,12 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     public com.google.api.Billing.BillingDestination getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   public static final int CONSUMER_DESTINATIONS_FIELD_NUMBER = 8;
   private java.util.List<com.google.api.Billing.BillingDestination> consumerDestinations_;
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -1173,8 +1086,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     return consumerDestinations_;
   }
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -1185,13 +1096,11 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.Billing.BillingDestination consumer_destinations = 8;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.Billing.BillingDestinationOrBuilder>
+  public java.util.List<? extends com.google.api.Billing.BillingDestinationOrBuilder> 
       getConsumerDestinationsOrBuilderList() {
     return consumerDestinations_;
   }
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -1206,8 +1115,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     return consumerDestinations_.size();
   }
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -1222,8 +1129,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     return consumerDestinations_.get(index);
   }
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -1240,7 +1145,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -1252,7 +1156,8 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < consumerDestinations_.size(); i++) {
       output.writeMessage(8, consumerDestinations_.get(i));
     }
@@ -1266,8 +1171,8 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
 
     size = 0;
     for (int i = 0; i < consumerDestinations_.size(); i++) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(8, consumerDestinations_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, consumerDestinations_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1277,14 +1182,15 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.api.Billing)) {
       return super.equals(obj);
     }
     com.google.api.Billing other = (com.google.api.Billing) obj;
 
-    if (!getConsumerDestinationsList().equals(other.getConsumerDestinationsList())) return false;
+    if (!getConsumerDestinationsList()
+        .equals(other.getConsumerDestinationsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1305,103 +1211,97 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.api.Billing parseFrom(java.nio.ByteBuffer data)
+  public static com.google.api.Billing parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Billing parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.api.Billing parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.api.Billing parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Billing parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.Billing parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Billing parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.Billing parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.Billing parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.api.Billing parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.api.Billing parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.api.Billing parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.api.Billing parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.Billing parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.api.Billing prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * Billing related configuration of the service.
    * The following example shows how to configure monitored resources and metrics
@@ -1436,11 +1336,12 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.api.Billing}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.api.Billing)
       com.google.api.BillingOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.api.BillingProto.internal_static_google_api_Billing_descriptor;
     }
 
@@ -1457,17 +1358,17 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
         getConsumerDestinationsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1481,7 +1382,8 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.api.BillingProto.internal_static_google_api_Billing_descriptor;
     }
 
@@ -1520,39 +1422,38 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Billing) {
-        return mergeFrom((com.google.api.Billing) other);
+        return mergeFrom((com.google.api.Billing)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1579,10 +1480,9 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
             consumerDestinationsBuilder_ = null;
             consumerDestinations_ = other.consumerDestinations_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            consumerDestinationsBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getConsumerDestinationsFieldBuilder()
-                    : null;
+            consumerDestinationsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getConsumerDestinationsFieldBuilder() : null;
           } else {
             consumerDestinationsBuilder_.addAllMessages(other.consumerDestinations_);
           }
@@ -1616,30 +1516,21 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
-
     private int bitField0_;
 
     private java.util.List<com.google.api.Billing.BillingDestination> consumerDestinations_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureConsumerDestinationsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        consumerDestinations_ =
-            new java.util.ArrayList<com.google.api.Billing.BillingDestination>(
-                consumerDestinations_);
+        consumerDestinations_ = new java.util.ArrayList<com.google.api.Billing.BillingDestination>(consumerDestinations_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.Billing.BillingDestination,
-            com.google.api.Billing.BillingDestination.Builder,
-            com.google.api.Billing.BillingDestinationOrBuilder>
-        consumerDestinationsBuilder_;
+        com.google.api.Billing.BillingDestination, com.google.api.Billing.BillingDestination.Builder, com.google.api.Billing.BillingDestinationOrBuilder> consumerDestinationsBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1657,8 +1548,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1676,8 +1565,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1695,8 +1582,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1721,8 +1606,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1744,8 +1627,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1769,8 +1650,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1795,8 +1674,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1818,8 +1695,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1841,8 +1716,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1856,7 +1729,8 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
         java.lang.Iterable<? extends com.google.api.Billing.BillingDestination> values) {
       if (consumerDestinationsBuilder_ == null) {
         ensureConsumerDestinationsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, consumerDestinations_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, consumerDestinations_);
         onChanged();
       } else {
         consumerDestinationsBuilder_.addAllMessages(values);
@@ -1864,8 +1738,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1886,8 +1758,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1908,8 +1778,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1924,8 +1792,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return getConsumerDestinationsFieldBuilder().getBuilder(index);
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1938,14 +1804,11 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     public com.google.api.Billing.BillingDestinationOrBuilder getConsumerDestinationsOrBuilder(
         int index) {
       if (consumerDestinationsBuilder_ == null) {
-        return consumerDestinations_.get(index);
-      } else {
+        return consumerDestinations_.get(index);  } else {
         return consumerDestinationsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1955,8 +1818,8 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Billing.BillingDestination consumer_destinations = 8;</code>
      */
-    public java.util.List<? extends com.google.api.Billing.BillingDestinationOrBuilder>
-        getConsumerDestinationsOrBuilderList() {
+    public java.util.List<? extends com.google.api.Billing.BillingDestinationOrBuilder> 
+         getConsumerDestinationsOrBuilderList() {
       if (consumerDestinationsBuilder_ != null) {
         return consumerDestinationsBuilder_.getMessageOrBuilderList();
       } else {
@@ -1964,8 +1827,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1976,12 +1837,10 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated .google.api.Billing.BillingDestination consumer_destinations = 8;</code>
      */
     public com.google.api.Billing.BillingDestination.Builder addConsumerDestinationsBuilder() {
-      return getConsumerDestinationsFieldBuilder()
-          .addBuilder(com.google.api.Billing.BillingDestination.getDefaultInstance());
+      return getConsumerDestinationsFieldBuilder().addBuilder(
+          com.google.api.Billing.BillingDestination.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -1993,12 +1852,10 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
      */
     public com.google.api.Billing.BillingDestination.Builder addConsumerDestinationsBuilder(
         int index) {
-      return getConsumerDestinationsFieldBuilder()
-          .addBuilder(index, com.google.api.Billing.BillingDestination.getDefaultInstance());
+      return getConsumerDestinationsFieldBuilder().addBuilder(
+          index, com.google.api.Billing.BillingDestination.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Billing configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations per service, each one must have
@@ -2008,22 +1865,16 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Billing.BillingDestination consumer_destinations = 8;</code>
      */
-    public java.util.List<com.google.api.Billing.BillingDestination.Builder>
-        getConsumerDestinationsBuilderList() {
+    public java.util.List<com.google.api.Billing.BillingDestination.Builder> 
+         getConsumerDestinationsBuilderList() {
       return getConsumerDestinationsFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.Billing.BillingDestination,
-            com.google.api.Billing.BillingDestination.Builder,
-            com.google.api.Billing.BillingDestinationOrBuilder>
+        com.google.api.Billing.BillingDestination, com.google.api.Billing.BillingDestination.Builder, com.google.api.Billing.BillingDestinationOrBuilder> 
         getConsumerDestinationsFieldBuilder() {
       if (consumerDestinationsBuilder_ == null) {
-        consumerDestinationsBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.api.Billing.BillingDestination,
-                com.google.api.Billing.BillingDestination.Builder,
-                com.google.api.Billing.BillingDestinationOrBuilder>(
+        consumerDestinationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.api.Billing.BillingDestination, com.google.api.Billing.BillingDestination.Builder, com.google.api.Billing.BillingDestinationOrBuilder>(
                 consumerDestinations_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -2032,9 +1883,9 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       }
       return consumerDestinationsBuilder_;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -2044,12 +1895,12 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.api.Billing)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Billing)
   private static final com.google.api.Billing DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.api.Billing();
   }
@@ -2058,16 +1909,16 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Billing> PARSER =
-      new com.google.protobuf.AbstractParser<Billing>() {
-        @java.lang.Override
-        public Billing parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Billing(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<Billing>
+      PARSER = new com.google.protobuf.AbstractParser<Billing>() {
+    @java.lang.Override
+    public Billing parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new Billing(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<Billing> parser() {
     return PARSER;
@@ -2082,4 +1933,6 @@ public final class Billing extends com.google.protobuf.GeneratedMessageV3
   public com.google.api.Billing getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

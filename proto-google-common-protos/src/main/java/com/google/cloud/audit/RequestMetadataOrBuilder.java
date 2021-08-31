@@ -18,14 +18,11 @@
 
 package com.google.cloud.audit;
 
-public interface RequestMetadataOrBuilder
-    extends
+public interface RequestMetadataOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.cloud.audit.RequestMetadata)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The IP address of the caller.
    * For caller from internet, this will be public IPv4 or IPv6 address.
@@ -39,13 +36,10 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>string caller_ip = 1;</code>
-   *
    * @return The callerIp.
    */
   java.lang.String getCallerIp();
   /**
-   *
-   *
    * <pre>
    * The IP address of the caller.
    * For caller from internet, this will be public IPv4 or IPv6 address.
@@ -59,14 +53,12 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>string caller_ip = 1;</code>
-   *
    * @return The bytes for callerIp.
    */
-  com.google.protobuf.ByteString getCallerIpBytes();
+  com.google.protobuf.ByteString
+      getCallerIpBytes();
 
   /**
-   *
-   *
    * <pre>
    * The user agent of the caller.
    * This information is not authenticated and should be treated accordingly.
@@ -81,13 +73,10 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>string caller_supplied_user_agent = 2;</code>
-   *
    * @return The callerSuppliedUserAgent.
    */
   java.lang.String getCallerSuppliedUserAgent();
   /**
-   *
-   *
    * <pre>
    * The user agent of the caller.
    * This information is not authenticated and should be treated accordingly.
@@ -102,14 +91,12 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>string caller_supplied_user_agent = 2;</code>
-   *
    * @return The bytes for callerSuppliedUserAgent.
    */
-  com.google.protobuf.ByteString getCallerSuppliedUserAgentBytes();
+  com.google.protobuf.ByteString
+      getCallerSuppliedUserAgentBytes();
 
   /**
-   *
-   *
    * <pre>
    * The network of the caller.
    * Set only if the network host project is part of the same GCP organization
@@ -120,13 +107,10 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>string caller_network = 3;</code>
-   *
    * @return The callerNetwork.
    */
   java.lang.String getCallerNetwork();
   /**
-   *
-   *
    * <pre>
    * The network of the caller.
    * Set only if the network host project is part of the same GCP organization
@@ -137,14 +121,12 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>string caller_network = 3;</code>
-   *
    * @return The bytes for callerNetwork.
    */
-  com.google.protobuf.ByteString getCallerNetworkBytes();
+  com.google.protobuf.ByteString
+      getCallerNetworkBytes();
 
   /**
-   *
-   *
    * <pre>
    * Request attributes used in IAM condition evaluation. This field contains
    * request attributes like request time and access levels associated with
@@ -155,13 +137,10 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
-   *
    * @return Whether the requestAttributes field is set.
    */
   boolean hasRequestAttributes();
   /**
-   *
-   *
    * <pre>
    * Request attributes used in IAM condition evaluation. This field contains
    * request attributes like request time and access levels associated with
@@ -172,13 +151,10 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
-   *
    * @return The requestAttributes.
    */
   com.google.rpc.context.AttributeContext.Request getRequestAttributes();
   /**
-   *
-   *
    * <pre>
    * Request attributes used in IAM condition evaluation. This field contains
    * request attributes like request time and access levels associated with
@@ -193,8 +169,6 @@ public interface RequestMetadataOrBuilder
   com.google.rpc.context.AttributeContext.RequestOrBuilder getRequestAttributesOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * The destination of a network activity, such as accepting a TCP connection.
    * In a multi hop network activity, the destination represents the receiver of
@@ -204,13 +178,10 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
-   *
    * @return Whether the destinationAttributes field is set.
    */
   boolean hasDestinationAttributes();
   /**
-   *
-   *
    * <pre>
    * The destination of a network activity, such as accepting a TCP connection.
    * In a multi hop network activity, the destination represents the receiver of
@@ -220,13 +191,10 @@ public interface RequestMetadataOrBuilder
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
-   *
    * @return The destinationAttributes.
    */
   com.google.rpc.context.AttributeContext.Peer getDestinationAttributes();
   /**
-   *
-   *
    * <pre>
    * The destination of a network activity, such as accepting a TCP connection.
    * In a multi hop network activity, the destination represents the receiver of

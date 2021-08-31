@@ -19,8 +19,6 @@
 package com.google.api;
 
 /**
- *
- *
  * <pre>
  * Output generated from semantically comparing two versions of a service
  * configuration.
@@ -31,16 +29,15 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.ConfigChange}
  */
-public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class ConfigChange extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.api.ConfigChange)
     ConfigChangeOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use ConfigChange.newBuilder() to construct.
   private ConfigChange(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private ConfigChange() {
     element_ = "";
     oldValue_ = "";
@@ -51,15 +48,16 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new ConfigChange();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private ConfigChange(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -79,56 +77,53 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              element_ = s;
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            element_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              oldValue_ = s;
-              break;
-            }
-          case 26:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            oldValue_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              newValue_ = s;
-              break;
-            }
-          case 32:
-            {
-              int rawValue = input.readEnum();
+            newValue_ = s;
+            break;
+          }
+          case 32: {
+            int rawValue = input.readEnum();
 
-              changeType_ = rawValue;
-              break;
+            changeType_ = rawValue;
+            break;
+          }
+          case 42: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              advices_ = new java.util.ArrayList<com.google.api.Advice>();
+              mutable_bitField0_ |= 0x00000001;
             }
-          case 42:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                advices_ = new java.util.ArrayList<com.google.api.Advice>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              advices_.add(input.readMessage(com.google.api.Advice.parser(), extensionRegistry));
-              break;
+            advices_.add(
+                input.readMessage(com.google.api.Advice.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         advices_ = java.util.Collections.unmodifiableList(advices_);
@@ -137,16 +132,15 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.api.ConfigChangeProto.internal_static_google_api_ConfigChange_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.api.ConfigChangeProto
-        .internal_static_google_api_ConfigChange_fieldAccessorTable
+    return com.google.api.ConfigChangeProto.internal_static_google_api_ConfigChange_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.api.ConfigChange.class, com.google.api.ConfigChange.Builder.class);
   }
@@ -154,8 +148,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
   public static final int ELEMENT_FIELD_NUMBER = 1;
   private volatile java.lang.Object element_;
   /**
-   *
-   *
    * <pre>
    * Object hierarchy path to the change, with levels separated by a '.'
    * character. For repeated fields, an applicable unique identifier field is
@@ -169,7 +161,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string element = 1;</code>
-   *
    * @return The element.
    */
   @java.lang.Override
@@ -178,15 +169,14 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       element_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Object hierarchy path to the change, with levels separated by a '.'
    * character. For repeated fields, an applicable unique identifier field is
@@ -200,15 +190,16 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string element = 1;</code>
-   *
    * @return The bytes for element.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getElementBytes() {
+  public com.google.protobuf.ByteString
+      getElementBytes() {
     java.lang.Object ref = element_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       element_ = b;
       return b;
     } else {
@@ -219,15 +210,12 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
   public static final int OLD_VALUE_FIELD_NUMBER = 2;
   private volatile java.lang.Object oldValue_;
   /**
-   *
-   *
    * <pre>
    * Value of the changed object in the old Service configuration,
    * in JSON format. This field will not be populated if ChangeType == ADDED.
    * </pre>
    *
    * <code>string old_value = 2;</code>
-   *
    * @return The oldValue.
    */
   @java.lang.Override
@@ -236,30 +224,30 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       oldValue_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Value of the changed object in the old Service configuration,
    * in JSON format. This field will not be populated if ChangeType == ADDED.
    * </pre>
    *
    * <code>string old_value = 2;</code>
-   *
    * @return The bytes for oldValue.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getOldValueBytes() {
+  public com.google.protobuf.ByteString
+      getOldValueBytes() {
     java.lang.Object ref = oldValue_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       oldValue_ = b;
       return b;
     } else {
@@ -270,15 +258,12 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
   public static final int NEW_VALUE_FIELD_NUMBER = 3;
   private volatile java.lang.Object newValue_;
   /**
-   *
-   *
    * <pre>
    * Value of the changed object in the new Service configuration,
    * in JSON format. This field will not be populated if ChangeType == REMOVED.
    * </pre>
    *
    * <code>string new_value = 3;</code>
-   *
    * @return The newValue.
    */
   @java.lang.Override
@@ -287,30 +272,30 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       newValue_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Value of the changed object in the new Service configuration,
    * in JSON format. This field will not be populated if ChangeType == REMOVED.
    * </pre>
    *
    * <code>string new_value = 3;</code>
-   *
    * @return The bytes for newValue.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getNewValueBytes() {
+  public com.google.protobuf.ByteString
+      getNewValueBytes() {
     java.lang.Object ref = newValue_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       newValue_ = b;
       return b;
     } else {
@@ -321,33 +306,25 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
   public static final int CHANGE_TYPE_FIELD_NUMBER = 4;
   private int changeType_;
   /**
-   *
-   *
    * <pre>
    * The type for this change, either ADDED, REMOVED, or MODIFIED.
    * </pre>
    *
    * <code>.google.api.ChangeType change_type = 4;</code>
-   *
    * @return The enum numeric value on the wire for changeType.
    */
-  @java.lang.Override
-  public int getChangeTypeValue() {
+  @java.lang.Override public int getChangeTypeValue() {
     return changeType_;
   }
   /**
-   *
-   *
    * <pre>
    * The type for this change, either ADDED, REMOVED, or MODIFIED.
    * </pre>
    *
    * <code>.google.api.ChangeType change_type = 4;</code>
-   *
    * @return The changeType.
    */
-  @java.lang.Override
-  public com.google.api.ChangeType getChangeType() {
+  @java.lang.Override public com.google.api.ChangeType getChangeType() {
     @SuppressWarnings("deprecation")
     com.google.api.ChangeType result = com.google.api.ChangeType.valueOf(changeType_);
     return result == null ? com.google.api.ChangeType.UNRECOGNIZED : result;
@@ -356,8 +333,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
   public static final int ADVICES_FIELD_NUMBER = 5;
   private java.util.List<com.google.api.Advice> advices_;
   /**
-   *
-   *
    * <pre>
    * Collection of advice provided for this change, useful for determining the
    * possible impact of this change.
@@ -370,8 +345,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     return advices_;
   }
   /**
-   *
-   *
    * <pre>
    * Collection of advice provided for this change, useful for determining the
    * possible impact of this change.
@@ -380,12 +353,11 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.Advice advices = 5;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.AdviceOrBuilder> getAdvicesOrBuilderList() {
+  public java.util.List<? extends com.google.api.AdviceOrBuilder> 
+      getAdvicesOrBuilderList() {
     return advices_;
   }
   /**
-   *
-   *
    * <pre>
    * Collection of advice provided for this change, useful for determining the
    * possible impact of this change.
@@ -398,8 +370,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     return advices_.size();
   }
   /**
-   *
-   *
    * <pre>
    * Collection of advice provided for this change, useful for determining the
    * possible impact of this change.
@@ -412,8 +382,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     return advices_.get(index);
   }
   /**
-   *
-   *
    * <pre>
    * Collection of advice provided for this change, useful for determining the
    * possible impact of this change.
@@ -422,12 +390,12 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.Advice advices = 5;</code>
    */
   @java.lang.Override
-  public com.google.api.AdviceOrBuilder getAdvicesOrBuilder(int index) {
+  public com.google.api.AdviceOrBuilder getAdvicesOrBuilder(
+      int index) {
     return advices_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -439,7 +407,8 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!getElementBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, element_);
     }
@@ -474,10 +443,12 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, newValue_);
     }
     if (changeType_ != com.google.api.ChangeType.CHANGE_TYPE_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream.computeEnumSize(4, changeType_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, changeType_);
     }
     for (int i = 0; i < advices_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, advices_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, advices_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -487,18 +458,22 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.api.ConfigChange)) {
       return super.equals(obj);
     }
     com.google.api.ConfigChange other = (com.google.api.ConfigChange) obj;
 
-    if (!getElement().equals(other.getElement())) return false;
-    if (!getOldValue().equals(other.getOldValue())) return false;
-    if (!getNewValue().equals(other.getNewValue())) return false;
+    if (!getElement()
+        .equals(other.getElement())) return false;
+    if (!getOldValue()
+        .equals(other.getOldValue())) return false;
+    if (!getNewValue()
+        .equals(other.getNewValue())) return false;
     if (changeType_ != other.changeType_) return false;
-    if (!getAdvicesList().equals(other.getAdvicesList())) return false;
+    if (!getAdvicesList()
+        .equals(other.getAdvicesList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -527,103 +502,97 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.api.ConfigChange parseFrom(java.nio.ByteBuffer data)
+  public static com.google.api.ConfigChange parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.ConfigChange parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.api.ConfigChange parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.api.ConfigChange parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.ConfigChange parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.ConfigChange parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.ConfigChange parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.ConfigChange parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.ConfigChange parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.api.ConfigChange parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.api.ConfigChange parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.api.ConfigChange parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.api.ConfigChange parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.ConfigChange parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.api.ConfigChange prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * Output generated from semantically comparing two versions of a service
    * configuration.
@@ -634,19 +603,19 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.api.ConfigChange}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.api.ConfigChange)
       com.google.api.ConfigChangeOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.api.ConfigChangeProto.internal_static_google_api_ConfigChange_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.ConfigChangeProto
-          .internal_static_google_api_ConfigChange_fieldAccessorTable
+      return com.google.api.ConfigChangeProto.internal_static_google_api_ConfigChange_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.api.ConfigChange.class, com.google.api.ConfigChange.Builder.class);
     }
@@ -656,17 +625,17 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
         getAdvicesFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -688,7 +657,8 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.api.ConfigChangeProto.internal_static_google_api_ConfigChange_descriptor;
     }
 
@@ -731,39 +701,38 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.ConfigChange) {
-        return mergeFrom((com.google.api.ConfigChange) other);
+        return mergeFrom((com.google.api.ConfigChange)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -805,10 +774,9 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
             advicesBuilder_ = null;
             advices_ = other.advices_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            advicesBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getAdvicesFieldBuilder()
-                    : null;
+            advicesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getAdvicesFieldBuilder() : null;
           } else {
             advicesBuilder_.addAllMessages(other.advices_);
           }
@@ -842,13 +810,10 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object element_ = "";
     /**
-     *
-     *
      * <pre>
      * Object hierarchy path to the change, with levels separated by a '.'
      * character. For repeated fields, an applicable unique identifier field is
@@ -862,13 +827,13 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string element = 1;</code>
-     *
      * @return The element.
      */
     public java.lang.String getElement() {
       java.lang.Object ref = element_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         element_ = s;
         return s;
@@ -877,8 +842,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Object hierarchy path to the change, with levels separated by a '.'
      * character. For repeated fields, an applicable unique identifier field is
@@ -892,14 +855,15 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string element = 1;</code>
-     *
      * @return The bytes for element.
      */
-    public com.google.protobuf.ByteString getElementBytes() {
+    public com.google.protobuf.ByteString
+        getElementBytes() {
       java.lang.Object ref = element_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         element_ = b;
         return b;
       } else {
@@ -907,8 +871,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Object hierarchy path to the change, with levels separated by a '.'
      * character. For repeated fields, an applicable unique identifier field is
@@ -922,22 +884,20 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string element = 1;</code>
-     *
      * @param value The element to set.
      * @return This builder for chaining.
      */
-    public Builder setElement(java.lang.String value) {
+    public Builder setElement(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       element_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Object hierarchy path to the change, with levels separated by a '.'
      * character. For repeated fields, an applicable unique identifier field is
@@ -951,18 +911,15 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string element = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearElement() {
-
+      
       element_ = getDefaultInstance().getElement();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Object hierarchy path to the change, with levels separated by a '.'
      * character. For repeated fields, an applicable unique identifier field is
@@ -976,16 +933,16 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string element = 1;</code>
-     *
      * @param value The bytes for element to set.
      * @return This builder for chaining.
      */
-    public Builder setElementBytes(com.google.protobuf.ByteString value) {
+    public Builder setElementBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       element_ = value;
       onChanged();
       return this;
@@ -993,21 +950,19 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object oldValue_ = "";
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the old Service configuration,
      * in JSON format. This field will not be populated if ChangeType == ADDED.
      * </pre>
      *
      * <code>string old_value = 2;</code>
-     *
      * @return The oldValue.
      */
     public java.lang.String getOldValue() {
       java.lang.Object ref = oldValue_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         oldValue_ = s;
         return s;
@@ -1016,22 +971,21 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the old Service configuration,
      * in JSON format. This field will not be populated if ChangeType == ADDED.
      * </pre>
      *
      * <code>string old_value = 2;</code>
-     *
      * @return The bytes for oldValue.
      */
-    public com.google.protobuf.ByteString getOldValueBytes() {
+    public com.google.protobuf.ByteString
+        getOldValueBytes() {
       java.lang.Object ref = oldValue_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         oldValue_ = b;
         return b;
       } else {
@@ -1039,64 +993,57 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the old Service configuration,
      * in JSON format. This field will not be populated if ChangeType == ADDED.
      * </pre>
      *
      * <code>string old_value = 2;</code>
-     *
      * @param value The oldValue to set.
      * @return This builder for chaining.
      */
-    public Builder setOldValue(java.lang.String value) {
+    public Builder setOldValue(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       oldValue_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the old Service configuration,
      * in JSON format. This field will not be populated if ChangeType == ADDED.
      * </pre>
      *
      * <code>string old_value = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearOldValue() {
-
+      
       oldValue_ = getDefaultInstance().getOldValue();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the old Service configuration,
      * in JSON format. This field will not be populated if ChangeType == ADDED.
      * </pre>
      *
      * <code>string old_value = 2;</code>
-     *
      * @param value The bytes for oldValue to set.
      * @return This builder for chaining.
      */
-    public Builder setOldValueBytes(com.google.protobuf.ByteString value) {
+    public Builder setOldValueBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       oldValue_ = value;
       onChanged();
       return this;
@@ -1104,21 +1051,19 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object newValue_ = "";
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the new Service configuration,
      * in JSON format. This field will not be populated if ChangeType == REMOVED.
      * </pre>
      *
      * <code>string new_value = 3;</code>
-     *
      * @return The newValue.
      */
     public java.lang.String getNewValue() {
       java.lang.Object ref = newValue_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         newValue_ = s;
         return s;
@@ -1127,22 +1072,21 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the new Service configuration,
      * in JSON format. This field will not be populated if ChangeType == REMOVED.
      * </pre>
      *
      * <code>string new_value = 3;</code>
-     *
      * @return The bytes for newValue.
      */
-    public com.google.protobuf.ByteString getNewValueBytes() {
+    public com.google.protobuf.ByteString
+        getNewValueBytes() {
       java.lang.Object ref = newValue_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         newValue_ = b;
         return b;
       } else {
@@ -1150,64 +1094,57 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the new Service configuration,
      * in JSON format. This field will not be populated if ChangeType == REMOVED.
      * </pre>
      *
      * <code>string new_value = 3;</code>
-     *
      * @param value The newValue to set.
      * @return This builder for chaining.
      */
-    public Builder setNewValue(java.lang.String value) {
+    public Builder setNewValue(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       newValue_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the new Service configuration,
      * in JSON format. This field will not be populated if ChangeType == REMOVED.
      * </pre>
      *
      * <code>string new_value = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearNewValue() {
-
+      
       newValue_ = getDefaultInstance().getNewValue();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Value of the changed object in the new Service configuration,
      * in JSON format. This field will not be populated if ChangeType == REMOVED.
      * </pre>
      *
      * <code>string new_value = 3;</code>
-     *
      * @param value The bytes for newValue to set.
      * @return This builder for chaining.
      */
-    public Builder setNewValueBytes(com.google.protobuf.ByteString value) {
+    public Builder setNewValueBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       newValue_ = value;
       onChanged();
       return this;
@@ -1215,47 +1152,37 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
 
     private int changeType_ = 0;
     /**
-     *
-     *
      * <pre>
      * The type for this change, either ADDED, REMOVED, or MODIFIED.
      * </pre>
      *
      * <code>.google.api.ChangeType change_type = 4;</code>
-     *
      * @return The enum numeric value on the wire for changeType.
      */
-    @java.lang.Override
-    public int getChangeTypeValue() {
+    @java.lang.Override public int getChangeTypeValue() {
       return changeType_;
     }
     /**
-     *
-     *
      * <pre>
      * The type for this change, either ADDED, REMOVED, or MODIFIED.
      * </pre>
      *
      * <code>.google.api.ChangeType change_type = 4;</code>
-     *
      * @param value The enum numeric value on the wire for changeType to set.
      * @return This builder for chaining.
      */
     public Builder setChangeTypeValue(int value) {
-
+      
       changeType_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The type for this change, either ADDED, REMOVED, or MODIFIED.
      * </pre>
      *
      * <code>.google.api.ChangeType change_type = 4;</code>
-     *
      * @return The changeType.
      */
     @java.lang.Override
@@ -1265,14 +1192,11 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return result == null ? com.google.api.ChangeType.UNRECOGNIZED : result;
     }
     /**
-     *
-     *
      * <pre>
      * The type for this change, either ADDED, REMOVED, or MODIFIED.
      * </pre>
      *
      * <code>.google.api.ChangeType change_type = 4;</code>
-     *
      * @param value The changeType to set.
      * @return This builder for chaining.
      */
@@ -1280,45 +1204,39 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       if (value == null) {
         throw new NullPointerException();
       }
-
+      
       changeType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The type for this change, either ADDED, REMOVED, or MODIFIED.
      * </pre>
      *
      * <code>.google.api.ChangeType change_type = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearChangeType() {
-
+      
       changeType_ = 0;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.google.api.Advice> advices_ = java.util.Collections.emptyList();
-
+    private java.util.List<com.google.api.Advice> advices_ =
+      java.util.Collections.emptyList();
     private void ensureAdvicesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         advices_ = new java.util.ArrayList<com.google.api.Advice>(advices_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.Advice, com.google.api.Advice.Builder, com.google.api.AdviceOrBuilder>
-        advicesBuilder_;
+        com.google.api.Advice, com.google.api.Advice.Builder, com.google.api.AdviceOrBuilder> advicesBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1334,8 +1252,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1351,8 +1267,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1368,8 +1282,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1377,7 +1289,8 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public Builder setAdvices(int index, com.google.api.Advice value) {
+    public Builder setAdvices(
+        int index, com.google.api.Advice value) {
       if (advicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1391,8 +1304,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1400,7 +1311,8 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public Builder setAdvices(int index, com.google.api.Advice.Builder builderForValue) {
+    public Builder setAdvices(
+        int index, com.google.api.Advice.Builder builderForValue) {
       if (advicesBuilder_ == null) {
         ensureAdvicesIsMutable();
         advices_.set(index, builderForValue.build());
@@ -1411,8 +1323,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1434,8 +1344,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1443,7 +1351,8 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public Builder addAdvices(int index, com.google.api.Advice value) {
+    public Builder addAdvices(
+        int index, com.google.api.Advice value) {
       if (advicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1457,8 +1366,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1466,7 +1373,8 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public Builder addAdvices(com.google.api.Advice.Builder builderForValue) {
+    public Builder addAdvices(
+        com.google.api.Advice.Builder builderForValue) {
       if (advicesBuilder_ == null) {
         ensureAdvicesIsMutable();
         advices_.add(builderForValue.build());
@@ -1477,8 +1385,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1486,7 +1392,8 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public Builder addAdvices(int index, com.google.api.Advice.Builder builderForValue) {
+    public Builder addAdvices(
+        int index, com.google.api.Advice.Builder builderForValue) {
       if (advicesBuilder_ == null) {
         ensureAdvicesIsMutable();
         advices_.add(index, builderForValue.build());
@@ -1497,8 +1404,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1506,10 +1411,12 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public Builder addAllAdvices(java.lang.Iterable<? extends com.google.api.Advice> values) {
+    public Builder addAllAdvices(
+        java.lang.Iterable<? extends com.google.api.Advice> values) {
       if (advicesBuilder_ == null) {
         ensureAdvicesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, advices_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, advices_);
         onChanged();
       } else {
         advicesBuilder_.addAllMessages(values);
@@ -1517,8 +1424,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1537,8 +1442,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1557,8 +1460,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1566,12 +1467,11 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public com.google.api.Advice.Builder getAdvicesBuilder(int index) {
+    public com.google.api.Advice.Builder getAdvicesBuilder(
+        int index) {
       return getAdvicesFieldBuilder().getBuilder(index);
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1579,16 +1479,14 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public com.google.api.AdviceOrBuilder getAdvicesOrBuilder(int index) {
+    public com.google.api.AdviceOrBuilder getAdvicesOrBuilder(
+        int index) {
       if (advicesBuilder_ == null) {
-        return advices_.get(index);
-      } else {
+        return advices_.get(index);  } else {
         return advicesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1596,7 +1494,8 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public java.util.List<? extends com.google.api.AdviceOrBuilder> getAdvicesOrBuilderList() {
+    public java.util.List<? extends com.google.api.AdviceOrBuilder> 
+         getAdvicesOrBuilderList() {
       if (advicesBuilder_ != null) {
         return advicesBuilder_.getMessageOrBuilderList();
       } else {
@@ -1604,8 +1503,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1614,11 +1511,10 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
     public com.google.api.Advice.Builder addAdvicesBuilder() {
-      return getAdvicesFieldBuilder().addBuilder(com.google.api.Advice.getDefaultInstance());
+      return getAdvicesFieldBuilder().addBuilder(
+          com.google.api.Advice.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1626,12 +1522,12 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public com.google.api.Advice.Builder addAdvicesBuilder(int index) {
-      return getAdvicesFieldBuilder().addBuilder(index, com.google.api.Advice.getDefaultInstance());
+    public com.google.api.Advice.Builder addAdvicesBuilder(
+        int index) {
+      return getAdvicesFieldBuilder().addBuilder(
+          index, com.google.api.Advice.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Collection of advice provided for this change, useful for determining the
      * possible impact of this change.
@@ -1639,27 +1535,27 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.Advice advices = 5;</code>
      */
-    public java.util.List<com.google.api.Advice.Builder> getAdvicesBuilderList() {
+    public java.util.List<com.google.api.Advice.Builder> 
+         getAdvicesBuilderList() {
       return getAdvicesFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.Advice, com.google.api.Advice.Builder, com.google.api.AdviceOrBuilder>
+        com.google.api.Advice, com.google.api.Advice.Builder, com.google.api.AdviceOrBuilder> 
         getAdvicesFieldBuilder() {
       if (advicesBuilder_ == null) {
-        advicesBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.api.Advice,
-                com.google.api.Advice.Builder,
-                com.google.api.AdviceOrBuilder>(
-                advices_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        advicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.api.Advice, com.google.api.Advice.Builder, com.google.api.AdviceOrBuilder>(
+                advices_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         advices_ = null;
       }
       return advicesBuilder_;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1669,12 +1565,12 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.api.ConfigChange)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.ConfigChange)
   private static final com.google.api.ConfigChange DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.api.ConfigChange();
   }
@@ -1683,16 +1579,16 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ConfigChange> PARSER =
-      new com.google.protobuf.AbstractParser<ConfigChange>() {
-        @java.lang.Override
-        public ConfigChange parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ConfigChange(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<ConfigChange>
+      PARSER = new com.google.protobuf.AbstractParser<ConfigChange>() {
+    @java.lang.Override
+    public ConfigChange parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new ConfigChange(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<ConfigChange> parser() {
     return PARSER;
@@ -1707,4 +1603,6 @@ public final class ConfigChange extends com.google.protobuf.GeneratedMessageV3
   public com.google.api.ConfigChange getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

@@ -18,35 +18,29 @@
 
 package com.google.api;
 
-public interface ControlOrBuilder
-    extends
+public interface ControlOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.api.Control)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The service control environment to use. If empty, no control plane
    * feature (like quota and billing) will be enabled.
    * </pre>
    *
    * <code>string environment = 1;</code>
-   *
    * @return The environment.
    */
   java.lang.String getEnvironment();
   /**
-   *
-   *
    * <pre>
    * The service control environment to use. If empty, no control plane
    * feature (like quota and billing) will be enabled.
    * </pre>
    *
    * <code>string environment = 1;</code>
-   *
    * @return The bytes for environment.
    */
-  com.google.protobuf.ByteString getEnvironmentBytes();
+  com.google.protobuf.ByteString
+      getEnvironmentBytes();
 }

@@ -18,39 +18,31 @@
 
 package com.google.api;
 
-public interface EndpointOrBuilder
-    extends
+public interface EndpointOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.api.Endpoint)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The canonical name of this endpoint.
    * </pre>
    *
    * <code>string name = 1;</code>
-   *
    * @return The name.
    */
   java.lang.String getName();
   /**
-   *
-   *
    * <pre>
    * The canonical name of this endpoint.
    * </pre>
    *
    * <code>string name = 1;</code>
-   *
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString getNameBytes();
+  com.google.protobuf.ByteString
+      getNameBytes();
 
   /**
-   *
-   *
    * <pre>
    * Unimplemented. Dot not use.
    * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -60,14 +52,11 @@ public interface EndpointOrBuilder
    * </pre>
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
-   *
    * @return A list containing the aliases.
    */
-  @java.lang.Deprecated
-  java.util.List<java.lang.String> getAliasesList();
+  @java.lang.Deprecated java.util.List<java.lang.String>
+      getAliasesList();
   /**
-   *
-   *
    * <pre>
    * Unimplemented. Dot not use.
    * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -77,14 +66,10 @@ public interface EndpointOrBuilder
    * </pre>
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
-   *
    * @return The count of aliases.
    */
-  @java.lang.Deprecated
-  int getAliasesCount();
+  @java.lang.Deprecated int getAliasesCount();
   /**
-   *
-   *
    * <pre>
    * Unimplemented. Dot not use.
    * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -94,15 +79,11 @@ public interface EndpointOrBuilder
    * </pre>
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
-   *
    * @param index The index of the element to return.
    * @return The aliases at the given index.
    */
-  @java.lang.Deprecated
-  java.lang.String getAliases(int index);
+  @java.lang.Deprecated java.lang.String getAliases(int index);
   /**
-   *
-   *
    * <pre>
    * Unimplemented. Dot not use.
    * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -112,16 +93,13 @@ public interface EndpointOrBuilder
    * </pre>
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
-   *
    * @param index The index of the value to return.
    * @return The bytes of the aliases at the given index.
    */
-  @java.lang.Deprecated
-  com.google.protobuf.ByteString getAliasesBytes(int index);
+  @java.lang.Deprecated com.google.protobuf.ByteString
+      getAliasesBytes(int index);
 
   /**
-   *
-   *
    * <pre>
    * The specification of an Internet routable address of API frontend that will
    * handle requests to this [API
@@ -131,13 +109,10 @@ public interface EndpointOrBuilder
    * </pre>
    *
    * <code>string target = 101;</code>
-   *
    * @return The target.
    */
   java.lang.String getTarget();
   /**
-   *
-   *
    * <pre>
    * The specification of an Internet routable address of API frontend that will
    * handle requests to this [API
@@ -147,14 +122,12 @@ public interface EndpointOrBuilder
    * </pre>
    *
    * <code>string target = 101;</code>
-   *
    * @return The bytes for target.
    */
-  com.google.protobuf.ByteString getTargetBytes();
+  com.google.protobuf.ByteString
+      getTargetBytes();
 
   /**
-   *
-   *
    * <pre>
    * Allowing
    * [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka
@@ -165,7 +138,6 @@ public interface EndpointOrBuilder
    * </pre>
    *
    * <code>bool allow_cors = 5;</code>
-   *
    * @return The allowCors.
    */
   boolean getAllowCors();

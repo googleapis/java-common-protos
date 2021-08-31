@@ -19,8 +19,6 @@
 package com.google.type;
 
 /**
- *
- *
  * <pre>
  * An object that represents a latitude/longitude pair. This is expressed as a
  * pair of doubles to represent degrees latitude and degrees longitude. Unless
@@ -31,29 +29,30 @@ package com.google.type;
  *
  * Protobuf type {@code google.type.LatLng}
  */
-public final class LatLng extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class LatLng extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.type.LatLng)
     LatLngOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use LatLng.newBuilder() to construct.
   private LatLng(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
-  private LatLng() {}
+  private LatLng() {
+  }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new LatLng();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private LatLng(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -72,36 +71,37 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 9:
-            {
-              latitude_ = input.readDouble();
-              break;
+          case 9: {
+
+            latitude_ = input.readDouble();
+            break;
+          }
+          case 17: {
+
+            longitude_ = input.readDouble();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          case 17:
-            {
-              longitude_ = input.readDouble();
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.type.LatLngProto.internal_static_google_type_LatLng_descriptor;
   }
 
@@ -116,14 +116,11 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
   public static final int LATITUDE_FIELD_NUMBER = 1;
   private double latitude_;
   /**
-   *
-   *
    * <pre>
    * The latitude in degrees. It must be in the range [-90.0, +90.0].
    * </pre>
    *
    * <code>double latitude = 1;</code>
-   *
    * @return The latitude.
    */
   @java.lang.Override
@@ -134,14 +131,11 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
   public static final int LONGITUDE_FIELD_NUMBER = 2;
   private double longitude_;
   /**
-   *
-   *
    * <pre>
    * The longitude in degrees. It must be in the range [-180.0, +180.0].
    * </pre>
    *
    * <code>double longitude = 2;</code>
-   *
    * @return The longitude.
    */
   @java.lang.Override
@@ -150,7 +144,6 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -162,7 +155,8 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (latitude_ != 0D) {
       output.writeDouble(1, latitude_);
     }
@@ -179,10 +173,12 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
 
     size = 0;
     if (latitude_ != 0D) {
-      size += com.google.protobuf.CodedOutputStream.computeDoubleSize(1, latitude_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(1, latitude_);
     }
     if (longitude_ != 0D) {
-      size += com.google.protobuf.CodedOutputStream.computeDoubleSize(2, longitude_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(2, longitude_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -192,7 +188,7 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.type.LatLng)) {
       return super.equals(obj);
@@ -200,9 +196,11 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
     com.google.type.LatLng other = (com.google.type.LatLng) obj;
 
     if (java.lang.Double.doubleToLongBits(getLatitude())
-        != java.lang.Double.doubleToLongBits(other.getLatitude())) return false;
+        != java.lang.Double.doubleToLongBits(
+            other.getLatitude())) return false;
     if (java.lang.Double.doubleToLongBits(getLongitude())
-        != java.lang.Double.doubleToLongBits(other.getLongitude())) return false;
+        != java.lang.Double.doubleToLongBits(
+            other.getLongitude())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -215,117 +213,107 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + LATITUDE_FIELD_NUMBER;
-    hash =
-        (53 * hash)
-            + com.google.protobuf.Internal.hashLong(
-                java.lang.Double.doubleToLongBits(getLatitude()));
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getLatitude()));
     hash = (37 * hash) + LONGITUDE_FIELD_NUMBER;
-    hash =
-        (53 * hash)
-            + com.google.protobuf.Internal.hashLong(
-                java.lang.Double.doubleToLongBits(getLongitude()));
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getLongitude()));
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.google.type.LatLng parseFrom(java.nio.ByteBuffer data)
+  public static com.google.type.LatLng parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.LatLng parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.type.LatLng parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.type.LatLng parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.LatLng parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.type.LatLng parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.LatLng parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.type.LatLng parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.type.LatLng parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.type.LatLng parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.type.LatLng parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.type.LatLng parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.type.LatLng parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.type.LatLng parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.type.LatLng prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * An object that represents a latitude/longitude pair. This is expressed as a
    * pair of doubles to represent degrees latitude and degrees longitude. Unless
@@ -336,11 +324,12 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.type.LatLng}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.type.LatLng)
       com.google.type.LatLngOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.type.LatLngProto.internal_static_google_type_LatLng_descriptor;
     }
 
@@ -357,15 +346,16 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -377,7 +367,8 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.type.LatLngProto.internal_static_google_type_LatLng_descriptor;
     }
 
@@ -408,39 +399,38 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.type.LatLng) {
-        return mergeFrom((com.google.type.LatLng) other);
+        return mergeFrom((com.google.type.LatLng)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -484,16 +474,13 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private double latitude_;
+    private double latitude_ ;
     /**
-     *
-     *
      * <pre>
      * The latitude in degrees. It must be in the range [-90.0, +90.0].
      * </pre>
      *
      * <code>double latitude = 1;</code>
-     *
      * @return The latitude.
      */
     @java.lang.Override
@@ -501,51 +488,42 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
       return latitude_;
     }
     /**
-     *
-     *
      * <pre>
      * The latitude in degrees. It must be in the range [-90.0, +90.0].
      * </pre>
      *
      * <code>double latitude = 1;</code>
-     *
      * @param value The latitude to set.
      * @return This builder for chaining.
      */
     public Builder setLatitude(double value) {
-
+      
       latitude_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The latitude in degrees. It must be in the range [-90.0, +90.0].
      * </pre>
      *
      * <code>double latitude = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearLatitude() {
-
+      
       latitude_ = 0D;
       onChanged();
       return this;
     }
 
-    private double longitude_;
+    private double longitude_ ;
     /**
-     *
-     *
      * <pre>
      * The longitude in degrees. It must be in the range [-180.0, +180.0].
      * </pre>
      *
      * <code>double longitude = 2;</code>
-     *
      * @return The longitude.
      */
     @java.lang.Override
@@ -553,43 +531,37 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
       return longitude_;
     }
     /**
-     *
-     *
      * <pre>
      * The longitude in degrees. It must be in the range [-180.0, +180.0].
      * </pre>
      *
      * <code>double longitude = 2;</code>
-     *
      * @param value The longitude to set.
      * @return This builder for chaining.
      */
     public Builder setLongitude(double value) {
-
+      
       longitude_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The longitude in degrees. It must be in the range [-180.0, +180.0].
      * </pre>
      *
      * <code>double longitude = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearLongitude() {
-
+      
       longitude_ = 0D;
       onChanged();
       return this;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -599,12 +571,12 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.type.LatLng)
   }
 
   // @@protoc_insertion_point(class_scope:google.type.LatLng)
   private static final com.google.type.LatLng DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.type.LatLng();
   }
@@ -613,16 +585,16 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<LatLng> PARSER =
-      new com.google.protobuf.AbstractParser<LatLng>() {
-        @java.lang.Override
-        public LatLng parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new LatLng(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<LatLng>
+      PARSER = new com.google.protobuf.AbstractParser<LatLng>() {
+    @java.lang.Override
+    public LatLng parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new LatLng(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<LatLng> parser() {
     return PARSER;
@@ -637,4 +609,6 @@ public final class LatLng extends com.google.protobuf.GeneratedMessageV3
   public com.google.type.LatLng getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

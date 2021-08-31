@@ -19,39 +19,37 @@
 package com.google.type;
 
 /**
- *
- *
  * <pre>
  * Represents an amount of money with its currency type.
  * </pre>
  *
  * Protobuf type {@code google.type.Money}
  */
-public final class Money extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class Money extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.type.Money)
     MoneyOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use Money.newBuilder() to construct.
   private Money(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private Money() {
     currencyCode_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new Money();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private Money(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -70,43 +68,43 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              currencyCode_ = s;
-              break;
+            currencyCode_ = s;
+            break;
+          }
+          case 16: {
+
+            units_ = input.readInt64();
+            break;
+          }
+          case 24: {
+
+            nanos_ = input.readInt32();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          case 16:
-            {
-              units_ = input.readInt64();
-              break;
-            }
-          case 24:
-            {
-              nanos_ = input.readInt32();
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.type.MoneyProto.internal_static_google_type_Money_descriptor;
   }
 
@@ -121,14 +119,11 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
   public static final int CURRENCY_CODE_FIELD_NUMBER = 1;
   private volatile java.lang.Object currencyCode_;
   /**
-   *
-   *
    * <pre>
    * The three-letter currency code defined in ISO 4217.
    * </pre>
    *
    * <code>string currency_code = 1;</code>
-   *
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -137,29 +132,29 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       currencyCode_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * The three-letter currency code defined in ISO 4217.
    * </pre>
    *
    * <code>string currency_code = 1;</code>
-   *
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getCurrencyCodeBytes() {
+  public com.google.protobuf.ByteString
+      getCurrencyCodeBytes() {
     java.lang.Object ref = currencyCode_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       currencyCode_ = b;
       return b;
     } else {
@@ -170,15 +165,12 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
   public static final int UNITS_FIELD_NUMBER = 2;
   private long units_;
   /**
-   *
-   *
    * <pre>
    * The whole units of the amount.
    * For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
    * </pre>
    *
    * <code>int64 units = 2;</code>
-   *
    * @return The units.
    */
   @java.lang.Override
@@ -189,8 +181,6 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
   public static final int NANOS_FIELD_NUMBER = 3;
   private int nanos_;
   /**
-   *
-   *
    * <pre>
    * Number of nano (10^-9) units of the amount.
    * The value must be between -999,999,999 and +999,999,999 inclusive.
@@ -201,7 +191,6 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>int32 nanos = 3;</code>
-   *
    * @return The nanos.
    */
   @java.lang.Override
@@ -210,7 +199,6 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -222,7 +210,8 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!getCurrencyCodeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, currencyCode_);
     }
@@ -245,10 +234,12 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, currencyCode_);
     }
     if (units_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, units_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, units_);
     }
     if (nanos_ != 0) {
-      size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, nanos_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, nanos_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -258,16 +249,19 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.type.Money)) {
       return super.equals(obj);
     }
     com.google.type.Money other = (com.google.type.Money) obj;
 
-    if (!getCurrencyCode().equals(other.getCurrencyCode())) return false;
-    if (getUnits() != other.getUnits()) return false;
-    if (getNanos() != other.getNanos()) return false;
+    if (!getCurrencyCode()
+        .equals(other.getCurrencyCode())) return false;
+    if (getUnits()
+        != other.getUnits()) return false;
+    if (getNanos()
+        != other.getNanos()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -282,7 +276,8 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
     hash = (37 * hash) + CURRENCY_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getCurrencyCode().hashCode();
     hash = (37 * hash) + UNITS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getUnits());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getUnits());
     hash = (37 * hash) + NANOS_FIELD_NUMBER;
     hash = (53 * hash) + getNanos();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -290,114 +285,109 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.type.Money parseFrom(java.nio.ByteBuffer data)
+  public static com.google.type.Money parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.Money parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.type.Money parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.type.Money parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.Money parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.type.Money parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.Money parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.type.Money parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.type.Money parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.type.Money parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.type.Money parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.type.Money parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.type.Money parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.type.Money parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.type.Money prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * Represents an amount of money with its currency type.
    * </pre>
    *
    * Protobuf type {@code google.type.Money}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.type.Money)
       com.google.type.MoneyOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.type.MoneyProto.internal_static_google_type_Money_descriptor;
     }
 
@@ -414,15 +404,16 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -436,7 +427,8 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.type.MoneyProto.internal_static_google_type_Money_descriptor;
     }
 
@@ -468,39 +460,38 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.type.Money) {
-        return mergeFrom((com.google.type.Money) other);
+        return mergeFrom((com.google.type.Money)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -550,20 +541,18 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object currencyCode_ = "";
     /**
-     *
-     *
      * <pre>
      * The three-letter currency code defined in ISO 4217.
      * </pre>
      *
      * <code>string currency_code = 1;</code>
-     *
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
       java.lang.Object ref = currencyCode_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         currencyCode_ = s;
         return s;
@@ -572,21 +561,20 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The three-letter currency code defined in ISO 4217.
      * </pre>
      *
      * <code>string currency_code = 1;</code>
-     *
      * @return The bytes for currencyCode.
      */
-    public com.google.protobuf.ByteString getCurrencyCodeBytes() {
+    public com.google.protobuf.ByteString
+        getCurrencyCodeBytes() {
       java.lang.Object ref = currencyCode_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         currencyCode_ = b;
         return b;
       } else {
@@ -594,77 +582,67 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The three-letter currency code defined in ISO 4217.
      * </pre>
      *
      * <code>string currency_code = 1;</code>
-     *
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
-    public Builder setCurrencyCode(java.lang.String value) {
+    public Builder setCurrencyCode(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       currencyCode_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The three-letter currency code defined in ISO 4217.
      * </pre>
      *
      * <code>string currency_code = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
-
+      
       currencyCode_ = getDefaultInstance().getCurrencyCode();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The three-letter currency code defined in ISO 4217.
      * </pre>
      *
      * <code>string currency_code = 1;</code>
-     *
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */
-    public Builder setCurrencyCodeBytes(com.google.protobuf.ByteString value) {
+    public Builder setCurrencyCodeBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       currencyCode_ = value;
       onChanged();
       return this;
     }
 
-    private long units_;
+    private long units_ ;
     /**
-     *
-     *
      * <pre>
      * The whole units of the amount.
      * For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
      * </pre>
      *
      * <code>int64 units = 2;</code>
-     *
      * @return The units.
      */
     @java.lang.Override
@@ -672,47 +650,39 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
       return units_;
     }
     /**
-     *
-     *
      * <pre>
      * The whole units of the amount.
      * For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
      * </pre>
      *
      * <code>int64 units = 2;</code>
-     *
      * @param value The units to set.
      * @return This builder for chaining.
      */
     public Builder setUnits(long value) {
-
+      
       units_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The whole units of the amount.
      * For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
      * </pre>
      *
      * <code>int64 units = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearUnits() {
-
+      
       units_ = 0L;
       onChanged();
       return this;
     }
 
-    private int nanos_;
+    private int nanos_ ;
     /**
-     *
-     *
      * <pre>
      * Number of nano (10^-9) units of the amount.
      * The value must be between -999,999,999 and +999,999,999 inclusive.
@@ -723,7 +693,6 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int32 nanos = 3;</code>
-     *
      * @return The nanos.
      */
     @java.lang.Override
@@ -731,8 +700,6 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
       return nanos_;
     }
     /**
-     *
-     *
      * <pre>
      * Number of nano (10^-9) units of the amount.
      * The value must be between -999,999,999 and +999,999,999 inclusive.
@@ -743,19 +710,16 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int32 nanos = 3;</code>
-     *
      * @param value The nanos to set.
      * @return This builder for chaining.
      */
     public Builder setNanos(int value) {
-
+      
       nanos_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Number of nano (10^-9) units of the amount.
      * The value must be between -999,999,999 and +999,999,999 inclusive.
@@ -766,18 +730,17 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int32 nanos = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearNanos() {
-
+      
       nanos_ = 0;
       onChanged();
       return this;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -787,12 +750,12 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.type.Money)
   }
 
   // @@protoc_insertion_point(class_scope:google.type.Money)
   private static final com.google.type.Money DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.type.Money();
   }
@@ -801,16 +764,16 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Money> PARSER =
-      new com.google.protobuf.AbstractParser<Money>() {
-        @java.lang.Override
-        public Money parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Money(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<Money>
+      PARSER = new com.google.protobuf.AbstractParser<Money>() {
+    @java.lang.Override
+    public Money parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new Money(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<Money> parser() {
     return PARSER;
@@ -825,4 +788,6 @@ public final class Money extends com.google.protobuf.GeneratedMessageV3
   public com.google.type.Money getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

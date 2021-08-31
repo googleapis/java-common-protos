@@ -19,8 +19,6 @@
 package com.google.longrunning;
 
 /**
- *
- *
  * <pre>
  * This resource represents a long-running operation that is the result of a
  * network API call.
@@ -28,31 +26,31 @@ package com.google.longrunning;
  *
  * Protobuf type {@code google.longrunning.Operation}
  */
-public final class Operation extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class Operation extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.longrunning.Operation)
     OperationOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use Operation.newBuilder() to construct.
   private Operation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private Operation() {
     name_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new Operation();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private Operation(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -71,105 +69,99 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              name_ = s;
-              break;
+            name_ = s;
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Any.Builder subBuilder = null;
+            if (metadata_ != null) {
+              subBuilder = metadata_.toBuilder();
             }
-          case 18:
-            {
-              com.google.protobuf.Any.Builder subBuilder = null;
-              if (metadata_ != null) {
-                subBuilder = metadata_.toBuilder();
-              }
-              metadata_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(metadata_);
-                metadata_ = subBuilder.buildPartial();
-              }
+            metadata_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(metadata_);
+              metadata_ = subBuilder.buildPartial();
+            }
 
-              break;
+            break;
+          }
+          case 24: {
+
+            done_ = input.readBool();
+            break;
+          }
+          case 34: {
+            com.google.rpc.Status.Builder subBuilder = null;
+            if (resultCase_ == 4) {
+              subBuilder = ((com.google.rpc.Status) result_).toBuilder();
             }
-          case 24:
-            {
-              done_ = input.readBool();
-              break;
+            result_ =
+                input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.rpc.Status) result_);
+              result_ = subBuilder.buildPartial();
             }
-          case 34:
-            {
-              com.google.rpc.Status.Builder subBuilder = null;
-              if (resultCase_ == 4) {
-                subBuilder = ((com.google.rpc.Status) result_).toBuilder();
-              }
-              result_ = input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.google.rpc.Status) result_);
-                result_ = subBuilder.buildPartial();
-              }
-              resultCase_ = 4;
-              break;
+            resultCase_ = 4;
+            break;
+          }
+          case 42: {
+            com.google.protobuf.Any.Builder subBuilder = null;
+            if (resultCase_ == 5) {
+              subBuilder = ((com.google.protobuf.Any) result_).toBuilder();
             }
-          case 42:
-            {
-              com.google.protobuf.Any.Builder subBuilder = null;
-              if (resultCase_ == 5) {
-                subBuilder = ((com.google.protobuf.Any) result_).toBuilder();
-              }
-              result_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.google.protobuf.Any) result_);
-                result_ = subBuilder.buildPartial();
-              }
-              resultCase_ = 5;
-              break;
+            result_ =
+                input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.protobuf.Any) result_);
+              result_ = subBuilder.buildPartial();
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            resultCase_ = 5;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.longrunning.OperationsProto
-        .internal_static_google_longrunning_Operation_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.longrunning.OperationsProto.internal_static_google_longrunning_Operation_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.longrunning.OperationsProto
-        .internal_static_google_longrunning_Operation_fieldAccessorTable
+    return com.google.longrunning.OperationsProto.internal_static_google_longrunning_Operation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.longrunning.Operation.class, com.google.longrunning.Operation.Builder.class);
   }
 
   private int resultCase_ = 0;
   private java.lang.Object result_;
-
   public enum ResultCase
-      implements
-          com.google.protobuf.Internal.EnumLite,
+      implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     ERROR(4),
     RESPONSE(5),
     RESULT_NOT_SET(0);
     private final int value;
-
     private ResultCase(int value) {
       this.value = value;
     }
@@ -185,31 +177,26 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
 
     public static ResultCase forNumber(int value) {
       switch (value) {
-        case 4:
-          return ERROR;
-        case 5:
-          return RESPONSE;
-        case 0:
-          return RESULT_NOT_SET;
-        default:
-          return null;
+        case 4: return ERROR;
+        case 5: return RESPONSE;
+        case 0: return RESULT_NOT_SET;
+        default: return null;
       }
     }
-
     public int getNumber() {
       return this.value;
     }
   };
 
-  public ResultCase getResultCase() {
-    return ResultCase.forNumber(resultCase_);
+  public ResultCase
+  getResultCase() {
+    return ResultCase.forNumber(
+        resultCase_);
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
-   *
-   *
    * <pre>
    * The server-assigned name, which is only unique within the same service that
    * originally returns it. If you use the default HTTP mapping, the
@@ -217,7 +204,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string name = 1;</code>
-   *
    * @return The name.
    */
   @java.lang.Override
@@ -226,15 +212,14 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       name_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * The server-assigned name, which is only unique within the same service that
    * originally returns it. If you use the default HTTP mapping, the
@@ -242,15 +227,16 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string name = 1;</code>
-   *
    * @return The bytes for name.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getNameBytes() {
+  public com.google.protobuf.ByteString
+      getNameBytes() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       name_ = b;
       return b;
     } else {
@@ -261,8 +247,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
   public static final int METADATA_FIELD_NUMBER = 2;
   private com.google.protobuf.Any metadata_;
   /**
-   *
-   *
    * <pre>
    * Service-specific metadata associated with the operation.  It typically
    * contains progress information and common metadata such as create time.
@@ -271,7 +255,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>.google.protobuf.Any metadata = 2;</code>
-   *
    * @return Whether the metadata field is set.
    */
   @java.lang.Override
@@ -279,8 +262,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     return metadata_ != null;
   }
   /**
-   *
-   *
    * <pre>
    * Service-specific metadata associated with the operation.  It typically
    * contains progress information and common metadata such as create time.
@@ -289,7 +270,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>.google.protobuf.Any metadata = 2;</code>
-   *
    * @return The metadata.
    */
   @java.lang.Override
@@ -297,8 +277,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     return metadata_ == null ? com.google.protobuf.Any.getDefaultInstance() : metadata_;
   }
   /**
-   *
-   *
    * <pre>
    * Service-specific metadata associated with the operation.  It typically
    * contains progress information and common metadata such as create time.
@@ -316,8 +294,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
   public static final int DONE_FIELD_NUMBER = 3;
   private boolean done_;
   /**
-   *
-   *
    * <pre>
    * If the value is `false`, it means the operation is still in progress.
    * If `true`, the operation is completed, and either `error` or `response` is
@@ -325,7 +301,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>bool done = 3;</code>
-   *
    * @return The done.
    */
   @java.lang.Override
@@ -335,14 +310,11 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
 
   public static final int ERROR_FIELD_NUMBER = 4;
   /**
-   *
-   *
    * <pre>
    * The error result of the operation in case of failure or cancellation.
    * </pre>
    *
    * <code>.google.rpc.Status error = 4;</code>
-   *
    * @return Whether the error field is set.
    */
   @java.lang.Override
@@ -350,26 +322,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     return resultCase_ == 4;
   }
   /**
-   *
-   *
    * <pre>
    * The error result of the operation in case of failure or cancellation.
    * </pre>
    *
    * <code>.google.rpc.Status error = 4;</code>
-   *
    * @return The error.
    */
   @java.lang.Override
   public com.google.rpc.Status getError() {
     if (resultCase_ == 4) {
-      return (com.google.rpc.Status) result_;
+       return (com.google.rpc.Status) result_;
     }
     return com.google.rpc.Status.getDefaultInstance();
   }
   /**
-   *
-   *
    * <pre>
    * The error result of the operation in case of failure or cancellation.
    * </pre>
@@ -379,15 +346,13 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public com.google.rpc.StatusOrBuilder getErrorOrBuilder() {
     if (resultCase_ == 4) {
-      return (com.google.rpc.Status) result_;
+       return (com.google.rpc.Status) result_;
     }
     return com.google.rpc.Status.getDefaultInstance();
   }
 
   public static final int RESPONSE_FIELD_NUMBER = 5;
   /**
-   *
-   *
    * <pre>
    * The normal response of the operation in case of success.  If the original
    * method returns no data on success, such as `Delete`, the response is
@@ -400,7 +365,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>.google.protobuf.Any response = 5;</code>
-   *
    * @return Whether the response field is set.
    */
   @java.lang.Override
@@ -408,8 +372,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     return resultCase_ == 5;
   }
   /**
-   *
-   *
    * <pre>
    * The normal response of the operation in case of success.  If the original
    * method returns no data on success, such as `Delete`, the response is
@@ -422,19 +384,16 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>.google.protobuf.Any response = 5;</code>
-   *
    * @return The response.
    */
   @java.lang.Override
   public com.google.protobuf.Any getResponse() {
     if (resultCase_ == 5) {
-      return (com.google.protobuf.Any) result_;
+       return (com.google.protobuf.Any) result_;
     }
     return com.google.protobuf.Any.getDefaultInstance();
   }
   /**
-   *
-   *
    * <pre>
    * The normal response of the operation in case of success.  If the original
    * method returns no data on success, such as `Delete`, the response is
@@ -451,13 +410,12 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public com.google.protobuf.AnyOrBuilder getResponseOrBuilder() {
     if (resultCase_ == 5) {
-      return (com.google.protobuf.Any) result_;
+       return (com.google.protobuf.Any) result_;
     }
     return com.google.protobuf.Any.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -469,7 +427,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
@@ -498,20 +457,20 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     if (metadata_ != null) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getMetadata());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getMetadata());
     }
     if (done_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(3, done_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, done_);
     }
     if (resultCase_ == 4) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              4, (com.google.rpc.Status) result_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.google.rpc.Status) result_);
     }
     if (resultCase_ == 5) {
-      size +=
-          com.google.protobuf.CodedOutputStream.computeMessageSize(
-              5, (com.google.protobuf.Any) result_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.google.protobuf.Any) result_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -521,26 +480,31 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.longrunning.Operation)) {
       return super.equals(obj);
     }
     com.google.longrunning.Operation other = (com.google.longrunning.Operation) obj;
 
-    if (!getName().equals(other.getName())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
     if (hasMetadata() != other.hasMetadata()) return false;
     if (hasMetadata()) {
-      if (!getMetadata().equals(other.getMetadata())) return false;
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
     }
-    if (getDone() != other.getDone()) return false;
+    if (getDone()
+        != other.getDone()) return false;
     if (!getResultCase().equals(other.getResultCase())) return false;
     switch (resultCase_) {
       case 4:
-        if (!getError().equals(other.getError())) return false;
+        if (!getError()
+            .equals(other.getError())) return false;
         break;
       case 5:
-        if (!getResponse().equals(other.getResponse())) return false;
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
         break;
       case 0:
       default:
@@ -563,7 +527,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       hash = (53 * hash) + getMetadata().hashCode();
     }
     hash = (37 * hash) + DONE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getDone());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDone());
     switch (resultCase_) {
       case 4:
         hash = (37 * hash) + ERROR_FIELD_NUMBER;
@@ -581,103 +546,97 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.longrunning.Operation parseFrom(java.nio.ByteBuffer data)
+  public static com.google.longrunning.Operation parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.longrunning.Operation parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.longrunning.Operation parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.longrunning.Operation parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.longrunning.Operation parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.longrunning.Operation parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.longrunning.Operation parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.longrunning.Operation parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.longrunning.Operation parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.longrunning.Operation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.longrunning.Operation parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.longrunning.Operation parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.longrunning.Operation parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.longrunning.Operation prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * This resource represents a long-running operation that is the result of a
    * network API call.
@@ -685,23 +644,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.longrunning.Operation}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.longrunning.Operation)
       com.google.longrunning.OperationOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.longrunning.OperationsProto
-          .internal_static_google_longrunning_Operation_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.longrunning.OperationsProto.internal_static_google_longrunning_Operation_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.longrunning.OperationsProto
-          .internal_static_google_longrunning_Operation_fieldAccessorTable
+      return com.google.longrunning.OperationsProto.internal_static_google_longrunning_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.longrunning.Operation.class,
-              com.google.longrunning.Operation.Builder.class);
+              com.google.longrunning.Operation.class, com.google.longrunning.Operation.Builder.class);
     }
 
     // Construct using com.google.longrunning.Operation.newBuilder()
@@ -709,15 +666,16 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -737,9 +695,9 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.longrunning.OperationsProto
-          .internal_static_google_longrunning_Operation_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.longrunning.OperationsProto.internal_static_google_longrunning_Operation_descriptor;
     }
 
     @java.lang.Override
@@ -789,39 +747,38 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.longrunning.Operation) {
-        return mergeFrom((com.google.longrunning.Operation) other);
+        return mergeFrom((com.google.longrunning.Operation)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -841,20 +798,17 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
         setDone(other.getDone());
       }
       switch (other.getResultCase()) {
-        case ERROR:
-          {
-            mergeError(other.getError());
-            break;
-          }
-        case RESPONSE:
-          {
-            mergeResponse(other.getResponse());
-            break;
-          }
-        case RESULT_NOT_SET:
-          {
-            break;
-          }
+        case ERROR: {
+          mergeError(other.getError());
+          break;
+        }
+        case RESPONSE: {
+          mergeResponse(other.getResponse());
+          break;
+        }
+        case RESULT_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -884,12 +838,12 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
-
     private int resultCase_ = 0;
     private java.lang.Object result_;
-
-    public ResultCase getResultCase() {
-      return ResultCase.forNumber(resultCase_);
+    public ResultCase
+        getResultCase() {
+      return ResultCase.forNumber(
+          resultCase_);
     }
 
     public Builder clearResult() {
@@ -899,10 +853,9 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
+
     private java.lang.Object name_ = "";
     /**
-     *
-     *
      * <pre>
      * The server-assigned name, which is only unique within the same service that
      * originally returns it. If you use the default HTTP mapping, the
@@ -910,13 +863,13 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 1;</code>
-     *
      * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
@@ -925,8 +878,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The server-assigned name, which is only unique within the same service that
      * originally returns it. If you use the default HTTP mapping, the
@@ -934,14 +885,15 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 1;</code>
-     *
      * @return The bytes for name.
      */
-    public com.google.protobuf.ByteString getNameBytes() {
+    public com.google.protobuf.ByteString
+        getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -949,8 +901,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The server-assigned name, which is only unique within the same service that
      * originally returns it. If you use the default HTTP mapping, the
@@ -958,22 +908,20 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 1;</code>
-     *
      * @param value The name to set.
      * @return This builder for chaining.
      */
-    public Builder setName(java.lang.String value) {
+    public Builder setName(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       name_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The server-assigned name, which is only unique within the same service that
      * originally returns it. If you use the default HTTP mapping, the
@@ -981,18 +929,15 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearName() {
-
+      
       name_ = getDefaultInstance().getName();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The server-assigned name, which is only unique within the same service that
      * originally returns it. If you use the default HTTP mapping, the
@@ -1000,16 +945,16 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 1;</code>
-     *
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
-    public Builder setNameBytes(com.google.protobuf.ByteString value) {
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
       onChanged();
       return this;
@@ -1017,13 +962,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
 
     private com.google.protobuf.Any metadata_;
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Any,
-            com.google.protobuf.Any.Builder,
-            com.google.protobuf.AnyOrBuilder>
-        metadataBuilder_;
+        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> metadataBuilder_;
     /**
-     *
-     *
      * <pre>
      * Service-specific metadata associated with the operation.  It typically
      * contains progress information and common metadata such as create time.
@@ -1032,15 +972,12 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>.google.protobuf.Any metadata = 2;</code>
-     *
      * @return Whether the metadata field is set.
      */
     public boolean hasMetadata() {
       return metadataBuilder_ != null || metadata_ != null;
     }
     /**
-     *
-     *
      * <pre>
      * Service-specific metadata associated with the operation.  It typically
      * contains progress information and common metadata such as create time.
@@ -1049,7 +986,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>.google.protobuf.Any metadata = 2;</code>
-     *
      * @return The metadata.
      */
     public com.google.protobuf.Any getMetadata() {
@@ -1060,8 +996,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Service-specific metadata associated with the operation.  It typically
      * contains progress information and common metadata such as create time.
@@ -1085,8 +1019,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Service-specific metadata associated with the operation.  It typically
      * contains progress information and common metadata such as create time.
@@ -1096,7 +1028,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>.google.protobuf.Any metadata = 2;</code>
      */
-    public Builder setMetadata(com.google.protobuf.Any.Builder builderForValue) {
+    public Builder setMetadata(
+        com.google.protobuf.Any.Builder builderForValue) {
       if (metadataBuilder_ == null) {
         metadata_ = builderForValue.build();
         onChanged();
@@ -1107,8 +1040,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Service-specific metadata associated with the operation.  It typically
      * contains progress information and common metadata such as create time.
@@ -1121,7 +1052,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     public Builder mergeMetadata(com.google.protobuf.Any value) {
       if (metadataBuilder_ == null) {
         if (metadata_ != null) {
-          metadata_ = com.google.protobuf.Any.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          metadata_ =
+            com.google.protobuf.Any.newBuilder(metadata_).mergeFrom(value).buildPartial();
         } else {
           metadata_ = value;
         }
@@ -1133,8 +1065,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Service-specific metadata associated with the operation.  It typically
      * contains progress information and common metadata such as create time.
@@ -1156,8 +1086,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Service-specific metadata associated with the operation.  It typically
      * contains progress information and common metadata such as create time.
@@ -1168,13 +1096,11 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.protobuf.Any metadata = 2;</code>
      */
     public com.google.protobuf.Any.Builder getMetadataBuilder() {
-
+      
       onChanged();
       return getMetadataFieldBuilder().getBuilder();
     }
     /**
-     *
-     *
      * <pre>
      * Service-specific metadata associated with the operation.  It typically
      * contains progress information and common metadata such as create time.
@@ -1188,12 +1114,11 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       if (metadataBuilder_ != null) {
         return metadataBuilder_.getMessageOrBuilder();
       } else {
-        return metadata_ == null ? com.google.protobuf.Any.getDefaultInstance() : metadata_;
+        return metadata_ == null ?
+            com.google.protobuf.Any.getDefaultInstance() : metadata_;
       }
     }
     /**
-     *
-     *
      * <pre>
      * Service-specific metadata associated with the operation.  It typically
      * contains progress information and common metadata such as create time.
@@ -1204,25 +1129,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.protobuf.Any metadata = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Any,
-            com.google.protobuf.Any.Builder,
-            com.google.protobuf.AnyOrBuilder>
+        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
         getMetadataFieldBuilder() {
       if (metadataBuilder_ == null) {
-        metadataBuilder_ =
-            new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Any,
-                com.google.protobuf.Any.Builder,
-                com.google.protobuf.AnyOrBuilder>(getMetadata(), getParentForChildren(), isClean());
+        metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                getMetadata(),
+                getParentForChildren(),
+                isClean());
         metadata_ = null;
       }
       return metadataBuilder_;
     }
 
-    private boolean done_;
+    private boolean done_ ;
     /**
-     *
-     *
      * <pre>
      * If the value is `false`, it means the operation is still in progress.
      * If `true`, the operation is completed, and either `error` or `response` is
@@ -1230,7 +1151,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>bool done = 3;</code>
-     *
      * @return The done.
      */
     @java.lang.Override
@@ -1238,8 +1158,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return done_;
     }
     /**
-     *
-     *
      * <pre>
      * If the value is `false`, it means the operation is still in progress.
      * If `true`, the operation is completed, and either `error` or `response` is
@@ -1247,19 +1165,16 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>bool done = 3;</code>
-     *
      * @param value The done to set.
      * @return This builder for chaining.
      */
     public Builder setDone(boolean value) {
-
+      
       done_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * If the value is `false`, it means the operation is still in progress.
      * If `true`, the operation is completed, and either `error` or `response` is
@@ -1267,28 +1182,23 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>bool done = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDone() {
-
+      
       done_ = false;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>
-        errorBuilder_;
+        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> errorBuilder_;
     /**
-     *
-     *
      * <pre>
      * The error result of the operation in case of failure or cancellation.
      * </pre>
      *
      * <code>.google.rpc.Status error = 4;</code>
-     *
      * @return Whether the error field is set.
      */
     @java.lang.Override
@@ -1296,14 +1206,11 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return resultCase_ == 4;
     }
     /**
-     *
-     *
      * <pre>
      * The error result of the operation in case of failure or cancellation.
      * </pre>
      *
      * <code>.google.rpc.Status error = 4;</code>
-     *
      * @return The error.
      */
     @java.lang.Override
@@ -1321,8 +1228,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The error result of the operation in case of failure or cancellation.
      * </pre>
@@ -1343,15 +1248,14 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The error result of the operation in case of failure or cancellation.
      * </pre>
      *
      * <code>.google.rpc.Status error = 4;</code>
      */
-    public Builder setError(com.google.rpc.Status.Builder builderForValue) {
+    public Builder setError(
+        com.google.rpc.Status.Builder builderForValue) {
       if (errorBuilder_ == null) {
         result_ = builderForValue.build();
         onChanged();
@@ -1362,8 +1266,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The error result of the operation in case of failure or cancellation.
      * </pre>
@@ -1372,11 +1274,10 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder mergeError(com.google.rpc.Status value) {
       if (errorBuilder_ == null) {
-        if (resultCase_ == 4 && result_ != com.google.rpc.Status.getDefaultInstance()) {
-          result_ =
-              com.google.rpc.Status.newBuilder((com.google.rpc.Status) result_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (resultCase_ == 4 &&
+            result_ != com.google.rpc.Status.getDefaultInstance()) {
+          result_ = com.google.rpc.Status.newBuilder((com.google.rpc.Status) result_)
+              .mergeFrom(value).buildPartial();
         } else {
           result_ = value;
         }
@@ -1391,8 +1292,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The error result of the operation in case of failure or cancellation.
      * </pre>
@@ -1416,8 +1315,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The error result of the operation in case of failure or cancellation.
      * </pre>
@@ -1428,8 +1325,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return getErrorFieldBuilder().getBuilder();
     }
     /**
-     *
-     *
      * <pre>
      * The error result of the operation in case of failure or cancellation.
      * </pre>
@@ -1448,8 +1343,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The error result of the operation in case of failure or cancellation.
      * </pre>
@@ -1457,34 +1350,27 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.rpc.Status error = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>
+        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
         getErrorFieldBuilder() {
       if (errorBuilder_ == null) {
         if (!(resultCase_ == 4)) {
           result_ = com.google.rpc.Status.getDefaultInstance();
         }
-        errorBuilder_ =
-            new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.rpc.Status,
-                com.google.rpc.Status.Builder,
-                com.google.rpc.StatusOrBuilder>(
-                (com.google.rpc.Status) result_, getParentForChildren(), isClean());
+        errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
+                (com.google.rpc.Status) result_,
+                getParentForChildren(),
+                isClean());
         result_ = null;
       }
       resultCase_ = 4;
-      onChanged();
-      ;
+      onChanged();;
       return errorBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Any,
-            com.google.protobuf.Any.Builder,
-            com.google.protobuf.AnyOrBuilder>
-        responseBuilder_;
+        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> responseBuilder_;
     /**
-     *
-     *
      * <pre>
      * The normal response of the operation in case of success.  If the original
      * method returns no data on success, such as `Delete`, the response is
@@ -1497,7 +1383,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>.google.protobuf.Any response = 5;</code>
-     *
      * @return Whether the response field is set.
      */
     @java.lang.Override
@@ -1505,8 +1390,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return resultCase_ == 5;
     }
     /**
-     *
-     *
      * <pre>
      * The normal response of the operation in case of success.  If the original
      * method returns no data on success, such as `Delete`, the response is
@@ -1519,7 +1402,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>.google.protobuf.Any response = 5;</code>
-     *
      * @return The response.
      */
     @java.lang.Override
@@ -1537,8 +1419,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The normal response of the operation in case of success.  If the original
      * method returns no data on success, such as `Delete`, the response is
@@ -1566,8 +1446,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The normal response of the operation in case of success.  If the original
      * method returns no data on success, such as `Delete`, the response is
@@ -1581,7 +1459,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>.google.protobuf.Any response = 5;</code>
      */
-    public Builder setResponse(com.google.protobuf.Any.Builder builderForValue) {
+    public Builder setResponse(
+        com.google.protobuf.Any.Builder builderForValue) {
       if (responseBuilder_ == null) {
         result_ = builderForValue.build();
         onChanged();
@@ -1592,8 +1471,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The normal response of the operation in case of success.  If the original
      * method returns no data on success, such as `Delete`, the response is
@@ -1609,11 +1486,10 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder mergeResponse(com.google.protobuf.Any value) {
       if (responseBuilder_ == null) {
-        if (resultCase_ == 5 && result_ != com.google.protobuf.Any.getDefaultInstance()) {
-          result_ =
-              com.google.protobuf.Any.newBuilder((com.google.protobuf.Any) result_)
-                  .mergeFrom(value)
-                  .buildPartial();
+        if (resultCase_ == 5 &&
+            result_ != com.google.protobuf.Any.getDefaultInstance()) {
+          result_ = com.google.protobuf.Any.newBuilder((com.google.protobuf.Any) result_)
+              .mergeFrom(value).buildPartial();
         } else {
           result_ = value;
         }
@@ -1628,8 +1504,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The normal response of the operation in case of success.  If the original
      * method returns no data on success, such as `Delete`, the response is
@@ -1660,8 +1534,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The normal response of the operation in case of success.  If the original
      * method returns no data on success, such as `Delete`, the response is
@@ -1679,8 +1551,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return getResponseFieldBuilder().getBuilder();
     }
     /**
-     *
-     *
      * <pre>
      * The normal response of the operation in case of success.  If the original
      * method returns no data on success, such as `Delete`, the response is
@@ -1706,8 +1576,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The normal response of the operation in case of success.  If the original
      * method returns no data on success, such as `Delete`, the response is
@@ -1722,30 +1590,26 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.protobuf.Any response = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Any,
-            com.google.protobuf.Any.Builder,
-            com.google.protobuf.AnyOrBuilder>
+        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
         getResponseFieldBuilder() {
       if (responseBuilder_ == null) {
         if (!(resultCase_ == 5)) {
           result_ = com.google.protobuf.Any.getDefaultInstance();
         }
-        responseBuilder_ =
-            new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Any,
-                com.google.protobuf.Any.Builder,
-                com.google.protobuf.AnyOrBuilder>(
-                (com.google.protobuf.Any) result_, getParentForChildren(), isClean());
+        responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                (com.google.protobuf.Any) result_,
+                getParentForChildren(),
+                isClean());
         result_ = null;
       }
       resultCase_ = 5;
-      onChanged();
-      ;
+      onChanged();;
       return responseBuilder_;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1755,12 +1619,12 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.longrunning.Operation)
   }
 
   // @@protoc_insertion_point(class_scope:google.longrunning.Operation)
   private static final com.google.longrunning.Operation DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.longrunning.Operation();
   }
@@ -1769,16 +1633,16 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Operation> PARSER =
-      new com.google.protobuf.AbstractParser<Operation>() {
-        @java.lang.Override
-        public Operation parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Operation(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<Operation>
+      PARSER = new com.google.protobuf.AbstractParser<Operation>() {
+    @java.lang.Override
+    public Operation parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new Operation(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<Operation> parser() {
     return PARSER;
@@ -1793,4 +1657,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
   public com.google.longrunning.Operation getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

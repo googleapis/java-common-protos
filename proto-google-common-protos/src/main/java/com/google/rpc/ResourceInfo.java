@@ -19,24 +19,21 @@
 package com.google.rpc;
 
 /**
- *
- *
  * <pre>
  * Describes the resource that is being accessed.
  * </pre>
  *
  * Protobuf type {@code google.rpc.ResourceInfo}
  */
-public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class ResourceInfo extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.rpc.ResourceInfo)
     ResourceInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use ResourceInfo.newBuilder() to construct.
   private ResourceInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private ResourceInfo() {
     resourceType_ = "";
     resourceName_ = "";
@@ -46,15 +43,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new ResourceInfo();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private ResourceInfo(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -73,62 +71,58 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              resourceType_ = s;
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            resourceType_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              resourceName_ = s;
-              break;
-            }
-          case 26:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            resourceName_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              owner_ = s;
-              break;
-            }
-          case 34:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            owner_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              description_ = s;
-              break;
+            description_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_ResourceInfo_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.rpc.ErrorDetailsProto
-        .internal_static_google_rpc_ResourceInfo_fieldAccessorTable
+    return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_ResourceInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.rpc.ResourceInfo.class, com.google.rpc.ResourceInfo.Builder.class);
   }
@@ -136,8 +130,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
   public static final int RESOURCE_TYPE_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceType_;
   /**
-   *
-   *
    * <pre>
    * A name for the type of resource being accessed, e.g. "sql table",
    * "cloud storage bucket", "file", "Google calendar"; or the type URL
@@ -145,7 +137,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string resource_type = 1;</code>
-   *
    * @return The resourceType.
    */
   @java.lang.Override
@@ -154,15 +145,14 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       resourceType_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * A name for the type of resource being accessed, e.g. "sql table",
    * "cloud storage bucket", "file", "Google calendar"; or the type URL
@@ -170,15 +160,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string resource_type = 1;</code>
-   *
    * @return The bytes for resourceType.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getResourceTypeBytes() {
+  public com.google.protobuf.ByteString
+      getResourceTypeBytes() {
     java.lang.Object ref = resourceType_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       resourceType_ = b;
       return b;
     } else {
@@ -189,8 +180,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
   public static final int RESOURCE_NAME_FIELD_NUMBER = 2;
   private volatile java.lang.Object resourceName_;
   /**
-   *
-   *
    * <pre>
    * The name of the resource being accessed.  For example, a shared calendar
    * name: "example.com_4fghdhgsrgh&#64;group.calendar.google.com", if the current
@@ -198,7 +187,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string resource_name = 2;</code>
-   *
    * @return The resourceName.
    */
   @java.lang.Override
@@ -207,15 +195,14 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       resourceName_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * The name of the resource being accessed.  For example, a shared calendar
    * name: "example.com_4fghdhgsrgh&#64;group.calendar.google.com", if the current
@@ -223,15 +210,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string resource_name = 2;</code>
-   *
    * @return The bytes for resourceName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getResourceNameBytes() {
+  public com.google.protobuf.ByteString
+      getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       resourceName_ = b;
       return b;
     } else {
@@ -242,8 +230,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
   public static final int OWNER_FIELD_NUMBER = 3;
   private volatile java.lang.Object owner_;
   /**
-   *
-   *
    * <pre>
    * The owner of the resource (optional).
    * For example, "user:&lt;owner email&gt;" or "project:&lt;Google developer project
@@ -251,7 +237,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string owner = 3;</code>
-   *
    * @return The owner.
    */
   @java.lang.Override
@@ -260,15 +245,14 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       owner_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * The owner of the resource (optional).
    * For example, "user:&lt;owner email&gt;" or "project:&lt;Google developer project
@@ -276,15 +260,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string owner = 3;</code>
-   *
    * @return The bytes for owner.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getOwnerBytes() {
+  public com.google.protobuf.ByteString
+      getOwnerBytes() {
     java.lang.Object ref = owner_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       owner_ = b;
       return b;
     } else {
@@ -295,8 +280,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
   public static final int DESCRIPTION_FIELD_NUMBER = 4;
   private volatile java.lang.Object description_;
   /**
-   *
-   *
    * <pre>
    * Describes what error is encountered when accessing this resource.
    * For example, updating a cloud project may require the `writer` permission
@@ -304,7 +287,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string description = 4;</code>
-   *
    * @return The description.
    */
   @java.lang.Override
@@ -313,15 +295,14 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       description_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Describes what error is encountered when accessing this resource.
    * For example, updating a cloud project may require the `writer` permission
@@ -329,15 +310,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string description = 4;</code>
-   *
    * @return The bytes for description.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getDescriptionBytes() {
+  public com.google.protobuf.ByteString
+      getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       description_ = b;
       return b;
     } else {
@@ -346,7 +328,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -358,7 +339,8 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!getResourceTypeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceType_);
     }
@@ -400,17 +382,21 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.rpc.ResourceInfo)) {
       return super.equals(obj);
     }
     com.google.rpc.ResourceInfo other = (com.google.rpc.ResourceInfo) obj;
 
-    if (!getResourceType().equals(other.getResourceType())) return false;
-    if (!getResourceName().equals(other.getResourceName())) return false;
-    if (!getOwner().equals(other.getOwner())) return false;
-    if (!getDescription().equals(other.getDescription())) return false;
+    if (!getResourceType()
+        .equals(other.getResourceType())) return false;
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (!getOwner()
+        .equals(other.getOwner())) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -435,122 +421,116 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.rpc.ResourceInfo parseFrom(java.nio.ByteBuffer data)
+  public static com.google.rpc.ResourceInfo parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.rpc.ResourceInfo parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.rpc.ResourceInfo parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.rpc.ResourceInfo parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.rpc.ResourceInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.rpc.ResourceInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.rpc.ResourceInfo parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.rpc.ResourceInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.rpc.ResourceInfo parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.rpc.ResourceInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.rpc.ResourceInfo parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.rpc.ResourceInfo parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.rpc.ResourceInfo parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.rpc.ResourceInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.rpc.ResourceInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * Describes the resource that is being accessed.
    * </pre>
    *
    * Protobuf type {@code google.rpc.ResourceInfo}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.rpc.ResourceInfo)
       com.google.rpc.ResourceInfoOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_ResourceInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.ErrorDetailsProto
-          .internal_static_google_rpc_ResourceInfo_fieldAccessorTable
+      return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_ResourceInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.rpc.ResourceInfo.class, com.google.rpc.ResourceInfo.Builder.class);
     }
@@ -560,15 +540,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -584,7 +565,8 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_ResourceInfo_descriptor;
     }
 
@@ -617,39 +599,38 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.rpc.ResourceInfo) {
-        return mergeFrom((com.google.rpc.ResourceInfo) other);
+        return mergeFrom((com.google.rpc.ResourceInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -705,8 +686,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object resourceType_ = "";
     /**
-     *
-     *
      * <pre>
      * A name for the type of resource being accessed, e.g. "sql table",
      * "cloud storage bucket", "file", "Google calendar"; or the type URL
@@ -714,13 +693,13 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_type = 1;</code>
-     *
      * @return The resourceType.
      */
     public java.lang.String getResourceType() {
       java.lang.Object ref = resourceType_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         resourceType_ = s;
         return s;
@@ -729,8 +708,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A name for the type of resource being accessed, e.g. "sql table",
      * "cloud storage bucket", "file", "Google calendar"; or the type URL
@@ -738,14 +715,15 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_type = 1;</code>
-     *
      * @return The bytes for resourceType.
      */
-    public com.google.protobuf.ByteString getResourceTypeBytes() {
+    public com.google.protobuf.ByteString
+        getResourceTypeBytes() {
       java.lang.Object ref = resourceType_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         resourceType_ = b;
         return b;
       } else {
@@ -753,8 +731,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A name for the type of resource being accessed, e.g. "sql table",
      * "cloud storage bucket", "file", "Google calendar"; or the type URL
@@ -762,22 +738,20 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_type = 1;</code>
-     *
      * @param value The resourceType to set.
      * @return This builder for chaining.
      */
-    public Builder setResourceType(java.lang.String value) {
+    public Builder setResourceType(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       resourceType_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A name for the type of resource being accessed, e.g. "sql table",
      * "cloud storage bucket", "file", "Google calendar"; or the type URL
@@ -785,18 +759,15 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_type = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearResourceType() {
-
+      
       resourceType_ = getDefaultInstance().getResourceType();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A name for the type of resource being accessed, e.g. "sql table",
      * "cloud storage bucket", "file", "Google calendar"; or the type URL
@@ -804,16 +775,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_type = 1;</code>
-     *
      * @param value The bytes for resourceType to set.
      * @return This builder for chaining.
      */
-    public Builder setResourceTypeBytes(com.google.protobuf.ByteString value) {
+    public Builder setResourceTypeBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       resourceType_ = value;
       onChanged();
       return this;
@@ -821,8 +792,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object resourceName_ = "";
     /**
-     *
-     *
      * <pre>
      * The name of the resource being accessed.  For example, a shared calendar
      * name: "example.com_4fghdhgsrgh&#64;group.calendar.google.com", if the current
@@ -830,13 +799,13 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_name = 2;</code>
-     *
      * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         resourceName_ = s;
         return s;
@@ -845,8 +814,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The name of the resource being accessed.  For example, a shared calendar
      * name: "example.com_4fghdhgsrgh&#64;group.calendar.google.com", if the current
@@ -854,14 +821,15 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_name = 2;</code>
-     *
      * @return The bytes for resourceName.
      */
-    public com.google.protobuf.ByteString getResourceNameBytes() {
+    public com.google.protobuf.ByteString
+        getResourceNameBytes() {
       java.lang.Object ref = resourceName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         resourceName_ = b;
         return b;
       } else {
@@ -869,8 +837,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The name of the resource being accessed.  For example, a shared calendar
      * name: "example.com_4fghdhgsrgh&#64;group.calendar.google.com", if the current
@@ -878,22 +844,20 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_name = 2;</code>
-     *
      * @param value The resourceName to set.
      * @return This builder for chaining.
      */
-    public Builder setResourceName(java.lang.String value) {
+    public Builder setResourceName(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       resourceName_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The name of the resource being accessed.  For example, a shared calendar
      * name: "example.com_4fghdhgsrgh&#64;group.calendar.google.com", if the current
@@ -901,18 +865,15 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_name = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-
+      
       resourceName_ = getDefaultInstance().getResourceName();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The name of the resource being accessed.  For example, a shared calendar
      * name: "example.com_4fghdhgsrgh&#64;group.calendar.google.com", if the current
@@ -920,16 +881,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string resource_name = 2;</code>
-     *
      * @param value The bytes for resourceName to set.
      * @return This builder for chaining.
      */
-    public Builder setResourceNameBytes(com.google.protobuf.ByteString value) {
+    public Builder setResourceNameBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       resourceName_ = value;
       onChanged();
       return this;
@@ -937,8 +898,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object owner_ = "";
     /**
-     *
-     *
      * <pre>
      * The owner of the resource (optional).
      * For example, "user:&lt;owner email&gt;" or "project:&lt;Google developer project
@@ -946,13 +905,13 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string owner = 3;</code>
-     *
      * @return The owner.
      */
     public java.lang.String getOwner() {
       java.lang.Object ref = owner_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         owner_ = s;
         return s;
@@ -961,8 +920,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The owner of the resource (optional).
      * For example, "user:&lt;owner email&gt;" or "project:&lt;Google developer project
@@ -970,14 +927,15 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string owner = 3;</code>
-     *
      * @return The bytes for owner.
      */
-    public com.google.protobuf.ByteString getOwnerBytes() {
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
       java.lang.Object ref = owner_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         owner_ = b;
         return b;
       } else {
@@ -985,8 +943,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The owner of the resource (optional).
      * For example, "user:&lt;owner email&gt;" or "project:&lt;Google developer project
@@ -994,22 +950,20 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string owner = 3;</code>
-     *
      * @param value The owner to set.
      * @return This builder for chaining.
      */
-    public Builder setOwner(java.lang.String value) {
+    public Builder setOwner(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       owner_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The owner of the resource (optional).
      * For example, "user:&lt;owner email&gt;" or "project:&lt;Google developer project
@@ -1017,18 +971,15 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string owner = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearOwner() {
-
+      
       owner_ = getDefaultInstance().getOwner();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The owner of the resource (optional).
      * For example, "user:&lt;owner email&gt;" or "project:&lt;Google developer project
@@ -1036,16 +987,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string owner = 3;</code>
-     *
      * @param value The bytes for owner to set.
      * @return This builder for chaining.
      */
-    public Builder setOwnerBytes(com.google.protobuf.ByteString value) {
+    public Builder setOwnerBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       owner_ = value;
       onChanged();
       return this;
@@ -1053,8 +1004,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object description_ = "";
     /**
-     *
-     *
      * <pre>
      * Describes what error is encountered when accessing this resource.
      * For example, updating a cloud project may require the `writer` permission
@@ -1062,13 +1011,13 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 4;</code>
-     *
      * @return The description.
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
         return s;
@@ -1077,8 +1026,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Describes what error is encountered when accessing this resource.
      * For example, updating a cloud project may require the `writer` permission
@@ -1086,14 +1033,15 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 4;</code>
-     *
      * @return The bytes for description.
      */
-    public com.google.protobuf.ByteString getDescriptionBytes() {
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         description_ = b;
         return b;
       } else {
@@ -1101,8 +1049,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Describes what error is encountered when accessing this resource.
      * For example, updating a cloud project may require the `writer` permission
@@ -1110,22 +1056,20 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 4;</code>
-     *
      * @param value The description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescription(java.lang.String value) {
+    public Builder setDescription(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       description_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes what error is encountered when accessing this resource.
      * For example, updating a cloud project may require the `writer` permission
@@ -1133,18 +1077,15 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-
+      
       description_ = getDefaultInstance().getDescription();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes what error is encountered when accessing this resource.
      * For example, updating a cloud project may require the `writer` permission
@@ -1152,23 +1093,23 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 4;</code>
-     *
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
+    public Builder setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
       onChanged();
       return this;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1178,12 +1119,12 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.rpc.ResourceInfo)
   }
 
   // @@protoc_insertion_point(class_scope:google.rpc.ResourceInfo)
   private static final com.google.rpc.ResourceInfo DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.rpc.ResourceInfo();
   }
@@ -1192,16 +1133,16 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ResourceInfo> PARSER =
-      new com.google.protobuf.AbstractParser<ResourceInfo>() {
-        @java.lang.Override
-        public ResourceInfo parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ResourceInfo(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<ResourceInfo>
+      PARSER = new com.google.protobuf.AbstractParser<ResourceInfo>() {
+    @java.lang.Override
+    public ResourceInfo parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new ResourceInfo(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<ResourceInfo> parser() {
     return PARSER;
@@ -1216,4 +1157,6 @@ public final class ResourceInfo extends com.google.protobuf.GeneratedMessageV3
   public com.google.rpc.ResourceInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

@@ -19,8 +19,6 @@
 package com.google.api;
 
 /**
- *
- *
  * <pre>
  * `QuotaLimit` defines a specific limit that applies over a specified duration
  * for a limit type. There can be at most one limit for a duration and limit
@@ -29,16 +27,15 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.QuotaLimit}
  */
-public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class QuotaLimit extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.api.QuotaLimit)
     QuotaLimitOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use QuotaLimit.newBuilder() to construct.
   private QuotaLimit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private QuotaLimit() {
     name_ = "";
     description_ = "";
@@ -50,15 +47,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new QuotaLimit();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private QuotaLimit(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -78,110 +76,106 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              description_ = s;
-              break;
-            }
-          case 24:
-            {
-              defaultLimit_ = input.readInt64();
-              break;
-            }
-          case 32:
-            {
-              maxLimit_ = input.readInt64();
-              break;
-            }
-          case 42:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            description_ = s;
+            break;
+          }
+          case 24: {
 
-              duration_ = s;
-              break;
-            }
-          case 50:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            defaultLimit_ = input.readInt64();
+            break;
+          }
+          case 32: {
 
-              name_ = s;
-              break;
-            }
-          case 56:
-            {
-              freeTier_ = input.readInt64();
-              break;
-            }
-          case 66:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            maxLimit_ = input.readInt64();
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              metric_ = s;
-              break;
-            }
-          case 74:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            duration_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              unit_ = s;
-              break;
-            }
-          case 82:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                values_ =
-                    com.google.protobuf.MapField.newMapField(ValuesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Long> values__ =
-                  input.readMessage(
-                      ValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              values_.getMutableMap().put(values__.getKey(), values__.getValue());
-              break;
-            }
-          case 98:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            name_ = s;
+            break;
+          }
+          case 56: {
 
-              displayName_ = s;
-              break;
+            freeTier_ = input.readInt64();
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            metric_ = s;
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            unit_ = s;
+            break;
+          }
+          case 82: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              values_ = com.google.protobuf.MapField.newMapField(
+                  ValuesDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+            values__ = input.readMessage(
+                ValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            values_.getMutableMap().put(
+                values__.getKey(), values__.getValue());
+            break;
+          }
+          case 98: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            displayName_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.api.QuotaProto.internal_static_google_api_QuotaLimit_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
   @java.lang.Override
-  protected com.google.protobuf.MapField internalGetMapField(int number) {
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
     switch (number) {
       case 10:
         return internalGetValues();
       default:
-        throw new RuntimeException("Invalid map field number: " + number);
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
     }
   }
-
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -193,8 +187,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public static final int NAME_FIELD_NUMBER = 6;
   private volatile java.lang.Object name_;
   /**
-   *
-   *
    * <pre>
    * Name of the quota limit.
    * The name must be provided, and it must be unique within the service. The
@@ -203,7 +195,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string name = 6;</code>
-   *
    * @return The name.
    */
   @java.lang.Override
@@ -212,15 +203,14 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       name_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Name of the quota limit.
    * The name must be provided, and it must be unique within the service. The
@@ -229,15 +219,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string name = 6;</code>
-   *
    * @return The bytes for name.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getNameBytes() {
+  public com.google.protobuf.ByteString
+      getNameBytes() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       name_ = b;
       return b;
     } else {
@@ -248,8 +239,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
   private volatile java.lang.Object description_;
   /**
-   *
-   *
    * <pre>
    * Optional. User-visible, extended description for this quota limit.
    * Should be used only when more context is needed to understand this limit
@@ -257,7 +246,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string description = 2;</code>
-   *
    * @return The description.
    */
   @java.lang.Override
@@ -266,15 +254,14 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       description_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Optional. User-visible, extended description for this quota limit.
    * Should be used only when more context is needed to understand this limit
@@ -282,15 +269,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string description = 2;</code>
-   *
    * @return The bytes for description.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getDescriptionBytes() {
+  public com.google.protobuf.ByteString
+      getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       description_ = b;
       return b;
     } else {
@@ -301,8 +289,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public static final int DEFAULT_LIMIT_FIELD_NUMBER = 3;
   private long defaultLimit_;
   /**
-   *
-   *
    * <pre>
    * Default number of tokens that can be consumed during the specified
    * duration. This is the number of tokens assigned when a client
@@ -315,7 +301,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>int64 default_limit = 3;</code>
-   *
    * @return The defaultLimit.
    */
   @java.lang.Override
@@ -326,8 +311,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public static final int MAX_LIMIT_FIELD_NUMBER = 4;
   private long maxLimit_;
   /**
-   *
-   *
    * <pre>
    * Maximum number of tokens that can be consumed during the specified
    * duration. Client application developers can override the default limit up
@@ -339,7 +322,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>int64 max_limit = 4;</code>
-   *
    * @return The maxLimit.
    */
   @java.lang.Override
@@ -350,8 +332,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public static final int FREE_TIER_FIELD_NUMBER = 7;
   private long freeTier_;
   /**
-   *
-   *
    * <pre>
    * Free tier value displayed in the Developers Console for this limit.
    * The free tier is the number of tokens that will be subtracted from the
@@ -363,7 +343,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>int64 free_tier = 7;</code>
-   *
    * @return The freeTier.
    */
   @java.lang.Override
@@ -374,15 +353,12 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public static final int DURATION_FIELD_NUMBER = 5;
   private volatile java.lang.Object duration_;
   /**
-   *
-   *
    * <pre>
    * Duration of this limit in textual notation. Must be "100s" or "1d".
    * Used by group-based quotas only.
    * </pre>
    *
    * <code>string duration = 5;</code>
-   *
    * @return The duration.
    */
   @java.lang.Override
@@ -391,30 +367,30 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       duration_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Duration of this limit in textual notation. Must be "100s" or "1d".
    * Used by group-based quotas only.
    * </pre>
    *
    * <code>string duration = 5;</code>
-   *
    * @return The bytes for duration.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getDurationBytes() {
+  public com.google.protobuf.ByteString
+      getDurationBytes() {
     java.lang.Object ref = duration_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       duration_ = b;
       return b;
     } else {
@@ -425,8 +401,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public static final int METRIC_FIELD_NUMBER = 8;
   private volatile java.lang.Object metric_;
   /**
-   *
-   *
    * <pre>
    * The name of the metric this quota limit applies to. The quota limits with
    * the same metric will be checked together during runtime. The metric must be
@@ -434,7 +408,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string metric = 8;</code>
-   *
    * @return The metric.
    */
   @java.lang.Override
@@ -443,15 +416,14 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       metric_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * The name of the metric this quota limit applies to. The quota limits with
    * the same metric will be checked together during runtime. The metric must be
@@ -459,15 +431,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string metric = 8;</code>
-   *
    * @return The bytes for metric.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getMetricBytes() {
+  public com.google.protobuf.ByteString
+      getMetricBytes() {
     java.lang.Object ref = metric_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       metric_ = b;
       return b;
     } else {
@@ -478,8 +451,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public static final int UNIT_FIELD_NUMBER = 9;
   private volatile java.lang.Object unit_;
   /**
-   *
-   *
    * <pre>
    * Specify the unit of the quota limit. It uses the same syntax as
    * [Metric.unit][]. The supported unit kinds are determined by the quota
@@ -491,7 +462,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string unit = 9;</code>
-   *
    * @return The unit.
    */
   @java.lang.Override
@@ -500,15 +470,14 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       unit_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Specify the unit of the quota limit. It uses the same syntax as
    * [Metric.unit][]. The supported unit kinds are determined by the quota
@@ -520,15 +489,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string unit = 9;</code>
-   *
    * @return The bytes for unit.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getUnitBytes() {
+  public com.google.protobuf.ByteString
+      getUnitBytes() {
     java.lang.Object ref = unit_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       unit_ = b;
       return b;
     } else {
@@ -537,22 +507,24 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   }
 
   public static final int VALUES_FIELD_NUMBER = 10;
-
   private static final class ValuesDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<java.lang.String, java.lang.Long> defaultEntry =
-        com.google.protobuf.MapEntry.<java.lang.String, java.lang.Long>newDefaultInstance(
-            com.google.api.QuotaProto.internal_static_google_api_QuotaLimit_ValuesEntry_descriptor,
-            com.google.protobuf.WireFormat.FieldType.STRING,
-            "",
-            com.google.protobuf.WireFormat.FieldType.INT64,
-            0L);
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.Long> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.Long>newDefaultInstance(
+                com.google.api.QuotaProto.internal_static_google_api_QuotaLimit_ValuesEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.INT64,
+                0L);
   }
-
-  private com.google.protobuf.MapField<java.lang.String, java.lang.Long> values_;
-
-  private com.google.protobuf.MapField<java.lang.String, java.lang.Long> internalGetValues() {
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.Long> values_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+  internalGetValues() {
     if (values_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(ValuesDefaultEntryHolder.defaultEntry);
+      return com.google.protobuf.MapField.emptyMapField(
+          ValuesDefaultEntryHolder.defaultEntry);
     }
     return values_;
   }
@@ -561,8 +533,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     return internalGetValues().getMap().size();
   }
   /**
-   *
-   *
    * <pre>
    * Tiered limit values. You must specify this as a key:value pair, with an
    * integer value that is the maximum number of requests allowed for the
@@ -571,22 +541,22 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>map&lt;string, int64&gt; values = 10;</code>
    */
+
   @java.lang.Override
-  public boolean containsValues(java.lang.String key) {
-    if (key == null) {
-      throw new java.lang.NullPointerException();
-    }
+  public boolean containsValues(
+      java.lang.String key) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetValues().getMap().containsKey(key);
   }
-  /** Use {@link #getValuesMap()} instead. */
+  /**
+   * Use {@link #getValuesMap()} instead.
+   */
   @java.lang.Override
   @java.lang.Deprecated
   public java.util.Map<java.lang.String, java.lang.Long> getValues() {
     return getValuesMap();
   }
   /**
-   *
-   *
    * <pre>
    * Tiered limit values. You must specify this as a key:value pair, with an
    * integer value that is the maximum number of requests allowed for the
@@ -596,12 +566,11 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * <code>map&lt;string, int64&gt; values = 10;</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.Long> getValuesMap() {
     return internalGetValues().getMap();
   }
   /**
-   *
-   *
    * <pre>
    * Tiered limit values. You must specify this as a key:value pair, with an
    * integer value that is the maximum number of requests allowed for the
@@ -611,16 +580,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * <code>map&lt;string, int64&gt; values = 10;</code>
    */
   @java.lang.Override
-  public long getValuesOrDefault(java.lang.String key, long defaultValue) {
-    if (key == null) {
-      throw new java.lang.NullPointerException();
-    }
-    java.util.Map<java.lang.String, java.lang.Long> map = internalGetValues().getMap();
+
+  public long getValuesOrDefault(
+      java.lang.String key,
+      long defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
+    java.util.Map<java.lang.String, java.lang.Long> map =
+        internalGetValues().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   *
-   *
    * <pre>
    * Tiered limit values. You must specify this as a key:value pair, with an
    * integer value that is the maximum number of requests allowed for the
@@ -630,11 +599,12 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * <code>map&lt;string, int64&gt; values = 10;</code>
    */
   @java.lang.Override
-  public long getValuesOrThrow(java.lang.String key) {
-    if (key == null) {
-      throw new java.lang.NullPointerException();
-    }
-    java.util.Map<java.lang.String, java.lang.Long> map = internalGetValues().getMap();
+
+  public long getValuesOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
+    java.util.Map<java.lang.String, java.lang.Long> map =
+        internalGetValues().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
     }
@@ -644,8 +614,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public static final int DISPLAY_NAME_FIELD_NUMBER = 12;
   private volatile java.lang.Object displayName_;
   /**
-   *
-   *
    * <pre>
    * User-visible display name for this limit.
    * Optional. If not set, the UI will provide a default display name based on
@@ -654,7 +622,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string display_name = 12;</code>
-   *
    * @return The displayName.
    */
   @java.lang.Override
@@ -663,15 +630,14 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       displayName_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * User-visible display name for this limit.
    * Optional. If not set, the UI will provide a default display name based on
@@ -680,15 +646,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string display_name = 12;</code>
-   *
    * @return The bytes for displayName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getDisplayNameBytes() {
+  public com.google.protobuf.ByteString
+      getDisplayNameBytes() {
     java.lang.Object ref = displayName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       displayName_ = b;
       return b;
     } else {
@@ -697,7 +664,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -709,7 +675,8 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!getDescriptionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
@@ -734,8 +701,12 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     if (!getUnitBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, unit_);
     }
-    com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
-        output, internalGetValues(), ValuesDefaultEntryHolder.defaultEntry, 10);
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetValues(),
+        ValuesDefaultEntryHolder.defaultEntry,
+        10);
     if (!getDisplayNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, displayName_);
     }
@@ -752,10 +723,12 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
     if (defaultLimit_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(3, defaultLimit_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, defaultLimit_);
     }
     if (maxLimit_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(4, maxLimit_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, maxLimit_);
     }
     if (!getDurationBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, duration_);
@@ -764,7 +737,8 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, name_);
     }
     if (freeTier_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(7, freeTier_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(7, freeTier_);
     }
     if (!getMetricBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, metric_);
@@ -772,15 +746,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     if (!getUnitBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, unit_);
     }
-    for (java.util.Map.Entry<java.lang.String, java.lang.Long> entry :
-        internalGetValues().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, java.lang.Long> values__ =
-          ValuesDefaultEntryHolder.defaultEntry
-              .newBuilderForType()
-              .setKey(entry.getKey())
-              .setValue(entry.getValue())
-              .build();
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(10, values__);
+    for (java.util.Map.Entry<java.lang.String, java.lang.Long> entry
+         : internalGetValues().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+      values__ = ValuesDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, values__);
     }
     if (!getDisplayNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, displayName_);
@@ -793,23 +767,33 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.api.QuotaLimit)) {
       return super.equals(obj);
     }
     com.google.api.QuotaLimit other = (com.google.api.QuotaLimit) obj;
 
-    if (!getName().equals(other.getName())) return false;
-    if (!getDescription().equals(other.getDescription())) return false;
-    if (getDefaultLimit() != other.getDefaultLimit()) return false;
-    if (getMaxLimit() != other.getMaxLimit()) return false;
-    if (getFreeTier() != other.getFreeTier()) return false;
-    if (!getDuration().equals(other.getDuration())) return false;
-    if (!getMetric().equals(other.getMetric())) return false;
-    if (!getUnit().equals(other.getUnit())) return false;
-    if (!internalGetValues().equals(other.internalGetValues())) return false;
-    if (!getDisplayName().equals(other.getDisplayName())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
+    if (getDefaultLimit()
+        != other.getDefaultLimit()) return false;
+    if (getMaxLimit()
+        != other.getMaxLimit()) return false;
+    if (getFreeTier()
+        != other.getFreeTier()) return false;
+    if (!getDuration()
+        .equals(other.getDuration())) return false;
+    if (!getMetric()
+        .equals(other.getMetric())) return false;
+    if (!getUnit()
+        .equals(other.getUnit())) return false;
+    if (!internalGetValues().equals(
+        other.internalGetValues())) return false;
+    if (!getDisplayName()
+        .equals(other.getDisplayName())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -826,11 +810,14 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
     hash = (37 * hash) + DEFAULT_LIMIT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getDefaultLimit());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getDefaultLimit());
     hash = (37 * hash) + MAX_LIMIT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getMaxLimit());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getMaxLimit());
     hash = (37 * hash) + FREE_TIER_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getFreeTier());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getFreeTier());
     hash = (37 * hash) + DURATION_FIELD_NUMBER;
     hash = (53 * hash) + getDuration().hashCode();
     hash = (37 * hash) + METRIC_FIELD_NUMBER;
@@ -848,103 +835,97 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.api.QuotaLimit parseFrom(java.nio.ByteBuffer data)
+  public static com.google.api.QuotaLimit parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.QuotaLimit parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.api.QuotaLimit parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.api.QuotaLimit parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.QuotaLimit parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.QuotaLimit parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.QuotaLimit parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.QuotaLimit parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.QuotaLimit parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.api.QuotaLimit parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.api.QuotaLimit parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.api.QuotaLimit parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.api.QuotaLimit parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.QuotaLimit parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.api.QuotaLimit prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * `QuotaLimit` defines a specific limit that applies over a specified duration
    * for a limit type. There can be at most one limit for a duration and limit
@@ -953,34 +934,37 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.api.QuotaLimit}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.api.QuotaLimit)
       com.google.api.QuotaLimitOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.api.QuotaProto.internal_static_google_api_QuotaLimit_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMapField(int number) {
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
       switch (number) {
         case 10:
           return internalGetValues();
         default:
-          throw new RuntimeException("Invalid map field number: " + number);
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
       }
     }
-
     @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMutableMapField(int number) {
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
       switch (number) {
         case 10:
           return internalGetMutableValues();
         default:
-          throw new RuntimeException("Invalid map field number: " + number);
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
       }
     }
-
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -994,15 +978,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1029,7 +1014,8 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.api.QuotaProto.internal_static_google_api_QuotaLimit_descriptor;
     }
 
@@ -1070,39 +1056,38 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.QuotaLimit) {
-        return mergeFrom((com.google.api.QuotaLimit) other);
+        return mergeFrom((com.google.api.QuotaLimit)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1140,7 +1125,8 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
         unit_ = other.unit_;
         onChanged();
       }
-      internalGetMutableValues().mergeFrom(other.internalGetValues());
+      internalGetMutableValues().mergeFrom(
+          other.internalGetValues());
       if (!other.getDisplayName().isEmpty()) {
         displayName_ = other.displayName_;
         onChanged();
@@ -1173,13 +1159,10 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
-     *
-     *
      * <pre>
      * Name of the quota limit.
      * The name must be provided, and it must be unique within the service. The
@@ -1188,13 +1171,13 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 6;</code>
-     *
      * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
@@ -1203,8 +1186,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Name of the quota limit.
      * The name must be provided, and it must be unique within the service. The
@@ -1213,14 +1194,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 6;</code>
-     *
      * @return The bytes for name.
      */
-    public com.google.protobuf.ByteString getNameBytes() {
+    public com.google.protobuf.ByteString
+        getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -1228,8 +1210,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Name of the quota limit.
      * The name must be provided, and it must be unique within the service. The
@@ -1238,22 +1218,20 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 6;</code>
-     *
      * @param value The name to set.
      * @return This builder for chaining.
      */
-    public Builder setName(java.lang.String value) {
+    public Builder setName(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       name_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Name of the quota limit.
      * The name must be provided, and it must be unique within the service. The
@@ -1262,18 +1240,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 6;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearName() {
-
+      
       name_ = getDefaultInstance().getName();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Name of the quota limit.
      * The name must be provided, and it must be unique within the service. The
@@ -1282,16 +1257,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string name = 6;</code>
-     *
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
-    public Builder setNameBytes(com.google.protobuf.ByteString value) {
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
       onChanged();
       return this;
@@ -1299,8 +1274,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object description_ = "";
     /**
-     *
-     *
      * <pre>
      * Optional. User-visible, extended description for this quota limit.
      * Should be used only when more context is needed to understand this limit
@@ -1308,13 +1281,13 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 2;</code>
-     *
      * @return The description.
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
         return s;
@@ -1323,8 +1296,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Optional. User-visible, extended description for this quota limit.
      * Should be used only when more context is needed to understand this limit
@@ -1332,14 +1303,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 2;</code>
-     *
      * @return The bytes for description.
      */
-    public com.google.protobuf.ByteString getDescriptionBytes() {
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         description_ = b;
         return b;
       } else {
@@ -1347,8 +1319,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Optional. User-visible, extended description for this quota limit.
      * Should be used only when more context is needed to understand this limit
@@ -1356,22 +1326,20 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 2;</code>
-     *
      * @param value The description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescription(java.lang.String value) {
+    public Builder setDescription(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       description_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Optional. User-visible, extended description for this quota limit.
      * Should be used only when more context is needed to understand this limit
@@ -1379,18 +1347,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-
+      
       description_ = getDefaultInstance().getDescription();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Optional. User-visible, extended description for this quota limit.
      * Should be used only when more context is needed to understand this limit
@@ -1398,25 +1363,23 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string description = 2;</code>
-     *
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
+    public Builder setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
       onChanged();
       return this;
     }
 
-    private long defaultLimit_;
+    private long defaultLimit_ ;
     /**
-     *
-     *
      * <pre>
      * Default number of tokens that can be consumed during the specified
      * duration. This is the number of tokens assigned when a client
@@ -1429,7 +1392,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 default_limit = 3;</code>
-     *
      * @return The defaultLimit.
      */
     @java.lang.Override
@@ -1437,8 +1399,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       return defaultLimit_;
     }
     /**
-     *
-     *
      * <pre>
      * Default number of tokens that can be consumed during the specified
      * duration. This is the number of tokens assigned when a client
@@ -1451,19 +1411,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 default_limit = 3;</code>
-     *
      * @param value The defaultLimit to set.
      * @return This builder for chaining.
      */
     public Builder setDefaultLimit(long value) {
-
+      
       defaultLimit_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Default number of tokens that can be consumed during the specified
      * duration. This is the number of tokens assigned when a client
@@ -1476,20 +1433,17 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 default_limit = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDefaultLimit() {
-
+      
       defaultLimit_ = 0L;
       onChanged();
       return this;
     }
 
-    private long maxLimit_;
+    private long maxLimit_ ;
     /**
-     *
-     *
      * <pre>
      * Maximum number of tokens that can be consumed during the specified
      * duration. Client application developers can override the default limit up
@@ -1501,7 +1455,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 max_limit = 4;</code>
-     *
      * @return The maxLimit.
      */
     @java.lang.Override
@@ -1509,8 +1462,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       return maxLimit_;
     }
     /**
-     *
-     *
      * <pre>
      * Maximum number of tokens that can be consumed during the specified
      * duration. Client application developers can override the default limit up
@@ -1522,19 +1473,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 max_limit = 4;</code>
-     *
      * @param value The maxLimit to set.
      * @return This builder for chaining.
      */
     public Builder setMaxLimit(long value) {
-
+      
       maxLimit_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Maximum number of tokens that can be consumed during the specified
      * duration. Client application developers can override the default limit up
@@ -1546,20 +1494,17 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 max_limit = 4;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearMaxLimit() {
-
+      
       maxLimit_ = 0L;
       onChanged();
       return this;
     }
 
-    private long freeTier_;
+    private long freeTier_ ;
     /**
-     *
-     *
      * <pre>
      * Free tier value displayed in the Developers Console for this limit.
      * The free tier is the number of tokens that will be subtracted from the
@@ -1571,7 +1516,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 free_tier = 7;</code>
-     *
      * @return The freeTier.
      */
     @java.lang.Override
@@ -1579,8 +1523,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       return freeTier_;
     }
     /**
-     *
-     *
      * <pre>
      * Free tier value displayed in the Developers Console for this limit.
      * The free tier is the number of tokens that will be subtracted from the
@@ -1592,19 +1534,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 free_tier = 7;</code>
-     *
      * @param value The freeTier to set.
      * @return This builder for chaining.
      */
     public Builder setFreeTier(long value) {
-
+      
       freeTier_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Free tier value displayed in the Developers Console for this limit.
      * The free tier is the number of tokens that will be subtracted from the
@@ -1616,11 +1555,10 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 free_tier = 7;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearFreeTier() {
-
+      
       freeTier_ = 0L;
       onChanged();
       return this;
@@ -1628,21 +1566,19 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object duration_ = "";
     /**
-     *
-     *
      * <pre>
      * Duration of this limit in textual notation. Must be "100s" or "1d".
      * Used by group-based quotas only.
      * </pre>
      *
      * <code>string duration = 5;</code>
-     *
      * @return The duration.
      */
     public java.lang.String getDuration() {
       java.lang.Object ref = duration_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         duration_ = s;
         return s;
@@ -1651,22 +1587,21 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Duration of this limit in textual notation. Must be "100s" or "1d".
      * Used by group-based quotas only.
      * </pre>
      *
      * <code>string duration = 5;</code>
-     *
      * @return The bytes for duration.
      */
-    public com.google.protobuf.ByteString getDurationBytes() {
+    public com.google.protobuf.ByteString
+        getDurationBytes() {
       java.lang.Object ref = duration_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         duration_ = b;
         return b;
       } else {
@@ -1674,64 +1609,57 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Duration of this limit in textual notation. Must be "100s" or "1d".
      * Used by group-based quotas only.
      * </pre>
      *
      * <code>string duration = 5;</code>
-     *
      * @param value The duration to set.
      * @return This builder for chaining.
      */
-    public Builder setDuration(java.lang.String value) {
+    public Builder setDuration(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       duration_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Duration of this limit in textual notation. Must be "100s" or "1d".
      * Used by group-based quotas only.
      * </pre>
      *
      * <code>string duration = 5;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDuration() {
-
+      
       duration_ = getDefaultInstance().getDuration();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Duration of this limit in textual notation. Must be "100s" or "1d".
      * Used by group-based quotas only.
      * </pre>
      *
      * <code>string duration = 5;</code>
-     *
      * @param value The bytes for duration to set.
      * @return This builder for chaining.
      */
-    public Builder setDurationBytes(com.google.protobuf.ByteString value) {
+    public Builder setDurationBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       duration_ = value;
       onChanged();
       return this;
@@ -1739,8 +1667,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object metric_ = "";
     /**
-     *
-     *
      * <pre>
      * The name of the metric this quota limit applies to. The quota limits with
      * the same metric will be checked together during runtime. The metric must be
@@ -1748,13 +1674,13 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string metric = 8;</code>
-     *
      * @return The metric.
      */
     public java.lang.String getMetric() {
       java.lang.Object ref = metric_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         metric_ = s;
         return s;
@@ -1763,8 +1689,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The name of the metric this quota limit applies to. The quota limits with
      * the same metric will be checked together during runtime. The metric must be
@@ -1772,14 +1696,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string metric = 8;</code>
-     *
      * @return The bytes for metric.
      */
-    public com.google.protobuf.ByteString getMetricBytes() {
+    public com.google.protobuf.ByteString
+        getMetricBytes() {
       java.lang.Object ref = metric_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         metric_ = b;
         return b;
       } else {
@@ -1787,8 +1712,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The name of the metric this quota limit applies to. The quota limits with
      * the same metric will be checked together during runtime. The metric must be
@@ -1796,22 +1719,20 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string metric = 8;</code>
-     *
      * @param value The metric to set.
      * @return This builder for chaining.
      */
-    public Builder setMetric(java.lang.String value) {
+    public Builder setMetric(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       metric_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The name of the metric this quota limit applies to. The quota limits with
      * the same metric will be checked together during runtime. The metric must be
@@ -1819,18 +1740,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string metric = 8;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearMetric() {
-
+      
       metric_ = getDefaultInstance().getMetric();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The name of the metric this quota limit applies to. The quota limits with
      * the same metric will be checked together during runtime. The metric must be
@@ -1838,16 +1756,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string metric = 8;</code>
-     *
      * @param value The bytes for metric to set.
      * @return This builder for chaining.
      */
-    public Builder setMetricBytes(com.google.protobuf.ByteString value) {
+    public Builder setMetricBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       metric_ = value;
       onChanged();
       return this;
@@ -1855,8 +1773,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object unit_ = "";
     /**
-     *
-     *
      * <pre>
      * Specify the unit of the quota limit. It uses the same syntax as
      * [Metric.unit][]. The supported unit kinds are determined by the quota
@@ -1868,13 +1784,13 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string unit = 9;</code>
-     *
      * @return The unit.
      */
     public java.lang.String getUnit() {
       java.lang.Object ref = unit_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         unit_ = s;
         return s;
@@ -1883,8 +1799,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Specify the unit of the quota limit. It uses the same syntax as
      * [Metric.unit][]. The supported unit kinds are determined by the quota
@@ -1896,14 +1810,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string unit = 9;</code>
-     *
      * @return The bytes for unit.
      */
-    public com.google.protobuf.ByteString getUnitBytes() {
+    public com.google.protobuf.ByteString
+        getUnitBytes() {
       java.lang.Object ref = unit_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         unit_ = b;
         return b;
       } else {
@@ -1911,8 +1826,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Specify the unit of the quota limit. It uses the same syntax as
      * [Metric.unit][]. The supported unit kinds are determined by the quota
@@ -1924,22 +1837,20 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string unit = 9;</code>
-     *
      * @param value The unit to set.
      * @return This builder for chaining.
      */
-    public Builder setUnit(java.lang.String value) {
+    public Builder setUnit(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       unit_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Specify the unit of the quota limit. It uses the same syntax as
      * [Metric.unit][]. The supported unit kinds are determined by the quota
@@ -1951,18 +1862,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string unit = 9;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearUnit() {
-
+      
       unit_ = getDefaultInstance().getUnit();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Specify the unit of the quota limit. It uses the same syntax as
      * [Metric.unit][]. The supported unit kinds are determined by the quota
@@ -1974,36 +1882,37 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string unit = 9;</code>
-     *
      * @param value The bytes for unit to set.
      * @return This builder for chaining.
      */
-    public Builder setUnitBytes(com.google.protobuf.ByteString value) {
+    public Builder setUnitBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       unit_ = value;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.MapField<java.lang.String, java.lang.Long> values_;
-
-    private com.google.protobuf.MapField<java.lang.String, java.lang.Long> internalGetValues() {
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Long> values_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+    internalGetValues() {
       if (values_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(ValuesDefaultEntryHolder.defaultEntry);
+        return com.google.protobuf.MapField.emptyMapField(
+            ValuesDefaultEntryHolder.defaultEntry);
       }
       return values_;
     }
-
     private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-        internalGetMutableValues() {
-      onChanged();
-      ;
+    internalGetMutableValues() {
+      onChanged();;
       if (values_ == null) {
-        values_ = com.google.protobuf.MapField.newMapField(ValuesDefaultEntryHolder.defaultEntry);
+        values_ = com.google.protobuf.MapField.newMapField(
+            ValuesDefaultEntryHolder.defaultEntry);
       }
       if (!values_.isMutable()) {
         values_ = values_.copy();
@@ -2015,8 +1924,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       return internalGetValues().getMap().size();
     }
     /**
-     *
-     *
      * <pre>
      * Tiered limit values. You must specify this as a key:value pair, with an
      * integer value that is the maximum number of requests allowed for the
@@ -2025,22 +1932,22 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>map&lt;string, int64&gt; values = 10;</code>
      */
+
     @java.lang.Override
-    public boolean containsValues(java.lang.String key) {
-      if (key == null) {
-        throw new java.lang.NullPointerException();
-      }
+    public boolean containsValues(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetValues().getMap().containsKey(key);
     }
-    /** Use {@link #getValuesMap()} instead. */
+    /**
+     * Use {@link #getValuesMap()} instead.
+     */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.Long> getValues() {
       return getValuesMap();
     }
     /**
-     *
-     *
      * <pre>
      * Tiered limit values. You must specify this as a key:value pair, with an
      * integer value that is the maximum number of requests allowed for the
@@ -2050,12 +1957,11 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * <code>map&lt;string, int64&gt; values = 10;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.Long> getValuesMap() {
       return internalGetValues().getMap();
     }
     /**
-     *
-     *
      * <pre>
      * Tiered limit values. You must specify this as a key:value pair, with an
      * integer value that is the maximum number of requests allowed for the
@@ -2065,16 +1971,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * <code>map&lt;string, int64&gt; values = 10;</code>
      */
     @java.lang.Override
-    public long getValuesOrDefault(java.lang.String key, long defaultValue) {
-      if (key == null) {
-        throw new java.lang.NullPointerException();
-      }
-      java.util.Map<java.lang.String, java.lang.Long> map = internalGetValues().getMap();
+
+    public long getValuesOrDefault(
+        java.lang.String key,
+        long defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetValues().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     *
-     *
      * <pre>
      * Tiered limit values. You must specify this as a key:value pair, with an
      * integer value that is the maximum number of requests allowed for the
@@ -2084,11 +1990,12 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * <code>map&lt;string, int64&gt; values = 10;</code>
      */
     @java.lang.Override
-    public long getValuesOrThrow(java.lang.String key) {
-      if (key == null) {
-        throw new java.lang.NullPointerException();
-      }
-      java.util.Map<java.lang.String, java.lang.Long> map = internalGetValues().getMap();
+
+    public long getValuesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetValues().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -2096,12 +2003,11 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     }
 
     public Builder clearValues() {
-      internalGetMutableValues().getMutableMap().clear();
+      internalGetMutableValues().getMutableMap()
+          .clear();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Tiered limit values. You must specify this as a key:value pair, with an
      * integer value that is the maximum number of requests allowed for the
@@ -2110,21 +2016,23 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>map&lt;string, int64&gt; values = 10;</code>
      */
-    public Builder removeValues(java.lang.String key) {
-      if (key == null) {
-        throw new java.lang.NullPointerException();
-      }
-      internalGetMutableValues().getMutableMap().remove(key);
+
+    public Builder removeValues(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      internalGetMutableValues().getMutableMap()
+          .remove(key);
       return this;
     }
-    /** Use alternate mutation accessors instead. */
+    /**
+     * Use alternate mutation accessors instead.
+     */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.Long> getMutableValues() {
+    public java.util.Map<java.lang.String, java.lang.Long>
+    getMutableValues() {
       return internalGetMutableValues().getMutableMap();
     }
     /**
-     *
-     *
      * <pre>
      * Tiered limit values. You must specify this as a key:value pair, with an
      * integer value that is the maximum number of requests allowed for the
@@ -2133,17 +2041,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>map&lt;string, int64&gt; values = 10;</code>
      */
-    public Builder putValues(java.lang.String key, long value) {
-      if (key == null) {
-        throw new java.lang.NullPointerException();
-      }
-
-      internalGetMutableValues().getMutableMap().put(key, value);
+    public Builder putValues(
+        java.lang.String key,
+        long value) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      
+      internalGetMutableValues().getMutableMap()
+          .put(key, value);
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Tiered limit values. You must specify this as a key:value pair, with an
      * integer value that is the maximum number of requests allowed for the
@@ -2152,15 +2059,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>map&lt;string, int64&gt; values = 10;</code>
      */
-    public Builder putAllValues(java.util.Map<java.lang.String, java.lang.Long> values) {
-      internalGetMutableValues().getMutableMap().putAll(values);
+
+    public Builder putAllValues(
+        java.util.Map<java.lang.String, java.lang.Long> values) {
+      internalGetMutableValues().getMutableMap()
+          .putAll(values);
       return this;
     }
 
     private java.lang.Object displayName_ = "";
     /**
-     *
-     *
      * <pre>
      * User-visible display name for this limit.
      * Optional. If not set, the UI will provide a default display name based on
@@ -2169,13 +2077,13 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string display_name = 12;</code>
-     *
      * @return The displayName.
      */
     public java.lang.String getDisplayName() {
       java.lang.Object ref = displayName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         displayName_ = s;
         return s;
@@ -2184,8 +2092,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * User-visible display name for this limit.
      * Optional. If not set, the UI will provide a default display name based on
@@ -2194,14 +2100,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string display_name = 12;</code>
-     *
      * @return The bytes for displayName.
      */
-    public com.google.protobuf.ByteString getDisplayNameBytes() {
+    public com.google.protobuf.ByteString
+        getDisplayNameBytes() {
       java.lang.Object ref = displayName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         displayName_ = b;
         return b;
       } else {
@@ -2209,8 +2116,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * User-visible display name for this limit.
      * Optional. If not set, the UI will provide a default display name based on
@@ -2219,22 +2124,20 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string display_name = 12;</code>
-     *
      * @param value The displayName to set.
      * @return This builder for chaining.
      */
-    public Builder setDisplayName(java.lang.String value) {
+    public Builder setDisplayName(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       displayName_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * User-visible display name for this limit.
      * Optional. If not set, the UI will provide a default display name based on
@@ -2243,18 +2146,15 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string display_name = 12;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
-
+      
       displayName_ = getDefaultInstance().getDisplayName();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * User-visible display name for this limit.
      * Optional. If not set, the UI will provide a default display name based on
@@ -2263,23 +2163,23 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string display_name = 12;</code>
-     *
      * @param value The bytes for displayName to set.
      * @return This builder for chaining.
      */
-    public Builder setDisplayNameBytes(com.google.protobuf.ByteString value) {
+    public Builder setDisplayNameBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       displayName_ = value;
       onChanged();
       return this;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -2289,12 +2189,12 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.api.QuotaLimit)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.QuotaLimit)
   private static final com.google.api.QuotaLimit DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.api.QuotaLimit();
   }
@@ -2303,16 +2203,16 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<QuotaLimit> PARSER =
-      new com.google.protobuf.AbstractParser<QuotaLimit>() {
-        @java.lang.Override
-        public QuotaLimit parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new QuotaLimit(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<QuotaLimit>
+      PARSER = new com.google.protobuf.AbstractParser<QuotaLimit>() {
+    @java.lang.Override
+    public QuotaLimit parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new QuotaLimit(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<QuotaLimit> parser() {
     return PARSER;
@@ -2327,4 +2227,6 @@ public final class QuotaLimit extends com.google.protobuf.GeneratedMessageV3
   public com.google.api.QuotaLimit getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

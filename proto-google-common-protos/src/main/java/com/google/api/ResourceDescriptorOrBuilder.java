@@ -18,14 +18,11 @@
 
 package com.google.api;
 
-public interface ResourceDescriptorOrBuilder
-    extends
+public interface ResourceDescriptorOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.api.ResourceDescriptor)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The resource type. It must be in the format of
    * {service_name}/{resource_type_kind}. The `resource_type_kind` must be
@@ -38,13 +35,10 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>string type = 1;</code>
-   *
    * @return The type.
    */
   java.lang.String getType();
   /**
-   *
-   *
    * <pre>
    * The resource type. It must be in the format of
    * {service_name}/{resource_type_kind}. The `resource_type_kind` must be
@@ -57,14 +51,12 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>string type = 1;</code>
-   *
    * @return The bytes for type.
    */
-  com.google.protobuf.ByteString getTypeBytes();
+  com.google.protobuf.ByteString
+      getTypeBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. The relative resource name pattern associated with this resource
    * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -83,13 +75,11 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>repeated string pattern = 2;</code>
-   *
    * @return A list containing the pattern.
    */
-  java.util.List<java.lang.String> getPatternList();
+  java.util.List<java.lang.String>
+      getPatternList();
   /**
-   *
-   *
    * <pre>
    * Optional. The relative resource name pattern associated with this resource
    * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -108,13 +98,10 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>repeated string pattern = 2;</code>
-   *
    * @return The count of pattern.
    */
   int getPatternCount();
   /**
-   *
-   *
    * <pre>
    * Optional. The relative resource name pattern associated with this resource
    * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -133,14 +120,11 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>repeated string pattern = 2;</code>
-   *
    * @param index The index of the element to return.
    * @return The pattern at the given index.
    */
   java.lang.String getPattern(int index);
   /**
-   *
-   *
    * <pre>
    * Optional. The relative resource name pattern associated with this resource
    * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -159,42 +143,35 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>repeated string pattern = 2;</code>
-   *
    * @param index The index of the value to return.
    * @return The bytes of the pattern at the given index.
    */
-  com.google.protobuf.ByteString getPatternBytes(int index);
+  com.google.protobuf.ByteString
+      getPatternBytes(int index);
 
   /**
-   *
-   *
    * <pre>
    * Optional. The field on the resource that designates the resource name
    * field. If omitted, this is assumed to be "name".
    * </pre>
    *
    * <code>string name_field = 3;</code>
-   *
    * @return The nameField.
    */
   java.lang.String getNameField();
   /**
-   *
-   *
    * <pre>
    * Optional. The field on the resource that designates the resource name
    * field. If omitted, this is assumed to be "name".
    * </pre>
    *
    * <code>string name_field = 3;</code>
-   *
    * @return The bytes for nameField.
    */
-  com.google.protobuf.ByteString getNameFieldBytes();
+  com.google.protobuf.ByteString
+      getNameFieldBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. The historical or future-looking state of the resource pattern.
    * Example:
@@ -212,13 +189,10 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>.google.api.ResourceDescriptor.History history = 4;</code>
-   *
    * @return The enum numeric value on the wire for history.
    */
   int getHistoryValue();
   /**
-   *
-   *
    * <pre>
    * Optional. The historical or future-looking state of the resource pattern.
    * Example:
@@ -236,14 +210,11 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>.google.api.ResourceDescriptor.History history = 4;</code>
-   *
    * @return The history.
    */
   com.google.api.ResourceDescriptor.History getHistory();
 
   /**
-   *
-   *
    * <pre>
    * The plural name used in the resource name and permission names, such as
    * 'projects' for the resource name of 'projects/{project}' and the permission
@@ -255,13 +226,10 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>string plural = 5;</code>
-   *
    * @return The plural.
    */
   java.lang.String getPlural();
   /**
-   *
-   *
    * <pre>
    * The plural name used in the resource name and permission names, such as
    * 'projects' for the resource name of 'projects/{project}' and the permission
@@ -273,14 +241,12 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>string plural = 5;</code>
-   *
    * @return The bytes for plural.
    */
-  com.google.protobuf.ByteString getPluralBytes();
+  com.google.protobuf.ByteString
+      getPluralBytes();
 
   /**
-   *
-   *
    * <pre>
    * The same concept of the `singular` field in k8s CRD spec
    * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
@@ -288,13 +254,10 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>string singular = 6;</code>
-   *
    * @return The singular.
    */
   java.lang.String getSingular();
   /**
-   *
-   *
    * <pre>
    * The same concept of the `singular` field in k8s CRD spec
    * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
@@ -302,14 +265,12 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>string singular = 6;</code>
-   *
    * @return The bytes for singular.
    */
-  com.google.protobuf.ByteString getSingularBytes();
+  com.google.protobuf.ByteString
+      getSingularBytes();
 
   /**
-   *
-   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -317,13 +278,10 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
-   *
    * @return A list containing the style.
    */
   java.util.List<com.google.api.ResourceDescriptor.Style> getStyleList();
   /**
-   *
-   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -331,13 +289,10 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
-   *
    * @return The count of style.
    */
   int getStyleCount();
   /**
-   *
-   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -345,14 +300,11 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
-   *
    * @param index The index of the element to return.
    * @return The style at the given index.
    */
   com.google.api.ResourceDescriptor.Style getStyle(int index);
   /**
-   *
-   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -360,13 +312,11 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
-   *
    * @return A list containing the enum numeric values on the wire for style.
    */
-  java.util.List<java.lang.Integer> getStyleValueList();
+  java.util.List<java.lang.Integer>
+  getStyleValueList();
   /**
-   *
-   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -374,7 +324,6 @@ public interface ResourceDescriptorOrBuilder
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
-   *
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of style at the given index.
    */

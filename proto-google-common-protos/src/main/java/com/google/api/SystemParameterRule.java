@@ -19,8 +19,6 @@
 package com.google.api;
 
 /**
- *
- *
  * <pre>
  * Define a system parameter rule mapping system parameter definitions to
  * methods.
@@ -28,16 +26,15 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.SystemParameterRule}
  */
-public final class SystemParameterRule extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class SystemParameterRule extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.api.SystemParameterRule)
     SystemParameterRuleOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use SystemParameterRule.newBuilder() to construct.
   private SystemParameterRule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private SystemParameterRule() {
     selector_ = "";
     parameters_ = java.util.Collections.emptyList();
@@ -45,15 +42,16 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new SystemParameterRule();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private SystemParameterRule(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -73,36 +71,35 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              selector_ = s;
-              break;
+            selector_ = s;
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              parameters_ = new java.util.ArrayList<com.google.api.SystemParameter>();
+              mutable_bitField0_ |= 0x00000001;
             }
-          case 18:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                parameters_ = new java.util.ArrayList<com.google.api.SystemParameter>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              parameters_.add(
-                  input.readMessage(com.google.api.SystemParameter.parser(), extensionRegistry));
-              break;
+            parameters_.add(
+                input.readMessage(com.google.api.SystemParameter.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         parameters_ = java.util.Collections.unmodifiableList(parameters_);
@@ -111,27 +108,22 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-    return com.google.api.SystemParameterProto
-        .internal_static_google_api_SystemParameterRule_descriptor;
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+    return com.google.api.SystemParameterProto.internal_static_google_api_SystemParameterRule_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.api.SystemParameterProto
-        .internal_static_google_api_SystemParameterRule_fieldAccessorTable
+    return com.google.api.SystemParameterProto.internal_static_google_api_SystemParameterRule_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.api.SystemParameterRule.class,
-            com.google.api.SystemParameterRule.Builder.class);
+            com.google.api.SystemParameterRule.class, com.google.api.SystemParameterRule.Builder.class);
   }
 
   public static final int SELECTOR_FIELD_NUMBER = 1;
   private volatile java.lang.Object selector_;
   /**
-   *
-   *
    * <pre>
    * Selects the methods to which this rule applies. Use '*' to indicate all
    * methods in all APIs.
@@ -139,7 +131,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>string selector = 1;</code>
-   *
    * @return The selector.
    */
   @java.lang.Override
@@ -148,15 +139,14 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       selector_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Selects the methods to which this rule applies. Use '*' to indicate all
    * methods in all APIs.
@@ -164,15 +154,16 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
    * </pre>
    *
    * <code>string selector = 1;</code>
-   *
    * @return The bytes for selector.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getSelectorBytes() {
+  public com.google.protobuf.ByteString
+      getSelectorBytes() {
     java.lang.Object ref = selector_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       selector_ = b;
       return b;
     } else {
@@ -183,8 +174,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
   public static final int PARAMETERS_FIELD_NUMBER = 2;
   private java.util.List<com.google.api.SystemParameter> parameters_;
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -200,8 +189,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
     return parameters_;
   }
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -213,13 +200,11 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
    * <code>repeated .google.api.SystemParameter parameters = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.SystemParameterOrBuilder>
+  public java.util.List<? extends com.google.api.SystemParameterOrBuilder> 
       getParametersOrBuilderList() {
     return parameters_;
   }
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -235,8 +220,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
     return parameters_.size();
   }
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -252,8 +235,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
     return parameters_.get(index);
   }
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -265,12 +246,12 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
    * <code>repeated .google.api.SystemParameter parameters = 2;</code>
    */
   @java.lang.Override
-  public com.google.api.SystemParameterOrBuilder getParametersOrBuilder(int index) {
+  public com.google.api.SystemParameterOrBuilder getParametersOrBuilder(
+      int index) {
     return parameters_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -282,7 +263,8 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!getSelectorBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, selector_);
     }
@@ -302,7 +284,8 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, selector_);
     }
     for (int i = 0; i < parameters_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, parameters_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, parameters_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -312,15 +295,17 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.api.SystemParameterRule)) {
       return super.equals(obj);
     }
     com.google.api.SystemParameterRule other = (com.google.api.SystemParameterRule) obj;
 
-    if (!getSelector().equals(other.getSelector())) return false;
-    if (!getParametersList().equals(other.getParametersList())) return false;
+    if (!getSelector()
+        .equals(other.getSelector())) return false;
+    if (!getParametersList()
+        .equals(other.getParametersList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -343,103 +328,97 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
     return hash;
   }
 
-  public static com.google.api.SystemParameterRule parseFrom(java.nio.ByteBuffer data)
+  public static com.google.api.SystemParameterRule parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.SystemParameterRule parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.api.SystemParameterRule parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.api.SystemParameterRule parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.SystemParameterRule parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.SystemParameterRule parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.SystemParameterRule parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.SystemParameterRule parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.SystemParameterRule parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.api.SystemParameterRule parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.api.SystemParameterRule parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.api.SystemParameterRule parseFrom(
-      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.SystemParameterRule parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.api.SystemParameterRule prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * Define a system parameter rule mapping system parameter definitions to
    * methods.
@@ -447,23 +426,21 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
    *
    * Protobuf type {@code google.api.SystemParameterRule}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.api.SystemParameterRule)
       com.google.api.SystemParameterRuleOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.api.SystemParameterProto
-          .internal_static_google_api_SystemParameterRule_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.api.SystemParameterProto.internal_static_google_api_SystemParameterRule_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.SystemParameterProto
-          .internal_static_google_api_SystemParameterRule_fieldAccessorTable
+      return com.google.api.SystemParameterProto.internal_static_google_api_SystemParameterRule_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.api.SystemParameterRule.class,
-              com.google.api.SystemParameterRule.Builder.class);
+              com.google.api.SystemParameterRule.class, com.google.api.SystemParameterRule.Builder.class);
     }
 
     // Construct using com.google.api.SystemParameterRule.newBuilder()
@@ -471,17 +448,17 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
         getParametersFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -497,9 +474,9 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-      return com.google.api.SystemParameterProto
-          .internal_static_google_api_SystemParameterRule_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
+      return com.google.api.SystemParameterProto.internal_static_google_api_SystemParameterRule_descriptor;
     }
 
     @java.lang.Override
@@ -538,39 +515,38 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.SystemParameterRule) {
-        return mergeFrom((com.google.api.SystemParameterRule) other);
+        return mergeFrom((com.google.api.SystemParameterRule)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -601,10 +577,9 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
             parametersBuilder_ = null;
             parameters_ = other.parameters_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            parametersBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getParametersFieldBuilder()
-                    : null;
+            parametersBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getParametersFieldBuilder() : null;
           } else {
             parametersBuilder_.addAllMessages(other.parameters_);
           }
@@ -638,13 +613,10 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       }
       return this;
     }
-
     private int bitField0_;
 
     private java.lang.Object selector_ = "";
     /**
-     *
-     *
      * <pre>
      * Selects the methods to which this rule applies. Use '*' to indicate all
      * methods in all APIs.
@@ -652,13 +624,13 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>string selector = 1;</code>
-     *
      * @return The selector.
      */
     public java.lang.String getSelector() {
       java.lang.Object ref = selector_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         selector_ = s;
         return s;
@@ -667,8 +639,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       }
     }
     /**
-     *
-     *
      * <pre>
      * Selects the methods to which this rule applies. Use '*' to indicate all
      * methods in all APIs.
@@ -676,14 +646,15 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>string selector = 1;</code>
-     *
      * @return The bytes for selector.
      */
-    public com.google.protobuf.ByteString getSelectorBytes() {
+    public com.google.protobuf.ByteString
+        getSelectorBytes() {
       java.lang.Object ref = selector_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         selector_ = b;
         return b;
       } else {
@@ -691,8 +662,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       }
     }
     /**
-     *
-     *
      * <pre>
      * Selects the methods to which this rule applies. Use '*' to indicate all
      * methods in all APIs.
@@ -700,22 +669,20 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>string selector = 1;</code>
-     *
      * @param value The selector to set.
      * @return This builder for chaining.
      */
-    public Builder setSelector(java.lang.String value) {
+    public Builder setSelector(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       selector_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Selects the methods to which this rule applies. Use '*' to indicate all
      * methods in all APIs.
@@ -723,18 +690,15 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>string selector = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearSelector() {
-
+      
       selector_ = getDefaultInstance().getSelector();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Selects the methods to which this rule applies. Use '*' to indicate all
      * methods in all APIs.
@@ -742,40 +706,34 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      * </pre>
      *
      * <code>string selector = 1;</code>
-     *
      * @param value The bytes for selector to set.
      * @return This builder for chaining.
      */
-    public Builder setSelectorBytes(com.google.protobuf.ByteString value) {
+    public Builder setSelectorBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       selector_ = value;
       onChanged();
       return this;
     }
 
     private java.util.List<com.google.api.SystemParameter> parameters_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureParametersIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         parameters_ = new java.util.ArrayList<com.google.api.SystemParameter>(parameters_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.SystemParameter,
-            com.google.api.SystemParameter.Builder,
-            com.google.api.SystemParameterOrBuilder>
-        parametersBuilder_;
+        com.google.api.SystemParameter, com.google.api.SystemParameter.Builder, com.google.api.SystemParameterOrBuilder> parametersBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -794,8 +752,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       }
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -814,8 +770,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       }
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -834,8 +788,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       }
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -846,7 +798,8 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      *
      * <code>repeated .google.api.SystemParameter parameters = 2;</code>
      */
-    public Builder setParameters(int index, com.google.api.SystemParameter value) {
+    public Builder setParameters(
+        int index, com.google.api.SystemParameter value) {
       if (parametersBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -860,8 +813,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -884,8 +835,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -910,8 +859,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -922,7 +869,8 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      *
      * <code>repeated .google.api.SystemParameter parameters = 2;</code>
      */
-    public Builder addParameters(int index, com.google.api.SystemParameter value) {
+    public Builder addParameters(
+        int index, com.google.api.SystemParameter value) {
       if (parametersBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -936,8 +884,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -948,7 +894,8 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      *
      * <code>repeated .google.api.SystemParameter parameters = 2;</code>
      */
-    public Builder addParameters(com.google.api.SystemParameter.Builder builderForValue) {
+    public Builder addParameters(
+        com.google.api.SystemParameter.Builder builderForValue) {
       if (parametersBuilder_ == null) {
         ensureParametersIsMutable();
         parameters_.add(builderForValue.build());
@@ -959,8 +906,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -983,8 +928,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -999,7 +942,8 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
         java.lang.Iterable<? extends com.google.api.SystemParameter> values) {
       if (parametersBuilder_ == null) {
         ensureParametersIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, parameters_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, parameters_);
         onChanged();
       } else {
         parametersBuilder_.addAllMessages(values);
@@ -1007,8 +951,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -1030,8 +972,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -1053,8 +993,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -1065,12 +1003,11 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      *
      * <code>repeated .google.api.SystemParameter parameters = 2;</code>
      */
-    public com.google.api.SystemParameter.Builder getParametersBuilder(int index) {
+    public com.google.api.SystemParameter.Builder getParametersBuilder(
+        int index) {
       return getParametersFieldBuilder().getBuilder(index);
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -1081,16 +1018,14 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      *
      * <code>repeated .google.api.SystemParameter parameters = 2;</code>
      */
-    public com.google.api.SystemParameterOrBuilder getParametersOrBuilder(int index) {
+    public com.google.api.SystemParameterOrBuilder getParametersOrBuilder(
+        int index) {
       if (parametersBuilder_ == null) {
-        return parameters_.get(index);
-      } else {
+        return parameters_.get(index);  } else {
         return parametersBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -1101,8 +1036,8 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      *
      * <code>repeated .google.api.SystemParameter parameters = 2;</code>
      */
-    public java.util.List<? extends com.google.api.SystemParameterOrBuilder>
-        getParametersOrBuilderList() {
+    public java.util.List<? extends com.google.api.SystemParameterOrBuilder> 
+         getParametersOrBuilderList() {
       if (parametersBuilder_ != null) {
         return parametersBuilder_.getMessageOrBuilderList();
       } else {
@@ -1110,8 +1045,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       }
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -1123,12 +1056,10 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      * <code>repeated .google.api.SystemParameter parameters = 2;</code>
      */
     public com.google.api.SystemParameter.Builder addParametersBuilder() {
-      return getParametersFieldBuilder()
-          .addBuilder(com.google.api.SystemParameter.getDefaultInstance());
+      return getParametersFieldBuilder().addBuilder(
+          com.google.api.SystemParameter.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -1139,13 +1070,12 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      *
      * <code>repeated .google.api.SystemParameter parameters = 2;</code>
      */
-    public com.google.api.SystemParameter.Builder addParametersBuilder(int index) {
-      return getParametersFieldBuilder()
-          .addBuilder(index, com.google.api.SystemParameter.getDefaultInstance());
+    public com.google.api.SystemParameter.Builder addParametersBuilder(
+        int index) {
+      return getParametersFieldBuilder().addBuilder(
+          index, com.google.api.SystemParameter.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Define parameters. Multiple names may be defined for a parameter.
      * For a given method call, only one of them should be used. If multiple
@@ -1156,29 +1086,27 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
      *
      * <code>repeated .google.api.SystemParameter parameters = 2;</code>
      */
-    public java.util.List<com.google.api.SystemParameter.Builder> getParametersBuilderList() {
+    public java.util.List<com.google.api.SystemParameter.Builder> 
+         getParametersBuilderList() {
       return getParametersFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.SystemParameter,
-            com.google.api.SystemParameter.Builder,
-            com.google.api.SystemParameterOrBuilder>
+        com.google.api.SystemParameter, com.google.api.SystemParameter.Builder, com.google.api.SystemParameterOrBuilder> 
         getParametersFieldBuilder() {
       if (parametersBuilder_ == null) {
-        parametersBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.api.SystemParameter,
-                com.google.api.SystemParameter.Builder,
-                com.google.api.SystemParameterOrBuilder>(
-                parameters_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        parametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.api.SystemParameter, com.google.api.SystemParameter.Builder, com.google.api.SystemParameterOrBuilder>(
+                parameters_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         parameters_ = null;
       }
       return parametersBuilder_;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1188,12 +1116,12 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.api.SystemParameterRule)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.SystemParameterRule)
   private static final com.google.api.SystemParameterRule DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.api.SystemParameterRule();
   }
@@ -1202,16 +1130,16 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SystemParameterRule> PARSER =
-      new com.google.protobuf.AbstractParser<SystemParameterRule>() {
-        @java.lang.Override
-        public SystemParameterRule parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SystemParameterRule(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<SystemParameterRule>
+      PARSER = new com.google.protobuf.AbstractParser<SystemParameterRule>() {
+    @java.lang.Override
+    public SystemParameterRule parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new SystemParameterRule(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<SystemParameterRule> parser() {
     return PARSER;
@@ -1226,4 +1154,6 @@ public final class SystemParameterRule extends com.google.protobuf.GeneratedMess
   public com.google.api.SystemParameterRule getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

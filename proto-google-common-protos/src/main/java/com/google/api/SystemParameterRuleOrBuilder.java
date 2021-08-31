@@ -18,14 +18,11 @@
 
 package com.google.api;
 
-public interface SystemParameterRuleOrBuilder
-    extends
+public interface SystemParameterRuleOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.api.SystemParameterRule)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Selects the methods to which this rule applies. Use '*' to indicate all
    * methods in all APIs.
@@ -33,13 +30,10 @@ public interface SystemParameterRuleOrBuilder
    * </pre>
    *
    * <code>string selector = 1;</code>
-   *
    * @return The selector.
    */
   java.lang.String getSelector();
   /**
-   *
-   *
    * <pre>
    * Selects the methods to which this rule applies. Use '*' to indicate all
    * methods in all APIs.
@@ -47,14 +41,12 @@ public interface SystemParameterRuleOrBuilder
    * </pre>
    *
    * <code>string selector = 1;</code>
-   *
    * @return The bytes for selector.
    */
-  com.google.protobuf.ByteString getSelectorBytes();
+  com.google.protobuf.ByteString
+      getSelectorBytes();
 
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -65,10 +57,9 @@ public interface SystemParameterRuleOrBuilder
    *
    * <code>repeated .google.api.SystemParameter parameters = 2;</code>
    */
-  java.util.List<com.google.api.SystemParameter> getParametersList();
+  java.util.List<com.google.api.SystemParameter> 
+      getParametersList();
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -81,8 +72,6 @@ public interface SystemParameterRuleOrBuilder
    */
   com.google.api.SystemParameter getParameters(int index);
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -95,8 +84,6 @@ public interface SystemParameterRuleOrBuilder
    */
   int getParametersCount();
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -107,10 +94,9 @@ public interface SystemParameterRuleOrBuilder
    *
    * <code>repeated .google.api.SystemParameter parameters = 2;</code>
    */
-  java.util.List<? extends com.google.api.SystemParameterOrBuilder> getParametersOrBuilderList();
+  java.util.List<? extends com.google.api.SystemParameterOrBuilder> 
+      getParametersOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * Define parameters. Multiple names may be defined for a parameter.
    * For a given method call, only one of them should be used. If multiple
@@ -121,5 +107,6 @@ public interface SystemParameterRuleOrBuilder
    *
    * <code>repeated .google.api.SystemParameter parameters = 2;</code>
    */
-  com.google.api.SystemParameterOrBuilder getParametersOrBuilder(int index);
+  com.google.api.SystemParameterOrBuilder getParametersOrBuilder(
+      int index);
 }

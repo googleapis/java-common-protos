@@ -18,14 +18,11 @@
 
 package com.google.api;
 
-public interface QuotaLimitOrBuilder
-    extends
+public interface QuotaLimitOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.api.QuotaLimit)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Name of the quota limit.
    * The name must be provided, and it must be unique within the service. The
@@ -34,13 +31,10 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string name = 6;</code>
-   *
    * @return The name.
    */
   java.lang.String getName();
   /**
-   *
-   *
    * <pre>
    * Name of the quota limit.
    * The name must be provided, and it must be unique within the service. The
@@ -49,14 +43,12 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string name = 6;</code>
-   *
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString getNameBytes();
+  com.google.protobuf.ByteString
+      getNameBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. User-visible, extended description for this quota limit.
    * Should be used only when more context is needed to understand this limit
@@ -64,13 +56,10 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string description = 2;</code>
-   *
    * @return The description.
    */
   java.lang.String getDescription();
   /**
-   *
-   *
    * <pre>
    * Optional. User-visible, extended description for this quota limit.
    * Should be used only when more context is needed to understand this limit
@@ -78,14 +67,12 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string description = 2;</code>
-   *
    * @return The bytes for description.
    */
-  com.google.protobuf.ByteString getDescriptionBytes();
+  com.google.protobuf.ByteString
+      getDescriptionBytes();
 
   /**
-   *
-   *
    * <pre>
    * Default number of tokens that can be consumed during the specified
    * duration. This is the number of tokens assigned when a client
@@ -98,14 +85,11 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>int64 default_limit = 3;</code>
-   *
    * @return The defaultLimit.
    */
   long getDefaultLimit();
 
   /**
-   *
-   *
    * <pre>
    * Maximum number of tokens that can be consumed during the specified
    * duration. Client application developers can override the default limit up
@@ -117,14 +101,11 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>int64 max_limit = 4;</code>
-   *
    * @return The maxLimit.
    */
   long getMaxLimit();
 
   /**
-   *
-   *
    * <pre>
    * Free tier value displayed in the Developers Console for this limit.
    * The free tier is the number of tokens that will be subtracted from the
@@ -136,41 +117,33 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>int64 free_tier = 7;</code>
-   *
    * @return The freeTier.
    */
   long getFreeTier();
 
   /**
-   *
-   *
    * <pre>
    * Duration of this limit in textual notation. Must be "100s" or "1d".
    * Used by group-based quotas only.
    * </pre>
    *
    * <code>string duration = 5;</code>
-   *
    * @return The duration.
    */
   java.lang.String getDuration();
   /**
-   *
-   *
    * <pre>
    * Duration of this limit in textual notation. Must be "100s" or "1d".
    * Used by group-based quotas only.
    * </pre>
    *
    * <code>string duration = 5;</code>
-   *
    * @return The bytes for duration.
    */
-  com.google.protobuf.ByteString getDurationBytes();
+  com.google.protobuf.ByteString
+      getDurationBytes();
 
   /**
-   *
-   *
    * <pre>
    * The name of the metric this quota limit applies to. The quota limits with
    * the same metric will be checked together during runtime. The metric must be
@@ -178,13 +151,10 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string metric = 8;</code>
-   *
    * @return The metric.
    */
   java.lang.String getMetric();
   /**
-   *
-   *
    * <pre>
    * The name of the metric this quota limit applies to. The quota limits with
    * the same metric will be checked together during runtime. The metric must be
@@ -192,14 +162,12 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string metric = 8;</code>
-   *
    * @return The bytes for metric.
    */
-  com.google.protobuf.ByteString getMetricBytes();
+  com.google.protobuf.ByteString
+      getMetricBytes();
 
   /**
-   *
-   *
    * <pre>
    * Specify the unit of the quota limit. It uses the same syntax as
    * [Metric.unit][]. The supported unit kinds are determined by the quota
@@ -211,13 +179,10 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string unit = 9;</code>
-   *
    * @return The unit.
    */
   java.lang.String getUnit();
   /**
-   *
-   *
    * <pre>
    * Specify the unit of the quota limit. It uses the same syntax as
    * [Metric.unit][]. The supported unit kinds are determined by the quota
@@ -229,14 +194,12 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string unit = 9;</code>
-   *
    * @return The bytes for unit.
    */
-  com.google.protobuf.ByteString getUnitBytes();
+  com.google.protobuf.ByteString
+      getUnitBytes();
 
   /**
-   *
-   *
    * <pre>
    * Tiered limit values. You must specify this as a key:value pair, with an
    * integer value that is the maximum number of requests allowed for the
@@ -247,8 +210,6 @@ public interface QuotaLimitOrBuilder
    */
   int getValuesCount();
   /**
-   *
-   *
    * <pre>
    * Tiered limit values. You must specify this as a key:value pair, with an
    * integer value that is the maximum number of requests allowed for the
@@ -257,13 +218,15 @@ public interface QuotaLimitOrBuilder
    *
    * <code>map&lt;string, int64&gt; values = 10;</code>
    */
-  boolean containsValues(java.lang.String key);
-  /** Use {@link #getValuesMap()} instead. */
+  boolean containsValues(
+      java.lang.String key);
+  /**
+   * Use {@link #getValuesMap()} instead.
+   */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, java.lang.Long> getValues();
+  java.util.Map<java.lang.String, java.lang.Long>
+  getValues();
   /**
-   *
-   *
    * <pre>
    * Tiered limit values. You must specify this as a key:value pair, with an
    * integer value that is the maximum number of requests allowed for the
@@ -272,10 +235,9 @@ public interface QuotaLimitOrBuilder
    *
    * <code>map&lt;string, int64&gt; values = 10;</code>
    */
-  java.util.Map<java.lang.String, java.lang.Long> getValuesMap();
+  java.util.Map<java.lang.String, java.lang.Long>
+  getValuesMap();
   /**
-   *
-   *
    * <pre>
    * Tiered limit values. You must specify this as a key:value pair, with an
    * integer value that is the maximum number of requests allowed for the
@@ -284,10 +246,11 @@ public interface QuotaLimitOrBuilder
    *
    * <code>map&lt;string, int64&gt; values = 10;</code>
    */
-  long getValuesOrDefault(java.lang.String key, long defaultValue);
+
+  long getValuesOrDefault(
+      java.lang.String key,
+      long defaultValue);
   /**
-   *
-   *
    * <pre>
    * Tiered limit values. You must specify this as a key:value pair, with an
    * integer value that is the maximum number of requests allowed for the
@@ -296,11 +259,11 @@ public interface QuotaLimitOrBuilder
    *
    * <code>map&lt;string, int64&gt; values = 10;</code>
    */
-  long getValuesOrThrow(java.lang.String key);
+
+  long getValuesOrThrow(
+      java.lang.String key);
 
   /**
-   *
-   *
    * <pre>
    * User-visible display name for this limit.
    * Optional. If not set, the UI will provide a default display name based on
@@ -309,13 +272,10 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string display_name = 12;</code>
-   *
    * @return The displayName.
    */
   java.lang.String getDisplayName();
   /**
-   *
-   *
    * <pre>
    * User-visible display name for this limit.
    * Optional. If not set, the UI will provide a default display name based on
@@ -324,8 +284,8 @@ public interface QuotaLimitOrBuilder
    * </pre>
    *
    * <code>string display_name = 12;</code>
-   *
    * @return The bytes for displayName.
    */
-  com.google.protobuf.ByteString getDisplayNameBytes();
+  com.google.protobuf.ByteString
+      getDisplayNameBytes();
 }

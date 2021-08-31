@@ -18,14 +18,11 @@
 
 package com.google.cloud.audit;
 
-public interface AuthenticationInfoOrBuilder
-    extends
+public interface AuthenticationInfoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.cloud.audit.AuthenticationInfo)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The email address of the authenticated user (or service account on behalf
    * of third party principal) making the request. For third party identity
@@ -36,13 +33,10 @@ public interface AuthenticationInfoOrBuilder
    * </pre>
    *
    * <code>string principal_email = 1;</code>
-   *
    * @return The principalEmail.
    */
   java.lang.String getPrincipalEmail();
   /**
-   *
-   *
    * <pre>
    * The email address of the authenticated user (or service account on behalf
    * of third party principal) making the request. For third party identity
@@ -53,41 +47,34 @@ public interface AuthenticationInfoOrBuilder
    * </pre>
    *
    * <code>string principal_email = 1;</code>
-   *
    * @return The bytes for principalEmail.
    */
-  com.google.protobuf.ByteString getPrincipalEmailBytes();
+  com.google.protobuf.ByteString
+      getPrincipalEmailBytes();
 
   /**
-   *
-   *
    * <pre>
    * The authority selector specified by the requestor, if any.
    * It is not guaranteed that the principal was allowed to use this authority.
    * </pre>
    *
    * <code>string authority_selector = 2;</code>
-   *
    * @return The authoritySelector.
    */
   java.lang.String getAuthoritySelector();
   /**
-   *
-   *
    * <pre>
    * The authority selector specified by the requestor, if any.
    * It is not guaranteed that the principal was allowed to use this authority.
    * </pre>
    *
    * <code>string authority_selector = 2;</code>
-   *
    * @return The bytes for authoritySelector.
    */
-  com.google.protobuf.ByteString getAuthoritySelectorBytes();
+  com.google.protobuf.ByteString
+      getAuthoritySelectorBytes();
 
   /**
-   *
-   *
    * <pre>
    * The third party identification (if any) of the authenticated user making
    * the request.
@@ -96,13 +83,10 @@ public interface AuthenticationInfoOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Struct third_party_principal = 4;</code>
-   *
    * @return Whether the thirdPartyPrincipal field is set.
    */
   boolean hasThirdPartyPrincipal();
   /**
-   *
-   *
    * <pre>
    * The third party identification (if any) of the authenticated user making
    * the request.
@@ -111,13 +95,10 @@ public interface AuthenticationInfoOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Struct third_party_principal = 4;</code>
-   *
    * @return The thirdPartyPrincipal.
    */
   com.google.protobuf.Struct getThirdPartyPrincipal();
   /**
-   *
-   *
    * <pre>
    * The third party identification (if any) of the authenticated user making
    * the request.
@@ -130,8 +111,6 @@ public interface AuthenticationInfoOrBuilder
   com.google.protobuf.StructOrBuilder getThirdPartyPrincipalOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * The name of the service account key used to create or exchange
    * credentials for authenticating the service account making the request.
@@ -140,13 +119,10 @@ public interface AuthenticationInfoOrBuilder
    * </pre>
    *
    * <code>string service_account_key_name = 5;</code>
-   *
    * @return The serviceAccountKeyName.
    */
   java.lang.String getServiceAccountKeyName();
   /**
-   *
-   *
    * <pre>
    * The name of the service account key used to create or exchange
    * credentials for authenticating the service account making the request.
@@ -155,14 +131,12 @@ public interface AuthenticationInfoOrBuilder
    * </pre>
    *
    * <code>string service_account_key_name = 5;</code>
-   *
    * @return The bytes for serviceAccountKeyName.
    */
-  com.google.protobuf.ByteString getServiceAccountKeyNameBytes();
+  com.google.protobuf.ByteString
+      getServiceAccountKeyNameBytes();
 
   /**
-   *
-   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -171,15 +145,11 @@ public interface AuthenticationInfoOrBuilder
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>
-   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
-   * </code>
+   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
    */
-  java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo>
+  java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo> 
       getServiceAccountDelegationInfoList();
   /**
-   *
-   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -188,14 +158,10 @@ public interface AuthenticationInfoOrBuilder
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>
-   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
-   * </code>
+   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
    */
   com.google.cloud.audit.ServiceAccountDelegationInfo getServiceAccountDelegationInfo(int index);
   /**
-   *
-   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -204,14 +170,10 @@ public interface AuthenticationInfoOrBuilder
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>
-   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
-   * </code>
+   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
    */
   int getServiceAccountDelegationInfoCount();
   /**
-   *
-   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -220,15 +182,11 @@ public interface AuthenticationInfoOrBuilder
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>
-   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
-   * </code>
+   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
    */
-  java.util.List<? extends com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder>
+  java.util.List<? extends com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder> 
       getServiceAccountDelegationInfoOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -237,37 +195,30 @@ public interface AuthenticationInfoOrBuilder
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>
-   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
-   * </code>
+   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
    */
-  com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder
-      getServiceAccountDelegationInfoOrBuilder(int index);
+  com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder getServiceAccountDelegationInfoOrBuilder(
+      int index);
 
   /**
-   *
-   *
    * <pre>
    * String representation of identity of requesting party.
    * Populated for both first and third party identities.
    * </pre>
    *
    * <code>string principal_subject = 8;</code>
-   *
    * @return The principalSubject.
    */
   java.lang.String getPrincipalSubject();
   /**
-   *
-   *
    * <pre>
    * String representation of identity of requesting party.
    * Populated for both first and third party identities.
    * </pre>
    *
    * <code>string principal_subject = 8;</code>
-   *
    * @return The bytes for principalSubject.
    */
-  com.google.protobuf.ByteString getPrincipalSubjectBytes();
+  com.google.protobuf.ByteString
+      getPrincipalSubjectBytes();
 }

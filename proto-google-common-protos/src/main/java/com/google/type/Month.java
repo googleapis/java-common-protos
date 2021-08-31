@@ -19,18 +19,15 @@
 package com.google.type;
 
 /**
- *
- *
  * <pre>
  * Represents a month in the Gregorian calendar.
  * </pre>
  *
  * Protobuf enum {@code google.type.Month}
  */
-public enum Month implements com.google.protobuf.ProtocolMessageEnum {
+public enum Month
+    implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   *
-   *
    * <pre>
    * The unspecified month.
    * </pre>
@@ -39,8 +36,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   MONTH_UNSPECIFIED(0),
   /**
-   *
-   *
    * <pre>
    * The month of January.
    * </pre>
@@ -49,8 +44,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   JANUARY(1),
   /**
-   *
-   *
    * <pre>
    * The month of February.
    * </pre>
@@ -59,8 +52,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   FEBRUARY(2),
   /**
-   *
-   *
    * <pre>
    * The month of March.
    * </pre>
@@ -69,8 +60,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   MARCH(3),
   /**
-   *
-   *
    * <pre>
    * The month of April.
    * </pre>
@@ -79,8 +68,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   APRIL(4),
   /**
-   *
-   *
    * <pre>
    * The month of May.
    * </pre>
@@ -89,8 +76,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   MAY(5),
   /**
-   *
-   *
    * <pre>
    * The month of June.
    * </pre>
@@ -99,8 +84,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   JUNE(6),
   /**
-   *
-   *
    * <pre>
    * The month of July.
    * </pre>
@@ -109,8 +92,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   JULY(7),
   /**
-   *
-   *
    * <pre>
    * The month of August.
    * </pre>
@@ -119,8 +100,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   AUGUST(8),
   /**
-   *
-   *
    * <pre>
    * The month of September.
    * </pre>
@@ -129,8 +108,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   SEPTEMBER(9),
   /**
-   *
-   *
    * <pre>
    * The month of October.
    * </pre>
@@ -139,8 +116,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   OCTOBER(10),
   /**
-   *
-   *
    * <pre>
    * The month of November.
    * </pre>
@@ -149,8 +124,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   NOVEMBER(11),
   /**
-   *
-   *
    * <pre>
    * The month of December.
    * </pre>
@@ -162,8 +135,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
   ;
 
   /**
-   *
-   *
    * <pre>
    * The unspecified month.
    * </pre>
@@ -172,8 +143,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int MONTH_UNSPECIFIED_VALUE = 0;
   /**
-   *
-   *
    * <pre>
    * The month of January.
    * </pre>
@@ -182,8 +151,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int JANUARY_VALUE = 1;
   /**
-   *
-   *
    * <pre>
    * The month of February.
    * </pre>
@@ -192,8 +159,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int FEBRUARY_VALUE = 2;
   /**
-   *
-   *
    * <pre>
    * The month of March.
    * </pre>
@@ -202,8 +167,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int MARCH_VALUE = 3;
   /**
-   *
-   *
    * <pre>
    * The month of April.
    * </pre>
@@ -212,8 +175,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int APRIL_VALUE = 4;
   /**
-   *
-   *
    * <pre>
    * The month of May.
    * </pre>
@@ -222,8 +183,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int MAY_VALUE = 5;
   /**
-   *
-   *
    * <pre>
    * The month of June.
    * </pre>
@@ -232,8 +191,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int JUNE_VALUE = 6;
   /**
-   *
-   *
    * <pre>
    * The month of July.
    * </pre>
@@ -242,8 +199,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int JULY_VALUE = 7;
   /**
-   *
-   *
    * <pre>
    * The month of August.
    * </pre>
@@ -252,8 +207,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int AUGUST_VALUE = 8;
   /**
-   *
-   *
    * <pre>
    * The month of September.
    * </pre>
@@ -262,8 +215,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int SEPTEMBER_VALUE = 9;
   /**
-   *
-   *
    * <pre>
    * The month of October.
    * </pre>
@@ -272,8 +223,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int OCTOBER_VALUE = 10;
   /**
-   *
-   *
    * <pre>
    * The month of November.
    * </pre>
@@ -282,8 +231,6 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int NOVEMBER_VALUE = 11;
   /**
-   *
-   *
    * <pre>
    * The month of December.
    * </pre>
@@ -291,6 +238,7 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    * <code>DECEMBER = 12;</code>
    */
   public static final int DECEMBER_VALUE = 12;
+
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -316,69 +264,59 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static Month forNumber(int value) {
     switch (value) {
-      case 0:
-        return MONTH_UNSPECIFIED;
-      case 1:
-        return JANUARY;
-      case 2:
-        return FEBRUARY;
-      case 3:
-        return MARCH;
-      case 4:
-        return APRIL;
-      case 5:
-        return MAY;
-      case 6:
-        return JUNE;
-      case 7:
-        return JULY;
-      case 8:
-        return AUGUST;
-      case 9:
-        return SEPTEMBER;
-      case 10:
-        return OCTOBER;
-      case 11:
-        return NOVEMBER;
-      case 12:
-        return DECEMBER;
-      default:
-        return null;
+      case 0: return MONTH_UNSPECIFIED;
+      case 1: return JANUARY;
+      case 2: return FEBRUARY;
+      case 3: return MARCH;
+      case 4: return APRIL;
+      case 5: return MAY;
+      case 6: return JUNE;
+      case 7: return JULY;
+      case 8: return AUGUST;
+      case 9: return SEPTEMBER;
+      case 10: return OCTOBER;
+      case 11: return NOVEMBER;
+      case 12: return DECEMBER;
+      default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<Month> internalGetValueMap() {
+  public static com.google.protobuf.Internal.EnumLiteMap<Month>
+      internalGetValueMap() {
     return internalValueMap;
   }
+  private static final com.google.protobuf.Internal.EnumLiteMap<
+      Month> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<Month>() {
+          public Month findValueByNumber(int number) {
+            return Month.forNumber(number);
+          }
+        };
 
-  private static final com.google.protobuf.Internal.EnumLiteMap<Month> internalValueMap =
-      new com.google.protobuf.Internal.EnumLiteMap<Month>() {
-        public Month findValueByNumber(int number) {
-          return Month.forNumber(number);
-        }
-      };
-
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+  public final com.google.protobuf.Descriptors.EnumValueDescriptor
+      getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
-
-  public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+  public final com.google.protobuf.Descriptors.EnumDescriptor
+      getDescriptorForType() {
     return getDescriptor();
   }
-
-  public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.EnumDescriptor
+      getDescriptor() {
     return com.google.type.MonthProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final Month[] VALUES = values();
 
-  public static Month valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+  public static Month valueOf(
+      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+      throw new java.lang.IllegalArgumentException(
+        "EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -394,3 +332,4 @@ public enum Month implements com.google.protobuf.ProtocolMessageEnum {
 
   // @@protoc_insertion_point(enum_scope:google.type.Month)
 }
+

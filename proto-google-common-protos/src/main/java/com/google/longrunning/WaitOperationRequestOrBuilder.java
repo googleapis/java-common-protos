@@ -18,39 +18,31 @@
 
 package com.google.longrunning;
 
-public interface WaitOperationRequestOrBuilder
-    extends
+public interface WaitOperationRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.longrunning.WaitOperationRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The name of the operation resource to wait on.
    * </pre>
    *
    * <code>string name = 1;</code>
-   *
    * @return The name.
    */
   java.lang.String getName();
   /**
-   *
-   *
    * <pre>
    * The name of the operation resource to wait on.
    * </pre>
    *
    * <code>string name = 1;</code>
-   *
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString getNameBytes();
+  com.google.protobuf.ByteString
+      getNameBytes();
 
   /**
-   *
-   *
    * <pre>
    * The maximum duration to wait before timing out. If left blank, the wait
    * will be at most the time permitted by the underlying HTTP/RPC protocol.
@@ -58,13 +50,10 @@ public interface WaitOperationRequestOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration timeout = 2;</code>
-   *
    * @return Whether the timeout field is set.
    */
   boolean hasTimeout();
   /**
-   *
-   *
    * <pre>
    * The maximum duration to wait before timing out. If left blank, the wait
    * will be at most the time permitted by the underlying HTTP/RPC protocol.
@@ -72,13 +61,10 @@ public interface WaitOperationRequestOrBuilder
    * </pre>
    *
    * <code>.google.protobuf.Duration timeout = 2;</code>
-   *
    * @return The timeout.
    */
   com.google.protobuf.Duration getTimeout();
   /**
-   *
-   *
    * <pre>
    * The maximum duration to wait before timing out. If left blank, the wait
    * will be at most the time permitted by the underlying HTTP/RPC protocol.

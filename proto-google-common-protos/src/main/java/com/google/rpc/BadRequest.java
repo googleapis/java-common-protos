@@ -19,8 +19,6 @@
 package com.google.rpc;
 
 /**
- *
- *
  * <pre>
  * Describes violations in a client request. This error type focuses on the
  * syntactic aspects of the request.
@@ -28,31 +26,31 @@ package com.google.rpc;
  *
  * Protobuf type {@code google.rpc.BadRequest}
  */
-public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class BadRequest extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.rpc.BadRequest)
     BadRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use BadRequest.newBuilder() to construct.
   private BadRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private BadRequest() {
     fieldViolations_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new BadRequest();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private BadRequest(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -72,31 +70,29 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                fieldViolations_ =
-                    new java.util.ArrayList<com.google.rpc.BadRequest.FieldViolation>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              fieldViolations_.add(
-                  input.readMessage(
-                      com.google.rpc.BadRequest.FieldViolation.parser(), extensionRegistry));
-              break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              fieldViolations_ = new java.util.ArrayList<com.google.rpc.BadRequest.FieldViolation>();
+              mutable_bitField0_ |= 0x00000001;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            fieldViolations_.add(
+                input.readMessage(com.google.rpc.BadRequest.FieldViolation.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         fieldViolations_ = java.util.Collections.unmodifiableList(fieldViolations_);
@@ -105,8 +101,8 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_BadRequest_descriptor;
   }
 
@@ -118,14 +114,11 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
             com.google.rpc.BadRequest.class, com.google.rpc.BadRequest.Builder.class);
   }
 
-  public interface FieldViolationOrBuilder
-      extends
+  public interface FieldViolationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.rpc.BadRequest.FieldViolation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * A path leading to a field in the request body. The value will be a
      * sequence of dot-separated identifiers that identify a protocol buffer
@@ -133,13 +126,10 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string field = 1;</code>
-     *
      * @return The field.
      */
     java.lang.String getField();
     /**
-     *
-     *
      * <pre>
      * A path leading to a field in the request body. The value will be a
      * sequence of dot-separated identifiers that identify a protocol buffer
@@ -147,55 +137,47 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string field = 1;</code>
-     *
      * @return The bytes for field.
      */
-    com.google.protobuf.ByteString getFieldBytes();
+    com.google.protobuf.ByteString
+        getFieldBytes();
 
     /**
-     *
-     *
      * <pre>
      * A description of why the request element is bad.
      * </pre>
      *
      * <code>string description = 2;</code>
-     *
      * @return The description.
      */
     java.lang.String getDescription();
     /**
-     *
-     *
      * <pre>
      * A description of why the request element is bad.
      * </pre>
      *
      * <code>string description = 2;</code>
-     *
      * @return The bytes for description.
      */
-    com.google.protobuf.ByteString getDescriptionBytes();
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
-   *
-   *
    * <pre>
    * A message type used to describe a single bad request field.
    * </pre>
    *
    * Protobuf type {@code google.rpc.BadRequest.FieldViolation}
    */
-  public static final class FieldViolation extends com.google.protobuf.GeneratedMessageV3
-      implements
+  public static final class FieldViolation extends
+      com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.rpc.BadRequest.FieldViolation)
       FieldViolationOrBuilder {
-    private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
     // Use FieldViolation.newBuilder() to construct.
     private FieldViolation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private FieldViolation() {
       field_ = "";
       description_ = "";
@@ -203,15 +185,16 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
       return new FieldViolation();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
       return this.unknownFields;
     }
-
     private FieldViolation(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -230,59 +213,53 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-                field_ = s;
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
+              field_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-                description_ = s;
-                break;
+              description_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
               }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.rpc.ErrorDetailsProto
-          .internal_static_google_rpc_BadRequest_FieldViolation_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_BadRequest_FieldViolation_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.ErrorDetailsProto
-          .internal_static_google_rpc_BadRequest_FieldViolation_fieldAccessorTable
+      return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_BadRequest_FieldViolation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.rpc.BadRequest.FieldViolation.class,
-              com.google.rpc.BadRequest.FieldViolation.Builder.class);
+              com.google.rpc.BadRequest.FieldViolation.class, com.google.rpc.BadRequest.FieldViolation.Builder.class);
     }
 
     public static final int FIELD_FIELD_NUMBER = 1;
     private volatile java.lang.Object field_;
     /**
-     *
-     *
      * <pre>
      * A path leading to a field in the request body. The value will be a
      * sequence of dot-separated identifiers that identify a protocol buffer
@@ -290,7 +267,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string field = 1;</code>
-     *
      * @return The field.
      */
     @java.lang.Override
@@ -299,15 +275,14 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         field_ = s;
         return s;
       }
     }
     /**
-     *
-     *
      * <pre>
      * A path leading to a field in the request body. The value will be a
      * sequence of dot-separated identifiers that identify a protocol buffer
@@ -315,15 +290,16 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string field = 1;</code>
-     *
      * @return The bytes for field.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getFieldBytes() {
+    public com.google.protobuf.ByteString
+        getFieldBytes() {
       java.lang.Object ref = field_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         field_ = b;
         return b;
       } else {
@@ -334,14 +310,11 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     public static final int DESCRIPTION_FIELD_NUMBER = 2;
     private volatile java.lang.Object description_;
     /**
-     *
-     *
      * <pre>
      * A description of why the request element is bad.
      * </pre>
      *
      * <code>string description = 2;</code>
-     *
      * @return The description.
      */
     @java.lang.Override
@@ -350,29 +323,29 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
         return s;
       }
     }
     /**
-     *
-     *
      * <pre>
      * A description of why the request element is bad.
      * </pre>
      *
      * <code>string description = 2;</code>
-     *
      * @return The bytes for description.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getDescriptionBytes() {
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         description_ = b;
         return b;
       } else {
@@ -381,7 +354,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -393,7 +365,8 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (!getFieldBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, field_);
       }
@@ -423,16 +396,17 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.rpc.BadRequest.FieldViolation)) {
         return super.equals(obj);
       }
-      com.google.rpc.BadRequest.FieldViolation other =
-          (com.google.rpc.BadRequest.FieldViolation) obj;
+      com.google.rpc.BadRequest.FieldViolation other = (com.google.rpc.BadRequest.FieldViolation) obj;
 
-      if (!getField().equals(other.getField())) return false;
-      if (!getDescription().equals(other.getDescription())) return false;
+      if (!getField()
+          .equals(other.getField())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -453,94 +427,88 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return hash;
     }
 
-    public static com.google.rpc.BadRequest.FieldViolation parseFrom(java.nio.ByteBuffer data)
+    public static com.google.rpc.BadRequest.FieldViolation parseFrom(
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.google.rpc.BadRequest.FieldViolation parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.rpc.BadRequest.FieldViolation parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.rpc.BadRequest.FieldViolation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
-
+    public static com.google.rpc.BadRequest.FieldViolation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.rpc.BadRequest.FieldViolation parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.rpc.BadRequest.FieldViolation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -550,32 +518,27 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return builder;
     }
     /**
-     *
-     *
      * <pre>
      * A message type used to describe a single bad request field.
      * </pre>
      *
      * Protobuf type {@code google.rpc.BadRequest.FieldViolation}
      */
-    public static final class Builder
-        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.rpc.BadRequest.FieldViolation)
         com.google.rpc.BadRequest.FieldViolationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.rpc.ErrorDetailsProto
-            .internal_static_google_rpc_BadRequest_FieldViolation_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_BadRequest_FieldViolation_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.rpc.ErrorDetailsProto
-            .internal_static_google_rpc_BadRequest_FieldViolation_fieldAccessorTable
+        return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_BadRequest_FieldViolation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.rpc.BadRequest.FieldViolation.class,
-                com.google.rpc.BadRequest.FieldViolation.Builder.class);
+                com.google.rpc.BadRequest.FieldViolation.class, com.google.rpc.BadRequest.FieldViolation.Builder.class);
       }
 
       // Construct using com.google.rpc.BadRequest.FieldViolation.newBuilder()
@@ -583,15 +546,16 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -603,9 +567,9 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.rpc.ErrorDetailsProto
-            .internal_static_google_rpc_BadRequest_FieldViolation_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_BadRequest_FieldViolation_descriptor;
       }
 
       @java.lang.Override
@@ -624,8 +588,7 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
 
       @java.lang.Override
       public com.google.rpc.BadRequest.FieldViolation buildPartial() {
-        com.google.rpc.BadRequest.FieldViolation result =
-            new com.google.rpc.BadRequest.FieldViolation(this);
+        com.google.rpc.BadRequest.FieldViolation result = new com.google.rpc.BadRequest.FieldViolation(this);
         result.field_ = field_;
         result.description_ = description_;
         onBuilt();
@@ -636,41 +599,38 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
-      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
-      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index,
-          java.lang.Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.rpc.BadRequest.FieldViolation) {
-          return mergeFrom((com.google.rpc.BadRequest.FieldViolation) other);
+          return mergeFrom((com.google.rpc.BadRequest.FieldViolation)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -718,8 +678,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
 
       private java.lang.Object field_ = "";
       /**
-       *
-       *
        * <pre>
        * A path leading to a field in the request body. The value will be a
        * sequence of dot-separated identifiers that identify a protocol buffer
@@ -727,13 +685,13 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
        * </pre>
        *
        * <code>string field = 1;</code>
-       *
        * @return The field.
        */
       public java.lang.String getField() {
         java.lang.Object ref = field_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           field_ = s;
           return s;
@@ -742,8 +700,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * A path leading to a field in the request body. The value will be a
        * sequence of dot-separated identifiers that identify a protocol buffer
@@ -751,14 +707,15 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
        * </pre>
        *
        * <code>string field = 1;</code>
-       *
        * @return The bytes for field.
        */
-      public com.google.protobuf.ByteString getFieldBytes() {
+      public com.google.protobuf.ByteString
+          getFieldBytes() {
         java.lang.Object ref = field_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           field_ = b;
           return b;
         } else {
@@ -766,8 +723,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * A path leading to a field in the request body. The value will be a
        * sequence of dot-separated identifiers that identify a protocol buffer
@@ -775,22 +730,20 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
        * </pre>
        *
        * <code>string field = 1;</code>
-       *
        * @param value The field to set.
        * @return This builder for chaining.
        */
-      public Builder setField(java.lang.String value) {
+      public Builder setField(
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         field_ = value;
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * A path leading to a field in the request body. The value will be a
        * sequence of dot-separated identifiers that identify a protocol buffer
@@ -798,18 +751,15 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
        * </pre>
        *
        * <code>string field = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearField() {
-
+        
         field_ = getDefaultInstance().getField();
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * A path leading to a field in the request body. The value will be a
        * sequence of dot-separated identifiers that identify a protocol buffer
@@ -817,16 +767,16 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
        * </pre>
        *
        * <code>string field = 1;</code>
-       *
        * @param value The bytes for field to set.
        * @return This builder for chaining.
        */
-      public Builder setFieldBytes(com.google.protobuf.ByteString value) {
+      public Builder setFieldBytes(
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         field_ = value;
         onChanged();
         return this;
@@ -834,20 +784,18 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
 
       private java.lang.Object description_ = "";
       /**
-       *
-       *
        * <pre>
        * A description of why the request element is bad.
        * </pre>
        *
        * <code>string description = 2;</code>
-       *
        * @return The description.
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           description_ = s;
           return s;
@@ -856,21 +804,20 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * A description of why the request element is bad.
        * </pre>
        *
        * <code>string description = 2;</code>
-       *
        * @return The bytes for description.
        */
-      public com.google.protobuf.ByteString getDescriptionBytes() {
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
         java.lang.Object ref = description_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           description_ = b;
           return b;
         } else {
@@ -878,66 +825,58 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * A description of why the request element is bad.
        * </pre>
        *
        * <code>string description = 2;</code>
-       *
        * @param value The description to set.
        * @return This builder for chaining.
        */
-      public Builder setDescription(java.lang.String value) {
+      public Builder setDescription(
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         description_ = value;
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * A description of why the request element is bad.
        * </pre>
        *
        * <code>string description = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-
+        
         description_ = getDefaultInstance().getDescription();
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * A description of why the request element is bad.
        * </pre>
        *
        * <code>string description = 2;</code>
-       *
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
-      public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         description_ = value;
         onChanged();
         return this;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -950,12 +889,12 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:google.rpc.BadRequest.FieldViolation)
     }
 
     // @@protoc_insertion_point(class_scope:google.rpc.BadRequest.FieldViolation)
     private static final com.google.rpc.BadRequest.FieldViolation DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.rpc.BadRequest.FieldViolation();
     }
@@ -964,16 +903,16 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FieldViolation> PARSER =
-        new com.google.protobuf.AbstractParser<FieldViolation>() {
-          @java.lang.Override
-          public FieldViolation parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            return new FieldViolation(input, extensionRegistry);
-          }
-        };
+    private static final com.google.protobuf.Parser<FieldViolation>
+        PARSER = new com.google.protobuf.AbstractParser<FieldViolation>() {
+      @java.lang.Override
+      public FieldViolation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FieldViolation(input, extensionRegistry);
+      }
+    };
 
     public static com.google.protobuf.Parser<FieldViolation> parser() {
       return PARSER;
@@ -988,13 +927,12 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     public com.google.rpc.BadRequest.FieldViolation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   public static final int FIELD_VIOLATIONS_FIELD_NUMBER = 1;
   private java.util.List<com.google.rpc.BadRequest.FieldViolation> fieldViolations_;
   /**
-   *
-   *
    * <pre>
    * Describes all violations in a client request.
    * </pre>
@@ -1006,8 +944,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     return fieldViolations_;
   }
   /**
-   *
-   *
    * <pre>
    * Describes all violations in a client request.
    * </pre>
@@ -1015,13 +951,11 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.rpc.BadRequest.FieldViolation field_violations = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.rpc.BadRequest.FieldViolationOrBuilder>
+  public java.util.List<? extends com.google.rpc.BadRequest.FieldViolationOrBuilder> 
       getFieldViolationsOrBuilderList() {
     return fieldViolations_;
   }
   /**
-   *
-   *
    * <pre>
    * Describes all violations in a client request.
    * </pre>
@@ -1033,8 +967,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     return fieldViolations_.size();
   }
   /**
-   *
-   *
    * <pre>
    * Describes all violations in a client request.
    * </pre>
@@ -1046,8 +978,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     return fieldViolations_.get(index);
   }
   /**
-   *
-   *
    * <pre>
    * Describes all violations in a client request.
    * </pre>
@@ -1055,12 +985,12 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.rpc.BadRequest.FieldViolation field_violations = 1;</code>
    */
   @java.lang.Override
-  public com.google.rpc.BadRequest.FieldViolationOrBuilder getFieldViolationsOrBuilder(int index) {
+  public com.google.rpc.BadRequest.FieldViolationOrBuilder getFieldViolationsOrBuilder(
+      int index) {
     return fieldViolations_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -1072,7 +1002,8 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < fieldViolations_.size(); i++) {
       output.writeMessage(1, fieldViolations_.get(i));
     }
@@ -1086,7 +1017,8 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
 
     size = 0;
     for (int i = 0; i < fieldViolations_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, fieldViolations_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, fieldViolations_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1096,14 +1028,15 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.rpc.BadRequest)) {
       return super.equals(obj);
     }
     com.google.rpc.BadRequest other = (com.google.rpc.BadRequest) obj;
 
-    if (!getFieldViolationsList().equals(other.getFieldViolationsList())) return false;
+    if (!getFieldViolationsList()
+        .equals(other.getFieldViolationsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1124,103 +1057,97 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.rpc.BadRequest parseFrom(java.nio.ByteBuffer data)
+  public static com.google.rpc.BadRequest parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.rpc.BadRequest parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.rpc.BadRequest parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.rpc.BadRequest parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.rpc.BadRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.rpc.BadRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.rpc.BadRequest parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.rpc.BadRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.rpc.BadRequest parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.rpc.BadRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.rpc.BadRequest parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.rpc.BadRequest parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.rpc.BadRequest parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.rpc.BadRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.rpc.BadRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * Describes violations in a client request. This error type focuses on the
    * syntactic aspects of the request.
@@ -1228,19 +1155,19 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.rpc.BadRequest}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.rpc.BadRequest)
       com.google.rpc.BadRequestOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_BadRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.ErrorDetailsProto
-          .internal_static_google_rpc_BadRequest_fieldAccessorTable
+      return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_BadRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.rpc.BadRequest.class, com.google.rpc.BadRequest.Builder.class);
     }
@@ -1250,17 +1177,17 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
         getFieldViolationsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1274,7 +1201,8 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_BadRequest_descriptor;
     }
 
@@ -1313,39 +1241,38 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.rpc.BadRequest) {
-        return mergeFrom((com.google.rpc.BadRequest) other);
+        return mergeFrom((com.google.rpc.BadRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1372,10 +1299,9 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
             fieldViolationsBuilder_ = null;
             fieldViolations_ = other.fieldViolations_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            fieldViolationsBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getFieldViolationsFieldBuilder()
-                    : null;
+            fieldViolationsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFieldViolationsFieldBuilder() : null;
           } else {
             fieldViolationsBuilder_.addAllMessages(other.fieldViolations_);
           }
@@ -1409,29 +1335,21 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
-
     private int bitField0_;
 
     private java.util.List<com.google.rpc.BadRequest.FieldViolation> fieldViolations_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureFieldViolationsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        fieldViolations_ =
-            new java.util.ArrayList<com.google.rpc.BadRequest.FieldViolation>(fieldViolations_);
+        fieldViolations_ = new java.util.ArrayList<com.google.rpc.BadRequest.FieldViolation>(fieldViolations_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.rpc.BadRequest.FieldViolation,
-            com.google.rpc.BadRequest.FieldViolation.Builder,
-            com.google.rpc.BadRequest.FieldViolationOrBuilder>
-        fieldViolationsBuilder_;
+        com.google.rpc.BadRequest.FieldViolation, com.google.rpc.BadRequest.FieldViolation.Builder, com.google.rpc.BadRequest.FieldViolationOrBuilder> fieldViolationsBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1446,8 +1364,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1462,8 +1378,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1478,15 +1392,14 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
      *
      * <code>repeated .google.rpc.BadRequest.FieldViolation field_violations = 1;</code>
      */
-    public Builder setFieldViolations(int index, com.google.rpc.BadRequest.FieldViolation value) {
+    public Builder setFieldViolations(
+        int index, com.google.rpc.BadRequest.FieldViolation value) {
       if (fieldViolationsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1500,8 +1413,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1520,8 +1431,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1542,15 +1451,14 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
      *
      * <code>repeated .google.rpc.BadRequest.FieldViolation field_violations = 1;</code>
      */
-    public Builder addFieldViolations(int index, com.google.rpc.BadRequest.FieldViolation value) {
+    public Builder addFieldViolations(
+        int index, com.google.rpc.BadRequest.FieldViolation value) {
       if (fieldViolationsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1564,8 +1472,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1584,8 +1490,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1604,8 +1508,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1616,7 +1518,8 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
         java.lang.Iterable<? extends com.google.rpc.BadRequest.FieldViolation> values) {
       if (fieldViolationsBuilder_ == null) {
         ensureFieldViolationsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, fieldViolations_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fieldViolations_);
         onChanged();
       } else {
         fieldViolationsBuilder_.addAllMessages(values);
@@ -1624,8 +1527,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1643,8 +1544,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1662,20 +1561,17 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
      *
      * <code>repeated .google.rpc.BadRequest.FieldViolation field_violations = 1;</code>
      */
-    public com.google.rpc.BadRequest.FieldViolation.Builder getFieldViolationsBuilder(int index) {
+    public com.google.rpc.BadRequest.FieldViolation.Builder getFieldViolationsBuilder(
+        int index) {
       return getFieldViolationsFieldBuilder().getBuilder(index);
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1685,22 +1581,19 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     public com.google.rpc.BadRequest.FieldViolationOrBuilder getFieldViolationsOrBuilder(
         int index) {
       if (fieldViolationsBuilder_ == null) {
-        return fieldViolations_.get(index);
-      } else {
+        return fieldViolations_.get(index);  } else {
         return fieldViolationsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
      *
      * <code>repeated .google.rpc.BadRequest.FieldViolation field_violations = 1;</code>
      */
-    public java.util.List<? extends com.google.rpc.BadRequest.FieldViolationOrBuilder>
-        getFieldViolationsOrBuilderList() {
+    public java.util.List<? extends com.google.rpc.BadRequest.FieldViolationOrBuilder> 
+         getFieldViolationsOrBuilderList() {
       if (fieldViolationsBuilder_ != null) {
         return fieldViolationsBuilder_.getMessageOrBuilderList();
       } else {
@@ -1708,8 +1601,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
@@ -1717,47 +1608,38 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated .google.rpc.BadRequest.FieldViolation field_violations = 1;</code>
      */
     public com.google.rpc.BadRequest.FieldViolation.Builder addFieldViolationsBuilder() {
-      return getFieldViolationsFieldBuilder()
-          .addBuilder(com.google.rpc.BadRequest.FieldViolation.getDefaultInstance());
+      return getFieldViolationsFieldBuilder().addBuilder(
+          com.google.rpc.BadRequest.FieldViolation.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
      *
      * <code>repeated .google.rpc.BadRequest.FieldViolation field_violations = 1;</code>
      */
-    public com.google.rpc.BadRequest.FieldViolation.Builder addFieldViolationsBuilder(int index) {
-      return getFieldViolationsFieldBuilder()
-          .addBuilder(index, com.google.rpc.BadRequest.FieldViolation.getDefaultInstance());
+    public com.google.rpc.BadRequest.FieldViolation.Builder addFieldViolationsBuilder(
+        int index) {
+      return getFieldViolationsFieldBuilder().addBuilder(
+          index, com.google.rpc.BadRequest.FieldViolation.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Describes all violations in a client request.
      * </pre>
      *
      * <code>repeated .google.rpc.BadRequest.FieldViolation field_violations = 1;</code>
      */
-    public java.util.List<com.google.rpc.BadRequest.FieldViolation.Builder>
-        getFieldViolationsBuilderList() {
+    public java.util.List<com.google.rpc.BadRequest.FieldViolation.Builder> 
+         getFieldViolationsBuilderList() {
       return getFieldViolationsFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.rpc.BadRequest.FieldViolation,
-            com.google.rpc.BadRequest.FieldViolation.Builder,
-            com.google.rpc.BadRequest.FieldViolationOrBuilder>
+        com.google.rpc.BadRequest.FieldViolation, com.google.rpc.BadRequest.FieldViolation.Builder, com.google.rpc.BadRequest.FieldViolationOrBuilder> 
         getFieldViolationsFieldBuilder() {
       if (fieldViolationsBuilder_ == null) {
-        fieldViolationsBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.rpc.BadRequest.FieldViolation,
-                com.google.rpc.BadRequest.FieldViolation.Builder,
-                com.google.rpc.BadRequest.FieldViolationOrBuilder>(
+        fieldViolationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.rpc.BadRequest.FieldViolation, com.google.rpc.BadRequest.FieldViolation.Builder, com.google.rpc.BadRequest.FieldViolationOrBuilder>(
                 fieldViolations_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -1766,9 +1648,9 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       }
       return fieldViolationsBuilder_;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1778,12 +1660,12 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.rpc.BadRequest)
   }
 
   // @@protoc_insertion_point(class_scope:google.rpc.BadRequest)
   private static final com.google.rpc.BadRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.rpc.BadRequest();
   }
@@ -1792,16 +1674,16 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<BadRequest> PARSER =
-      new com.google.protobuf.AbstractParser<BadRequest>() {
-        @java.lang.Override
-        public BadRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new BadRequest(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<BadRequest>
+      PARSER = new com.google.protobuf.AbstractParser<BadRequest>() {
+    @java.lang.Override
+    public BadRequest parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new BadRequest(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<BadRequest> parser() {
     return PARSER;
@@ -1816,4 +1698,6 @@ public final class BadRequest extends com.google.protobuf.GeneratedMessageV3
   public com.google.rpc.BadRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

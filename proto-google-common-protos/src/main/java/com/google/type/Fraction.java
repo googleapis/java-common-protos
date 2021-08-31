@@ -19,37 +19,36 @@
 package com.google.type;
 
 /**
- *
- *
  * <pre>
  * Represents a fraction in terms of a numerator divided by a denominator.
  * </pre>
  *
  * Protobuf type {@code google.type.Fraction}
  */
-public final class Fraction extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class Fraction extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.type.Fraction)
     FractionOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use Fraction.newBuilder() to construct.
   private Fraction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
-  private Fraction() {}
+  private Fraction() {
+  }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new Fraction();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private Fraction(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -68,36 +67,37 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 8:
-            {
-              numerator_ = input.readInt64();
-              break;
+          case 8: {
+
+            numerator_ = input.readInt64();
+            break;
+          }
+          case 16: {
+
+            denominator_ = input.readInt64();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          case 16:
-            {
-              denominator_ = input.readInt64();
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.type.FractionProto.internal_static_google_type_Fraction_descriptor;
   }
 
@@ -112,14 +112,11 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
   public static final int NUMERATOR_FIELD_NUMBER = 1;
   private long numerator_;
   /**
-   *
-   *
    * <pre>
    * The numerator in the fraction, e.g. 2 in 2/3.
    * </pre>
    *
    * <code>int64 numerator = 1;</code>
-   *
    * @return The numerator.
    */
   @java.lang.Override
@@ -130,15 +127,12 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
   public static final int DENOMINATOR_FIELD_NUMBER = 2;
   private long denominator_;
   /**
-   *
-   *
    * <pre>
    * The value by which the numerator is divided, e.g. 3 in 2/3. Must be
    * positive.
    * </pre>
    *
    * <code>int64 denominator = 2;</code>
-   *
    * @return The denominator.
    */
   @java.lang.Override
@@ -147,7 +141,6 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -159,7 +152,8 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (numerator_ != 0L) {
       output.writeInt64(1, numerator_);
     }
@@ -176,10 +170,12 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
 
     size = 0;
     if (numerator_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, numerator_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, numerator_);
     }
     if (denominator_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, denominator_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, denominator_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -189,15 +185,17 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.type.Fraction)) {
       return super.equals(obj);
     }
     com.google.type.Fraction other = (com.google.type.Fraction) obj;
 
-    if (getNumerator() != other.getNumerator()) return false;
-    if (getDenominator() != other.getDenominator()) return false;
+    if (getNumerator()
+        != other.getNumerator()) return false;
+    if (getDenominator()
+        != other.getDenominator()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -210,122 +208,119 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + NUMERATOR_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getNumerator());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getNumerator());
     hash = (37 * hash) + DENOMINATOR_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getDenominator());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getDenominator());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.google.type.Fraction parseFrom(java.nio.ByteBuffer data)
+  public static com.google.type.Fraction parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.Fraction parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.type.Fraction parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.type.Fraction parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.Fraction parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.type.Fraction parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.Fraction parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.type.Fraction parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.type.Fraction parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.type.Fraction parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.type.Fraction parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.type.Fraction parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.type.Fraction parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.type.Fraction parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.type.Fraction prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * Represents a fraction in terms of a numerator divided by a denominator.
    * </pre>
    *
    * Protobuf type {@code google.type.Fraction}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.type.Fraction)
       com.google.type.FractionOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.type.FractionProto.internal_static_google_type_Fraction_descriptor;
     }
 
@@ -342,15 +337,16 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -362,7 +358,8 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.type.FractionProto.internal_static_google_type_Fraction_descriptor;
     }
 
@@ -393,39 +390,38 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.type.Fraction) {
-        return mergeFrom((com.google.type.Fraction) other);
+        return mergeFrom((com.google.type.Fraction)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -469,16 +465,13 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private long numerator_;
+    private long numerator_ ;
     /**
-     *
-     *
      * <pre>
      * The numerator in the fraction, e.g. 2 in 2/3.
      * </pre>
      *
      * <code>int64 numerator = 1;</code>
-     *
      * @return The numerator.
      */
     @java.lang.Override
@@ -486,52 +479,43 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
       return numerator_;
     }
     /**
-     *
-     *
      * <pre>
      * The numerator in the fraction, e.g. 2 in 2/3.
      * </pre>
      *
      * <code>int64 numerator = 1;</code>
-     *
      * @param value The numerator to set.
      * @return This builder for chaining.
      */
     public Builder setNumerator(long value) {
-
+      
       numerator_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The numerator in the fraction, e.g. 2 in 2/3.
      * </pre>
      *
      * <code>int64 numerator = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearNumerator() {
-
+      
       numerator_ = 0L;
       onChanged();
       return this;
     }
 
-    private long denominator_;
+    private long denominator_ ;
     /**
-     *
-     *
      * <pre>
      * The value by which the numerator is divided, e.g. 3 in 2/3. Must be
      * positive.
      * </pre>
      *
      * <code>int64 denominator = 2;</code>
-     *
      * @return The denominator.
      */
     @java.lang.Override
@@ -539,45 +523,39 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
       return denominator_;
     }
     /**
-     *
-     *
      * <pre>
      * The value by which the numerator is divided, e.g. 3 in 2/3. Must be
      * positive.
      * </pre>
      *
      * <code>int64 denominator = 2;</code>
-     *
      * @param value The denominator to set.
      * @return This builder for chaining.
      */
     public Builder setDenominator(long value) {
-
+      
       denominator_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The value by which the numerator is divided, e.g. 3 in 2/3. Must be
      * positive.
      * </pre>
      *
      * <code>int64 denominator = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearDenominator() {
-
+      
       denominator_ = 0L;
       onChanged();
       return this;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -587,12 +565,12 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.type.Fraction)
   }
 
   // @@protoc_insertion_point(class_scope:google.type.Fraction)
   private static final com.google.type.Fraction DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.type.Fraction();
   }
@@ -601,16 +579,16 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Fraction> PARSER =
-      new com.google.protobuf.AbstractParser<Fraction>() {
-        @java.lang.Override
-        public Fraction parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Fraction(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<Fraction>
+      PARSER = new com.google.protobuf.AbstractParser<Fraction>() {
+    @java.lang.Override
+    public Fraction parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new Fraction(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<Fraction> parser() {
     return PARSER;
@@ -625,4 +603,6 @@ public final class Fraction extends com.google.protobuf.GeneratedMessageV3
   public com.google.type.Fraction getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

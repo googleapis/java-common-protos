@@ -19,8 +19,6 @@
 package com.google.api;
 
 /**
- *
- *
  * <pre>
  * `Authentication` defines the authentication configuration for API methods
  * provided by an API service.
@@ -42,16 +40,15 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Authentication}
  */
-public final class Authentication extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class Authentication extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.api.Authentication)
     AuthenticationOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use Authentication.newBuilder() to construct.
   private Authentication(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private Authentication() {
     rules_ = java.util.Collections.emptyList();
     providers_ = java.util.Collections.emptyList();
@@ -59,15 +56,16 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new Authentication();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private Authentication(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -87,39 +85,38 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 26:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                rules_ = new java.util.ArrayList<com.google.api.AuthenticationRule>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              rules_.add(
-                  input.readMessage(com.google.api.AuthenticationRule.parser(), extensionRegistry));
-              break;
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              rules_ = new java.util.ArrayList<com.google.api.AuthenticationRule>();
+              mutable_bitField0_ |= 0x00000001;
             }
-          case 34:
-            {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                providers_ = new java.util.ArrayList<com.google.api.AuthProvider>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              providers_.add(
-                  input.readMessage(com.google.api.AuthProvider.parser(), extensionRegistry));
-              break;
+            rules_.add(
+                input.readMessage(com.google.api.AuthenticationRule.parser(), extensionRegistry));
+            break;
+          }
+          case 34: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              providers_ = new java.util.ArrayList<com.google.api.AuthProvider>();
+              mutable_bitField0_ |= 0x00000002;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            providers_.add(
+                input.readMessage(com.google.api.AuthProvider.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         rules_ = java.util.Collections.unmodifiableList(rules_);
@@ -131,8 +128,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.api.AuthProto.internal_static_google_api_Authentication_descriptor;
   }
 
@@ -147,8 +144,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
   public static final int RULES_FIELD_NUMBER = 3;
   private java.util.List<com.google.api.AuthenticationRule> rules_;
   /**
-   *
-   *
    * <pre>
    * A list of authentication rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -161,8 +156,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     return rules_;
   }
   /**
-   *
-   *
    * <pre>
    * A list of authentication rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -171,13 +164,11 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.AuthenticationRuleOrBuilder>
+  public java.util.List<? extends com.google.api.AuthenticationRuleOrBuilder> 
       getRulesOrBuilderList() {
     return rules_;
   }
   /**
-   *
-   *
    * <pre>
    * A list of authentication rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -190,8 +181,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     return rules_.size();
   }
   /**
-   *
-   *
    * <pre>
    * A list of authentication rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -204,8 +193,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     return rules_.get(index);
   }
   /**
-   *
-   *
    * <pre>
    * A list of authentication rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -214,15 +201,14 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
    */
   @java.lang.Override
-  public com.google.api.AuthenticationRuleOrBuilder getRulesOrBuilder(int index) {
+  public com.google.api.AuthenticationRuleOrBuilder getRulesOrBuilder(
+      int index) {
     return rules_.get(index);
   }
 
   public static final int PROVIDERS_FIELD_NUMBER = 4;
   private java.util.List<com.google.api.AuthProvider> providers_;
   /**
-   *
-   *
    * <pre>
    * Defines a set of authentication providers that a service supports.
    * </pre>
@@ -234,8 +220,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     return providers_;
   }
   /**
-   *
-   *
    * <pre>
    * Defines a set of authentication providers that a service supports.
    * </pre>
@@ -243,13 +227,11 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.AuthProvider providers = 4;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.AuthProviderOrBuilder>
+  public java.util.List<? extends com.google.api.AuthProviderOrBuilder> 
       getProvidersOrBuilderList() {
     return providers_;
   }
   /**
-   *
-   *
    * <pre>
    * Defines a set of authentication providers that a service supports.
    * </pre>
@@ -261,8 +243,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     return providers_.size();
   }
   /**
-   *
-   *
    * <pre>
    * Defines a set of authentication providers that a service supports.
    * </pre>
@@ -274,8 +254,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     return providers_.get(index);
   }
   /**
-   *
-   *
    * <pre>
    * Defines a set of authentication providers that a service supports.
    * </pre>
@@ -283,12 +261,12 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.AuthProvider providers = 4;</code>
    */
   @java.lang.Override
-  public com.google.api.AuthProviderOrBuilder getProvidersOrBuilder(int index) {
+  public com.google.api.AuthProviderOrBuilder getProvidersOrBuilder(
+      int index) {
     return providers_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -300,7 +278,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < rules_.size(); i++) {
       output.writeMessage(3, rules_.get(i));
     }
@@ -317,10 +296,12 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
 
     size = 0;
     for (int i = 0; i < rules_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, rules_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, rules_.get(i));
     }
     for (int i = 0; i < providers_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, providers_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, providers_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -330,15 +311,17 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.api.Authentication)) {
       return super.equals(obj);
     }
     com.google.api.Authentication other = (com.google.api.Authentication) obj;
 
-    if (!getRulesList().equals(other.getRulesList())) return false;
-    if (!getProvidersList().equals(other.getProvidersList())) return false;
+    if (!getRulesList()
+        .equals(other.getRulesList())) return false;
+    if (!getProvidersList()
+        .equals(other.getProvidersList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -363,103 +346,97 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.api.Authentication parseFrom(java.nio.ByteBuffer data)
+  public static com.google.api.Authentication parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Authentication parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.api.Authentication parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.api.Authentication parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Authentication parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.Authentication parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Authentication parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.Authentication parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.Authentication parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.api.Authentication parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.api.Authentication parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.api.Authentication parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.api.Authentication parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.Authentication parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.api.Authentication prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * `Authentication` defines the authentication configuration for API methods
    * provided by an API service.
@@ -481,11 +458,12 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.api.Authentication}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.api.Authentication)
       com.google.api.AuthenticationOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.api.AuthProto.internal_static_google_api_Authentication_descriptor;
     }
 
@@ -502,18 +480,18 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
         getRulesFieldBuilder();
         getProvidersFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -533,7 +511,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.api.AuthProto.internal_static_google_api_Authentication_descriptor;
     }
 
@@ -581,39 +560,38 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Authentication) {
-        return mergeFrom((com.google.api.Authentication) other);
+        return mergeFrom((com.google.api.Authentication)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -640,10 +618,9 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
             rulesBuilder_ = null;
             rules_ = other.rules_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            rulesBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getRulesFieldBuilder()
-                    : null;
+            rulesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getRulesFieldBuilder() : null;
           } else {
             rulesBuilder_.addAllMessages(other.rules_);
           }
@@ -667,10 +644,9 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
             providersBuilder_ = null;
             providers_ = other.providers_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            providersBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getProvidersFieldBuilder()
-                    : null;
+            providersBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getProvidersFieldBuilder() : null;
           } else {
             providersBuilder_.addAllMessages(other.providers_);
           }
@@ -704,28 +680,21 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
-
     private int bitField0_;
 
     private java.util.List<com.google.api.AuthenticationRule> rules_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureRulesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         rules_ = new java.util.ArrayList<com.google.api.AuthenticationRule>(rules_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.AuthenticationRule,
-            com.google.api.AuthenticationRule.Builder,
-            com.google.api.AuthenticationRuleOrBuilder>
-        rulesBuilder_;
+        com.google.api.AuthenticationRule, com.google.api.AuthenticationRule.Builder, com.google.api.AuthenticationRuleOrBuilder> rulesBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -741,8 +710,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -758,8 +725,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -775,8 +740,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -784,7 +747,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public Builder setRules(int index, com.google.api.AuthenticationRule value) {
+    public Builder setRules(
+        int index, com.google.api.AuthenticationRule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -798,8 +762,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -807,7 +769,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public Builder setRules(int index, com.google.api.AuthenticationRule.Builder builderForValue) {
+    public Builder setRules(
+        int index, com.google.api.AuthenticationRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.set(index, builderForValue.build());
@@ -818,8 +781,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -841,8 +802,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -850,7 +809,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public Builder addRules(int index, com.google.api.AuthenticationRule value) {
+    public Builder addRules(
+        int index, com.google.api.AuthenticationRule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -864,8 +824,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -873,7 +831,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public Builder addRules(com.google.api.AuthenticationRule.Builder builderForValue) {
+    public Builder addRules(
+        com.google.api.AuthenticationRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(builderForValue.build());
@@ -884,8 +843,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -893,7 +850,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public Builder addRules(int index, com.google.api.AuthenticationRule.Builder builderForValue) {
+    public Builder addRules(
+        int index, com.google.api.AuthenticationRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(index, builderForValue.build());
@@ -904,8 +862,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -917,7 +873,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
         java.lang.Iterable<? extends com.google.api.AuthenticationRule> values) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, rules_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, rules_);
         onChanged();
       } else {
         rulesBuilder_.addAllMessages(values);
@@ -925,8 +882,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -945,8 +900,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -965,8 +918,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -974,12 +925,11 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public com.google.api.AuthenticationRule.Builder getRulesBuilder(int index) {
+    public com.google.api.AuthenticationRule.Builder getRulesBuilder(
+        int index) {
       return getRulesFieldBuilder().getBuilder(index);
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -987,16 +937,14 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public com.google.api.AuthenticationRuleOrBuilder getRulesOrBuilder(int index) {
+    public com.google.api.AuthenticationRuleOrBuilder getRulesOrBuilder(
+        int index) {
       if (rulesBuilder_ == null) {
-        return rules_.get(index);
-      } else {
+        return rules_.get(index);  } else {
         return rulesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1004,8 +952,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public java.util.List<? extends com.google.api.AuthenticationRuleOrBuilder>
-        getRulesOrBuilderList() {
+    public java.util.List<? extends com.google.api.AuthenticationRuleOrBuilder> 
+         getRulesOrBuilderList() {
       if (rulesBuilder_ != null) {
         return rulesBuilder_.getMessageOrBuilderList();
       } else {
@@ -1013,8 +961,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1023,12 +969,10 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
     public com.google.api.AuthenticationRule.Builder addRulesBuilder() {
-      return getRulesFieldBuilder()
-          .addBuilder(com.google.api.AuthenticationRule.getDefaultInstance());
+      return getRulesFieldBuilder().addBuilder(
+          com.google.api.AuthenticationRule.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1036,13 +980,12 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public com.google.api.AuthenticationRule.Builder addRulesBuilder(int index) {
-      return getRulesFieldBuilder()
-          .addBuilder(index, com.google.api.AuthenticationRule.getDefaultInstance());
+    public com.google.api.AuthenticationRule.Builder addRulesBuilder(
+        int index) {
+      return getRulesFieldBuilder().addBuilder(
+          index, com.google.api.AuthenticationRule.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * A list of authentication rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1050,46 +993,38 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.AuthenticationRule rules = 3;</code>
      */
-    public java.util.List<com.google.api.AuthenticationRule.Builder> getRulesBuilderList() {
+    public java.util.List<com.google.api.AuthenticationRule.Builder> 
+         getRulesBuilderList() {
       return getRulesFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.AuthenticationRule,
-            com.google.api.AuthenticationRule.Builder,
-            com.google.api.AuthenticationRuleOrBuilder>
+        com.google.api.AuthenticationRule, com.google.api.AuthenticationRule.Builder, com.google.api.AuthenticationRuleOrBuilder> 
         getRulesFieldBuilder() {
       if (rulesBuilder_ == null) {
-        rulesBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.api.AuthenticationRule,
-                com.google.api.AuthenticationRule.Builder,
-                com.google.api.AuthenticationRuleOrBuilder>(
-                rules_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.api.AuthenticationRule, com.google.api.AuthenticationRule.Builder, com.google.api.AuthenticationRuleOrBuilder>(
+                rules_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         rules_ = null;
       }
       return rulesBuilder_;
     }
 
     private java.util.List<com.google.api.AuthProvider> providers_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureProvidersIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
         providers_ = new java.util.ArrayList<com.google.api.AuthProvider>(providers_);
         bitField0_ |= 0x00000002;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.AuthProvider,
-            com.google.api.AuthProvider.Builder,
-            com.google.api.AuthProviderOrBuilder>
-        providersBuilder_;
+        com.google.api.AuthProvider, com.google.api.AuthProvider.Builder, com.google.api.AuthProviderOrBuilder> providersBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
@@ -1104,8 +1039,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
@@ -1120,8 +1053,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
@@ -1136,15 +1067,14 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public Builder setProviders(int index, com.google.api.AuthProvider value) {
+    public Builder setProviders(
+        int index, com.google.api.AuthProvider value) {
       if (providersBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1158,15 +1088,14 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public Builder setProviders(int index, com.google.api.AuthProvider.Builder builderForValue) {
+    public Builder setProviders(
+        int index, com.google.api.AuthProvider.Builder builderForValue) {
       if (providersBuilder_ == null) {
         ensureProvidersIsMutable();
         providers_.set(index, builderForValue.build());
@@ -1177,8 +1106,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
@@ -1199,15 +1126,14 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public Builder addProviders(int index, com.google.api.AuthProvider value) {
+    public Builder addProviders(
+        int index, com.google.api.AuthProvider value) {
       if (providersBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1221,15 +1147,14 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public Builder addProviders(com.google.api.AuthProvider.Builder builderForValue) {
+    public Builder addProviders(
+        com.google.api.AuthProvider.Builder builderForValue) {
       if (providersBuilder_ == null) {
         ensureProvidersIsMutable();
         providers_.add(builderForValue.build());
@@ -1240,15 +1165,14 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public Builder addProviders(int index, com.google.api.AuthProvider.Builder builderForValue) {
+    public Builder addProviders(
+        int index, com.google.api.AuthProvider.Builder builderForValue) {
       if (providersBuilder_ == null) {
         ensureProvidersIsMutable();
         providers_.add(index, builderForValue.build());
@@ -1259,8 +1183,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
@@ -1271,7 +1193,8 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
         java.lang.Iterable<? extends com.google.api.AuthProvider> values) {
       if (providersBuilder_ == null) {
         ensureProvidersIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, providers_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, providers_);
         onChanged();
       } else {
         providersBuilder_.addAllMessages(values);
@@ -1279,8 +1202,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
@@ -1298,8 +1219,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
@@ -1317,44 +1236,39 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public com.google.api.AuthProvider.Builder getProvidersBuilder(int index) {
+    public com.google.api.AuthProvider.Builder getProvidersBuilder(
+        int index) {
       return getProvidersFieldBuilder().getBuilder(index);
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public com.google.api.AuthProviderOrBuilder getProvidersOrBuilder(int index) {
+    public com.google.api.AuthProviderOrBuilder getProvidersOrBuilder(
+        int index) {
       if (providersBuilder_ == null) {
-        return providers_.get(index);
-      } else {
+        return providers_.get(index);  } else {
         return providersBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public java.util.List<? extends com.google.api.AuthProviderOrBuilder>
-        getProvidersOrBuilderList() {
+    public java.util.List<? extends com.google.api.AuthProviderOrBuilder> 
+         getProvidersOrBuilderList() {
       if (providersBuilder_ != null) {
         return providersBuilder_.getMessageOrBuilderList();
       } else {
@@ -1362,8 +1276,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
@@ -1371,54 +1283,49 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
     public com.google.api.AuthProvider.Builder addProvidersBuilder() {
-      return getProvidersFieldBuilder()
-          .addBuilder(com.google.api.AuthProvider.getDefaultInstance());
+      return getProvidersFieldBuilder().addBuilder(
+          com.google.api.AuthProvider.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public com.google.api.AuthProvider.Builder addProvidersBuilder(int index) {
-      return getProvidersFieldBuilder()
-          .addBuilder(index, com.google.api.AuthProvider.getDefaultInstance());
+    public com.google.api.AuthProvider.Builder addProvidersBuilder(
+        int index) {
+      return getProvidersFieldBuilder().addBuilder(
+          index, com.google.api.AuthProvider.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Defines a set of authentication providers that a service supports.
      * </pre>
      *
      * <code>repeated .google.api.AuthProvider providers = 4;</code>
      */
-    public java.util.List<com.google.api.AuthProvider.Builder> getProvidersBuilderList() {
+    public java.util.List<com.google.api.AuthProvider.Builder> 
+         getProvidersBuilderList() {
       return getProvidersFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.AuthProvider,
-            com.google.api.AuthProvider.Builder,
-            com.google.api.AuthProviderOrBuilder>
+        com.google.api.AuthProvider, com.google.api.AuthProvider.Builder, com.google.api.AuthProviderOrBuilder> 
         getProvidersFieldBuilder() {
       if (providersBuilder_ == null) {
-        providersBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.api.AuthProvider,
-                com.google.api.AuthProvider.Builder,
-                com.google.api.AuthProviderOrBuilder>(
-                providers_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
+        providersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.api.AuthProvider, com.google.api.AuthProvider.Builder, com.google.api.AuthProviderOrBuilder>(
+                providers_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
         providers_ = null;
       }
       return providersBuilder_;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1428,12 +1335,12 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.api.Authentication)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Authentication)
   private static final com.google.api.Authentication DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.api.Authentication();
   }
@@ -1442,16 +1349,16 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Authentication> PARSER =
-      new com.google.protobuf.AbstractParser<Authentication>() {
-        @java.lang.Override
-        public Authentication parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Authentication(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<Authentication>
+      PARSER = new com.google.protobuf.AbstractParser<Authentication>() {
+    @java.lang.Override
+    public Authentication parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new Authentication(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<Authentication> parser() {
     return PARSER;
@@ -1466,4 +1373,6 @@ public final class Authentication extends com.google.protobuf.GeneratedMessageV3
   public com.google.api.Authentication getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

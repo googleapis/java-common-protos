@@ -19,8 +19,6 @@
 package com.google.api;
 
 /**
- *
- *
  * <pre>
  * `Visibility` defines restrictions for the visibility of service
  * elements.  Restrictions are specified using visibility labels
@@ -43,31 +41,31 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Visibility}
  */
-public final class Visibility extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class Visibility extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.api.Visibility)
     VisibilityOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use Visibility.newBuilder() to construct.
   private Visibility(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private Visibility() {
     rules_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new Visibility();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private Visibility(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -87,29 +85,29 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                rules_ = new java.util.ArrayList<com.google.api.VisibilityRule>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              rules_.add(
-                  input.readMessage(com.google.api.VisibilityRule.parser(), extensionRegistry));
-              break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              rules_ = new java.util.ArrayList<com.google.api.VisibilityRule>();
+              mutable_bitField0_ |= 0x00000001;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            rules_.add(
+                input.readMessage(com.google.api.VisibilityRule.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         rules_ = java.util.Collections.unmodifiableList(rules_);
@@ -118,8 +116,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.api.VisibilityProto.internal_static_google_api_Visibility_descriptor;
   }
 
@@ -134,8 +132,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
   public static final int RULES_FIELD_NUMBER = 1;
   private java.util.List<com.google.api.VisibilityRule> rules_;
   /**
-   *
-   *
    * <pre>
    * A list of visibility rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -148,8 +144,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
     return rules_;
   }
   /**
-   *
-   *
    * <pre>
    * A list of visibility rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -158,12 +152,11 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.VisibilityRule rules = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.VisibilityRuleOrBuilder> getRulesOrBuilderList() {
+  public java.util.List<? extends com.google.api.VisibilityRuleOrBuilder> 
+      getRulesOrBuilderList() {
     return rules_;
   }
   /**
-   *
-   *
    * <pre>
    * A list of visibility rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -176,8 +169,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
     return rules_.size();
   }
   /**
-   *
-   *
    * <pre>
    * A list of visibility rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -190,8 +181,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
     return rules_.get(index);
   }
   /**
-   *
-   *
    * <pre>
    * A list of visibility rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -200,12 +189,12 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.VisibilityRule rules = 1;</code>
    */
   @java.lang.Override
-  public com.google.api.VisibilityRuleOrBuilder getRulesOrBuilder(int index) {
+  public com.google.api.VisibilityRuleOrBuilder getRulesOrBuilder(
+      int index) {
     return rules_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -217,7 +206,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     for (int i = 0; i < rules_.size(); i++) {
       output.writeMessage(1, rules_.get(i));
     }
@@ -231,7 +221,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
 
     size = 0;
     for (int i = 0; i < rules_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, rules_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, rules_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -241,14 +232,15 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.api.Visibility)) {
       return super.equals(obj);
     }
     com.google.api.Visibility other = (com.google.api.Visibility) obj;
 
-    if (!getRulesList().equals(other.getRulesList())) return false;
+    if (!getRulesList()
+        .equals(other.getRulesList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -269,103 +261,97 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.api.Visibility parseFrom(java.nio.ByteBuffer data)
+  public static com.google.api.Visibility parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Visibility parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.api.Visibility parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.api.Visibility parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Visibility parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.Visibility parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Visibility parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.Visibility parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.Visibility parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.api.Visibility parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.api.Visibility parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.api.Visibility parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.api.Visibility parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.Visibility parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.api.Visibility prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * `Visibility` defines restrictions for the visibility of service
    * elements.  Restrictions are specified using visibility labels
@@ -388,11 +374,12 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.api.Visibility}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.api.Visibility)
       com.google.api.VisibilityOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.api.VisibilityProto.internal_static_google_api_Visibility_descriptor;
     }
 
@@ -409,17 +396,17 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
         getRulesFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -433,7 +420,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.api.VisibilityProto.internal_static_google_api_Visibility_descriptor;
     }
 
@@ -472,39 +460,38 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Visibility) {
-        return mergeFrom((com.google.api.Visibility) other);
+        return mergeFrom((com.google.api.Visibility)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -531,10 +518,9 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
             rulesBuilder_ = null;
             rules_ = other.rules_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            rulesBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getRulesFieldBuilder()
-                    : null;
+            rulesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getRulesFieldBuilder() : null;
           } else {
             rulesBuilder_.addAllMessages(other.rules_);
           }
@@ -568,28 +554,21 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
-
     private int bitField0_;
 
     private java.util.List<com.google.api.VisibilityRule> rules_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureRulesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         rules_ = new java.util.ArrayList<com.google.api.VisibilityRule>(rules_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.VisibilityRule,
-            com.google.api.VisibilityRule.Builder,
-            com.google.api.VisibilityRuleOrBuilder>
-        rulesBuilder_;
+        com.google.api.VisibilityRule, com.google.api.VisibilityRule.Builder, com.google.api.VisibilityRuleOrBuilder> rulesBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -605,8 +584,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -622,8 +599,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -639,8 +614,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -648,7 +621,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public Builder setRules(int index, com.google.api.VisibilityRule value) {
+    public Builder setRules(
+        int index, com.google.api.VisibilityRule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -662,8 +636,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -671,7 +643,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public Builder setRules(int index, com.google.api.VisibilityRule.Builder builderForValue) {
+    public Builder setRules(
+        int index, com.google.api.VisibilityRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.set(index, builderForValue.build());
@@ -682,8 +655,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -705,8 +676,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -714,7 +683,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public Builder addRules(int index, com.google.api.VisibilityRule value) {
+    public Builder addRules(
+        int index, com.google.api.VisibilityRule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -728,8 +698,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -737,7 +705,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public Builder addRules(com.google.api.VisibilityRule.Builder builderForValue) {
+    public Builder addRules(
+        com.google.api.VisibilityRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(builderForValue.build());
@@ -748,8 +717,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -757,7 +724,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public Builder addRules(int index, com.google.api.VisibilityRule.Builder builderForValue) {
+    public Builder addRules(
+        int index, com.google.api.VisibilityRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(index, builderForValue.build());
@@ -768,8 +736,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -777,10 +743,12 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public Builder addAllRules(java.lang.Iterable<? extends com.google.api.VisibilityRule> values) {
+    public Builder addAllRules(
+        java.lang.Iterable<? extends com.google.api.VisibilityRule> values) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, rules_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, rules_);
         onChanged();
       } else {
         rulesBuilder_.addAllMessages(values);
@@ -788,8 +756,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -808,8 +774,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -828,8 +792,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -837,12 +799,11 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public com.google.api.VisibilityRule.Builder getRulesBuilder(int index) {
+    public com.google.api.VisibilityRule.Builder getRulesBuilder(
+        int index) {
       return getRulesFieldBuilder().getBuilder(index);
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -850,16 +811,14 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public com.google.api.VisibilityRuleOrBuilder getRulesOrBuilder(int index) {
+    public com.google.api.VisibilityRuleOrBuilder getRulesOrBuilder(
+        int index) {
       if (rulesBuilder_ == null) {
-        return rules_.get(index);
-      } else {
+        return rules_.get(index);  } else {
         return rulesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -867,8 +826,8 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public java.util.List<? extends com.google.api.VisibilityRuleOrBuilder>
-        getRulesOrBuilderList() {
+    public java.util.List<? extends com.google.api.VisibilityRuleOrBuilder> 
+         getRulesOrBuilderList() {
       if (rulesBuilder_ != null) {
         return rulesBuilder_.getMessageOrBuilderList();
       } else {
@@ -876,8 +835,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -886,11 +843,10 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
     public com.google.api.VisibilityRule.Builder addRulesBuilder() {
-      return getRulesFieldBuilder().addBuilder(com.google.api.VisibilityRule.getDefaultInstance());
+      return getRulesFieldBuilder().addBuilder(
+          com.google.api.VisibilityRule.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -898,13 +854,12 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public com.google.api.VisibilityRule.Builder addRulesBuilder(int index) {
-      return getRulesFieldBuilder()
-          .addBuilder(index, com.google.api.VisibilityRule.getDefaultInstance());
+    public com.google.api.VisibilityRule.Builder addRulesBuilder(
+        int index) {
+      return getRulesFieldBuilder().addBuilder(
+          index, com.google.api.VisibilityRule.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * A list of visibility rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -912,29 +867,27 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.api.VisibilityRule rules = 1;</code>
      */
-    public java.util.List<com.google.api.VisibilityRule.Builder> getRulesBuilderList() {
+    public java.util.List<com.google.api.VisibilityRule.Builder> 
+         getRulesBuilderList() {
       return getRulesFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.VisibilityRule,
-            com.google.api.VisibilityRule.Builder,
-            com.google.api.VisibilityRuleOrBuilder>
+        com.google.api.VisibilityRule, com.google.api.VisibilityRule.Builder, com.google.api.VisibilityRuleOrBuilder> 
         getRulesFieldBuilder() {
       if (rulesBuilder_ == null) {
-        rulesBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.api.VisibilityRule,
-                com.google.api.VisibilityRule.Builder,
-                com.google.api.VisibilityRuleOrBuilder>(
-                rules_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+        rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.api.VisibilityRule, com.google.api.VisibilityRule.Builder, com.google.api.VisibilityRuleOrBuilder>(
+                rules_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
         rules_ = null;
       }
       return rulesBuilder_;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -944,12 +897,12 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.api.Visibility)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Visibility)
   private static final com.google.api.Visibility DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.api.Visibility();
   }
@@ -958,16 +911,16 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Visibility> PARSER =
-      new com.google.protobuf.AbstractParser<Visibility>() {
-        @java.lang.Override
-        public Visibility parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Visibility(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<Visibility>
+      PARSER = new com.google.protobuf.AbstractParser<Visibility>() {
+    @java.lang.Override
+    public Visibility parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new Visibility(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<Visibility> parser() {
     return PARSER;
@@ -982,4 +935,6 @@ public final class Visibility extends com.google.protobuf.GeneratedMessageV3
   public com.google.api.Visibility getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

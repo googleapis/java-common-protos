@@ -19,8 +19,6 @@
 package com.google.rpc;
 
 /**
- *
- *
  * <pre>
  * Contains metadata about the request that clients can attach when filing a bug
  * or providing other forms of feedback.
@@ -28,16 +26,15 @@ package com.google.rpc;
  *
  * Protobuf type {@code google.rpc.RequestInfo}
  */
-public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class RequestInfo extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.rpc.RequestInfo)
     RequestInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use RequestInfo.newBuilder() to construct.
   private RequestInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private RequestInfo() {
     requestId_ = "";
     servingData_ = "";
@@ -45,15 +42,16 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new RequestInfo();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private RequestInfo(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -72,48 +70,46 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              requestId_ = s;
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+            requestId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              servingData_ = s;
-              break;
+            servingData_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_RequestInfo_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.rpc.ErrorDetailsProto
-        .internal_static_google_rpc_RequestInfo_fieldAccessorTable
+    return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_RequestInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.rpc.RequestInfo.class, com.google.rpc.RequestInfo.Builder.class);
   }
@@ -121,15 +117,12 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
   public static final int REQUEST_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object requestId_;
   /**
-   *
-   *
    * <pre>
    * An opaque string that should only be interpreted by the service generating
    * it. For example, it can be used to identify requests in the service's logs.
    * </pre>
    *
    * <code>string request_id = 1;</code>
-   *
    * @return The requestId.
    */
   @java.lang.Override
@@ -138,30 +131,30 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       requestId_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * An opaque string that should only be interpreted by the service generating
    * it. For example, it can be used to identify requests in the service's logs.
    * </pre>
    *
    * <code>string request_id = 1;</code>
-   *
    * @return The bytes for requestId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getRequestIdBytes() {
+  public com.google.protobuf.ByteString
+      getRequestIdBytes() {
     java.lang.Object ref = requestId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       requestId_ = b;
       return b;
     } else {
@@ -172,15 +165,12 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
   public static final int SERVING_DATA_FIELD_NUMBER = 2;
   private volatile java.lang.Object servingData_;
   /**
-   *
-   *
    * <pre>
    * Any data that was used to serve this request. For example, an encrypted
    * stack trace that can be sent back to the service provider for debugging.
    * </pre>
    *
    * <code>string serving_data = 2;</code>
-   *
    * @return The servingData.
    */
   @java.lang.Override
@@ -189,30 +179,30 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       servingData_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * Any data that was used to serve this request. For example, an encrypted
    * stack trace that can be sent back to the service provider for debugging.
    * </pre>
    *
    * <code>string serving_data = 2;</code>
-   *
    * @return The bytes for servingData.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getServingDataBytes() {
+  public com.google.protobuf.ByteString
+      getServingDataBytes() {
     java.lang.Object ref = servingData_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       servingData_ = b;
       return b;
     } else {
@@ -221,7 +211,6 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -233,7 +222,8 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!getRequestIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
     }
@@ -263,15 +253,17 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.rpc.RequestInfo)) {
       return super.equals(obj);
     }
     com.google.rpc.RequestInfo other = (com.google.rpc.RequestInfo) obj;
 
-    if (!getRequestId().equals(other.getRequestId())) return false;
-    if (!getServingData().equals(other.getServingData())) return false;
+    if (!getRequestId()
+        .equals(other.getRequestId())) return false;
+    if (!getServingData()
+        .equals(other.getServingData())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -292,103 +284,97 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.rpc.RequestInfo parseFrom(java.nio.ByteBuffer data)
+  public static com.google.rpc.RequestInfo parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.rpc.RequestInfo parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.rpc.RequestInfo parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.rpc.RequestInfo parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.rpc.RequestInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.rpc.RequestInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.rpc.RequestInfo parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.rpc.RequestInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.rpc.RequestInfo parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.rpc.RequestInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.rpc.RequestInfo parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.rpc.RequestInfo parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.rpc.RequestInfo parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.rpc.RequestInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.rpc.RequestInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * Contains metadata about the request that clients can attach when filing a bug
    * or providing other forms of feedback.
@@ -396,19 +382,19 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.rpc.RequestInfo}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.rpc.RequestInfo)
       com.google.rpc.RequestInfoOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_RequestInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.ErrorDetailsProto
-          .internal_static_google_rpc_RequestInfo_fieldAccessorTable
+      return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_RequestInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.rpc.RequestInfo.class, com.google.rpc.RequestInfo.Builder.class);
     }
@@ -418,15 +404,16 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -438,7 +425,8 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.rpc.ErrorDetailsProto.internal_static_google_rpc_RequestInfo_descriptor;
     }
 
@@ -469,39 +457,38 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.rpc.RequestInfo) {
-        return mergeFrom((com.google.rpc.RequestInfo) other);
+        return mergeFrom((com.google.rpc.RequestInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -549,21 +536,19 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object requestId_ = "";
     /**
-     *
-     *
      * <pre>
      * An opaque string that should only be interpreted by the service generating
      * it. For example, it can be used to identify requests in the service's logs.
      * </pre>
      *
      * <code>string request_id = 1;</code>
-     *
      * @return The requestId.
      */
     public java.lang.String getRequestId() {
       java.lang.Object ref = requestId_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         requestId_ = s;
         return s;
@@ -572,22 +557,21 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * An opaque string that should only be interpreted by the service generating
      * it. For example, it can be used to identify requests in the service's logs.
      * </pre>
      *
      * <code>string request_id = 1;</code>
-     *
      * @return The bytes for requestId.
      */
-    public com.google.protobuf.ByteString getRequestIdBytes() {
+    public com.google.protobuf.ByteString
+        getRequestIdBytes() {
       java.lang.Object ref = requestId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         requestId_ = b;
         return b;
       } else {
@@ -595,64 +579,57 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * An opaque string that should only be interpreted by the service generating
      * it. For example, it can be used to identify requests in the service's logs.
      * </pre>
      *
      * <code>string request_id = 1;</code>
-     *
      * @param value The requestId to set.
      * @return This builder for chaining.
      */
-    public Builder setRequestId(java.lang.String value) {
+    public Builder setRequestId(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       requestId_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * An opaque string that should only be interpreted by the service generating
      * it. For example, it can be used to identify requests in the service's logs.
      * </pre>
      *
      * <code>string request_id = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearRequestId() {
-
+      
       requestId_ = getDefaultInstance().getRequestId();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * An opaque string that should only be interpreted by the service generating
      * it. For example, it can be used to identify requests in the service's logs.
      * </pre>
      *
      * <code>string request_id = 1;</code>
-     *
      * @param value The bytes for requestId to set.
      * @return This builder for chaining.
      */
-    public Builder setRequestIdBytes(com.google.protobuf.ByteString value) {
+    public Builder setRequestIdBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       requestId_ = value;
       onChanged();
       return this;
@@ -660,21 +637,19 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object servingData_ = "";
     /**
-     *
-     *
      * <pre>
      * Any data that was used to serve this request. For example, an encrypted
      * stack trace that can be sent back to the service provider for debugging.
      * </pre>
      *
      * <code>string serving_data = 2;</code>
-     *
      * @return The servingData.
      */
     public java.lang.String getServingData() {
       java.lang.Object ref = servingData_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         servingData_ = s;
         return s;
@@ -683,22 +658,21 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Any data that was used to serve this request. For example, an encrypted
      * stack trace that can be sent back to the service provider for debugging.
      * </pre>
      *
      * <code>string serving_data = 2;</code>
-     *
      * @return The bytes for servingData.
      */
-    public com.google.protobuf.ByteString getServingDataBytes() {
+    public com.google.protobuf.ByteString
+        getServingDataBytes() {
       java.lang.Object ref = servingData_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         servingData_ = b;
         return b;
       } else {
@@ -706,71 +680,64 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Any data that was used to serve this request. For example, an encrypted
      * stack trace that can be sent back to the service provider for debugging.
      * </pre>
      *
      * <code>string serving_data = 2;</code>
-     *
      * @param value The servingData to set.
      * @return This builder for chaining.
      */
-    public Builder setServingData(java.lang.String value) {
+    public Builder setServingData(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       servingData_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Any data that was used to serve this request. For example, an encrypted
      * stack trace that can be sent back to the service provider for debugging.
      * </pre>
      *
      * <code>string serving_data = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearServingData() {
-
+      
       servingData_ = getDefaultInstance().getServingData();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Any data that was used to serve this request. For example, an encrypted
      * stack trace that can be sent back to the service provider for debugging.
      * </pre>
      *
      * <code>string serving_data = 2;</code>
-     *
      * @param value The bytes for servingData to set.
      * @return This builder for chaining.
      */
-    public Builder setServingDataBytes(com.google.protobuf.ByteString value) {
+    public Builder setServingDataBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       servingData_ = value;
       onChanged();
       return this;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -780,12 +747,12 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.rpc.RequestInfo)
   }
 
   // @@protoc_insertion_point(class_scope:google.rpc.RequestInfo)
   private static final com.google.rpc.RequestInfo DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.rpc.RequestInfo();
   }
@@ -794,16 +761,16 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RequestInfo> PARSER =
-      new com.google.protobuf.AbstractParser<RequestInfo>() {
-        @java.lang.Override
-        public RequestInfo parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RequestInfo(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<RequestInfo>
+      PARSER = new com.google.protobuf.AbstractParser<RequestInfo>() {
+    @java.lang.Override
+    public RequestInfo parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new RequestInfo(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<RequestInfo> parser() {
     return PARSER;
@@ -818,4 +785,6 @@ public final class RequestInfo extends com.google.protobuf.GeneratedMessageV3
   public com.google.rpc.RequestInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

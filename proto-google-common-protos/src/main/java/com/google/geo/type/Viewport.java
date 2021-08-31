@@ -19,8 +19,6 @@
 package com.google.geo.type;
 
 /**
- *
- *
  * <pre>
  * A latitude-longitude viewport, represented as two diagonally opposite `low`
  * and `high` points. A viewport is considered a closed region, i.e. it includes
@@ -53,29 +51,30 @@ package com.google.geo.type;
  *
  * Protobuf type {@code google.geo.type.Viewport}
  */
-public final class Viewport extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class Viewport extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.geo.type.Viewport)
     ViewportOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use Viewport.newBuilder() to construct.
   private Viewport(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
-  private Viewport() {}
+  private Viewport() {
+  }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new Viewport();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private Viewport(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -94,62 +93,60 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              com.google.type.LatLng.Builder subBuilder = null;
-              if (low_ != null) {
-                subBuilder = low_.toBuilder();
-              }
-              low_ = input.readMessage(com.google.type.LatLng.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(low_);
-                low_ = subBuilder.buildPartial();
-              }
+          case 10: {
+            com.google.type.LatLng.Builder subBuilder = null;
+            if (low_ != null) {
+              subBuilder = low_.toBuilder();
+            }
+            low_ = input.readMessage(com.google.type.LatLng.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(low_);
+              low_ = subBuilder.buildPartial();
+            }
 
-              break;
+            break;
+          }
+          case 18: {
+            com.google.type.LatLng.Builder subBuilder = null;
+            if (high_ != null) {
+              subBuilder = high_.toBuilder();
             }
-          case 18:
-            {
-              com.google.type.LatLng.Builder subBuilder = null;
-              if (high_ != null) {
-                subBuilder = high_.toBuilder();
-              }
-              high_ = input.readMessage(com.google.type.LatLng.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(high_);
-                high_ = subBuilder.buildPartial();
-              }
+            high_ = input.readMessage(com.google.type.LatLng.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(high_);
+              high_ = subBuilder.buildPartial();
+            }
 
-              break;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.geo.type.ViewportProto.internal_static_google_geo_type_Viewport_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.geo.type.ViewportProto
-        .internal_static_google_geo_type_Viewport_fieldAccessorTable
+    return com.google.geo.type.ViewportProto.internal_static_google_geo_type_Viewport_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.geo.type.Viewport.class, com.google.geo.type.Viewport.Builder.class);
   }
@@ -157,14 +154,11 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
   public static final int LOW_FIELD_NUMBER = 1;
   private com.google.type.LatLng low_;
   /**
-   *
-   *
    * <pre>
    * Required. The low point of the viewport.
    * </pre>
    *
    * <code>.google.type.LatLng low = 1;</code>
-   *
    * @return Whether the low field is set.
    */
   @java.lang.Override
@@ -172,14 +166,11 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     return low_ != null;
   }
   /**
-   *
-   *
    * <pre>
    * Required. The low point of the viewport.
    * </pre>
    *
    * <code>.google.type.LatLng low = 1;</code>
-   *
    * @return The low.
    */
   @java.lang.Override
@@ -187,8 +178,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     return low_ == null ? com.google.type.LatLng.getDefaultInstance() : low_;
   }
   /**
-   *
-   *
    * <pre>
    * Required. The low point of the viewport.
    * </pre>
@@ -203,14 +192,11 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
   public static final int HIGH_FIELD_NUMBER = 2;
   private com.google.type.LatLng high_;
   /**
-   *
-   *
    * <pre>
    * Required. The high point of the viewport.
    * </pre>
    *
    * <code>.google.type.LatLng high = 2;</code>
-   *
    * @return Whether the high field is set.
    */
   @java.lang.Override
@@ -218,14 +204,11 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     return high_ != null;
   }
   /**
-   *
-   *
    * <pre>
    * Required. The high point of the viewport.
    * </pre>
    *
    * <code>.google.type.LatLng high = 2;</code>
-   *
    * @return The high.
    */
   @java.lang.Override
@@ -233,8 +216,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     return high_ == null ? com.google.type.LatLng.getDefaultInstance() : high_;
   }
   /**
-   *
-   *
    * <pre>
    * Required. The high point of the viewport.
    * </pre>
@@ -247,7 +228,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -259,7 +239,8 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (low_ != null) {
       output.writeMessage(1, getLow());
     }
@@ -276,10 +257,12 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
 
     size = 0;
     if (low_ != null) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getLow());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getLow());
     }
     if (high_ != null) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getHigh());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getHigh());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -289,7 +272,7 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.geo.type.Viewport)) {
       return super.equals(obj);
@@ -298,11 +281,13 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
 
     if (hasLow() != other.hasLow()) return false;
     if (hasLow()) {
-      if (!getLow().equals(other.getLow())) return false;
+      if (!getLow()
+          .equals(other.getLow())) return false;
     }
     if (hasHigh() != other.hasHigh()) return false;
     if (hasHigh()) {
-      if (!getHigh().equals(other.getHigh())) return false;
+      if (!getHigh()
+          .equals(other.getHigh())) return false;
     }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -328,103 +313,97 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.geo.type.Viewport parseFrom(java.nio.ByteBuffer data)
+  public static com.google.geo.type.Viewport parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.geo.type.Viewport parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.geo.type.Viewport parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.geo.type.Viewport parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.geo.type.Viewport parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.geo.type.Viewport parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.geo.type.Viewport parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.geo.type.Viewport parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.geo.type.Viewport parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.geo.type.Viewport parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.geo.type.Viewport parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.geo.type.Viewport parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.geo.type.Viewport parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.geo.type.Viewport parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.geo.type.Viewport prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * A latitude-longitude viewport, represented as two diagonally opposite `low`
    * and `high` points. A viewport is considered a closed region, i.e. it includes
@@ -457,19 +436,19 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.geo.type.Viewport}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.geo.type.Viewport)
       com.google.geo.type.ViewportOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.geo.type.ViewportProto.internal_static_google_geo_type_Viewport_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.geo.type.ViewportProto
-          .internal_static_google_geo_type_Viewport_fieldAccessorTable
+      return com.google.geo.type.ViewportProto.internal_static_google_geo_type_Viewport_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.geo.type.Viewport.class, com.google.geo.type.Viewport.Builder.class);
     }
@@ -479,15 +458,16 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -507,7 +487,8 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.geo.type.ViewportProto.internal_static_google_geo_type_Viewport_descriptor;
     }
 
@@ -546,39 +527,38 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.geo.type.Viewport) {
-        return mergeFrom((com.google.geo.type.Viewport) other);
+        return mergeFrom((com.google.geo.type.Viewport)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -624,31 +604,24 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
 
     private com.google.type.LatLng low_;
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder>
-        lowBuilder_;
+        com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder> lowBuilder_;
     /**
-     *
-     *
      * <pre>
      * Required. The low point of the viewport.
      * </pre>
      *
      * <code>.google.type.LatLng low = 1;</code>
-     *
      * @return Whether the low field is set.
      */
     public boolean hasLow() {
       return lowBuilder_ != null || low_ != null;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The low point of the viewport.
      * </pre>
      *
      * <code>.google.type.LatLng low = 1;</code>
-     *
      * @return The low.
      */
     public com.google.type.LatLng getLow() {
@@ -659,8 +632,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Required. The low point of the viewport.
      * </pre>
@@ -681,15 +652,14 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The low point of the viewport.
      * </pre>
      *
      * <code>.google.type.LatLng low = 1;</code>
      */
-    public Builder setLow(com.google.type.LatLng.Builder builderForValue) {
+    public Builder setLow(
+        com.google.type.LatLng.Builder builderForValue) {
       if (lowBuilder_ == null) {
         low_ = builderForValue.build();
         onChanged();
@@ -700,8 +670,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The low point of the viewport.
      * </pre>
@@ -711,7 +679,8 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     public Builder mergeLow(com.google.type.LatLng value) {
       if (lowBuilder_ == null) {
         if (low_ != null) {
-          low_ = com.google.type.LatLng.newBuilder(low_).mergeFrom(value).buildPartial();
+          low_ =
+            com.google.type.LatLng.newBuilder(low_).mergeFrom(value).buildPartial();
         } else {
           low_ = value;
         }
@@ -723,8 +692,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The low point of the viewport.
      * </pre>
@@ -743,8 +710,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The low point of the viewport.
      * </pre>
@@ -752,13 +717,11 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.type.LatLng low = 1;</code>
      */
     public com.google.type.LatLng.Builder getLowBuilder() {
-
+      
       onChanged();
       return getLowFieldBuilder().getBuilder();
     }
     /**
-     *
-     *
      * <pre>
      * Required. The low point of the viewport.
      * </pre>
@@ -769,12 +732,11 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       if (lowBuilder_ != null) {
         return lowBuilder_.getMessageOrBuilder();
       } else {
-        return low_ == null ? com.google.type.LatLng.getDefaultInstance() : low_;
+        return low_ == null ?
+            com.google.type.LatLng.getDefaultInstance() : low_;
       }
     }
     /**
-     *
-     *
      * <pre>
      * Required. The low point of the viewport.
      * </pre>
@@ -782,14 +744,14 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.type.LatLng low = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder>
+        com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder> 
         getLowFieldBuilder() {
       if (lowBuilder_ == null) {
-        lowBuilder_ =
-            new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.type.LatLng,
-                com.google.type.LatLng.Builder,
-                com.google.type.LatLngOrBuilder>(getLow(), getParentForChildren(), isClean());
+        lowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder>(
+                getLow(),
+                getParentForChildren(),
+                isClean());
         low_ = null;
       }
       return lowBuilder_;
@@ -797,31 +759,24 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
 
     private com.google.type.LatLng high_;
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder>
-        highBuilder_;
+        com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder> highBuilder_;
     /**
-     *
-     *
      * <pre>
      * Required. The high point of the viewport.
      * </pre>
      *
      * <code>.google.type.LatLng high = 2;</code>
-     *
      * @return Whether the high field is set.
      */
     public boolean hasHigh() {
       return highBuilder_ != null || high_ != null;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The high point of the viewport.
      * </pre>
      *
      * <code>.google.type.LatLng high = 2;</code>
-     *
      * @return The high.
      */
     public com.google.type.LatLng getHigh() {
@@ -832,8 +787,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Required. The high point of the viewport.
      * </pre>
@@ -854,15 +807,14 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The high point of the viewport.
      * </pre>
      *
      * <code>.google.type.LatLng high = 2;</code>
      */
-    public Builder setHigh(com.google.type.LatLng.Builder builderForValue) {
+    public Builder setHigh(
+        com.google.type.LatLng.Builder builderForValue) {
       if (highBuilder_ == null) {
         high_ = builderForValue.build();
         onChanged();
@@ -873,8 +825,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The high point of the viewport.
      * </pre>
@@ -884,7 +834,8 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     public Builder mergeHigh(com.google.type.LatLng value) {
       if (highBuilder_ == null) {
         if (high_ != null) {
-          high_ = com.google.type.LatLng.newBuilder(high_).mergeFrom(value).buildPartial();
+          high_ =
+            com.google.type.LatLng.newBuilder(high_).mergeFrom(value).buildPartial();
         } else {
           high_ = value;
         }
@@ -896,8 +847,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The high point of the viewport.
      * </pre>
@@ -916,8 +865,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Required. The high point of the viewport.
      * </pre>
@@ -925,13 +872,11 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.type.LatLng high = 2;</code>
      */
     public com.google.type.LatLng.Builder getHighBuilder() {
-
+      
       onChanged();
       return getHighFieldBuilder().getBuilder();
     }
     /**
-     *
-     *
      * <pre>
      * Required. The high point of the viewport.
      * </pre>
@@ -942,12 +887,11 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       if (highBuilder_ != null) {
         return highBuilder_.getMessageOrBuilder();
       } else {
-        return high_ == null ? com.google.type.LatLng.getDefaultInstance() : high_;
+        return high_ == null ?
+            com.google.type.LatLng.getDefaultInstance() : high_;
       }
     }
     /**
-     *
-     *
      * <pre>
      * Required. The high point of the viewport.
      * </pre>
@@ -955,21 +899,21 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.type.LatLng high = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder>
+        com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder> 
         getHighFieldBuilder() {
       if (highBuilder_ == null) {
-        highBuilder_ =
-            new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.type.LatLng,
-                com.google.type.LatLng.Builder,
-                com.google.type.LatLngOrBuilder>(getHigh(), getParentForChildren(), isClean());
+        highBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.type.LatLng, com.google.type.LatLng.Builder, com.google.type.LatLngOrBuilder>(
+                getHigh(),
+                getParentForChildren(),
+                isClean());
         high_ = null;
       }
       return highBuilder_;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -979,12 +923,12 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.geo.type.Viewport)
   }
 
   // @@protoc_insertion_point(class_scope:google.geo.type.Viewport)
   private static final com.google.geo.type.Viewport DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.geo.type.Viewport();
   }
@@ -993,16 +937,16 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Viewport> PARSER =
-      new com.google.protobuf.AbstractParser<Viewport>() {
-        @java.lang.Override
-        public Viewport parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Viewport(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<Viewport>
+      PARSER = new com.google.protobuf.AbstractParser<Viewport>() {
+    @java.lang.Override
+    public Viewport parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new Viewport(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<Viewport> parser() {
     return PARSER;
@@ -1017,4 +961,6 @@ public final class Viewport extends com.google.protobuf.GeneratedMessageV3
   public com.google.geo.type.Viewport getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

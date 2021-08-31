@@ -18,14 +18,11 @@
 
 package com.google.cloud.audit;
 
-public interface ServiceAccountDelegationInfoOrBuilder
-    extends
+public interface ServiceAccountDelegationInfoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.cloud.audit.ServiceAccountDelegationInfo)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * A string representing the principal_subject associated with the identity.
    * For most identities, the format will be
@@ -36,13 +33,10 @@ public interface ServiceAccountDelegationInfoOrBuilder
    * </pre>
    *
    * <code>string principal_subject = 3;</code>
-   *
    * @return The principalSubject.
    */
   java.lang.String getPrincipalSubject();
   /**
-   *
-   *
    * <pre>
    * A string representing the principal_subject associated with the identity.
    * For most identities, the format will be
@@ -53,94 +47,64 @@ public interface ServiceAccountDelegationInfoOrBuilder
    * </pre>
    *
    * <code>string principal_subject = 3;</code>
-   *
    * @return The bytes for principalSubject.
    */
-  com.google.protobuf.ByteString getPrincipalSubjectBytes();
+  com.google.protobuf.ByteString
+      getPrincipalSubjectBytes();
 
   /**
-   *
-   *
    * <pre>
    * First party (Google) identity as the real authority.
    * </pre>
    *
-   * <code>
-   * .google.cloud.audit.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;
-   * </code>
-   *
+   * <code>.google.cloud.audit.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
    * @return Whether the firstPartyPrincipal field is set.
    */
   boolean hasFirstPartyPrincipal();
   /**
-   *
-   *
    * <pre>
    * First party (Google) identity as the real authority.
    * </pre>
    *
-   * <code>
-   * .google.cloud.audit.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;
-   * </code>
-   *
+   * <code>.google.cloud.audit.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
    * @return The firstPartyPrincipal.
    */
   com.google.cloud.audit.ServiceAccountDelegationInfo.FirstPartyPrincipal getFirstPartyPrincipal();
   /**
-   *
-   *
    * <pre>
    * First party (Google) identity as the real authority.
    * </pre>
    *
-   * <code>
-   * .google.cloud.audit.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;
-   * </code>
+   * <code>.google.cloud.audit.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
    */
-  com.google.cloud.audit.ServiceAccountDelegationInfo.FirstPartyPrincipalOrBuilder
-      getFirstPartyPrincipalOrBuilder();
+  com.google.cloud.audit.ServiceAccountDelegationInfo.FirstPartyPrincipalOrBuilder getFirstPartyPrincipalOrBuilder();
 
   /**
-   *
-   *
    * <pre>
    * Third party identity as the real authority.
    * </pre>
    *
-   * <code>
-   * .google.cloud.audit.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;
-   * </code>
-   *
+   * <code>.google.cloud.audit.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
    * @return Whether the thirdPartyPrincipal field is set.
    */
   boolean hasThirdPartyPrincipal();
   /**
-   *
-   *
    * <pre>
    * Third party identity as the real authority.
    * </pre>
    *
-   * <code>
-   * .google.cloud.audit.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;
-   * </code>
-   *
+   * <code>.google.cloud.audit.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
    * @return The thirdPartyPrincipal.
    */
   com.google.cloud.audit.ServiceAccountDelegationInfo.ThirdPartyPrincipal getThirdPartyPrincipal();
   /**
-   *
-   *
    * <pre>
    * Third party identity as the real authority.
    * </pre>
    *
-   * <code>
-   * .google.cloud.audit.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;
-   * </code>
+   * <code>.google.cloud.audit.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
    */
-  com.google.cloud.audit.ServiceAccountDelegationInfo.ThirdPartyPrincipalOrBuilder
-      getThirdPartyPrincipalOrBuilder();
+  com.google.cloud.audit.ServiceAccountDelegationInfo.ThirdPartyPrincipalOrBuilder getThirdPartyPrincipalOrBuilder();
 
   public com.google.cloud.audit.ServiceAccountDelegationInfo.AuthorityCase getAuthorityCase();
 }

@@ -19,8 +19,6 @@
 package com.google.type;
 
 /**
- *
- *
  * <pre>
  * A `CalendarPeriod` represents the abstract concept of a time period that has
  * a canonical start. Grammatically, "the start of the current
@@ -29,10 +27,9 @@ package com.google.type;
  *
  * Protobuf enum {@code google.type.CalendarPeriod}
  */
-public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
+public enum CalendarPeriod
+    implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   *
-   *
    * <pre>
    * Undefined period, raises an error.
    * </pre>
@@ -41,8 +38,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   CALENDAR_PERIOD_UNSPECIFIED(0),
   /**
-   *
-   *
    * <pre>
    * A day.
    * </pre>
@@ -51,8 +46,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   DAY(1),
   /**
-   *
-   *
    * <pre>
    * A week. Weeks begin on Monday, following
    * [ISO 8601](https://en.wikipedia.org/wiki/ISO_week_date).
@@ -62,8 +55,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   WEEK(2),
   /**
-   *
-   *
    * <pre>
    * A fortnight. The first calendar fortnight of the year begins at the start
    * of week 1 according to
@@ -74,8 +65,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   FORTNIGHT(3),
   /**
-   *
-   *
    * <pre>
    * A month.
    * </pre>
@@ -84,8 +73,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   MONTH(4),
   /**
-   *
-   *
    * <pre>
    * A quarter. Quarters start on dates 1-Jan, 1-Apr, 1-Jul, and 1-Oct of each
    * year.
@@ -95,8 +82,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   QUARTER(5),
   /**
-   *
-   *
    * <pre>
    * A half-year. Half-years start on dates 1-Jan and 1-Jul.
    * </pre>
@@ -105,8 +90,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   HALF(6),
   /**
-   *
-   *
    * <pre>
    * A year.
    * </pre>
@@ -118,8 +101,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
   ;
 
   /**
-   *
-   *
    * <pre>
    * Undefined period, raises an error.
    * </pre>
@@ -128,8 +109,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int CALENDAR_PERIOD_UNSPECIFIED_VALUE = 0;
   /**
-   *
-   *
    * <pre>
    * A day.
    * </pre>
@@ -138,8 +117,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int DAY_VALUE = 1;
   /**
-   *
-   *
    * <pre>
    * A week. Weeks begin on Monday, following
    * [ISO 8601](https://en.wikipedia.org/wiki/ISO_week_date).
@@ -149,8 +126,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int WEEK_VALUE = 2;
   /**
-   *
-   *
    * <pre>
    * A fortnight. The first calendar fortnight of the year begins at the start
    * of week 1 according to
@@ -161,8 +136,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int FORTNIGHT_VALUE = 3;
   /**
-   *
-   *
    * <pre>
    * A month.
    * </pre>
@@ -171,8 +144,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int MONTH_VALUE = 4;
   /**
-   *
-   *
    * <pre>
    * A quarter. Quarters start on dates 1-Jan, 1-Apr, 1-Jul, and 1-Oct of each
    * year.
@@ -182,8 +153,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int QUARTER_VALUE = 5;
   /**
-   *
-   *
    * <pre>
    * A half-year. Half-years start on dates 1-Jan and 1-Jul.
    * </pre>
@@ -192,8 +161,6 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static final int HALF_VALUE = 6;
   /**
-   *
-   *
    * <pre>
    * A year.
    * </pre>
@@ -201,6 +168,7 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    * <code>YEAR = 7;</code>
    */
   public static final int YEAR_VALUE = 7;
+
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -226,59 +194,54 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
    */
   public static CalendarPeriod forNumber(int value) {
     switch (value) {
-      case 0:
-        return CALENDAR_PERIOD_UNSPECIFIED;
-      case 1:
-        return DAY;
-      case 2:
-        return WEEK;
-      case 3:
-        return FORTNIGHT;
-      case 4:
-        return MONTH;
-      case 5:
-        return QUARTER;
-      case 6:
-        return HALF;
-      case 7:
-        return YEAR;
-      default:
-        return null;
+      case 0: return CALENDAR_PERIOD_UNSPECIFIED;
+      case 1: return DAY;
+      case 2: return WEEK;
+      case 3: return FORTNIGHT;
+      case 4: return MONTH;
+      case 5: return QUARTER;
+      case 6: return HALF;
+      case 7: return YEAR;
+      default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<CalendarPeriod> internalGetValueMap() {
+  public static com.google.protobuf.Internal.EnumLiteMap<CalendarPeriod>
+      internalGetValueMap() {
     return internalValueMap;
   }
+  private static final com.google.protobuf.Internal.EnumLiteMap<
+      CalendarPeriod> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<CalendarPeriod>() {
+          public CalendarPeriod findValueByNumber(int number) {
+            return CalendarPeriod.forNumber(number);
+          }
+        };
 
-  private static final com.google.protobuf.Internal.EnumLiteMap<CalendarPeriod> internalValueMap =
-      new com.google.protobuf.Internal.EnumLiteMap<CalendarPeriod>() {
-        public CalendarPeriod findValueByNumber(int number) {
-          return CalendarPeriod.forNumber(number);
-        }
-      };
-
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+  public final com.google.protobuf.Descriptors.EnumValueDescriptor
+      getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
-
-  public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+  public final com.google.protobuf.Descriptors.EnumDescriptor
+      getDescriptorForType() {
     return getDescriptor();
   }
-
-  public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.EnumDescriptor
+      getDescriptor() {
     return com.google.type.CalendarPeriodProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final CalendarPeriod[] VALUES = values();
 
-  public static CalendarPeriod valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+  public static CalendarPeriod valueOf(
+      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+      throw new java.lang.IllegalArgumentException(
+        "EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -294,3 +257,4 @@ public enum CalendarPeriod implements com.google.protobuf.ProtocolMessageEnum {
 
   // @@protoc_insertion_point(enum_scope:google.type.CalendarPeriod)
 }
+

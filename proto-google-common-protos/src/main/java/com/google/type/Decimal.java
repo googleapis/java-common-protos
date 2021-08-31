@@ -19,8 +19,6 @@
 package com.google.type;
 
 /**
- *
- *
  * <pre>
  * A representation of a decimal value, such as 2.5. Clients may convert values
  * into language-native decimal formats, such as Java's [BigDecimal][] or
@@ -32,31 +30,31 @@ package com.google.type;
  *
  * Protobuf type {@code google.type.Decimal}
  */
-public final class Decimal extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class Decimal extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.type.Decimal)
     DecimalOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use Decimal.newBuilder() to construct.
   private Decimal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private Decimal() {
     value_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new Decimal();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private Decimal(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -75,33 +73,33 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-              value_ = s;
-              break;
+            value_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.type.DecimalProto.internal_static_google_type_Decimal_descriptor;
   }
 
@@ -116,8 +114,6 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
   public static final int VALUE_FIELD_NUMBER = 1;
   private volatile java.lang.Object value_;
   /**
-   *
-   *
    * <pre>
    * The decimal value, as a string.
    * The string representation consists of an optional sign, `+` (`U+002B`)
@@ -166,7 +162,6 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string value = 1;</code>
-   *
    * @return The value.
    */
   @java.lang.Override
@@ -175,15 +170,14 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       value_ = s;
       return s;
     }
   }
   /**
-   *
-   *
    * <pre>
    * The decimal value, as a string.
    * The string representation consists of an optional sign, `+` (`U+002B`)
@@ -232,15 +226,16 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>string value = 1;</code>
-   *
    * @return The bytes for value.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getValueBytes() {
+  public com.google.protobuf.ByteString
+      getValueBytes() {
     java.lang.Object ref = value_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
-          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
       value_ = b;
       return b;
     } else {
@@ -249,7 +244,6 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -261,7 +255,8 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     if (!getValueBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
     }
@@ -285,14 +280,15 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.type.Decimal)) {
       return super.equals(obj);
     }
     com.google.type.Decimal other = (com.google.type.Decimal) obj;
 
-    if (!getValue().equals(other.getValue())) return false;
+    if (!getValue()
+        .equals(other.getValue())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -311,103 +307,97 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.type.Decimal parseFrom(java.nio.ByteBuffer data)
+  public static com.google.type.Decimal parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.Decimal parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.type.Decimal parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.type.Decimal parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.Decimal parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.type.Decimal parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.type.Decimal parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.type.Decimal parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.type.Decimal parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.type.Decimal parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.type.Decimal parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.type.Decimal parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.type.Decimal parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.type.Decimal parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.type.Decimal prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * A representation of a decimal value, such as 2.5. Clients may convert values
    * into language-native decimal formats, such as Java's [BigDecimal][] or
@@ -419,11 +409,12 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.type.Decimal}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.type.Decimal)
       com.google.type.DecimalOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.type.DecimalProto.internal_static_google_type_Decimal_descriptor;
     }
 
@@ -440,15 +431,16 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -458,7 +450,8 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.type.DecimalProto.internal_static_google_type_Decimal_descriptor;
     }
 
@@ -488,39 +481,38 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.type.Decimal) {
-        return mergeFrom((com.google.type.Decimal) other);
+        return mergeFrom((com.google.type.Decimal)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -564,8 +556,6 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
 
     private java.lang.Object value_ = "";
     /**
-     *
-     *
      * <pre>
      * The decimal value, as a string.
      * The string representation consists of an optional sign, `+` (`U+002B`)
@@ -614,13 +604,13 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string value = 1;</code>
-     *
      * @return The value.
      */
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         value_ = s;
         return s;
@@ -629,8 +619,6 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The decimal value, as a string.
      * The string representation consists of an optional sign, `+` (`U+002B`)
@@ -679,14 +667,15 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string value = 1;</code>
-     *
      * @return The bytes for value.
      */
-    public com.google.protobuf.ByteString getValueBytes() {
+    public com.google.protobuf.ByteString
+        getValueBytes() {
       java.lang.Object ref = value_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         value_ = b;
         return b;
       } else {
@@ -694,8 +683,6 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * The decimal value, as a string.
      * The string representation consists of an optional sign, `+` (`U+002B`)
@@ -744,22 +731,20 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string value = 1;</code>
-     *
      * @param value The value to set.
      * @return This builder for chaining.
      */
-    public Builder setValue(java.lang.String value) {
+    public Builder setValue(
+        java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       value_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The decimal value, as a string.
      * The string representation consists of an optional sign, `+` (`U+002B`)
@@ -808,18 +793,15 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string value = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearValue() {
-
+      
       value_ = getDefaultInstance().getValue();
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The decimal value, as a string.
      * The string representation consists of an optional sign, `+` (`U+002B`)
@@ -868,23 +850,23 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>string value = 1;</code>
-     *
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
-    public Builder setValueBytes(com.google.protobuf.ByteString value) {
+    public Builder setValueBytes(
+        com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       value_ = value;
       onChanged();
       return this;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -894,12 +876,12 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.type.Decimal)
   }
 
   // @@protoc_insertion_point(class_scope:google.type.Decimal)
   private static final com.google.type.Decimal DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.type.Decimal();
   }
@@ -908,16 +890,16 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Decimal> PARSER =
-      new com.google.protobuf.AbstractParser<Decimal>() {
-        @java.lang.Override
-        public Decimal parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Decimal(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<Decimal>
+      PARSER = new com.google.protobuf.AbstractParser<Decimal>() {
+    @java.lang.Override
+    public Decimal parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new Decimal(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<Decimal> parser() {
     return PARSER;
@@ -932,4 +914,6 @@ public final class Decimal extends com.google.protobuf.GeneratedMessageV3
   public com.google.type.Decimal getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

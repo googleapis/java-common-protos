@@ -20,21 +20,20 @@ package com.google.api;
 
 public final class ClientProto {
   private ClientProto() {}
-
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistryLite registry) {
     registry.add(com.google.api.ClientProto.methodSignature);
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.ClientProto.oauthScopes);
   }
 
-  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+  public static void registerAllExtensions(
+      com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+        (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-
   public static final int METHOD_SIGNATURE_FIELD_NUMBER = 1051;
   /**
-   *
-   *
    * <pre>
    * A definition of a client library method signature.
    * In client libraries, each proto RPC corresponds to one or more methods
@@ -67,16 +66,15 @@ public final class ClientProto {
    *
    * <code>extend .google.protobuf.MethodOptions { ... }</code>
    */
-  public static final com.google.protobuf.GeneratedMessage.GeneratedExtension<
-          com.google.protobuf.DescriptorProtos.MethodOptions, java.util.List<java.lang.String>>
-      methodSignature =
-          com.google.protobuf.GeneratedMessage.newFileScopedGeneratedExtension(
-              java.lang.String.class, null);
-
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.MethodOptions,
+      java.util.List<java.lang.String>> methodSignature = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        java.lang.String.class,
+        null);
   public static final int DEFAULT_HOST_FIELD_NUMBER = 1049;
   /**
-   *
-   *
    * <pre>
    * The hostname for this service.
    * This should be specified with no prefix or protocol.
@@ -89,16 +87,15 @@ public final class ClientProto {
    *
    * <code>extend .google.protobuf.ServiceOptions { ... }</code>
    */
-  public static final com.google.protobuf.GeneratedMessage.GeneratedExtension<
-          com.google.protobuf.DescriptorProtos.ServiceOptions, java.lang.String>
-      defaultHost =
-          com.google.protobuf.GeneratedMessage.newFileScopedGeneratedExtension(
-              java.lang.String.class, null);
-
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.ServiceOptions,
+      java.lang.String> defaultHost = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        java.lang.String.class,
+        null);
   public static final int OAUTH_SCOPES_FIELD_NUMBER = 1050;
   /**
-   *
-   *
    * <pre>
    * OAuth scopes needed for the client.
    * Example:
@@ -119,36 +116,37 @@ public final class ClientProto {
    *
    * <code>extend .google.protobuf.ServiceOptions { ... }</code>
    */
-  public static final com.google.protobuf.GeneratedMessage.GeneratedExtension<
-          com.google.protobuf.DescriptorProtos.ServiceOptions, java.lang.String>
-      oauthScopes =
-          com.google.protobuf.GeneratedMessage.newFileScopedGeneratedExtension(
-              java.lang.String.class, null);
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.ServiceOptions,
+      java.lang.String> oauthScopes = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        java.lang.String.class,
+        null);
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
-
+  private static  com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027google/api/client.proto\022\ngoogle.api\032 g"
-          + "oogle/protobuf/descriptor.proto:9\n\020metho"
-          + "d_signature\022\036.google.protobuf.MethodOpti"
-          + "ons\030\233\010 \003(\t:6\n\014default_host\022\037.google.prot"
-          + "obuf.ServiceOptions\030\231\010 \001(\t:6\n\014oauth_scop"
-          + "es\022\037.google.protobuf.ServiceOptions\030\232\010 \001"
-          + "(\tBi\n\016com.google.apiB\013ClientProtoP\001ZAgoo"
-          + "gle.golang.org/genproto/googleapis/api/a"
-          + "nnotations;annotations\242\002\004GAPIb\006proto3"
+      "\n\027google/api/client.proto\022\ngoogle.api\032 g" +
+      "oogle/protobuf/descriptor.proto:9\n\020metho" +
+      "d_signature\022\036.google.protobuf.MethodOpti" +
+      "ons\030\233\010 \003(\t:6\n\014default_host\022\037.google.prot" +
+      "obuf.ServiceOptions\030\231\010 \001(\t:6\n\014oauth_scop" +
+      "es\022\037.google.protobuf.ServiceOptions\030\232\010 \001" +
+      "(\tBi\n\016com.google.apiB\013ClientProtoP\001ZAgoo" +
+      "gle.golang.org/genproto/googleapis/api/a" +
+      "nnotations;annotations\242\002\004GAPIb\006proto3"
     };
-    descriptor =
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
-            descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] {
-              com.google.protobuf.DescriptorProtos.getDescriptor(),
-            });
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DescriptorProtos.getDescriptor(),
+        });
     methodSignature.internalInit(descriptor.getExtensions().get(0));
     defaultHost.internalInit(descriptor.getExtensions().get(1));
     oauthScopes.internalInit(descriptor.getExtensions().get(2));

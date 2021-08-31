@@ -18,24 +18,20 @@
 
 package com.google.rpc;
 
-public interface PreconditionFailureOrBuilder
-    extends
+public interface PreconditionFailureOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.rpc.PreconditionFailure)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Describes all precondition violations.
    * </pre>
    *
    * <code>repeated .google.rpc.PreconditionFailure.Violation violations = 1;</code>
    */
-  java.util.List<com.google.rpc.PreconditionFailure.Violation> getViolationsList();
+  java.util.List<com.google.rpc.PreconditionFailure.Violation> 
+      getViolationsList();
   /**
-   *
-   *
    * <pre>
    * Describes all precondition violations.
    * </pre>
@@ -44,8 +40,6 @@ public interface PreconditionFailureOrBuilder
    */
   com.google.rpc.PreconditionFailure.Violation getViolations(int index);
   /**
-   *
-   *
    * <pre>
    * Describes all precondition violations.
    * </pre>
@@ -54,24 +48,21 @@ public interface PreconditionFailureOrBuilder
    */
   int getViolationsCount();
   /**
-   *
-   *
    * <pre>
    * Describes all precondition violations.
    * </pre>
    *
    * <code>repeated .google.rpc.PreconditionFailure.Violation violations = 1;</code>
    */
-  java.util.List<? extends com.google.rpc.PreconditionFailure.ViolationOrBuilder>
+  java.util.List<? extends com.google.rpc.PreconditionFailure.ViolationOrBuilder> 
       getViolationsOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * Describes all precondition violations.
    * </pre>
    *
    * <code>repeated .google.rpc.PreconditionFailure.Violation violations = 1;</code>
    */
-  com.google.rpc.PreconditionFailure.ViolationOrBuilder getViolationsOrBuilder(int index);
+  com.google.rpc.PreconditionFailure.ViolationOrBuilder getViolationsOrBuilder(
+      int index);
 }

@@ -19,8 +19,6 @@
 package com.google.api;
 
 /**
- *
- *
  * <pre>
  * `Distribution` contains summary statistics for a population of values. It
  * optionally contains a histogram representing the distribution of those values
@@ -38,16 +36,15 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Distribution}
  */
-public final class Distribution extends com.google.protobuf.GeneratedMessageV3
-    implements
+public final class Distribution extends
+    com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.api.Distribution)
     DistributionOrBuilder {
-  private static final long serialVersionUID = 0L;
+private static final long serialVersionUID = 0L;
   // Use Distribution.newBuilder() to construct.
   private Distribution(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private Distribution() {
     bucketCounts_ = emptyLongList();
     exemplars_ = java.util.Collections.emptyList();
@@ -55,15 +52,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
     return new Distribution();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
     return this.unknownFields;
   }
-
   private Distribution(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -83,99 +81,91 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           case 0:
             done = true;
             break;
-          case 8:
-            {
-              count_ = input.readInt64();
-              break;
-            }
-          case 17:
-            {
-              mean_ = input.readDouble();
-              break;
-            }
-          case 25:
-            {
-              sumOfSquaredDeviation_ = input.readDouble();
-              break;
-            }
-          case 34:
-            {
-              com.google.api.Distribution.Range.Builder subBuilder = null;
-              if (range_ != null) {
-                subBuilder = range_.toBuilder();
-              }
-              range_ =
-                  input.readMessage(com.google.api.Distribution.Range.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(range_);
-                range_ = subBuilder.buildPartial();
-              }
+          case 8: {
 
-              break;
-            }
-          case 50:
-            {
-              com.google.api.Distribution.BucketOptions.Builder subBuilder = null;
-              if (bucketOptions_ != null) {
-                subBuilder = bucketOptions_.toBuilder();
-              }
-              bucketOptions_ =
-                  input.readMessage(
-                      com.google.api.Distribution.BucketOptions.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(bucketOptions_);
-                bucketOptions_ = subBuilder.buildPartial();
-              }
+            count_ = input.readInt64();
+            break;
+          }
+          case 17: {
 
-              break;
+            mean_ = input.readDouble();
+            break;
+          }
+          case 25: {
+
+            sumOfSquaredDeviation_ = input.readDouble();
+            break;
+          }
+          case 34: {
+            com.google.api.Distribution.Range.Builder subBuilder = null;
+            if (range_ != null) {
+              subBuilder = range_.toBuilder();
             }
-          case 56:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                bucketCounts_ = newLongList();
-                mutable_bitField0_ |= 0x00000001;
-              }
+            range_ = input.readMessage(com.google.api.Distribution.Range.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(range_);
+              range_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            com.google.api.Distribution.BucketOptions.Builder subBuilder = null;
+            if (bucketOptions_ != null) {
+              subBuilder = bucketOptions_.toBuilder();
+            }
+            bucketOptions_ = input.readMessage(com.google.api.Distribution.BucketOptions.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(bucketOptions_);
+              bucketOptions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 56: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              bucketCounts_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            bucketCounts_.addLong(input.readInt64());
+            break;
+          }
+          case 58: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              bucketCounts_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            while (input.getBytesUntilLimit() > 0) {
               bucketCounts_.addLong(input.readInt64());
-              break;
             }
-          case 58:
-            {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                bucketCounts_ = newLongList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                bucketCounts_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
+            input.popLimit(limit);
+            break;
+          }
+          case 82: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              exemplars_ = new java.util.ArrayList<com.google.api.Distribution.Exemplar>();
+              mutable_bitField0_ |= 0x00000002;
             }
-          case 82:
-            {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                exemplars_ = new java.util.ArrayList<com.google.api.Distribution.Exemplar>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              exemplars_.add(
-                  input.readMessage(
-                      com.google.api.Distribution.Exemplar.parser(), extensionRegistry));
-              break;
+            exemplars_.add(
+                input.readMessage(com.google.api.Distribution.Exemplar.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
             }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         bucketCounts_.makeImmutable(); // C
@@ -187,83 +177,74 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       makeExtensionsImmutable();
     }
   }
-
-  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+  public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
     return com.google.api.DistributionProto.internal_static_google_api_Distribution_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.api.DistributionProto
-        .internal_static_google_api_Distribution_fieldAccessorTable
+    return com.google.api.DistributionProto.internal_static_google_api_Distribution_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.api.Distribution.class, com.google.api.Distribution.Builder.class);
   }
 
-  public interface RangeOrBuilder
-      extends
+  public interface RangeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.api.Distribution.Range)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * The minimum of the population values.
      * </pre>
      *
      * <code>double min = 1;</code>
-     *
      * @return The min.
      */
     double getMin();
 
     /**
-     *
-     *
      * <pre>
      * The maximum of the population values.
      * </pre>
      *
      * <code>double max = 2;</code>
-     *
      * @return The max.
      */
     double getMax();
   }
   /**
-   *
-   *
    * <pre>
    * The range of the population values.
    * </pre>
    *
    * Protobuf type {@code google.api.Distribution.Range}
    */
-  public static final class Range extends com.google.protobuf.GeneratedMessageV3
-      implements
+  public static final class Range extends
+      com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.api.Distribution.Range)
       RangeOrBuilder {
-    private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
     // Use Range.newBuilder() to construct.
     private Range(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
-    private Range() {}
+    private Range() {
+    }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
       return new Range();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
       return this.unknownFields;
     }
-
     private Range(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -282,61 +263,56 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
             case 0:
               done = true;
               break;
-            case 9:
-              {
-                min_ = input.readDouble();
-                break;
+            case 9: {
+
+              min_ = input.readDouble();
+              break;
+            }
+            case 17: {
+
+              max_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
               }
-            case 17:
-              {
-                max_ = input.readDouble();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.api.DistributionProto
-          .internal_static_google_api_Distribution_Range_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.api.DistributionProto.internal_static_google_api_Distribution_Range_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.DistributionProto
-          .internal_static_google_api_Distribution_Range_fieldAccessorTable
+      return com.google.api.DistributionProto.internal_static_google_api_Distribution_Range_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.api.Distribution.Range.class,
-              com.google.api.Distribution.Range.Builder.class);
+              com.google.api.Distribution.Range.class, com.google.api.Distribution.Range.Builder.class);
     }
 
     public static final int MIN_FIELD_NUMBER = 1;
     private double min_;
     /**
-     *
-     *
      * <pre>
      * The minimum of the population values.
      * </pre>
      *
      * <code>double min = 1;</code>
-     *
      * @return The min.
      */
     @java.lang.Override
@@ -347,14 +323,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     public static final int MAX_FIELD_NUMBER = 2;
     private double max_;
     /**
-     *
-     *
      * <pre>
      * The maximum of the population values.
      * </pre>
      *
      * <code>double max = 2;</code>
-     *
      * @return The max.
      */
     @java.lang.Override
@@ -363,7 +336,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -375,7 +347,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (min_ != 0D) {
         output.writeDouble(1, min_);
       }
@@ -392,10 +365,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
       size = 0;
       if (min_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream.computeDoubleSize(1, min_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, min_);
       }
       if (max_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream.computeDoubleSize(2, max_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, max_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -405,7 +380,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.api.Distribution.Range)) {
         return super.equals(obj);
@@ -413,9 +388,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       com.google.api.Distribution.Range other = (com.google.api.Distribution.Range) obj;
 
       if (java.lang.Double.doubleToLongBits(getMin())
-          != java.lang.Double.doubleToLongBits(other.getMin())) return false;
+          != java.lang.Double.doubleToLongBits(
+              other.getMin())) return false;
       if (java.lang.Double.doubleToLongBits(getMax())
-          != java.lang.Double.doubleToLongBits(other.getMax())) return false;
+          != java.lang.Double.doubleToLongBits(
+              other.getMax())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -428,105 +405,98 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MIN_FIELD_NUMBER;
-      hash =
-          (53 * hash)
-              + com.google.protobuf.Internal.hashLong(java.lang.Double.doubleToLongBits(getMin()));
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getMin()));
       hash = (37 * hash) + MAX_FIELD_NUMBER;
-      hash =
-          (53 * hash)
-              + com.google.protobuf.Internal.hashLong(java.lang.Double.doubleToLongBits(getMax()));
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getMax()));
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.google.api.Distribution.Range parseFrom(java.nio.ByteBuffer data)
+    public static com.google.api.Distribution.Range parseFrom(
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Distribution.Range parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.google.api.Distribution.Range parseFrom(com.google.protobuf.ByteString data)
+    public static com.google.api.Distribution.Range parseFrom(
+        com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Distribution.Range parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Distribution.Range parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Distribution.Range parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Distribution.Range parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.api.Distribution.Range parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.api.Distribution.Range parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.google.api.Distribution.Range parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.api.Distribution.Range parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.api.Distribution.Range parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.api.Distribution.Range prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -536,32 +506,27 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return builder;
     }
     /**
-     *
-     *
      * <pre>
      * The range of the population values.
      * </pre>
      *
      * Protobuf type {@code google.api.Distribution.Range}
      */
-    public static final class Builder
-        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.api.Distribution.Range)
         com.google.api.Distribution.RangeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_Range_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_Range_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_Range_fieldAccessorTable
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_Range_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.api.Distribution.Range.class,
-                com.google.api.Distribution.Range.Builder.class);
+                com.google.api.Distribution.Range.class, com.google.api.Distribution.Range.Builder.class);
       }
 
       // Construct using com.google.api.Distribution.Range.newBuilder()
@@ -569,15 +534,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -589,9 +555,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_Range_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_Range_descriptor;
       }
 
       @java.lang.Override
@@ -621,41 +587,38 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
-      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
-      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index,
-          java.lang.Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.api.Distribution.Range) {
-          return mergeFrom((com.google.api.Distribution.Range) other);
+          return mergeFrom((com.google.api.Distribution.Range)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -699,16 +662,13 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
 
-      private double min_;
+      private double min_ ;
       /**
-       *
-       *
        * <pre>
        * The minimum of the population values.
        * </pre>
        *
        * <code>double min = 1;</code>
-       *
        * @return The min.
        */
       @java.lang.Override
@@ -716,51 +676,42 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return min_;
       }
       /**
-       *
-       *
        * <pre>
        * The minimum of the population values.
        * </pre>
        *
        * <code>double min = 1;</code>
-       *
        * @param value The min to set.
        * @return This builder for chaining.
        */
       public Builder setMin(double value) {
-
+        
         min_ = value;
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The minimum of the population values.
        * </pre>
        *
        * <code>double min = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMin() {
-
+        
         min_ = 0D;
         onChanged();
         return this;
       }
 
-      private double max_;
+      private double max_ ;
       /**
-       *
-       *
        * <pre>
        * The maximum of the population values.
        * </pre>
        *
        * <code>double max = 2;</code>
-       *
        * @return The max.
        */
       @java.lang.Override
@@ -768,41 +719,34 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return max_;
       }
       /**
-       *
-       *
        * <pre>
        * The maximum of the population values.
        * </pre>
        *
        * <code>double max = 2;</code>
-       *
        * @param value The max to set.
        * @return This builder for chaining.
        */
       public Builder setMax(double value) {
-
+        
         max_ = value;
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The maximum of the population values.
        * </pre>
        *
        * <code>double max = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMax() {
-
+        
         max_ = 0D;
         onChanged();
         return this;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -815,12 +759,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:google.api.Distribution.Range)
     }
 
     // @@protoc_insertion_point(class_scope:google.api.Distribution.Range)
     private static final com.google.api.Distribution.Range DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.api.Distribution.Range();
     }
@@ -829,16 +773,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Range> PARSER =
-        new com.google.protobuf.AbstractParser<Range>() {
-          @java.lang.Override
-          public Range parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Range(input, extensionRegistry);
-          }
-        };
+    private static final com.google.protobuf.Parser<Range>
+        PARSER = new com.google.protobuf.AbstractParser<Range>() {
+      @java.lang.Override
+      public Range parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Range(input, extensionRegistry);
+      }
+    };
 
     public static com.google.protobuf.Parser<Range> parser() {
       return PARSER;
@@ -853,40 +797,32 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     public com.google.api.Distribution.Range getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
-  public interface BucketOptionsOrBuilder
-      extends
+  public interface BucketOptionsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.api.Distribution.BucketOptions)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * The linear bucket.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Linear linear_buckets = 1;</code>
-     *
      * @return Whether the linearBuckets field is set.
      */
     boolean hasLinearBuckets();
     /**
-     *
-     *
      * <pre>
      * The linear bucket.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Linear linear_buckets = 1;</code>
-     *
      * @return The linearBuckets.
      */
     com.google.api.Distribution.BucketOptions.Linear getLinearBuckets();
     /**
-     *
-     *
      * <pre>
      * The linear bucket.
      * </pre>
@@ -896,32 +832,24 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     com.google.api.Distribution.BucketOptions.LinearOrBuilder getLinearBucketsOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * The exponential buckets.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
-     *
      * @return Whether the exponentialBuckets field is set.
      */
     boolean hasExponentialBuckets();
     /**
-     *
-     *
      * <pre>
      * The exponential buckets.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
-     *
      * @return The exponentialBuckets.
      */
     com.google.api.Distribution.BucketOptions.Exponential getExponentialBuckets();
     /**
-     *
-     *
      * <pre>
      * The exponential buckets.
      * </pre>
@@ -931,32 +859,24 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     com.google.api.Distribution.BucketOptions.ExponentialOrBuilder getExponentialBucketsOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * The explicit buckets.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
-     *
      * @return Whether the explicitBuckets field is set.
      */
     boolean hasExplicitBuckets();
     /**
-     *
-     *
      * <pre>
      * The explicit buckets.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
-     *
      * @return The explicitBuckets.
      */
     com.google.api.Distribution.BucketOptions.Explicit getExplicitBuckets();
     /**
-     *
-     *
      * <pre>
      * The explicit buckets.
      * </pre>
@@ -968,8 +888,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     public com.google.api.Distribution.BucketOptions.OptionsCase getOptionsCase();
   }
   /**
-   *
-   *
    * <pre>
    * `BucketOptions` describes the bucket boundaries used to create a histogram
    * for the distribution. The buckets can be in a linear sequence, an
@@ -989,29 +907,30 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.api.Distribution.BucketOptions}
    */
-  public static final class BucketOptions extends com.google.protobuf.GeneratedMessageV3
-      implements
+  public static final class BucketOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.api.Distribution.BucketOptions)
       BucketOptionsOrBuilder {
-    private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
     // Use BucketOptions.newBuilder() to construct.
     private BucketOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
-    private BucketOptions() {}
+    private BucketOptions() {
+    }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
       return new BucketOptions();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
       return this.unknownFields;
     }
-
     private BucketOptions(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1030,144 +949,115 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                com.google.api.Distribution.BucketOptions.Linear.Builder subBuilder = null;
-                if (optionsCase_ == 1) {
-                  subBuilder =
-                      ((com.google.api.Distribution.BucketOptions.Linear) options_).toBuilder();
-                }
-                options_ =
-                    input.readMessage(
-                        com.google.api.Distribution.BucketOptions.Linear.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom((com.google.api.Distribution.BucketOptions.Linear) options_);
-                  options_ = subBuilder.buildPartial();
-                }
-                optionsCase_ = 1;
-                break;
+            case 10: {
+              com.google.api.Distribution.BucketOptions.Linear.Builder subBuilder = null;
+              if (optionsCase_ == 1) {
+                subBuilder = ((com.google.api.Distribution.BucketOptions.Linear) options_).toBuilder();
               }
-            case 18:
-              {
-                com.google.api.Distribution.BucketOptions.Exponential.Builder subBuilder = null;
-                if (optionsCase_ == 2) {
-                  subBuilder =
-                      ((com.google.api.Distribution.BucketOptions.Exponential) options_)
-                          .toBuilder();
-                }
-                options_ =
-                    input.readMessage(
-                        com.google.api.Distribution.BucketOptions.Exponential.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.api.Distribution.BucketOptions.Exponential) options_);
-                  options_ = subBuilder.buildPartial();
-                }
-                optionsCase_ = 2;
-                break;
+              options_ =
+                  input.readMessage(com.google.api.Distribution.BucketOptions.Linear.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.api.Distribution.BucketOptions.Linear) options_);
+                options_ = subBuilder.buildPartial();
               }
-            case 26:
-              {
-                com.google.api.Distribution.BucketOptions.Explicit.Builder subBuilder = null;
-                if (optionsCase_ == 3) {
-                  subBuilder =
-                      ((com.google.api.Distribution.BucketOptions.Explicit) options_).toBuilder();
-                }
-                options_ =
-                    input.readMessage(
-                        com.google.api.Distribution.BucketOptions.Explicit.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.api.Distribution.BucketOptions.Explicit) options_);
-                  options_ = subBuilder.buildPartial();
-                }
-                optionsCase_ = 3;
-                break;
+              optionsCase_ = 1;
+              break;
+            }
+            case 18: {
+              com.google.api.Distribution.BucketOptions.Exponential.Builder subBuilder = null;
+              if (optionsCase_ == 2) {
+                subBuilder = ((com.google.api.Distribution.BucketOptions.Exponential) options_).toBuilder();
               }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
+              options_ =
+                  input.readMessage(com.google.api.Distribution.BucketOptions.Exponential.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.api.Distribution.BucketOptions.Exponential) options_);
+                options_ = subBuilder.buildPartial();
               }
+              optionsCase_ = 2;
+              break;
+            }
+            case 26: {
+              com.google.api.Distribution.BucketOptions.Explicit.Builder subBuilder = null;
+              if (optionsCase_ == 3) {
+                subBuilder = ((com.google.api.Distribution.BucketOptions.Explicit) options_).toBuilder();
+              }
+              options_ =
+                  input.readMessage(com.google.api.Distribution.BucketOptions.Explicit.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.api.Distribution.BucketOptions.Explicit) options_);
+                options_ = subBuilder.buildPartial();
+              }
+              optionsCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.api.DistributionProto
-          .internal_static_google_api_Distribution_BucketOptions_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.DistributionProto
-          .internal_static_google_api_Distribution_BucketOptions_fieldAccessorTable
+      return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.api.Distribution.BucketOptions.class,
-              com.google.api.Distribution.BucketOptions.Builder.class);
+              com.google.api.Distribution.BucketOptions.class, com.google.api.Distribution.BucketOptions.Builder.class);
     }
 
-    public interface LinearOrBuilder
-        extends
+    public interface LinearOrBuilder extends
         // @@protoc_insertion_point(interface_extends:google.api.Distribution.BucketOptions.Linear)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       *
-       *
        * <pre>
        * Must be greater than 0.
        * </pre>
        *
        * <code>int32 num_finite_buckets = 1;</code>
-       *
        * @return The numFiniteBuckets.
        */
       int getNumFiniteBuckets();
 
       /**
-       *
-       *
        * <pre>
        * Must be greater than 0.
        * </pre>
        *
        * <code>double width = 2;</code>
-       *
        * @return The width.
        */
       double getWidth();
 
       /**
-       *
-       *
        * <pre>
        * Lower bound of the first bucket.
        * </pre>
        *
        * <code>double offset = 3;</code>
-       *
        * @return The offset.
        */
       double getOffset();
     }
     /**
-     *
-     *
      * <pre>
      * Specifies a linear sequence of buckets that all have the same width
      * (except overflow and underflow). Each bucket represents a constant
@@ -1180,29 +1070,30 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      *
      * Protobuf type {@code google.api.Distribution.BucketOptions.Linear}
      */
-    public static final class Linear extends com.google.protobuf.GeneratedMessageV3
-        implements
+    public static final class Linear extends
+        com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:google.api.Distribution.BucketOptions.Linear)
         LinearOrBuilder {
-      private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
       // Use Linear.newBuilder() to construct.
       private Linear(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-
-      private Linear() {}
+      private Linear() {
+      }
 
       @java.lang.Override
       @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
         return new Linear();
       }
 
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
         return this.unknownFields;
       }
-
       private Linear(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1221,67 +1112,61 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
               case 0:
                 done = true;
                 break;
-              case 8:
-                {
-                  numFiniteBuckets_ = input.readInt32();
-                  break;
+              case 8: {
+
+                numFiniteBuckets_ = input.readInt32();
+                break;
+              }
+              case 17: {
+
+                width_ = input.readDouble();
+                break;
+              }
+              case 25: {
+
+                offset_ = input.readDouble();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
                 }
-              case 17:
-                {
-                  width_ = input.readDouble();
-                  break;
-                }
-              case 25:
-                {
-                  offset_ = input.readDouble();
-                  break;
-                }
-              default:
-                {
-                  if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                    done = true;
-                  }
-                  break;
-                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(this);
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_BucketOptions_Linear_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Linear_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_BucketOptions_Linear_fieldAccessorTable
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Linear_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.api.Distribution.BucketOptions.Linear.class,
-                com.google.api.Distribution.BucketOptions.Linear.Builder.class);
+                com.google.api.Distribution.BucketOptions.Linear.class, com.google.api.Distribution.BucketOptions.Linear.Builder.class);
       }
 
       public static final int NUM_FINITE_BUCKETS_FIELD_NUMBER = 1;
       private int numFiniteBuckets_;
       /**
-       *
-       *
        * <pre>
        * Must be greater than 0.
        * </pre>
        *
        * <code>int32 num_finite_buckets = 1;</code>
-       *
        * @return The numFiniteBuckets.
        */
       @java.lang.Override
@@ -1292,14 +1177,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public static final int WIDTH_FIELD_NUMBER = 2;
       private double width_;
       /**
-       *
-       *
        * <pre>
        * Must be greater than 0.
        * </pre>
        *
        * <code>double width = 2;</code>
-       *
        * @return The width.
        */
       @java.lang.Override
@@ -1310,14 +1192,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public static final int OFFSET_FIELD_NUMBER = 3;
       private double offset_;
       /**
-       *
-       *
        * <pre>
        * Lower bound of the first bucket.
        * </pre>
        *
        * <code>double offset = 3;</code>
-       *
        * @return The offset.
        */
       @java.lang.Override
@@ -1326,7 +1205,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
 
       private byte memoizedIsInitialized = -1;
-
       @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -1338,7 +1216,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
 
       @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
         if (numFiniteBuckets_ != 0) {
           output.writeInt32(1, numFiniteBuckets_);
         }
@@ -1358,13 +1237,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
         size = 0;
         if (numFiniteBuckets_ != 0) {
-          size += com.google.protobuf.CodedOutputStream.computeInt32Size(1, numFiniteBuckets_);
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, numFiniteBuckets_);
         }
         if (width_ != 0D) {
-          size += com.google.protobuf.CodedOutputStream.computeDoubleSize(2, width_);
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(2, width_);
         }
         if (offset_ != 0D) {
-          size += com.google.protobuf.CodedOutputStream.computeDoubleSize(3, offset_);
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(3, offset_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -1374,19 +1256,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       @java.lang.Override
       public boolean equals(final java.lang.Object obj) {
         if (obj == this) {
-          return true;
+         return true;
         }
         if (!(obj instanceof com.google.api.Distribution.BucketOptions.Linear)) {
           return super.equals(obj);
         }
-        com.google.api.Distribution.BucketOptions.Linear other =
-            (com.google.api.Distribution.BucketOptions.Linear) obj;
+        com.google.api.Distribution.BucketOptions.Linear other = (com.google.api.Distribution.BucketOptions.Linear) obj;
 
-        if (getNumFiniteBuckets() != other.getNumFiniteBuckets()) return false;
+        if (getNumFiniteBuckets()
+            != other.getNumFiniteBuckets()) return false;
         if (java.lang.Double.doubleToLongBits(getWidth())
-            != java.lang.Double.doubleToLongBits(other.getWidth())) return false;
+            != java.lang.Double.doubleToLongBits(
+                other.getWidth())) return false;
         if (java.lang.Double.doubleToLongBits(getOffset())
-            != java.lang.Double.doubleToLongBits(other.getOffset())) return false;
+            != java.lang.Double.doubleToLongBits(
+                other.getOffset())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -1401,108 +1285,98 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         hash = (37 * hash) + NUM_FINITE_BUCKETS_FIELD_NUMBER;
         hash = (53 * hash) + getNumFiniteBuckets();
         hash = (37 * hash) + WIDTH_FIELD_NUMBER;
-        hash =
-            (53 * hash)
-                + com.google.protobuf.Internal.hashLong(
-                    java.lang.Double.doubleToLongBits(getWidth()));
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getWidth()));
         hash = (37 * hash) + OFFSET_FIELD_NUMBER;
-        hash =
-            (53 * hash)
-                + com.google.protobuf.Internal.hashLong(
-                    java.lang.Double.doubleToLongBits(getOffset()));
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getOffset()));
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
       public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
-          java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
       public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
-          java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
       public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
       public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
       public static com.google.api.Distribution.BucketOptions.Linear parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
       public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
-          byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
-          java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
-      }
-
-      public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
-          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      public static com.google.api.Distribution.BucketOptions.Linear parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-            PARSER, input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
       }
-
-      public static com.google.api.Distribution.BucketOptions.Linear parseDelimitedFrom(
-          java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
-      }
-
-      public static com.google.api.Distribution.BucketOptions.Linear parseDelimitedFrom(
-          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-            PARSER, input, extensionRegistry);
-      }
-
       public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
-          com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
-
+      public static com.google.api.Distribution.BucketOptions.Linear parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.api.Distribution.BucketOptions.Linear parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
       public static com.google.api.Distribution.BucketOptions.Linear parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-            PARSER, input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       @java.lang.Override
-      public Builder newBuilderForType() {
-        return newBuilder();
-      }
-
+      public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-
       public static Builder newBuilder(com.google.api.Distribution.BucketOptions.Linear prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
-
       @java.lang.Override
       public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
       }
 
       @java.lang.Override
@@ -1512,8 +1386,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return builder;
       }
       /**
-       *
-       *
        * <pre>
        * Specifies a linear sequence of buckets that all have the same width
        * (except overflow and underflow). Each bucket represents a constant
@@ -1526,24 +1398,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * Protobuf type {@code google.api.Distribution.BucketOptions.Linear}
        */
-      public static final class Builder
-          extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-          implements
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:google.api.Distribution.BucketOptions.Linear)
           com.google.api.Distribution.BucketOptions.LinearOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-          return com.google.api.DistributionProto
-              .internal_static_google_api_Distribution_BucketOptions_Linear_descriptor;
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Linear_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.google.api.DistributionProto
-              .internal_static_google_api_Distribution_BucketOptions_Linear_fieldAccessorTable
+          return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Linear_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.google.api.Distribution.BucketOptions.Linear.class,
-                  com.google.api.Distribution.BucketOptions.Linear.Builder.class);
+                  com.google.api.Distribution.BucketOptions.Linear.class, com.google.api.Distribution.BucketOptions.Linear.Builder.class);
         }
 
         // Construct using com.google.api.Distribution.BucketOptions.Linear.newBuilder()
@@ -1551,15 +1420,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           maybeForceBuilderInitialization();
         }
 
-        private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
-
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
         }
-
         @java.lang.Override
         public Builder clear() {
           super.clear();
@@ -1573,9 +1443,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
 
         @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-          return com.google.api.DistributionProto
-              .internal_static_google_api_Distribution_BucketOptions_Linear_descriptor;
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Linear_descriptor;
         }
 
         @java.lang.Override
@@ -1594,8 +1464,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
         @java.lang.Override
         public com.google.api.Distribution.BucketOptions.Linear buildPartial() {
-          com.google.api.Distribution.BucketOptions.Linear result =
-              new com.google.api.Distribution.BucketOptions.Linear(this);
+          com.google.api.Distribution.BucketOptions.Linear result = new com.google.api.Distribution.BucketOptions.Linear(this);
           result.numFiniteBuckets_ = numFiniteBuckets_;
           result.width_ = width_;
           result.offset_ = offset_;
@@ -1607,41 +1476,38 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         public Builder clone() {
           return super.clone();
         }
-
         @java.lang.Override
         public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
           return super.setField(field, value);
         }
-
         @java.lang.Override
-        public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
           return super.clearField(field);
         }
-
         @java.lang.Override
-        public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return super.clearOneof(oneof);
         }
-
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index,
-            java.lang.Object value) {
+            int index, java.lang.Object value) {
           return super.setRepeatedField(field, index, value);
         }
-
         @java.lang.Override
         public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
           return super.addRepeatedField(field, value);
         }
-
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.google.api.Distribution.BucketOptions.Linear) {
-            return mergeFrom((com.google.api.Distribution.BucketOptions.Linear) other);
+            return mergeFrom((com.google.api.Distribution.BucketOptions.Linear)other);
           } else {
             super.mergeFrom(other);
             return this;
@@ -1649,8 +1515,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
 
         public Builder mergeFrom(com.google.api.Distribution.BucketOptions.Linear other) {
-          if (other == com.google.api.Distribution.BucketOptions.Linear.getDefaultInstance())
-            return this;
+          if (other == com.google.api.Distribution.BucketOptions.Linear.getDefaultInstance()) return this;
           if (other.getNumFiniteBuckets() != 0) {
             setNumFiniteBuckets(other.getNumFiniteBuckets());
           }
@@ -1679,8 +1544,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage =
-                (com.google.api.Distribution.BucketOptions.Linear) e.getUnfinishedMessage();
+            parsedMessage = (com.google.api.Distribution.BucketOptions.Linear) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -1690,16 +1554,13 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return this;
         }
 
-        private int numFiniteBuckets_;
+        private int numFiniteBuckets_ ;
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>int32 num_finite_buckets = 1;</code>
-         *
          * @return The numFiniteBuckets.
          */
         @java.lang.Override
@@ -1707,51 +1568,42 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return numFiniteBuckets_;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>int32 num_finite_buckets = 1;</code>
-         *
          * @param value The numFiniteBuckets to set.
          * @return This builder for chaining.
          */
         public Builder setNumFiniteBuckets(int value) {
-
+          
           numFiniteBuckets_ = value;
           onChanged();
           return this;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>int32 num_finite_buckets = 1;</code>
-         *
          * @return This builder for chaining.
          */
         public Builder clearNumFiniteBuckets() {
-
+          
           numFiniteBuckets_ = 0;
           onChanged();
           return this;
         }
 
-        private double width_;
+        private double width_ ;
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>double width = 2;</code>
-         *
          * @return The width.
          */
         @java.lang.Override
@@ -1759,51 +1611,42 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return width_;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>double width = 2;</code>
-         *
          * @param value The width to set.
          * @return This builder for chaining.
          */
         public Builder setWidth(double value) {
-
+          
           width_ = value;
           onChanged();
           return this;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>double width = 2;</code>
-         *
          * @return This builder for chaining.
          */
         public Builder clearWidth() {
-
+          
           width_ = 0D;
           onChanged();
           return this;
         }
 
-        private double offset_;
+        private double offset_ ;
         /**
-         *
-         *
          * <pre>
          * Lower bound of the first bucket.
          * </pre>
          *
          * <code>double offset = 3;</code>
-         *
          * @return The offset.
          */
         @java.lang.Override
@@ -1811,41 +1654,34 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return offset_;
         }
         /**
-         *
-         *
          * <pre>
          * Lower bound of the first bucket.
          * </pre>
          *
          * <code>double offset = 3;</code>
-         *
          * @param value The offset to set.
          * @return This builder for chaining.
          */
         public Builder setOffset(double value) {
-
+          
           offset_ = value;
           onChanged();
           return this;
         }
         /**
-         *
-         *
          * <pre>
          * Lower bound of the first bucket.
          * </pre>
          *
          * <code>double offset = 3;</code>
-         *
          * @return This builder for chaining.
          */
         public Builder clearOffset() {
-
+          
           offset_ = 0D;
           onChanged();
           return this;
         }
-
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1858,12 +1694,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return super.mergeUnknownFields(unknownFields);
         }
 
+
         // @@protoc_insertion_point(builder_scope:google.api.Distribution.BucketOptions.Linear)
       }
 
       // @@protoc_insertion_point(class_scope:google.api.Distribution.BucketOptions.Linear)
       private static final com.google.api.Distribution.BucketOptions.Linear DEFAULT_INSTANCE;
-
       static {
         DEFAULT_INSTANCE = new com.google.api.Distribution.BucketOptions.Linear();
       }
@@ -1872,16 +1708,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<Linear> PARSER =
-          new com.google.protobuf.AbstractParser<Linear>() {
-            @java.lang.Override
-            public Linear parsePartialFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-              return new Linear(input, extensionRegistry);
-            }
-          };
+      private static final com.google.protobuf.Parser<Linear>
+          PARSER = new com.google.protobuf.AbstractParser<Linear>() {
+        @java.lang.Override
+        public Linear parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Linear(input, extensionRegistry);
+        }
+      };
 
       public static com.google.protobuf.Parser<Linear> parser() {
         return PARSER;
@@ -1896,55 +1732,44 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public com.google.api.Distribution.BucketOptions.Linear getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
+
     }
 
-    public interface ExponentialOrBuilder
-        extends
+    public interface ExponentialOrBuilder extends
         // @@protoc_insertion_point(interface_extends:google.api.Distribution.BucketOptions.Exponential)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       *
-       *
        * <pre>
        * Must be greater than 0.
        * </pre>
        *
        * <code>int32 num_finite_buckets = 1;</code>
-       *
        * @return The numFiniteBuckets.
        */
       int getNumFiniteBuckets();
 
       /**
-       *
-       *
        * <pre>
        * Must be greater than 1.
        * </pre>
        *
        * <code>double growth_factor = 2;</code>
-       *
        * @return The growthFactor.
        */
       double getGrowthFactor();
 
       /**
-       *
-       *
        * <pre>
        * Must be greater than 0.
        * </pre>
        *
        * <code>double scale = 3;</code>
-       *
        * @return The scale.
        */
       double getScale();
     }
     /**
-     *
-     *
      * <pre>
      * Specifies an exponential sequence of buckets that have a width that is
      * proportional to the value of the lower bound. Each bucket represents a
@@ -1957,29 +1782,30 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      *
      * Protobuf type {@code google.api.Distribution.BucketOptions.Exponential}
      */
-    public static final class Exponential extends com.google.protobuf.GeneratedMessageV3
-        implements
+    public static final class Exponential extends
+        com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:google.api.Distribution.BucketOptions.Exponential)
         ExponentialOrBuilder {
-      private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
       // Use Exponential.newBuilder() to construct.
       private Exponential(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-
-      private Exponential() {}
+      private Exponential() {
+      }
 
       @java.lang.Override
       @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
         return new Exponential();
       }
 
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
         return this.unknownFields;
       }
-
       private Exponential(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1998,67 +1824,61 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
               case 0:
                 done = true;
                 break;
-              case 8:
-                {
-                  numFiniteBuckets_ = input.readInt32();
-                  break;
+              case 8: {
+
+                numFiniteBuckets_ = input.readInt32();
+                break;
+              }
+              case 17: {
+
+                growthFactor_ = input.readDouble();
+                break;
+              }
+              case 25: {
+
+                scale_ = input.readDouble();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
                 }
-              case 17:
-                {
-                  growthFactor_ = input.readDouble();
-                  break;
-                }
-              case 25:
-                {
-                  scale_ = input.readDouble();
-                  break;
-                }
-              default:
-                {
-                  if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                    done = true;
-                  }
-                  break;
-                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(this);
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_BucketOptions_Exponential_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Exponential_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_BucketOptions_Exponential_fieldAccessorTable
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Exponential_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.api.Distribution.BucketOptions.Exponential.class,
-                com.google.api.Distribution.BucketOptions.Exponential.Builder.class);
+                com.google.api.Distribution.BucketOptions.Exponential.class, com.google.api.Distribution.BucketOptions.Exponential.Builder.class);
       }
 
       public static final int NUM_FINITE_BUCKETS_FIELD_NUMBER = 1;
       private int numFiniteBuckets_;
       /**
-       *
-       *
        * <pre>
        * Must be greater than 0.
        * </pre>
        *
        * <code>int32 num_finite_buckets = 1;</code>
-       *
        * @return The numFiniteBuckets.
        */
       @java.lang.Override
@@ -2069,14 +1889,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public static final int GROWTH_FACTOR_FIELD_NUMBER = 2;
       private double growthFactor_;
       /**
-       *
-       *
        * <pre>
        * Must be greater than 1.
        * </pre>
        *
        * <code>double growth_factor = 2;</code>
-       *
        * @return The growthFactor.
        */
       @java.lang.Override
@@ -2087,14 +1904,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public static final int SCALE_FIELD_NUMBER = 3;
       private double scale_;
       /**
-       *
-       *
        * <pre>
        * Must be greater than 0.
        * </pre>
        *
        * <code>double scale = 3;</code>
-       *
        * @return The scale.
        */
       @java.lang.Override
@@ -2103,7 +1917,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
 
       private byte memoizedIsInitialized = -1;
-
       @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -2115,7 +1928,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
 
       @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
         if (numFiniteBuckets_ != 0) {
           output.writeInt32(1, numFiniteBuckets_);
         }
@@ -2135,13 +1949,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
         size = 0;
         if (numFiniteBuckets_ != 0) {
-          size += com.google.protobuf.CodedOutputStream.computeInt32Size(1, numFiniteBuckets_);
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, numFiniteBuckets_);
         }
         if (growthFactor_ != 0D) {
-          size += com.google.protobuf.CodedOutputStream.computeDoubleSize(2, growthFactor_);
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(2, growthFactor_);
         }
         if (scale_ != 0D) {
-          size += com.google.protobuf.CodedOutputStream.computeDoubleSize(3, scale_);
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(3, scale_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -2151,19 +1968,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       @java.lang.Override
       public boolean equals(final java.lang.Object obj) {
         if (obj == this) {
-          return true;
+         return true;
         }
         if (!(obj instanceof com.google.api.Distribution.BucketOptions.Exponential)) {
           return super.equals(obj);
         }
-        com.google.api.Distribution.BucketOptions.Exponential other =
-            (com.google.api.Distribution.BucketOptions.Exponential) obj;
+        com.google.api.Distribution.BucketOptions.Exponential other = (com.google.api.Distribution.BucketOptions.Exponential) obj;
 
-        if (getNumFiniteBuckets() != other.getNumFiniteBuckets()) return false;
+        if (getNumFiniteBuckets()
+            != other.getNumFiniteBuckets()) return false;
         if (java.lang.Double.doubleToLongBits(getGrowthFactor())
-            != java.lang.Double.doubleToLongBits(other.getGrowthFactor())) return false;
+            != java.lang.Double.doubleToLongBits(
+                other.getGrowthFactor())) return false;
         if (java.lang.Double.doubleToLongBits(getScale())
-            != java.lang.Double.doubleToLongBits(other.getScale())) return false;
+            != java.lang.Double.doubleToLongBits(
+                other.getScale())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -2178,109 +1997,98 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         hash = (37 * hash) + NUM_FINITE_BUCKETS_FIELD_NUMBER;
         hash = (53 * hash) + getNumFiniteBuckets();
         hash = (37 * hash) + GROWTH_FACTOR_FIELD_NUMBER;
-        hash =
-            (53 * hash)
-                + com.google.protobuf.Internal.hashLong(
-                    java.lang.Double.doubleToLongBits(getGrowthFactor()));
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getGrowthFactor()));
         hash = (37 * hash) + SCALE_FIELD_NUMBER;
-        hash =
-            (53 * hash)
-                + com.google.protobuf.Internal.hashLong(
-                    java.lang.Double.doubleToLongBits(getScale()));
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getScale()));
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
       public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
-          java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
       public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
-          java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
       public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
       public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
       public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
       public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
-          byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
-          java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
-      }
-
-      public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
-          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-            PARSER, input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
       }
-
-      public static com.google.api.Distribution.BucketOptions.Exponential parseDelimitedFrom(
-          java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
-      }
-
-      public static com.google.api.Distribution.BucketOptions.Exponential parseDelimitedFrom(
-          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-            PARSER, input, extensionRegistry);
-      }
-
       public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
-          com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
-
+      public static com.google.api.Distribution.BucketOptions.Exponential parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.api.Distribution.BucketOptions.Exponential parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
       public static com.google.api.Distribution.BucketOptions.Exponential parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-            PARSER, input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       @java.lang.Override
-      public Builder newBuilderForType() {
-        return newBuilder();
-      }
-
+      public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-
-      public static Builder newBuilder(
-          com.google.api.Distribution.BucketOptions.Exponential prototype) {
+      public static Builder newBuilder(com.google.api.Distribution.BucketOptions.Exponential prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
-
       @java.lang.Override
       public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
       }
 
       @java.lang.Override
@@ -2290,8 +2098,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return builder;
       }
       /**
-       *
-       *
        * <pre>
        * Specifies an exponential sequence of buckets that have a width that is
        * proportional to the value of the lower bound. Each bucket represents a
@@ -2304,24 +2110,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * Protobuf type {@code google.api.Distribution.BucketOptions.Exponential}
        */
-      public static final class Builder
-          extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-          implements
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:google.api.Distribution.BucketOptions.Exponential)
           com.google.api.Distribution.BucketOptions.ExponentialOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-          return com.google.api.DistributionProto
-              .internal_static_google_api_Distribution_BucketOptions_Exponential_descriptor;
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Exponential_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.google.api.DistributionProto
-              .internal_static_google_api_Distribution_BucketOptions_Exponential_fieldAccessorTable
+          return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Exponential_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.google.api.Distribution.BucketOptions.Exponential.class,
-                  com.google.api.Distribution.BucketOptions.Exponential.Builder.class);
+                  com.google.api.Distribution.BucketOptions.Exponential.class, com.google.api.Distribution.BucketOptions.Exponential.Builder.class);
         }
 
         // Construct using com.google.api.Distribution.BucketOptions.Exponential.newBuilder()
@@ -2329,15 +2132,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           maybeForceBuilderInitialization();
         }
 
-        private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
-
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
         }
-
         @java.lang.Override
         public Builder clear() {
           super.clear();
@@ -2351,9 +2155,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
 
         @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-          return com.google.api.DistributionProto
-              .internal_static_google_api_Distribution_BucketOptions_Exponential_descriptor;
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Exponential_descriptor;
         }
 
         @java.lang.Override
@@ -2372,8 +2176,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
         @java.lang.Override
         public com.google.api.Distribution.BucketOptions.Exponential buildPartial() {
-          com.google.api.Distribution.BucketOptions.Exponential result =
-              new com.google.api.Distribution.BucketOptions.Exponential(this);
+          com.google.api.Distribution.BucketOptions.Exponential result = new com.google.api.Distribution.BucketOptions.Exponential(this);
           result.numFiniteBuckets_ = numFiniteBuckets_;
           result.growthFactor_ = growthFactor_;
           result.scale_ = scale_;
@@ -2385,41 +2188,38 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         public Builder clone() {
           return super.clone();
         }
-
         @java.lang.Override
         public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
           return super.setField(field, value);
         }
-
         @java.lang.Override
-        public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
           return super.clearField(field);
         }
-
         @java.lang.Override
-        public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return super.clearOneof(oneof);
         }
-
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index,
-            java.lang.Object value) {
+            int index, java.lang.Object value) {
           return super.setRepeatedField(field, index, value);
         }
-
         @java.lang.Override
         public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
           return super.addRepeatedField(field, value);
         }
-
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.google.api.Distribution.BucketOptions.Exponential) {
-            return mergeFrom((com.google.api.Distribution.BucketOptions.Exponential) other);
+            return mergeFrom((com.google.api.Distribution.BucketOptions.Exponential)other);
           } else {
             super.mergeFrom(other);
             return this;
@@ -2427,8 +2227,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
 
         public Builder mergeFrom(com.google.api.Distribution.BucketOptions.Exponential other) {
-          if (other == com.google.api.Distribution.BucketOptions.Exponential.getDefaultInstance())
-            return this;
+          if (other == com.google.api.Distribution.BucketOptions.Exponential.getDefaultInstance()) return this;
           if (other.getNumFiniteBuckets() != 0) {
             setNumFiniteBuckets(other.getNumFiniteBuckets());
           }
@@ -2457,8 +2256,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage =
-                (com.google.api.Distribution.BucketOptions.Exponential) e.getUnfinishedMessage();
+            parsedMessage = (com.google.api.Distribution.BucketOptions.Exponential) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -2468,16 +2266,13 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return this;
         }
 
-        private int numFiniteBuckets_;
+        private int numFiniteBuckets_ ;
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>int32 num_finite_buckets = 1;</code>
-         *
          * @return The numFiniteBuckets.
          */
         @java.lang.Override
@@ -2485,51 +2280,42 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return numFiniteBuckets_;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>int32 num_finite_buckets = 1;</code>
-         *
          * @param value The numFiniteBuckets to set.
          * @return This builder for chaining.
          */
         public Builder setNumFiniteBuckets(int value) {
-
+          
           numFiniteBuckets_ = value;
           onChanged();
           return this;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>int32 num_finite_buckets = 1;</code>
-         *
          * @return This builder for chaining.
          */
         public Builder clearNumFiniteBuckets() {
-
+          
           numFiniteBuckets_ = 0;
           onChanged();
           return this;
         }
 
-        private double growthFactor_;
+        private double growthFactor_ ;
         /**
-         *
-         *
          * <pre>
          * Must be greater than 1.
          * </pre>
          *
          * <code>double growth_factor = 2;</code>
-         *
          * @return The growthFactor.
          */
         @java.lang.Override
@@ -2537,51 +2323,42 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return growthFactor_;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 1.
          * </pre>
          *
          * <code>double growth_factor = 2;</code>
-         *
          * @param value The growthFactor to set.
          * @return This builder for chaining.
          */
         public Builder setGrowthFactor(double value) {
-
+          
           growthFactor_ = value;
           onChanged();
           return this;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 1.
          * </pre>
          *
          * <code>double growth_factor = 2;</code>
-         *
          * @return This builder for chaining.
          */
         public Builder clearGrowthFactor() {
-
+          
           growthFactor_ = 0D;
           onChanged();
           return this;
         }
 
-        private double scale_;
+        private double scale_ ;
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>double scale = 3;</code>
-         *
          * @return The scale.
          */
         @java.lang.Override
@@ -2589,41 +2366,34 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return scale_;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>double scale = 3;</code>
-         *
          * @param value The scale to set.
          * @return This builder for chaining.
          */
         public Builder setScale(double value) {
-
+          
           scale_ = value;
           onChanged();
           return this;
         }
         /**
-         *
-         *
          * <pre>
          * Must be greater than 0.
          * </pre>
          *
          * <code>double scale = 3;</code>
-         *
          * @return This builder for chaining.
          */
         public Builder clearScale() {
-
+          
           scale_ = 0D;
           onChanged();
           return this;
         }
-
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2636,12 +2406,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return super.mergeUnknownFields(unknownFields);
         }
 
+
         // @@protoc_insertion_point(builder_scope:google.api.Distribution.BucketOptions.Exponential)
       }
 
       // @@protoc_insertion_point(class_scope:google.api.Distribution.BucketOptions.Exponential)
       private static final com.google.api.Distribution.BucketOptions.Exponential DEFAULT_INSTANCE;
-
       static {
         DEFAULT_INSTANCE = new com.google.api.Distribution.BucketOptions.Exponential();
       }
@@ -2650,16 +2420,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<Exponential> PARSER =
-          new com.google.protobuf.AbstractParser<Exponential>() {
-            @java.lang.Override
-            public Exponential parsePartialFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-              return new Exponential(input, extensionRegistry);
-            }
-          };
+      private static final com.google.protobuf.Parser<Exponential>
+          PARSER = new com.google.protobuf.AbstractParser<Exponential>() {
+        @java.lang.Override
+        public Exponential parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Exponential(input, extensionRegistry);
+        }
+      };
 
       public static com.google.protobuf.Parser<Exponential> parser() {
         return PARSER;
@@ -2674,54 +2444,43 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public com.google.api.Distribution.BucketOptions.Exponential getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
+
     }
 
-    public interface ExplicitOrBuilder
-        extends
+    public interface ExplicitOrBuilder extends
         // @@protoc_insertion_point(interface_extends:google.api.Distribution.BucketOptions.Explicit)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       *
-       *
        * <pre>
        * The values must be monotonically increasing.
        * </pre>
        *
        * <code>repeated double bounds = 1;</code>
-       *
        * @return A list containing the bounds.
        */
       java.util.List<java.lang.Double> getBoundsList();
       /**
-       *
-       *
        * <pre>
        * The values must be monotonically increasing.
        * </pre>
        *
        * <code>repeated double bounds = 1;</code>
-       *
        * @return The count of bounds.
        */
       int getBoundsCount();
       /**
-       *
-       *
        * <pre>
        * The values must be monotonically increasing.
        * </pre>
        *
        * <code>repeated double bounds = 1;</code>
-       *
        * @param index The index of the element to return.
        * @return The bounds at the given index.
        */
       double getBounds(int index);
     }
     /**
-     *
-     *
      * <pre>
      * Specifies a set of buckets with arbitrary widths.
      * There are `size(bounds) + 1` (= N) buckets. Bucket `i` has the following
@@ -2735,31 +2494,31 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      *
      * Protobuf type {@code google.api.Distribution.BucketOptions.Explicit}
      */
-    public static final class Explicit extends com.google.protobuf.GeneratedMessageV3
-        implements
+    public static final class Explicit extends
+        com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:google.api.Distribution.BucketOptions.Explicit)
         ExplicitOrBuilder {
-      private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
       // Use Explicit.newBuilder() to construct.
       private Explicit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-
       private Explicit() {
         bounds_ = emptyDoubleList();
       }
 
       @java.lang.Override
       @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
         return new Explicit();
       }
 
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
         return this.unknownFields;
       }
-
       private Explicit(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2779,43 +2538,41 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
               case 0:
                 done = true;
                 break;
-              case 9:
-                {
-                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                    bounds_ = newDoubleList();
-                    mutable_bitField0_ |= 0x00000001;
-                  }
+              case 9: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  bounds_ = newDoubleList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                bounds_.addDouble(input.readDouble());
+                break;
+              }
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                  bounds_ = newDoubleList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                while (input.getBytesUntilLimit() > 0) {
                   bounds_.addDouble(input.readDouble());
-                  break;
                 }
-              case 10:
-                {
-                  int length = input.readRawVarint32();
-                  int limit = input.pushLimit(length);
-                  if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                    bounds_ = newDoubleList();
-                    mutable_bitField0_ |= 0x00000001;
-                  }
-                  while (input.getBytesUntilLimit() > 0) {
-                    bounds_.addDouble(input.readDouble());
-                  }
-                  input.popLimit(limit);
-                  break;
+                input.popLimit(limit);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
                 }
-              default:
-                {
-                  if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                    done = true;
-                  }
-                  break;
-                }
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(this);
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) != 0)) {
             bounds_.makeImmutable(); // C
@@ -2824,73 +2581,60 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           makeExtensionsImmutable();
         }
       }
-
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_BucketOptions_Explicit_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Explicit_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_BucketOptions_Explicit_fieldAccessorTable
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Explicit_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.api.Distribution.BucketOptions.Explicit.class,
-                com.google.api.Distribution.BucketOptions.Explicit.Builder.class);
+                com.google.api.Distribution.BucketOptions.Explicit.class, com.google.api.Distribution.BucketOptions.Explicit.Builder.class);
       }
 
       public static final int BOUNDS_FIELD_NUMBER = 1;
       private com.google.protobuf.Internal.DoubleList bounds_;
       /**
-       *
-       *
        * <pre>
        * The values must be monotonically increasing.
        * </pre>
        *
        * <code>repeated double bounds = 1;</code>
-       *
        * @return A list containing the bounds.
        */
       @java.lang.Override
-      public java.util.List<java.lang.Double> getBoundsList() {
+      public java.util.List<java.lang.Double>
+          getBoundsList() {
         return bounds_;
       }
       /**
-       *
-       *
        * <pre>
        * The values must be monotonically increasing.
        * </pre>
        *
        * <code>repeated double bounds = 1;</code>
-       *
        * @return The count of bounds.
        */
       public int getBoundsCount() {
         return bounds_.size();
       }
       /**
-       *
-       *
        * <pre>
        * The values must be monotonically increasing.
        * </pre>
        *
        * <code>repeated double bounds = 1;</code>
-       *
        * @param index The index of the element to return.
        * @return The bounds at the given index.
        */
       public double getBounds(int index) {
         return bounds_.getDouble(index);
       }
-
       private int boundsMemoizedSerializedSize = -1;
 
       private byte memoizedIsInitialized = -1;
-
       @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -2902,7 +2646,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
 
       @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
         getSerializedSize();
         if (getBoundsList().size() > 0) {
           output.writeUInt32NoTag(10);
@@ -2926,7 +2671,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           size += dataSize;
           if (!getBoundsList().isEmpty()) {
             size += 1;
-            size += com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(dataSize);
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
           }
           boundsMemoizedSerializedSize = dataSize;
         }
@@ -2938,15 +2684,15 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       @java.lang.Override
       public boolean equals(final java.lang.Object obj) {
         if (obj == this) {
-          return true;
+         return true;
         }
         if (!(obj instanceof com.google.api.Distribution.BucketOptions.Explicit)) {
           return super.equals(obj);
         }
-        com.google.api.Distribution.BucketOptions.Explicit other =
-            (com.google.api.Distribution.BucketOptions.Explicit) obj;
+        com.google.api.Distribution.BucketOptions.Explicit other = (com.google.api.Distribution.BucketOptions.Explicit) obj;
 
-        if (!getBoundsList().equals(other.getBoundsList())) return false;
+        if (!getBoundsList()
+            .equals(other.getBoundsList())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -2968,94 +2714,87 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
 
       public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
-          java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
       public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
-          java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
       public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
       public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
       public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-
       public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
-          byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-
-      public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
-          java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
-      }
-
-      public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
-          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-            PARSER, input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
       }
-
-      public static com.google.api.Distribution.BucketOptions.Explicit parseDelimitedFrom(
-          java.io.InputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
-      }
-
-      public static com.google.api.Distribution.BucketOptions.Explicit parseDelimitedFrom(
-          java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-            PARSER, input, extensionRegistry);
-      }
-
       public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
-          com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
-
+      public static com.google.api.Distribution.BucketOptions.Explicit parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.google.api.Distribution.BucketOptions.Explicit parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
       public static com.google.api.Distribution.BucketOptions.Explicit parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-            PARSER, input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       @java.lang.Override
-      public Builder newBuilderForType() {
-        return newBuilder();
-      }
-
+      public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-
-      public static Builder newBuilder(
-          com.google.api.Distribution.BucketOptions.Explicit prototype) {
+      public static Builder newBuilder(com.google.api.Distribution.BucketOptions.Explicit prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
-
       @java.lang.Override
       public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
       }
 
       @java.lang.Override
@@ -3065,8 +2804,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return builder;
       }
       /**
-       *
-       *
        * <pre>
        * Specifies a set of buckets with arbitrary widths.
        * There are `size(bounds) + 1` (= N) buckets. Bucket `i` has the following
@@ -3080,24 +2817,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * Protobuf type {@code google.api.Distribution.BucketOptions.Explicit}
        */
-      public static final class Builder
-          extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-          implements
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:google.api.Distribution.BucketOptions.Explicit)
           com.google.api.Distribution.BucketOptions.ExplicitOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-          return com.google.api.DistributionProto
-              .internal_static_google_api_Distribution_BucketOptions_Explicit_descriptor;
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Explicit_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.google.api.DistributionProto
-              .internal_static_google_api_Distribution_BucketOptions_Explicit_fieldAccessorTable
+          return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Explicit_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.google.api.Distribution.BucketOptions.Explicit.class,
-                  com.google.api.Distribution.BucketOptions.Explicit.Builder.class);
+                  com.google.api.Distribution.BucketOptions.Explicit.class, com.google.api.Distribution.BucketOptions.Explicit.Builder.class);
         }
 
         // Construct using com.google.api.Distribution.BucketOptions.Explicit.newBuilder()
@@ -3105,15 +2839,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           maybeForceBuilderInitialization();
         }
 
-        private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
-
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
         }
-
         @java.lang.Override
         public Builder clear() {
           super.clear();
@@ -3123,9 +2858,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
 
         @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-          return com.google.api.DistributionProto
-              .internal_static_google_api_Distribution_BucketOptions_Explicit_descriptor;
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_Explicit_descriptor;
         }
 
         @java.lang.Override
@@ -3144,8 +2879,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
         @java.lang.Override
         public com.google.api.Distribution.BucketOptions.Explicit buildPartial() {
-          com.google.api.Distribution.BucketOptions.Explicit result =
-              new com.google.api.Distribution.BucketOptions.Explicit(this);
+          com.google.api.Distribution.BucketOptions.Explicit result = new com.google.api.Distribution.BucketOptions.Explicit(this);
           int from_bitField0_ = bitField0_;
           if (((bitField0_ & 0x00000001) != 0)) {
             bounds_.makeImmutable();
@@ -3160,41 +2894,38 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         public Builder clone() {
           return super.clone();
         }
-
         @java.lang.Override
         public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
           return super.setField(field, value);
         }
-
         @java.lang.Override
-        public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
           return super.clearField(field);
         }
-
         @java.lang.Override
-        public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
           return super.clearOneof(oneof);
         }
-
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index,
-            java.lang.Object value) {
+            int index, java.lang.Object value) {
           return super.setRepeatedField(field, index, value);
         }
-
         @java.lang.Override
         public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
           return super.addRepeatedField(field, value);
         }
-
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.google.api.Distribution.BucketOptions.Explicit) {
-            return mergeFrom((com.google.api.Distribution.BucketOptions.Explicit) other);
+            return mergeFrom((com.google.api.Distribution.BucketOptions.Explicit)other);
           } else {
             super.mergeFrom(other);
             return this;
@@ -3202,8 +2933,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
 
         public Builder mergeFrom(com.google.api.Distribution.BucketOptions.Explicit other) {
-          if (other == com.google.api.Distribution.BucketOptions.Explicit.getDefaultInstance())
-            return this;
+          if (other == com.google.api.Distribution.BucketOptions.Explicit.getDefaultInstance()) return this;
           if (!other.bounds_.isEmpty()) {
             if (bounds_.isEmpty()) {
               bounds_ = other.bounds_;
@@ -3233,8 +2963,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage =
-                (com.google.api.Distribution.BucketOptions.Explicit) e.getUnfinishedMessage();
+            parsedMessage = (com.google.api.Distribution.BucketOptions.Explicit) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -3243,56 +2972,45 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           }
           return this;
         }
-
         private int bitField0_;
 
         private com.google.protobuf.Internal.DoubleList bounds_ = emptyDoubleList();
-
         private void ensureBoundsIsMutable() {
           if (!((bitField0_ & 0x00000001) != 0)) {
             bounds_ = mutableCopy(bounds_);
             bitField0_ |= 0x00000001;
-          }
+           }
         }
         /**
-         *
-         *
          * <pre>
          * The values must be monotonically increasing.
          * </pre>
          *
          * <code>repeated double bounds = 1;</code>
-         *
          * @return A list containing the bounds.
          */
-        public java.util.List<java.lang.Double> getBoundsList() {
-          return ((bitField0_ & 0x00000001) != 0)
-              ? java.util.Collections.unmodifiableList(bounds_)
-              : bounds_;
+        public java.util.List<java.lang.Double>
+            getBoundsList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(bounds_) : bounds_;
         }
         /**
-         *
-         *
          * <pre>
          * The values must be monotonically increasing.
          * </pre>
          *
          * <code>repeated double bounds = 1;</code>
-         *
          * @return The count of bounds.
          */
         public int getBoundsCount() {
           return bounds_.size();
         }
         /**
-         *
-         *
          * <pre>
          * The values must be monotonically increasing.
          * </pre>
          *
          * <code>repeated double bounds = 1;</code>
-         *
          * @param index The index of the element to return.
          * @return The bounds at the given index.
          */
@@ -3300,33 +3018,28 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return bounds_.getDouble(index);
         }
         /**
-         *
-         *
          * <pre>
          * The values must be monotonically increasing.
          * </pre>
          *
          * <code>repeated double bounds = 1;</code>
-         *
          * @param index The index to set the value at.
          * @param value The bounds to set.
          * @return This builder for chaining.
          */
-        public Builder setBounds(int index, double value) {
+        public Builder setBounds(
+            int index, double value) {
           ensureBoundsIsMutable();
           bounds_.setDouble(index, value);
           onChanged();
           return this;
         }
         /**
-         *
-         *
          * <pre>
          * The values must be monotonically increasing.
          * </pre>
          *
          * <code>repeated double bounds = 1;</code>
-         *
          * @param value The bounds to add.
          * @return This builder for chaining.
          */
@@ -3337,32 +3050,28 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return this;
         }
         /**
-         *
-         *
          * <pre>
          * The values must be monotonically increasing.
          * </pre>
          *
          * <code>repeated double bounds = 1;</code>
-         *
          * @param values The bounds to add.
          * @return This builder for chaining.
          */
-        public Builder addAllBounds(java.lang.Iterable<? extends java.lang.Double> values) {
+        public Builder addAllBounds(
+            java.lang.Iterable<? extends java.lang.Double> values) {
           ensureBoundsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(values, bounds_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bounds_);
           onChanged();
           return this;
         }
         /**
-         *
-         *
          * <pre>
          * The values must be monotonically increasing.
          * </pre>
          *
          * <code>repeated double bounds = 1;</code>
-         *
          * @return This builder for chaining.
          */
         public Builder clearBounds() {
@@ -3371,7 +3080,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           onChanged();
           return this;
         }
-
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3384,12 +3092,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           return super.mergeUnknownFields(unknownFields);
         }
 
+
         // @@protoc_insertion_point(builder_scope:google.api.Distribution.BucketOptions.Explicit)
       }
 
       // @@protoc_insertion_point(class_scope:google.api.Distribution.BucketOptions.Explicit)
       private static final com.google.api.Distribution.BucketOptions.Explicit DEFAULT_INSTANCE;
-
       static {
         DEFAULT_INSTANCE = new com.google.api.Distribution.BucketOptions.Explicit();
       }
@@ -3398,16 +3106,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<Explicit> PARSER =
-          new com.google.protobuf.AbstractParser<Explicit>() {
-            @java.lang.Override
-            public Explicit parsePartialFrom(
-                com.google.protobuf.CodedInputStream input,
-                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                throws com.google.protobuf.InvalidProtocolBufferException {
-              return new Explicit(input, extensionRegistry);
-            }
-          };
+      private static final com.google.protobuf.Parser<Explicit>
+          PARSER = new com.google.protobuf.AbstractParser<Explicit>() {
+        @java.lang.Override
+        public Explicit parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Explicit(input, extensionRegistry);
+        }
+      };
 
       public static com.google.protobuf.Parser<Explicit> parser() {
         return PARSER;
@@ -3422,21 +3130,19 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public com.google.api.Distribution.BucketOptions.Explicit getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
+
     }
 
     private int optionsCase_ = 0;
     private java.lang.Object options_;
-
     public enum OptionsCase
-        implements
-            com.google.protobuf.Internal.EnumLite,
+        implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       LINEAR_BUCKETS(1),
       EXPONENTIAL_BUCKETS(2),
       EXPLICIT_BUCKETS(3),
       OPTIONS_NOT_SET(0);
       private final int value;
-
       private OptionsCase(int value) {
         this.value = value;
       }
@@ -3452,38 +3158,31 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
       public static OptionsCase forNumber(int value) {
         switch (value) {
-          case 1:
-            return LINEAR_BUCKETS;
-          case 2:
-            return EXPONENTIAL_BUCKETS;
-          case 3:
-            return EXPLICIT_BUCKETS;
-          case 0:
-            return OPTIONS_NOT_SET;
-          default:
-            return null;
+          case 1: return LINEAR_BUCKETS;
+          case 2: return EXPONENTIAL_BUCKETS;
+          case 3: return EXPLICIT_BUCKETS;
+          case 0: return OPTIONS_NOT_SET;
+          default: return null;
         }
       }
-
       public int getNumber() {
         return this.value;
       }
     };
 
-    public OptionsCase getOptionsCase() {
-      return OptionsCase.forNumber(optionsCase_);
+    public OptionsCase
+    getOptionsCase() {
+      return OptionsCase.forNumber(
+          optionsCase_);
     }
 
     public static final int LINEAR_BUCKETS_FIELD_NUMBER = 1;
     /**
-     *
-     *
      * <pre>
      * The linear bucket.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Linear linear_buckets = 1;</code>
-     *
      * @return Whether the linearBuckets field is set.
      */
     @java.lang.Override
@@ -3491,26 +3190,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return optionsCase_ == 1;
     }
     /**
-     *
-     *
      * <pre>
      * The linear bucket.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Linear linear_buckets = 1;</code>
-     *
      * @return The linearBuckets.
      */
     @java.lang.Override
     public com.google.api.Distribution.BucketOptions.Linear getLinearBuckets() {
       if (optionsCase_ == 1) {
-        return (com.google.api.Distribution.BucketOptions.Linear) options_;
+         return (com.google.api.Distribution.BucketOptions.Linear) options_;
       }
       return com.google.api.Distribution.BucketOptions.Linear.getDefaultInstance();
     }
     /**
-     *
-     *
      * <pre>
      * The linear bucket.
      * </pre>
@@ -3520,21 +3214,18 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public com.google.api.Distribution.BucketOptions.LinearOrBuilder getLinearBucketsOrBuilder() {
       if (optionsCase_ == 1) {
-        return (com.google.api.Distribution.BucketOptions.Linear) options_;
+         return (com.google.api.Distribution.BucketOptions.Linear) options_;
       }
       return com.google.api.Distribution.BucketOptions.Linear.getDefaultInstance();
     }
 
     public static final int EXPONENTIAL_BUCKETS_FIELD_NUMBER = 2;
     /**
-     *
-     *
      * <pre>
      * The exponential buckets.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
-     *
      * @return Whether the exponentialBuckets field is set.
      */
     @java.lang.Override
@@ -3542,26 +3233,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return optionsCase_ == 2;
     }
     /**
-     *
-     *
      * <pre>
      * The exponential buckets.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
-     *
      * @return The exponentialBuckets.
      */
     @java.lang.Override
     public com.google.api.Distribution.BucketOptions.Exponential getExponentialBuckets() {
       if (optionsCase_ == 2) {
-        return (com.google.api.Distribution.BucketOptions.Exponential) options_;
+         return (com.google.api.Distribution.BucketOptions.Exponential) options_;
       }
       return com.google.api.Distribution.BucketOptions.Exponential.getDefaultInstance();
     }
     /**
-     *
-     *
      * <pre>
      * The exponential buckets.
      * </pre>
@@ -3569,24 +3255,20 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
      */
     @java.lang.Override
-    public com.google.api.Distribution.BucketOptions.ExponentialOrBuilder
-        getExponentialBucketsOrBuilder() {
+    public com.google.api.Distribution.BucketOptions.ExponentialOrBuilder getExponentialBucketsOrBuilder() {
       if (optionsCase_ == 2) {
-        return (com.google.api.Distribution.BucketOptions.Exponential) options_;
+         return (com.google.api.Distribution.BucketOptions.Exponential) options_;
       }
       return com.google.api.Distribution.BucketOptions.Exponential.getDefaultInstance();
     }
 
     public static final int EXPLICIT_BUCKETS_FIELD_NUMBER = 3;
     /**
-     *
-     *
      * <pre>
      * The explicit buckets.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
-     *
      * @return Whether the explicitBuckets field is set.
      */
     @java.lang.Override
@@ -3594,26 +3276,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return optionsCase_ == 3;
     }
     /**
-     *
-     *
      * <pre>
      * The explicit buckets.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
-     *
      * @return The explicitBuckets.
      */
     @java.lang.Override
     public com.google.api.Distribution.BucketOptions.Explicit getExplicitBuckets() {
       if (optionsCase_ == 3) {
-        return (com.google.api.Distribution.BucketOptions.Explicit) options_;
+         return (com.google.api.Distribution.BucketOptions.Explicit) options_;
       }
       return com.google.api.Distribution.BucketOptions.Explicit.getDefaultInstance();
     }
     /**
-     *
-     *
      * <pre>
      * The explicit buckets.
      * </pre>
@@ -3621,16 +3298,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
      */
     @java.lang.Override
-    public com.google.api.Distribution.BucketOptions.ExplicitOrBuilder
-        getExplicitBucketsOrBuilder() {
+    public com.google.api.Distribution.BucketOptions.ExplicitOrBuilder getExplicitBucketsOrBuilder() {
       if (optionsCase_ == 3) {
-        return (com.google.api.Distribution.BucketOptions.Explicit) options_;
+         return (com.google.api.Distribution.BucketOptions.Explicit) options_;
       }
       return com.google.api.Distribution.BucketOptions.Explicit.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -3642,7 +3317,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (optionsCase_ == 1) {
         output.writeMessage(1, (com.google.api.Distribution.BucketOptions.Linear) options_);
       }
@@ -3662,19 +3338,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
       size = 0;
       if (optionsCase_ == 1) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeMessageSize(
-                1, (com.google.api.Distribution.BucketOptions.Linear) options_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.google.api.Distribution.BucketOptions.Linear) options_);
       }
       if (optionsCase_ == 2) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeMessageSize(
-                2, (com.google.api.Distribution.BucketOptions.Exponential) options_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.google.api.Distribution.BucketOptions.Exponential) options_);
       }
       if (optionsCase_ == 3) {
-        size +=
-            com.google.protobuf.CodedOutputStream.computeMessageSize(
-                3, (com.google.api.Distribution.BucketOptions.Explicit) options_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.google.api.Distribution.BucketOptions.Explicit) options_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3684,24 +3357,26 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.api.Distribution.BucketOptions)) {
         return super.equals(obj);
       }
-      com.google.api.Distribution.BucketOptions other =
-          (com.google.api.Distribution.BucketOptions) obj;
+      com.google.api.Distribution.BucketOptions other = (com.google.api.Distribution.BucketOptions) obj;
 
       if (!getOptionsCase().equals(other.getOptionsCase())) return false;
       switch (optionsCase_) {
         case 1:
-          if (!getLinearBuckets().equals(other.getLinearBuckets())) return false;
+          if (!getLinearBuckets()
+              .equals(other.getLinearBuckets())) return false;
           break;
         case 2:
-          if (!getExponentialBuckets().equals(other.getExponentialBuckets())) return false;
+          if (!getExponentialBuckets()
+              .equals(other.getExponentialBuckets())) return false;
           break;
         case 3:
-          if (!getExplicitBuckets().equals(other.getExplicitBuckets())) return false;
+          if (!getExplicitBuckets()
+              .equals(other.getExplicitBuckets())) return false;
           break;
         case 0:
         default:
@@ -3738,94 +3413,88 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return hash;
     }
 
-    public static com.google.api.Distribution.BucketOptions parseFrom(java.nio.ByteBuffer data)
+    public static com.google.api.Distribution.BucketOptions parseFrom(
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Distribution.BucketOptions parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Distribution.BucketOptions parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Distribution.BucketOptions parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Distribution.BucketOptions parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Distribution.BucketOptions parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Distribution.BucketOptions parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.api.Distribution.BucketOptions parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
-    public static com.google.api.Distribution.BucketOptions parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.google.api.Distribution.BucketOptions parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static com.google.api.Distribution.BucketOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
-
+    public static com.google.api.Distribution.BucketOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
     public static com.google.api.Distribution.BucketOptions parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.api.Distribution.BucketOptions parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.api.Distribution.BucketOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -3835,8 +3504,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return builder;
     }
     /**
-     *
-     *
      * <pre>
      * `BucketOptions` describes the bucket boundaries used to create a histogram
      * for the distribution. The buckets can be in a linear sequence, an
@@ -3856,24 +3523,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      *
      * Protobuf type {@code google.api.Distribution.BucketOptions}
      */
-    public static final class Builder
-        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.api.Distribution.BucketOptions)
         com.google.api.Distribution.BucketOptionsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_BucketOptions_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_BucketOptions_fieldAccessorTable
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.api.Distribution.BucketOptions.class,
-                com.google.api.Distribution.BucketOptions.Builder.class);
+                com.google.api.Distribution.BucketOptions.class, com.google.api.Distribution.BucketOptions.Builder.class);
       }
 
       // Construct using com.google.api.Distribution.BucketOptions.newBuilder()
@@ -3881,15 +3545,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -3899,9 +3564,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_BucketOptions_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_BucketOptions_descriptor;
       }
 
       @java.lang.Override
@@ -3920,8 +3585,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
       @java.lang.Override
       public com.google.api.Distribution.BucketOptions buildPartial() {
-        com.google.api.Distribution.BucketOptions result =
-            new com.google.api.Distribution.BucketOptions(this);
+        com.google.api.Distribution.BucketOptions result = new com.google.api.Distribution.BucketOptions(this);
         if (optionsCase_ == 1) {
           if (linearBucketsBuilder_ == null) {
             result.options_ = options_;
@@ -3952,41 +3616,38 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
-      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
-      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index,
-          java.lang.Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.api.Distribution.BucketOptions) {
-          return mergeFrom((com.google.api.Distribution.BucketOptions) other);
+          return mergeFrom((com.google.api.Distribution.BucketOptions)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -3996,25 +3657,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public Builder mergeFrom(com.google.api.Distribution.BucketOptions other) {
         if (other == com.google.api.Distribution.BucketOptions.getDefaultInstance()) return this;
         switch (other.getOptionsCase()) {
-          case LINEAR_BUCKETS:
-            {
-              mergeLinearBuckets(other.getLinearBuckets());
-              break;
-            }
-          case EXPONENTIAL_BUCKETS:
-            {
-              mergeExponentialBuckets(other.getExponentialBuckets());
-              break;
-            }
-          case EXPLICIT_BUCKETS:
-            {
-              mergeExplicitBuckets(other.getExplicitBuckets());
-              break;
-            }
-          case OPTIONS_NOT_SET:
-            {
-              break;
-            }
+          case LINEAR_BUCKETS: {
+            mergeLinearBuckets(other.getLinearBuckets());
+            break;
+          }
+          case EXPONENTIAL_BUCKETS: {
+            mergeExponentialBuckets(other.getExponentialBuckets());
+            break;
+          }
+          case EXPLICIT_BUCKETS: {
+            mergeExplicitBuckets(other.getExplicitBuckets());
+            break;
+          }
+          case OPTIONS_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4044,12 +3701,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
         return this;
       }
-
       private int optionsCase_ = 0;
       private java.lang.Object options_;
-
-      public OptionsCase getOptionsCase() {
-        return OptionsCase.forNumber(optionsCase_);
+      public OptionsCase
+          getOptionsCase() {
+        return OptionsCase.forNumber(
+            optionsCase_);
       }
 
       public Builder clearOptions() {
@@ -4059,20 +3716,15 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
 
+
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.api.Distribution.BucketOptions.Linear,
-              com.google.api.Distribution.BucketOptions.Linear.Builder,
-              com.google.api.Distribution.BucketOptions.LinearOrBuilder>
-          linearBucketsBuilder_;
+          com.google.api.Distribution.BucketOptions.Linear, com.google.api.Distribution.BucketOptions.Linear.Builder, com.google.api.Distribution.BucketOptions.LinearOrBuilder> linearBucketsBuilder_;
       /**
-       *
-       *
        * <pre>
        * The linear bucket.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Linear linear_buckets = 1;</code>
-       *
        * @return Whether the linearBuckets field is set.
        */
       @java.lang.Override
@@ -4080,14 +3732,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return optionsCase_ == 1;
       }
       /**
-       *
-       *
        * <pre>
        * The linear bucket.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Linear linear_buckets = 1;</code>
-       *
        * @return The linearBuckets.
        */
       @java.lang.Override
@@ -4105,8 +3754,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * The linear bucket.
        * </pre>
@@ -4127,8 +3774,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The linear bucket.
        * </pre>
@@ -4147,8 +3792,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The linear bucket.
        * </pre>
@@ -4157,14 +3800,10 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        */
       public Builder mergeLinearBuckets(com.google.api.Distribution.BucketOptions.Linear value) {
         if (linearBucketsBuilder_ == null) {
-          if (optionsCase_ == 1
-              && options_
-                  != com.google.api.Distribution.BucketOptions.Linear.getDefaultInstance()) {
-            options_ =
-                com.google.api.Distribution.BucketOptions.Linear.newBuilder(
-                        (com.google.api.Distribution.BucketOptions.Linear) options_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (optionsCase_ == 1 &&
+              options_ != com.google.api.Distribution.BucketOptions.Linear.getDefaultInstance()) {
+            options_ = com.google.api.Distribution.BucketOptions.Linear.newBuilder((com.google.api.Distribution.BucketOptions.Linear) options_)
+                .mergeFrom(value).buildPartial();
           } else {
             options_ = value;
           }
@@ -4179,8 +3818,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The linear bucket.
        * </pre>
@@ -4204,8 +3841,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The linear bucket.
        * </pre>
@@ -4216,8 +3851,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return getLinearBucketsFieldBuilder().getBuilder();
       }
       /**
-       *
-       *
        * <pre>
        * The linear bucket.
        * </pre>
@@ -4236,8 +3869,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * The linear bucket.
        * </pre>
@@ -4245,44 +3876,32 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        * <code>.google.api.Distribution.BucketOptions.Linear linear_buckets = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.api.Distribution.BucketOptions.Linear,
-              com.google.api.Distribution.BucketOptions.Linear.Builder,
-              com.google.api.Distribution.BucketOptions.LinearOrBuilder>
+          com.google.api.Distribution.BucketOptions.Linear, com.google.api.Distribution.BucketOptions.Linear.Builder, com.google.api.Distribution.BucketOptions.LinearOrBuilder> 
           getLinearBucketsFieldBuilder() {
         if (linearBucketsBuilder_ == null) {
           if (!(optionsCase_ == 1)) {
             options_ = com.google.api.Distribution.BucketOptions.Linear.getDefaultInstance();
           }
-          linearBucketsBuilder_ =
-              new com.google.protobuf.SingleFieldBuilderV3<
-                  com.google.api.Distribution.BucketOptions.Linear,
-                  com.google.api.Distribution.BucketOptions.Linear.Builder,
-                  com.google.api.Distribution.BucketOptions.LinearOrBuilder>(
+          linearBucketsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.api.Distribution.BucketOptions.Linear, com.google.api.Distribution.BucketOptions.Linear.Builder, com.google.api.Distribution.BucketOptions.LinearOrBuilder>(
                   (com.google.api.Distribution.BucketOptions.Linear) options_,
                   getParentForChildren(),
                   isClean());
           options_ = null;
         }
         optionsCase_ = 1;
-        onChanged();
-        ;
+        onChanged();;
         return linearBucketsBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.api.Distribution.BucketOptions.Exponential,
-              com.google.api.Distribution.BucketOptions.Exponential.Builder,
-              com.google.api.Distribution.BucketOptions.ExponentialOrBuilder>
-          exponentialBucketsBuilder_;
+          com.google.api.Distribution.BucketOptions.Exponential, com.google.api.Distribution.BucketOptions.Exponential.Builder, com.google.api.Distribution.BucketOptions.ExponentialOrBuilder> exponentialBucketsBuilder_;
       /**
-       *
-       *
        * <pre>
        * The exponential buckets.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
-       *
        * @return Whether the exponentialBuckets field is set.
        */
       @java.lang.Override
@@ -4290,14 +3909,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return optionsCase_ == 2;
       }
       /**
-       *
-       *
        * <pre>
        * The exponential buckets.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
-       *
        * @return The exponentialBuckets.
        */
       @java.lang.Override
@@ -4315,16 +3931,13 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * The exponential buckets.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
        */
-      public Builder setExponentialBuckets(
-          com.google.api.Distribution.BucketOptions.Exponential value) {
+      public Builder setExponentialBuckets(com.google.api.Distribution.BucketOptions.Exponential value) {
         if (exponentialBucketsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4338,8 +3951,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The exponential buckets.
        * </pre>
@@ -4358,25 +3969,18 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The exponential buckets.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
        */
-      public Builder mergeExponentialBuckets(
-          com.google.api.Distribution.BucketOptions.Exponential value) {
+      public Builder mergeExponentialBuckets(com.google.api.Distribution.BucketOptions.Exponential value) {
         if (exponentialBucketsBuilder_ == null) {
-          if (optionsCase_ == 2
-              && options_
-                  != com.google.api.Distribution.BucketOptions.Exponential.getDefaultInstance()) {
-            options_ =
-                com.google.api.Distribution.BucketOptions.Exponential.newBuilder(
-                        (com.google.api.Distribution.BucketOptions.Exponential) options_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (optionsCase_ == 2 &&
+              options_ != com.google.api.Distribution.BucketOptions.Exponential.getDefaultInstance()) {
+            options_ = com.google.api.Distribution.BucketOptions.Exponential.newBuilder((com.google.api.Distribution.BucketOptions.Exponential) options_)
+                .mergeFrom(value).buildPartial();
           } else {
             options_ = value;
           }
@@ -4391,8 +3995,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The exponential buckets.
        * </pre>
@@ -4416,21 +4018,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The exponential buckets.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
        */
-      public com.google.api.Distribution.BucketOptions.Exponential.Builder
-          getExponentialBucketsBuilder() {
+      public com.google.api.Distribution.BucketOptions.Exponential.Builder getExponentialBucketsBuilder() {
         return getExponentialBucketsFieldBuilder().getBuilder();
       }
       /**
-       *
-       *
        * <pre>
        * The exponential buckets.
        * </pre>
@@ -4438,8 +4035,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
        */
       @java.lang.Override
-      public com.google.api.Distribution.BucketOptions.ExponentialOrBuilder
-          getExponentialBucketsOrBuilder() {
+      public com.google.api.Distribution.BucketOptions.ExponentialOrBuilder getExponentialBucketsOrBuilder() {
         if ((optionsCase_ == 2) && (exponentialBucketsBuilder_ != null)) {
           return exponentialBucketsBuilder_.getMessageOrBuilder();
         } else {
@@ -4450,8 +4046,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * The exponential buckets.
        * </pre>
@@ -4459,44 +4053,32 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        * <code>.google.api.Distribution.BucketOptions.Exponential exponential_buckets = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.api.Distribution.BucketOptions.Exponential,
-              com.google.api.Distribution.BucketOptions.Exponential.Builder,
-              com.google.api.Distribution.BucketOptions.ExponentialOrBuilder>
+          com.google.api.Distribution.BucketOptions.Exponential, com.google.api.Distribution.BucketOptions.Exponential.Builder, com.google.api.Distribution.BucketOptions.ExponentialOrBuilder> 
           getExponentialBucketsFieldBuilder() {
         if (exponentialBucketsBuilder_ == null) {
           if (!(optionsCase_ == 2)) {
             options_ = com.google.api.Distribution.BucketOptions.Exponential.getDefaultInstance();
           }
-          exponentialBucketsBuilder_ =
-              new com.google.protobuf.SingleFieldBuilderV3<
-                  com.google.api.Distribution.BucketOptions.Exponential,
-                  com.google.api.Distribution.BucketOptions.Exponential.Builder,
-                  com.google.api.Distribution.BucketOptions.ExponentialOrBuilder>(
+          exponentialBucketsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.api.Distribution.BucketOptions.Exponential, com.google.api.Distribution.BucketOptions.Exponential.Builder, com.google.api.Distribution.BucketOptions.ExponentialOrBuilder>(
                   (com.google.api.Distribution.BucketOptions.Exponential) options_,
                   getParentForChildren(),
                   isClean());
           options_ = null;
         }
         optionsCase_ = 2;
-        onChanged();
-        ;
+        onChanged();;
         return exponentialBucketsBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.api.Distribution.BucketOptions.Explicit,
-              com.google.api.Distribution.BucketOptions.Explicit.Builder,
-              com.google.api.Distribution.BucketOptions.ExplicitOrBuilder>
-          explicitBucketsBuilder_;
+          com.google.api.Distribution.BucketOptions.Explicit, com.google.api.Distribution.BucketOptions.Explicit.Builder, com.google.api.Distribution.BucketOptions.ExplicitOrBuilder> explicitBucketsBuilder_;
       /**
-       *
-       *
        * <pre>
        * The explicit buckets.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
-       *
        * @return Whether the explicitBuckets field is set.
        */
       @java.lang.Override
@@ -4504,14 +4086,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return optionsCase_ == 3;
       }
       /**
-       *
-       *
        * <pre>
        * The explicit buckets.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
-       *
        * @return The explicitBuckets.
        */
       @java.lang.Override
@@ -4529,8 +4108,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * The explicit buckets.
        * </pre>
@@ -4551,8 +4128,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The explicit buckets.
        * </pre>
@@ -4571,25 +4146,18 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The explicit buckets.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
        */
-      public Builder mergeExplicitBuckets(
-          com.google.api.Distribution.BucketOptions.Explicit value) {
+      public Builder mergeExplicitBuckets(com.google.api.Distribution.BucketOptions.Explicit value) {
         if (explicitBucketsBuilder_ == null) {
-          if (optionsCase_ == 3
-              && options_
-                  != com.google.api.Distribution.BucketOptions.Explicit.getDefaultInstance()) {
-            options_ =
-                com.google.api.Distribution.BucketOptions.Explicit.newBuilder(
-                        (com.google.api.Distribution.BucketOptions.Explicit) options_)
-                    .mergeFrom(value)
-                    .buildPartial();
+          if (optionsCase_ == 3 &&
+              options_ != com.google.api.Distribution.BucketOptions.Explicit.getDefaultInstance()) {
+            options_ = com.google.api.Distribution.BucketOptions.Explicit.newBuilder((com.google.api.Distribution.BucketOptions.Explicit) options_)
+                .mergeFrom(value).buildPartial();
           } else {
             options_ = value;
           }
@@ -4604,8 +4172,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The explicit buckets.
        * </pre>
@@ -4629,21 +4195,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The explicit buckets.
        * </pre>
        *
        * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
        */
-      public com.google.api.Distribution.BucketOptions.Explicit.Builder
-          getExplicitBucketsBuilder() {
+      public com.google.api.Distribution.BucketOptions.Explicit.Builder getExplicitBucketsBuilder() {
         return getExplicitBucketsFieldBuilder().getBuilder();
       }
       /**
-       *
-       *
        * <pre>
        * The explicit buckets.
        * </pre>
@@ -4651,8 +4212,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
        */
       @java.lang.Override
-      public com.google.api.Distribution.BucketOptions.ExplicitOrBuilder
-          getExplicitBucketsOrBuilder() {
+      public com.google.api.Distribution.BucketOptions.ExplicitOrBuilder getExplicitBucketsOrBuilder() {
         if ((optionsCase_ == 3) && (explicitBucketsBuilder_ != null)) {
           return explicitBucketsBuilder_.getMessageOrBuilder();
         } else {
@@ -4663,8 +4223,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * The explicit buckets.
        * </pre>
@@ -4672,30 +4230,23 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        * <code>.google.api.Distribution.BucketOptions.Explicit explicit_buckets = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.api.Distribution.BucketOptions.Explicit,
-              com.google.api.Distribution.BucketOptions.Explicit.Builder,
-              com.google.api.Distribution.BucketOptions.ExplicitOrBuilder>
+          com.google.api.Distribution.BucketOptions.Explicit, com.google.api.Distribution.BucketOptions.Explicit.Builder, com.google.api.Distribution.BucketOptions.ExplicitOrBuilder> 
           getExplicitBucketsFieldBuilder() {
         if (explicitBucketsBuilder_ == null) {
           if (!(optionsCase_ == 3)) {
             options_ = com.google.api.Distribution.BucketOptions.Explicit.getDefaultInstance();
           }
-          explicitBucketsBuilder_ =
-              new com.google.protobuf.SingleFieldBuilderV3<
-                  com.google.api.Distribution.BucketOptions.Explicit,
-                  com.google.api.Distribution.BucketOptions.Explicit.Builder,
-                  com.google.api.Distribution.BucketOptions.ExplicitOrBuilder>(
+          explicitBucketsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.api.Distribution.BucketOptions.Explicit, com.google.api.Distribution.BucketOptions.Explicit.Builder, com.google.api.Distribution.BucketOptions.ExplicitOrBuilder>(
                   (com.google.api.Distribution.BucketOptions.Explicit) options_,
                   getParentForChildren(),
                   isClean());
           options_ = null;
         }
         optionsCase_ = 3;
-        onChanged();
-        ;
+        onChanged();;
         return explicitBucketsBuilder_;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4708,12 +4259,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:google.api.Distribution.BucketOptions)
     }
 
     // @@protoc_insertion_point(class_scope:google.api.Distribution.BucketOptions)
     private static final com.google.api.Distribution.BucketOptions DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.api.Distribution.BucketOptions();
     }
@@ -4722,16 +4273,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<BucketOptions> PARSER =
-        new com.google.protobuf.AbstractParser<BucketOptions>() {
-          @java.lang.Override
-          public BucketOptions parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            return new BucketOptions(input, extensionRegistry);
-          }
-        };
+    private static final com.google.protobuf.Parser<BucketOptions>
+        PARSER = new com.google.protobuf.AbstractParser<BucketOptions>() {
+      @java.lang.Override
+      public BucketOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BucketOptions(input, extensionRegistry);
+      }
+    };
 
     public static com.google.protobuf.Parser<BucketOptions> parser() {
       return PARSER;
@@ -4746,54 +4297,43 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     public com.google.api.Distribution.BucketOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
-  public interface ExemplarOrBuilder
-      extends
+  public interface ExemplarOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.api.Distribution.Exemplar)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     *
-     *
      * <pre>
      * Value of the exemplar point. This value determines to which bucket the
      * exemplar belongs.
      * </pre>
      *
      * <code>double value = 1;</code>
-     *
      * @return The value.
      */
     double getValue();
 
     /**
-     *
-     *
      * <pre>
      * The observation (sampling) time of the above value.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2;</code>
-     *
      * @return Whether the timestamp field is set.
      */
     boolean hasTimestamp();
     /**
-     *
-     *
      * <pre>
      * The observation (sampling) time of the above value.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2;</code>
-     *
      * @return The timestamp.
      */
     com.google.protobuf.Timestamp getTimestamp();
     /**
-     *
-     *
      * <pre>
      * The observation (sampling) time of the above value.
      * </pre>
@@ -4803,8 +4343,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -4817,10 +4355,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.protobuf.Any attachments = 3;</code>
      */
-    java.util.List<com.google.protobuf.Any> getAttachmentsList();
+    java.util.List<com.google.protobuf.Any> 
+        getAttachmentsList();
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -4835,8 +4372,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      */
     com.google.protobuf.Any getAttachments(int index);
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -4851,8 +4386,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      */
     int getAttachmentsCount();
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -4865,10 +4398,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.protobuf.Any attachments = 3;</code>
      */
-    java.util.List<? extends com.google.protobuf.AnyOrBuilder> getAttachmentsOrBuilderList();
+    java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getAttachmentsOrBuilderList();
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -4881,11 +4413,10 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>repeated .google.protobuf.Any attachments = 3;</code>
      */
-    com.google.protobuf.AnyOrBuilder getAttachmentsOrBuilder(int index);
+    com.google.protobuf.AnyOrBuilder getAttachmentsOrBuilder(
+        int index);
   }
   /**
-   *
-   *
    * <pre>
    * Exemplars are example points that may be used to annotate aggregated
    * distribution values. They are metadata that gives information about a
@@ -4896,31 +4427,31 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.api.Distribution.Exemplar}
    */
-  public static final class Exemplar extends com.google.protobuf.GeneratedMessageV3
-      implements
+  public static final class Exemplar extends
+      com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.api.Distribution.Exemplar)
       ExemplarOrBuilder {
-    private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
     // Use Exemplar.newBuilder() to construct.
     private Exemplar(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-
     private Exemplar() {
       attachments_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
       return new Exemplar();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
       return this.unknownFields;
     }
-
     private Exemplar(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4940,49 +4471,47 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
             case 0:
               done = true;
               break;
-            case 9:
-              {
-                value_ = input.readDouble();
-                break;
-              }
-            case 18:
-              {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (timestamp_ != null) {
-                  subBuilder = timestamp_.toBuilder();
-                }
-                timestamp_ =
-                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(timestamp_);
-                  timestamp_ = subBuilder.buildPartial();
-                }
+            case 9: {
 
-                break;
+              value_ = input.readDouble();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (timestamp_ != null) {
+                subBuilder = timestamp_.toBuilder();
               }
-            case 26:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  attachments_ = new java.util.ArrayList<com.google.protobuf.Any>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                attachments_.add(
-                    input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
-                break;
+              timestamp_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timestamp_);
+                timestamp_ = subBuilder.buildPartial();
               }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
+
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                attachments_ = new java.util.ArrayList<com.google.protobuf.Any>();
+                mutable_bitField0_ |= 0x00000001;
               }
+              attachments_.add(
+                  input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           attachments_ = java.util.Collections.unmodifiableList(attachments_);
@@ -4991,34 +4520,28 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.google.api.DistributionProto
-          .internal_static_google_api_Distribution_Exemplar_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.api.DistributionProto.internal_static_google_api_Distribution_Exemplar_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.DistributionProto
-          .internal_static_google_api_Distribution_Exemplar_fieldAccessorTable
+      return com.google.api.DistributionProto.internal_static_google_api_Distribution_Exemplar_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.api.Distribution.Exemplar.class,
-              com.google.api.Distribution.Exemplar.Builder.class);
+              com.google.api.Distribution.Exemplar.class, com.google.api.Distribution.Exemplar.Builder.class);
     }
 
     public static final int VALUE_FIELD_NUMBER = 1;
     private double value_;
     /**
-     *
-     *
      * <pre>
      * Value of the exemplar point. This value determines to which bucket the
      * exemplar belongs.
      * </pre>
      *
      * <code>double value = 1;</code>
-     *
      * @return The value.
      */
     @java.lang.Override
@@ -5029,14 +4552,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     public static final int TIMESTAMP_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp timestamp_;
     /**
-     *
-     *
      * <pre>
      * The observation (sampling) time of the above value.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2;</code>
-     *
      * @return Whether the timestamp field is set.
      */
     @java.lang.Override
@@ -5044,14 +4564,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return timestamp_ != null;
     }
     /**
-     *
-     *
      * <pre>
      * The observation (sampling) time of the above value.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 2;</code>
-     *
      * @return The timestamp.
      */
     @java.lang.Override
@@ -5059,8 +4576,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
     }
     /**
-     *
-     *
      * <pre>
      * The observation (sampling) time of the above value.
      * </pre>
@@ -5075,8 +4590,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     public static final int ATTACHMENTS_FIELD_NUMBER = 3;
     private java.util.List<com.google.protobuf.Any> attachments_;
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5094,8 +4607,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return attachments_;
     }
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5109,13 +4620,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated .google.protobuf.Any attachments = 3;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.google.protobuf.AnyOrBuilder>
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
         getAttachmentsOrBuilderList() {
       return attachments_;
     }
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5133,8 +4642,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return attachments_.size();
     }
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5152,8 +4659,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return attachments_.get(index);
     }
     /**
-     *
-     *
      * <pre>
      * Contextual information about the example value. Examples are:
      *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5167,12 +4672,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated .google.protobuf.Any attachments = 3;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.AnyOrBuilder getAttachmentsOrBuilder(int index) {
+    public com.google.protobuf.AnyOrBuilder getAttachmentsOrBuilder(
+        int index) {
       return attachments_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
-
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -5184,7 +4689,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
       if (value_ != 0D) {
         output.writeDouble(1, value_);
       }
@@ -5204,13 +4710,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
       size = 0;
       if (value_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream.computeDoubleSize(1, value_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, value_);
       }
       if (timestamp_ != null) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getTimestamp());
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTimestamp());
       }
       for (int i = 0; i < attachments_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, attachments_.get(i));
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, attachments_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5220,7 +4729,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.google.api.Distribution.Exemplar)) {
         return super.equals(obj);
@@ -5228,12 +4737,15 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       com.google.api.Distribution.Exemplar other = (com.google.api.Distribution.Exemplar) obj;
 
       if (java.lang.Double.doubleToLongBits(getValue())
-          != java.lang.Double.doubleToLongBits(other.getValue())) return false;
+          != java.lang.Double.doubleToLongBits(
+              other.getValue())) return false;
       if (hasTimestamp() != other.hasTimestamp()) return false;
       if (hasTimestamp()) {
-        if (!getTimestamp().equals(other.getTimestamp())) return false;
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
       }
-      if (!getAttachmentsList().equals(other.getAttachmentsList())) return false;
+      if (!getAttachmentsList()
+          .equals(other.getAttachmentsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5246,10 +4758,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash =
-          (53 * hash)
-              + com.google.protobuf.Internal.hashLong(
-                  java.lang.Double.doubleToLongBits(getValue()));
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getValue()));
       if (hasTimestamp()) {
         hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
         hash = (53 * hash) + getTimestamp().hashCode();
@@ -5263,94 +4773,88 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return hash;
     }
 
-    public static com.google.api.Distribution.Exemplar parseFrom(java.nio.ByteBuffer data)
+    public static com.google.api.Distribution.Exemplar parseFrom(
+        java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Distribution.Exemplar parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Distribution.Exemplar parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Distribution.Exemplar parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Distribution.Exemplar parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.google.api.Distribution.Exemplar parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
     public static com.google.api.Distribution.Exemplar parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.api.Distribution.Exemplar parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.api.Distribution.Exemplar parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.google.api.Distribution.Exemplar parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.google.api.Distribution.Exemplar parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
     }
-
     public static com.google.api.Distribution.Exemplar parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
+    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-
     public static Builder newBuilder(com.google.api.Distribution.Exemplar prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -5360,8 +4864,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return builder;
     }
     /**
-     *
-     *
      * <pre>
      * Exemplars are example points that may be used to annotate aggregated
      * distribution values. They are metadata that gives information about a
@@ -5372,24 +4874,21 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      *
      * Protobuf type {@code google.api.Distribution.Exemplar}
      */
-    public static final class Builder
-        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-        implements
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:google.api.Distribution.Exemplar)
         com.google.api.Distribution.ExemplarOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_Exemplar_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_Exemplar_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_Exemplar_fieldAccessorTable
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_Exemplar_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.api.Distribution.Exemplar.class,
-                com.google.api.Distribution.Exemplar.Builder.class);
+                com.google.api.Distribution.Exemplar.class, com.google.api.Distribution.Exemplar.Builder.class);
       }
 
       // Construct using com.google.api.Distribution.Exemplar.newBuilder()
@@ -5397,17 +4896,17 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
           getAttachmentsFieldBuilder();
         }
       }
-
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -5429,9 +4928,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.google.api.DistributionProto
-            .internal_static_google_api_Distribution_Exemplar_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.api.DistributionProto.internal_static_google_api_Distribution_Exemplar_descriptor;
       }
 
       @java.lang.Override
@@ -5450,8 +4949,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
       @java.lang.Override
       public com.google.api.Distribution.Exemplar buildPartial() {
-        com.google.api.Distribution.Exemplar result =
-            new com.google.api.Distribution.Exemplar(this);
+        com.google.api.Distribution.Exemplar result = new com.google.api.Distribution.Exemplar(this);
         int from_bitField0_ = bitField0_;
         result.value_ = value_;
         if (timestampBuilder_ == null) {
@@ -5476,41 +4974,38 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       public Builder clone() {
         return super.clone();
       }
-
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-
       @java.lang.Override
-      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-
       @java.lang.Override
-      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index,
-          java.lang.Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.api.Distribution.Exemplar) {
-          return mergeFrom((com.google.api.Distribution.Exemplar) other);
+          return mergeFrom((com.google.api.Distribution.Exemplar)other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -5543,10 +5038,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
               attachmentsBuilder_ = null;
               attachments_ = other.attachments_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              attachmentsBuilder_ =
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                      ? getAttachmentsFieldBuilder()
-                      : null;
+              attachmentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttachmentsFieldBuilder() : null;
             } else {
               attachmentsBuilder_.addAllMessages(other.attachments_);
             }
@@ -5580,20 +5074,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
         return this;
       }
-
       private int bitField0_;
 
-      private double value_;
+      private double value_ ;
       /**
-       *
-       *
        * <pre>
        * Value of the exemplar point. This value determines to which bucket the
        * exemplar belongs.
        * </pre>
        *
        * <code>double value = 1;</code>
-       *
        * @return The value.
        */
       @java.lang.Override
@@ -5601,38 +5091,32 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return value_;
       }
       /**
-       *
-       *
        * <pre>
        * Value of the exemplar point. This value determines to which bucket the
        * exemplar belongs.
        * </pre>
        *
        * <code>double value = 1;</code>
-       *
        * @param value The value to set.
        * @return This builder for chaining.
        */
       public Builder setValue(double value) {
-
+        
         value_ = value;
         onChanged();
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Value of the exemplar point. This value determines to which bucket the
        * exemplar belongs.
        * </pre>
        *
        * <code>double value = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-
+        
         value_ = 0D;
         onChanged();
         return this;
@@ -5640,47 +5124,34 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
       private com.google.protobuf.Timestamp timestamp_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp,
-              com.google.protobuf.Timestamp.Builder,
-              com.google.protobuf.TimestampOrBuilder>
-          timestampBuilder_;
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
-       *
-       *
        * <pre>
        * The observation (sampling) time of the above value.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2;</code>
-       *
        * @return Whether the timestamp field is set.
        */
       public boolean hasTimestamp() {
         return timestampBuilder_ != null || timestamp_ != null;
       }
       /**
-       *
-       *
        * <pre>
        * The observation (sampling) time of the above value.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2;</code>
-       *
        * @return The timestamp.
        */
       public com.google.protobuf.Timestamp getTimestamp() {
         if (timestampBuilder_ == null) {
-          return timestamp_ == null
-              ? com.google.protobuf.Timestamp.getDefaultInstance()
-              : timestamp_;
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
         } else {
           return timestampBuilder_.getMessage();
         }
       }
       /**
-       *
-       *
        * <pre>
        * The observation (sampling) time of the above value.
        * </pre>
@@ -5701,15 +5172,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The observation (sampling) time of the above value.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 2;</code>
        */
-      public Builder setTimestamp(com.google.protobuf.Timestamp.Builder builderForValue) {
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
         if (timestampBuilder_ == null) {
           timestamp_ = builderForValue.build();
           onChanged();
@@ -5720,8 +5190,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The observation (sampling) time of the above value.
        * </pre>
@@ -5732,9 +5200,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         if (timestampBuilder_ == null) {
           if (timestamp_ != null) {
             timestamp_ =
-                com.google.protobuf.Timestamp.newBuilder(timestamp_)
-                    .mergeFrom(value)
-                    .buildPartial();
+              com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
           } else {
             timestamp_ = value;
           }
@@ -5746,8 +5212,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The observation (sampling) time of the above value.
        * </pre>
@@ -5766,8 +5230,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * The observation (sampling) time of the above value.
        * </pre>
@@ -5775,13 +5237,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        * <code>.google.protobuf.Timestamp timestamp = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
-
+        
         onChanged();
         return getTimestampFieldBuilder().getBuilder();
       }
       /**
-       *
-       *
        * <pre>
        * The observation (sampling) time of the above value.
        * </pre>
@@ -5792,14 +5252,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         if (timestampBuilder_ != null) {
           return timestampBuilder_.getMessageOrBuilder();
         } else {
-          return timestamp_ == null
-              ? com.google.protobuf.Timestamp.getDefaultInstance()
-              : timestamp_;
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
         }
       }
       /**
-       *
-       *
        * <pre>
        * The observation (sampling) time of the above value.
        * </pre>
@@ -5807,41 +5264,32 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        * <code>.google.protobuf.Timestamp timestamp = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp,
-              com.google.protobuf.Timestamp.Builder,
-              com.google.protobuf.TimestampOrBuilder>
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
           getTimestampFieldBuilder() {
         if (timestampBuilder_ == null) {
-          timestampBuilder_ =
-              new com.google.protobuf.SingleFieldBuilderV3<
-                  com.google.protobuf.Timestamp,
-                  com.google.protobuf.Timestamp.Builder,
-                  com.google.protobuf.TimestampOrBuilder>(
-                  getTimestamp(), getParentForChildren(), isClean());
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
           timestamp_ = null;
         }
         return timestampBuilder_;
       }
 
       private java.util.List<com.google.protobuf.Any> attachments_ =
-          java.util.Collections.emptyList();
-
+        java.util.Collections.emptyList();
       private void ensureAttachmentsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           attachments_ = new java.util.ArrayList<com.google.protobuf.Any>(attachments_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.Any,
-              com.google.protobuf.Any.Builder,
-              com.google.protobuf.AnyOrBuilder>
-          attachmentsBuilder_;
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> attachmentsBuilder_;
 
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5862,8 +5310,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5884,8 +5330,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5906,8 +5350,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5920,7 +5362,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public Builder setAttachments(int index, com.google.protobuf.Any value) {
+      public Builder setAttachments(
+          int index, com.google.protobuf.Any value) {
         if (attachmentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5934,8 +5377,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5948,7 +5389,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public Builder setAttachments(int index, com.google.protobuf.Any.Builder builderForValue) {
+      public Builder setAttachments(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
         if (attachmentsBuilder_ == null) {
           ensureAttachmentsIsMutable();
           attachments_.set(index, builderForValue.build());
@@ -5959,8 +5401,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -5987,8 +5427,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6001,7 +5439,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public Builder addAttachments(int index, com.google.protobuf.Any value) {
+      public Builder addAttachments(
+          int index, com.google.protobuf.Any value) {
         if (attachmentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6015,8 +5454,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6029,7 +5466,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public Builder addAttachments(com.google.protobuf.Any.Builder builderForValue) {
+      public Builder addAttachments(
+          com.google.protobuf.Any.Builder builderForValue) {
         if (attachmentsBuilder_ == null) {
           ensureAttachmentsIsMutable();
           attachments_.add(builderForValue.build());
@@ -6040,8 +5478,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6054,7 +5490,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public Builder addAttachments(int index, com.google.protobuf.Any.Builder builderForValue) {
+      public Builder addAttachments(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
         if (attachmentsBuilder_ == null) {
           ensureAttachmentsIsMutable();
           attachments_.add(index, builderForValue.build());
@@ -6065,8 +5502,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6083,7 +5518,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
           java.lang.Iterable<? extends com.google.protobuf.Any> values) {
         if (attachmentsBuilder_ == null) {
           ensureAttachmentsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(values, attachments_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attachments_);
           onChanged();
         } else {
           attachmentsBuilder_.addAllMessages(values);
@@ -6091,8 +5527,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6116,8 +5550,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6141,8 +5573,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6155,12 +5585,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public com.google.protobuf.Any.Builder getAttachmentsBuilder(int index) {
+      public com.google.protobuf.Any.Builder getAttachmentsBuilder(
+          int index) {
         return getAttachmentsFieldBuilder().getBuilder(index);
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6173,16 +5602,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public com.google.protobuf.AnyOrBuilder getAttachmentsOrBuilder(int index) {
+      public com.google.protobuf.AnyOrBuilder getAttachmentsOrBuilder(
+          int index) {
         if (attachmentsBuilder_ == null) {
-          return attachments_.get(index);
-        } else {
+          return attachments_.get(index);  } else {
           return attachmentsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6195,8 +5622,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public java.util.List<? extends com.google.protobuf.AnyOrBuilder>
-          getAttachmentsOrBuilderList() {
+      public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+           getAttachmentsOrBuilderList() {
         if (attachmentsBuilder_ != null) {
           return attachmentsBuilder_.getMessageOrBuilderList();
         } else {
@@ -6204,8 +5631,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6219,12 +5644,10 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
       public com.google.protobuf.Any.Builder addAttachmentsBuilder() {
-        return getAttachmentsFieldBuilder()
-            .addBuilder(com.google.protobuf.Any.getDefaultInstance());
+        return getAttachmentsFieldBuilder().addBuilder(
+            com.google.protobuf.Any.getDefaultInstance());
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6237,13 +5660,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public com.google.protobuf.Any.Builder addAttachmentsBuilder(int index) {
-        return getAttachmentsFieldBuilder()
-            .addBuilder(index, com.google.protobuf.Any.getDefaultInstance());
+      public com.google.protobuf.Any.Builder addAttachmentsBuilder(
+          int index) {
+        return getAttachmentsFieldBuilder().addBuilder(
+            index, com.google.protobuf.Any.getDefaultInstance());
       }
       /**
-       *
-       *
        * <pre>
        * Contextual information about the example value. Examples are:
        *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
@@ -6256,21 +5678,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
        *
        * <code>repeated .google.protobuf.Any attachments = 3;</code>
        */
-      public java.util.List<com.google.protobuf.Any.Builder> getAttachmentsBuilderList() {
+      public java.util.List<com.google.protobuf.Any.Builder> 
+           getAttachmentsBuilderList() {
         return getAttachmentsFieldBuilder().getBuilderList();
       }
-
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.Any,
-              com.google.protobuf.Any.Builder,
-              com.google.protobuf.AnyOrBuilder>
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
           getAttachmentsFieldBuilder() {
         if (attachmentsBuilder_ == null) {
-          attachmentsBuilder_ =
-              new com.google.protobuf.RepeatedFieldBuilderV3<
-                  com.google.protobuf.Any,
-                  com.google.protobuf.Any.Builder,
-                  com.google.protobuf.AnyOrBuilder>(
+          attachmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
                   attachments_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -6279,7 +5696,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         }
         return attachmentsBuilder_;
       }
-
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6292,12 +5708,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         return super.mergeUnknownFields(unknownFields);
       }
 
+
       // @@protoc_insertion_point(builder_scope:google.api.Distribution.Exemplar)
     }
 
     // @@protoc_insertion_point(class_scope:google.api.Distribution.Exemplar)
     private static final com.google.api.Distribution.Exemplar DEFAULT_INSTANCE;
-
     static {
       DEFAULT_INSTANCE = new com.google.api.Distribution.Exemplar();
     }
@@ -6306,16 +5722,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Exemplar> PARSER =
-        new com.google.protobuf.AbstractParser<Exemplar>() {
-          @java.lang.Override
-          public Exemplar parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Exemplar(input, extensionRegistry);
-          }
-        };
+    private static final com.google.protobuf.Parser<Exemplar>
+        PARSER = new com.google.protobuf.AbstractParser<Exemplar>() {
+      @java.lang.Override
+      public Exemplar parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Exemplar(input, extensionRegistry);
+      }
+    };
 
     public static com.google.protobuf.Parser<Exemplar> parser() {
       return PARSER;
@@ -6330,13 +5746,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     public com.google.api.Distribution.Exemplar getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+
   }
 
   public static final int COUNT_FIELD_NUMBER = 1;
   private long count_;
   /**
-   *
-   *
    * <pre>
    * The number of values in the population. Must be non-negative. This value
    * must equal the sum of the values in `bucket_counts` if a histogram is
@@ -6344,7 +5759,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>int64 count = 1;</code>
-   *
    * @return The count.
    */
   @java.lang.Override
@@ -6355,15 +5769,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
   public static final int MEAN_FIELD_NUMBER = 2;
   private double mean_;
   /**
-   *
-   *
    * <pre>
    * The arithmetic mean of the values in the population. If `count` is zero
    * then this field must be zero.
    * </pre>
    *
    * <code>double mean = 2;</code>
-   *
    * @return The mean.
    */
   @java.lang.Override
@@ -6374,8 +5785,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
   public static final int SUM_OF_SQUARED_DEVIATION_FIELD_NUMBER = 3;
   private double sumOfSquaredDeviation_;
   /**
-   *
-   *
    * <pre>
    * The sum of squared deviations from the mean of the values in the
    * population. For values x_i this is:
@@ -6386,7 +5795,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>double sum_of_squared_deviation = 3;</code>
-   *
    * @return The sumOfSquaredDeviation.
    */
   @java.lang.Override
@@ -6397,15 +5805,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
   public static final int RANGE_FIELD_NUMBER = 4;
   private com.google.api.Distribution.Range range_;
   /**
-   *
-   *
    * <pre>
    * If specified, contains the range of the population values. The field
    * must not be present if the `count` is zero.
    * </pre>
    *
    * <code>.google.api.Distribution.Range range = 4;</code>
-   *
    * @return Whether the range field is set.
    */
   @java.lang.Override
@@ -6413,15 +5818,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     return range_ != null;
   }
   /**
-   *
-   *
    * <pre>
    * If specified, contains the range of the population values. The field
    * must not be present if the `count` is zero.
    * </pre>
    *
    * <code>.google.api.Distribution.Range range = 4;</code>
-   *
    * @return The range.
    */
   @java.lang.Override
@@ -6429,8 +5831,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     return range_ == null ? com.google.api.Distribution.Range.getDefaultInstance() : range_;
   }
   /**
-   *
-   *
    * <pre>
    * If specified, contains the range of the population values. The field
    * must not be present if the `count` is zero.
@@ -6446,15 +5846,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
   public static final int BUCKET_OPTIONS_FIELD_NUMBER = 6;
   private com.google.api.Distribution.BucketOptions bucketOptions_;
   /**
-   *
-   *
    * <pre>
    * Defines the histogram bucket boundaries. If the distribution does not
    * contain a histogram, then omit this field.
    * </pre>
    *
    * <code>.google.api.Distribution.BucketOptions bucket_options = 6;</code>
-   *
    * @return Whether the bucketOptions field is set.
    */
   @java.lang.Override
@@ -6462,26 +5859,19 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     return bucketOptions_ != null;
   }
   /**
-   *
-   *
    * <pre>
    * Defines the histogram bucket boundaries. If the distribution does not
    * contain a histogram, then omit this field.
    * </pre>
    *
    * <code>.google.api.Distribution.BucketOptions bucket_options = 6;</code>
-   *
    * @return The bucketOptions.
    */
   @java.lang.Override
   public com.google.api.Distribution.BucketOptions getBucketOptions() {
-    return bucketOptions_ == null
-        ? com.google.api.Distribution.BucketOptions.getDefaultInstance()
-        : bucketOptions_;
+    return bucketOptions_ == null ? com.google.api.Distribution.BucketOptions.getDefaultInstance() : bucketOptions_;
   }
   /**
-   *
-   *
    * <pre>
    * Defines the histogram bucket boundaries. If the distribution does not
    * contain a histogram, then omit this field.
@@ -6497,8 +5887,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
   public static final int BUCKET_COUNTS_FIELD_NUMBER = 7;
   private com.google.protobuf.Internal.LongList bucketCounts_;
   /**
-   *
-   *
    * <pre>
    * The number of values in each bucket of the histogram, as described in
    * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -6516,16 +5904,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>repeated int64 bucket_counts = 7;</code>
-   *
    * @return A list containing the bucketCounts.
    */
   @java.lang.Override
-  public java.util.List<java.lang.Long> getBucketCountsList() {
+  public java.util.List<java.lang.Long>
+      getBucketCountsList() {
     return bucketCounts_;
   }
   /**
-   *
-   *
    * <pre>
    * The number of values in each bucket of the histogram, as described in
    * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -6543,15 +5929,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>repeated int64 bucket_counts = 7;</code>
-   *
    * @return The count of bucketCounts.
    */
   public int getBucketCountsCount() {
     return bucketCounts_.size();
   }
   /**
-   *
-   *
    * <pre>
    * The number of values in each bucket of the histogram, as described in
    * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -6569,21 +5952,17 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    * </pre>
    *
    * <code>repeated int64 bucket_counts = 7;</code>
-   *
    * @param index The index of the element to return.
    * @return The bucketCounts at the given index.
    */
   public long getBucketCounts(int index) {
     return bucketCounts_.getLong(index);
   }
-
   private int bucketCountsMemoizedSerializedSize = -1;
 
   public static final int EXEMPLARS_FIELD_NUMBER = 10;
   private java.util.List<com.google.api.Distribution.Exemplar> exemplars_;
   /**
-   *
-   *
    * <pre>
    * Must be in increasing order of `value` field.
    * </pre>
@@ -6595,8 +5974,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     return exemplars_;
   }
   /**
-   *
-   *
    * <pre>
    * Must be in increasing order of `value` field.
    * </pre>
@@ -6604,13 +5981,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.Distribution.ExemplarOrBuilder>
+  public java.util.List<? extends com.google.api.Distribution.ExemplarOrBuilder> 
       getExemplarsOrBuilderList() {
     return exemplars_;
   }
   /**
-   *
-   *
    * <pre>
    * Must be in increasing order of `value` field.
    * </pre>
@@ -6622,8 +5997,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     return exemplars_.size();
   }
   /**
-   *
-   *
    * <pre>
    * Must be in increasing order of `value` field.
    * </pre>
@@ -6635,8 +6008,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     return exemplars_.get(index);
   }
   /**
-   *
-   *
    * <pre>
    * Must be in increasing order of `value` field.
    * </pre>
@@ -6644,12 +6015,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
    */
   @java.lang.Override
-  public com.google.api.Distribution.ExemplarOrBuilder getExemplarsOrBuilder(int index) {
+  public com.google.api.Distribution.ExemplarOrBuilder getExemplarsOrBuilder(
+      int index) {
     return exemplars_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -6661,7 +6032,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output)
+                      throws java.io.IOException {
     getSerializedSize();
     if (count_ != 0L) {
       output.writeInt64(1, count_);
@@ -6698,35 +6070,42 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
     size = 0;
     if (count_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, count_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, count_);
     }
     if (mean_ != 0D) {
-      size += com.google.protobuf.CodedOutputStream.computeDoubleSize(2, mean_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(2, mean_);
     }
     if (sumOfSquaredDeviation_ != 0D) {
-      size += com.google.protobuf.CodedOutputStream.computeDoubleSize(3, sumOfSquaredDeviation_);
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(3, sumOfSquaredDeviation_);
     }
     if (range_ != null) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getRange());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getRange());
     }
     if (bucketOptions_ != null) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, getBucketOptions());
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getBucketOptions());
     }
     {
       int dataSize = 0;
       for (int i = 0; i < bucketCounts_.size(); i++) {
-        dataSize +=
-            com.google.protobuf.CodedOutputStream.computeInt64SizeNoTag(bucketCounts_.getLong(i));
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(bucketCounts_.getLong(i));
       }
       size += dataSize;
       if (!getBucketCountsList().isEmpty()) {
         size += 1;
-        size += com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(dataSize);
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
       }
       bucketCountsMemoizedSerializedSize = dataSize;
     }
     for (int i = 0; i < exemplars_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(10, exemplars_.get(i));
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, exemplars_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -6736,28 +6115,35 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.api.Distribution)) {
       return super.equals(obj);
     }
     com.google.api.Distribution other = (com.google.api.Distribution) obj;
 
-    if (getCount() != other.getCount()) return false;
+    if (getCount()
+        != other.getCount()) return false;
     if (java.lang.Double.doubleToLongBits(getMean())
-        != java.lang.Double.doubleToLongBits(other.getMean())) return false;
+        != java.lang.Double.doubleToLongBits(
+            other.getMean())) return false;
     if (java.lang.Double.doubleToLongBits(getSumOfSquaredDeviation())
-        != java.lang.Double.doubleToLongBits(other.getSumOfSquaredDeviation())) return false;
+        != java.lang.Double.doubleToLongBits(
+            other.getSumOfSquaredDeviation())) return false;
     if (hasRange() != other.hasRange()) return false;
     if (hasRange()) {
-      if (!getRange().equals(other.getRange())) return false;
+      if (!getRange()
+          .equals(other.getRange())) return false;
     }
     if (hasBucketOptions() != other.hasBucketOptions()) return false;
     if (hasBucketOptions()) {
-      if (!getBucketOptions().equals(other.getBucketOptions())) return false;
+      if (!getBucketOptions()
+          .equals(other.getBucketOptions())) return false;
     }
-    if (!getBucketCountsList().equals(other.getBucketCountsList())) return false;
-    if (!getExemplarsList().equals(other.getExemplarsList())) return false;
+    if (!getBucketCountsList()
+        .equals(other.getBucketCountsList())) return false;
+    if (!getExemplarsList()
+        .equals(other.getExemplarsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -6770,16 +6156,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + COUNT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getCount());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCount());
     hash = (37 * hash) + MEAN_FIELD_NUMBER;
-    hash =
-        (53 * hash)
-            + com.google.protobuf.Internal.hashLong(java.lang.Double.doubleToLongBits(getMean()));
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getMean()));
     hash = (37 * hash) + SUM_OF_SQUARED_DEVIATION_FIELD_NUMBER;
-    hash =
-        (53 * hash)
-            + com.google.protobuf.Internal.hashLong(
-                java.lang.Double.doubleToLongBits(getSumOfSquaredDeviation()));
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getSumOfSquaredDeviation()));
     if (hasRange()) {
       hash = (37 * hash) + RANGE_FIELD_NUMBER;
       hash = (53 * hash) + getRange().hashCode();
@@ -6801,103 +6185,97 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     return hash;
   }
 
-  public static com.google.api.Distribution parseFrom(java.nio.ByteBuffer data)
+  public static com.google.api.Distribution parseFrom(
+      java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Distribution parseFrom(
-      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.api.Distribution parseFrom(com.google.protobuf.ByteString data)
+  public static com.google.api.Distribution parseFrom(
+      com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Distribution parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.Distribution parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.api.Distribution parseFrom(
-      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.api.Distribution parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.Distribution parseFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.api.Distribution parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.api.Distribution parseDelimitedFrom(
-      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.api.Distribution parseFrom(com.google.protobuf.CodedInputStream input)
+  public static com.google.api.Distribution parseFrom(
+      com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
   }
-
   public static com.google.api.Distribution parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-        PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
   public static Builder newBuilder(com.google.api.Distribution prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE
+        ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
-   *
-   *
    * <pre>
    * `Distribution` contains summary statistics for a population of values. It
    * optionally contains a histogram representing the distribution of those values
@@ -6915,19 +6293,19 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
    *
    * Protobuf type {@code google.api.Distribution}
    */
-  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-      implements
+  public static final class Builder extends
+      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.api.Distribution)
       com.google.api.DistributionOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.google.api.DistributionProto.internal_static_google_api_Distribution_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.DistributionProto
-          .internal_static_google_api_Distribution_fieldAccessorTable
+      return com.google.api.DistributionProto.internal_static_google_api_Distribution_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.api.Distribution.class, com.google.api.Distribution.Builder.class);
     }
@@ -6937,17 +6315,17 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       maybeForceBuilderInitialization();
     }
 
-    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
         getExemplarsFieldBuilder();
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -6981,7 +6359,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor
+        getDescriptorForType() {
       return com.google.api.DistributionProto.internal_static_google_api_Distribution_descriptor;
     }
 
@@ -7038,39 +6417,38 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
-    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
-    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Distribution) {
-        return mergeFrom((com.google.api.Distribution) other);
+        return mergeFrom((com.google.api.Distribution)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -7122,10 +6500,9 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
             exemplarsBuilder_ = null;
             exemplars_ = other.exemplars_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            exemplarsBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getExemplarsFieldBuilder()
-                    : null;
+            exemplarsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getExemplarsFieldBuilder() : null;
           } else {
             exemplarsBuilder_.addAllMessages(other.exemplars_);
           }
@@ -7159,13 +6536,10 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
-
     private int bitField0_;
 
-    private long count_;
+    private long count_ ;
     /**
-     *
-     *
      * <pre>
      * The number of values in the population. Must be non-negative. This value
      * must equal the sum of the values in `bucket_counts` if a histogram is
@@ -7173,7 +6547,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 count = 1;</code>
-     *
      * @return The count.
      */
     @java.lang.Override
@@ -7181,8 +6554,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return count_;
     }
     /**
-     *
-     *
      * <pre>
      * The number of values in the population. Must be non-negative. This value
      * must equal the sum of the values in `bucket_counts` if a histogram is
@@ -7190,19 +6561,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 count = 1;</code>
-     *
      * @param value The count to set.
      * @return This builder for chaining.
      */
     public Builder setCount(long value) {
-
+      
       count_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The number of values in the population. Must be non-negative. This value
      * must equal the sum of the values in `bucket_counts` if a histogram is
@@ -7210,27 +6578,23 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>int64 count = 1;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearCount() {
-
+      
       count_ = 0L;
       onChanged();
       return this;
     }
 
-    private double mean_;
+    private double mean_ ;
     /**
-     *
-     *
      * <pre>
      * The arithmetic mean of the values in the population. If `count` is zero
      * then this field must be zero.
      * </pre>
      *
      * <code>double mean = 2;</code>
-     *
      * @return The mean.
      */
     @java.lang.Override
@@ -7238,47 +6602,39 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return mean_;
     }
     /**
-     *
-     *
      * <pre>
      * The arithmetic mean of the values in the population. If `count` is zero
      * then this field must be zero.
      * </pre>
      *
      * <code>double mean = 2;</code>
-     *
      * @param value The mean to set.
      * @return This builder for chaining.
      */
     public Builder setMean(double value) {
-
+      
       mean_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The arithmetic mean of the values in the population. If `count` is zero
      * then this field must be zero.
      * </pre>
      *
      * <code>double mean = 2;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearMean() {
-
+      
       mean_ = 0D;
       onChanged();
       return this;
     }
 
-    private double sumOfSquaredDeviation_;
+    private double sumOfSquaredDeviation_ ;
     /**
-     *
-     *
      * <pre>
      * The sum of squared deviations from the mean of the values in the
      * population. For values x_i this is:
@@ -7289,7 +6645,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>double sum_of_squared_deviation = 3;</code>
-     *
      * @return The sumOfSquaredDeviation.
      */
     @java.lang.Override
@@ -7297,8 +6652,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return sumOfSquaredDeviation_;
     }
     /**
-     *
-     *
      * <pre>
      * The sum of squared deviations from the mean of the values in the
      * population. For values x_i this is:
@@ -7309,19 +6662,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>double sum_of_squared_deviation = 3;</code>
-     *
      * @param value The sumOfSquaredDeviation to set.
      * @return This builder for chaining.
      */
     public Builder setSumOfSquaredDeviation(double value) {
-
+      
       sumOfSquaredDeviation_ = value;
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The sum of squared deviations from the mean of the values in the
      * population. For values x_i this is:
@@ -7332,11 +6682,10 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>double sum_of_squared_deviation = 3;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearSumOfSquaredDeviation() {
-
+      
       sumOfSquaredDeviation_ = 0D;
       onChanged();
       return this;
@@ -7344,35 +6693,26 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
     private com.google.api.Distribution.Range range_;
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.api.Distribution.Range,
-            com.google.api.Distribution.Range.Builder,
-            com.google.api.Distribution.RangeOrBuilder>
-        rangeBuilder_;
+        com.google.api.Distribution.Range, com.google.api.Distribution.Range.Builder, com.google.api.Distribution.RangeOrBuilder> rangeBuilder_;
     /**
-     *
-     *
      * <pre>
      * If specified, contains the range of the population values. The field
      * must not be present if the `count` is zero.
      * </pre>
      *
      * <code>.google.api.Distribution.Range range = 4;</code>
-     *
      * @return Whether the range field is set.
      */
     public boolean hasRange() {
       return rangeBuilder_ != null || range_ != null;
     }
     /**
-     *
-     *
      * <pre>
      * If specified, contains the range of the population values. The field
      * must not be present if the `count` is zero.
      * </pre>
      *
      * <code>.google.api.Distribution.Range range = 4;</code>
-     *
      * @return The range.
      */
     public com.google.api.Distribution.Range getRange() {
@@ -7383,8 +6723,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * If specified, contains the range of the population values. The field
      * must not be present if the `count` is zero.
@@ -7406,8 +6744,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * If specified, contains the range of the population values. The field
      * must not be present if the `count` is zero.
@@ -7415,7 +6751,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>.google.api.Distribution.Range range = 4;</code>
      */
-    public Builder setRange(com.google.api.Distribution.Range.Builder builderForValue) {
+    public Builder setRange(
+        com.google.api.Distribution.Range.Builder builderForValue) {
       if (rangeBuilder_ == null) {
         range_ = builderForValue.build();
         onChanged();
@@ -7426,8 +6763,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * If specified, contains the range of the population values. The field
      * must not be present if the `count` is zero.
@@ -7439,7 +6774,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       if (rangeBuilder_ == null) {
         if (range_ != null) {
           range_ =
-              com.google.api.Distribution.Range.newBuilder(range_).mergeFrom(value).buildPartial();
+            com.google.api.Distribution.Range.newBuilder(range_).mergeFrom(value).buildPartial();
         } else {
           range_ = value;
         }
@@ -7451,8 +6786,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * If specified, contains the range of the population values. The field
      * must not be present if the `count` is zero.
@@ -7472,8 +6805,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * If specified, contains the range of the population values. The field
      * must not be present if the `count` is zero.
@@ -7482,13 +6813,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.api.Distribution.Range range = 4;</code>
      */
     public com.google.api.Distribution.Range.Builder getRangeBuilder() {
-
+      
       onChanged();
       return getRangeFieldBuilder().getBuilder();
     }
     /**
-     *
-     *
      * <pre>
      * If specified, contains the range of the population values. The field
      * must not be present if the `count` is zero.
@@ -7500,12 +6829,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       if (rangeBuilder_ != null) {
         return rangeBuilder_.getMessageOrBuilder();
       } else {
-        return range_ == null ? com.google.api.Distribution.Range.getDefaultInstance() : range_;
+        return range_ == null ?
+            com.google.api.Distribution.Range.getDefaultInstance() : range_;
       }
     }
     /**
-     *
-     *
      * <pre>
      * If specified, contains the range of the population values. The field
      * must not be present if the `count` is zero.
@@ -7514,17 +6842,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.api.Distribution.Range range = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.api.Distribution.Range,
-            com.google.api.Distribution.Range.Builder,
-            com.google.api.Distribution.RangeOrBuilder>
+        com.google.api.Distribution.Range, com.google.api.Distribution.Range.Builder, com.google.api.Distribution.RangeOrBuilder> 
         getRangeFieldBuilder() {
       if (rangeBuilder_ == null) {
-        rangeBuilder_ =
-            new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.api.Distribution.Range,
-                com.google.api.Distribution.Range.Builder,
-                com.google.api.Distribution.RangeOrBuilder>(
-                getRange(), getParentForChildren(), isClean());
+        rangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.api.Distribution.Range, com.google.api.Distribution.Range.Builder, com.google.api.Distribution.RangeOrBuilder>(
+                getRange(),
+                getParentForChildren(),
+                isClean());
         range_ = null;
       }
       return rangeBuilder_;
@@ -7532,49 +6857,36 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
 
     private com.google.api.Distribution.BucketOptions bucketOptions_;
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.api.Distribution.BucketOptions,
-            com.google.api.Distribution.BucketOptions.Builder,
-            com.google.api.Distribution.BucketOptionsOrBuilder>
-        bucketOptionsBuilder_;
+        com.google.api.Distribution.BucketOptions, com.google.api.Distribution.BucketOptions.Builder, com.google.api.Distribution.BucketOptionsOrBuilder> bucketOptionsBuilder_;
     /**
-     *
-     *
      * <pre>
      * Defines the histogram bucket boundaries. If the distribution does not
      * contain a histogram, then omit this field.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions bucket_options = 6;</code>
-     *
      * @return Whether the bucketOptions field is set.
      */
     public boolean hasBucketOptions() {
       return bucketOptionsBuilder_ != null || bucketOptions_ != null;
     }
     /**
-     *
-     *
      * <pre>
      * Defines the histogram bucket boundaries. If the distribution does not
      * contain a histogram, then omit this field.
      * </pre>
      *
      * <code>.google.api.Distribution.BucketOptions bucket_options = 6;</code>
-     *
      * @return The bucketOptions.
      */
     public com.google.api.Distribution.BucketOptions getBucketOptions() {
       if (bucketOptionsBuilder_ == null) {
-        return bucketOptions_ == null
-            ? com.google.api.Distribution.BucketOptions.getDefaultInstance()
-            : bucketOptions_;
+        return bucketOptions_ == null ? com.google.api.Distribution.BucketOptions.getDefaultInstance() : bucketOptions_;
       } else {
         return bucketOptionsBuilder_.getMessage();
       }
     }
     /**
-     *
-     *
      * <pre>
      * Defines the histogram bucket boundaries. If the distribution does not
      * contain a histogram, then omit this field.
@@ -7596,8 +6908,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines the histogram bucket boundaries. If the distribution does not
      * contain a histogram, then omit this field.
@@ -7617,8 +6927,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines the histogram bucket boundaries. If the distribution does not
      * contain a histogram, then omit this field.
@@ -7630,9 +6938,7 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       if (bucketOptionsBuilder_ == null) {
         if (bucketOptions_ != null) {
           bucketOptions_ =
-              com.google.api.Distribution.BucketOptions.newBuilder(bucketOptions_)
-                  .mergeFrom(value)
-                  .buildPartial();
+            com.google.api.Distribution.BucketOptions.newBuilder(bucketOptions_).mergeFrom(value).buildPartial();
         } else {
           bucketOptions_ = value;
         }
@@ -7644,8 +6950,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines the histogram bucket boundaries. If the distribution does not
      * contain a histogram, then omit this field.
@@ -7665,8 +6969,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Defines the histogram bucket boundaries. If the distribution does not
      * contain a histogram, then omit this field.
@@ -7675,13 +6977,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.api.Distribution.BucketOptions bucket_options = 6;</code>
      */
     public com.google.api.Distribution.BucketOptions.Builder getBucketOptionsBuilder() {
-
+      
       onChanged();
       return getBucketOptionsFieldBuilder().getBuilder();
     }
     /**
-     *
-     *
      * <pre>
      * Defines the histogram bucket boundaries. If the distribution does not
      * contain a histogram, then omit this field.
@@ -7693,14 +6993,11 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       if (bucketOptionsBuilder_ != null) {
         return bucketOptionsBuilder_.getMessageOrBuilder();
       } else {
-        return bucketOptions_ == null
-            ? com.google.api.Distribution.BucketOptions.getDefaultInstance()
-            : bucketOptions_;
+        return bucketOptions_ == null ?
+            com.google.api.Distribution.BucketOptions.getDefaultInstance() : bucketOptions_;
       }
     }
     /**
-     *
-     *
      * <pre>
      * Defines the histogram bucket boundaries. If the distribution does not
      * contain a histogram, then omit this field.
@@ -7709,33 +7006,27 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.api.Distribution.BucketOptions bucket_options = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.api.Distribution.BucketOptions,
-            com.google.api.Distribution.BucketOptions.Builder,
-            com.google.api.Distribution.BucketOptionsOrBuilder>
+        com.google.api.Distribution.BucketOptions, com.google.api.Distribution.BucketOptions.Builder, com.google.api.Distribution.BucketOptionsOrBuilder> 
         getBucketOptionsFieldBuilder() {
       if (bucketOptionsBuilder_ == null) {
-        bucketOptionsBuilder_ =
-            new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.api.Distribution.BucketOptions,
-                com.google.api.Distribution.BucketOptions.Builder,
-                com.google.api.Distribution.BucketOptionsOrBuilder>(
-                getBucketOptions(), getParentForChildren(), isClean());
+        bucketOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.api.Distribution.BucketOptions, com.google.api.Distribution.BucketOptions.Builder, com.google.api.Distribution.BucketOptionsOrBuilder>(
+                getBucketOptions(),
+                getParentForChildren(),
+                isClean());
         bucketOptions_ = null;
       }
       return bucketOptionsBuilder_;
     }
 
     private com.google.protobuf.Internal.LongList bucketCounts_ = emptyLongList();
-
     private void ensureBucketCountsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         bucketCounts_ = mutableCopy(bucketCounts_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
     /**
-     *
-     *
      * <pre>
      * The number of values in each bucket of the histogram, as described in
      * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -7753,17 +7044,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>repeated int64 bucket_counts = 7;</code>
-     *
      * @return A list containing the bucketCounts.
      */
-    public java.util.List<java.lang.Long> getBucketCountsList() {
-      return ((bitField0_ & 0x00000001) != 0)
-          ? java.util.Collections.unmodifiableList(bucketCounts_)
-          : bucketCounts_;
+    public java.util.List<java.lang.Long>
+        getBucketCountsList() {
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(bucketCounts_) : bucketCounts_;
     }
     /**
-     *
-     *
      * <pre>
      * The number of values in each bucket of the histogram, as described in
      * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -7781,15 +7069,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>repeated int64 bucket_counts = 7;</code>
-     *
      * @return The count of bucketCounts.
      */
     public int getBucketCountsCount() {
       return bucketCounts_.size();
     }
     /**
-     *
-     *
      * <pre>
      * The number of values in each bucket of the histogram, as described in
      * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -7807,7 +7092,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>repeated int64 bucket_counts = 7;</code>
-     *
      * @param index The index of the element to return.
      * @return The bucketCounts at the given index.
      */
@@ -7815,8 +7099,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return bucketCounts_.getLong(index);
     }
     /**
-     *
-     *
      * <pre>
      * The number of values in each bucket of the histogram, as described in
      * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -7834,20 +7116,18 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>repeated int64 bucket_counts = 7;</code>
-     *
      * @param index The index to set the value at.
      * @param value The bucketCounts to set.
      * @return This builder for chaining.
      */
-    public Builder setBucketCounts(int index, long value) {
+    public Builder setBucketCounts(
+        int index, long value) {
       ensureBucketCountsIsMutable();
       bucketCounts_.setLong(index, value);
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The number of values in each bucket of the histogram, as described in
      * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -7865,7 +7145,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>repeated int64 bucket_counts = 7;</code>
-     *
      * @param value The bucketCounts to add.
      * @return This builder for chaining.
      */
@@ -7876,8 +7155,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The number of values in each bucket of the histogram, as described in
      * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -7895,19 +7172,18 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>repeated int64 bucket_counts = 7;</code>
-     *
      * @param values The bucketCounts to add.
      * @return This builder for chaining.
      */
-    public Builder addAllBucketCounts(java.lang.Iterable<? extends java.lang.Long> values) {
+    public Builder addAllBucketCounts(
+        java.lang.Iterable<? extends java.lang.Long> values) {
       ensureBucketCountsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, bucketCounts_);
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, bucketCounts_);
       onChanged();
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * The number of values in each bucket of the histogram, as described in
      * `bucket_options`. If the distribution does not have a histogram, then omit
@@ -7925,7 +7201,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * </pre>
      *
      * <code>repeated int64 bucket_counts = 7;</code>
-     *
      * @return This builder for chaining.
      */
     public Builder clearBucketCounts() {
@@ -7936,24 +7211,18 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     }
 
     private java.util.List<com.google.api.Distribution.Exemplar> exemplars_ =
-        java.util.Collections.emptyList();
-
+      java.util.Collections.emptyList();
     private void ensureExemplarsIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
         exemplars_ = new java.util.ArrayList<com.google.api.Distribution.Exemplar>(exemplars_);
         bitField0_ |= 0x00000002;
-      }
+       }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.Distribution.Exemplar,
-            com.google.api.Distribution.Exemplar.Builder,
-            com.google.api.Distribution.ExemplarOrBuilder>
-        exemplarsBuilder_;
+        com.google.api.Distribution.Exemplar, com.google.api.Distribution.Exemplar.Builder, com.google.api.Distribution.ExemplarOrBuilder> exemplarsBuilder_;
 
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -7968,8 +7237,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -7984,8 +7251,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -8000,15 +7265,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
      *
      * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
      */
-    public Builder setExemplars(int index, com.google.api.Distribution.Exemplar value) {
+    public Builder setExemplars(
+        int index, com.google.api.Distribution.Exemplar value) {
       if (exemplarsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8022,8 +7286,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -8042,8 +7304,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -8064,15 +7324,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
      *
      * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
      */
-    public Builder addExemplars(int index, com.google.api.Distribution.Exemplar value) {
+    public Builder addExemplars(
+        int index, com.google.api.Distribution.Exemplar value) {
       if (exemplarsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8086,15 +7345,14 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
      *
      * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
      */
-    public Builder addExemplars(com.google.api.Distribution.Exemplar.Builder builderForValue) {
+    public Builder addExemplars(
+        com.google.api.Distribution.Exemplar.Builder builderForValue) {
       if (exemplarsBuilder_ == null) {
         ensureExemplarsIsMutable();
         exemplars_.add(builderForValue.build());
@@ -8105,8 +7363,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -8125,8 +7381,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -8137,7 +7391,8 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
         java.lang.Iterable<? extends com.google.api.Distribution.Exemplar> values) {
       if (exemplarsBuilder_ == null) {
         ensureExemplarsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, exemplars_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, exemplars_);
         onChanged();
       } else {
         exemplarsBuilder_.addAllMessages(values);
@@ -8145,8 +7400,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -8164,8 +7417,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -8183,44 +7434,39 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
      *
      * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
      */
-    public com.google.api.Distribution.Exemplar.Builder getExemplarsBuilder(int index) {
+    public com.google.api.Distribution.Exemplar.Builder getExemplarsBuilder(
+        int index) {
       return getExemplarsFieldBuilder().getBuilder(index);
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
      *
      * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
      */
-    public com.google.api.Distribution.ExemplarOrBuilder getExemplarsOrBuilder(int index) {
+    public com.google.api.Distribution.ExemplarOrBuilder getExemplarsOrBuilder(
+        int index) {
       if (exemplarsBuilder_ == null) {
-        return exemplars_.get(index);
-      } else {
+        return exemplars_.get(index);  } else {
         return exemplarsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
      *
      * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
      */
-    public java.util.List<? extends com.google.api.Distribution.ExemplarOrBuilder>
-        getExemplarsOrBuilderList() {
+    public java.util.List<? extends com.google.api.Distribution.ExemplarOrBuilder> 
+         getExemplarsOrBuilderList() {
       if (exemplarsBuilder_ != null) {
         return exemplarsBuilder_.getMessageOrBuilderList();
       } else {
@@ -8228,8 +7474,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       }
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
@@ -8237,54 +7481,49 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
      */
     public com.google.api.Distribution.Exemplar.Builder addExemplarsBuilder() {
-      return getExemplarsFieldBuilder()
-          .addBuilder(com.google.api.Distribution.Exemplar.getDefaultInstance());
+      return getExemplarsFieldBuilder().addBuilder(
+          com.google.api.Distribution.Exemplar.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
      *
      * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
      */
-    public com.google.api.Distribution.Exemplar.Builder addExemplarsBuilder(int index) {
-      return getExemplarsFieldBuilder()
-          .addBuilder(index, com.google.api.Distribution.Exemplar.getDefaultInstance());
+    public com.google.api.Distribution.Exemplar.Builder addExemplarsBuilder(
+        int index) {
+      return getExemplarsFieldBuilder().addBuilder(
+          index, com.google.api.Distribution.Exemplar.getDefaultInstance());
     }
     /**
-     *
-     *
      * <pre>
      * Must be in increasing order of `value` field.
      * </pre>
      *
      * <code>repeated .google.api.Distribution.Exemplar exemplars = 10;</code>
      */
-    public java.util.List<com.google.api.Distribution.Exemplar.Builder> getExemplarsBuilderList() {
+    public java.util.List<com.google.api.Distribution.Exemplar.Builder> 
+         getExemplarsBuilderList() {
       return getExemplarsFieldBuilder().getBuilderList();
     }
-
     private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.Distribution.Exemplar,
-            com.google.api.Distribution.Exemplar.Builder,
-            com.google.api.Distribution.ExemplarOrBuilder>
+        com.google.api.Distribution.Exemplar, com.google.api.Distribution.Exemplar.Builder, com.google.api.Distribution.ExemplarOrBuilder> 
         getExemplarsFieldBuilder() {
       if (exemplarsBuilder_ == null) {
-        exemplarsBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.api.Distribution.Exemplar,
-                com.google.api.Distribution.Exemplar.Builder,
-                com.google.api.Distribution.ExemplarOrBuilder>(
-                exemplars_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
+        exemplarsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.api.Distribution.Exemplar, com.google.api.Distribution.Exemplar.Builder, com.google.api.Distribution.ExemplarOrBuilder>(
+                exemplars_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
         exemplars_ = null;
       }
       return exemplarsBuilder_;
     }
-
     @java.lang.Override
-    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(
+        final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -8294,12 +7533,12 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.api.Distribution)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Distribution)
   private static final com.google.api.Distribution DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.api.Distribution();
   }
@@ -8308,16 +7547,16 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Distribution> PARSER =
-      new com.google.protobuf.AbstractParser<Distribution>() {
-        @java.lang.Override
-        public Distribution parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Distribution(input, extensionRegistry);
-        }
-      };
+  private static final com.google.protobuf.Parser<Distribution>
+      PARSER = new com.google.protobuf.AbstractParser<Distribution>() {
+    @java.lang.Override
+    public Distribution parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return new Distribution(input, extensionRegistry);
+    }
+  };
 
   public static com.google.protobuf.Parser<Distribution> parser() {
     return PARSER;
@@ -8332,4 +7571,6 @@ public final class Distribution extends com.google.protobuf.GeneratedMessageV3
   public com.google.api.Distribution getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+
 }
+

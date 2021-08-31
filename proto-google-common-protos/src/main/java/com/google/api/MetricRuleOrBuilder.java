@@ -18,41 +18,33 @@
 
 package com.google.api;
 
-public interface MetricRuleOrBuilder
-    extends
+public interface MetricRuleOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.api.MetricRule)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Selects the methods to which this rule applies.
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    * </pre>
    *
    * <code>string selector = 1;</code>
-   *
    * @return The selector.
    */
   java.lang.String getSelector();
   /**
-   *
-   *
    * <pre>
    * Selects the methods to which this rule applies.
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    * </pre>
    *
    * <code>string selector = 1;</code>
-   *
    * @return The bytes for selector.
    */
-  com.google.protobuf.ByteString getSelectorBytes();
+  com.google.protobuf.ByteString
+      getSelectorBytes();
 
   /**
-   *
-   *
    * <pre>
    * Metrics to update when the selected methods are called, and the associated
    * cost applied to each metric.
@@ -65,8 +57,6 @@ public interface MetricRuleOrBuilder
    */
   int getMetricCostsCount();
   /**
-   *
-   *
    * <pre>
    * Metrics to update when the selected methods are called, and the associated
    * cost applied to each metric.
@@ -77,13 +67,15 @@ public interface MetricRuleOrBuilder
    *
    * <code>map&lt;string, int64&gt; metric_costs = 2;</code>
    */
-  boolean containsMetricCosts(java.lang.String key);
-  /** Use {@link #getMetricCostsMap()} instead. */
+  boolean containsMetricCosts(
+      java.lang.String key);
+  /**
+   * Use {@link #getMetricCostsMap()} instead.
+   */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, java.lang.Long> getMetricCosts();
+  java.util.Map<java.lang.String, java.lang.Long>
+  getMetricCosts();
   /**
-   *
-   *
    * <pre>
    * Metrics to update when the selected methods are called, and the associated
    * cost applied to each metric.
@@ -94,10 +86,9 @@ public interface MetricRuleOrBuilder
    *
    * <code>map&lt;string, int64&gt; metric_costs = 2;</code>
    */
-  java.util.Map<java.lang.String, java.lang.Long> getMetricCostsMap();
+  java.util.Map<java.lang.String, java.lang.Long>
+  getMetricCostsMap();
   /**
-   *
-   *
    * <pre>
    * Metrics to update when the selected methods are called, and the associated
    * cost applied to each metric.
@@ -108,10 +99,11 @@ public interface MetricRuleOrBuilder
    *
    * <code>map&lt;string, int64&gt; metric_costs = 2;</code>
    */
-  long getMetricCostsOrDefault(java.lang.String key, long defaultValue);
+
+  long getMetricCostsOrDefault(
+      java.lang.String key,
+      long defaultValue);
   /**
-   *
-   *
    * <pre>
    * Metrics to update when the selected methods are called, and the associated
    * cost applied to each metric.
@@ -122,5 +114,7 @@ public interface MetricRuleOrBuilder
    *
    * <code>map&lt;string, int64&gt; metric_costs = 2;</code>
    */
-  long getMetricCostsOrThrow(java.lang.String key);
+
+  long getMetricCostsOrThrow(
+      java.lang.String key);
 }

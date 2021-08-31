@@ -18,14 +18,11 @@
 
 package com.google.api;
 
-public interface OAuthRequirementsOrBuilder
-    extends
+public interface OAuthRequirementsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.api.OAuthRequirements)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The list of publicly documented OAuth scopes that are allowed access. An
    * OAuth token containing any of these scopes will be accepted.
@@ -35,13 +32,10 @@ public interface OAuthRequirementsOrBuilder
    * </pre>
    *
    * <code>string canonical_scopes = 1;</code>
-   *
    * @return The canonicalScopes.
    */
   java.lang.String getCanonicalScopes();
   /**
-   *
-   *
    * <pre>
    * The list of publicly documented OAuth scopes that are allowed access. An
    * OAuth token containing any of these scopes will be accepted.
@@ -51,8 +45,8 @@ public interface OAuthRequirementsOrBuilder
    * </pre>
    *
    * <code>string canonical_scopes = 1;</code>
-   *
    * @return The bytes for canonicalScopes.
    */
-  com.google.protobuf.ByteString getCanonicalScopesBytes();
+  com.google.protobuf.ByteString
+      getCanonicalScopesBytes();
 }

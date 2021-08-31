@@ -18,58 +18,47 @@
 
 package com.google.type;
 
-public interface TimeZoneOrBuilder
-    extends
+public interface TimeZoneOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.type.TimeZone)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * IANA Time Zone Database time zone, e.g. "America/New_York".
    * </pre>
    *
    * <code>string id = 1;</code>
-   *
    * @return The id.
    */
   java.lang.String getId();
   /**
-   *
-   *
    * <pre>
    * IANA Time Zone Database time zone, e.g. "America/New_York".
    * </pre>
    *
    * <code>string id = 1;</code>
-   *
    * @return The bytes for id.
    */
-  com.google.protobuf.ByteString getIdBytes();
+  com.google.protobuf.ByteString
+      getIdBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. IANA Time Zone Database version number, e.g. "2019a".
    * </pre>
    *
    * <code>string version = 2;</code>
-   *
    * @return The version.
    */
   java.lang.String getVersion();
   /**
-   *
-   *
    * <pre>
    * Optional. IANA Time Zone Database version number, e.g. "2019a".
    * </pre>
    *
    * <code>string version = 2;</code>
-   *
    * @return The bytes for version.
    */
-  com.google.protobuf.ByteString getVersionBytes();
+  com.google.protobuf.ByteString
+      getVersionBytes();
 }

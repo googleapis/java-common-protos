@@ -18,14 +18,11 @@
 
 package com.google.api;
 
-public interface BillingOrBuilder
-    extends
+public interface BillingOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.api.Billing)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -35,10 +32,9 @@ public interface BillingOrBuilder
    *
    * <code>repeated .google.api.Billing.BillingDestination consumer_destinations = 8;</code>
    */
-  java.util.List<com.google.api.Billing.BillingDestination> getConsumerDestinationsList();
+  java.util.List<com.google.api.Billing.BillingDestination> 
+      getConsumerDestinationsList();
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -50,8 +46,6 @@ public interface BillingOrBuilder
    */
   com.google.api.Billing.BillingDestination getConsumerDestinations(int index);
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -63,8 +57,6 @@ public interface BillingOrBuilder
    */
   int getConsumerDestinationsCount();
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -74,11 +66,9 @@ public interface BillingOrBuilder
    *
    * <code>repeated .google.api.Billing.BillingDestination consumer_destinations = 8;</code>
    */
-  java.util.List<? extends com.google.api.Billing.BillingDestinationOrBuilder>
+  java.util.List<? extends com.google.api.Billing.BillingDestinationOrBuilder> 
       getConsumerDestinationsOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * Billing configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations per service, each one must have
@@ -88,5 +78,6 @@ public interface BillingOrBuilder
    *
    * <code>repeated .google.api.Billing.BillingDestination consumer_destinations = 8;</code>
    */
-  com.google.api.Billing.BillingDestinationOrBuilder getConsumerDestinationsOrBuilder(int index);
+  com.google.api.Billing.BillingDestinationOrBuilder getConsumerDestinationsOrBuilder(
+      int index);
 }

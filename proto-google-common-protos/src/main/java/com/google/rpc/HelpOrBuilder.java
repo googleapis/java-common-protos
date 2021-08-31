@@ -18,24 +18,20 @@
 
 package com.google.rpc;
 
-public interface HelpOrBuilder
-    extends
+public interface HelpOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.rpc.Help)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * URL(s) pointing to additional information on handling the current error.
    * </pre>
    *
    * <code>repeated .google.rpc.Help.Link links = 1;</code>
    */
-  java.util.List<com.google.rpc.Help.Link> getLinksList();
+  java.util.List<com.google.rpc.Help.Link> 
+      getLinksList();
   /**
-   *
-   *
    * <pre>
    * URL(s) pointing to additional information on handling the current error.
    * </pre>
@@ -44,8 +40,6 @@ public interface HelpOrBuilder
    */
   com.google.rpc.Help.Link getLinks(int index);
   /**
-   *
-   *
    * <pre>
    * URL(s) pointing to additional information on handling the current error.
    * </pre>
@@ -54,23 +48,21 @@ public interface HelpOrBuilder
    */
   int getLinksCount();
   /**
-   *
-   *
    * <pre>
    * URL(s) pointing to additional information on handling the current error.
    * </pre>
    *
    * <code>repeated .google.rpc.Help.Link links = 1;</code>
    */
-  java.util.List<? extends com.google.rpc.Help.LinkOrBuilder> getLinksOrBuilderList();
+  java.util.List<? extends com.google.rpc.Help.LinkOrBuilder> 
+      getLinksOrBuilderList();
   /**
-   *
-   *
    * <pre>
    * URL(s) pointing to additional information on handling the current error.
    * </pre>
    *
    * <code>repeated .google.rpc.Help.Link links = 1;</code>
    */
-  com.google.rpc.Help.LinkOrBuilder getLinksOrBuilder(int index);
+  com.google.rpc.Help.LinkOrBuilder getLinksOrBuilder(
+      int index);
 }

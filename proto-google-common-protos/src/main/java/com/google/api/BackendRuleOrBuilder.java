@@ -18,41 +18,33 @@
 
 package com.google.api;
 
-public interface BackendRuleOrBuilder
-    extends
+public interface BackendRuleOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.api.BackendRule)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * Selects the methods to which this rule applies.
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    * </pre>
    *
    * <code>string selector = 1;</code>
-   *
    * @return The selector.
    */
   java.lang.String getSelector();
   /**
-   *
-   *
    * <pre>
    * Selects the methods to which this rule applies.
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    * </pre>
    *
    * <code>string selector = 1;</code>
-   *
    * @return The bytes for selector.
    */
-  com.google.protobuf.ByteString getSelectorBytes();
+  com.google.protobuf.ByteString
+      getSelectorBytes();
 
   /**
-   *
-   *
    * <pre>
    * The address of the API backend.
    * The scheme is used to determine the backend protocol and security.
@@ -72,13 +64,10 @@ public interface BackendRuleOrBuilder
    * </pre>
    *
    * <code>string address = 2;</code>
-   *
    * @return The address.
    */
   java.lang.String getAddress();
   /**
-   *
-   *
    * <pre>
    * The address of the API backend.
    * The scheme is used to determine the backend protocol and security.
@@ -98,69 +87,56 @@ public interface BackendRuleOrBuilder
    * </pre>
    *
    * <code>string address = 2;</code>
-   *
    * @return The bytes for address.
    */
-  com.google.protobuf.ByteString getAddressBytes();
+  com.google.protobuf.ByteString
+      getAddressBytes();
 
   /**
-   *
-   *
    * <pre>
    * The number of seconds to wait for a response from a request. The default
    * varies based on the request protocol and deployment environment.
    * </pre>
    *
    * <code>double deadline = 3;</code>
-   *
    * @return The deadline.
    */
   double getDeadline();
 
   /**
-   *
-   *
    * <pre>
    * Minimum deadline in seconds needed for this method. Calls having deadline
    * value lower than this will be rejected.
    * </pre>
    *
    * <code>double min_deadline = 4;</code>
-   *
    * @return The minDeadline.
    */
   double getMinDeadline();
 
   /**
-   *
-   *
    * <pre>
    * The number of seconds to wait for the completion of a long running
    * operation. The default is no deadline.
    * </pre>
    *
    * <code>double operation_deadline = 5;</code>
-   *
    * @return The operationDeadline.
    */
   double getOperationDeadline();
 
   /**
    * <code>.google.api.BackendRule.PathTranslation path_translation = 6;</code>
-   *
    * @return The enum numeric value on the wire for pathTranslation.
    */
   int getPathTranslationValue();
   /**
    * <code>.google.api.BackendRule.PathTranslation path_translation = 6;</code>
-   *
    * @return The pathTranslation.
    */
   com.google.api.BackendRule.PathTranslation getPathTranslation();
 
   /**
-   *
-   *
    * <pre>
    * The JWT audience is used when generating a JWT ID token for the backend.
    * This ID token will be added in the HTTP "authorization" header, and sent
@@ -168,13 +144,10 @@ public interface BackendRuleOrBuilder
    * </pre>
    *
    * <code>string jwt_audience = 7;</code>
-   *
    * @return Whether the jwtAudience field is set.
    */
   boolean hasJwtAudience();
   /**
-   *
-   *
    * <pre>
    * The JWT audience is used when generating a JWT ID token for the backend.
    * This ID token will be added in the HTTP "authorization" header, and sent
@@ -182,13 +155,10 @@ public interface BackendRuleOrBuilder
    * </pre>
    *
    * <code>string jwt_audience = 7;</code>
-   *
    * @return The jwtAudience.
    */
   java.lang.String getJwtAudience();
   /**
-   *
-   *
    * <pre>
    * The JWT audience is used when generating a JWT ID token for the backend.
    * This ID token will be added in the HTTP "authorization" header, and sent
@@ -196,14 +166,12 @@ public interface BackendRuleOrBuilder
    * </pre>
    *
    * <code>string jwt_audience = 7;</code>
-   *
    * @return The bytes for jwtAudience.
    */
-  com.google.protobuf.ByteString getJwtAudienceBytes();
+  com.google.protobuf.ByteString
+      getJwtAudienceBytes();
 
   /**
-   *
-   *
    * <pre>
    * When disable_auth is true, a JWT ID token won't be generated and the
    * original "Authorization" HTTP header will be preserved. If the header is
@@ -212,13 +180,10 @@ public interface BackendRuleOrBuilder
    * </pre>
    *
    * <code>bool disable_auth = 8;</code>
-   *
    * @return Whether the disableAuth field is set.
    */
   boolean hasDisableAuth();
   /**
-   *
-   *
    * <pre>
    * When disable_auth is true, a JWT ID token won't be generated and the
    * original "Authorization" HTTP header will be preserved. If the header is
@@ -227,14 +192,11 @@ public interface BackendRuleOrBuilder
    * </pre>
    *
    * <code>bool disable_auth = 8;</code>
-   *
    * @return The disableAuth.
    */
   boolean getDisableAuth();
 
   /**
-   *
-   *
    * <pre>
    * The protocol used for sending a request to the backend.
    * The supported values are "http/1.1" and "h2".
@@ -255,13 +217,10 @@ public interface BackendRuleOrBuilder
    * </pre>
    *
    * <code>string protocol = 9;</code>
-   *
    * @return The protocol.
    */
   java.lang.String getProtocol();
   /**
-   *
-   *
    * <pre>
    * The protocol used for sending a request to the backend.
    * The supported values are "http/1.1" and "h2".
@@ -282,10 +241,10 @@ public interface BackendRuleOrBuilder
    * </pre>
    *
    * <code>string protocol = 9;</code>
-   *
    * @return The bytes for protocol.
    */
-  com.google.protobuf.ByteString getProtocolBytes();
+  com.google.protobuf.ByteString
+      getProtocolBytes();
 
   public com.google.api.BackendRule.AuthenticationCase getAuthenticationCase();
 }

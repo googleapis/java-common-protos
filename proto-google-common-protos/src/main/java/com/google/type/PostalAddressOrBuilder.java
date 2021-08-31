@@ -18,14 +18,11 @@
 
 package com.google.type;
 
-public interface PostalAddressOrBuilder
-    extends
+public interface PostalAddressOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.type.PostalAddress)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   *
-   *
    * <pre>
    * The schema revision of the `PostalAddress`. This must be set to 0, which is
    * the latest revision.
@@ -33,14 +30,11 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>int32 revision = 1;</code>
-   *
    * @return The revision.
    */
   int getRevision();
 
   /**
-   *
-   *
    * <pre>
    * Required. CLDR region code of the country/region of the address. This
    * is never inferred and it is up to the user to ensure the value is
@@ -50,13 +44,10 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string region_code = 2;</code>
-   *
    * @return The regionCode.
    */
   java.lang.String getRegionCode();
   /**
-   *
-   *
    * <pre>
    * Required. CLDR region code of the country/region of the address. This
    * is never inferred and it is up to the user to ensure the value is
@@ -66,14 +57,12 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string region_code = 2;</code>
-   *
    * @return The bytes for regionCode.
    */
-  com.google.protobuf.ByteString getRegionCodeBytes();
+  com.google.protobuf.ByteString
+      getRegionCodeBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. BCP-47 language code of the contents of this address (if
    * known). This is often the UI language of the input form or is expected
@@ -88,13 +77,10 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string language_code = 3;</code>
-   *
    * @return The languageCode.
    */
   java.lang.String getLanguageCode();
   /**
-   *
-   *
    * <pre>
    * Optional. BCP-47 language code of the contents of this address (if
    * known). This is often the UI language of the input form or is expected
@@ -109,14 +95,12 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string language_code = 3;</code>
-   *
    * @return The bytes for languageCode.
    */
-  com.google.protobuf.ByteString getLanguageCodeBytes();
+  com.google.protobuf.ByteString
+      getLanguageCodeBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. Postal code of the address. Not all countries use or require
    * postal codes to be present, but where they are used, they may trigger
@@ -125,13 +109,10 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string postal_code = 4;</code>
-   *
    * @return The postalCode.
    */
   java.lang.String getPostalCode();
   /**
-   *
-   *
    * <pre>
    * Optional. Postal code of the address. Not all countries use or require
    * postal codes to be present, but where they are used, they may trigger
@@ -140,14 +121,12 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string postal_code = 4;</code>
-   *
    * @return The bytes for postalCode.
    */
-  com.google.protobuf.ByteString getPostalCodeBytes();
+  com.google.protobuf.ByteString
+      getPostalCodeBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. Additional, country-specific, sorting code. This is not used
    * in most regions. Where it is used, the value is either a string like
@@ -157,13 +136,10 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string sorting_code = 5;</code>
-   *
    * @return The sortingCode.
    */
   java.lang.String getSortingCode();
   /**
-   *
-   *
    * <pre>
    * Optional. Additional, country-specific, sorting code. This is not used
    * in most regions. Where it is used, the value is either a string like
@@ -173,14 +149,12 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string sorting_code = 5;</code>
-   *
    * @return The bytes for sortingCode.
    */
-  com.google.protobuf.ByteString getSortingCodeBytes();
+  com.google.protobuf.ByteString
+      getSortingCodeBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. Highest administrative subdivision which is used for postal
    * addresses of a country or region.
@@ -192,13 +166,10 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string administrative_area = 6;</code>
-   *
    * @return The administrativeArea.
    */
   java.lang.String getAdministrativeArea();
   /**
-   *
-   *
    * <pre>
    * Optional. Highest administrative subdivision which is used for postal
    * addresses of a country or region.
@@ -210,14 +181,12 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string administrative_area = 6;</code>
-   *
    * @return The bytes for administrativeArea.
    */
-  com.google.protobuf.ByteString getAdministrativeAreaBytes();
+  com.google.protobuf.ByteString
+      getAdministrativeAreaBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. Generally refers to the city/town portion of the address.
    * Examples: US city, IT comune, UK post town.
@@ -226,13 +195,10 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string locality = 7;</code>
-   *
    * @return The locality.
    */
   java.lang.String getLocality();
   /**
-   *
-   *
    * <pre>
    * Optional. Generally refers to the city/town portion of the address.
    * Examples: US city, IT comune, UK post town.
@@ -241,41 +207,34 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>string locality = 7;</code>
-   *
    * @return The bytes for locality.
    */
-  com.google.protobuf.ByteString getLocalityBytes();
+  com.google.protobuf.ByteString
+      getLocalityBytes();
 
   /**
-   *
-   *
    * <pre>
    * Optional. Sublocality of the address.
    * For example, this can be neighborhoods, boroughs, districts.
    * </pre>
    *
    * <code>string sublocality = 8;</code>
-   *
    * @return The sublocality.
    */
   java.lang.String getSublocality();
   /**
-   *
-   *
    * <pre>
    * Optional. Sublocality of the address.
    * For example, this can be neighborhoods, boroughs, districts.
    * </pre>
    *
    * <code>string sublocality = 8;</code>
-   *
    * @return The bytes for sublocality.
    */
-  com.google.protobuf.ByteString getSublocalityBytes();
+  com.google.protobuf.ByteString
+      getSublocalityBytes();
 
   /**
-   *
-   *
    * <pre>
    * Unstructured address lines describing the lower levels of an address.
    * Because values in address_lines do not have type information and may
@@ -299,13 +258,11 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>repeated string address_lines = 9;</code>
-   *
    * @return A list containing the addressLines.
    */
-  java.util.List<java.lang.String> getAddressLinesList();
+  java.util.List<java.lang.String>
+      getAddressLinesList();
   /**
-   *
-   *
    * <pre>
    * Unstructured address lines describing the lower levels of an address.
    * Because values in address_lines do not have type information and may
@@ -329,13 +286,10 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>repeated string address_lines = 9;</code>
-   *
    * @return The count of addressLines.
    */
   int getAddressLinesCount();
   /**
-   *
-   *
    * <pre>
    * Unstructured address lines describing the lower levels of an address.
    * Because values in address_lines do not have type information and may
@@ -359,14 +313,11 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>repeated string address_lines = 9;</code>
-   *
    * @param index The index of the element to return.
    * @return The addressLines at the given index.
    */
   java.lang.String getAddressLines(int index);
   /**
-   *
-   *
    * <pre>
    * Unstructured address lines describing the lower levels of an address.
    * Because values in address_lines do not have type information and may
@@ -390,15 +341,13 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>repeated string address_lines = 9;</code>
-   *
    * @param index The index of the value to return.
    * @return The bytes of the addressLines at the given index.
    */
-  com.google.protobuf.ByteString getAddressLinesBytes(int index);
+  com.google.protobuf.ByteString
+      getAddressLinesBytes(int index);
 
   /**
-   *
-   *
    * <pre>
    * Optional. The recipient at the address.
    * This field may, under certain circumstances, contain multiline information.
@@ -406,13 +355,11 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>repeated string recipients = 10;</code>
-   *
    * @return A list containing the recipients.
    */
-  java.util.List<java.lang.String> getRecipientsList();
+  java.util.List<java.lang.String>
+      getRecipientsList();
   /**
-   *
-   *
    * <pre>
    * Optional. The recipient at the address.
    * This field may, under certain circumstances, contain multiline information.
@@ -420,13 +367,10 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>repeated string recipients = 10;</code>
-   *
    * @return The count of recipients.
    */
   int getRecipientsCount();
   /**
-   *
-   *
    * <pre>
    * Optional. The recipient at the address.
    * This field may, under certain circumstances, contain multiline information.
@@ -434,14 +378,11 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>repeated string recipients = 10;</code>
-   *
    * @param index The index of the element to return.
    * @return The recipients at the given index.
    */
   java.lang.String getRecipients(int index);
   /**
-   *
-   *
    * <pre>
    * Optional. The recipient at the address.
    * This field may, under certain circumstances, contain multiline information.
@@ -449,34 +390,29 @@ public interface PostalAddressOrBuilder
    * </pre>
    *
    * <code>repeated string recipients = 10;</code>
-   *
    * @param index The index of the value to return.
    * @return The bytes of the recipients at the given index.
    */
-  com.google.protobuf.ByteString getRecipientsBytes(int index);
+  com.google.protobuf.ByteString
+      getRecipientsBytes(int index);
 
   /**
-   *
-   *
    * <pre>
    * Optional. The name of the organization at the address.
    * </pre>
    *
    * <code>string organization = 11;</code>
-   *
    * @return The organization.
    */
   java.lang.String getOrganization();
   /**
-   *
-   *
    * <pre>
    * Optional. The name of the organization at the address.
    * </pre>
    *
    * <code>string organization = 11;</code>
-   *
    * @return The bytes for organization.
    */
-  com.google.protobuf.ByteString getOrganizationBytes();
+  com.google.protobuf.ByteString
+      getOrganizationBytes();
 }
