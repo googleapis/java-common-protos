@@ -18,33 +18,41 @@
 
 package com.google.cloud.audit;
 
-public interface AuditLogOrBuilder extends
+public interface AuditLogOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.cloud.audit.AuditLog)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The name of the API service performing the operation. For example,
    * `"compute.googleapis.com"`.
    * </pre>
    *
    * <code>string service_name = 7;</code>
+   *
    * @return The serviceName.
    */
   java.lang.String getServiceName();
   /**
+   *
+   *
    * <pre>
    * The name of the API service performing the operation. For example,
    * `"compute.googleapis.com"`.
    * </pre>
    *
    * <code>string service_name = 7;</code>
+   *
    * @return The bytes for serviceName.
    */
-  com.google.protobuf.ByteString
-      getServiceNameBytes();
+  com.google.protobuf.ByteString getServiceNameBytes();
 
   /**
+   *
+   *
    * <pre>
    * The name of the service method or operation.
    * For API calls, this should be the name of the API method.
@@ -54,10 +62,13 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>string method_name = 8;</code>
+   *
    * @return The methodName.
    */
   java.lang.String getMethodName();
   /**
+   *
+   *
    * <pre>
    * The name of the service method or operation.
    * For API calls, this should be the name of the API method.
@@ -67,12 +78,14 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>string method_name = 8;</code>
+   *
    * @return The bytes for methodName.
    */
-  com.google.protobuf.ByteString
-      getMethodNameBytes();
+  com.google.protobuf.ByteString getMethodNameBytes();
 
   /**
+   *
+   *
    * <pre>
    * The resource or collection that is the target of the operation.
    * The name is a scheme-less URI, not including the API service name.
@@ -82,10 +95,13 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 11;</code>
+   *
    * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
+   *
+   *
    * <pre>
    * The resource or collection that is the target of the operation.
    * The name is a scheme-less URI, not including the API service name.
@@ -95,30 +111,38 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 11;</code>
+   *
    * @return The bytes for resourceName.
    */
-  com.google.protobuf.ByteString
-      getResourceNameBytes();
+  com.google.protobuf.ByteString getResourceNameBytes();
 
   /**
+   *
+   *
    * <pre>
    * The resource location information.
    * </pre>
    *
    * <code>.google.cloud.audit.ResourceLocation resource_location = 20;</code>
+   *
    * @return Whether the resourceLocation field is set.
    */
   boolean hasResourceLocation();
   /**
+   *
+   *
    * <pre>
    * The resource location information.
    * </pre>
    *
    * <code>.google.cloud.audit.ResourceLocation resource_location = 20;</code>
+   *
    * @return The resourceLocation.
    */
   com.google.cloud.audit.ResourceLocation getResourceLocation();
   /**
+   *
+   *
    * <pre>
    * The resource location information.
    * </pre>
@@ -128,6 +152,8 @@ public interface AuditLogOrBuilder extends
   com.google.cloud.audit.ResourceLocationOrBuilder getResourceLocationOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * The resource's original state before mutation. Present only for
    * operations which have successfully modified the targeted resource(s).
@@ -139,10 +165,13 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+   *
    * @return Whether the resourceOriginalState field is set.
    */
   boolean hasResourceOriginalState();
   /**
+   *
+   *
    * <pre>
    * The resource's original state before mutation. Present only for
    * operations which have successfully modified the targeted resource(s).
@@ -154,10 +183,13 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+   *
    * @return The resourceOriginalState.
    */
   com.google.protobuf.Struct getResourceOriginalState();
   /**
+   *
+   *
    * <pre>
    * The resource's original state before mutation. Present only for
    * operations which have successfully modified the targeted resource(s).
@@ -173,35 +205,46 @@ public interface AuditLogOrBuilder extends
   com.google.protobuf.StructOrBuilder getResourceOriginalStateOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * The number of items returned from a List or Query API method,
    * if applicable.
    * </pre>
    *
    * <code>int64 num_response_items = 12;</code>
+   *
    * @return The numResponseItems.
    */
   long getNumResponseItems();
 
   /**
+   *
+   *
    * <pre>
    * The status of the overall operation.
    * </pre>
    *
    * <code>.google.rpc.Status status = 2;</code>
+   *
    * @return Whether the status field is set.
    */
   boolean hasStatus();
   /**
+   *
+   *
    * <pre>
    * The status of the overall operation.
    * </pre>
    *
    * <code>.google.rpc.Status status = 2;</code>
+   *
    * @return The status.
    */
   com.google.rpc.Status getStatus();
   /**
+   *
+   *
    * <pre>
    * The status of the overall operation.
    * </pre>
@@ -211,24 +254,32 @@ public interface AuditLogOrBuilder extends
   com.google.rpc.StatusOrBuilder getStatusOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * Authentication information.
    * </pre>
    *
    * <code>.google.cloud.audit.AuthenticationInfo authentication_info = 3;</code>
+   *
    * @return Whether the authenticationInfo field is set.
    */
   boolean hasAuthenticationInfo();
   /**
+   *
+   *
    * <pre>
    * Authentication information.
    * </pre>
    *
    * <code>.google.cloud.audit.AuthenticationInfo authentication_info = 3;</code>
+   *
    * @return The authenticationInfo.
    */
   com.google.cloud.audit.AuthenticationInfo getAuthenticationInfo();
   /**
+   *
+   *
    * <pre>
    * Authentication information.
    * </pre>
@@ -238,6 +289,8 @@ public interface AuditLogOrBuilder extends
   com.google.cloud.audit.AuthenticationInfoOrBuilder getAuthenticationInfoOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -246,9 +299,10 @@ public interface AuditLogOrBuilder extends
    *
    * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
    */
-  java.util.List<com.google.cloud.audit.AuthorizationInfo> 
-      getAuthorizationInfoList();
+  java.util.List<com.google.cloud.audit.AuthorizationInfo> getAuthorizationInfoList();
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -259,6 +313,8 @@ public interface AuditLogOrBuilder extends
    */
   com.google.cloud.audit.AuthorizationInfo getAuthorizationInfo(int index);
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -269,6 +325,8 @@ public interface AuditLogOrBuilder extends
    */
   int getAuthorizationInfoCount();
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -277,9 +335,11 @@ public interface AuditLogOrBuilder extends
    *
    * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
    */
-  java.util.List<? extends com.google.cloud.audit.AuthorizationInfoOrBuilder> 
+  java.util.List<? extends com.google.cloud.audit.AuthorizationInfoOrBuilder>
       getAuthorizationInfoOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -288,28 +348,35 @@ public interface AuditLogOrBuilder extends
    *
    * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
    */
-  com.google.cloud.audit.AuthorizationInfoOrBuilder getAuthorizationInfoOrBuilder(
-      int index);
+  com.google.cloud.audit.AuthorizationInfoOrBuilder getAuthorizationInfoOrBuilder(int index);
 
   /**
+   *
+   *
    * <pre>
    * Metadata about the operation.
    * </pre>
    *
    * <code>.google.cloud.audit.RequestMetadata request_metadata = 4;</code>
+   *
    * @return Whether the requestMetadata field is set.
    */
   boolean hasRequestMetadata();
   /**
+   *
+   *
    * <pre>
    * Metadata about the operation.
    * </pre>
    *
    * <code>.google.cloud.audit.RequestMetadata request_metadata = 4;</code>
+   *
    * @return The requestMetadata.
    */
   com.google.cloud.audit.RequestMetadata getRequestMetadata();
   /**
+   *
+   *
    * <pre>
    * Metadata about the operation.
    * </pre>
@@ -319,6 +386,8 @@ public interface AuditLogOrBuilder extends
   com.google.cloud.audit.RequestMetadataOrBuilder getRequestMetadataOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * The operation request. This may not include all request parameters,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -329,10 +398,13 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Struct request = 16;</code>
+   *
    * @return Whether the request field is set.
    */
   boolean hasRequest();
   /**
+   *
+   *
    * <pre>
    * The operation request. This may not include all request parameters,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -343,10 +415,13 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Struct request = 16;</code>
+   *
    * @return The request.
    */
   com.google.protobuf.Struct getRequest();
   /**
+   *
+   *
    * <pre>
    * The operation request. This may not include all request parameters,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -361,6 +436,8 @@ public interface AuditLogOrBuilder extends
   com.google.protobuf.StructOrBuilder getRequestOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * The operation response. This may not include all response elements,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -371,10 +448,13 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Struct response = 17;</code>
+   *
    * @return Whether the response field is set.
    */
   boolean hasResponse();
   /**
+   *
+   *
    * <pre>
    * The operation response. This may not include all response elements,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -385,10 +465,13 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Struct response = 17;</code>
+   *
    * @return The response.
    */
   com.google.protobuf.Struct getResponse();
   /**
+   *
+   *
    * <pre>
    * The operation response. This may not include all response elements,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -403,26 +486,34 @@ public interface AuditLogOrBuilder extends
   com.google.protobuf.StructOrBuilder getResponseOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * Other service-specific data about the request, response, and other
    * information associated with the current audited event.
    * </pre>
    *
    * <code>.google.protobuf.Struct metadata = 18;</code>
+   *
    * @return Whether the metadata field is set.
    */
   boolean hasMetadata();
   /**
+   *
+   *
    * <pre>
    * Other service-specific data about the request, response, and other
    * information associated with the current audited event.
    * </pre>
    *
    * <code>.google.protobuf.Struct metadata = 18;</code>
+   *
    * @return The metadata.
    */
   com.google.protobuf.Struct getMetadata();
   /**
+   *
+   *
    * <pre>
    * Other service-specific data about the request, response, and other
    * information associated with the current audited event.
@@ -433,6 +524,8 @@ public interface AuditLogOrBuilder extends
   com.google.protobuf.StructOrBuilder getMetadataOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * Deprecated. Use the `metadata` field instead.
    * Other service-specific data about the request, response, and other
@@ -440,10 +533,14 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
+   *
    * @return Whether the serviceData field is set.
    */
-  @java.lang.Deprecated boolean hasServiceData();
+  @java.lang.Deprecated
+  boolean hasServiceData();
   /**
+   *
+   *
    * <pre>
    * Deprecated. Use the `metadata` field instead.
    * Other service-specific data about the request, response, and other
@@ -451,10 +548,14 @@ public interface AuditLogOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
+   *
    * @return The serviceData.
    */
-  @java.lang.Deprecated com.google.protobuf.Any getServiceData();
+  @java.lang.Deprecated
+  com.google.protobuf.Any getServiceData();
   /**
+   *
+   *
    * <pre>
    * Deprecated. Use the `metadata` field instead.
    * Other service-specific data about the request, response, and other
@@ -463,5 +564,6 @@ public interface AuditLogOrBuilder extends
    *
    * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
    */
-  @java.lang.Deprecated com.google.protobuf.AnyOrBuilder getServiceDataOrBuilder();
+  @java.lang.Deprecated
+  com.google.protobuf.AnyOrBuilder getServiceDataOrBuilder();
 }

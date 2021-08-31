@@ -19,21 +19,24 @@
 package com.google.type;
 
 /**
+ *
+ *
  * <pre>
  * Localized variant of a text in a particular language.
  * </pre>
  *
  * Protobuf type {@code google.type.LocalizedText}
  */
-public final class LocalizedText extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class LocalizedText extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.type.LocalizedText)
     LocalizedTextOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use LocalizedText.newBuilder() to construct.
   private LocalizedText(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private LocalizedText() {
     text_ = "";
     languageCode_ = "";
@@ -41,16 +44,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new LocalizedText();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private LocalizedText(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -69,46 +71,48 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            text_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            languageCode_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+              text_ = s;
+              break;
             }
-            break;
-          }
+          case 18:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              languageCode_ = s;
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.type.LocalizedTextProto.internal_static_google_type_LocalizedText_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.type.LocalizedTextProto.internal_static_google_type_LocalizedText_fieldAccessorTable
+    return com.google.type.LocalizedTextProto
+        .internal_static_google_type_LocalizedText_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.type.LocalizedText.class, com.google.type.LocalizedText.Builder.class);
   }
@@ -116,11 +120,14 @@ private static final long serialVersionUID = 0L;
   public static final int TEXT_FIELD_NUMBER = 1;
   private volatile java.lang.Object text_;
   /**
+   *
+   *
    * <pre>
    * Localized string in the language corresponding to `language_code' below.
    * </pre>
    *
    * <code>string text = 1;</code>
+   *
    * @return The text.
    */
   @java.lang.Override
@@ -129,29 +136,29 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       text_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Localized string in the language corresponding to `language_code' below.
    * </pre>
    *
    * <code>string text = 1;</code>
+   *
    * @return The bytes for text.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTextBytes() {
+  public com.google.protobuf.ByteString getTextBytes() {
     java.lang.Object ref = text_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       text_ = b;
       return b;
     } else {
@@ -162,6 +169,8 @@ private static final long serialVersionUID = 0L;
   public static final int LANGUAGE_CODE_FIELD_NUMBER = 2;
   private volatile java.lang.Object languageCode_;
   /**
+   *
+   *
    * <pre>
    * The text's BCP-47 language code, such as "en-US" or "sr-Latn".
    * For more information, see
@@ -169,6 +178,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string language_code = 2;</code>
+   *
    * @return The languageCode.
    */
   @java.lang.Override
@@ -177,14 +187,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       languageCode_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The text's BCP-47 language code, such as "en-US" or "sr-Latn".
    * For more information, see
@@ -192,16 +203,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string language_code = 2;</code>
+   *
    * @return The bytes for languageCode.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getLanguageCodeBytes() {
+  public com.google.protobuf.ByteString getLanguageCodeBytes() {
     java.lang.Object ref = languageCode_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       languageCode_ = b;
       return b;
     } else {
@@ -210,6 +220,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -221,8 +232,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getTextBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
     }
@@ -252,17 +262,15 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.type.LocalizedText)) {
       return super.equals(obj);
     }
     com.google.type.LocalizedText other = (com.google.type.LocalizedText) obj;
 
-    if (!getText()
-        .equals(other.getText())) return false;
-    if (!getLanguageCode()
-        .equals(other.getLanguageCode())) return false;
+    if (!getText().equals(other.getText())) return false;
+    if (!getLanguageCode().equals(other.getLanguageCode())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -283,116 +291,123 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.type.LocalizedText parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.type.LocalizedText parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.type.LocalizedText parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.type.LocalizedText parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.type.LocalizedText parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.type.LocalizedText parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.type.LocalizedText parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.type.LocalizedText parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.type.LocalizedText parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.type.LocalizedText parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.type.LocalizedText parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.type.LocalizedText parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.type.LocalizedText parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.type.LocalizedText parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.type.LocalizedText parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.type.LocalizedText prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Localized variant of a text in a particular language.
    * </pre>
    *
    * Protobuf type {@code google.type.LocalizedText}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.type.LocalizedText)
       com.google.type.LocalizedTextOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.type.LocalizedTextProto.internal_static_google_type_LocalizedText_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.type.LocalizedTextProto
+          .internal_static_google_type_LocalizedText_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.type.LocalizedTextProto.internal_static_google_type_LocalizedText_fieldAccessorTable
+      return com.google.type.LocalizedTextProto
+          .internal_static_google_type_LocalizedText_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.type.LocalizedText.class, com.google.type.LocalizedText.Builder.class);
     }
@@ -402,16 +417,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -423,9 +437,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.google.type.LocalizedTextProto.internal_static_google_type_LocalizedText_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return com.google.type.LocalizedTextProto
+          .internal_static_google_type_LocalizedText_descriptor;
     }
 
     @java.lang.Override
@@ -455,38 +469,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.type.LocalizedText) {
-        return mergeFrom((com.google.type.LocalizedText)other);
+        return mergeFrom((com.google.type.LocalizedText) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -534,18 +549,20 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object text_ = "";
     /**
+     *
+     *
      * <pre>
      * Localized string in the language corresponding to `language_code' below.
      * </pre>
      *
      * <code>string text = 1;</code>
+     *
      * @return The text.
      */
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         text_ = s;
         return s;
@@ -554,20 +571,21 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Localized string in the language corresponding to `language_code' below.
      * </pre>
      *
      * <code>string text = 1;</code>
+     *
      * @return The bytes for text.
      */
-    public com.google.protobuf.ByteString
-        getTextBytes() {
+    public com.google.protobuf.ByteString getTextBytes() {
       java.lang.Object ref = text_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         text_ = b;
         return b;
       } else {
@@ -575,54 +593,61 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Localized string in the language corresponding to `language_code' below.
      * </pre>
      *
      * <code>string text = 1;</code>
+     *
      * @param value The text to set.
      * @return This builder for chaining.
      */
-    public Builder setText(
-        java.lang.String value) {
+    public Builder setText(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       text_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Localized string in the language corresponding to `language_code' below.
      * </pre>
      *
      * <code>string text = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearText() {
-      
+
       text_ = getDefaultInstance().getText();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Localized string in the language corresponding to `language_code' below.
      * </pre>
      *
      * <code>string text = 1;</code>
+     *
      * @param value The bytes for text to set.
      * @return This builder for chaining.
      */
-    public Builder setTextBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setTextBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       text_ = value;
       onChanged();
       return this;
@@ -630,6 +655,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object languageCode_ = "";
     /**
+     *
+     *
      * <pre>
      * The text's BCP-47 language code, such as "en-US" or "sr-Latn".
      * For more information, see
@@ -637,13 +664,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string language_code = 2;</code>
+     *
      * @return The languageCode.
      */
     public java.lang.String getLanguageCode() {
       java.lang.Object ref = languageCode_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         languageCode_ = s;
         return s;
@@ -652,6 +679,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The text's BCP-47 language code, such as "en-US" or "sr-Latn".
      * For more information, see
@@ -659,15 +688,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string language_code = 2;</code>
+     *
      * @return The bytes for languageCode.
      */
-    public com.google.protobuf.ByteString
-        getLanguageCodeBytes() {
+    public com.google.protobuf.ByteString getLanguageCodeBytes() {
       java.lang.Object ref = languageCode_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         languageCode_ = b;
         return b;
       } else {
@@ -675,6 +703,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The text's BCP-47 language code, such as "en-US" or "sr-Latn".
      * For more information, see
@@ -682,20 +712,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string language_code = 2;</code>
+     *
      * @param value The languageCode to set.
      * @return This builder for chaining.
      */
-    public Builder setLanguageCode(
-        java.lang.String value) {
+    public Builder setLanguageCode(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       languageCode_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The text's BCP-47 language code, such as "en-US" or "sr-Latn".
      * For more information, see
@@ -703,15 +735,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string language_code = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
-      
+
       languageCode_ = getDefaultInstance().getLanguageCode();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The text's BCP-47 language code, such as "en-US" or "sr-Latn".
      * For more information, see
@@ -719,23 +754,23 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string language_code = 2;</code>
+     *
      * @param value The bytes for languageCode to set.
      * @return This builder for chaining.
      */
-    public Builder setLanguageCodeBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setLanguageCodeBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       languageCode_ = value;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -745,12 +780,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.type.LocalizedText)
   }
 
   // @@protoc_insertion_point(class_scope:google.type.LocalizedText)
   private static final com.google.type.LocalizedText DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.type.LocalizedText();
   }
@@ -759,16 +794,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<LocalizedText>
-      PARSER = new com.google.protobuf.AbstractParser<LocalizedText>() {
-    @java.lang.Override
-    public LocalizedText parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new LocalizedText(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<LocalizedText> PARSER =
+      new com.google.protobuf.AbstractParser<LocalizedText>() {
+        @java.lang.Override
+        public LocalizedText parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LocalizedText(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<LocalizedText> parser() {
     return PARSER;
@@ -783,6 +818,4 @@ private static final long serialVersionUID = 0L;
   public com.google.type.LocalizedText getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

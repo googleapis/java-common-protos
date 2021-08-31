@@ -18,31 +18,39 @@
 
 package com.google.api;
 
-public interface MetricDescriptorOrBuilder extends
+public interface MetricDescriptorOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.MetricDescriptor)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The resource name of the metric descriptor.
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The name.
    */
   java.lang.String getName();
   /**
+   *
+   *
    * <pre>
    * The resource name of the metric descriptor.
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString
-      getNameBytes();
+  com.google.protobuf.ByteString getNameBytes();
 
   /**
+   *
+   *
    * <pre>
    * The metric type, including its DNS name prefix. The type is not
    * URL-encoded. All user-defined metric types have the DNS name
@@ -54,10 +62,13 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>string type = 8;</code>
+   *
    * @return The type.
    */
   java.lang.String getType();
   /**
+   *
+   *
    * <pre>
    * The metric type, including its DNS name prefix. The type is not
    * URL-encoded. All user-defined metric types have the DNS name
@@ -69,12 +80,14 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>string type = 8;</code>
+   *
    * @return The bytes for type.
    */
-  com.google.protobuf.ByteString
-      getTypeBytes();
+  com.google.protobuf.ByteString getTypeBytes();
 
   /**
+   *
+   *
    * <pre>
    * The set of labels that can be used to describe a specific
    * instance of this metric type. For example, the
@@ -86,9 +99,10 @@ public interface MetricDescriptorOrBuilder extends
    *
    * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
    */
-  java.util.List<com.google.api.LabelDescriptor> 
-      getLabelsList();
+  java.util.List<com.google.api.LabelDescriptor> getLabelsList();
   /**
+   *
+   *
    * <pre>
    * The set of labels that can be used to describe a specific
    * instance of this metric type. For example, the
@@ -102,6 +116,8 @@ public interface MetricDescriptorOrBuilder extends
    */
   com.google.api.LabelDescriptor getLabels(int index);
   /**
+   *
+   *
    * <pre>
    * The set of labels that can be used to describe a specific
    * instance of this metric type. For example, the
@@ -115,6 +131,8 @@ public interface MetricDescriptorOrBuilder extends
    */
   int getLabelsCount();
   /**
+   *
+   *
    * <pre>
    * The set of labels that can be used to describe a specific
    * instance of this metric type. For example, the
@@ -126,9 +144,10 @@ public interface MetricDescriptorOrBuilder extends
    *
    * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
    */
-  java.util.List<? extends com.google.api.LabelDescriptorOrBuilder> 
-      getLabelsOrBuilderList();
+  java.util.List<? extends com.google.api.LabelDescriptorOrBuilder> getLabelsOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * The set of labels that can be used to describe a specific
    * instance of this metric type. For example, the
@@ -140,52 +159,65 @@ public interface MetricDescriptorOrBuilder extends
    *
    * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
    */
-  com.google.api.LabelDescriptorOrBuilder getLabelsOrBuilder(
-      int index);
+  com.google.api.LabelDescriptorOrBuilder getLabelsOrBuilder(int index);
 
   /**
+   *
+   *
    * <pre>
    * Whether the metric records instantaneous values, changes to a value, etc.
    * Some combinations of `metric_kind` and `value_type` might not be supported.
    * </pre>
    *
    * <code>.google.api.MetricDescriptor.MetricKind metric_kind = 3;</code>
+   *
    * @return The enum numeric value on the wire for metricKind.
    */
   int getMetricKindValue();
   /**
+   *
+   *
    * <pre>
    * Whether the metric records instantaneous values, changes to a value, etc.
    * Some combinations of `metric_kind` and `value_type` might not be supported.
    * </pre>
    *
    * <code>.google.api.MetricDescriptor.MetricKind metric_kind = 3;</code>
+   *
    * @return The metricKind.
    */
   com.google.api.MetricDescriptor.MetricKind getMetricKind();
 
   /**
+   *
+   *
    * <pre>
    * Whether the measurement is an integer, a floating-point number, etc.
    * Some combinations of `metric_kind` and `value_type` might not be supported.
    * </pre>
    *
    * <code>.google.api.MetricDescriptor.ValueType value_type = 4;</code>
+   *
    * @return The enum numeric value on the wire for valueType.
    */
   int getValueTypeValue();
   /**
+   *
+   *
    * <pre>
    * Whether the measurement is an integer, a floating-point number, etc.
    * Some combinations of `metric_kind` and `value_type` might not be supported.
    * </pre>
    *
    * <code>.google.api.MetricDescriptor.ValueType value_type = 4;</code>
+   *
    * @return The valueType.
    */
   com.google.api.MetricDescriptor.ValueType getValueType();
 
   /**
+   *
+   *
    * <pre>
    * The units in which the metric value is reported. It is only applicable
    * if the `value_type` is `INT64`, `DOUBLE`, or `DISTRIBUTION`. The `unit`
@@ -273,10 +305,13 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>string unit = 5;</code>
+   *
    * @return The unit.
    */
   java.lang.String getUnit();
   /**
+   *
+   *
    * <pre>
    * The units in which the metric value is reported. It is only applicable
    * if the `value_type` is `INT64`, `DOUBLE`, or `DISTRIBUTION`. The `unit`
@@ -364,32 +399,39 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>string unit = 5;</code>
+   *
    * @return The bytes for unit.
    */
-  com.google.protobuf.ByteString
-      getUnitBytes();
+  com.google.protobuf.ByteString getUnitBytes();
 
   /**
+   *
+   *
    * <pre>
    * A detailed description of the metric, which can be used in documentation.
    * </pre>
    *
    * <code>string description = 6;</code>
+   *
    * @return The description.
    */
   java.lang.String getDescription();
   /**
+   *
+   *
    * <pre>
    * A detailed description of the metric, which can be used in documentation.
    * </pre>
    *
    * <code>string description = 6;</code>
+   *
    * @return The bytes for description.
    */
-  com.google.protobuf.ByteString
-      getDescriptionBytes();
+  com.google.protobuf.ByteString getDescriptionBytes();
 
   /**
+   *
+   *
    * <pre>
    * A concise name for the metric, which can be displayed in user interfaces.
    * Use sentence case without an ending period, for example "Request count".
@@ -398,10 +440,13 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>string display_name = 7;</code>
+   *
    * @return The displayName.
    */
   java.lang.String getDisplayName();
   /**
+   *
+   *
    * <pre>
    * A concise name for the metric, which can be displayed in user interfaces.
    * Use sentence case without an ending period, for example "Request count".
@@ -410,30 +455,38 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>string display_name = 7;</code>
+   *
    * @return The bytes for displayName.
    */
-  com.google.protobuf.ByteString
-      getDisplayNameBytes();
+  com.google.protobuf.ByteString getDisplayNameBytes();
 
   /**
+   *
+   *
    * <pre>
    * Optional. Metadata which can be used to guide usage of the metric.
    * </pre>
    *
    * <code>.google.api.MetricDescriptor.MetricDescriptorMetadata metadata = 10;</code>
+   *
    * @return Whether the metadata field is set.
    */
   boolean hasMetadata();
   /**
+   *
+   *
    * <pre>
    * Optional. Metadata which can be used to guide usage of the metric.
    * </pre>
    *
    * <code>.google.api.MetricDescriptor.MetricDescriptorMetadata metadata = 10;</code>
+   *
    * @return The metadata.
    */
   com.google.api.MetricDescriptor.MetricDescriptorMetadata getMetadata();
   /**
+   *
+   *
    * <pre>
    * Optional. Metadata which can be used to guide usage of the metric.
    * </pre>
@@ -443,25 +496,33 @@ public interface MetricDescriptorOrBuilder extends
   com.google.api.MetricDescriptor.MetricDescriptorMetadataOrBuilder getMetadataOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * Optional. The launch stage of the metric definition.
    * </pre>
    *
    * <code>.google.api.LaunchStage launch_stage = 12;</code>
+   *
    * @return The enum numeric value on the wire for launchStage.
    */
   int getLaunchStageValue();
   /**
+   *
+   *
    * <pre>
    * Optional. The launch stage of the metric definition.
    * </pre>
    *
    * <code>.google.api.LaunchStage launch_stage = 12;</code>
+   *
    * @return The launchStage.
    */
   com.google.api.LaunchStage getLaunchStage();
 
   /**
+   *
+   *
    * <pre>
    * Read-only. If present, then a [time
    * series][google.monitoring.v3.TimeSeries], which is identified partially by
@@ -471,11 +532,13 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>repeated string monitored_resource_types = 13;</code>
+   *
    * @return A list containing the monitoredResourceTypes.
    */
-  java.util.List<java.lang.String>
-      getMonitoredResourceTypesList();
+  java.util.List<java.lang.String> getMonitoredResourceTypesList();
   /**
+   *
+   *
    * <pre>
    * Read-only. If present, then a [time
    * series][google.monitoring.v3.TimeSeries], which is identified partially by
@@ -485,10 +548,13 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>repeated string monitored_resource_types = 13;</code>
+   *
    * @return The count of monitoredResourceTypes.
    */
   int getMonitoredResourceTypesCount();
   /**
+   *
+   *
    * <pre>
    * Read-only. If present, then a [time
    * series][google.monitoring.v3.TimeSeries], which is identified partially by
@@ -498,11 +564,14 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>repeated string monitored_resource_types = 13;</code>
+   *
    * @param index The index of the element to return.
    * @return The monitoredResourceTypes at the given index.
    */
   java.lang.String getMonitoredResourceTypes(int index);
   /**
+   *
+   *
    * <pre>
    * Read-only. If present, then a [time
    * series][google.monitoring.v3.TimeSeries], which is identified partially by
@@ -512,9 +581,9 @@ public interface MetricDescriptorOrBuilder extends
    * </pre>
    *
    * <code>repeated string monitored_resource_types = 13;</code>
+   *
    * @param index The index of the value to return.
    * @return The bytes of the monitoredResourceTypes at the given index.
    */
-  com.google.protobuf.ByteString
-      getMonitoredResourceTypesBytes(int index);
+  com.google.protobuf.ByteString getMonitoredResourceTypesBytes(int index);
 }

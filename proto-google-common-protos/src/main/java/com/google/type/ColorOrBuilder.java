@@ -18,41 +18,53 @@
 
 package com.google.type;
 
-public interface ColorOrBuilder extends
+public interface ColorOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.type.Color)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The amount of red in the color as a value in the interval [0, 1].
    * </pre>
    *
    * <code>float red = 1;</code>
+   *
    * @return The red.
    */
   float getRed();
 
   /**
+   *
+   *
    * <pre>
    * The amount of green in the color as a value in the interval [0, 1].
    * </pre>
    *
    * <code>float green = 2;</code>
+   *
    * @return The green.
    */
   float getGreen();
 
   /**
+   *
+   *
    * <pre>
    * The amount of blue in the color as a value in the interval [0, 1].
    * </pre>
    *
    * <code>float blue = 3;</code>
+   *
    * @return The blue.
    */
   float getBlue();
 
   /**
+   *
+   *
    * <pre>
    * The fraction of this color that should be applied to the pixel. That is,
    * the final pixel color is defined by the equation:
@@ -66,10 +78,13 @@ public interface ColorOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FloatValue alpha = 4;</code>
+   *
    * @return Whether the alpha field is set.
    */
   boolean hasAlpha();
   /**
+   *
+   *
    * <pre>
    * The fraction of this color that should be applied to the pixel. That is,
    * the final pixel color is defined by the equation:
@@ -83,10 +98,13 @@ public interface ColorOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FloatValue alpha = 4;</code>
+   *
    * @return The alpha.
    */
   com.google.protobuf.FloatValue getAlpha();
   /**
+   *
+   *
    * <pre>
    * The fraction of this color that should be applied to the pixel. That is,
    * the final pixel color is defined by the equation:

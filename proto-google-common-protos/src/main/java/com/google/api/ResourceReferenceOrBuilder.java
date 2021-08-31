@@ -18,11 +18,14 @@
 
 package com.google.api;
 
-public interface ResourceReferenceOrBuilder extends
+public interface ResourceReferenceOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.ResourceReference)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The resource type that the annotated field references.
    * Example:
@@ -42,10 +45,13 @@ public interface ResourceReferenceOrBuilder extends
    * </pre>
    *
    * <code>string type = 1;</code>
+   *
    * @return The type.
    */
   java.lang.String getType();
   /**
+   *
+   *
    * <pre>
    * The resource type that the annotated field references.
    * Example:
@@ -65,12 +71,14 @@ public interface ResourceReferenceOrBuilder extends
    * </pre>
    *
    * <code>string type = 1;</code>
+   *
    * @return The bytes for type.
    */
-  com.google.protobuf.ByteString
-      getTypeBytes();
+  com.google.protobuf.ByteString getTypeBytes();
 
   /**
+   *
+   *
    * <pre>
    * The resource type of a child collection that the annotated field
    * references. This is useful for annotating the `parent` field that
@@ -84,10 +92,13 @@ public interface ResourceReferenceOrBuilder extends
    * </pre>
    *
    * <code>string child_type = 2;</code>
+   *
    * @return The childType.
    */
   java.lang.String getChildType();
   /**
+   *
+   *
    * <pre>
    * The resource type of a child collection that the annotated field
    * references. This is useful for annotating the `parent` field that
@@ -101,8 +112,8 @@ public interface ResourceReferenceOrBuilder extends
    * </pre>
    *
    * <code>string child_type = 2;</code>
+   *
    * @return The bytes for childType.
    */
-  com.google.protobuf.ByteString
-      getChildTypeBytes();
+  com.google.protobuf.ByteString getChildTypeBytes();
 }

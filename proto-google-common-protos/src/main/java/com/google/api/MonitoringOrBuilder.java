@@ -18,11 +18,14 @@
 
 package com.google.api;
 
-public interface MonitoringOrBuilder extends
+public interface MonitoringOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.Monitoring)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -34,9 +37,10 @@ public interface MonitoringOrBuilder extends
    *
    * <code>repeated .google.api.Monitoring.MonitoringDestination producer_destinations = 1;</code>
    */
-  java.util.List<com.google.api.Monitoring.MonitoringDestination> 
-      getProducerDestinationsList();
+  java.util.List<com.google.api.Monitoring.MonitoringDestination> getProducerDestinationsList();
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -50,6 +54,8 @@ public interface MonitoringOrBuilder extends
    */
   com.google.api.Monitoring.MonitoringDestination getProducerDestinations(int index);
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -63,6 +69,8 @@ public interface MonitoringOrBuilder extends
    */
   int getProducerDestinationsCount();
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -74,9 +82,11 @@ public interface MonitoringOrBuilder extends
    *
    * <code>repeated .google.api.Monitoring.MonitoringDestination producer_destinations = 1;</code>
    */
-  java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder> 
+  java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder>
       getProducerDestinationsOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -92,6 +102,8 @@ public interface MonitoringOrBuilder extends
       int index);
 
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may
@@ -103,9 +115,10 @@ public interface MonitoringOrBuilder extends
    *
    * <code>repeated .google.api.Monitoring.MonitoringDestination consumer_destinations = 2;</code>
    */
-  java.util.List<com.google.api.Monitoring.MonitoringDestination> 
-      getConsumerDestinationsList();
+  java.util.List<com.google.api.Monitoring.MonitoringDestination> getConsumerDestinationsList();
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may
@@ -119,6 +132,8 @@ public interface MonitoringOrBuilder extends
    */
   com.google.api.Monitoring.MonitoringDestination getConsumerDestinations(int index);
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may
@@ -132,6 +147,8 @@ public interface MonitoringOrBuilder extends
    */
   int getConsumerDestinationsCount();
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may
@@ -143,9 +160,11 @@ public interface MonitoringOrBuilder extends
    *
    * <code>repeated .google.api.Monitoring.MonitoringDestination consumer_destinations = 2;</code>
    */
-  java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder> 
+  java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder>
       getConsumerDestinationsOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may

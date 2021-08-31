@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * A context rule provides information about the context for an individual API
  * element.
@@ -26,15 +28,16 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.ContextRule}
  */
-public final class ContextRule extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class ContextRule extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.api.ContextRule)
     ContextRuleOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use ContextRule.newBuilder() to construct.
   private ContextRule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private ContextRule() {
     selector_ = "";
     requested_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -45,16 +48,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new ContextRule();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private ContextRule(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -74,62 +76,66 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            selector_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              requested_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
+              selector_ = s;
+              break;
             }
-            requested_.add(s);
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              provided_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
+          case 18:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                requested_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              requested_.add(s);
+              break;
             }
-            provided_.add(s);
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              allowedRequestExtensions_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000004;
+          case 26:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                provided_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              provided_.add(s);
+              break;
             }
-            allowedRequestExtensions_.add(s);
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              allowedResponseExtensions_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000008;
+          case 34:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                allowedRequestExtensions_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              allowedRequestExtensions_.add(s);
+              break;
             }
-            allowedResponseExtensions_.add(s);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          case 42:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                allowedResponseExtensions_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              allowedResponseExtensions_.add(s);
+              break;
             }
-            break;
-          }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         requested_ = requested_.getUnmodifiableView();
@@ -147,8 +153,8 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.api.ContextProto.internal_static_google_api_ContextRule_descriptor;
   }
 
@@ -163,12 +169,15 @@ private static final long serialVersionUID = 0L;
   public static final int SELECTOR_FIELD_NUMBER = 1;
   private volatile java.lang.Object selector_;
   /**
+   *
+   *
    * <pre>
    * Selects the methods to which this rule applies.
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    * </pre>
    *
    * <code>string selector = 1;</code>
+   *
    * @return The selector.
    */
   @java.lang.Override
@@ -177,30 +186,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       selector_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Selects the methods to which this rule applies.
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    * </pre>
    *
    * <code>string selector = 1;</code>
+   *
    * @return The bytes for selector.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getSelectorBytes() {
+  public com.google.protobuf.ByteString getSelectorBytes() {
     java.lang.Object ref = selector_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       selector_ = b;
       return b;
     } else {
@@ -211,34 +220,42 @@ private static final long serialVersionUID = 0L;
   public static final int REQUESTED_FIELD_NUMBER = 2;
   private com.google.protobuf.LazyStringList requested_;
   /**
+   *
+   *
    * <pre>
    * A list of full type names of requested contexts.
    * </pre>
    *
    * <code>repeated string requested = 2;</code>
+   *
    * @return A list containing the requested.
    */
-  public com.google.protobuf.ProtocolStringList
-      getRequestedList() {
+  public com.google.protobuf.ProtocolStringList getRequestedList() {
     return requested_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names of requested contexts.
    * </pre>
    *
    * <code>repeated string requested = 2;</code>
+   *
    * @return The count of requested.
    */
   public int getRequestedCount() {
     return requested_.size();
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names of requested contexts.
    * </pre>
    *
    * <code>repeated string requested = 2;</code>
+   *
    * @param index The index of the element to return.
    * @return The requested at the given index.
    */
@@ -246,50 +263,60 @@ private static final long serialVersionUID = 0L;
     return requested_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names of requested contexts.
    * </pre>
    *
    * <code>repeated string requested = 2;</code>
+   *
    * @param index The index of the value to return.
    * @return The bytes of the requested at the given index.
    */
-  public com.google.protobuf.ByteString
-      getRequestedBytes(int index) {
+  public com.google.protobuf.ByteString getRequestedBytes(int index) {
     return requested_.getByteString(index);
   }
 
   public static final int PROVIDED_FIELD_NUMBER = 3;
   private com.google.protobuf.LazyStringList provided_;
   /**
+   *
+   *
    * <pre>
    * A list of full type names of provided contexts.
    * </pre>
    *
    * <code>repeated string provided = 3;</code>
+   *
    * @return A list containing the provided.
    */
-  public com.google.protobuf.ProtocolStringList
-      getProvidedList() {
+  public com.google.protobuf.ProtocolStringList getProvidedList() {
     return provided_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names of provided contexts.
    * </pre>
    *
    * <code>repeated string provided = 3;</code>
+   *
    * @return The count of provided.
    */
   public int getProvidedCount() {
     return provided_.size();
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names of provided contexts.
    * </pre>
    *
    * <code>repeated string provided = 3;</code>
+   *
    * @param index The index of the element to return.
    * @return The provided at the given index.
    */
@@ -297,53 +324,63 @@ private static final long serialVersionUID = 0L;
     return provided_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names of provided contexts.
    * </pre>
    *
    * <code>repeated string provided = 3;</code>
+   *
    * @param index The index of the value to return.
    * @return The bytes of the provided at the given index.
    */
-  public com.google.protobuf.ByteString
-      getProvidedBytes(int index) {
+  public com.google.protobuf.ByteString getProvidedBytes(int index) {
     return provided_.getByteString(index);
   }
 
   public static final int ALLOWED_REQUEST_EXTENSIONS_FIELD_NUMBER = 4;
   private com.google.protobuf.LazyStringList allowedRequestExtensions_;
   /**
+   *
+   *
    * <pre>
    * A list of full type names or extension IDs of extensions allowed in grpc
    * side channel from client to backend.
    * </pre>
    *
    * <code>repeated string allowed_request_extensions = 4;</code>
+   *
    * @return A list containing the allowedRequestExtensions.
    */
-  public com.google.protobuf.ProtocolStringList
-      getAllowedRequestExtensionsList() {
+  public com.google.protobuf.ProtocolStringList getAllowedRequestExtensionsList() {
     return allowedRequestExtensions_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names or extension IDs of extensions allowed in grpc
    * side channel from client to backend.
    * </pre>
    *
    * <code>repeated string allowed_request_extensions = 4;</code>
+   *
    * @return The count of allowedRequestExtensions.
    */
   public int getAllowedRequestExtensionsCount() {
     return allowedRequestExtensions_.size();
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names or extension IDs of extensions allowed in grpc
    * side channel from client to backend.
    * </pre>
    *
    * <code>repeated string allowed_request_extensions = 4;</code>
+   *
    * @param index The index of the element to return.
    * @return The allowedRequestExtensions at the given index.
    */
@@ -351,54 +388,64 @@ private static final long serialVersionUID = 0L;
     return allowedRequestExtensions_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names or extension IDs of extensions allowed in grpc
    * side channel from client to backend.
    * </pre>
    *
    * <code>repeated string allowed_request_extensions = 4;</code>
+   *
    * @param index The index of the value to return.
    * @return The bytes of the allowedRequestExtensions at the given index.
    */
-  public com.google.protobuf.ByteString
-      getAllowedRequestExtensionsBytes(int index) {
+  public com.google.protobuf.ByteString getAllowedRequestExtensionsBytes(int index) {
     return allowedRequestExtensions_.getByteString(index);
   }
 
   public static final int ALLOWED_RESPONSE_EXTENSIONS_FIELD_NUMBER = 5;
   private com.google.protobuf.LazyStringList allowedResponseExtensions_;
   /**
+   *
+   *
    * <pre>
    * A list of full type names or extension IDs of extensions allowed in grpc
    * side channel from backend to client.
    * </pre>
    *
    * <code>repeated string allowed_response_extensions = 5;</code>
+   *
    * @return A list containing the allowedResponseExtensions.
    */
-  public com.google.protobuf.ProtocolStringList
-      getAllowedResponseExtensionsList() {
+  public com.google.protobuf.ProtocolStringList getAllowedResponseExtensionsList() {
     return allowedResponseExtensions_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names or extension IDs of extensions allowed in grpc
    * side channel from backend to client.
    * </pre>
    *
    * <code>repeated string allowed_response_extensions = 5;</code>
+   *
    * @return The count of allowedResponseExtensions.
    */
   public int getAllowedResponseExtensionsCount() {
     return allowedResponseExtensions_.size();
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names or extension IDs of extensions allowed in grpc
    * side channel from backend to client.
    * </pre>
    *
    * <code>repeated string allowed_response_extensions = 5;</code>
+   *
    * @param index The index of the element to return.
    * @return The allowedResponseExtensions at the given index.
    */
@@ -406,21 +453,24 @@ private static final long serialVersionUID = 0L;
     return allowedResponseExtensions_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * A list of full type names or extension IDs of extensions allowed in grpc
    * side channel from backend to client.
    * </pre>
    *
    * <code>repeated string allowed_response_extensions = 5;</code>
+   *
    * @param index The index of the value to return.
    * @return The bytes of the allowedResponseExtensions at the given index.
    */
-  public com.google.protobuf.ByteString
-      getAllowedResponseExtensionsBytes(int index) {
+  public com.google.protobuf.ByteString getAllowedResponseExtensionsBytes(int index) {
     return allowedResponseExtensions_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -432,8 +482,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getSelectorBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, selector_);
     }
@@ -444,10 +493,12 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, provided_.getRaw(i));
     }
     for (int i = 0; i < allowedRequestExtensions_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, allowedRequestExtensions_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(
+          output, 4, allowedRequestExtensions_.getRaw(i));
     }
     for (int i = 0; i < allowedResponseExtensions_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, allowedResponseExtensions_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(
+          output, 5, allowedResponseExtensions_.getRaw(i));
     }
     unknownFields.writeTo(output);
   }
@@ -501,23 +552,20 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.api.ContextRule)) {
       return super.equals(obj);
     }
     com.google.api.ContextRule other = (com.google.api.ContextRule) obj;
 
-    if (!getSelector()
-        .equals(other.getSelector())) return false;
-    if (!getRequestedList()
-        .equals(other.getRequestedList())) return false;
-    if (!getProvidedList()
-        .equals(other.getProvidedList())) return false;
-    if (!getAllowedRequestExtensionsList()
-        .equals(other.getAllowedRequestExtensionsList())) return false;
-    if (!getAllowedResponseExtensionsList()
-        .equals(other.getAllowedResponseExtensionsList())) return false;
+    if (!getSelector().equals(other.getSelector())) return false;
+    if (!getRequestedList().equals(other.getRequestedList())) return false;
+    if (!getProvidedList().equals(other.getProvidedList())) return false;
+    if (!getAllowedRequestExtensionsList().equals(other.getAllowedRequestExtensionsList()))
+      return false;
+    if (!getAllowedResponseExtensionsList().equals(other.getAllowedResponseExtensionsList()))
+      return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -552,97 +600,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.api.ContextRule parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.api.ContextRule parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.ContextRule parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.api.ContextRule parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.api.ContextRule parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.ContextRule parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.ContextRule parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.ContextRule parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.ContextRule parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.ContextRule parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.ContextRule parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.api.ContextRule parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.api.ContextRule parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.api.ContextRule parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.ContextRule parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.api.ContextRule prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * A context rule provides information about the context for an individual API
    * element.
@@ -650,12 +704,11 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.ContextRule}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.api.ContextRule)
       com.google.api.ContextRuleOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.api.ContextProto.internal_static_google_api_ContextRule_descriptor;
     }
 
@@ -672,16 +725,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -699,8 +751,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.api.ContextProto.internal_static_google_api_ContextRule_descriptor;
     }
 
@@ -751,38 +802,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.ContextRule) {
-        return mergeFrom((com.google.api.ContextRule)other);
+        return mergeFrom((com.google.api.ContextRule) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -863,23 +915,26 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.lang.Object selector_ = "";
     /**
+     *
+     *
      * <pre>
      * Selects the methods to which this rule applies.
      * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
      * </pre>
      *
      * <code>string selector = 1;</code>
+     *
      * @return The selector.
      */
     public java.lang.String getSelector() {
       java.lang.Object ref = selector_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         selector_ = s;
         return s;
@@ -888,21 +943,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Selects the methods to which this rule applies.
      * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
      * </pre>
      *
      * <code>string selector = 1;</code>
+     *
      * @return The bytes for selector.
      */
-    public com.google.protobuf.ByteString
-        getSelectorBytes() {
+    public com.google.protobuf.ByteString getSelectorBytes() {
       java.lang.Object ref = selector_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         selector_ = b;
         return b;
       } else {
@@ -910,98 +966,115 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Selects the methods to which this rule applies.
      * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
      * </pre>
      *
      * <code>string selector = 1;</code>
+     *
      * @param value The selector to set.
      * @return This builder for chaining.
      */
-    public Builder setSelector(
-        java.lang.String value) {
+    public Builder setSelector(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       selector_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Selects the methods to which this rule applies.
      * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
      * </pre>
      *
      * <code>string selector = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearSelector() {
-      
+
       selector_ = getDefaultInstance().getSelector();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Selects the methods to which this rule applies.
      * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
      * </pre>
      *
      * <code>string selector = 1;</code>
+     *
      * @param value The bytes for selector to set.
      * @return This builder for chaining.
      */
-    public Builder setSelectorBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setSelectorBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       selector_ = value;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList requested_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringList requested_ =
+        com.google.protobuf.LazyStringArrayList.EMPTY;
+
     private void ensureRequestedIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         requested_ = new com.google.protobuf.LazyStringArrayList(requested_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of requested contexts.
      * </pre>
      *
      * <code>repeated string requested = 2;</code>
+     *
      * @return A list containing the requested.
      */
-    public com.google.protobuf.ProtocolStringList
-        getRequestedList() {
+    public com.google.protobuf.ProtocolStringList getRequestedList() {
       return requested_.getUnmodifiableView();
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of requested contexts.
      * </pre>
      *
      * <code>repeated string requested = 2;</code>
+     *
      * @return The count of requested.
      */
     public int getRequestedCount() {
       return requested_.size();
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of requested contexts.
      * </pre>
      *
      * <code>repeated string requested = 2;</code>
+     *
      * @param index The index of the element to return.
      * @return The requested at the given index.
      */
@@ -1009,80 +1082,90 @@ private static final long serialVersionUID = 0L;
       return requested_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of requested contexts.
      * </pre>
      *
      * <code>repeated string requested = 2;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the requested at the given index.
      */
-    public com.google.protobuf.ByteString
-        getRequestedBytes(int index) {
+    public com.google.protobuf.ByteString getRequestedBytes(int index) {
       return requested_.getByteString(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of requested contexts.
      * </pre>
      *
      * <code>repeated string requested = 2;</code>
+     *
      * @param index The index to set the value at.
      * @param value The requested to set.
      * @return This builder for chaining.
      */
-    public Builder setRequested(
-        int index, java.lang.String value) {
+    public Builder setRequested(int index, java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRequestedIsMutable();
+        throw new NullPointerException();
+      }
+      ensureRequestedIsMutable();
       requested_.set(index, value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of requested contexts.
      * </pre>
      *
      * <code>repeated string requested = 2;</code>
+     *
      * @param value The requested to add.
      * @return This builder for chaining.
      */
-    public Builder addRequested(
-        java.lang.String value) {
+    public Builder addRequested(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRequestedIsMutable();
+        throw new NullPointerException();
+      }
+      ensureRequestedIsMutable();
       requested_.add(value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of requested contexts.
      * </pre>
      *
      * <code>repeated string requested = 2;</code>
+     *
      * @param values The requested to add.
      * @return This builder for chaining.
      */
-    public Builder addAllRequested(
-        java.lang.Iterable<java.lang.String> values) {
+    public Builder addAllRequested(java.lang.Iterable<java.lang.String> values) {
       ensureRequestedIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, requested_);
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, requested_);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of requested contexts.
      * </pre>
      *
      * <code>repeated string requested = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearRequested() {
@@ -1092,62 +1175,74 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of requested contexts.
      * </pre>
      *
      * <code>repeated string requested = 2;</code>
+     *
      * @param value The bytes of the requested to add.
      * @return This builder for chaining.
      */
-    public Builder addRequestedBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder addRequestedBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       ensureRequestedIsMutable();
       requested_.add(value);
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList provided_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringList provided_ =
+        com.google.protobuf.LazyStringArrayList.EMPTY;
+
     private void ensureProvidedIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
         provided_ = new com.google.protobuf.LazyStringArrayList(provided_);
         bitField0_ |= 0x00000002;
-       }
+      }
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of provided contexts.
      * </pre>
      *
      * <code>repeated string provided = 3;</code>
+     *
      * @return A list containing the provided.
      */
-    public com.google.protobuf.ProtocolStringList
-        getProvidedList() {
+    public com.google.protobuf.ProtocolStringList getProvidedList() {
       return provided_.getUnmodifiableView();
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of provided contexts.
      * </pre>
      *
      * <code>repeated string provided = 3;</code>
+     *
      * @return The count of provided.
      */
     public int getProvidedCount() {
       return provided_.size();
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of provided contexts.
      * </pre>
      *
      * <code>repeated string provided = 3;</code>
+     *
      * @param index The index of the element to return.
      * @return The provided at the given index.
      */
@@ -1155,80 +1250,90 @@ private static final long serialVersionUID = 0L;
       return provided_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of provided contexts.
      * </pre>
      *
      * <code>repeated string provided = 3;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the provided at the given index.
      */
-    public com.google.protobuf.ByteString
-        getProvidedBytes(int index) {
+    public com.google.protobuf.ByteString getProvidedBytes(int index) {
       return provided_.getByteString(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of provided contexts.
      * </pre>
      *
      * <code>repeated string provided = 3;</code>
+     *
      * @param index The index to set the value at.
      * @param value The provided to set.
      * @return This builder for chaining.
      */
-    public Builder setProvided(
-        int index, java.lang.String value) {
+    public Builder setProvided(int index, java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureProvidedIsMutable();
+        throw new NullPointerException();
+      }
+      ensureProvidedIsMutable();
       provided_.set(index, value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of provided contexts.
      * </pre>
      *
      * <code>repeated string provided = 3;</code>
+     *
      * @param value The provided to add.
      * @return This builder for chaining.
      */
-    public Builder addProvided(
-        java.lang.String value) {
+    public Builder addProvided(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureProvidedIsMutable();
+        throw new NullPointerException();
+      }
+      ensureProvidedIsMutable();
       provided_.add(value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of provided contexts.
      * </pre>
      *
      * <code>repeated string provided = 3;</code>
+     *
      * @param values The provided to add.
      * @return This builder for chaining.
      */
-    public Builder addAllProvided(
-        java.lang.Iterable<java.lang.String> values) {
+    public Builder addAllProvided(java.lang.Iterable<java.lang.String> values) {
       ensureProvidedIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, provided_);
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, provided_);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of provided contexts.
      * </pre>
      *
      * <code>repeated string provided = 3;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearProvided() {
@@ -1238,65 +1343,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names of provided contexts.
      * </pre>
      *
      * <code>repeated string provided = 3;</code>
+     *
      * @param value The bytes of the provided to add.
      * @return This builder for chaining.
      */
-    public Builder addProvidedBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder addProvidedBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       ensureProvidedIsMutable();
       provided_.add(value);
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList allowedRequestExtensions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringList allowedRequestExtensions_ =
+        com.google.protobuf.LazyStringArrayList.EMPTY;
+
     private void ensureAllowedRequestExtensionsIsMutable() {
       if (!((bitField0_ & 0x00000004) != 0)) {
-        allowedRequestExtensions_ = new com.google.protobuf.LazyStringArrayList(allowedRequestExtensions_);
+        allowedRequestExtensions_ =
+            new com.google.protobuf.LazyStringArrayList(allowedRequestExtensions_);
         bitField0_ |= 0x00000004;
-       }
+      }
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from client to backend.
      * </pre>
      *
      * <code>repeated string allowed_request_extensions = 4;</code>
+     *
      * @return A list containing the allowedRequestExtensions.
      */
-    public com.google.protobuf.ProtocolStringList
-        getAllowedRequestExtensionsList() {
+    public com.google.protobuf.ProtocolStringList getAllowedRequestExtensionsList() {
       return allowedRequestExtensions_.getUnmodifiableView();
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from client to backend.
      * </pre>
      *
      * <code>repeated string allowed_request_extensions = 4;</code>
+     *
      * @return The count of allowedRequestExtensions.
      */
     public int getAllowedRequestExtensionsCount() {
       return allowedRequestExtensions_.size();
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from client to backend.
      * </pre>
      *
      * <code>repeated string allowed_request_extensions = 4;</code>
+     *
      * @param index The index of the element to return.
      * @return The allowedRequestExtensions at the given index.
      */
@@ -1304,85 +1422,95 @@ private static final long serialVersionUID = 0L;
       return allowedRequestExtensions_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from client to backend.
      * </pre>
      *
      * <code>repeated string allowed_request_extensions = 4;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the allowedRequestExtensions at the given index.
      */
-    public com.google.protobuf.ByteString
-        getAllowedRequestExtensionsBytes(int index) {
+    public com.google.protobuf.ByteString getAllowedRequestExtensionsBytes(int index) {
       return allowedRequestExtensions_.getByteString(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from client to backend.
      * </pre>
      *
      * <code>repeated string allowed_request_extensions = 4;</code>
+     *
      * @param index The index to set the value at.
      * @param value The allowedRequestExtensions to set.
      * @return This builder for chaining.
      */
-    public Builder setAllowedRequestExtensions(
-        int index, java.lang.String value) {
+    public Builder setAllowedRequestExtensions(int index, java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAllowedRequestExtensionsIsMutable();
+        throw new NullPointerException();
+      }
+      ensureAllowedRequestExtensionsIsMutable();
       allowedRequestExtensions_.set(index, value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from client to backend.
      * </pre>
      *
      * <code>repeated string allowed_request_extensions = 4;</code>
+     *
      * @param value The allowedRequestExtensions to add.
      * @return This builder for chaining.
      */
-    public Builder addAllowedRequestExtensions(
-        java.lang.String value) {
+    public Builder addAllowedRequestExtensions(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAllowedRequestExtensionsIsMutable();
+        throw new NullPointerException();
+      }
+      ensureAllowedRequestExtensionsIsMutable();
       allowedRequestExtensions_.add(value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from client to backend.
      * </pre>
      *
      * <code>repeated string allowed_request_extensions = 4;</code>
+     *
      * @param values The allowedRequestExtensions to add.
      * @return This builder for chaining.
      */
-    public Builder addAllAllowedRequestExtensions(
-        java.lang.Iterable<java.lang.String> values) {
+    public Builder addAllAllowedRequestExtensions(java.lang.Iterable<java.lang.String> values) {
       ensureAllowedRequestExtensionsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, allowedRequestExtensions_);
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, allowedRequestExtensions_);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from client to backend.
      * </pre>
      *
      * <code>repeated string allowed_request_extensions = 4;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearAllowedRequestExtensions() {
@@ -1392,66 +1520,79 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from client to backend.
      * </pre>
      *
      * <code>repeated string allowed_request_extensions = 4;</code>
+     *
      * @param value The bytes of the allowedRequestExtensions to add.
      * @return This builder for chaining.
      */
-    public Builder addAllowedRequestExtensionsBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder addAllowedRequestExtensionsBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       ensureAllowedRequestExtensionsIsMutable();
       allowedRequestExtensions_.add(value);
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList allowedResponseExtensions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringList allowedResponseExtensions_ =
+        com.google.protobuf.LazyStringArrayList.EMPTY;
+
     private void ensureAllowedResponseExtensionsIsMutable() {
       if (!((bitField0_ & 0x00000008) != 0)) {
-        allowedResponseExtensions_ = new com.google.protobuf.LazyStringArrayList(allowedResponseExtensions_);
+        allowedResponseExtensions_ =
+            new com.google.protobuf.LazyStringArrayList(allowedResponseExtensions_);
         bitField0_ |= 0x00000008;
-       }
+      }
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from backend to client.
      * </pre>
      *
      * <code>repeated string allowed_response_extensions = 5;</code>
+     *
      * @return A list containing the allowedResponseExtensions.
      */
-    public com.google.protobuf.ProtocolStringList
-        getAllowedResponseExtensionsList() {
+    public com.google.protobuf.ProtocolStringList getAllowedResponseExtensionsList() {
       return allowedResponseExtensions_.getUnmodifiableView();
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from backend to client.
      * </pre>
      *
      * <code>repeated string allowed_response_extensions = 5;</code>
+     *
      * @return The count of allowedResponseExtensions.
      */
     public int getAllowedResponseExtensionsCount() {
       return allowedResponseExtensions_.size();
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from backend to client.
      * </pre>
      *
      * <code>repeated string allowed_response_extensions = 5;</code>
+     *
      * @param index The index of the element to return.
      * @return The allowedResponseExtensions at the given index.
      */
@@ -1459,85 +1600,95 @@ private static final long serialVersionUID = 0L;
       return allowedResponseExtensions_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from backend to client.
      * </pre>
      *
      * <code>repeated string allowed_response_extensions = 5;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the allowedResponseExtensions at the given index.
      */
-    public com.google.protobuf.ByteString
-        getAllowedResponseExtensionsBytes(int index) {
+    public com.google.protobuf.ByteString getAllowedResponseExtensionsBytes(int index) {
       return allowedResponseExtensions_.getByteString(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from backend to client.
      * </pre>
      *
      * <code>repeated string allowed_response_extensions = 5;</code>
+     *
      * @param index The index to set the value at.
      * @param value The allowedResponseExtensions to set.
      * @return This builder for chaining.
      */
-    public Builder setAllowedResponseExtensions(
-        int index, java.lang.String value) {
+    public Builder setAllowedResponseExtensions(int index, java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAllowedResponseExtensionsIsMutable();
+        throw new NullPointerException();
+      }
+      ensureAllowedResponseExtensionsIsMutable();
       allowedResponseExtensions_.set(index, value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from backend to client.
      * </pre>
      *
      * <code>repeated string allowed_response_extensions = 5;</code>
+     *
      * @param value The allowedResponseExtensions to add.
      * @return This builder for chaining.
      */
-    public Builder addAllowedResponseExtensions(
-        java.lang.String value) {
+    public Builder addAllowedResponseExtensions(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAllowedResponseExtensionsIsMutable();
+        throw new NullPointerException();
+      }
+      ensureAllowedResponseExtensionsIsMutable();
       allowedResponseExtensions_.add(value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from backend to client.
      * </pre>
      *
      * <code>repeated string allowed_response_extensions = 5;</code>
+     *
      * @param values The allowedResponseExtensions to add.
      * @return This builder for chaining.
      */
-    public Builder addAllAllowedResponseExtensions(
-        java.lang.Iterable<java.lang.String> values) {
+    public Builder addAllAllowedResponseExtensions(java.lang.Iterable<java.lang.String> values) {
       ensureAllowedResponseExtensionsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, allowedResponseExtensions_);
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, allowedResponseExtensions_);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from backend to client.
      * </pre>
      *
      * <code>repeated string allowed_response_extensions = 5;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearAllowedResponseExtensions() {
@@ -1547,29 +1698,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of full type names or extension IDs of extensions allowed in grpc
      * side channel from backend to client.
      * </pre>
      *
      * <code>repeated string allowed_response_extensions = 5;</code>
+     *
      * @param value The bytes of the allowedResponseExtensions to add.
      * @return This builder for chaining.
      */
-    public Builder addAllowedResponseExtensionsBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder addAllowedResponseExtensionsBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       ensureAllowedResponseExtensionsIsMutable();
       allowedResponseExtensions_.add(value);
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1579,12 +1732,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.api.ContextRule)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.ContextRule)
   private static final com.google.api.ContextRule DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.api.ContextRule();
   }
@@ -1593,16 +1746,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ContextRule>
-      PARSER = new com.google.protobuf.AbstractParser<ContextRule>() {
-    @java.lang.Override
-    public ContextRule parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ContextRule(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<ContextRule> PARSER =
+      new com.google.protobuf.AbstractParser<ContextRule>() {
+        @java.lang.Override
+        public ContextRule parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ContextRule(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<ContextRule> parser() {
     return PARSER;
@@ -1617,6 +1770,4 @@ private static final long serialVersionUID = 0L;
   public com.google.api.ContextRule getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

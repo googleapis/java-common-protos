@@ -19,6 +19,8 @@
 package com.google.rpc;
 
 /**
+ *
+ *
  * <pre>
  * The canonical error codes for gRPC APIs.
  * Sometimes multiple error codes may apply.  Services should return
@@ -29,9 +31,10 @@ package com.google.rpc;
  *
  * Protobuf enum {@code google.rpc.Code}
  */
-public enum Code
-    implements com.google.protobuf.ProtocolMessageEnum {
+public enum Code implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   *
+   *
    * <pre>
    * Not an error; returned on success
    * HTTP Mapping: 200 OK
@@ -41,6 +44,8 @@ public enum Code
    */
   OK(0),
   /**
+   *
+   *
    * <pre>
    * The operation was cancelled, typically by the caller.
    * HTTP Mapping: 499 Client Closed Request
@@ -50,6 +55,8 @@ public enum Code
    */
   CANCELLED(1),
   /**
+   *
+   *
    * <pre>
    * Unknown error.  For example, this error may be returned when
    * a `Status` value received from another address space belongs to
@@ -63,6 +70,8 @@ public enum Code
    */
   UNKNOWN(2),
   /**
+   *
+   *
    * <pre>
    * The client specified an invalid argument.  Note that this differs
    * from `FAILED_PRECONDITION`.  `INVALID_ARGUMENT` indicates arguments
@@ -75,6 +84,8 @@ public enum Code
    */
   INVALID_ARGUMENT(3),
   /**
+   *
+   *
    * <pre>
    * The deadline expired before the operation could complete. For operations
    * that change the state of the system, this error may be returned
@@ -88,6 +99,8 @@ public enum Code
    */
   DEADLINE_EXCEEDED(4),
   /**
+   *
+   *
    * <pre>
    * Some requested entity (e.g., file or directory) was not found.
    * Note to server developers: if a request is denied for an entire class
@@ -102,6 +115,8 @@ public enum Code
    */
   NOT_FOUND(5),
   /**
+   *
+   *
    * <pre>
    * The entity that a client attempted to create (e.g., file or directory)
    * already exists.
@@ -112,6 +127,8 @@ public enum Code
    */
   ALREADY_EXISTS(6),
   /**
+   *
+   *
    * <pre>
    * The caller does not have permission to execute the specified
    * operation. `PERMISSION_DENIED` must not be used for rejections
@@ -128,6 +145,8 @@ public enum Code
    */
   PERMISSION_DENIED(7),
   /**
+   *
+   *
    * <pre>
    * The request does not have valid authentication credentials for the
    * operation.
@@ -138,6 +157,8 @@ public enum Code
    */
   UNAUTHENTICATED(16),
   /**
+   *
+   *
    * <pre>
    * Some resource has been exhausted, perhaps a per-user quota, or
    * perhaps the entire file system is out of space.
@@ -148,6 +169,8 @@ public enum Code
    */
   RESOURCE_EXHAUSTED(8),
   /**
+   *
+   *
    * <pre>
    * The operation was rejected because the system is not in a state
    * required for the operation's execution.  For example, the directory
@@ -171,6 +194,8 @@ public enum Code
    */
   FAILED_PRECONDITION(9),
   /**
+   *
+   *
    * <pre>
    * The operation was aborted, typically due to a concurrency issue such as
    * a sequencer check failure or transaction abort.
@@ -183,6 +208,8 @@ public enum Code
    */
   ABORTED(10),
   /**
+   *
+   *
    * <pre>
    * The operation was attempted past the valid range.  E.g., seeking or
    * reading past end-of-file.
@@ -204,6 +231,8 @@ public enum Code
    */
   OUT_OF_RANGE(11),
   /**
+   *
+   *
    * <pre>
    * The operation is not implemented or is not supported/enabled in this
    * service.
@@ -214,6 +243,8 @@ public enum Code
    */
   UNIMPLEMENTED(12),
   /**
+   *
+   *
    * <pre>
    * Internal errors.  This means that some invariants expected by the
    * underlying system have been broken.  This error code is reserved
@@ -225,6 +256,8 @@ public enum Code
    */
   INTERNAL(13),
   /**
+   *
+   *
    * <pre>
    * The service is currently unavailable.  This is most likely a
    * transient condition, which can be corrected by retrying with
@@ -239,6 +272,8 @@ public enum Code
    */
   UNAVAILABLE(14),
   /**
+   *
+   *
    * <pre>
    * Unrecoverable data loss or corruption.
    * HTTP Mapping: 500 Internal Server Error
@@ -251,6 +286,8 @@ public enum Code
   ;
 
   /**
+   *
+   *
    * <pre>
    * Not an error; returned on success
    * HTTP Mapping: 200 OK
@@ -260,6 +297,8 @@ public enum Code
    */
   public static final int OK_VALUE = 0;
   /**
+   *
+   *
    * <pre>
    * The operation was cancelled, typically by the caller.
    * HTTP Mapping: 499 Client Closed Request
@@ -269,6 +308,8 @@ public enum Code
    */
   public static final int CANCELLED_VALUE = 1;
   /**
+   *
+   *
    * <pre>
    * Unknown error.  For example, this error may be returned when
    * a `Status` value received from another address space belongs to
@@ -282,6 +323,8 @@ public enum Code
    */
   public static final int UNKNOWN_VALUE = 2;
   /**
+   *
+   *
    * <pre>
    * The client specified an invalid argument.  Note that this differs
    * from `FAILED_PRECONDITION`.  `INVALID_ARGUMENT` indicates arguments
@@ -294,6 +337,8 @@ public enum Code
    */
   public static final int INVALID_ARGUMENT_VALUE = 3;
   /**
+   *
+   *
    * <pre>
    * The deadline expired before the operation could complete. For operations
    * that change the state of the system, this error may be returned
@@ -307,6 +352,8 @@ public enum Code
    */
   public static final int DEADLINE_EXCEEDED_VALUE = 4;
   /**
+   *
+   *
    * <pre>
    * Some requested entity (e.g., file or directory) was not found.
    * Note to server developers: if a request is denied for an entire class
@@ -321,6 +368,8 @@ public enum Code
    */
   public static final int NOT_FOUND_VALUE = 5;
   /**
+   *
+   *
    * <pre>
    * The entity that a client attempted to create (e.g., file or directory)
    * already exists.
@@ -331,6 +380,8 @@ public enum Code
    */
   public static final int ALREADY_EXISTS_VALUE = 6;
   /**
+   *
+   *
    * <pre>
    * The caller does not have permission to execute the specified
    * operation. `PERMISSION_DENIED` must not be used for rejections
@@ -347,6 +398,8 @@ public enum Code
    */
   public static final int PERMISSION_DENIED_VALUE = 7;
   /**
+   *
+   *
    * <pre>
    * The request does not have valid authentication credentials for the
    * operation.
@@ -357,6 +410,8 @@ public enum Code
    */
   public static final int UNAUTHENTICATED_VALUE = 16;
   /**
+   *
+   *
    * <pre>
    * Some resource has been exhausted, perhaps a per-user quota, or
    * perhaps the entire file system is out of space.
@@ -367,6 +422,8 @@ public enum Code
    */
   public static final int RESOURCE_EXHAUSTED_VALUE = 8;
   /**
+   *
+   *
    * <pre>
    * The operation was rejected because the system is not in a state
    * required for the operation's execution.  For example, the directory
@@ -390,6 +447,8 @@ public enum Code
    */
   public static final int FAILED_PRECONDITION_VALUE = 9;
   /**
+   *
+   *
    * <pre>
    * The operation was aborted, typically due to a concurrency issue such as
    * a sequencer check failure or transaction abort.
@@ -402,6 +461,8 @@ public enum Code
    */
   public static final int ABORTED_VALUE = 10;
   /**
+   *
+   *
    * <pre>
    * The operation was attempted past the valid range.  E.g., seeking or
    * reading past end-of-file.
@@ -423,6 +484,8 @@ public enum Code
    */
   public static final int OUT_OF_RANGE_VALUE = 11;
   /**
+   *
+   *
    * <pre>
    * The operation is not implemented or is not supported/enabled in this
    * service.
@@ -433,6 +496,8 @@ public enum Code
    */
   public static final int UNIMPLEMENTED_VALUE = 12;
   /**
+   *
+   *
    * <pre>
    * Internal errors.  This means that some invariants expected by the
    * underlying system have been broken.  This error code is reserved
@@ -444,6 +509,8 @@ public enum Code
    */
   public static final int INTERNAL_VALUE = 13;
   /**
+   *
+   *
    * <pre>
    * The service is currently unavailable.  This is most likely a
    * transient condition, which can be corrected by retrying with
@@ -458,6 +525,8 @@ public enum Code
    */
   public static final int UNAVAILABLE_VALUE = 14;
   /**
+   *
+   *
    * <pre>
    * Unrecoverable data loss or corruption.
    * HTTP Mapping: 500 Internal Server Error
@@ -466,7 +535,6 @@ public enum Code
    * <code>DATA_LOSS = 15;</code>
    */
   public static final int DATA_LOSS_VALUE = 15;
-
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -492,63 +560,77 @@ public enum Code
    */
   public static Code forNumber(int value) {
     switch (value) {
-      case 0: return OK;
-      case 1: return CANCELLED;
-      case 2: return UNKNOWN;
-      case 3: return INVALID_ARGUMENT;
-      case 4: return DEADLINE_EXCEEDED;
-      case 5: return NOT_FOUND;
-      case 6: return ALREADY_EXISTS;
-      case 7: return PERMISSION_DENIED;
-      case 16: return UNAUTHENTICATED;
-      case 8: return RESOURCE_EXHAUSTED;
-      case 9: return FAILED_PRECONDITION;
-      case 10: return ABORTED;
-      case 11: return OUT_OF_RANGE;
-      case 12: return UNIMPLEMENTED;
-      case 13: return INTERNAL;
-      case 14: return UNAVAILABLE;
-      case 15: return DATA_LOSS;
-      default: return null;
+      case 0:
+        return OK;
+      case 1:
+        return CANCELLED;
+      case 2:
+        return UNKNOWN;
+      case 3:
+        return INVALID_ARGUMENT;
+      case 4:
+        return DEADLINE_EXCEEDED;
+      case 5:
+        return NOT_FOUND;
+      case 6:
+        return ALREADY_EXISTS;
+      case 7:
+        return PERMISSION_DENIED;
+      case 16:
+        return UNAUTHENTICATED;
+      case 8:
+        return RESOURCE_EXHAUSTED;
+      case 9:
+        return FAILED_PRECONDITION;
+      case 10:
+        return ABORTED;
+      case 11:
+        return OUT_OF_RANGE;
+      case 12:
+        return UNIMPLEMENTED;
+      case 13:
+        return INTERNAL;
+      case 14:
+        return UNAVAILABLE;
+      case 15:
+        return DATA_LOSS;
+      default:
+        return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<Code>
-      internalGetValueMap() {
+  public static com.google.protobuf.Internal.EnumLiteMap<Code> internalGetValueMap() {
     return internalValueMap;
   }
-  private static final com.google.protobuf.Internal.EnumLiteMap<
-      Code> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<Code>() {
-          public Code findValueByNumber(int number) {
-            return Code.forNumber(number);
-          }
-        };
 
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor
-      getValueDescriptor() {
+  private static final com.google.protobuf.Internal.EnumLiteMap<Code> internalValueMap =
+      new com.google.protobuf.Internal.EnumLiteMap<Code>() {
+        public Code findValueByNumber(int number) {
+          return Code.forNumber(number);
+        }
+      };
+
+  public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
-  public final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptorForType() {
+
+  public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
     return getDescriptor();
   }
-  public static final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
     return com.google.rpc.CodeProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final Code[] VALUES = values();
 
-  public static Code valueOf(
-      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+  public static Code valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException(
-        "EnumValueDescriptor is not for this type.");
+      throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -564,4 +646,3 @@ public enum Code
 
   // @@protoc_insertion_point(enum_scope:google.rpc.Code)
 }
-

@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * `Endpoint` describes a network endpoint of a service that serves a set of
  * APIs. It is commonly known as a service endpoint. A service may expose
@@ -38,15 +40,16 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Endpoint}
  */
-public final class Endpoint extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.api.Endpoint)
     EndpointOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use Endpoint.newBuilder() to construct.
   private Endpoint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Endpoint() {
     name_ = "";
     aliases_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -55,16 +58,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Endpoint();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private Endpoint(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -84,46 +86,48 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            name_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              aliases_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
+              name_ = s;
+              break;
             }
-            aliases_.add(s);
-            break;
-          }
-          case 40: {
-
-            allowCors_ = input.readBool();
-            break;
-          }
-          case 810: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            target_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          case 18:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                aliases_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              aliases_.add(s);
+              break;
             }
-            break;
-          }
+          case 40:
+            {
+              allowCors_ = input.readBool();
+              break;
+            }
+          case 810:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              target_ = s;
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         aliases_ = aliases_.getUnmodifiableView();
@@ -132,8 +136,8 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.api.EndpointProto.internal_static_google_api_Endpoint_descriptor;
   }
 
@@ -148,11 +152,14 @@ private static final long serialVersionUID = 0L;
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
+   *
+   *
    * <pre>
    * The canonical name of this endpoint.
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The name.
    */
   @java.lang.Override
@@ -161,29 +168,29 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       name_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The canonical name of this endpoint.
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The bytes for name.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
+  public com.google.protobuf.ByteString getNameBytes() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       name_ = b;
       return b;
     } else {
@@ -194,6 +201,8 @@ private static final long serialVersionUID = 0L;
   public static final int ALIASES_FIELD_NUMBER = 2;
   private com.google.protobuf.LazyStringList aliases_;
   /**
+   *
+   *
    * <pre>
    * Unimplemented. Dot not use.
    * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -203,13 +212,16 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
+   *
    * @return A list containing the aliases.
    */
-  @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
-      getAliasesList() {
+  @java.lang.Deprecated
+  public com.google.protobuf.ProtocolStringList getAliasesList() {
     return aliases_;
   }
   /**
+   *
+   *
    * <pre>
    * Unimplemented. Dot not use.
    * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -219,12 +231,16 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
+   *
    * @return The count of aliases.
    */
-  @java.lang.Deprecated public int getAliasesCount() {
+  @java.lang.Deprecated
+  public int getAliasesCount() {
     return aliases_.size();
   }
   /**
+   *
+   *
    * <pre>
    * Unimplemented. Dot not use.
    * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -234,13 +250,17 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
+   *
    * @param index The index of the element to return.
    * @return The aliases at the given index.
    */
-  @java.lang.Deprecated public java.lang.String getAliases(int index) {
+  @java.lang.Deprecated
+  public java.lang.String getAliases(int index) {
     return aliases_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * Unimplemented. Dot not use.
    * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -250,17 +270,20 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
+   *
    * @param index The index of the value to return.
    * @return The bytes of the aliases at the given index.
    */
-  @java.lang.Deprecated public com.google.protobuf.ByteString
-      getAliasesBytes(int index) {
+  @java.lang.Deprecated
+  public com.google.protobuf.ByteString getAliasesBytes(int index) {
     return aliases_.getByteString(index);
   }
 
   public static final int TARGET_FIELD_NUMBER = 101;
   private volatile java.lang.Object target_;
   /**
+   *
+   *
    * <pre>
    * The specification of an Internet routable address of API frontend that will
    * handle requests to this [API
@@ -270,6 +293,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string target = 101;</code>
+   *
    * @return The target.
    */
   @java.lang.Override
@@ -278,14 +302,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       target_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The specification of an Internet routable address of API frontend that will
    * handle requests to this [API
@@ -295,16 +320,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string target = 101;</code>
+   *
    * @return The bytes for target.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTargetBytes() {
+  public com.google.protobuf.ByteString getTargetBytes() {
     java.lang.Object ref = target_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       target_ = b;
       return b;
     } else {
@@ -315,6 +339,8 @@ private static final long serialVersionUID = 0L;
   public static final int ALLOW_CORS_FIELD_NUMBER = 5;
   private boolean allowCors_;
   /**
+   *
+   *
    * <pre>
    * Allowing
    * [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka
@@ -325,6 +351,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool allow_cors = 5;</code>
+   *
    * @return The allowCors.
    */
   @java.lang.Override
@@ -333,6 +360,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -344,8 +372,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
@@ -379,8 +406,7 @@ private static final long serialVersionUID = 0L;
       size += 1 * getAliasesList().size();
     }
     if (allowCors_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, allowCors_);
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(5, allowCors_);
     }
     if (!getTargetBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, target_);
@@ -393,21 +419,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.api.Endpoint)) {
       return super.equals(obj);
     }
     com.google.api.Endpoint other = (com.google.api.Endpoint) obj;
 
-    if (!getName()
-        .equals(other.getName())) return false;
-    if (!getAliasesList()
-        .equals(other.getAliasesList())) return false;
-    if (!getTarget()
-        .equals(other.getTarget())) return false;
-    if (getAllowCors()
-        != other.getAllowCors()) return false;
+    if (!getName().equals(other.getName())) return false;
+    if (!getAliasesList().equals(other.getAliasesList())) return false;
+    if (!getTarget().equals(other.getTarget())) return false;
+    if (getAllowCors() != other.getAllowCors()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -428,104 +450,109 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TARGET_FIELD_NUMBER;
     hash = (53 * hash) + getTarget().hashCode();
     hash = (37 * hash) + ALLOW_CORS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getAllowCors());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getAllowCors());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.google.api.Endpoint parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.api.Endpoint parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Endpoint parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.api.Endpoint parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.api.Endpoint parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Endpoint parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Endpoint parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Endpoint parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Endpoint parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Endpoint parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.Endpoint parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.api.Endpoint parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.api.Endpoint parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.api.Endpoint parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Endpoint parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.api.Endpoint prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * `Endpoint` describes a network endpoint of a service that serves a set of
    * APIs. It is commonly known as a service endpoint. A service may expose
@@ -545,12 +572,11 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.Endpoint}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.api.Endpoint)
       com.google.api.EndpointOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.api.EndpointProto.internal_static_google_api_Endpoint_descriptor;
     }
 
@@ -567,16 +593,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -592,8 +617,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.api.EndpointProto.internal_static_google_api_Endpoint_descriptor;
     }
 
@@ -631,38 +655,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Endpoint) {
-        return mergeFrom((com.google.api.Endpoint)other);
+        return mergeFrom((com.google.api.Endpoint) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -720,22 +745,25 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
+     *
+     *
      * <pre>
      * The canonical name of this endpoint.
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
@@ -744,20 +772,21 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The canonical name of this endpoint.
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @return The bytes for name.
      */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
+    public com.google.protobuf.ByteString getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -765,67 +794,78 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The canonical name of this endpoint.
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @param value The name to set.
      * @return This builder for chaining.
      */
-    public Builder setName(
-        java.lang.String value) {
+    public Builder setName(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       name_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The canonical name of this endpoint.
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
+
       name_ = getDefaultInstance().getName();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The canonical name of this endpoint.
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       name_ = value;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList aliases_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringList aliases_ =
+        com.google.protobuf.LazyStringArrayList.EMPTY;
+
     private void ensureAliasesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         aliases_ = new com.google.protobuf.LazyStringArrayList(aliases_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
     /**
+     *
+     *
      * <pre>
      * Unimplemented. Dot not use.
      * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -835,13 +875,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string aliases = 2 [deprecated = true];</code>
+     *
      * @return A list containing the aliases.
      */
-    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
-        getAliasesList() {
+    @java.lang.Deprecated
+    public com.google.protobuf.ProtocolStringList getAliasesList() {
       return aliases_.getUnmodifiableView();
     }
     /**
+     *
+     *
      * <pre>
      * Unimplemented. Dot not use.
      * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -851,12 +894,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string aliases = 2 [deprecated = true];</code>
+     *
      * @return The count of aliases.
      */
-    @java.lang.Deprecated public int getAliasesCount() {
+    @java.lang.Deprecated
+    public int getAliasesCount() {
       return aliases_.size();
     }
     /**
+     *
+     *
      * <pre>
      * Unimplemented. Dot not use.
      * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -866,13 +913,17 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string aliases = 2 [deprecated = true];</code>
+     *
      * @param index The index of the element to return.
      * @return The aliases at the given index.
      */
-    @java.lang.Deprecated public java.lang.String getAliases(int index) {
+    @java.lang.Deprecated
+    public java.lang.String getAliases(int index) {
       return aliases_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * Unimplemented. Dot not use.
      * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -882,14 +933,17 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string aliases = 2 [deprecated = true];</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the aliases at the given index.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getAliasesBytes(int index) {
+    @java.lang.Deprecated
+    public com.google.protobuf.ByteString getAliasesBytes(int index) {
       return aliases_.getByteString(index);
     }
     /**
+     *
+     *
      * <pre>
      * Unimplemented. Dot not use.
      * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -899,21 +953,24 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string aliases = 2 [deprecated = true];</code>
+     *
      * @param index The index to set the value at.
      * @param value The aliases to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setAliases(
-        int index, java.lang.String value) {
+    @java.lang.Deprecated
+    public Builder setAliases(int index, java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAliasesIsMutable();
+        throw new NullPointerException();
+      }
+      ensureAliasesIsMutable();
       aliases_.set(index, value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Unimplemented. Dot not use.
      * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -923,20 +980,23 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string aliases = 2 [deprecated = true];</code>
+     *
      * @param value The aliases to add.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder addAliases(
-        java.lang.String value) {
+    @java.lang.Deprecated
+    public Builder addAliases(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAliasesIsMutable();
+        throw new NullPointerException();
+      }
+      ensureAliasesIsMutable();
       aliases_.add(value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Unimplemented. Dot not use.
      * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -946,18 +1006,20 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string aliases = 2 [deprecated = true];</code>
+     *
      * @param values The aliases to add.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder addAllAliases(
-        java.lang.Iterable<java.lang.String> values) {
+    @java.lang.Deprecated
+    public Builder addAllAliases(java.lang.Iterable<java.lang.String> values) {
       ensureAliasesIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, aliases_);
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, aliases_);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Unimplemented. Dot not use.
      * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -967,15 +1029,19 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string aliases = 2 [deprecated = true];</code>
+     *
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearAliases() {
+    @java.lang.Deprecated
+    public Builder clearAliases() {
       aliases_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Unimplemented. Dot not use.
      * DEPRECATED: This field is no longer supported. Instead of using aliases,
@@ -985,15 +1051,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string aliases = 2 [deprecated = true];</code>
+     *
      * @param value The bytes of the aliases to add.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder addAliasesBytes(
-        com.google.protobuf.ByteString value) {
+    @java.lang.Deprecated
+    public Builder addAliasesBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       ensureAliasesIsMutable();
       aliases_.add(value);
       onChanged();
@@ -1002,6 +1069,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object target_ = "";
     /**
+     *
+     *
      * <pre>
      * The specification of an Internet routable address of API frontend that will
      * handle requests to this [API
@@ -1011,13 +1080,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string target = 101;</code>
+     *
      * @return The target.
      */
     public java.lang.String getTarget() {
       java.lang.Object ref = target_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         target_ = s;
         return s;
@@ -1026,6 +1095,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The specification of an Internet routable address of API frontend that will
      * handle requests to this [API
@@ -1035,15 +1106,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string target = 101;</code>
+     *
      * @return The bytes for target.
      */
-    public com.google.protobuf.ByteString
-        getTargetBytes() {
+    public com.google.protobuf.ByteString getTargetBytes() {
       java.lang.Object ref = target_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         target_ = b;
         return b;
       } else {
@@ -1051,6 +1121,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The specification of an Internet routable address of API frontend that will
      * handle requests to this [API
@@ -1060,20 +1132,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string target = 101;</code>
+     *
      * @param value The target to set.
      * @return This builder for chaining.
      */
-    public Builder setTarget(
-        java.lang.String value) {
+    public Builder setTarget(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       target_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The specification of an Internet routable address of API frontend that will
      * handle requests to this [API
@@ -1083,15 +1157,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string target = 101;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearTarget() {
-      
+
       target_ = getDefaultInstance().getTarget();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The specification of an Internet routable address of API frontend that will
      * handle requests to this [API
@@ -1101,23 +1178,25 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string target = 101;</code>
+     *
      * @param value The bytes for target to set.
      * @return This builder for chaining.
      */
-    public Builder setTargetBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setTargetBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       target_ = value;
       onChanged();
       return this;
     }
 
-    private boolean allowCors_ ;
+    private boolean allowCors_;
     /**
+     *
+     *
      * <pre>
      * Allowing
      * [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka
@@ -1128,6 +1207,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool allow_cors = 5;</code>
+     *
      * @return The allowCors.
      */
     @java.lang.Override
@@ -1135,6 +1215,8 @@ private static final long serialVersionUID = 0L;
       return allowCors_;
     }
     /**
+     *
+     *
      * <pre>
      * Allowing
      * [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka
@@ -1145,16 +1227,19 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool allow_cors = 5;</code>
+     *
      * @param value The allowCors to set.
      * @return This builder for chaining.
      */
     public Builder setAllowCors(boolean value) {
-      
+
       allowCors_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Allowing
      * [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka
@@ -1165,17 +1250,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool allow_cors = 5;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearAllowCors() {
-      
+
       allowCors_ = false;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1185,12 +1271,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.api.Endpoint)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Endpoint)
   private static final com.google.api.Endpoint DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.api.Endpoint();
   }
@@ -1199,16 +1285,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Endpoint>
-      PARSER = new com.google.protobuf.AbstractParser<Endpoint>() {
-    @java.lang.Override
-    public Endpoint parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Endpoint(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<Endpoint> PARSER =
+      new com.google.protobuf.AbstractParser<Endpoint>() {
+        @java.lang.Override
+        public Endpoint parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Endpoint(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<Endpoint> parser() {
     return PARSER;
@@ -1223,6 +1309,4 @@ private static final long serialVersionUID = 0L;
   public com.google.api.Endpoint getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

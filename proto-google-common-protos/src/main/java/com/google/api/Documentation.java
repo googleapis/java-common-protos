@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * `Documentation` provides the information for describing a service.
  * Example:
@@ -74,15 +76,16 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Documentation}
  */
-public final class Documentation extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class Documentation extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.api.Documentation)
     DocumentationOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use Documentation.newBuilder() to construct.
   private Documentation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Documentation() {
     summary_ = "";
     pages_ = java.util.Collections.emptyList();
@@ -94,16 +97,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Documentation();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private Documentation(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -123,62 +125,66 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            summary_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            overview_ = s;
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              rules_ = new java.util.ArrayList<com.google.api.DocumentationRule>();
-              mutable_bitField0_ |= 0x00000002;
+              summary_ = s;
+              break;
             }
-            rules_.add(
-                input.readMessage(com.google.api.DocumentationRule.parser(), extensionRegistry));
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 18:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            documentationRootUrl_ = s;
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              pages_ = new java.util.ArrayList<com.google.api.Page>();
-              mutable_bitField0_ |= 0x00000001;
+              overview_ = s;
+              break;
             }
-            pages_.add(
-                input.readMessage(com.google.api.Page.parser(), extensionRegistry));
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 26:
+            {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                rules_ = new java.util.ArrayList<com.google.api.DocumentationRule>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              rules_.add(
+                  input.readMessage(com.google.api.DocumentationRule.parser(), extensionRegistry));
+              break;
+            }
+          case 34:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            serviceRootUrl_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+              documentationRootUrl_ = s;
+              break;
             }
-            break;
-          }
+          case 42:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                pages_ = new java.util.ArrayList<com.google.api.Page>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pages_.add(input.readMessage(com.google.api.Page.parser(), extensionRegistry));
+              break;
+            }
+          case 50:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceRootUrl_ = s;
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000002) != 0)) {
         rules_ = java.util.Collections.unmodifiableList(rules_);
@@ -190,15 +196,16 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.api.DocumentationProto.internal_static_google_api_Documentation_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.api.DocumentationProto.internal_static_google_api_Documentation_fieldAccessorTable
+    return com.google.api.DocumentationProto
+        .internal_static_google_api_Documentation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.api.Documentation.class, com.google.api.Documentation.Builder.class);
   }
@@ -206,12 +213,15 @@ private static final long serialVersionUID = 0L;
   public static final int SUMMARY_FIELD_NUMBER = 1;
   private volatile java.lang.Object summary_;
   /**
+   *
+   *
    * <pre>
    * A short summary of what the service does. Can only be provided by
    * plain text.
    * </pre>
    *
    * <code>string summary = 1;</code>
+   *
    * @return The summary.
    */
   @java.lang.Override
@@ -220,30 +230,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       summary_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * A short summary of what the service does. Can only be provided by
    * plain text.
    * </pre>
    *
    * <code>string summary = 1;</code>
+   *
    * @return The bytes for summary.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getSummaryBytes() {
+  public com.google.protobuf.ByteString getSummaryBytes() {
     java.lang.Object ref = summary_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       summary_ = b;
       return b;
     } else {
@@ -254,6 +264,8 @@ private static final long serialVersionUID = 0L;
   public static final int PAGES_FIELD_NUMBER = 5;
   private java.util.List<com.google.api.Page> pages_;
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
@@ -265,6 +277,8 @@ private static final long serialVersionUID = 0L;
     return pages_;
   }
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
@@ -272,11 +286,12 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.Page pages = 5;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.PageOrBuilder> 
-      getPagesOrBuilderList() {
+  public java.util.List<? extends com.google.api.PageOrBuilder> getPagesOrBuilderList() {
     return pages_;
   }
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
@@ -288,6 +303,8 @@ private static final long serialVersionUID = 0L;
     return pages_.size();
   }
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
@@ -299,6 +316,8 @@ private static final long serialVersionUID = 0L;
     return pages_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
@@ -306,14 +325,15 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.Page pages = 5;</code>
    */
   @java.lang.Override
-  public com.google.api.PageOrBuilder getPagesOrBuilder(
-      int index) {
+  public com.google.api.PageOrBuilder getPagesOrBuilder(int index) {
     return pages_.get(index);
   }
 
   public static final int RULES_FIELD_NUMBER = 3;
   private java.util.List<com.google.api.DocumentationRule> rules_;
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -326,6 +346,8 @@ private static final long serialVersionUID = 0L;
     return rules_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -334,11 +356,13 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.DocumentationRule rules = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.DocumentationRuleOrBuilder> 
+  public java.util.List<? extends com.google.api.DocumentationRuleOrBuilder>
       getRulesOrBuilderList() {
     return rules_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -351,6 +375,8 @@ private static final long serialVersionUID = 0L;
     return rules_.size();
   }
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -363,6 +389,8 @@ private static final long serialVersionUID = 0L;
     return rules_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -371,19 +399,21 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.DocumentationRule rules = 3;</code>
    */
   @java.lang.Override
-  public com.google.api.DocumentationRuleOrBuilder getRulesOrBuilder(
-      int index) {
+  public com.google.api.DocumentationRuleOrBuilder getRulesOrBuilder(int index) {
     return rules_.get(index);
   }
 
   public static final int DOCUMENTATION_ROOT_URL_FIELD_NUMBER = 4;
   private volatile java.lang.Object documentationRootUrl_;
   /**
+   *
+   *
    * <pre>
    * The URL to the root of documentation.
    * </pre>
    *
    * <code>string documentation_root_url = 4;</code>
+   *
    * @return The documentationRootUrl.
    */
   @java.lang.Override
@@ -392,29 +422,29 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       documentationRootUrl_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The URL to the root of documentation.
    * </pre>
    *
    * <code>string documentation_root_url = 4;</code>
+   *
    * @return The bytes for documentationRootUrl.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDocumentationRootUrlBytes() {
+  public com.google.protobuf.ByteString getDocumentationRootUrlBytes() {
     java.lang.Object ref = documentationRootUrl_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       documentationRootUrl_ = b;
       return b;
     } else {
@@ -425,6 +455,8 @@ private static final long serialVersionUID = 0L;
   public static final int SERVICE_ROOT_URL_FIELD_NUMBER = 6;
   private volatile java.lang.Object serviceRootUrl_;
   /**
+   *
+   *
    * <pre>
    * Specifies the service root url if the default one (the service name
    * from the yaml file) is not suitable. This can be seen in any fully
@@ -433,6 +465,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string service_root_url = 6;</code>
+   *
    * @return The serviceRootUrl.
    */
   @java.lang.Override
@@ -441,14 +474,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       serviceRootUrl_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Specifies the service root url if the default one (the service name
    * from the yaml file) is not suitable. This can be seen in any fully
@@ -457,16 +491,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string service_root_url = 6;</code>
+   *
    * @return The bytes for serviceRootUrl.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getServiceRootUrlBytes() {
+  public com.google.protobuf.ByteString getServiceRootUrlBytes() {
     java.lang.Object ref = serviceRootUrl_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       serviceRootUrl_ = b;
       return b;
     } else {
@@ -477,6 +510,8 @@ private static final long serialVersionUID = 0L;
   public static final int OVERVIEW_FIELD_NUMBER = 2;
   private volatile java.lang.Object overview_;
   /**
+   *
+   *
    * <pre>
    * Declares a single overview page. For example:
    * &lt;pre&gt;&lt;code&gt;documentation:
@@ -494,6 +529,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string overview = 2;</code>
+   *
    * @return The overview.
    */
   @java.lang.Override
@@ -502,14 +538,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       overview_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Declares a single overview page. For example:
    * &lt;pre&gt;&lt;code&gt;documentation:
@@ -527,16 +564,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string overview = 2;</code>
+   *
    * @return The bytes for overview.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOverviewBytes() {
+  public com.google.protobuf.ByteString getOverviewBytes() {
     java.lang.Object ref = overview_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       overview_ = b;
       return b;
     } else {
@@ -545,6 +581,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -556,8 +593,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getSummaryBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, summary_);
     }
@@ -592,15 +628,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, overview_);
     }
     for (int i = 0; i < rules_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, rules_.get(i));
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, rules_.get(i));
     }
     if (!getDocumentationRootUrlBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, documentationRootUrl_);
     }
     for (int i = 0; i < pages_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, pages_.get(i));
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, pages_.get(i));
     }
     if (!getServiceRootUrlBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, serviceRootUrl_);
@@ -613,25 +647,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.api.Documentation)) {
       return super.equals(obj);
     }
     com.google.api.Documentation other = (com.google.api.Documentation) obj;
 
-    if (!getSummary()
-        .equals(other.getSummary())) return false;
-    if (!getPagesList()
-        .equals(other.getPagesList())) return false;
-    if (!getRulesList()
-        .equals(other.getRulesList())) return false;
-    if (!getDocumentationRootUrl()
-        .equals(other.getDocumentationRootUrl())) return false;
-    if (!getServiceRootUrl()
-        .equals(other.getServiceRootUrl())) return false;
-    if (!getOverview()
-        .equals(other.getOverview())) return false;
+    if (!getSummary().equals(other.getSummary())) return false;
+    if (!getPagesList().equals(other.getPagesList())) return false;
+    if (!getRulesList().equals(other.getRulesList())) return false;
+    if (!getDocumentationRootUrl().equals(other.getDocumentationRootUrl())) return false;
+    if (!getServiceRootUrl().equals(other.getServiceRootUrl())) return false;
+    if (!getOverview().equals(other.getOverview())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -664,97 +692,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.api.Documentation parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.api.Documentation parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Documentation parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.api.Documentation parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.api.Documentation parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Documentation parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Documentation parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Documentation parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Documentation parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Documentation parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.Documentation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.api.Documentation parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.api.Documentation parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.api.Documentation parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Documentation parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.api.Documentation prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * `Documentation` provides the information for describing a service.
    * Example:
@@ -810,19 +844,19 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.Documentation}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.api.Documentation)
       com.google.api.DocumentationOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.api.DocumentationProto.internal_static_google_api_Documentation_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.DocumentationProto.internal_static_google_api_Documentation_fieldAccessorTable
+      return com.google.api.DocumentationProto
+          .internal_static_google_api_Documentation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.api.Documentation.class, com.google.api.Documentation.Builder.class);
     }
@@ -832,18 +866,18 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getPagesFieldBuilder();
         getRulesFieldBuilder();
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -871,8 +905,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.api.DocumentationProto.internal_static_google_api_Documentation_descriptor;
     }
 
@@ -924,38 +957,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Documentation) {
-        return mergeFrom((com.google.api.Documentation)other);
+        return mergeFrom((com.google.api.Documentation) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -986,9 +1020,10 @@ private static final long serialVersionUID = 0L;
             pagesBuilder_ = null;
             pages_ = other.pages_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            pagesBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getPagesFieldBuilder() : null;
+            pagesBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getPagesFieldBuilder()
+                    : null;
           } else {
             pagesBuilder_.addAllMessages(other.pages_);
           }
@@ -1012,9 +1047,10 @@ private static final long serialVersionUID = 0L;
             rulesBuilder_ = null;
             rules_ = other.rules_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            rulesBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getRulesFieldBuilder() : null;
+            rulesBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getRulesFieldBuilder()
+                    : null;
           } else {
             rulesBuilder_.addAllMessages(other.rules_);
           }
@@ -1060,23 +1096,26 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.lang.Object summary_ = "";
     /**
+     *
+     *
      * <pre>
      * A short summary of what the service does. Can only be provided by
      * plain text.
      * </pre>
      *
      * <code>string summary = 1;</code>
+     *
      * @return The summary.
      */
     public java.lang.String getSummary() {
       java.lang.Object ref = summary_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         summary_ = s;
         return s;
@@ -1085,21 +1124,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A short summary of what the service does. Can only be provided by
      * plain text.
      * </pre>
      *
      * <code>string summary = 1;</code>
+     *
      * @return The bytes for summary.
      */
-    public com.google.protobuf.ByteString
-        getSummaryBytes() {
+    public com.google.protobuf.ByteString getSummaryBytes() {
       java.lang.Object ref = summary_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         summary_ = b;
         return b;
       } else {
@@ -1107,75 +1147,85 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A short summary of what the service does. Can only be provided by
      * plain text.
      * </pre>
      *
      * <code>string summary = 1;</code>
+     *
      * @param value The summary to set.
      * @return This builder for chaining.
      */
-    public Builder setSummary(
-        java.lang.String value) {
+    public Builder setSummary(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       summary_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A short summary of what the service does. Can only be provided by
      * plain text.
      * </pre>
      *
      * <code>string summary = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearSummary() {
-      
+
       summary_ = getDefaultInstance().getSummary();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A short summary of what the service does. Can only be provided by
      * plain text.
      * </pre>
      *
      * <code>string summary = 1;</code>
+     *
      * @param value The bytes for summary to set.
      * @return This builder for chaining.
      */
-    public Builder setSummaryBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setSummaryBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       summary_ = value;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.google.api.Page> pages_ =
-      java.util.Collections.emptyList();
+    private java.util.List<com.google.api.Page> pages_ = java.util.Collections.emptyList();
+
     private void ensurePagesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         pages_ = new java.util.ArrayList<com.google.api.Page>(pages_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.Page, com.google.api.Page.Builder, com.google.api.PageOrBuilder> pagesBuilder_;
+            com.google.api.Page, com.google.api.Page.Builder, com.google.api.PageOrBuilder>
+        pagesBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
@@ -1190,6 +1240,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
@@ -1204,6 +1256,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
@@ -1218,14 +1272,15 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public Builder setPages(
-        int index, com.google.api.Page value) {
+    public Builder setPages(int index, com.google.api.Page value) {
       if (pagesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1239,14 +1294,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public Builder setPages(
-        int index, com.google.api.Page.Builder builderForValue) {
+    public Builder setPages(int index, com.google.api.Page.Builder builderForValue) {
       if (pagesBuilder_ == null) {
         ensurePagesIsMutable();
         pages_.set(index, builderForValue.build());
@@ -1257,6 +1313,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
@@ -1277,14 +1335,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public Builder addPages(
-        int index, com.google.api.Page value) {
+    public Builder addPages(int index, com.google.api.Page value) {
       if (pagesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1298,14 +1357,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public Builder addPages(
-        com.google.api.Page.Builder builderForValue) {
+    public Builder addPages(com.google.api.Page.Builder builderForValue) {
       if (pagesBuilder_ == null) {
         ensurePagesIsMutable();
         pages_.add(builderForValue.build());
@@ -1316,14 +1376,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public Builder addPages(
-        int index, com.google.api.Page.Builder builderForValue) {
+    public Builder addPages(int index, com.google.api.Page.Builder builderForValue) {
       if (pagesBuilder_ == null) {
         ensurePagesIsMutable();
         pages_.add(index, builderForValue.build());
@@ -1334,18 +1395,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public Builder addAllPages(
-        java.lang.Iterable<? extends com.google.api.Page> values) {
+    public Builder addAllPages(java.lang.Iterable<? extends com.google.api.Page> values) {
       if (pagesBuilder_ == null) {
         ensurePagesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, pages_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, pages_);
         onChanged();
       } else {
         pagesBuilder_.addAllMessages(values);
@@ -1353,6 +1414,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
@@ -1370,6 +1433,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
@@ -1387,39 +1452,43 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public com.google.api.Page.Builder getPagesBuilder(
-        int index) {
+    public com.google.api.Page.Builder getPagesBuilder(int index) {
       return getPagesFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public com.google.api.PageOrBuilder getPagesOrBuilder(
-        int index) {
+    public com.google.api.PageOrBuilder getPagesOrBuilder(int index) {
       if (pagesBuilder_ == null) {
-        return pages_.get(index);  } else {
+        return pages_.get(index);
+      } else {
         return pagesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public java.util.List<? extends com.google.api.PageOrBuilder> 
-         getPagesOrBuilderList() {
+    public java.util.List<? extends com.google.api.PageOrBuilder> getPagesOrBuilderList() {
       if (pagesBuilder_ != null) {
         return pagesBuilder_.getMessageOrBuilderList();
       } else {
@@ -1427,6 +1496,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
@@ -1434,60 +1505,65 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.api.Page pages = 5;</code>
      */
     public com.google.api.Page.Builder addPagesBuilder() {
-      return getPagesFieldBuilder().addBuilder(
-          com.google.api.Page.getDefaultInstance());
+      return getPagesFieldBuilder().addBuilder(com.google.api.Page.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public com.google.api.Page.Builder addPagesBuilder(
-        int index) {
-      return getPagesFieldBuilder().addBuilder(
-          index, com.google.api.Page.getDefaultInstance());
+    public com.google.api.Page.Builder addPagesBuilder(int index) {
+      return getPagesFieldBuilder().addBuilder(index, com.google.api.Page.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * The top level pages for the documentation set.
      * </pre>
      *
      * <code>repeated .google.api.Page pages = 5;</code>
      */
-    public java.util.List<com.google.api.Page.Builder> 
-         getPagesBuilderList() {
+    public java.util.List<com.google.api.Page.Builder> getPagesBuilderList() {
       return getPagesFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.Page, com.google.api.Page.Builder, com.google.api.PageOrBuilder> 
+            com.google.api.Page, com.google.api.Page.Builder, com.google.api.PageOrBuilder>
         getPagesFieldBuilder() {
       if (pagesBuilder_ == null) {
-        pagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.Page, com.google.api.Page.Builder, com.google.api.PageOrBuilder>(
-                pages_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
+        pagesBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.api.Page, com.google.api.Page.Builder, com.google.api.PageOrBuilder>(
+                pages_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
         pages_ = null;
       }
       return pagesBuilder_;
     }
 
     private java.util.List<com.google.api.DocumentationRule> rules_ =
-      java.util.Collections.emptyList();
+        java.util.Collections.emptyList();
+
     private void ensureRulesIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
         rules_ = new java.util.ArrayList<com.google.api.DocumentationRule>(rules_);
         bitField0_ |= 0x00000002;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.DocumentationRule, com.google.api.DocumentationRule.Builder, com.google.api.DocumentationRuleOrBuilder> rulesBuilder_;
+            com.google.api.DocumentationRule,
+            com.google.api.DocumentationRule.Builder,
+            com.google.api.DocumentationRuleOrBuilder>
+        rulesBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1503,6 +1579,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1518,6 +1596,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1533,6 +1613,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1540,8 +1622,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public Builder setRules(
-        int index, com.google.api.DocumentationRule value) {
+    public Builder setRules(int index, com.google.api.DocumentationRule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1555,6 +1636,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1562,8 +1645,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public Builder setRules(
-        int index, com.google.api.DocumentationRule.Builder builderForValue) {
+    public Builder setRules(int index, com.google.api.DocumentationRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.set(index, builderForValue.build());
@@ -1574,6 +1656,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1595,6 +1679,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1602,8 +1688,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public Builder addRules(
-        int index, com.google.api.DocumentationRule value) {
+    public Builder addRules(int index, com.google.api.DocumentationRule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1617,6 +1702,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1624,8 +1711,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public Builder addRules(
-        com.google.api.DocumentationRule.Builder builderForValue) {
+    public Builder addRules(com.google.api.DocumentationRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(builderForValue.build());
@@ -1636,6 +1722,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1643,8 +1731,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public Builder addRules(
-        int index, com.google.api.DocumentationRule.Builder builderForValue) {
+    public Builder addRules(int index, com.google.api.DocumentationRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(index, builderForValue.build());
@@ -1655,6 +1742,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1666,8 +1755,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Iterable<? extends com.google.api.DocumentationRule> values) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, rules_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, rules_);
         onChanged();
       } else {
         rulesBuilder_.addAllMessages(values);
@@ -1675,6 +1763,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1693,6 +1783,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1711,6 +1803,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1718,11 +1812,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public com.google.api.DocumentationRule.Builder getRulesBuilder(
-        int index) {
+    public com.google.api.DocumentationRule.Builder getRulesBuilder(int index) {
       return getRulesFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1730,14 +1825,16 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public com.google.api.DocumentationRuleOrBuilder getRulesOrBuilder(
-        int index) {
+    public com.google.api.DocumentationRuleOrBuilder getRulesOrBuilder(int index) {
       if (rulesBuilder_ == null) {
-        return rules_.get(index);  } else {
+        return rules_.get(index);
+      } else {
         return rulesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1745,8 +1842,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public java.util.List<? extends com.google.api.DocumentationRuleOrBuilder> 
-         getRulesOrBuilderList() {
+    public java.util.List<? extends com.google.api.DocumentationRuleOrBuilder>
+        getRulesOrBuilderList() {
       if (rulesBuilder_ != null) {
         return rulesBuilder_.getMessageOrBuilderList();
       } else {
@@ -1754,6 +1851,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1762,10 +1861,12 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
     public com.google.api.DocumentationRule.Builder addRulesBuilder() {
-      return getRulesFieldBuilder().addBuilder(
-          com.google.api.DocumentationRule.getDefaultInstance());
+      return getRulesFieldBuilder()
+          .addBuilder(com.google.api.DocumentationRule.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1773,12 +1874,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public com.google.api.DocumentationRule.Builder addRulesBuilder(
-        int index) {
-      return getRulesFieldBuilder().addBuilder(
-          index, com.google.api.DocumentationRule.getDefaultInstance());
+    public com.google.api.DocumentationRule.Builder addRulesBuilder(int index) {
+      return getRulesFieldBuilder()
+          .addBuilder(index, com.google.api.DocumentationRule.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * A list of documentation rules that apply to individual API elements.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -1786,20 +1888,22 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.DocumentationRule rules = 3;</code>
      */
-    public java.util.List<com.google.api.DocumentationRule.Builder> 
-         getRulesBuilderList() {
+    public java.util.List<com.google.api.DocumentationRule.Builder> getRulesBuilderList() {
       return getRulesFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.DocumentationRule, com.google.api.DocumentationRule.Builder, com.google.api.DocumentationRuleOrBuilder> 
+            com.google.api.DocumentationRule,
+            com.google.api.DocumentationRule.Builder,
+            com.google.api.DocumentationRuleOrBuilder>
         getRulesFieldBuilder() {
       if (rulesBuilder_ == null) {
-        rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.DocumentationRule, com.google.api.DocumentationRule.Builder, com.google.api.DocumentationRuleOrBuilder>(
-                rules_,
-                ((bitField0_ & 0x00000002) != 0),
-                getParentForChildren(),
-                isClean());
+        rulesBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.api.DocumentationRule,
+                com.google.api.DocumentationRule.Builder,
+                com.google.api.DocumentationRuleOrBuilder>(
+                rules_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
         rules_ = null;
       }
       return rulesBuilder_;
@@ -1807,18 +1911,20 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object documentationRootUrl_ = "";
     /**
+     *
+     *
      * <pre>
      * The URL to the root of documentation.
      * </pre>
      *
      * <code>string documentation_root_url = 4;</code>
+     *
      * @return The documentationRootUrl.
      */
     public java.lang.String getDocumentationRootUrl() {
       java.lang.Object ref = documentationRootUrl_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         documentationRootUrl_ = s;
         return s;
@@ -1827,20 +1933,21 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The URL to the root of documentation.
      * </pre>
      *
      * <code>string documentation_root_url = 4;</code>
+     *
      * @return The bytes for documentationRootUrl.
      */
-    public com.google.protobuf.ByteString
-        getDocumentationRootUrlBytes() {
+    public com.google.protobuf.ByteString getDocumentationRootUrlBytes() {
       java.lang.Object ref = documentationRootUrl_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         documentationRootUrl_ = b;
         return b;
       } else {
@@ -1848,54 +1955,61 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The URL to the root of documentation.
      * </pre>
      *
      * <code>string documentation_root_url = 4;</code>
+     *
      * @param value The documentationRootUrl to set.
      * @return This builder for chaining.
      */
-    public Builder setDocumentationRootUrl(
-        java.lang.String value) {
+    public Builder setDocumentationRootUrl(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       documentationRootUrl_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The URL to the root of documentation.
      * </pre>
      *
      * <code>string documentation_root_url = 4;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearDocumentationRootUrl() {
-      
+
       documentationRootUrl_ = getDefaultInstance().getDocumentationRootUrl();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The URL to the root of documentation.
      * </pre>
      *
      * <code>string documentation_root_url = 4;</code>
+     *
      * @param value The bytes for documentationRootUrl to set.
      * @return This builder for chaining.
      */
-    public Builder setDocumentationRootUrlBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setDocumentationRootUrlBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       documentationRootUrl_ = value;
       onChanged();
       return this;
@@ -1903,6 +2017,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object serviceRootUrl_ = "";
     /**
+     *
+     *
      * <pre>
      * Specifies the service root url if the default one (the service name
      * from the yaml file) is not suitable. This can be seen in any fully
@@ -1911,13 +2027,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_root_url = 6;</code>
+     *
      * @return The serviceRootUrl.
      */
     public java.lang.String getServiceRootUrl() {
       java.lang.Object ref = serviceRootUrl_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         serviceRootUrl_ = s;
         return s;
@@ -1926,6 +2042,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Specifies the service root url if the default one (the service name
      * from the yaml file) is not suitable. This can be seen in any fully
@@ -1934,15 +2052,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_root_url = 6;</code>
+     *
      * @return The bytes for serviceRootUrl.
      */
-    public com.google.protobuf.ByteString
-        getServiceRootUrlBytes() {
+    public com.google.protobuf.ByteString getServiceRootUrlBytes() {
       java.lang.Object ref = serviceRootUrl_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         serviceRootUrl_ = b;
         return b;
       } else {
@@ -1950,6 +2067,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Specifies the service root url if the default one (the service name
      * from the yaml file) is not suitable. This can be seen in any fully
@@ -1958,20 +2077,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_root_url = 6;</code>
+     *
      * @param value The serviceRootUrl to set.
      * @return This builder for chaining.
      */
-    public Builder setServiceRootUrl(
-        java.lang.String value) {
+    public Builder setServiceRootUrl(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       serviceRootUrl_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Specifies the service root url if the default one (the service name
      * from the yaml file) is not suitable. This can be seen in any fully
@@ -1980,15 +2101,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_root_url = 6;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearServiceRootUrl() {
-      
+
       serviceRootUrl_ = getDefaultInstance().getServiceRootUrl();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Specifies the service root url if the default one (the service name
      * from the yaml file) is not suitable. This can be seen in any fully
@@ -1997,16 +2121,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_root_url = 6;</code>
+     *
      * @param value The bytes for serviceRootUrl to set.
      * @return This builder for chaining.
      */
-    public Builder setServiceRootUrlBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setServiceRootUrlBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       serviceRootUrl_ = value;
       onChanged();
       return this;
@@ -2014,6 +2138,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object overview_ = "";
     /**
+     *
+     *
      * <pre>
      * Declares a single overview page. For example:
      * &lt;pre&gt;&lt;code&gt;documentation:
@@ -2031,13 +2157,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string overview = 2;</code>
+     *
      * @return The overview.
      */
     public java.lang.String getOverview() {
       java.lang.Object ref = overview_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         overview_ = s;
         return s;
@@ -2046,6 +2172,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Declares a single overview page. For example:
      * &lt;pre&gt;&lt;code&gt;documentation:
@@ -2063,15 +2191,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string overview = 2;</code>
+     *
      * @return The bytes for overview.
      */
-    public com.google.protobuf.ByteString
-        getOverviewBytes() {
+    public com.google.protobuf.ByteString getOverviewBytes() {
       java.lang.Object ref = overview_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         overview_ = b;
         return b;
       } else {
@@ -2079,6 +2206,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Declares a single overview page. For example:
      * &lt;pre&gt;&lt;code&gt;documentation:
@@ -2096,20 +2225,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string overview = 2;</code>
+     *
      * @param value The overview to set.
      * @return This builder for chaining.
      */
-    public Builder setOverview(
-        java.lang.String value) {
+    public Builder setOverview(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       overview_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Declares a single overview page. For example:
      * &lt;pre&gt;&lt;code&gt;documentation:
@@ -2127,15 +2258,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string overview = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearOverview() {
-      
+
       overview_ = getDefaultInstance().getOverview();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Declares a single overview page. For example:
      * &lt;pre&gt;&lt;code&gt;documentation:
@@ -2153,23 +2287,23 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string overview = 2;</code>
+     *
      * @param value The bytes for overview to set.
      * @return This builder for chaining.
      */
-    public Builder setOverviewBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setOverviewBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       overview_ = value;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -2179,12 +2313,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.api.Documentation)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Documentation)
   private static final com.google.api.Documentation DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.api.Documentation();
   }
@@ -2193,16 +2327,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Documentation>
-      PARSER = new com.google.protobuf.AbstractParser<Documentation>() {
-    @java.lang.Override
-    public Documentation parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Documentation(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<Documentation> PARSER =
+      new com.google.protobuf.AbstractParser<Documentation>() {
+        @java.lang.Override
+        public Documentation parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Documentation(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<Documentation> parser() {
     return PARSER;
@@ -2217,6 +2351,4 @@ private static final long serialVersionUID = 0L;
   public com.google.api.Documentation getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

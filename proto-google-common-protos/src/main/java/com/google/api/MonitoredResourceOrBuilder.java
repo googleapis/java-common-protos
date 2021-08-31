@@ -18,11 +18,14 @@
 
 package com.google.api;
 
-public interface MonitoredResourceOrBuilder extends
+public interface MonitoredResourceOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.MonitoredResource)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * Required. The monitored resource type. This field must match
    * the `type` field of a [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] object. For
@@ -30,10 +33,13 @@ public interface MonitoredResourceOrBuilder extends
    * </pre>
    *
    * <code>string type = 1;</code>
+   *
    * @return The type.
    */
   java.lang.String getType();
   /**
+   *
+   *
    * <pre>
    * Required. The monitored resource type. This field must match
    * the `type` field of a [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] object. For
@@ -41,12 +47,14 @@ public interface MonitoredResourceOrBuilder extends
    * </pre>
    *
    * <code>string type = 1;</code>
+   *
    * @return The bytes for type.
    */
-  com.google.protobuf.ByteString
-      getTypeBytes();
+  com.google.protobuf.ByteString getTypeBytes();
 
   /**
+   *
+   *
    * <pre>
    * Required. Values for all of the labels listed in the associated monitored
    * resource descriptor. For example, Compute Engine VM instances use the
@@ -57,6 +65,8 @@ public interface MonitoredResourceOrBuilder extends
    */
   int getLabelsCount();
   /**
+   *
+   *
    * <pre>
    * Required. Values for all of the labels listed in the associated monitored
    * resource descriptor. For example, Compute Engine VM instances use the
@@ -65,15 +75,13 @@ public interface MonitoredResourceOrBuilder extends
    *
    * <code>map&lt;string, string&gt; labels = 2;</code>
    */
-  boolean containsLabels(
-      java.lang.String key);
-  /**
-   * Use {@link #getLabelsMap()} instead.
-   */
+  boolean containsLabels(java.lang.String key);
+  /** Use {@link #getLabelsMap()} instead. */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, java.lang.String>
-  getLabels();
+  java.util.Map<java.lang.String, java.lang.String> getLabels();
   /**
+   *
+   *
    * <pre>
    * Required. Values for all of the labels listed in the associated monitored
    * resource descriptor. For example, Compute Engine VM instances use the
@@ -82,9 +90,10 @@ public interface MonitoredResourceOrBuilder extends
    *
    * <code>map&lt;string, string&gt; labels = 2;</code>
    */
-  java.util.Map<java.lang.String, java.lang.String>
-  getLabelsMap();
+  java.util.Map<java.lang.String, java.lang.String> getLabelsMap();
   /**
+   *
+   *
    * <pre>
    * Required. Values for all of the labels listed in the associated monitored
    * resource descriptor. For example, Compute Engine VM instances use the
@@ -93,11 +102,10 @@ public interface MonitoredResourceOrBuilder extends
    *
    * <code>map&lt;string, string&gt; labels = 2;</code>
    */
-
-  java.lang.String getLabelsOrDefault(
-      java.lang.String key,
-      java.lang.String defaultValue);
+  java.lang.String getLabelsOrDefault(java.lang.String key, java.lang.String defaultValue);
   /**
+   *
+   *
    * <pre>
    * Required. Values for all of the labels listed in the associated monitored
    * resource descriptor. For example, Compute Engine VM instances use the
@@ -106,7 +114,5 @@ public interface MonitoredResourceOrBuilder extends
    *
    * <code>map&lt;string, string&gt; labels = 2;</code>
    */
-
-  java.lang.String getLabelsOrThrow(
-      java.lang.String key);
+  java.lang.String getLabelsOrThrow(java.lang.String key);
 }

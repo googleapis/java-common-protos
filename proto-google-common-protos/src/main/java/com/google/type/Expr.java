@@ -19,6 +19,8 @@
 package com.google.type;
 
 /**
+ *
+ *
  * <pre>
  * Represents a textual expression in the Common Expression Language (CEL)
  * syntax. CEL is a C-like expression language. The syntax and semantics of CEL
@@ -46,15 +48,16 @@ package com.google.type;
  *
  * Protobuf type {@code google.type.Expr}
  */
-public final class Expr extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class Expr extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.type.Expr)
     ExprOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use Expr.newBuilder() to construct.
   private Expr(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Expr() {
     expression_ = "";
     title_ = "";
@@ -64,16 +67,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Expr();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private Expr(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -92,51 +94,54 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            expression_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            title_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            location_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+              expression_ = s;
+              break;
             }
-            break;
-          }
+          case 18:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              title_ = s;
+              break;
+            }
+          case 26:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+          case 34:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              location_ = s;
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.type.ExprProto.internal_static_google_type_Expr_descriptor;
   }
 
@@ -151,12 +156,15 @@ private static final long serialVersionUID = 0L;
   public static final int EXPRESSION_FIELD_NUMBER = 1;
   private volatile java.lang.Object expression_;
   /**
+   *
+   *
    * <pre>
    * Textual representation of an expression in Common Expression Language
    * syntax.
    * </pre>
    *
    * <code>string expression = 1;</code>
+   *
    * @return The expression.
    */
   @java.lang.Override
@@ -165,30 +173,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       expression_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Textual representation of an expression in Common Expression Language
    * syntax.
    * </pre>
    *
    * <code>string expression = 1;</code>
+   *
    * @return The bytes for expression.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getExpressionBytes() {
+  public com.google.protobuf.ByteString getExpressionBytes() {
     java.lang.Object ref = expression_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       expression_ = b;
       return b;
     } else {
@@ -199,6 +207,8 @@ private static final long serialVersionUID = 0L;
   public static final int TITLE_FIELD_NUMBER = 2;
   private volatile java.lang.Object title_;
   /**
+   *
+   *
    * <pre>
    * Optional. Title for the expression, i.e. a short string describing
    * its purpose. This can be used e.g. in UIs which allow to enter the
@@ -206,6 +216,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string title = 2;</code>
+   *
    * @return The title.
    */
   @java.lang.Override
@@ -214,14 +225,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       title_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Optional. Title for the expression, i.e. a short string describing
    * its purpose. This can be used e.g. in UIs which allow to enter the
@@ -229,16 +241,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string title = 2;</code>
+   *
    * @return The bytes for title.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTitleBytes() {
+  public com.google.protobuf.ByteString getTitleBytes() {
     java.lang.Object ref = title_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       title_ = b;
       return b;
     } else {
@@ -249,12 +260,15 @@ private static final long serialVersionUID = 0L;
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
   private volatile java.lang.Object description_;
   /**
+   *
+   *
    * <pre>
    * Optional. Description of the expression. This is a longer text which
    * describes the expression, e.g. when hovered over it in a UI.
    * </pre>
    *
    * <code>string description = 3;</code>
+   *
    * @return The description.
    */
   @java.lang.Override
@@ -263,30 +277,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       description_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Optional. Description of the expression. This is a longer text which
    * describes the expression, e.g. when hovered over it in a UI.
    * </pre>
    *
    * <code>string description = 3;</code>
+   *
    * @return The bytes for description.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDescriptionBytes() {
+  public com.google.protobuf.ByteString getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       description_ = b;
       return b;
     } else {
@@ -297,12 +311,15 @@ private static final long serialVersionUID = 0L;
   public static final int LOCATION_FIELD_NUMBER = 4;
   private volatile java.lang.Object location_;
   /**
+   *
+   *
    * <pre>
    * Optional. String indicating the location of the expression for error
    * reporting, e.g. a file name and a position in the file.
    * </pre>
    *
    * <code>string location = 4;</code>
+   *
    * @return The location.
    */
   @java.lang.Override
@@ -311,30 +328,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       location_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Optional. String indicating the location of the expression for error
    * reporting, e.g. a file name and a position in the file.
    * </pre>
    *
    * <code>string location = 4;</code>
+   *
    * @return The bytes for location.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getLocationBytes() {
+  public com.google.protobuf.ByteString getLocationBytes() {
     java.lang.Object ref = location_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       location_ = b;
       return b;
     } else {
@@ -343,6 +360,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -354,8 +372,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getExpressionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, expression_);
     }
@@ -397,21 +414,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.type.Expr)) {
       return super.equals(obj);
     }
     com.google.type.Expr other = (com.google.type.Expr) obj;
 
-    if (!getExpression()
-        .equals(other.getExpression())) return false;
-    if (!getTitle()
-        .equals(other.getTitle())) return false;
-    if (!getDescription()
-        .equals(other.getDescription())) return false;
-    if (!getLocation()
-        .equals(other.getLocation())) return false;
+    if (!getExpression().equals(other.getExpression())) return false;
+    if (!getTitle().equals(other.getTitle())) return false;
+    if (!getDescription().equals(other.getDescription())) return false;
+    if (!getLocation().equals(other.getLocation())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -436,97 +449,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.type.Expr parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.type.Expr parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.type.Expr parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.type.Expr parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.type.Expr parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.type.Expr parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.type.Expr parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.type.Expr parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.type.Expr parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.type.Expr parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.type.Expr parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.type.Expr parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.type.Expr parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.type.Expr parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.type.Expr parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.type.Expr prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Represents a textual expression in the Common Expression Language (CEL)
    * syntax. CEL is a C-like expression language. The syntax and semantics of CEL
@@ -554,12 +573,11 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.type.Expr}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.type.Expr)
       com.google.type.ExprOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.type.ExprProto.internal_static_google_type_Expr_descriptor;
     }
 
@@ -576,16 +594,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -601,8 +618,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.type.ExprProto.internal_static_google_type_Expr_descriptor;
     }
 
@@ -635,38 +651,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.type.Expr) {
-        return mergeFrom((com.google.type.Expr)other);
+        return mergeFrom((com.google.type.Expr) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -722,19 +739,21 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object expression_ = "";
     /**
+     *
+     *
      * <pre>
      * Textual representation of an expression in Common Expression Language
      * syntax.
      * </pre>
      *
      * <code>string expression = 1;</code>
+     *
      * @return The expression.
      */
     public java.lang.String getExpression() {
       java.lang.Object ref = expression_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         expression_ = s;
         return s;
@@ -743,21 +762,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Textual representation of an expression in Common Expression Language
      * syntax.
      * </pre>
      *
      * <code>string expression = 1;</code>
+     *
      * @return The bytes for expression.
      */
-    public com.google.protobuf.ByteString
-        getExpressionBytes() {
+    public com.google.protobuf.ByteString getExpressionBytes() {
       java.lang.Object ref = expression_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         expression_ = b;
         return b;
       } else {
@@ -765,57 +785,64 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Textual representation of an expression in Common Expression Language
      * syntax.
      * </pre>
      *
      * <code>string expression = 1;</code>
+     *
      * @param value The expression to set.
      * @return This builder for chaining.
      */
-    public Builder setExpression(
-        java.lang.String value) {
+    public Builder setExpression(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       expression_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Textual representation of an expression in Common Expression Language
      * syntax.
      * </pre>
      *
      * <code>string expression = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearExpression() {
-      
+
       expression_ = getDefaultInstance().getExpression();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Textual representation of an expression in Common Expression Language
      * syntax.
      * </pre>
      *
      * <code>string expression = 1;</code>
+     *
      * @param value The bytes for expression to set.
      * @return This builder for chaining.
      */
-    public Builder setExpressionBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setExpressionBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       expression_ = value;
       onChanged();
       return this;
@@ -823,6 +850,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object title_ = "";
     /**
+     *
+     *
      * <pre>
      * Optional. Title for the expression, i.e. a short string describing
      * its purpose. This can be used e.g. in UIs which allow to enter the
@@ -830,13 +859,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string title = 2;</code>
+     *
      * @return The title.
      */
     public java.lang.String getTitle() {
       java.lang.Object ref = title_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         title_ = s;
         return s;
@@ -845,6 +874,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Optional. Title for the expression, i.e. a short string describing
      * its purpose. This can be used e.g. in UIs which allow to enter the
@@ -852,15 +883,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string title = 2;</code>
+     *
      * @return The bytes for title.
      */
-    public com.google.protobuf.ByteString
-        getTitleBytes() {
+    public com.google.protobuf.ByteString getTitleBytes() {
       java.lang.Object ref = title_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         title_ = b;
         return b;
       } else {
@@ -868,6 +898,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Optional. Title for the expression, i.e. a short string describing
      * its purpose. This can be used e.g. in UIs which allow to enter the
@@ -875,20 +907,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string title = 2;</code>
+     *
      * @param value The title to set.
      * @return This builder for chaining.
      */
-    public Builder setTitle(
-        java.lang.String value) {
+    public Builder setTitle(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       title_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. Title for the expression, i.e. a short string describing
      * its purpose. This can be used e.g. in UIs which allow to enter the
@@ -896,15 +930,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string title = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
-      
+
       title_ = getDefaultInstance().getTitle();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. Title for the expression, i.e. a short string describing
      * its purpose. This can be used e.g. in UIs which allow to enter the
@@ -912,16 +949,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string title = 2;</code>
+     *
      * @param value The bytes for title to set.
      * @return This builder for chaining.
      */
-    public Builder setTitleBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setTitleBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       title_ = value;
       onChanged();
       return this;
@@ -929,19 +966,21 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     *
+     *
      * <pre>
      * Optional. Description of the expression. This is a longer text which
      * describes the expression, e.g. when hovered over it in a UI.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @return The description.
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
         return s;
@@ -950,21 +989,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Optional. Description of the expression. This is a longer text which
      * describes the expression, e.g. when hovered over it in a UI.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @return The bytes for description.
      */
-    public com.google.protobuf.ByteString
-        getDescriptionBytes() {
+    public com.google.protobuf.ByteString getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         description_ = b;
         return b;
       } else {
@@ -972,57 +1012,64 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Optional. Description of the expression. This is a longer text which
      * describes the expression, e.g. when hovered over it in a UI.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @param value The description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescription(
-        java.lang.String value) {
+    public Builder setDescription(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       description_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. Description of the expression. This is a longer text which
      * describes the expression, e.g. when hovered over it in a UI.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
+
       description_ = getDefaultInstance().getDescription();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. Description of the expression. This is a longer text which
      * describes the expression, e.g. when hovered over it in a UI.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescriptionBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       description_ = value;
       onChanged();
       return this;
@@ -1030,19 +1077,21 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object location_ = "";
     /**
+     *
+     *
      * <pre>
      * Optional. String indicating the location of the expression for error
      * reporting, e.g. a file name and a position in the file.
      * </pre>
      *
      * <code>string location = 4;</code>
+     *
      * @return The location.
      */
     public java.lang.String getLocation() {
       java.lang.Object ref = location_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         location_ = s;
         return s;
@@ -1051,21 +1100,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Optional. String indicating the location of the expression for error
      * reporting, e.g. a file name and a position in the file.
      * </pre>
      *
      * <code>string location = 4;</code>
+     *
      * @return The bytes for location.
      */
-    public com.google.protobuf.ByteString
-        getLocationBytes() {
+    public com.google.protobuf.ByteString getLocationBytes() {
       java.lang.Object ref = location_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         location_ = b;
         return b;
       } else {
@@ -1073,64 +1123,71 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Optional. String indicating the location of the expression for error
      * reporting, e.g. a file name and a position in the file.
      * </pre>
      *
      * <code>string location = 4;</code>
+     *
      * @param value The location to set.
      * @return This builder for chaining.
      */
-    public Builder setLocation(
-        java.lang.String value) {
+    public Builder setLocation(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       location_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. String indicating the location of the expression for error
      * reporting, e.g. a file name and a position in the file.
      * </pre>
      *
      * <code>string location = 4;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      
+
       location_ = getDefaultInstance().getLocation();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. String indicating the location of the expression for error
      * reporting, e.g. a file name and a position in the file.
      * </pre>
      *
      * <code>string location = 4;</code>
+     *
      * @param value The bytes for location to set.
      * @return This builder for chaining.
      */
-    public Builder setLocationBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setLocationBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       location_ = value;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1140,12 +1197,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.type.Expr)
   }
 
   // @@protoc_insertion_point(class_scope:google.type.Expr)
   private static final com.google.type.Expr DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.type.Expr();
   }
@@ -1154,16 +1211,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Expr>
-      PARSER = new com.google.protobuf.AbstractParser<Expr>() {
-    @java.lang.Override
-    public Expr parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Expr(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<Expr> PARSER =
+      new com.google.protobuf.AbstractParser<Expr>() {
+        @java.lang.Override
+        public Expr parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Expr(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<Expr> parser() {
     return PARSER;
@@ -1178,6 +1235,4 @@ private static final long serialVersionUID = 0L;
   public com.google.type.Expr getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * A description of a log type. Example in YAML format:
  *     - name: library.googleapis.com/activity_history
@@ -31,15 +33,16 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.LogDescriptor}
  */
-public final class LogDescriptor extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class LogDescriptor extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.api.LogDescriptor)
     LogDescriptorOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use LogDescriptor.newBuilder() to construct.
   private LogDescriptor(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private LogDescriptor() {
     name_ = "";
     labels_ = java.util.Collections.emptyList();
@@ -49,16 +52,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new LogDescriptor();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private LogDescriptor(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -78,47 +80,50 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            name_ = s;
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              labels_ = new java.util.ArrayList<com.google.api.LabelDescriptor>();
-              mutable_bitField0_ |= 0x00000001;
+              name_ = s;
+              break;
             }
-            labels_.add(
-                input.readMessage(com.google.api.LabelDescriptor.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            displayName_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          case 18:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = new java.util.ArrayList<com.google.api.LabelDescriptor>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              labels_.add(
+                  input.readMessage(com.google.api.LabelDescriptor.parser(), extensionRegistry));
+              break;
             }
-            break;
-          }
+          case 26:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+          case 34:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              displayName_ = s;
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         labels_ = java.util.Collections.unmodifiableList(labels_);
@@ -127,8 +132,8 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.api.LogProto.internal_static_google_api_LogDescriptor_descriptor;
   }
 
@@ -143,6 +148,8 @@ private static final long serialVersionUID = 0L;
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
+   *
+   *
    * <pre>
    * The name of the log. It must be less than 512 characters long and can
    * include the following characters: upper- and lower-case alphanumeric
@@ -151,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The name.
    */
   @java.lang.Override
@@ -159,14 +167,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       name_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The name of the log. It must be less than 512 characters long and can
    * include the following characters: upper- and lower-case alphanumeric
@@ -175,16 +184,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The bytes for name.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
+  public com.google.protobuf.ByteString getNameBytes() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       name_ = b;
       return b;
     } else {
@@ -195,6 +203,8 @@ private static final long serialVersionUID = 0L;
   public static final int LABELS_FIELD_NUMBER = 2;
   private java.util.List<com.google.api.LabelDescriptor> labels_;
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -208,6 +218,8 @@ private static final long serialVersionUID = 0L;
     return labels_;
   }
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -217,11 +229,13 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.LabelDescriptorOrBuilder> 
+  public java.util.List<? extends com.google.api.LabelDescriptorOrBuilder>
       getLabelsOrBuilderList() {
     return labels_;
   }
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -235,6 +249,8 @@ private static final long serialVersionUID = 0L;
     return labels_.size();
   }
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -248,6 +264,8 @@ private static final long serialVersionUID = 0L;
     return labels_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -257,20 +275,22 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
    */
   @java.lang.Override
-  public com.google.api.LabelDescriptorOrBuilder getLabelsOrBuilder(
-      int index) {
+  public com.google.api.LabelDescriptorOrBuilder getLabelsOrBuilder(int index) {
     return labels_.get(index);
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
   private volatile java.lang.Object description_;
   /**
+   *
+   *
    * <pre>
    * A human-readable description of this log. This information appears in
    * the documentation and can contain details.
    * </pre>
    *
    * <code>string description = 3;</code>
+   *
    * @return The description.
    */
   @java.lang.Override
@@ -279,30 +299,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       description_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * A human-readable description of this log. This information appears in
    * the documentation and can contain details.
    * </pre>
    *
    * <code>string description = 3;</code>
+   *
    * @return The bytes for description.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDescriptionBytes() {
+  public com.google.protobuf.ByteString getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       description_ = b;
       return b;
     } else {
@@ -313,12 +333,15 @@ private static final long serialVersionUID = 0L;
   public static final int DISPLAY_NAME_FIELD_NUMBER = 4;
   private volatile java.lang.Object displayName_;
   /**
+   *
+   *
    * <pre>
    * The human-readable name for this log. This information appears on
    * the user interface and should be concise.
    * </pre>
    *
    * <code>string display_name = 4;</code>
+   *
    * @return The displayName.
    */
   @java.lang.Override
@@ -327,30 +350,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       displayName_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The human-readable name for this log. This information appears on
    * the user interface and should be concise.
    * </pre>
    *
    * <code>string display_name = 4;</code>
+   *
    * @return The bytes for displayName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDisplayNameBytes() {
+  public com.google.protobuf.ByteString getDisplayNameBytes() {
     java.lang.Object ref = displayName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       displayName_ = b;
       return b;
     } else {
@@ -359,6 +382,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -370,8 +394,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
@@ -397,8 +420,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     for (int i = 0; i < labels_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, labels_.get(i));
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, labels_.get(i));
     }
     if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
@@ -414,21 +436,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.api.LogDescriptor)) {
       return super.equals(obj);
     }
     com.google.api.LogDescriptor other = (com.google.api.LogDescriptor) obj;
 
-    if (!getName()
-        .equals(other.getName())) return false;
-    if (!getLabelsList()
-        .equals(other.getLabelsList())) return false;
-    if (!getDescription()
-        .equals(other.getDescription())) return false;
-    if (!getDisplayName()
-        .equals(other.getDisplayName())) return false;
+    if (!getName().equals(other.getName())) return false;
+    if (!getLabelsList().equals(other.getLabelsList())) return false;
+    if (!getDescription().equals(other.getDescription())) return false;
+    if (!getDisplayName().equals(other.getDisplayName())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -455,97 +473,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.api.LogDescriptor parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.api.LogDescriptor parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.LogDescriptor parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.api.LogDescriptor parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.api.LogDescriptor parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.LogDescriptor parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.LogDescriptor parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.LogDescriptor parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.LogDescriptor parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.LogDescriptor parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.LogDescriptor parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.api.LogDescriptor parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.api.LogDescriptor parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.api.LogDescriptor parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.LogDescriptor parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.api.LogDescriptor prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * A description of a log type. Example in YAML format:
    *     - name: library.googleapis.com/activity_history
@@ -558,12 +582,11 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.LogDescriptor}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.api.LogDescriptor)
       com.google.api.LogDescriptorOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.api.LogProto.internal_static_google_api_LogDescriptor_descriptor;
     }
 
@@ -580,17 +603,17 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getLabelsFieldBuilder();
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -610,8 +633,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.api.LogProto.internal_static_google_api_LogDescriptor_descriptor;
     }
 
@@ -653,38 +675,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.LogDescriptor) {
-        return mergeFrom((com.google.api.LogDescriptor)other);
+        return mergeFrom((com.google.api.LogDescriptor) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -715,9 +738,10 @@ private static final long serialVersionUID = 0L;
             labelsBuilder_ = null;
             labels_ = other.labels_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            labelsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getLabelsFieldBuilder() : null;
+            labelsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getLabelsFieldBuilder()
+                    : null;
           } else {
             labelsBuilder_.addAllMessages(other.labels_);
           }
@@ -759,10 +783,13 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
+     *
+     *
      * <pre>
      * The name of the log. It must be less than 512 characters long and can
      * include the following characters: upper- and lower-case alphanumeric
@@ -771,13 +798,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
@@ -786,6 +813,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the log. It must be less than 512 characters long and can
      * include the following characters: upper- and lower-case alphanumeric
@@ -794,15 +823,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @return The bytes for name.
      */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
+    public com.google.protobuf.ByteString getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -810,6 +838,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the log. It must be less than 512 characters long and can
      * include the following characters: upper- and lower-case alphanumeric
@@ -818,20 +848,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @param value The name to set.
      * @return This builder for chaining.
      */
-    public Builder setName(
-        java.lang.String value) {
+    public Builder setName(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       name_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the log. It must be less than 512 characters long and can
      * include the following characters: upper- and lower-case alphanumeric
@@ -840,15 +872,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
+
       name_ = getDefaultInstance().getName();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the log. It must be less than 512 characters long and can
      * include the following characters: upper- and lower-case alphanumeric
@@ -857,34 +892,40 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       name_ = value;
       onChanged();
       return this;
     }
 
     private java.util.List<com.google.api.LabelDescriptor> labels_ =
-      java.util.Collections.emptyList();
+        java.util.Collections.emptyList();
+
     private void ensureLabelsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         labels_ = new java.util.ArrayList<com.google.api.LabelDescriptor>(labels_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.LabelDescriptor, com.google.api.LabelDescriptor.Builder, com.google.api.LabelDescriptorOrBuilder> labelsBuilder_;
+            com.google.api.LabelDescriptor,
+            com.google.api.LabelDescriptor.Builder,
+            com.google.api.LabelDescriptorOrBuilder>
+        labelsBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -901,6 +942,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -917,6 +960,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -933,6 +978,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -941,8 +988,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public Builder setLabels(
-        int index, com.google.api.LabelDescriptor value) {
+    public Builder setLabels(int index, com.google.api.LabelDescriptor value) {
       if (labelsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -956,6 +1002,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -964,8 +1012,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public Builder setLabels(
-        int index, com.google.api.LabelDescriptor.Builder builderForValue) {
+    public Builder setLabels(int index, com.google.api.LabelDescriptor.Builder builderForValue) {
       if (labelsBuilder_ == null) {
         ensureLabelsIsMutable();
         labels_.set(index, builderForValue.build());
@@ -976,6 +1023,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -998,6 +1047,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1006,8 +1057,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public Builder addLabels(
-        int index, com.google.api.LabelDescriptor value) {
+    public Builder addLabels(int index, com.google.api.LabelDescriptor value) {
       if (labelsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1021,6 +1071,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1029,8 +1081,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public Builder addLabels(
-        com.google.api.LabelDescriptor.Builder builderForValue) {
+    public Builder addLabels(com.google.api.LabelDescriptor.Builder builderForValue) {
       if (labelsBuilder_ == null) {
         ensureLabelsIsMutable();
         labels_.add(builderForValue.build());
@@ -1041,6 +1092,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1049,8 +1102,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public Builder addLabels(
-        int index, com.google.api.LabelDescriptor.Builder builderForValue) {
+    public Builder addLabels(int index, com.google.api.LabelDescriptor.Builder builderForValue) {
       if (labelsBuilder_ == null) {
         ensureLabelsIsMutable();
         labels_.add(index, builderForValue.build());
@@ -1061,6 +1113,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1073,8 +1127,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Iterable<? extends com.google.api.LabelDescriptor> values) {
       if (labelsBuilder_ == null) {
         ensureLabelsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, labels_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, labels_);
         onChanged();
       } else {
         labelsBuilder_.addAllMessages(values);
@@ -1082,6 +1135,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1101,6 +1156,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1120,6 +1177,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1128,11 +1187,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public com.google.api.LabelDescriptor.Builder getLabelsBuilder(
-        int index) {
+    public com.google.api.LabelDescriptor.Builder getLabelsBuilder(int index) {
       return getLabelsFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1141,14 +1201,16 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public com.google.api.LabelDescriptorOrBuilder getLabelsOrBuilder(
-        int index) {
+    public com.google.api.LabelDescriptorOrBuilder getLabelsOrBuilder(int index) {
       if (labelsBuilder_ == null) {
-        return labels_.get(index);  } else {
+        return labels_.get(index);
+      } else {
         return labelsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1157,8 +1219,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public java.util.List<? extends com.google.api.LabelDescriptorOrBuilder> 
-         getLabelsOrBuilderList() {
+    public java.util.List<? extends com.google.api.LabelDescriptorOrBuilder>
+        getLabelsOrBuilderList() {
       if (labelsBuilder_ != null) {
         return labelsBuilder_.getMessageOrBuilderList();
       } else {
@@ -1166,6 +1228,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1175,10 +1239,12 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
     public com.google.api.LabelDescriptor.Builder addLabelsBuilder() {
-      return getLabelsFieldBuilder().addBuilder(
-          com.google.api.LabelDescriptor.getDefaultInstance());
+      return getLabelsFieldBuilder()
+          .addBuilder(com.google.api.LabelDescriptor.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1187,12 +1253,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public com.google.api.LabelDescriptor.Builder addLabelsBuilder(
-        int index) {
-      return getLabelsFieldBuilder().addBuilder(
-          index, com.google.api.LabelDescriptor.getDefaultInstance());
+    public com.google.api.LabelDescriptor.Builder addLabelsBuilder(int index) {
+      return getLabelsFieldBuilder()
+          .addBuilder(index, com.google.api.LabelDescriptor.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * The set of labels that are available to describe a specific log entry.
      * Runtime requests that contain labels not specified here are
@@ -1201,20 +1268,22 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
      */
-    public java.util.List<com.google.api.LabelDescriptor.Builder> 
-         getLabelsBuilderList() {
+    public java.util.List<com.google.api.LabelDescriptor.Builder> getLabelsBuilderList() {
       return getLabelsFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.LabelDescriptor, com.google.api.LabelDescriptor.Builder, com.google.api.LabelDescriptorOrBuilder> 
+            com.google.api.LabelDescriptor,
+            com.google.api.LabelDescriptor.Builder,
+            com.google.api.LabelDescriptorOrBuilder>
         getLabelsFieldBuilder() {
       if (labelsBuilder_ == null) {
-        labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.LabelDescriptor, com.google.api.LabelDescriptor.Builder, com.google.api.LabelDescriptorOrBuilder>(
-                labels_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
+        labelsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.api.LabelDescriptor,
+                com.google.api.LabelDescriptor.Builder,
+                com.google.api.LabelDescriptorOrBuilder>(
+                labels_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
         labels_ = null;
       }
       return labelsBuilder_;
@@ -1222,19 +1291,21 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     *
+     *
      * <pre>
      * A human-readable description of this log. This information appears in
      * the documentation and can contain details.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @return The description.
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
         return s;
@@ -1243,21 +1314,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A human-readable description of this log. This information appears in
      * the documentation and can contain details.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @return The bytes for description.
      */
-    public com.google.protobuf.ByteString
-        getDescriptionBytes() {
+    public com.google.protobuf.ByteString getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         description_ = b;
         return b;
       } else {
@@ -1265,57 +1337,64 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A human-readable description of this log. This information appears in
      * the documentation and can contain details.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @param value The description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescription(
-        java.lang.String value) {
+    public Builder setDescription(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       description_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A human-readable description of this log. This information appears in
      * the documentation and can contain details.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
+
       description_ = getDefaultInstance().getDescription();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A human-readable description of this log. This information appears in
      * the documentation and can contain details.
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescriptionBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       description_ = value;
       onChanged();
       return this;
@@ -1323,19 +1402,21 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object displayName_ = "";
     /**
+     *
+     *
      * <pre>
      * The human-readable name for this log. This information appears on
      * the user interface and should be concise.
      * </pre>
      *
      * <code>string display_name = 4;</code>
+     *
      * @return The displayName.
      */
     public java.lang.String getDisplayName() {
       java.lang.Object ref = displayName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         displayName_ = s;
         return s;
@@ -1344,21 +1425,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The human-readable name for this log. This information appears on
      * the user interface and should be concise.
      * </pre>
      *
      * <code>string display_name = 4;</code>
+     *
      * @return The bytes for displayName.
      */
-    public com.google.protobuf.ByteString
-        getDisplayNameBytes() {
+    public com.google.protobuf.ByteString getDisplayNameBytes() {
       java.lang.Object ref = displayName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         displayName_ = b;
         return b;
       } else {
@@ -1366,64 +1448,71 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The human-readable name for this log. This information appears on
      * the user interface and should be concise.
      * </pre>
      *
      * <code>string display_name = 4;</code>
+     *
      * @param value The displayName to set.
      * @return This builder for chaining.
      */
-    public Builder setDisplayName(
-        java.lang.String value) {
+    public Builder setDisplayName(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       displayName_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The human-readable name for this log. This information appears on
      * the user interface and should be concise.
      * </pre>
      *
      * <code>string display_name = 4;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
-      
+
       displayName_ = getDefaultInstance().getDisplayName();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The human-readable name for this log. This information appears on
      * the user interface and should be concise.
      * </pre>
      *
      * <code>string display_name = 4;</code>
+     *
      * @param value The bytes for displayName to set.
      * @return This builder for chaining.
      */
-    public Builder setDisplayNameBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setDisplayNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       displayName_ = value;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1433,12 +1522,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.api.LogDescriptor)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.LogDescriptor)
   private static final com.google.api.LogDescriptor DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.api.LogDescriptor();
   }
@@ -1447,16 +1536,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<LogDescriptor>
-      PARSER = new com.google.protobuf.AbstractParser<LogDescriptor>() {
-    @java.lang.Override
-    public LogDescriptor parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new LogDescriptor(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<LogDescriptor> PARSER =
+      new com.google.protobuf.AbstractParser<LogDescriptor>() {
+        @java.lang.Override
+        public LogDescriptor parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LogDescriptor(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<LogDescriptor> parser() {
     return PARSER;
@@ -1471,6 +1560,4 @@ private static final long serialVersionUID = 0L;
   public com.google.api.LogDescriptor getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

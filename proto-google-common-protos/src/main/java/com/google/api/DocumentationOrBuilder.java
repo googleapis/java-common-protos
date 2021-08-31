@@ -18,42 +18,51 @@
 
 package com.google.api;
 
-public interface DocumentationOrBuilder extends
+public interface DocumentationOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.Documentation)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * A short summary of what the service does. Can only be provided by
    * plain text.
    * </pre>
    *
    * <code>string summary = 1;</code>
+   *
    * @return The summary.
    */
   java.lang.String getSummary();
   /**
+   *
+   *
    * <pre>
    * A short summary of what the service does. Can only be provided by
    * plain text.
    * </pre>
    *
    * <code>string summary = 1;</code>
+   *
    * @return The bytes for summary.
    */
-  com.google.protobuf.ByteString
-      getSummaryBytes();
+  com.google.protobuf.ByteString getSummaryBytes();
 
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
    *
    * <code>repeated .google.api.Page pages = 5;</code>
    */
-  java.util.List<com.google.api.Page> 
-      getPagesList();
+  java.util.List<com.google.api.Page> getPagesList();
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
@@ -62,6 +71,8 @@ public interface DocumentationOrBuilder extends
    */
   com.google.api.Page getPages(int index);
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
@@ -70,25 +81,29 @@ public interface DocumentationOrBuilder extends
    */
   int getPagesCount();
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
    *
    * <code>repeated .google.api.Page pages = 5;</code>
    */
-  java.util.List<? extends com.google.api.PageOrBuilder> 
-      getPagesOrBuilderList();
+  java.util.List<? extends com.google.api.PageOrBuilder> getPagesOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * The top level pages for the documentation set.
    * </pre>
    *
    * <code>repeated .google.api.Page pages = 5;</code>
    */
-  com.google.api.PageOrBuilder getPagesOrBuilder(
-      int index);
+  com.google.api.PageOrBuilder getPagesOrBuilder(int index);
 
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -96,9 +111,10 @@ public interface DocumentationOrBuilder extends
    *
    * <code>repeated .google.api.DocumentationRule rules = 3;</code>
    */
-  java.util.List<com.google.api.DocumentationRule> 
-      getRulesList();
+  java.util.List<com.google.api.DocumentationRule> getRulesList();
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -108,6 +124,8 @@ public interface DocumentationOrBuilder extends
    */
   com.google.api.DocumentationRule getRules(int index);
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -117,6 +135,8 @@ public interface DocumentationOrBuilder extends
    */
   int getRulesCount();
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -124,9 +144,10 @@ public interface DocumentationOrBuilder extends
    *
    * <code>repeated .google.api.DocumentationRule rules = 3;</code>
    */
-  java.util.List<? extends com.google.api.DocumentationRuleOrBuilder> 
-      getRulesOrBuilderList();
+  java.util.List<? extends com.google.api.DocumentationRuleOrBuilder> getRulesOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * A list of documentation rules that apply to individual API elements.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -134,30 +155,36 @@ public interface DocumentationOrBuilder extends
    *
    * <code>repeated .google.api.DocumentationRule rules = 3;</code>
    */
-  com.google.api.DocumentationRuleOrBuilder getRulesOrBuilder(
-      int index);
+  com.google.api.DocumentationRuleOrBuilder getRulesOrBuilder(int index);
 
   /**
+   *
+   *
    * <pre>
    * The URL to the root of documentation.
    * </pre>
    *
    * <code>string documentation_root_url = 4;</code>
+   *
    * @return The documentationRootUrl.
    */
   java.lang.String getDocumentationRootUrl();
   /**
+   *
+   *
    * <pre>
    * The URL to the root of documentation.
    * </pre>
    *
    * <code>string documentation_root_url = 4;</code>
+   *
    * @return The bytes for documentationRootUrl.
    */
-  com.google.protobuf.ByteString
-      getDocumentationRootUrlBytes();
+  com.google.protobuf.ByteString getDocumentationRootUrlBytes();
 
   /**
+   *
+   *
    * <pre>
    * Specifies the service root url if the default one (the service name
    * from the yaml file) is not suitable. This can be seen in any fully
@@ -166,10 +193,13 @@ public interface DocumentationOrBuilder extends
    * </pre>
    *
    * <code>string service_root_url = 6;</code>
+   *
    * @return The serviceRootUrl.
    */
   java.lang.String getServiceRootUrl();
   /**
+   *
+   *
    * <pre>
    * Specifies the service root url if the default one (the service name
    * from the yaml file) is not suitable. This can be seen in any fully
@@ -178,12 +208,14 @@ public interface DocumentationOrBuilder extends
    * </pre>
    *
    * <code>string service_root_url = 6;</code>
+   *
    * @return The bytes for serviceRootUrl.
    */
-  com.google.protobuf.ByteString
-      getServiceRootUrlBytes();
+  com.google.protobuf.ByteString getServiceRootUrlBytes();
 
   /**
+   *
+   *
    * <pre>
    * Declares a single overview page. For example:
    * &lt;pre&gt;&lt;code&gt;documentation:
@@ -201,10 +233,13 @@ public interface DocumentationOrBuilder extends
    * </pre>
    *
    * <code>string overview = 2;</code>
+   *
    * @return The overview.
    */
   java.lang.String getOverview();
   /**
+   *
+   *
    * <pre>
    * Declares a single overview page. For example:
    * &lt;pre&gt;&lt;code&gt;documentation:
@@ -222,8 +257,8 @@ public interface DocumentationOrBuilder extends
    * </pre>
    *
    * <code>string overview = 2;</code>
+   *
    * @return The bytes for overview.
    */
-  com.google.protobuf.ByteString
-      getOverviewBytes();
+  com.google.protobuf.ByteString getOverviewBytes();
 }

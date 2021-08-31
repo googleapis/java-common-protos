@@ -19,21 +19,24 @@
 package com.google.cloud.audit;
 
 /**
+ *
+ *
  * <pre>
  * Metadata about the request.
  * </pre>
  *
  * Protobuf type {@code google.cloud.audit.RequestMetadata}
  */
-public final class RequestMetadata extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class RequestMetadata extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.cloud.audit.RequestMetadata)
     RequestMetadataOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use RequestMetadata.newBuilder() to construct.
   private RequestMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private RequestMetadata() {
     callerIp_ = "";
     callerSuppliedUserAgent_ = "";
@@ -42,16 +45,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new RequestMetadata();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private RequestMetadata(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -70,85 +72,98 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            callerIp_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+              callerIp_ = s;
+              break;
+            }
+          case 18:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            callerSuppliedUserAgent_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+              callerSuppliedUserAgent_ = s;
+              break;
+            }
+          case 26:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            callerNetwork_ = s;
-            break;
-          }
-          case 58: {
-            com.google.rpc.context.AttributeContext.Request.Builder subBuilder = null;
-            if (requestAttributes_ != null) {
-              subBuilder = requestAttributes_.toBuilder();
+              callerNetwork_ = s;
+              break;
             }
-            requestAttributes_ = input.readMessage(com.google.rpc.context.AttributeContext.Request.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(requestAttributes_);
-              requestAttributes_ = subBuilder.buildPartial();
-            }
+          case 58:
+            {
+              com.google.rpc.context.AttributeContext.Request.Builder subBuilder = null;
+              if (requestAttributes_ != null) {
+                subBuilder = requestAttributes_.toBuilder();
+              }
+              requestAttributes_ =
+                  input.readMessage(
+                      com.google.rpc.context.AttributeContext.Request.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(requestAttributes_);
+                requestAttributes_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 66: {
-            com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
-            if (destinationAttributes_ != null) {
-              subBuilder = destinationAttributes_.toBuilder();
+              break;
             }
-            destinationAttributes_ = input.readMessage(com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(destinationAttributes_);
-              destinationAttributes_ = subBuilder.buildPartial();
-            }
+          case 66:
+            {
+              com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
+              if (destinationAttributes_ != null) {
+                subBuilder = destinationAttributes_.toBuilder();
+              }
+              destinationAttributes_ =
+                  input.readMessage(
+                      com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(destinationAttributes_);
+                destinationAttributes_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+              break;
             }
-            break;
-          }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_RequestMetadata_descriptor;
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    return com.google.cloud.audit.AuditLogProto
+        .internal_static_google_cloud_audit_RequestMetadata_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_RequestMetadata_fieldAccessorTable
+    return com.google.cloud.audit.AuditLogProto
+        .internal_static_google_cloud_audit_RequestMetadata_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.cloud.audit.RequestMetadata.class, com.google.cloud.audit.RequestMetadata.Builder.class);
+            com.google.cloud.audit.RequestMetadata.class,
+            com.google.cloud.audit.RequestMetadata.Builder.class);
   }
 
   public static final int CALLER_IP_FIELD_NUMBER = 1;
   private volatile java.lang.Object callerIp_;
   /**
+   *
+   *
    * <pre>
    * The IP address of the caller.
    * For caller from internet, this will be public IPv4 or IPv6 address.
@@ -162,6 +177,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string caller_ip = 1;</code>
+   *
    * @return The callerIp.
    */
   @java.lang.Override
@@ -170,14 +186,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       callerIp_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The IP address of the caller.
    * For caller from internet, this will be public IPv4 or IPv6 address.
@@ -191,16 +208,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string caller_ip = 1;</code>
+   *
    * @return The bytes for callerIp.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCallerIpBytes() {
+  public com.google.protobuf.ByteString getCallerIpBytes() {
     java.lang.Object ref = callerIp_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       callerIp_ = b;
       return b;
     } else {
@@ -211,6 +227,8 @@ private static final long serialVersionUID = 0L;
   public static final int CALLER_SUPPLIED_USER_AGENT_FIELD_NUMBER = 2;
   private volatile java.lang.Object callerSuppliedUserAgent_;
   /**
+   *
+   *
    * <pre>
    * The user agent of the caller.
    * This information is not authenticated and should be treated accordingly.
@@ -225,6 +243,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string caller_supplied_user_agent = 2;</code>
+   *
    * @return The callerSuppliedUserAgent.
    */
   @java.lang.Override
@@ -233,14 +252,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       callerSuppliedUserAgent_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The user agent of the caller.
    * This information is not authenticated and should be treated accordingly.
@@ -255,16 +275,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string caller_supplied_user_agent = 2;</code>
+   *
    * @return The bytes for callerSuppliedUserAgent.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCallerSuppliedUserAgentBytes() {
+  public com.google.protobuf.ByteString getCallerSuppliedUserAgentBytes() {
     java.lang.Object ref = callerSuppliedUserAgent_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       callerSuppliedUserAgent_ = b;
       return b;
     } else {
@@ -275,6 +294,8 @@ private static final long serialVersionUID = 0L;
   public static final int CALLER_NETWORK_FIELD_NUMBER = 3;
   private volatile java.lang.Object callerNetwork_;
   /**
+   *
+   *
    * <pre>
    * The network of the caller.
    * Set only if the network host project is part of the same GCP organization
@@ -285,6 +306,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string caller_network = 3;</code>
+   *
    * @return The callerNetwork.
    */
   @java.lang.Override
@@ -293,14 +315,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       callerNetwork_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The network of the caller.
    * Set only if the network host project is part of the same GCP organization
@@ -311,16 +334,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string caller_network = 3;</code>
+   *
    * @return The bytes for callerNetwork.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCallerNetworkBytes() {
+  public com.google.protobuf.ByteString getCallerNetworkBytes() {
     java.lang.Object ref = callerNetwork_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       callerNetwork_ = b;
       return b;
     } else {
@@ -331,6 +353,8 @@ private static final long serialVersionUID = 0L;
   public static final int REQUEST_ATTRIBUTES_FIELD_NUMBER = 7;
   private com.google.rpc.context.AttributeContext.Request requestAttributes_;
   /**
+   *
+   *
    * <pre>
    * Request attributes used in IAM condition evaluation. This field contains
    * request attributes like request time and access levels associated with
@@ -341,6 +365,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+   *
    * @return Whether the requestAttributes field is set.
    */
   @java.lang.Override
@@ -348,6 +373,8 @@ private static final long serialVersionUID = 0L;
     return requestAttributes_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Request attributes used in IAM condition evaluation. This field contains
    * request attributes like request time and access levels associated with
@@ -358,13 +385,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+   *
    * @return The requestAttributes.
    */
   @java.lang.Override
   public com.google.rpc.context.AttributeContext.Request getRequestAttributes() {
-    return requestAttributes_ == null ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance() : requestAttributes_;
+    return requestAttributes_ == null
+        ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance()
+        : requestAttributes_;
   }
   /**
+   *
+   *
    * <pre>
    * Request attributes used in IAM condition evaluation. This field contains
    * request attributes like request time and access levels associated with
@@ -384,6 +416,8 @@ private static final long serialVersionUID = 0L;
   public static final int DESTINATION_ATTRIBUTES_FIELD_NUMBER = 8;
   private com.google.rpc.context.AttributeContext.Peer destinationAttributes_;
   /**
+   *
+   *
    * <pre>
    * The destination of a network activity, such as accepting a TCP connection.
    * In a multi hop network activity, the destination represents the receiver of
@@ -393,6 +427,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+   *
    * @return Whether the destinationAttributes field is set.
    */
   @java.lang.Override
@@ -400,6 +435,8 @@ private static final long serialVersionUID = 0L;
     return destinationAttributes_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The destination of a network activity, such as accepting a TCP connection.
    * In a multi hop network activity, the destination represents the receiver of
@@ -409,13 +446,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+   *
    * @return The destinationAttributes.
    */
   @java.lang.Override
   public com.google.rpc.context.AttributeContext.Peer getDestinationAttributes() {
-    return destinationAttributes_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : destinationAttributes_;
+    return destinationAttributes_ == null
+        ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+        : destinationAttributes_;
   }
   /**
+   *
+   *
    * <pre>
    * The destination of a network activity, such as accepting a TCP connection.
    * In a multi hop network activity, the destination represents the receiver of
@@ -432,6 +474,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -443,8 +486,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getCallerIpBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, callerIp_);
     }
@@ -479,12 +521,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, callerNetwork_);
     }
     if (requestAttributes_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getRequestAttributes());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(7, getRequestAttributes());
     }
     if (destinationAttributes_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, getDestinationAttributes());
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(8, getDestinationAttributes());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -494,28 +535,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.cloud.audit.RequestMetadata)) {
       return super.equals(obj);
     }
     com.google.cloud.audit.RequestMetadata other = (com.google.cloud.audit.RequestMetadata) obj;
 
-    if (!getCallerIp()
-        .equals(other.getCallerIp())) return false;
-    if (!getCallerSuppliedUserAgent()
-        .equals(other.getCallerSuppliedUserAgent())) return false;
-    if (!getCallerNetwork()
-        .equals(other.getCallerNetwork())) return false;
+    if (!getCallerIp().equals(other.getCallerIp())) return false;
+    if (!getCallerSuppliedUserAgent().equals(other.getCallerSuppliedUserAgent())) return false;
+    if (!getCallerNetwork().equals(other.getCallerNetwork())) return false;
     if (hasRequestAttributes() != other.hasRequestAttributes()) return false;
     if (hasRequestAttributes()) {
-      if (!getRequestAttributes()
-          .equals(other.getRequestAttributes())) return false;
+      if (!getRequestAttributes().equals(other.getRequestAttributes())) return false;
     }
     if (hasDestinationAttributes() != other.hasDestinationAttributes()) return false;
     if (hasDestinationAttributes()) {
-      if (!getDestinationAttributes()
-          .equals(other.getDestinationAttributes())) return false;
+      if (!getDestinationAttributes().equals(other.getDestinationAttributes())) return false;
     }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -547,118 +583,127 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.cloud.audit.RequestMetadata parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.cloud.audit.RequestMetadata parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.cloud.audit.RequestMetadata parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.cloud.audit.RequestMetadata prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Metadata about the request.
    * </pre>
    *
    * Protobuf type {@code google.cloud.audit.RequestMetadata}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.cloud.audit.RequestMetadata)
       com.google.cloud.audit.RequestMetadataOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_RequestMetadata_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.cloud.audit.AuditLogProto
+          .internal_static_google_cloud_audit_RequestMetadata_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_RequestMetadata_fieldAccessorTable
+      return com.google.cloud.audit.AuditLogProto
+          .internal_static_google_cloud_audit_RequestMetadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.cloud.audit.RequestMetadata.class, com.google.cloud.audit.RequestMetadata.Builder.class);
+              com.google.cloud.audit.RequestMetadata.class,
+              com.google.cloud.audit.RequestMetadata.Builder.class);
     }
 
     // Construct using com.google.cloud.audit.RequestMetadata.newBuilder()
@@ -666,16 +711,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -701,9 +745,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_RequestMetadata_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return com.google.cloud.audit.AuditLogProto
+          .internal_static_google_cloud_audit_RequestMetadata_descriptor;
     }
 
     @java.lang.Override
@@ -722,7 +766,8 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.cloud.audit.RequestMetadata buildPartial() {
-      com.google.cloud.audit.RequestMetadata result = new com.google.cloud.audit.RequestMetadata(this);
+      com.google.cloud.audit.RequestMetadata result =
+          new com.google.cloud.audit.RequestMetadata(this);
       result.callerIp_ = callerIp_;
       result.callerSuppliedUserAgent_ = callerSuppliedUserAgent_;
       result.callerNetwork_ = callerNetwork_;
@@ -744,38 +789,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.cloud.audit.RequestMetadata) {
-        return mergeFrom((com.google.cloud.audit.RequestMetadata)other);
+        return mergeFrom((com.google.cloud.audit.RequestMetadata) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -833,6 +879,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object callerIp_ = "";
     /**
+     *
+     *
      * <pre>
      * The IP address of the caller.
      * For caller from internet, this will be public IPv4 or IPv6 address.
@@ -846,13 +894,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_ip = 1;</code>
+     *
      * @return The callerIp.
      */
     public java.lang.String getCallerIp() {
       java.lang.Object ref = callerIp_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         callerIp_ = s;
         return s;
@@ -861,6 +909,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The IP address of the caller.
      * For caller from internet, this will be public IPv4 or IPv6 address.
@@ -874,15 +924,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_ip = 1;</code>
+     *
      * @return The bytes for callerIp.
      */
-    public com.google.protobuf.ByteString
-        getCallerIpBytes() {
+    public com.google.protobuf.ByteString getCallerIpBytes() {
       java.lang.Object ref = callerIp_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         callerIp_ = b;
         return b;
       } else {
@@ -890,6 +939,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The IP address of the caller.
      * For caller from internet, this will be public IPv4 or IPv6 address.
@@ -903,20 +954,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_ip = 1;</code>
+     *
      * @param value The callerIp to set.
      * @return This builder for chaining.
      */
-    public Builder setCallerIp(
-        java.lang.String value) {
+    public Builder setCallerIp(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       callerIp_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The IP address of the caller.
      * For caller from internet, this will be public IPv4 or IPv6 address.
@@ -930,15 +983,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_ip = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearCallerIp() {
-      
+
       callerIp_ = getDefaultInstance().getCallerIp();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The IP address of the caller.
      * For caller from internet, this will be public IPv4 or IPv6 address.
@@ -952,16 +1008,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_ip = 1;</code>
+     *
      * @param value The bytes for callerIp to set.
      * @return This builder for chaining.
      */
-    public Builder setCallerIpBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setCallerIpBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       callerIp_ = value;
       onChanged();
       return this;
@@ -969,6 +1025,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object callerSuppliedUserAgent_ = "";
     /**
+     *
+     *
      * <pre>
      * The user agent of the caller.
      * This information is not authenticated and should be treated accordingly.
@@ -983,13 +1041,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_supplied_user_agent = 2;</code>
+     *
      * @return The callerSuppliedUserAgent.
      */
     public java.lang.String getCallerSuppliedUserAgent() {
       java.lang.Object ref = callerSuppliedUserAgent_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         callerSuppliedUserAgent_ = s;
         return s;
@@ -998,6 +1056,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The user agent of the caller.
      * This information is not authenticated and should be treated accordingly.
@@ -1012,15 +1072,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_supplied_user_agent = 2;</code>
+     *
      * @return The bytes for callerSuppliedUserAgent.
      */
-    public com.google.protobuf.ByteString
-        getCallerSuppliedUserAgentBytes() {
+    public com.google.protobuf.ByteString getCallerSuppliedUserAgentBytes() {
       java.lang.Object ref = callerSuppliedUserAgent_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         callerSuppliedUserAgent_ = b;
         return b;
       } else {
@@ -1028,6 +1087,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The user agent of the caller.
      * This information is not authenticated and should be treated accordingly.
@@ -1042,20 +1103,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_supplied_user_agent = 2;</code>
+     *
      * @param value The callerSuppliedUserAgent to set.
      * @return This builder for chaining.
      */
-    public Builder setCallerSuppliedUserAgent(
-        java.lang.String value) {
+    public Builder setCallerSuppliedUserAgent(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       callerSuppliedUserAgent_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The user agent of the caller.
      * This information is not authenticated and should be treated accordingly.
@@ -1070,15 +1133,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_supplied_user_agent = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearCallerSuppliedUserAgent() {
-      
+
       callerSuppliedUserAgent_ = getDefaultInstance().getCallerSuppliedUserAgent();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The user agent of the caller.
      * This information is not authenticated and should be treated accordingly.
@@ -1093,16 +1159,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_supplied_user_agent = 2;</code>
+     *
      * @param value The bytes for callerSuppliedUserAgent to set.
      * @return This builder for chaining.
      */
-    public Builder setCallerSuppliedUserAgentBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setCallerSuppliedUserAgentBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       callerSuppliedUserAgent_ = value;
       onChanged();
       return this;
@@ -1110,6 +1176,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object callerNetwork_ = "";
     /**
+     *
+     *
      * <pre>
      * The network of the caller.
      * Set only if the network host project is part of the same GCP organization
@@ -1120,13 +1188,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_network = 3;</code>
+     *
      * @return The callerNetwork.
      */
     public java.lang.String getCallerNetwork() {
       java.lang.Object ref = callerNetwork_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         callerNetwork_ = s;
         return s;
@@ -1135,6 +1203,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The network of the caller.
      * Set only if the network host project is part of the same GCP organization
@@ -1145,15 +1215,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_network = 3;</code>
+     *
      * @return The bytes for callerNetwork.
      */
-    public com.google.protobuf.ByteString
-        getCallerNetworkBytes() {
+    public com.google.protobuf.ByteString getCallerNetworkBytes() {
       java.lang.Object ref = callerNetwork_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         callerNetwork_ = b;
         return b;
       } else {
@@ -1161,6 +1230,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The network of the caller.
      * Set only if the network host project is part of the same GCP organization
@@ -1171,20 +1242,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_network = 3;</code>
+     *
      * @param value The callerNetwork to set.
      * @return This builder for chaining.
      */
-    public Builder setCallerNetwork(
-        java.lang.String value) {
+    public Builder setCallerNetwork(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       callerNetwork_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The network of the caller.
      * Set only if the network host project is part of the same GCP organization
@@ -1195,15 +1268,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_network = 3;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearCallerNetwork() {
-      
+
       callerNetwork_ = getDefaultInstance().getCallerNetwork();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The network of the caller.
      * Set only if the network host project is part of the same GCP organization
@@ -1214,16 +1290,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string caller_network = 3;</code>
+     *
      * @param value The bytes for callerNetwork to set.
      * @return This builder for chaining.
      */
-    public Builder setCallerNetworkBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setCallerNetworkBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       callerNetwork_ = value;
       onChanged();
       return this;
@@ -1231,8 +1307,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.rpc.context.AttributeContext.Request requestAttributes_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Request, com.google.rpc.context.AttributeContext.Request.Builder, com.google.rpc.context.AttributeContext.RequestOrBuilder> requestAttributesBuilder_;
+            com.google.rpc.context.AttributeContext.Request,
+            com.google.rpc.context.AttributeContext.Request.Builder,
+            com.google.rpc.context.AttributeContext.RequestOrBuilder>
+        requestAttributesBuilder_;
     /**
+     *
+     *
      * <pre>
      * Request attributes used in IAM condition evaluation. This field contains
      * request attributes like request time and access levels associated with
@@ -1243,12 +1324,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+     *
      * @return Whether the requestAttributes field is set.
      */
     public boolean hasRequestAttributes() {
       return requestAttributesBuilder_ != null || requestAttributes_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Request attributes used in IAM condition evaluation. This field contains
      * request attributes like request time and access levels associated with
@@ -1259,16 +1343,21 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+     *
      * @return The requestAttributes.
      */
     public com.google.rpc.context.AttributeContext.Request getRequestAttributes() {
       if (requestAttributesBuilder_ == null) {
-        return requestAttributes_ == null ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance() : requestAttributes_;
+        return requestAttributes_ == null
+            ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance()
+            : requestAttributes_;
       } else {
         return requestAttributesBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Request attributes used in IAM condition evaluation. This field contains
      * request attributes like request time and access levels associated with
@@ -1294,6 +1383,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Request attributes used in IAM condition evaluation. This field contains
      * request attributes like request time and access levels associated with
@@ -1317,6 +1408,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Request attributes used in IAM condition evaluation. This field contains
      * request attributes like request time and access levels associated with
@@ -1332,7 +1425,9 @@ private static final long serialVersionUID = 0L;
       if (requestAttributesBuilder_ == null) {
         if (requestAttributes_ != null) {
           requestAttributes_ =
-            com.google.rpc.context.AttributeContext.Request.newBuilder(requestAttributes_).mergeFrom(value).buildPartial();
+              com.google.rpc.context.AttributeContext.Request.newBuilder(requestAttributes_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           requestAttributes_ = value;
         }
@@ -1344,6 +1439,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Request attributes used in IAM condition evaluation. This field contains
      * request attributes like request time and access levels associated with
@@ -1367,6 +1464,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Request attributes used in IAM condition evaluation. This field contains
      * request attributes like request time and access levels associated with
@@ -1379,11 +1478,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
      */
     public com.google.rpc.context.AttributeContext.Request.Builder getRequestAttributesBuilder() {
-      
+
       onChanged();
       return getRequestAttributesFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Request attributes used in IAM condition evaluation. This field contains
      * request attributes like request time and access levels associated with
@@ -1395,15 +1496,19 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
      */
-    public com.google.rpc.context.AttributeContext.RequestOrBuilder getRequestAttributesOrBuilder() {
+    public com.google.rpc.context.AttributeContext.RequestOrBuilder
+        getRequestAttributesOrBuilder() {
       if (requestAttributesBuilder_ != null) {
         return requestAttributesBuilder_.getMessageOrBuilder();
       } else {
-        return requestAttributes_ == null ?
-            com.google.rpc.context.AttributeContext.Request.getDefaultInstance() : requestAttributes_;
+        return requestAttributes_ == null
+            ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance()
+            : requestAttributes_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Request attributes used in IAM condition evaluation. This field contains
      * request attributes like request time and access levels associated with
@@ -1416,14 +1521,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Request, com.google.rpc.context.AttributeContext.Request.Builder, com.google.rpc.context.AttributeContext.RequestOrBuilder> 
+            com.google.rpc.context.AttributeContext.Request,
+            com.google.rpc.context.AttributeContext.Request.Builder,
+            com.google.rpc.context.AttributeContext.RequestOrBuilder>
         getRequestAttributesFieldBuilder() {
       if (requestAttributesBuilder_ == null) {
-        requestAttributesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.context.AttributeContext.Request, com.google.rpc.context.AttributeContext.Request.Builder, com.google.rpc.context.AttributeContext.RequestOrBuilder>(
-                getRequestAttributes(),
-                getParentForChildren(),
-                isClean());
+        requestAttributesBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.context.AttributeContext.Request,
+                com.google.rpc.context.AttributeContext.Request.Builder,
+                com.google.rpc.context.AttributeContext.RequestOrBuilder>(
+                getRequestAttributes(), getParentForChildren(), isClean());
         requestAttributes_ = null;
       }
       return requestAttributesBuilder_;
@@ -1431,8 +1539,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.rpc.context.AttributeContext.Peer destinationAttributes_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> destinationAttributesBuilder_;
+            com.google.rpc.context.AttributeContext.Peer,
+            com.google.rpc.context.AttributeContext.Peer.Builder,
+            com.google.rpc.context.AttributeContext.PeerOrBuilder>
+        destinationAttributesBuilder_;
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -1442,12 +1555,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+     *
      * @return Whether the destinationAttributes field is set.
      */
     public boolean hasDestinationAttributes() {
       return destinationAttributesBuilder_ != null || destinationAttributes_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -1457,16 +1573,21 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+     *
      * @return The destinationAttributes.
      */
     public com.google.rpc.context.AttributeContext.Peer getDestinationAttributes() {
       if (destinationAttributesBuilder_ == null) {
-        return destinationAttributes_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : destinationAttributes_;
+        return destinationAttributes_ == null
+            ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+            : destinationAttributes_;
       } else {
         return destinationAttributesBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -1491,6 +1612,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -1513,6 +1636,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -1527,7 +1652,9 @@ private static final long serialVersionUID = 0L;
       if (destinationAttributesBuilder_ == null) {
         if (destinationAttributes_ != null) {
           destinationAttributes_ =
-            com.google.rpc.context.AttributeContext.Peer.newBuilder(destinationAttributes_).mergeFrom(value).buildPartial();
+              com.google.rpc.context.AttributeContext.Peer.newBuilder(destinationAttributes_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           destinationAttributes_ = value;
         }
@@ -1539,6 +1666,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -1561,6 +1690,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -1572,11 +1703,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
      */
     public com.google.rpc.context.AttributeContext.Peer.Builder getDestinationAttributesBuilder() {
-      
+
       onChanged();
       return getDestinationAttributesFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -1587,15 +1720,19 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
      */
-    public com.google.rpc.context.AttributeContext.PeerOrBuilder getDestinationAttributesOrBuilder() {
+    public com.google.rpc.context.AttributeContext.PeerOrBuilder
+        getDestinationAttributesOrBuilder() {
       if (destinationAttributesBuilder_ != null) {
         return destinationAttributesBuilder_.getMessageOrBuilder();
       } else {
-        return destinationAttributes_ == null ?
-            com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : destinationAttributes_;
+        return destinationAttributes_ == null
+            ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+            : destinationAttributes_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -1607,21 +1744,24 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> 
+            com.google.rpc.context.AttributeContext.Peer,
+            com.google.rpc.context.AttributeContext.Peer.Builder,
+            com.google.rpc.context.AttributeContext.PeerOrBuilder>
         getDestinationAttributesFieldBuilder() {
       if (destinationAttributesBuilder_ == null) {
-        destinationAttributesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder>(
-                getDestinationAttributes(),
-                getParentForChildren(),
-                isClean());
+        destinationAttributesBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.context.AttributeContext.Peer,
+                com.google.rpc.context.AttributeContext.Peer.Builder,
+                com.google.rpc.context.AttributeContext.PeerOrBuilder>(
+                getDestinationAttributes(), getParentForChildren(), isClean());
         destinationAttributes_ = null;
       }
       return destinationAttributesBuilder_;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1631,12 +1771,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.cloud.audit.RequestMetadata)
   }
 
   // @@protoc_insertion_point(class_scope:google.cloud.audit.RequestMetadata)
   private static final com.google.cloud.audit.RequestMetadata DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.cloud.audit.RequestMetadata();
   }
@@ -1645,16 +1785,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RequestMetadata>
-      PARSER = new com.google.protobuf.AbstractParser<RequestMetadata>() {
-    @java.lang.Override
-    public RequestMetadata parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RequestMetadata(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<RequestMetadata> PARSER =
+      new com.google.protobuf.AbstractParser<RequestMetadata>() {
+        @java.lang.Override
+        public RequestMetadata parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RequestMetadata(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<RequestMetadata> parser() {
     return PARSER;
@@ -1669,6 +1809,4 @@ private static final long serialVersionUID = 0L;
   public com.google.cloud.audit.RequestMetadata getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

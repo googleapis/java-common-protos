@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * Defines the supported values for `google.rpc.ErrorInfo.reason` for the
  * `googleapis.com` error domain. This error domain is reserved for [Service
@@ -34,9 +36,10 @@ package com.google.api;
  *
  * Protobuf enum {@code google.api.ErrorReason}
  */
-public enum ErrorReason
-    implements com.google.protobuf.ProtocolMessageEnum {
+public enum ErrorReason implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   *
+   *
    * <pre>
    * Do not use this default value.
    * </pre>
@@ -45,6 +48,8 @@ public enum ErrorReason
    */
   ERROR_REASON_UNSPECIFIED(0),
   /**
+   *
+   *
    * <pre>
    * The request is calling a disabled service for a consumer.
    * Example of an ErrorInfo when the consumer "projects/123" contacting
@@ -64,6 +69,8 @@ public enum ErrorReason
    */
   SERVICE_DISABLED(1),
   /**
+   *
+   *
    * <pre>
    * The request whose associated billing account is disabled.
    * Example of an ErrorInfo when the consumer "projects/123" fails to contact
@@ -83,6 +90,8 @@ public enum ErrorReason
    */
   BILLING_DISABLED(2),
   /**
+   *
+   *
    * <pre>
    * The request is denied because the provided [API
    * key](https://cloud.google.com/docs/authentication/api-keys) is invalid. It
@@ -101,6 +110,8 @@ public enum ErrorReason
    */
   API_KEY_INVALID(3),
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key API
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_api_restrictions).
@@ -120,6 +131,8 @@ public enum ErrorReason
    */
   API_KEY_SERVICE_BLOCKED(4),
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key HTTP
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_http_restrictions).
@@ -139,6 +152,8 @@ public enum ErrorReason
    */
   API_KEY_HTTP_REFERRER_BLOCKED(7),
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key IP address
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_application_restrictions).
@@ -158,6 +173,8 @@ public enum ErrorReason
    */
   API_KEY_IP_ADDRESS_BLOCKED(8),
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key Android application
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_application_restrictions).
@@ -177,6 +194,8 @@ public enum ErrorReason
    */
   API_KEY_ANDROID_APP_BLOCKED(9),
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key iOS application
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_application_restrictions).
@@ -196,6 +215,8 @@ public enum ErrorReason
    */
   API_KEY_IOS_APP_BLOCKED(13),
   /**
+   *
+   *
    * <pre>
    * The request is denied because there is not enough rate quota for the
    * consumer.
@@ -232,6 +253,8 @@ public enum ErrorReason
    */
   RATE_LIMIT_EXCEEDED(5),
   /**
+   *
+   *
    * <pre>
    * The request is denied because there is not enough resource quota for the
    * consumer.
@@ -267,6 +290,8 @@ public enum ErrorReason
    */
   RESOURCE_QUOTA_EXCEEDED(6),
   /**
+   *
+   *
    * <pre>
    * The request whose associated billing account address is in a tax restricted
    * location, violates the local tax restrictions when creating resources in
@@ -290,6 +315,8 @@ public enum ErrorReason
    */
   LOCATION_TAX_POLICY_VIOLATED(10),
   /**
+   *
+   *
    * <pre>
    * The request is denied because the caller does not have required permission
    * on the user project "projects/123" or the user project is invalid. For more
@@ -310,6 +337,8 @@ public enum ErrorReason
    */
   USER_PROJECT_DENIED(11),
   /**
+   *
+   *
    * <pre>
    * The request is denied because the consumer "projects/123" is suspended due
    * to Terms of Service(Tos) violations. Check [Project suspension
@@ -330,6 +359,8 @@ public enum ErrorReason
    */
   CONSUMER_SUSPENDED(12),
   /**
+   *
+   *
    * <pre>
    * The request is denied because the associated consumer is invalid. It may be
    * in a bad format, cannot be found, or have been deleted.
@@ -348,6 +379,8 @@ public enum ErrorReason
    */
   CONSUMER_INVALID(14),
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [VPC Service
    * Controls](https://cloud.google.com/vpc-service-controls/docs/overview).
@@ -372,6 +405,8 @@ public enum ErrorReason
    */
   SECURITY_POLICY_VIOLATED(15),
   /**
+   *
+   *
    * <pre>
    * The request is denied because the provided access token has expired.
    * Example of an ErrorInfo when the request is calling Cloud Storage service
@@ -389,6 +424,8 @@ public enum ErrorReason
    */
   ACCESS_TOKEN_EXPIRED(16),
   /**
+   *
+   *
    * <pre>
    * The request is denied because the provided access token doesn't have at
    * least one of the acceptable scopes required for the API. Please check
@@ -411,6 +448,8 @@ public enum ErrorReason
    */
   ACCESS_TOKEN_SCOPE_INSUFFICIENT(17),
   /**
+   *
+   *
    * <pre>
    * The request is denied because the account associated with the provided
    * access token is in an invalid state, such as disabled or deleted.
@@ -435,6 +474,8 @@ public enum ErrorReason
    */
   ACCOUNT_STATE_INVALID(18),
   /**
+   *
+   *
    * <pre>
    * The request is denied because the type of the provided access token is not
    * supported by the API being called.
@@ -456,6 +497,8 @@ public enum ErrorReason
   ;
 
   /**
+   *
+   *
    * <pre>
    * Do not use this default value.
    * </pre>
@@ -464,6 +507,8 @@ public enum ErrorReason
    */
   public static final int ERROR_REASON_UNSPECIFIED_VALUE = 0;
   /**
+   *
+   *
    * <pre>
    * The request is calling a disabled service for a consumer.
    * Example of an ErrorInfo when the consumer "projects/123" contacting
@@ -483,6 +528,8 @@ public enum ErrorReason
    */
   public static final int SERVICE_DISABLED_VALUE = 1;
   /**
+   *
+   *
    * <pre>
    * The request whose associated billing account is disabled.
    * Example of an ErrorInfo when the consumer "projects/123" fails to contact
@@ -502,6 +549,8 @@ public enum ErrorReason
    */
   public static final int BILLING_DISABLED_VALUE = 2;
   /**
+   *
+   *
    * <pre>
    * The request is denied because the provided [API
    * key](https://cloud.google.com/docs/authentication/api-keys) is invalid. It
@@ -520,6 +569,8 @@ public enum ErrorReason
    */
   public static final int API_KEY_INVALID_VALUE = 3;
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key API
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_api_restrictions).
@@ -539,6 +590,8 @@ public enum ErrorReason
    */
   public static final int API_KEY_SERVICE_BLOCKED_VALUE = 4;
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key HTTP
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_http_restrictions).
@@ -558,6 +611,8 @@ public enum ErrorReason
    */
   public static final int API_KEY_HTTP_REFERRER_BLOCKED_VALUE = 7;
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key IP address
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_application_restrictions).
@@ -577,6 +632,8 @@ public enum ErrorReason
    */
   public static final int API_KEY_IP_ADDRESS_BLOCKED_VALUE = 8;
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key Android application
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_application_restrictions).
@@ -596,6 +653,8 @@ public enum ErrorReason
    */
   public static final int API_KEY_ANDROID_APP_BLOCKED_VALUE = 9;
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [API key iOS application
    * restrictions](https://cloud.google.com/docs/authentication/api-keys#adding_application_restrictions).
@@ -615,6 +674,8 @@ public enum ErrorReason
    */
   public static final int API_KEY_IOS_APP_BLOCKED_VALUE = 13;
   /**
+   *
+   *
    * <pre>
    * The request is denied because there is not enough rate quota for the
    * consumer.
@@ -651,6 +712,8 @@ public enum ErrorReason
    */
   public static final int RATE_LIMIT_EXCEEDED_VALUE = 5;
   /**
+   *
+   *
    * <pre>
    * The request is denied because there is not enough resource quota for the
    * consumer.
@@ -686,6 +749,8 @@ public enum ErrorReason
    */
   public static final int RESOURCE_QUOTA_EXCEEDED_VALUE = 6;
   /**
+   *
+   *
    * <pre>
    * The request whose associated billing account address is in a tax restricted
    * location, violates the local tax restrictions when creating resources in
@@ -709,6 +774,8 @@ public enum ErrorReason
    */
   public static final int LOCATION_TAX_POLICY_VIOLATED_VALUE = 10;
   /**
+   *
+   *
    * <pre>
    * The request is denied because the caller does not have required permission
    * on the user project "projects/123" or the user project is invalid. For more
@@ -729,6 +796,8 @@ public enum ErrorReason
    */
   public static final int USER_PROJECT_DENIED_VALUE = 11;
   /**
+   *
+   *
    * <pre>
    * The request is denied because the consumer "projects/123" is suspended due
    * to Terms of Service(Tos) violations. Check [Project suspension
@@ -749,6 +818,8 @@ public enum ErrorReason
    */
   public static final int CONSUMER_SUSPENDED_VALUE = 12;
   /**
+   *
+   *
    * <pre>
    * The request is denied because the associated consumer is invalid. It may be
    * in a bad format, cannot be found, or have been deleted.
@@ -767,6 +838,8 @@ public enum ErrorReason
    */
   public static final int CONSUMER_INVALID_VALUE = 14;
   /**
+   *
+   *
    * <pre>
    * The request is denied because it violates [VPC Service
    * Controls](https://cloud.google.com/vpc-service-controls/docs/overview).
@@ -791,6 +864,8 @@ public enum ErrorReason
    */
   public static final int SECURITY_POLICY_VIOLATED_VALUE = 15;
   /**
+   *
+   *
    * <pre>
    * The request is denied because the provided access token has expired.
    * Example of an ErrorInfo when the request is calling Cloud Storage service
@@ -808,6 +883,8 @@ public enum ErrorReason
    */
   public static final int ACCESS_TOKEN_EXPIRED_VALUE = 16;
   /**
+   *
+   *
    * <pre>
    * The request is denied because the provided access token doesn't have at
    * least one of the acceptable scopes required for the API. Please check
@@ -830,6 +907,8 @@ public enum ErrorReason
    */
   public static final int ACCESS_TOKEN_SCOPE_INSUFFICIENT_VALUE = 17;
   /**
+   *
+   *
    * <pre>
    * The request is denied because the account associated with the provided
    * access token is in an invalid state, such as disabled or deleted.
@@ -854,6 +933,8 @@ public enum ErrorReason
    */
   public static final int ACCOUNT_STATE_INVALID_VALUE = 18;
   /**
+   *
+   *
    * <pre>
    * The request is denied because the type of the provided access token is not
    * supported by the API being called.
@@ -871,7 +952,6 @@ public enum ErrorReason
    * <code>ACCESS_TOKEN_TYPE_UNSUPPORTED = 19;</code>
    */
   public static final int ACCESS_TOKEN_TYPE_UNSUPPORTED_VALUE = 19;
-
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -897,66 +977,83 @@ public enum ErrorReason
    */
   public static ErrorReason forNumber(int value) {
     switch (value) {
-      case 0: return ERROR_REASON_UNSPECIFIED;
-      case 1: return SERVICE_DISABLED;
-      case 2: return BILLING_DISABLED;
-      case 3: return API_KEY_INVALID;
-      case 4: return API_KEY_SERVICE_BLOCKED;
-      case 7: return API_KEY_HTTP_REFERRER_BLOCKED;
-      case 8: return API_KEY_IP_ADDRESS_BLOCKED;
-      case 9: return API_KEY_ANDROID_APP_BLOCKED;
-      case 13: return API_KEY_IOS_APP_BLOCKED;
-      case 5: return RATE_LIMIT_EXCEEDED;
-      case 6: return RESOURCE_QUOTA_EXCEEDED;
-      case 10: return LOCATION_TAX_POLICY_VIOLATED;
-      case 11: return USER_PROJECT_DENIED;
-      case 12: return CONSUMER_SUSPENDED;
-      case 14: return CONSUMER_INVALID;
-      case 15: return SECURITY_POLICY_VIOLATED;
-      case 16: return ACCESS_TOKEN_EXPIRED;
-      case 17: return ACCESS_TOKEN_SCOPE_INSUFFICIENT;
-      case 18: return ACCOUNT_STATE_INVALID;
-      case 19: return ACCESS_TOKEN_TYPE_UNSUPPORTED;
-      default: return null;
+      case 0:
+        return ERROR_REASON_UNSPECIFIED;
+      case 1:
+        return SERVICE_DISABLED;
+      case 2:
+        return BILLING_DISABLED;
+      case 3:
+        return API_KEY_INVALID;
+      case 4:
+        return API_KEY_SERVICE_BLOCKED;
+      case 7:
+        return API_KEY_HTTP_REFERRER_BLOCKED;
+      case 8:
+        return API_KEY_IP_ADDRESS_BLOCKED;
+      case 9:
+        return API_KEY_ANDROID_APP_BLOCKED;
+      case 13:
+        return API_KEY_IOS_APP_BLOCKED;
+      case 5:
+        return RATE_LIMIT_EXCEEDED;
+      case 6:
+        return RESOURCE_QUOTA_EXCEEDED;
+      case 10:
+        return LOCATION_TAX_POLICY_VIOLATED;
+      case 11:
+        return USER_PROJECT_DENIED;
+      case 12:
+        return CONSUMER_SUSPENDED;
+      case 14:
+        return CONSUMER_INVALID;
+      case 15:
+        return SECURITY_POLICY_VIOLATED;
+      case 16:
+        return ACCESS_TOKEN_EXPIRED;
+      case 17:
+        return ACCESS_TOKEN_SCOPE_INSUFFICIENT;
+      case 18:
+        return ACCOUNT_STATE_INVALID;
+      case 19:
+        return ACCESS_TOKEN_TYPE_UNSUPPORTED;
+      default:
+        return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<ErrorReason>
-      internalGetValueMap() {
+  public static com.google.protobuf.Internal.EnumLiteMap<ErrorReason> internalGetValueMap() {
     return internalValueMap;
   }
-  private static final com.google.protobuf.Internal.EnumLiteMap<
-      ErrorReason> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<ErrorReason>() {
-          public ErrorReason findValueByNumber(int number) {
-            return ErrorReason.forNumber(number);
-          }
-        };
 
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor
-      getValueDescriptor() {
+  private static final com.google.protobuf.Internal.EnumLiteMap<ErrorReason> internalValueMap =
+      new com.google.protobuf.Internal.EnumLiteMap<ErrorReason>() {
+        public ErrorReason findValueByNumber(int number) {
+          return ErrorReason.forNumber(number);
+        }
+      };
+
+  public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
-  public final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptorForType() {
+
+  public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
     return getDescriptor();
   }
-  public static final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
     return com.google.api.ErrorReasonProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final ErrorReason[] VALUES = values();
 
-  public static ErrorReason valueOf(
-      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+  public static ErrorReason valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException(
-        "EnumValueDescriptor is not for this type.");
+      throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -972,4 +1069,3 @@ public enum ErrorReason
 
   // @@protoc_insertion_point(enum_scope:google.api.ErrorReason)
 }
-

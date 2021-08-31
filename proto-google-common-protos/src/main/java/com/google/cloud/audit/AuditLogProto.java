@@ -20,175 +20,208 @@ package com.google.cloud.audit;
 
 public final class AuditLogProto {
   private AuditLogProto() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_cloud_audit_AuditLog_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_audit_AuditLog_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_audit_AuditLog_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_cloud_audit_AuthenticationInfo_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_audit_AuthenticationInfo_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_audit_AuthenticationInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_cloud_audit_AuthorizationInfo_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_audit_AuthorizationInfo_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_audit_AuthorizationInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_cloud_audit_RequestMetadata_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_audit_RequestMetadata_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_audit_RequestMetadata_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_cloud_audit_ResourceLocation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_audit_ResourceLocation_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_audit_ResourceLocation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_cloud_audit_ServiceAccountDelegationInfo_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_audit_ServiceAccountDelegationInfo_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_audit_ServiceAccountDelegationInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_cloud_audit_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_audit_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_audit_ServiceAccountDelegationInfo_FirstPartyPrincipal_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_cloud_audit_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_audit_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_audit_ServiceAccountDelegationInfo_ThirdPartyPrincipal_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
+
+  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+
   static {
     java.lang.String[] descriptorData = {
-      "\n\"google/cloud/audit/audit_log.proto\022\022go" +
-      "ogle.cloud.audit\032\031google/protobuf/any.pr" +
-      "oto\032\034google/protobuf/struct.proto\032*googl" +
-      "e/rpc/context/attribute_context.proto\032\027g" +
-      "oogle/rpc/status.proto\"\376\004\n\010AuditLog\022\024\n\014s" +
-      "ervice_name\030\007 \001(\t\022\023\n\013method_name\030\010 \001(\t\022\025" +
-      "\n\rresource_name\030\013 \001(\t\022?\n\021resource_locati" +
-      "on\030\024 \001(\0132$.google.cloud.audit.ResourceLo" +
-      "cation\0228\n\027resource_original_state\030\023 \001(\0132" +
-      "\027.google.protobuf.Struct\022\032\n\022num_response" +
-      "_items\030\014 \001(\003\022\"\n\006status\030\002 \001(\0132\022.google.rp" +
-      "c.Status\022C\n\023authentication_info\030\003 \001(\0132&." +
-      "google.cloud.audit.AuthenticationInfo\022A\n" +
-      "\022authorization_info\030\t \003(\0132%.google.cloud" +
-      ".audit.AuthorizationInfo\022=\n\020request_meta" +
-      "data\030\004 \001(\0132#.google.cloud.audit.RequestM" +
-      "etadata\022(\n\007request\030\020 \001(\0132\027.google.protob" +
-      "uf.Struct\022)\n\010response\030\021 \001(\0132\027.google.pro" +
-      "tobuf.Struct\022)\n\010metadata\030\022 \001(\0132\027.google." +
-      "protobuf.Struct\022.\n\014service_data\030\017 \001(\0132\024." +
-      "google.protobuf.AnyB\002\030\001\"\231\002\n\022Authenticati" +
-      "onInfo\022\027\n\017principal_email\030\001 \001(\t\022\032\n\022autho" +
-      "rity_selector\030\002 \001(\t\0226\n\025third_party_princ" +
-      "ipal\030\004 \001(\0132\027.google.protobuf.Struct\022 \n\030s" +
-      "ervice_account_key_name\030\005 \001(\t\022Y\n\037service" +
-      "_account_delegation_info\030\006 \003(\01320.google." +
-      "cloud.audit.ServiceAccountDelegationInfo" +
-      "\022\031\n\021principal_subject\030\010 \001(\t\"\226\001\n\021Authoriz" +
-      "ationInfo\022\020\n\010resource\030\001 \001(\t\022\022\n\npermissio" +
-      "n\030\002 \001(\t\022\017\n\007granted\030\003 \001(\010\022J\n\023resource_att" +
-      "ributes\030\005 \001(\0132-.google.rpc.context.Attri" +
-      "buteContext.Resource\"\365\001\n\017RequestMetadata" +
-      "\022\021\n\tcaller_ip\030\001 \001(\t\022\"\n\032caller_supplied_u" +
-      "ser_agent\030\002 \001(\t\022\026\n\016caller_network\030\003 \001(\t\022" +
-      "H\n\022request_attributes\030\007 \001(\0132,.google.rpc" +
-      ".context.AttributeContext.Request\022I\n\026des" +
-      "tination_attributes\030\010 \001(\0132).google.rpc.c" +
-      "ontext.AttributeContext.Peer\"I\n\020Resource" +
-      "Location\022\031\n\021current_locations\030\001 \003(\t\022\032\n\022o" +
-      "riginal_locations\030\002 \003(\t\"\303\003\n\034ServiceAccou" +
-      "ntDelegationInfo\022\031\n\021principal_subject\030\003 " +
-      "\001(\t\022e\n\025first_party_principal\030\001 \001(\0132D.goo" +
-      "gle.cloud.audit.ServiceAccountDelegation" +
-      "Info.FirstPartyPrincipalH\000\022e\n\025third_part" +
-      "y_principal\030\002 \001(\0132D.google.cloud.audit.S" +
-      "erviceAccountDelegationInfo.ThirdPartyPr" +
-      "incipalH\000\032a\n\023FirstPartyPrincipal\022\027\n\017prin" +
-      "cipal_email\030\001 \001(\t\0221\n\020service_metadata\030\002 " +
-      "\001(\0132\027.google.protobuf.Struct\032J\n\023ThirdPar" +
-      "tyPrincipal\0223\n\022third_party_claims\030\001 \001(\0132" +
-      "\027.google.protobuf.StructB\013\n\tAuthorityBe\n" +
-      "\026com.google.cloud.auditB\rAuditLogProtoP\001" +
-      "Z7google.golang.org/genproto/googleapis/" +
-      "cloud/audit;audit\370\001\001b\006proto3"
+      "\n\"google/cloud/audit/audit_log.proto\022\022go"
+          + "ogle.cloud.audit\032\031google/protobuf/any.pr"
+          + "oto\032\034google/protobuf/struct.proto\032*googl"
+          + "e/rpc/context/attribute_context.proto\032\027g"
+          + "oogle/rpc/status.proto\"\376\004\n\010AuditLog\022\024\n\014s"
+          + "ervice_name\030\007 \001(\t\022\023\n\013method_name\030\010 \001(\t\022\025"
+          + "\n\rresource_name\030\013 \001(\t\022?\n\021resource_locati"
+          + "on\030\024 \001(\0132$.google.cloud.audit.ResourceLo"
+          + "cation\0228\n\027resource_original_state\030\023 \001(\0132"
+          + "\027.google.protobuf.Struct\022\032\n\022num_response"
+          + "_items\030\014 \001(\003\022\"\n\006status\030\002 \001(\0132\022.google.rp"
+          + "c.Status\022C\n\023authentication_info\030\003 \001(\0132&."
+          + "google.cloud.audit.AuthenticationInfo\022A\n"
+          + "\022authorization_info\030\t \003(\0132%.google.cloud"
+          + ".audit.AuthorizationInfo\022=\n\020request_meta"
+          + "data\030\004 \001(\0132#.google.cloud.audit.RequestM"
+          + "etadata\022(\n\007request\030\020 \001(\0132\027.google.protob"
+          + "uf.Struct\022)\n\010response\030\021 \001(\0132\027.google.pro"
+          + "tobuf.Struct\022)\n\010metadata\030\022 \001(\0132\027.google."
+          + "protobuf.Struct\022.\n\014service_data\030\017 \001(\0132\024."
+          + "google.protobuf.AnyB\002\030\001\"\231\002\n\022Authenticati"
+          + "onInfo\022\027\n\017principal_email\030\001 \001(\t\022\032\n\022autho"
+          + "rity_selector\030\002 \001(\t\0226\n\025third_party_princ"
+          + "ipal\030\004 \001(\0132\027.google.protobuf.Struct\022 \n\030s"
+          + "ervice_account_key_name\030\005 \001(\t\022Y\n\037service"
+          + "_account_delegation_info\030\006 \003(\01320.google."
+          + "cloud.audit.ServiceAccountDelegationInfo"
+          + "\022\031\n\021principal_subject\030\010 \001(\t\"\226\001\n\021Authoriz"
+          + "ationInfo\022\020\n\010resource\030\001 \001(\t\022\022\n\npermissio"
+          + "n\030\002 \001(\t\022\017\n\007granted\030\003 \001(\010\022J\n\023resource_att"
+          + "ributes\030\005 \001(\0132-.google.rpc.context.Attri"
+          + "buteContext.Resource\"\365\001\n\017RequestMetadata"
+          + "\022\021\n\tcaller_ip\030\001 \001(\t\022\"\n\032caller_supplied_u"
+          + "ser_agent\030\002 \001(\t\022\026\n\016caller_network\030\003 \001(\t\022"
+          + "H\n\022request_attributes\030\007 \001(\0132,.google.rpc"
+          + ".context.AttributeContext.Request\022I\n\026des"
+          + "tination_attributes\030\010 \001(\0132).google.rpc.c"
+          + "ontext.AttributeContext.Peer\"I\n\020Resource"
+          + "Location\022\031\n\021current_locations\030\001 \003(\t\022\032\n\022o"
+          + "riginal_locations\030\002 \003(\t\"\303\003\n\034ServiceAccou"
+          + "ntDelegationInfo\022\031\n\021principal_subject\030\003 "
+          + "\001(\t\022e\n\025first_party_principal\030\001 \001(\0132D.goo"
+          + "gle.cloud.audit.ServiceAccountDelegation"
+          + "Info.FirstPartyPrincipalH\000\022e\n\025third_part"
+          + "y_principal\030\002 \001(\0132D.google.cloud.audit.S"
+          + "erviceAccountDelegationInfo.ThirdPartyPr"
+          + "incipalH\000\032a\n\023FirstPartyPrincipal\022\027\n\017prin"
+          + "cipal_email\030\001 \001(\t\0221\n\020service_metadata\030\002 "
+          + "\001(\0132\027.google.protobuf.Struct\032J\n\023ThirdPar"
+          + "tyPrincipal\0223\n\022third_party_claims\030\001 \001(\0132"
+          + "\027.google.protobuf.StructB\013\n\tAuthorityBe\n"
+          + "\026com.google.cloud.auditB\rAuditLogProtoP\001"
+          + "Z7google.golang.org/genproto/googleapis/"
+          + "cloud/audit;audit\370\001\001b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.AnyProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-          com.google.rpc.context.AttributeContextProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
-        });
+    descriptor =
+        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
+            descriptorData,
+            new com.google.protobuf.Descriptors.FileDescriptor[] {
+              com.google.protobuf.AnyProto.getDescriptor(),
+              com.google.protobuf.StructProto.getDescriptor(),
+              com.google.rpc.context.AttributeContextProto.getDescriptor(),
+              com.google.rpc.StatusProto.getDescriptor(),
+            });
     internal_static_google_cloud_audit_AuditLog_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_google_cloud_audit_AuditLog_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_cloud_audit_AuditLog_descriptor,
-        new java.lang.String[] { "ServiceName", "MethodName", "ResourceName", "ResourceLocation", "ResourceOriginalState", "NumResponseItems", "Status", "AuthenticationInfo", "AuthorizationInfo", "RequestMetadata", "Request", "Response", "Metadata", "ServiceData", });
+        getDescriptor().getMessageTypes().get(0);
+    internal_static_google_cloud_audit_AuditLog_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_audit_AuditLog_descriptor,
+            new java.lang.String[] {
+              "ServiceName",
+              "MethodName",
+              "ResourceName",
+              "ResourceLocation",
+              "ResourceOriginalState",
+              "NumResponseItems",
+              "Status",
+              "AuthenticationInfo",
+              "AuthorizationInfo",
+              "RequestMetadata",
+              "Request",
+              "Response",
+              "Metadata",
+              "ServiceData",
+            });
     internal_static_google_cloud_audit_AuthenticationInfo_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_google_cloud_audit_AuthenticationInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_cloud_audit_AuthenticationInfo_descriptor,
-        new java.lang.String[] { "PrincipalEmail", "AuthoritySelector", "ThirdPartyPrincipal", "ServiceAccountKeyName", "ServiceAccountDelegationInfo", "PrincipalSubject", });
+        getDescriptor().getMessageTypes().get(1);
+    internal_static_google_cloud_audit_AuthenticationInfo_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_audit_AuthenticationInfo_descriptor,
+            new java.lang.String[] {
+              "PrincipalEmail",
+              "AuthoritySelector",
+              "ThirdPartyPrincipal",
+              "ServiceAccountKeyName",
+              "ServiceAccountDelegationInfo",
+              "PrincipalSubject",
+            });
     internal_static_google_cloud_audit_AuthorizationInfo_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_google_cloud_audit_AuthorizationInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_cloud_audit_AuthorizationInfo_descriptor,
-        new java.lang.String[] { "Resource", "Permission", "Granted", "ResourceAttributes", });
+        getDescriptor().getMessageTypes().get(2);
+    internal_static_google_cloud_audit_AuthorizationInfo_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_audit_AuthorizationInfo_descriptor,
+            new java.lang.String[] {
+              "Resource", "Permission", "Granted", "ResourceAttributes",
+            });
     internal_static_google_cloud_audit_RequestMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_google_cloud_audit_RequestMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_cloud_audit_RequestMetadata_descriptor,
-        new java.lang.String[] { "CallerIp", "CallerSuppliedUserAgent", "CallerNetwork", "RequestAttributes", "DestinationAttributes", });
+        getDescriptor().getMessageTypes().get(3);
+    internal_static_google_cloud_audit_RequestMetadata_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_audit_RequestMetadata_descriptor,
+            new java.lang.String[] {
+              "CallerIp",
+              "CallerSuppliedUserAgent",
+              "CallerNetwork",
+              "RequestAttributes",
+              "DestinationAttributes",
+            });
     internal_static_google_cloud_audit_ResourceLocation_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_google_cloud_audit_ResourceLocation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_cloud_audit_ResourceLocation_descriptor,
-        new java.lang.String[] { "CurrentLocations", "OriginalLocations", });
+        getDescriptor().getMessageTypes().get(4);
+    internal_static_google_cloud_audit_ResourceLocation_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_audit_ResourceLocation_descriptor,
+            new java.lang.String[] {
+              "CurrentLocations", "OriginalLocations",
+            });
     internal_static_google_cloud_audit_ServiceAccountDelegationInfo_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_google_cloud_audit_ServiceAccountDelegationInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_cloud_audit_ServiceAccountDelegationInfo_descriptor,
-        new java.lang.String[] { "PrincipalSubject", "FirstPartyPrincipal", "ThirdPartyPrincipal", "Authority", });
+        getDescriptor().getMessageTypes().get(5);
+    internal_static_google_cloud_audit_ServiceAccountDelegationInfo_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_audit_ServiceAccountDelegationInfo_descriptor,
+            new java.lang.String[] {
+              "PrincipalSubject", "FirstPartyPrincipal", "ThirdPartyPrincipal", "Authority",
+            });
     internal_static_google_cloud_audit_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor =
-      internal_static_google_cloud_audit_ServiceAccountDelegationInfo_descriptor.getNestedTypes().get(0);
-    internal_static_google_cloud_audit_ServiceAccountDelegationInfo_FirstPartyPrincipal_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_cloud_audit_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor,
-        new java.lang.String[] { "PrincipalEmail", "ServiceMetadata", });
+        internal_static_google_cloud_audit_ServiceAccountDelegationInfo_descriptor
+            .getNestedTypes()
+            .get(0);
+    internal_static_google_cloud_audit_ServiceAccountDelegationInfo_FirstPartyPrincipal_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_audit_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor,
+            new java.lang.String[] {
+              "PrincipalEmail", "ServiceMetadata",
+            });
     internal_static_google_cloud_audit_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor =
-      internal_static_google_cloud_audit_ServiceAccountDelegationInfo_descriptor.getNestedTypes().get(1);
-    internal_static_google_cloud_audit_ServiceAccountDelegationInfo_ThirdPartyPrincipal_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_cloud_audit_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor,
-        new java.lang.String[] { "ThirdPartyClaims", });
+        internal_static_google_cloud_audit_ServiceAccountDelegationInfo_descriptor
+            .getNestedTypes()
+            .get(1);
+    internal_static_google_cloud_audit_ServiceAccountDelegationInfo_ThirdPartyPrincipal_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_audit_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor,
+            new java.lang.String[] {
+              "ThirdPartyClaims",
+            });
     com.google.protobuf.AnyProto.getDescriptor();
     com.google.protobuf.StructProto.getDescriptor();
     com.google.rpc.context.AttributeContextProto.getDescriptor();

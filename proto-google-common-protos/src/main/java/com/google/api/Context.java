@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * `Context` defines which contexts an API requests.
  * Example:
@@ -52,31 +54,31 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Context}
  */
-public final class Context extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class Context extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.api.Context)
     ContextOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use Context.newBuilder() to construct.
   private Context(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Context() {
     rules_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Context();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private Context(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -96,29 +98,28 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              rules_ = new java.util.ArrayList<com.google.api.ContextRule>();
-              mutable_bitField0_ |= 0x00000001;
+          case 10:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                rules_ = new java.util.ArrayList<com.google.api.ContextRule>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              rules_.add(input.readMessage(com.google.api.ContextRule.parser(), extensionRegistry));
+              break;
             }
-            rules_.add(
-                input.readMessage(com.google.api.ContextRule.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-            break;
-          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         rules_ = java.util.Collections.unmodifiableList(rules_);
@@ -127,8 +128,8 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.api.ContextProto.internal_static_google_api_Context_descriptor;
   }
 
@@ -143,6 +144,8 @@ private static final long serialVersionUID = 0L;
   public static final int RULES_FIELD_NUMBER = 1;
   private java.util.List<com.google.api.ContextRule> rules_;
   /**
+   *
+   *
    * <pre>
    * A list of RPC context rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -155,6 +158,8 @@ private static final long serialVersionUID = 0L;
     return rules_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of RPC context rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -163,11 +168,12 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.ContextRule rules = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.ContextRuleOrBuilder> 
-      getRulesOrBuilderList() {
+  public java.util.List<? extends com.google.api.ContextRuleOrBuilder> getRulesOrBuilderList() {
     return rules_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of RPC context rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -180,6 +186,8 @@ private static final long serialVersionUID = 0L;
     return rules_.size();
   }
   /**
+   *
+   *
    * <pre>
    * A list of RPC context rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -192,6 +200,8 @@ private static final long serialVersionUID = 0L;
     return rules_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * A list of RPC context rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -200,12 +210,12 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.ContextRule rules = 1;</code>
    */
   @java.lang.Override
-  public com.google.api.ContextRuleOrBuilder getRulesOrBuilder(
-      int index) {
+  public com.google.api.ContextRuleOrBuilder getRulesOrBuilder(int index) {
     return rules_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -217,8 +227,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     for (int i = 0; i < rules_.size(); i++) {
       output.writeMessage(1, rules_.get(i));
     }
@@ -232,8 +241,7 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     for (int i = 0; i < rules_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, rules_.get(i));
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, rules_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -243,15 +251,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.api.Context)) {
       return super.equals(obj);
     }
     com.google.api.Context other = (com.google.api.Context) obj;
 
-    if (!getRulesList()
-        .equals(other.getRulesList())) return false;
+    if (!getRulesList().equals(other.getRulesList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -272,97 +279,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.api.Context parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.api.Context parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Context parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.api.Context parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.api.Context parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Context parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Context parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Context parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Context parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Context parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.Context parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.api.Context parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.api.Context parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.api.Context parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Context parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.api.Context prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * `Context` defines which contexts an API requests.
    * Example:
@@ -396,12 +409,11 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.Context}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.api.Context)
       com.google.api.ContextOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.api.ContextProto.internal_static_google_api_Context_descriptor;
     }
 
@@ -418,17 +430,17 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getRulesFieldBuilder();
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -442,8 +454,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.api.ContextProto.internal_static_google_api_Context_descriptor;
     }
 
@@ -482,38 +493,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Context) {
-        return mergeFrom((com.google.api.Context)other);
+        return mergeFrom((com.google.api.Context) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -540,9 +552,10 @@ private static final long serialVersionUID = 0L;
             rulesBuilder_ = null;
             rules_ = other.rules_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            rulesBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getRulesFieldBuilder() : null;
+            rulesBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getRulesFieldBuilder()
+                    : null;
           } else {
             rulesBuilder_.addAllMessages(other.rules_);
           }
@@ -576,21 +589,27 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
-    private java.util.List<com.google.api.ContextRule> rules_ =
-      java.util.Collections.emptyList();
+    private java.util.List<com.google.api.ContextRule> rules_ = java.util.Collections.emptyList();
+
     private void ensureRulesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         rules_ = new java.util.ArrayList<com.google.api.ContextRule>(rules_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.ContextRule, com.google.api.ContextRule.Builder, com.google.api.ContextRuleOrBuilder> rulesBuilder_;
+            com.google.api.ContextRule,
+            com.google.api.ContextRule.Builder,
+            com.google.api.ContextRuleOrBuilder>
+        rulesBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -606,6 +625,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -621,6 +642,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -636,6 +659,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -643,8 +668,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public Builder setRules(
-        int index, com.google.api.ContextRule value) {
+    public Builder setRules(int index, com.google.api.ContextRule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -658,6 +682,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -665,8 +691,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public Builder setRules(
-        int index, com.google.api.ContextRule.Builder builderForValue) {
+    public Builder setRules(int index, com.google.api.ContextRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.set(index, builderForValue.build());
@@ -677,6 +702,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -698,6 +725,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -705,8 +734,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public Builder addRules(
-        int index, com.google.api.ContextRule value) {
+    public Builder addRules(int index, com.google.api.ContextRule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -720,6 +748,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -727,8 +757,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public Builder addRules(
-        com.google.api.ContextRule.Builder builderForValue) {
+    public Builder addRules(com.google.api.ContextRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(builderForValue.build());
@@ -739,6 +768,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -746,8 +777,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public Builder addRules(
-        int index, com.google.api.ContextRule.Builder builderForValue) {
+    public Builder addRules(int index, com.google.api.ContextRule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(index, builderForValue.build());
@@ -758,6 +788,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -765,12 +797,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public Builder addAllRules(
-        java.lang.Iterable<? extends com.google.api.ContextRule> values) {
+    public Builder addAllRules(java.lang.Iterable<? extends com.google.api.ContextRule> values) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, rules_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, rules_);
         onChanged();
       } else {
         rulesBuilder_.addAllMessages(values);
@@ -778,6 +808,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -796,6 +828,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -814,6 +848,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -821,11 +857,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public com.google.api.ContextRule.Builder getRulesBuilder(
-        int index) {
+    public com.google.api.ContextRule.Builder getRulesBuilder(int index) {
       return getRulesFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -833,14 +870,16 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public com.google.api.ContextRuleOrBuilder getRulesOrBuilder(
-        int index) {
+    public com.google.api.ContextRuleOrBuilder getRulesOrBuilder(int index) {
       if (rulesBuilder_ == null) {
-        return rules_.get(index);  } else {
+        return rules_.get(index);
+      } else {
         return rulesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -848,8 +887,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public java.util.List<? extends com.google.api.ContextRuleOrBuilder> 
-         getRulesOrBuilderList() {
+    public java.util.List<? extends com.google.api.ContextRuleOrBuilder> getRulesOrBuilderList() {
       if (rulesBuilder_ != null) {
         return rulesBuilder_.getMessageOrBuilderList();
       } else {
@@ -857,6 +895,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -865,10 +905,11 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
     public com.google.api.ContextRule.Builder addRulesBuilder() {
-      return getRulesFieldBuilder().addBuilder(
-          com.google.api.ContextRule.getDefaultInstance());
+      return getRulesFieldBuilder().addBuilder(com.google.api.ContextRule.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -876,12 +917,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public com.google.api.ContextRule.Builder addRulesBuilder(
-        int index) {
-      return getRulesFieldBuilder().addBuilder(
-          index, com.google.api.ContextRule.getDefaultInstance());
+    public com.google.api.ContextRule.Builder addRulesBuilder(int index) {
+      return getRulesFieldBuilder()
+          .addBuilder(index, com.google.api.ContextRule.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * A list of RPC context rules that apply to individual API methods.
      * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -889,27 +931,29 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.ContextRule rules = 1;</code>
      */
-    public java.util.List<com.google.api.ContextRule.Builder> 
-         getRulesBuilderList() {
+    public java.util.List<com.google.api.ContextRule.Builder> getRulesBuilderList() {
       return getRulesFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.ContextRule, com.google.api.ContextRule.Builder, com.google.api.ContextRuleOrBuilder> 
+            com.google.api.ContextRule,
+            com.google.api.ContextRule.Builder,
+            com.google.api.ContextRuleOrBuilder>
         getRulesFieldBuilder() {
       if (rulesBuilder_ == null) {
-        rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.ContextRule, com.google.api.ContextRule.Builder, com.google.api.ContextRuleOrBuilder>(
-                rules_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
+        rulesBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.api.ContextRule,
+                com.google.api.ContextRule.Builder,
+                com.google.api.ContextRuleOrBuilder>(
+                rules_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
         rules_ = null;
       }
       return rulesBuilder_;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -919,12 +963,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.api.Context)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Context)
   private static final com.google.api.Context DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.api.Context();
   }
@@ -933,16 +977,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Context>
-      PARSER = new com.google.protobuf.AbstractParser<Context>() {
-    @java.lang.Override
-    public Context parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Context(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<Context> PARSER =
+      new com.google.protobuf.AbstractParser<Context>() {
+        @java.lang.Override
+        public Context parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Context(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<Context> parser() {
     return PARSER;
@@ -957,6 +1001,4 @@ private static final long serialVersionUID = 0L;
   public com.google.api.Context getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

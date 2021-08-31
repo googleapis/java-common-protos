@@ -18,31 +18,39 @@
 
 package com.google.type;
 
-public interface LocalizedTextOrBuilder extends
+public interface LocalizedTextOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.type.LocalizedText)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * Localized string in the language corresponding to `language_code' below.
    * </pre>
    *
    * <code>string text = 1;</code>
+   *
    * @return The text.
    */
   java.lang.String getText();
   /**
+   *
+   *
    * <pre>
    * Localized string in the language corresponding to `language_code' below.
    * </pre>
    *
    * <code>string text = 1;</code>
+   *
    * @return The bytes for text.
    */
-  com.google.protobuf.ByteString
-      getTextBytes();
+  com.google.protobuf.ByteString getTextBytes();
 
   /**
+   *
+   *
    * <pre>
    * The text's BCP-47 language code, such as "en-US" or "sr-Latn".
    * For more information, see
@@ -50,10 +58,13 @@ public interface LocalizedTextOrBuilder extends
    * </pre>
    *
    * <code>string language_code = 2;</code>
+   *
    * @return The languageCode.
    */
   java.lang.String getLanguageCode();
   /**
+   *
+   *
    * <pre>
    * The text's BCP-47 language code, such as "en-US" or "sr-Latn".
    * For more information, see
@@ -61,8 +72,8 @@ public interface LocalizedTextOrBuilder extends
    * </pre>
    *
    * <code>string language_code = 2;</code>
+   *
    * @return The bytes for languageCode.
    */
-  com.google.protobuf.ByteString
-      getLanguageCodeBytes();
+  com.google.protobuf.ByteString getLanguageCodeBytes();
 }

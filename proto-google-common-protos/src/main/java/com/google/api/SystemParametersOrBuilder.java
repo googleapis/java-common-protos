@@ -18,11 +18,14 @@
 
 package com.google.api;
 
-public interface SystemParametersOrBuilder extends
+public interface SystemParametersOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.SystemParameters)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * Define system parameters.
    * The parameters defined here will override the default parameters
@@ -50,9 +53,10 @@ public interface SystemParametersOrBuilder extends
    *
    * <code>repeated .google.api.SystemParameterRule rules = 1;</code>
    */
-  java.util.List<com.google.api.SystemParameterRule> 
-      getRulesList();
+  java.util.List<com.google.api.SystemParameterRule> getRulesList();
   /**
+   *
+   *
    * <pre>
    * Define system parameters.
    * The parameters defined here will override the default parameters
@@ -82,6 +86,8 @@ public interface SystemParametersOrBuilder extends
    */
   com.google.api.SystemParameterRule getRules(int index);
   /**
+   *
+   *
    * <pre>
    * Define system parameters.
    * The parameters defined here will override the default parameters
@@ -111,6 +117,8 @@ public interface SystemParametersOrBuilder extends
    */
   int getRulesCount();
   /**
+   *
+   *
    * <pre>
    * Define system parameters.
    * The parameters defined here will override the default parameters
@@ -138,9 +146,10 @@ public interface SystemParametersOrBuilder extends
    *
    * <code>repeated .google.api.SystemParameterRule rules = 1;</code>
    */
-  java.util.List<? extends com.google.api.SystemParameterRuleOrBuilder> 
-      getRulesOrBuilderList();
+  java.util.List<? extends com.google.api.SystemParameterRuleOrBuilder> getRulesOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * Define system parameters.
    * The parameters defined here will override the default parameters
@@ -168,6 +177,5 @@ public interface SystemParametersOrBuilder extends
    *
    * <code>repeated .google.api.SystemParameterRule rules = 1;</code>
    */
-  com.google.api.SystemParameterRuleOrBuilder getRulesOrBuilder(
-      int index);
+  com.google.api.SystemParameterRuleOrBuilder getRulesOrBuilder(int index);
 }

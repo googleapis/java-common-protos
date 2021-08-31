@@ -18,11 +18,14 @@
 
 package com.google.api;
 
-public interface AuthProviderOrBuilder extends
+public interface AuthProviderOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.AuthProvider)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The unique identifier of the auth provider. It will be referred to by
    * `AuthRequirement.provider_id`.
@@ -30,10 +33,13 @@ public interface AuthProviderOrBuilder extends
    * </pre>
    *
    * <code>string id = 1;</code>
+   *
    * @return The id.
    */
   java.lang.String getId();
   /**
+   *
+   *
    * <pre>
    * The unique identifier of the auth provider. It will be referred to by
    * `AuthRequirement.provider_id`.
@@ -41,12 +47,14 @@ public interface AuthProviderOrBuilder extends
    * </pre>
    *
    * <code>string id = 1;</code>
+   *
    * @return The bytes for id.
    */
-  com.google.protobuf.ByteString
-      getIdBytes();
+  com.google.protobuf.ByteString getIdBytes();
 
   /**
+   *
+   *
    * <pre>
    * Identifies the principal that issued the JWT. See
    * https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.1
@@ -56,10 +64,13 @@ public interface AuthProviderOrBuilder extends
    * </pre>
    *
    * <code>string issuer = 2;</code>
+   *
    * @return The issuer.
    */
   java.lang.String getIssuer();
   /**
+   *
+   *
    * <pre>
    * Identifies the principal that issued the JWT. See
    * https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.1
@@ -69,12 +80,14 @@ public interface AuthProviderOrBuilder extends
    * </pre>
    *
    * <code>string issuer = 2;</code>
+   *
    * @return The bytes for issuer.
    */
-  com.google.protobuf.ByteString
-      getIssuerBytes();
+  com.google.protobuf.ByteString getIssuerBytes();
 
   /**
+   *
+   *
    * <pre>
    * URL of the provider's public key set to validate signature of the JWT. See
    * [OpenID
@@ -90,10 +103,13 @@ public interface AuthProviderOrBuilder extends
    * </pre>
    *
    * <code>string jwks_uri = 3;</code>
+   *
    * @return The jwksUri.
    */
   java.lang.String getJwksUri();
   /**
+   *
+   *
    * <pre>
    * URL of the provider's public key set to validate signature of the JWT. See
    * [OpenID
@@ -109,12 +125,14 @@ public interface AuthProviderOrBuilder extends
    * </pre>
    *
    * <code>string jwks_uri = 3;</code>
+   *
    * @return The bytes for jwksUri.
    */
-  com.google.protobuf.ByteString
-      getJwksUriBytes();
+  com.google.protobuf.ByteString getJwksUriBytes();
 
   /**
+   *
+   *
    * <pre>
    * The list of JWT
    * [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.3).
@@ -134,10 +152,13 @@ public interface AuthProviderOrBuilder extends
    * </pre>
    *
    * <code>string audiences = 4;</code>
+   *
    * @return The audiences.
    */
   java.lang.String getAudiences();
   /**
+   *
+   *
    * <pre>
    * The list of JWT
    * [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.3).
@@ -157,34 +178,41 @@ public interface AuthProviderOrBuilder extends
    * </pre>
    *
    * <code>string audiences = 4;</code>
+   *
    * @return The bytes for audiences.
    */
-  com.google.protobuf.ByteString
-      getAudiencesBytes();
+  com.google.protobuf.ByteString getAudiencesBytes();
 
   /**
+   *
+   *
    * <pre>
    * Redirect URL if JWT token is required but not present or is expired.
    * Implement authorizationUrl of securityDefinitions in OpenAPI spec.
    * </pre>
    *
    * <code>string authorization_url = 5;</code>
+   *
    * @return The authorizationUrl.
    */
   java.lang.String getAuthorizationUrl();
   /**
+   *
+   *
    * <pre>
    * Redirect URL if JWT token is required but not present or is expired.
    * Implement authorizationUrl of securityDefinitions in OpenAPI spec.
    * </pre>
    *
    * <code>string authorization_url = 5;</code>
+   *
    * @return The bytes for authorizationUrl.
    */
-  com.google.protobuf.ByteString
-      getAuthorizationUrlBytes();
+  com.google.protobuf.ByteString getAuthorizationUrlBytes();
 
   /**
+   *
+   *
    * <pre>
    * Defines the locations to extract the JWT.
    * JWT locations can be either from HTTP headers or URL query parameters.
@@ -204,9 +232,10 @@ public interface AuthProviderOrBuilder extends
    *
    * <code>repeated .google.api.JwtLocation jwt_locations = 6;</code>
    */
-  java.util.List<com.google.api.JwtLocation> 
-      getJwtLocationsList();
+  java.util.List<com.google.api.JwtLocation> getJwtLocationsList();
   /**
+   *
+   *
    * <pre>
    * Defines the locations to extract the JWT.
    * JWT locations can be either from HTTP headers or URL query parameters.
@@ -228,6 +257,8 @@ public interface AuthProviderOrBuilder extends
    */
   com.google.api.JwtLocation getJwtLocations(int index);
   /**
+   *
+   *
    * <pre>
    * Defines the locations to extract the JWT.
    * JWT locations can be either from HTTP headers or URL query parameters.
@@ -249,6 +280,8 @@ public interface AuthProviderOrBuilder extends
    */
   int getJwtLocationsCount();
   /**
+   *
+   *
    * <pre>
    * Defines the locations to extract the JWT.
    * JWT locations can be either from HTTP headers or URL query parameters.
@@ -268,9 +301,10 @@ public interface AuthProviderOrBuilder extends
    *
    * <code>repeated .google.api.JwtLocation jwt_locations = 6;</code>
    */
-  java.util.List<? extends com.google.api.JwtLocationOrBuilder> 
-      getJwtLocationsOrBuilderList();
+  java.util.List<? extends com.google.api.JwtLocationOrBuilder> getJwtLocationsOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * Defines the locations to extract the JWT.
    * JWT locations can be either from HTTP headers or URL query parameters.
@@ -290,6 +324,5 @@ public interface AuthProviderOrBuilder extends
    *
    * <code>repeated .google.api.JwtLocation jwt_locations = 6;</code>
    */
-  com.google.api.JwtLocationOrBuilder getJwtLocationsOrBuilder(
-      int index);
+  com.google.api.JwtLocationOrBuilder getJwtLocationsOrBuilder(int index);
 }

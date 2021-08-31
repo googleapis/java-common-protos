@@ -18,69 +18,88 @@
 
 package com.google.api;
 
-public interface JwtLocationOrBuilder extends
+public interface JwtLocationOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.JwtLocation)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * Specifies HTTP header name to extract JWT token.
    * </pre>
    *
    * <code>string header = 1;</code>
+   *
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   *
+   *
    * <pre>
    * Specifies HTTP header name to extract JWT token.
    * </pre>
    *
    * <code>string header = 1;</code>
+   *
    * @return The header.
    */
   java.lang.String getHeader();
   /**
+   *
+   *
    * <pre>
    * Specifies HTTP header name to extract JWT token.
    * </pre>
    *
    * <code>string header = 1;</code>
+   *
    * @return The bytes for header.
    */
-  com.google.protobuf.ByteString
-      getHeaderBytes();
+  com.google.protobuf.ByteString getHeaderBytes();
 
   /**
+   *
+   *
    * <pre>
    * Specifies URL query parameter name to extract JWT token.
    * </pre>
    *
    * <code>string query = 2;</code>
+   *
    * @return Whether the query field is set.
    */
   boolean hasQuery();
   /**
+   *
+   *
    * <pre>
    * Specifies URL query parameter name to extract JWT token.
    * </pre>
    *
    * <code>string query = 2;</code>
+   *
    * @return The query.
    */
   java.lang.String getQuery();
   /**
+   *
+   *
    * <pre>
    * Specifies URL query parameter name to extract JWT token.
    * </pre>
    *
    * <code>string query = 2;</code>
+   *
    * @return The bytes for query.
    */
-  com.google.protobuf.ByteString
-      getQueryBytes();
+  com.google.protobuf.ByteString getQueryBytes();
 
   /**
+   *
+   *
    * <pre>
    * The value prefix. The value format is "value_prefix{token}"
    * Only applies to "in" header type. Must be empty for "in" query type.
@@ -92,10 +111,13 @@ public interface JwtLocationOrBuilder extends
    * </pre>
    *
    * <code>string value_prefix = 3;</code>
+   *
    * @return The valuePrefix.
    */
   java.lang.String getValuePrefix();
   /**
+   *
+   *
    * <pre>
    * The value prefix. The value format is "value_prefix{token}"
    * Only applies to "in" header type. Must be empty for "in" query type.
@@ -107,10 +129,10 @@ public interface JwtLocationOrBuilder extends
    * </pre>
    *
    * <code>string value_prefix = 3;</code>
+   *
    * @return The bytes for valuePrefix.
    */
-  com.google.protobuf.ByteString
-      getValuePrefixBytes();
+  com.google.protobuf.ByteString getValuePrefixBytes();
 
   public com.google.api.JwtLocation.InCase getInCase();
 }

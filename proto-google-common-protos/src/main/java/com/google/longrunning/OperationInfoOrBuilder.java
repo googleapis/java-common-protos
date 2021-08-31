@@ -18,11 +18,14 @@
 
 package com.google.longrunning;
 
-public interface OperationInfoOrBuilder extends
+public interface OperationInfoOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.longrunning.OperationInfo)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * Required. The message name of the primary return type for this
    * long-running operation.
@@ -33,10 +36,13 @@ public interface OperationInfoOrBuilder extends
    * </pre>
    *
    * <code>string response_type = 1;</code>
+   *
    * @return The responseType.
    */
   java.lang.String getResponseType();
   /**
+   *
+   *
    * <pre>
    * Required. The message name of the primary return type for this
    * long-running operation.
@@ -47,12 +53,14 @@ public interface OperationInfoOrBuilder extends
    * </pre>
    *
    * <code>string response_type = 1;</code>
+   *
    * @return The bytes for responseType.
    */
-  com.google.protobuf.ByteString
-      getResponseTypeBytes();
+  com.google.protobuf.ByteString getResponseTypeBytes();
 
   /**
+   *
+   *
    * <pre>
    * Required. The message name of the metadata type for this long-running
    * operation.
@@ -62,10 +70,13 @@ public interface OperationInfoOrBuilder extends
    * </pre>
    *
    * <code>string metadata_type = 2;</code>
+   *
    * @return The metadataType.
    */
   java.lang.String getMetadataType();
   /**
+   *
+   *
    * <pre>
    * Required. The message name of the metadata type for this long-running
    * operation.
@@ -75,8 +86,8 @@ public interface OperationInfoOrBuilder extends
    * </pre>
    *
    * <code>string metadata_type = 2;</code>
+   *
    * @return The bytes for metadataType.
    */
-  com.google.protobuf.ByteString
-      getMetadataTypeBytes();
+  com.google.protobuf.ByteString getMetadataTypeBytes();
 }

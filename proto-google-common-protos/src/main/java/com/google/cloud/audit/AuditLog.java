@@ -19,21 +19,24 @@
 package com.google.cloud.audit;
 
 /**
+ *
+ *
  * <pre>
  * Common audit log format for Google Cloud Platform API operations.
  * </pre>
  *
  * Protobuf type {@code google.cloud.audit.AuditLog}
  */
-public final class AuditLog extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class AuditLog extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.cloud.audit.AuditLog)
     AuditLogOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use AuditLog.newBuilder() to construct.
   private AuditLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private AuditLog() {
     serviceName_ = "";
     methodName_ = "";
@@ -43,16 +46,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new AuditLog();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private AuditLog(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -72,169 +74,190 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 18: {
-            com.google.rpc.Status.Builder subBuilder = null;
-            if (status_ != null) {
-              subBuilder = status_.toBuilder();
-            }
-            status_ = input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(status_);
-              status_ = subBuilder.buildPartial();
-            }
+          case 18:
+            {
+              com.google.rpc.Status.Builder subBuilder = null;
+              if (status_ != null) {
+                subBuilder = status_.toBuilder();
+              }
+              status_ = input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(status_);
+                status_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 26: {
-            com.google.cloud.audit.AuthenticationInfo.Builder subBuilder = null;
-            if (authenticationInfo_ != null) {
-              subBuilder = authenticationInfo_.toBuilder();
+              break;
             }
-            authenticationInfo_ = input.readMessage(com.google.cloud.audit.AuthenticationInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(authenticationInfo_);
-              authenticationInfo_ = subBuilder.buildPartial();
-            }
+          case 26:
+            {
+              com.google.cloud.audit.AuthenticationInfo.Builder subBuilder = null;
+              if (authenticationInfo_ != null) {
+                subBuilder = authenticationInfo_.toBuilder();
+              }
+              authenticationInfo_ =
+                  input.readMessage(
+                      com.google.cloud.audit.AuthenticationInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(authenticationInfo_);
+                authenticationInfo_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 34: {
-            com.google.cloud.audit.RequestMetadata.Builder subBuilder = null;
-            if (requestMetadata_ != null) {
-              subBuilder = requestMetadata_.toBuilder();
+              break;
             }
-            requestMetadata_ = input.readMessage(com.google.cloud.audit.RequestMetadata.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(requestMetadata_);
-              requestMetadata_ = subBuilder.buildPartial();
-            }
+          case 34:
+            {
+              com.google.cloud.audit.RequestMetadata.Builder subBuilder = null;
+              if (requestMetadata_ != null) {
+                subBuilder = requestMetadata_.toBuilder();
+              }
+              requestMetadata_ =
+                  input.readMessage(
+                      com.google.cloud.audit.RequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(requestMetadata_);
+                requestMetadata_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
+              break;
+            }
+          case 58:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            serviceName_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
+              serviceName_ = s;
+              break;
+            }
+          case 66:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            methodName_ = s;
-            break;
-          }
-          case 74: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              authorizationInfo_ = new java.util.ArrayList<com.google.cloud.audit.AuthorizationInfo>();
-              mutable_bitField0_ |= 0x00000001;
+              methodName_ = s;
+              break;
             }
-            authorizationInfo_.add(
-                input.readMessage(com.google.cloud.audit.AuthorizationInfo.parser(), extensionRegistry));
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 74:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                authorizationInfo_ =
+                    new java.util.ArrayList<com.google.cloud.audit.AuthorizationInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              authorizationInfo_.add(
+                  input.readMessage(
+                      com.google.cloud.audit.AuthorizationInfo.parser(), extensionRegistry));
+              break;
+            }
+          case 90:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            resourceName_ = s;
-            break;
-          }
-          case 96: {
+              resourceName_ = s;
+              break;
+            }
+          case 96:
+            {
+              numResponseItems_ = input.readInt64();
+              break;
+            }
+          case 122:
+            {
+              com.google.protobuf.Any.Builder subBuilder = null;
+              if (serviceData_ != null) {
+                subBuilder = serviceData_.toBuilder();
+              }
+              serviceData_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(serviceData_);
+                serviceData_ = subBuilder.buildPartial();
+              }
 
-            numResponseItems_ = input.readInt64();
-            break;
-          }
-          case 122: {
-            com.google.protobuf.Any.Builder subBuilder = null;
-            if (serviceData_ != null) {
-              subBuilder = serviceData_.toBuilder();
+              break;
             }
-            serviceData_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(serviceData_);
-              serviceData_ = subBuilder.buildPartial();
-            }
+          case 130:
+            {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (request_ != null) {
+                subBuilder = request_.toBuilder();
+              }
+              request_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(request_);
+                request_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 130: {
-            com.google.protobuf.Struct.Builder subBuilder = null;
-            if (request_ != null) {
-              subBuilder = request_.toBuilder();
+              break;
             }
-            request_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(request_);
-              request_ = subBuilder.buildPartial();
-            }
+          case 138:
+            {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (response_ != null) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 138: {
-            com.google.protobuf.Struct.Builder subBuilder = null;
-            if (response_ != null) {
-              subBuilder = response_.toBuilder();
+              break;
             }
-            response_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(response_);
-              response_ = subBuilder.buildPartial();
-            }
+          case 146:
+            {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 146: {
-            com.google.protobuf.Struct.Builder subBuilder = null;
-            if (metadata_ != null) {
-              subBuilder = metadata_.toBuilder();
+              break;
             }
-            metadata_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(metadata_);
-              metadata_ = subBuilder.buildPartial();
-            }
+          case 154:
+            {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (resourceOriginalState_ != null) {
+                subBuilder = resourceOriginalState_.toBuilder();
+              }
+              resourceOriginalState_ =
+                  input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourceOriginalState_);
+                resourceOriginalState_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 154: {
-            com.google.protobuf.Struct.Builder subBuilder = null;
-            if (resourceOriginalState_ != null) {
-              subBuilder = resourceOriginalState_.toBuilder();
+              break;
             }
-            resourceOriginalState_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(resourceOriginalState_);
-              resourceOriginalState_ = subBuilder.buildPartial();
-            }
+          case 162:
+            {
+              com.google.cloud.audit.ResourceLocation.Builder subBuilder = null;
+              if (resourceLocation_ != null) {
+                subBuilder = resourceLocation_.toBuilder();
+              }
+              resourceLocation_ =
+                  input.readMessage(
+                      com.google.cloud.audit.ResourceLocation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourceLocation_);
+                resourceLocation_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 162: {
-            com.google.cloud.audit.ResourceLocation.Builder subBuilder = null;
-            if (resourceLocation_ != null) {
-              subBuilder = resourceLocation_.toBuilder();
+              break;
             }
-            resourceLocation_ = input.readMessage(com.google.cloud.audit.ResourceLocation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(resourceLocation_);
-              resourceLocation_ = subBuilder.buildPartial();
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         authorizationInfo_ = java.util.Collections.unmodifiableList(authorizationInfo_);
@@ -243,15 +266,17 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuditLog_descriptor;
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    return com.google.cloud.audit.AuditLogProto
+        .internal_static_google_cloud_audit_AuditLog_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuditLog_fieldAccessorTable
+    return com.google.cloud.audit.AuditLogProto
+        .internal_static_google_cloud_audit_AuditLog_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.cloud.audit.AuditLog.class, com.google.cloud.audit.AuditLog.Builder.class);
   }
@@ -259,12 +284,15 @@ private static final long serialVersionUID = 0L;
   public static final int SERVICE_NAME_FIELD_NUMBER = 7;
   private volatile java.lang.Object serviceName_;
   /**
+   *
+   *
    * <pre>
    * The name of the API service performing the operation. For example,
    * `"compute.googleapis.com"`.
    * </pre>
    *
    * <code>string service_name = 7;</code>
+   *
    * @return The serviceName.
    */
   @java.lang.Override
@@ -273,30 +301,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       serviceName_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The name of the API service performing the operation. For example,
    * `"compute.googleapis.com"`.
    * </pre>
    *
    * <code>string service_name = 7;</code>
+   *
    * @return The bytes for serviceName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getServiceNameBytes() {
+  public com.google.protobuf.ByteString getServiceNameBytes() {
     java.lang.Object ref = serviceName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       serviceName_ = b;
       return b;
     } else {
@@ -307,6 +335,8 @@ private static final long serialVersionUID = 0L;
   public static final int METHOD_NAME_FIELD_NUMBER = 8;
   private volatile java.lang.Object methodName_;
   /**
+   *
+   *
    * <pre>
    * The name of the service method or operation.
    * For API calls, this should be the name of the API method.
@@ -316,6 +346,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string method_name = 8;</code>
+   *
    * @return The methodName.
    */
   @java.lang.Override
@@ -324,14 +355,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       methodName_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The name of the service method or operation.
    * For API calls, this should be the name of the API method.
@@ -341,16 +373,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string method_name = 8;</code>
+   *
    * @return The bytes for methodName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getMethodNameBytes() {
+  public com.google.protobuf.ByteString getMethodNameBytes() {
     java.lang.Object ref = methodName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       methodName_ = b;
       return b;
     } else {
@@ -361,6 +392,8 @@ private static final long serialVersionUID = 0L;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 11;
   private volatile java.lang.Object resourceName_;
   /**
+   *
+   *
    * <pre>
    * The resource or collection that is the target of the operation.
    * The name is a scheme-less URI, not including the API service name.
@@ -370,6 +403,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 11;</code>
+   *
    * @return The resourceName.
    */
   @java.lang.Override
@@ -378,14 +412,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       resourceName_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The resource or collection that is the target of the operation.
    * The name is a scheme-less URI, not including the API service name.
@@ -395,16 +430,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 11;</code>
+   *
    * @return The bytes for resourceName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getResourceNameBytes() {
+  public com.google.protobuf.ByteString getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       resourceName_ = b;
       return b;
     } else {
@@ -415,11 +449,14 @@ private static final long serialVersionUID = 0L;
   public static final int RESOURCE_LOCATION_FIELD_NUMBER = 20;
   private com.google.cloud.audit.ResourceLocation resourceLocation_;
   /**
+   *
+   *
    * <pre>
    * The resource location information.
    * </pre>
    *
    * <code>.google.cloud.audit.ResourceLocation resource_location = 20;</code>
+   *
    * @return Whether the resourceLocation field is set.
    */
   @java.lang.Override
@@ -427,18 +464,25 @@ private static final long serialVersionUID = 0L;
     return resourceLocation_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The resource location information.
    * </pre>
    *
    * <code>.google.cloud.audit.ResourceLocation resource_location = 20;</code>
+   *
    * @return The resourceLocation.
    */
   @java.lang.Override
   public com.google.cloud.audit.ResourceLocation getResourceLocation() {
-    return resourceLocation_ == null ? com.google.cloud.audit.ResourceLocation.getDefaultInstance() : resourceLocation_;
+    return resourceLocation_ == null
+        ? com.google.cloud.audit.ResourceLocation.getDefaultInstance()
+        : resourceLocation_;
   }
   /**
+   *
+   *
    * <pre>
    * The resource location information.
    * </pre>
@@ -453,6 +497,8 @@ private static final long serialVersionUID = 0L;
   public static final int RESOURCE_ORIGINAL_STATE_FIELD_NUMBER = 19;
   private com.google.protobuf.Struct resourceOriginalState_;
   /**
+   *
+   *
    * <pre>
    * The resource's original state before mutation. Present only for
    * operations which have successfully modified the targeted resource(s).
@@ -464,6 +510,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+   *
    * @return Whether the resourceOriginalState field is set.
    */
   @java.lang.Override
@@ -471,6 +518,8 @@ private static final long serialVersionUID = 0L;
     return resourceOriginalState_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The resource's original state before mutation. Present only for
    * operations which have successfully modified the targeted resource(s).
@@ -482,13 +531,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+   *
    * @return The resourceOriginalState.
    */
   @java.lang.Override
   public com.google.protobuf.Struct getResourceOriginalState() {
-    return resourceOriginalState_ == null ? com.google.protobuf.Struct.getDefaultInstance() : resourceOriginalState_;
+    return resourceOriginalState_ == null
+        ? com.google.protobuf.Struct.getDefaultInstance()
+        : resourceOriginalState_;
   }
   /**
+   *
+   *
    * <pre>
    * The resource's original state before mutation. Present only for
    * operations which have successfully modified the targeted resource(s).
@@ -509,12 +563,15 @@ private static final long serialVersionUID = 0L;
   public static final int NUM_RESPONSE_ITEMS_FIELD_NUMBER = 12;
   private long numResponseItems_;
   /**
+   *
+   *
    * <pre>
    * The number of items returned from a List or Query API method,
    * if applicable.
    * </pre>
    *
    * <code>int64 num_response_items = 12;</code>
+   *
    * @return The numResponseItems.
    */
   @java.lang.Override
@@ -525,11 +582,14 @@ private static final long serialVersionUID = 0L;
   public static final int STATUS_FIELD_NUMBER = 2;
   private com.google.rpc.Status status_;
   /**
+   *
+   *
    * <pre>
    * The status of the overall operation.
    * </pre>
    *
    * <code>.google.rpc.Status status = 2;</code>
+   *
    * @return Whether the status field is set.
    */
   @java.lang.Override
@@ -537,11 +597,14 @@ private static final long serialVersionUID = 0L;
     return status_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The status of the overall operation.
    * </pre>
    *
    * <code>.google.rpc.Status status = 2;</code>
+   *
    * @return The status.
    */
   @java.lang.Override
@@ -549,6 +612,8 @@ private static final long serialVersionUID = 0L;
     return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
   }
   /**
+   *
+   *
    * <pre>
    * The status of the overall operation.
    * </pre>
@@ -563,11 +628,14 @@ private static final long serialVersionUID = 0L;
   public static final int AUTHENTICATION_INFO_FIELD_NUMBER = 3;
   private com.google.cloud.audit.AuthenticationInfo authenticationInfo_;
   /**
+   *
+   *
    * <pre>
    * Authentication information.
    * </pre>
    *
    * <code>.google.cloud.audit.AuthenticationInfo authentication_info = 3;</code>
+   *
    * @return Whether the authenticationInfo field is set.
    */
   @java.lang.Override
@@ -575,18 +643,25 @@ private static final long serialVersionUID = 0L;
     return authenticationInfo_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Authentication information.
    * </pre>
    *
    * <code>.google.cloud.audit.AuthenticationInfo authentication_info = 3;</code>
+   *
    * @return The authenticationInfo.
    */
   @java.lang.Override
   public com.google.cloud.audit.AuthenticationInfo getAuthenticationInfo() {
-    return authenticationInfo_ == null ? com.google.cloud.audit.AuthenticationInfo.getDefaultInstance() : authenticationInfo_;
+    return authenticationInfo_ == null
+        ? com.google.cloud.audit.AuthenticationInfo.getDefaultInstance()
+        : authenticationInfo_;
   }
   /**
+   *
+   *
    * <pre>
    * Authentication information.
    * </pre>
@@ -601,6 +676,8 @@ private static final long serialVersionUID = 0L;
   public static final int AUTHORIZATION_INFO_FIELD_NUMBER = 9;
   private java.util.List<com.google.cloud.audit.AuthorizationInfo> authorizationInfo_;
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -614,6 +691,8 @@ private static final long serialVersionUID = 0L;
     return authorizationInfo_;
   }
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -623,11 +702,13 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.cloud.audit.AuthorizationInfoOrBuilder> 
+  public java.util.List<? extends com.google.cloud.audit.AuthorizationInfoOrBuilder>
       getAuthorizationInfoOrBuilderList() {
     return authorizationInfo_;
   }
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -641,6 +722,8 @@ private static final long serialVersionUID = 0L;
     return authorizationInfo_.size();
   }
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -654,6 +737,8 @@ private static final long serialVersionUID = 0L;
     return authorizationInfo_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * Authorization information. If there are multiple
    * resources or permissions involved, then there is
@@ -671,11 +756,14 @@ private static final long serialVersionUID = 0L;
   public static final int REQUEST_METADATA_FIELD_NUMBER = 4;
   private com.google.cloud.audit.RequestMetadata requestMetadata_;
   /**
+   *
+   *
    * <pre>
    * Metadata about the operation.
    * </pre>
    *
    * <code>.google.cloud.audit.RequestMetadata request_metadata = 4;</code>
+   *
    * @return Whether the requestMetadata field is set.
    */
   @java.lang.Override
@@ -683,18 +771,25 @@ private static final long serialVersionUID = 0L;
     return requestMetadata_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Metadata about the operation.
    * </pre>
    *
    * <code>.google.cloud.audit.RequestMetadata request_metadata = 4;</code>
+   *
    * @return The requestMetadata.
    */
   @java.lang.Override
   public com.google.cloud.audit.RequestMetadata getRequestMetadata() {
-    return requestMetadata_ == null ? com.google.cloud.audit.RequestMetadata.getDefaultInstance() : requestMetadata_;
+    return requestMetadata_ == null
+        ? com.google.cloud.audit.RequestMetadata.getDefaultInstance()
+        : requestMetadata_;
   }
   /**
+   *
+   *
    * <pre>
    * Metadata about the operation.
    * </pre>
@@ -709,6 +804,8 @@ private static final long serialVersionUID = 0L;
   public static final int REQUEST_FIELD_NUMBER = 16;
   private com.google.protobuf.Struct request_;
   /**
+   *
+   *
    * <pre>
    * The operation request. This may not include all request parameters,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -719,6 +816,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Struct request = 16;</code>
+   *
    * @return Whether the request field is set.
    */
   @java.lang.Override
@@ -726,6 +824,8 @@ private static final long serialVersionUID = 0L;
     return request_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The operation request. This may not include all request parameters,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -736,6 +836,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Struct request = 16;</code>
+   *
    * @return The request.
    */
   @java.lang.Override
@@ -743,6 +844,8 @@ private static final long serialVersionUID = 0L;
     return request_ == null ? com.google.protobuf.Struct.getDefaultInstance() : request_;
   }
   /**
+   *
+   *
    * <pre>
    * The operation request. This may not include all request parameters,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -762,6 +865,8 @@ private static final long serialVersionUID = 0L;
   public static final int RESPONSE_FIELD_NUMBER = 17;
   private com.google.protobuf.Struct response_;
   /**
+   *
+   *
    * <pre>
    * The operation response. This may not include all response elements,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -772,6 +877,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Struct response = 17;</code>
+   *
    * @return Whether the response field is set.
    */
   @java.lang.Override
@@ -779,6 +885,8 @@ private static final long serialVersionUID = 0L;
     return response_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The operation response. This may not include all response elements,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -789,6 +897,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Struct response = 17;</code>
+   *
    * @return The response.
    */
   @java.lang.Override
@@ -796,6 +905,8 @@ private static final long serialVersionUID = 0L;
     return response_ == null ? com.google.protobuf.Struct.getDefaultInstance() : response_;
   }
   /**
+   *
+   *
    * <pre>
    * The operation response. This may not include all response elements,
    * such as those that are too large, privacy-sensitive, or duplicated
@@ -815,12 +926,15 @@ private static final long serialVersionUID = 0L;
   public static final int METADATA_FIELD_NUMBER = 18;
   private com.google.protobuf.Struct metadata_;
   /**
+   *
+   *
    * <pre>
    * Other service-specific data about the request, response, and other
    * information associated with the current audited event.
    * </pre>
    *
    * <code>.google.protobuf.Struct metadata = 18;</code>
+   *
    * @return Whether the metadata field is set.
    */
   @java.lang.Override
@@ -828,12 +942,15 @@ private static final long serialVersionUID = 0L;
     return metadata_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Other service-specific data about the request, response, and other
    * information associated with the current audited event.
    * </pre>
    *
    * <code>.google.protobuf.Struct metadata = 18;</code>
+   *
    * @return The metadata.
    */
   @java.lang.Override
@@ -841,6 +958,8 @@ private static final long serialVersionUID = 0L;
     return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
   }
   /**
+   *
+   *
    * <pre>
    * Other service-specific data about the request, response, and other
    * information associated with the current audited event.
@@ -856,6 +975,8 @@ private static final long serialVersionUID = 0L;
   public static final int SERVICE_DATA_FIELD_NUMBER = 15;
   private com.google.protobuf.Any serviceData_;
   /**
+   *
+   *
    * <pre>
    * Deprecated. Use the `metadata` field instead.
    * Other service-specific data about the request, response, and other
@@ -863,13 +984,17 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
+   *
    * @return Whether the serviceData field is set.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean hasServiceData() {
+  @java.lang.Deprecated
+  public boolean hasServiceData() {
     return serviceData_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Deprecated. Use the `metadata` field instead.
    * Other service-specific data about the request, response, and other
@@ -877,13 +1002,17 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
+   *
    * @return The serviceData.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.Any getServiceData() {
+  @java.lang.Deprecated
+  public com.google.protobuf.Any getServiceData() {
     return serviceData_ == null ? com.google.protobuf.Any.getDefaultInstance() : serviceData_;
   }
   /**
+   *
+   *
    * <pre>
    * Deprecated. Use the `metadata` field instead.
    * Other service-specific data about the request, response, and other
@@ -893,11 +1022,13 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.AnyOrBuilder getServiceDataOrBuilder() {
+  @java.lang.Deprecated
+  public com.google.protobuf.AnyOrBuilder getServiceDataOrBuilder() {
     return getServiceData();
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -909,8 +1040,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (status_ != null) {
       output.writeMessage(2, getStatus());
     }
@@ -963,16 +1093,13 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (status_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getStatus());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getStatus());
     }
     if (authenticationInfo_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getAuthenticationInfo());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getAuthenticationInfo());
     }
     if (requestMetadata_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getRequestMetadata());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getRequestMetadata());
     }
     if (!getServiceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, serviceName_);
@@ -981,39 +1108,33 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, methodName_);
     }
     for (int i = 0; i < authorizationInfo_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, authorizationInfo_.get(i));
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(9, authorizationInfo_.get(i));
     }
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, resourceName_);
     }
     if (numResponseItems_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(12, numResponseItems_);
+      size += com.google.protobuf.CodedOutputStream.computeInt64Size(12, numResponseItems_);
     }
     if (serviceData_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(15, getServiceData());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(15, getServiceData());
     }
     if (request_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(16, getRequest());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(16, getRequest());
     }
     if (response_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(17, getResponse());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(17, getResponse());
     }
     if (metadata_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(18, getMetadata());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(18, getMetadata());
     }
     if (resourceOriginalState_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(19, getResourceOriginalState());
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(19, getResourceOriginalState());
     }
     if (resourceLocation_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(20, getResourceLocation());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(20, getResourceLocation());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1023,67 +1144,53 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.cloud.audit.AuditLog)) {
       return super.equals(obj);
     }
     com.google.cloud.audit.AuditLog other = (com.google.cloud.audit.AuditLog) obj;
 
-    if (!getServiceName()
-        .equals(other.getServiceName())) return false;
-    if (!getMethodName()
-        .equals(other.getMethodName())) return false;
-    if (!getResourceName()
-        .equals(other.getResourceName())) return false;
+    if (!getServiceName().equals(other.getServiceName())) return false;
+    if (!getMethodName().equals(other.getMethodName())) return false;
+    if (!getResourceName().equals(other.getResourceName())) return false;
     if (hasResourceLocation() != other.hasResourceLocation()) return false;
     if (hasResourceLocation()) {
-      if (!getResourceLocation()
-          .equals(other.getResourceLocation())) return false;
+      if (!getResourceLocation().equals(other.getResourceLocation())) return false;
     }
     if (hasResourceOriginalState() != other.hasResourceOriginalState()) return false;
     if (hasResourceOriginalState()) {
-      if (!getResourceOriginalState()
-          .equals(other.getResourceOriginalState())) return false;
+      if (!getResourceOriginalState().equals(other.getResourceOriginalState())) return false;
     }
-    if (getNumResponseItems()
-        != other.getNumResponseItems()) return false;
+    if (getNumResponseItems() != other.getNumResponseItems()) return false;
     if (hasStatus() != other.hasStatus()) return false;
     if (hasStatus()) {
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
+      if (!getStatus().equals(other.getStatus())) return false;
     }
     if (hasAuthenticationInfo() != other.hasAuthenticationInfo()) return false;
     if (hasAuthenticationInfo()) {
-      if (!getAuthenticationInfo()
-          .equals(other.getAuthenticationInfo())) return false;
+      if (!getAuthenticationInfo().equals(other.getAuthenticationInfo())) return false;
     }
-    if (!getAuthorizationInfoList()
-        .equals(other.getAuthorizationInfoList())) return false;
+    if (!getAuthorizationInfoList().equals(other.getAuthorizationInfoList())) return false;
     if (hasRequestMetadata() != other.hasRequestMetadata()) return false;
     if (hasRequestMetadata()) {
-      if (!getRequestMetadata()
-          .equals(other.getRequestMetadata())) return false;
+      if (!getRequestMetadata().equals(other.getRequestMetadata())) return false;
     }
     if (hasRequest() != other.hasRequest()) return false;
     if (hasRequest()) {
-      if (!getRequest()
-          .equals(other.getRequest())) return false;
+      if (!getRequest().equals(other.getRequest())) return false;
     }
     if (hasResponse() != other.hasResponse()) return false;
     if (hasResponse()) {
-      if (!getResponse()
-          .equals(other.getResponse())) return false;
+      if (!getResponse().equals(other.getResponse())) return false;
     }
     if (hasMetadata() != other.hasMetadata()) return false;
     if (hasMetadata()) {
-      if (!getMetadata()
-          .equals(other.getMetadata())) return false;
+      if (!getMetadata().equals(other.getMetadata())) return false;
     }
     if (hasServiceData() != other.hasServiceData()) return false;
     if (hasServiceData()) {
-      if (!getServiceData()
-          .equals(other.getServiceData())) return false;
+      if (!getServiceData().equals(other.getServiceData())) return false;
     }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -1111,8 +1218,7 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getResourceOriginalState().hashCode();
     }
     hash = (37 * hash) + NUM_RESPONSE_ITEMS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getNumResponseItems());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getNumResponseItems());
     if (hasStatus()) {
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getStatus().hashCode();
@@ -1150,116 +1256,123 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.cloud.audit.AuditLog parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.cloud.audit.AuditLog parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.cloud.audit.AuditLog parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.cloud.audit.AuditLog parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.cloud.audit.AuditLog parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.cloud.audit.AuditLog parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.cloud.audit.AuditLog parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.cloud.audit.AuditLog parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.cloud.audit.AuditLog parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.cloud.audit.AuditLog parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.cloud.audit.AuditLog parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.cloud.audit.AuditLog parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.cloud.audit.AuditLog parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.cloud.audit.AuditLog parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.cloud.audit.AuditLog prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Common audit log format for Google Cloud Platform API operations.
    * </pre>
    *
    * Protobuf type {@code google.cloud.audit.AuditLog}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.cloud.audit.AuditLog)
       com.google.cloud.audit.AuditLogOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuditLog_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.cloud.audit.AuditLogProto
+          .internal_static_google_cloud_audit_AuditLog_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuditLog_fieldAccessorTable
+      return com.google.cloud.audit.AuditLogProto
+          .internal_static_google_cloud_audit_AuditLog_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.cloud.audit.AuditLog.class, com.google.cloud.audit.AuditLog.Builder.class);
     }
@@ -1269,17 +1382,17 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getAuthorizationInfoFieldBuilder();
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1355,9 +1468,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuditLog_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return com.google.cloud.audit.AuditLogProto
+          .internal_static_google_cloud_audit_AuditLog_descriptor;
     }
 
     @java.lang.Override
@@ -1444,38 +1557,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.cloud.audit.AuditLog) {
-        return mergeFrom((com.google.cloud.audit.AuditLog)other);
+        return mergeFrom((com.google.cloud.audit.AuditLog) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1529,9 +1643,10 @@ private static final long serialVersionUID = 0L;
             authorizationInfoBuilder_ = null;
             authorizationInfo_ = other.authorizationInfo_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            authorizationInfoBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getAuthorizationInfoFieldBuilder() : null;
+            authorizationInfoBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getAuthorizationInfoFieldBuilder()
+                    : null;
           } else {
             authorizationInfoBuilder_.addAllMessages(other.authorizationInfo_);
           }
@@ -1580,23 +1695,26 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.lang.Object serviceName_ = "";
     /**
+     *
+     *
      * <pre>
      * The name of the API service performing the operation. For example,
      * `"compute.googleapis.com"`.
      * </pre>
      *
      * <code>string service_name = 7;</code>
+     *
      * @return The serviceName.
      */
     public java.lang.String getServiceName() {
       java.lang.Object ref = serviceName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         serviceName_ = s;
         return s;
@@ -1605,21 +1723,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the API service performing the operation. For example,
      * `"compute.googleapis.com"`.
      * </pre>
      *
      * <code>string service_name = 7;</code>
+     *
      * @return The bytes for serviceName.
      */
-    public com.google.protobuf.ByteString
-        getServiceNameBytes() {
+    public com.google.protobuf.ByteString getServiceNameBytes() {
       java.lang.Object ref = serviceName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         serviceName_ = b;
         return b;
       } else {
@@ -1627,57 +1746,64 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the API service performing the operation. For example,
      * `"compute.googleapis.com"`.
      * </pre>
      *
      * <code>string service_name = 7;</code>
+     *
      * @param value The serviceName to set.
      * @return This builder for chaining.
      */
-    public Builder setServiceName(
-        java.lang.String value) {
+    public Builder setServiceName(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       serviceName_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the API service performing the operation. For example,
      * `"compute.googleapis.com"`.
      * </pre>
      *
      * <code>string service_name = 7;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearServiceName() {
-      
+
       serviceName_ = getDefaultInstance().getServiceName();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the API service performing the operation. For example,
      * `"compute.googleapis.com"`.
      * </pre>
      *
      * <code>string service_name = 7;</code>
+     *
      * @param value The bytes for serviceName to set.
      * @return This builder for chaining.
      */
-    public Builder setServiceNameBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setServiceNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       serviceName_ = value;
       onChanged();
       return this;
@@ -1685,6 +1811,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object methodName_ = "";
     /**
+     *
+     *
      * <pre>
      * The name of the service method or operation.
      * For API calls, this should be the name of the API method.
@@ -1694,13 +1822,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string method_name = 8;</code>
+     *
      * @return The methodName.
      */
     public java.lang.String getMethodName() {
       java.lang.Object ref = methodName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         methodName_ = s;
         return s;
@@ -1709,6 +1837,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the service method or operation.
      * For API calls, this should be the name of the API method.
@@ -1718,15 +1848,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string method_name = 8;</code>
+     *
      * @return The bytes for methodName.
      */
-    public com.google.protobuf.ByteString
-        getMethodNameBytes() {
+    public com.google.protobuf.ByteString getMethodNameBytes() {
       java.lang.Object ref = methodName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         methodName_ = b;
         return b;
       } else {
@@ -1734,6 +1863,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the service method or operation.
      * For API calls, this should be the name of the API method.
@@ -1743,20 +1874,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string method_name = 8;</code>
+     *
      * @param value The methodName to set.
      * @return This builder for chaining.
      */
-    public Builder setMethodName(
-        java.lang.String value) {
+    public Builder setMethodName(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       methodName_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the service method or operation.
      * For API calls, this should be the name of the API method.
@@ -1766,15 +1899,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string method_name = 8;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearMethodName() {
-      
+
       methodName_ = getDefaultInstance().getMethodName();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the service method or operation.
      * For API calls, this should be the name of the API method.
@@ -1784,16 +1920,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string method_name = 8;</code>
+     *
      * @param value The bytes for methodName to set.
      * @return This builder for chaining.
      */
-    public Builder setMethodNameBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setMethodNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       methodName_ = value;
       onChanged();
       return this;
@@ -1801,6 +1937,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object resourceName_ = "";
     /**
+     *
+     *
      * <pre>
      * The resource or collection that is the target of the operation.
      * The name is a scheme-less URI, not including the API service name.
@@ -1810,13 +1948,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 11;</code>
+     *
      * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         resourceName_ = s;
         return s;
@@ -1825,6 +1963,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource or collection that is the target of the operation.
      * The name is a scheme-less URI, not including the API service name.
@@ -1834,15 +1974,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 11;</code>
+     *
      * @return The bytes for resourceName.
      */
-    public com.google.protobuf.ByteString
-        getResourceNameBytes() {
+    public com.google.protobuf.ByteString getResourceNameBytes() {
       java.lang.Object ref = resourceName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         resourceName_ = b;
         return b;
       } else {
@@ -1850,6 +1989,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource or collection that is the target of the operation.
      * The name is a scheme-less URI, not including the API service name.
@@ -1859,20 +2000,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 11;</code>
+     *
      * @param value The resourceName to set.
      * @return This builder for chaining.
      */
-    public Builder setResourceName(
-        java.lang.String value) {
+    public Builder setResourceName(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       resourceName_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource or collection that is the target of the operation.
      * The name is a scheme-less URI, not including the API service name.
@@ -1882,15 +2025,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 11;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
+
       resourceName_ = getDefaultInstance().getResourceName();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource or collection that is the target of the operation.
      * The name is a scheme-less URI, not including the API service name.
@@ -1900,16 +2046,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 11;</code>
+     *
      * @param value The bytes for resourceName to set.
      * @return This builder for chaining.
      */
-    public Builder setResourceNameBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setResourceNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       resourceName_ = value;
       onChanged();
       return this;
@@ -1917,34 +2063,47 @@ private static final long serialVersionUID = 0L;
 
     private com.google.cloud.audit.ResourceLocation resourceLocation_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.cloud.audit.ResourceLocation, com.google.cloud.audit.ResourceLocation.Builder, com.google.cloud.audit.ResourceLocationOrBuilder> resourceLocationBuilder_;
+            com.google.cloud.audit.ResourceLocation,
+            com.google.cloud.audit.ResourceLocation.Builder,
+            com.google.cloud.audit.ResourceLocationOrBuilder>
+        resourceLocationBuilder_;
     /**
+     *
+     *
      * <pre>
      * The resource location information.
      * </pre>
      *
      * <code>.google.cloud.audit.ResourceLocation resource_location = 20;</code>
+     *
      * @return Whether the resourceLocation field is set.
      */
     public boolean hasResourceLocation() {
       return resourceLocationBuilder_ != null || resourceLocation_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The resource location information.
      * </pre>
      *
      * <code>.google.cloud.audit.ResourceLocation resource_location = 20;</code>
+     *
      * @return The resourceLocation.
      */
     public com.google.cloud.audit.ResourceLocation getResourceLocation() {
       if (resourceLocationBuilder_ == null) {
-        return resourceLocation_ == null ? com.google.cloud.audit.ResourceLocation.getDefaultInstance() : resourceLocation_;
+        return resourceLocation_ == null
+            ? com.google.cloud.audit.ResourceLocation.getDefaultInstance()
+            : resourceLocation_;
       } else {
         return resourceLocationBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource location information.
      * </pre>
@@ -1965,6 +2124,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource location information.
      * </pre>
@@ -1983,6 +2144,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource location information.
      * </pre>
@@ -1993,7 +2156,9 @@ private static final long serialVersionUID = 0L;
       if (resourceLocationBuilder_ == null) {
         if (resourceLocation_ != null) {
           resourceLocation_ =
-            com.google.cloud.audit.ResourceLocation.newBuilder(resourceLocation_).mergeFrom(value).buildPartial();
+              com.google.cloud.audit.ResourceLocation.newBuilder(resourceLocation_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           resourceLocation_ = value;
         }
@@ -2005,6 +2170,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource location information.
      * </pre>
@@ -2023,6 +2190,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource location information.
      * </pre>
@@ -2030,11 +2199,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.cloud.audit.ResourceLocation resource_location = 20;</code>
      */
     public com.google.cloud.audit.ResourceLocation.Builder getResourceLocationBuilder() {
-      
+
       onChanged();
       return getResourceLocationFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The resource location information.
      * </pre>
@@ -2045,11 +2216,14 @@ private static final long serialVersionUID = 0L;
       if (resourceLocationBuilder_ != null) {
         return resourceLocationBuilder_.getMessageOrBuilder();
       } else {
-        return resourceLocation_ == null ?
-            com.google.cloud.audit.ResourceLocation.getDefaultInstance() : resourceLocation_;
+        return resourceLocation_ == null
+            ? com.google.cloud.audit.ResourceLocation.getDefaultInstance()
+            : resourceLocation_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource location information.
      * </pre>
@@ -2057,14 +2231,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.cloud.audit.ResourceLocation resource_location = 20;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.cloud.audit.ResourceLocation, com.google.cloud.audit.ResourceLocation.Builder, com.google.cloud.audit.ResourceLocationOrBuilder> 
+            com.google.cloud.audit.ResourceLocation,
+            com.google.cloud.audit.ResourceLocation.Builder,
+            com.google.cloud.audit.ResourceLocationOrBuilder>
         getResourceLocationFieldBuilder() {
       if (resourceLocationBuilder_ == null) {
-        resourceLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.cloud.audit.ResourceLocation, com.google.cloud.audit.ResourceLocation.Builder, com.google.cloud.audit.ResourceLocationOrBuilder>(
-                getResourceLocation(),
-                getParentForChildren(),
-                isClean());
+        resourceLocationBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.cloud.audit.ResourceLocation,
+                com.google.cloud.audit.ResourceLocation.Builder,
+                com.google.cloud.audit.ResourceLocationOrBuilder>(
+                getResourceLocation(), getParentForChildren(), isClean());
         resourceLocation_ = null;
       }
       return resourceLocationBuilder_;
@@ -2072,8 +2249,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Struct resourceOriginalState_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> resourceOriginalStateBuilder_;
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
+        resourceOriginalStateBuilder_;
     /**
+     *
+     *
      * <pre>
      * The resource's original state before mutation. Present only for
      * operations which have successfully modified the targeted resource(s).
@@ -2085,12 +2267,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+     *
      * @return Whether the resourceOriginalState field is set.
      */
     public boolean hasResourceOriginalState() {
       return resourceOriginalStateBuilder_ != null || resourceOriginalState_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The resource's original state before mutation. Present only for
      * operations which have successfully modified the targeted resource(s).
@@ -2102,16 +2287,21 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+     *
      * @return The resourceOriginalState.
      */
     public com.google.protobuf.Struct getResourceOriginalState() {
       if (resourceOriginalStateBuilder_ == null) {
-        return resourceOriginalState_ == null ? com.google.protobuf.Struct.getDefaultInstance() : resourceOriginalState_;
+        return resourceOriginalState_ == null
+            ? com.google.protobuf.Struct.getDefaultInstance()
+            : resourceOriginalState_;
       } else {
         return resourceOriginalStateBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource's original state before mutation. Present only for
      * operations which have successfully modified the targeted resource(s).
@@ -2138,6 +2328,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource's original state before mutation. Present only for
      * operations which have successfully modified the targeted resource(s).
@@ -2150,8 +2342,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Struct resource_original_state = 19;</code>
      */
-    public Builder setResourceOriginalState(
-        com.google.protobuf.Struct.Builder builderForValue) {
+    public Builder setResourceOriginalState(com.google.protobuf.Struct.Builder builderForValue) {
       if (resourceOriginalStateBuilder_ == null) {
         resourceOriginalState_ = builderForValue.build();
         onChanged();
@@ -2162,6 +2353,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource's original state before mutation. Present only for
      * operations which have successfully modified the targeted resource(s).
@@ -2178,7 +2371,9 @@ private static final long serialVersionUID = 0L;
       if (resourceOriginalStateBuilder_ == null) {
         if (resourceOriginalState_ != null) {
           resourceOriginalState_ =
-            com.google.protobuf.Struct.newBuilder(resourceOriginalState_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Struct.newBuilder(resourceOriginalState_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           resourceOriginalState_ = value;
         }
@@ -2190,6 +2385,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource's original state before mutation. Present only for
      * operations which have successfully modified the targeted resource(s).
@@ -2214,6 +2411,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource's original state before mutation. Present only for
      * operations which have successfully modified the targeted resource(s).
@@ -2227,11 +2426,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct resource_original_state = 19;</code>
      */
     public com.google.protobuf.Struct.Builder getResourceOriginalStateBuilder() {
-      
+
       onChanged();
       return getResourceOriginalStateFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The resource's original state before mutation. Present only for
      * operations which have successfully modified the targeted resource(s).
@@ -2248,11 +2449,14 @@ private static final long serialVersionUID = 0L;
       if (resourceOriginalStateBuilder_ != null) {
         return resourceOriginalStateBuilder_.getMessageOrBuilder();
       } else {
-        return resourceOriginalState_ == null ?
-            com.google.protobuf.Struct.getDefaultInstance() : resourceOriginalState_;
+        return resourceOriginalState_ == null
+            ? com.google.protobuf.Struct.getDefaultInstance()
+            : resourceOriginalState_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource's original state before mutation. Present only for
      * operations which have successfully modified the targeted resource(s).
@@ -2266,27 +2470,33 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct resource_original_state = 19;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
         getResourceOriginalStateFieldBuilder() {
       if (resourceOriginalStateBuilder_ == null) {
-        resourceOriginalStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                getResourceOriginalState(),
-                getParentForChildren(),
-                isClean());
+        resourceOriginalStateBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Struct,
+                com.google.protobuf.Struct.Builder,
+                com.google.protobuf.StructOrBuilder>(
+                getResourceOriginalState(), getParentForChildren(), isClean());
         resourceOriginalState_ = null;
       }
       return resourceOriginalStateBuilder_;
     }
 
-    private long numResponseItems_ ;
+    private long numResponseItems_;
     /**
+     *
+     *
      * <pre>
      * The number of items returned from a List or Query API method,
      * if applicable.
      * </pre>
      *
      * <code>int64 num_response_items = 12;</code>
+     *
      * @return The numResponseItems.
      */
     @java.lang.Override
@@ -2294,32 +2504,38 @@ private static final long serialVersionUID = 0L;
       return numResponseItems_;
     }
     /**
+     *
+     *
      * <pre>
      * The number of items returned from a List or Query API method,
      * if applicable.
      * </pre>
      *
      * <code>int64 num_response_items = 12;</code>
+     *
      * @param value The numResponseItems to set.
      * @return This builder for chaining.
      */
     public Builder setNumResponseItems(long value) {
-      
+
       numResponseItems_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The number of items returned from a List or Query API method,
      * if applicable.
      * </pre>
      *
      * <code>int64 num_response_items = 12;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearNumResponseItems() {
-      
+
       numResponseItems_ = 0L;
       onChanged();
       return this;
@@ -2327,24 +2543,31 @@ private static final long serialVersionUID = 0L;
 
     private com.google.rpc.Status status_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
+            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>
+        statusBuilder_;
     /**
+     *
+     *
      * <pre>
      * The status of the overall operation.
      * </pre>
      *
      * <code>.google.rpc.Status status = 2;</code>
+     *
      * @return Whether the status field is set.
      */
     public boolean hasStatus() {
       return statusBuilder_ != null || status_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The status of the overall operation.
      * </pre>
      *
      * <code>.google.rpc.Status status = 2;</code>
+     *
      * @return The status.
      */
     public com.google.rpc.Status getStatus() {
@@ -2355,6 +2578,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The status of the overall operation.
      * </pre>
@@ -2375,14 +2600,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The status of the overall operation.
      * </pre>
      *
      * <code>.google.rpc.Status status = 2;</code>
      */
-    public Builder setStatus(
-        com.google.rpc.Status.Builder builderForValue) {
+    public Builder setStatus(com.google.rpc.Status.Builder builderForValue) {
       if (statusBuilder_ == null) {
         status_ = builderForValue.build();
         onChanged();
@@ -2393,6 +2619,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The status of the overall operation.
      * </pre>
@@ -2402,8 +2630,7 @@ private static final long serialVersionUID = 0L;
     public Builder mergeStatus(com.google.rpc.Status value) {
       if (statusBuilder_ == null) {
         if (status_ != null) {
-          status_ =
-            com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
+          status_ = com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
         } else {
           status_ = value;
         }
@@ -2415,6 +2642,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The status of the overall operation.
      * </pre>
@@ -2433,6 +2662,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The status of the overall operation.
      * </pre>
@@ -2440,11 +2671,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.Status status = 2;</code>
      */
     public com.google.rpc.Status.Builder getStatusBuilder() {
-      
+
       onChanged();
       return getStatusFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The status of the overall operation.
      * </pre>
@@ -2455,11 +2688,12 @@ private static final long serialVersionUID = 0L;
       if (statusBuilder_ != null) {
         return statusBuilder_.getMessageOrBuilder();
       } else {
-        return status_ == null ?
-            com.google.rpc.Status.getDefaultInstance() : status_;
+        return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The status of the overall operation.
      * </pre>
@@ -2467,14 +2701,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.Status status = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
+            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>
         getStatusFieldBuilder() {
       if (statusBuilder_ == null) {
-        statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
-                getStatus(),
-                getParentForChildren(),
-                isClean());
+        statusBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.Status,
+                com.google.rpc.Status.Builder,
+                com.google.rpc.StatusOrBuilder>(getStatus(), getParentForChildren(), isClean());
         status_ = null;
       }
       return statusBuilder_;
@@ -2482,34 +2716,47 @@ private static final long serialVersionUID = 0L;
 
     private com.google.cloud.audit.AuthenticationInfo authenticationInfo_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.cloud.audit.AuthenticationInfo, com.google.cloud.audit.AuthenticationInfo.Builder, com.google.cloud.audit.AuthenticationInfoOrBuilder> authenticationInfoBuilder_;
+            com.google.cloud.audit.AuthenticationInfo,
+            com.google.cloud.audit.AuthenticationInfo.Builder,
+            com.google.cloud.audit.AuthenticationInfoOrBuilder>
+        authenticationInfoBuilder_;
     /**
+     *
+     *
      * <pre>
      * Authentication information.
      * </pre>
      *
      * <code>.google.cloud.audit.AuthenticationInfo authentication_info = 3;</code>
+     *
      * @return Whether the authenticationInfo field is set.
      */
     public boolean hasAuthenticationInfo() {
       return authenticationInfoBuilder_ != null || authenticationInfo_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Authentication information.
      * </pre>
      *
      * <code>.google.cloud.audit.AuthenticationInfo authentication_info = 3;</code>
+     *
      * @return The authenticationInfo.
      */
     public com.google.cloud.audit.AuthenticationInfo getAuthenticationInfo() {
       if (authenticationInfoBuilder_ == null) {
-        return authenticationInfo_ == null ? com.google.cloud.audit.AuthenticationInfo.getDefaultInstance() : authenticationInfo_;
+        return authenticationInfo_ == null
+            ? com.google.cloud.audit.AuthenticationInfo.getDefaultInstance()
+            : authenticationInfo_;
       } else {
         return authenticationInfoBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Authentication information.
      * </pre>
@@ -2530,6 +2777,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authentication information.
      * </pre>
@@ -2548,6 +2797,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authentication information.
      * </pre>
@@ -2558,7 +2809,9 @@ private static final long serialVersionUID = 0L;
       if (authenticationInfoBuilder_ == null) {
         if (authenticationInfo_ != null) {
           authenticationInfo_ =
-            com.google.cloud.audit.AuthenticationInfo.newBuilder(authenticationInfo_).mergeFrom(value).buildPartial();
+              com.google.cloud.audit.AuthenticationInfo.newBuilder(authenticationInfo_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           authenticationInfo_ = value;
         }
@@ -2570,6 +2823,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authentication information.
      * </pre>
@@ -2588,6 +2843,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authentication information.
      * </pre>
@@ -2595,11 +2852,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.cloud.audit.AuthenticationInfo authentication_info = 3;</code>
      */
     public com.google.cloud.audit.AuthenticationInfo.Builder getAuthenticationInfoBuilder() {
-      
+
       onChanged();
       return getAuthenticationInfoFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Authentication information.
      * </pre>
@@ -2610,11 +2869,14 @@ private static final long serialVersionUID = 0L;
       if (authenticationInfoBuilder_ != null) {
         return authenticationInfoBuilder_.getMessageOrBuilder();
       } else {
-        return authenticationInfo_ == null ?
-            com.google.cloud.audit.AuthenticationInfo.getDefaultInstance() : authenticationInfo_;
+        return authenticationInfo_ == null
+            ? com.google.cloud.audit.AuthenticationInfo.getDefaultInstance()
+            : authenticationInfo_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Authentication information.
      * </pre>
@@ -2622,32 +2884,42 @@ private static final long serialVersionUID = 0L;
      * <code>.google.cloud.audit.AuthenticationInfo authentication_info = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.cloud.audit.AuthenticationInfo, com.google.cloud.audit.AuthenticationInfo.Builder, com.google.cloud.audit.AuthenticationInfoOrBuilder> 
+            com.google.cloud.audit.AuthenticationInfo,
+            com.google.cloud.audit.AuthenticationInfo.Builder,
+            com.google.cloud.audit.AuthenticationInfoOrBuilder>
         getAuthenticationInfoFieldBuilder() {
       if (authenticationInfoBuilder_ == null) {
-        authenticationInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.cloud.audit.AuthenticationInfo, com.google.cloud.audit.AuthenticationInfo.Builder, com.google.cloud.audit.AuthenticationInfoOrBuilder>(
-                getAuthenticationInfo(),
-                getParentForChildren(),
-                isClean());
+        authenticationInfoBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.cloud.audit.AuthenticationInfo,
+                com.google.cloud.audit.AuthenticationInfo.Builder,
+                com.google.cloud.audit.AuthenticationInfoOrBuilder>(
+                getAuthenticationInfo(), getParentForChildren(), isClean());
         authenticationInfo_ = null;
       }
       return authenticationInfoBuilder_;
     }
 
     private java.util.List<com.google.cloud.audit.AuthorizationInfo> authorizationInfo_ =
-      java.util.Collections.emptyList();
+        java.util.Collections.emptyList();
+
     private void ensureAuthorizationInfoIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        authorizationInfo_ = new java.util.ArrayList<com.google.cloud.audit.AuthorizationInfo>(authorizationInfo_);
+        authorizationInfo_ =
+            new java.util.ArrayList<com.google.cloud.audit.AuthorizationInfo>(authorizationInfo_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.cloud.audit.AuthorizationInfo, com.google.cloud.audit.AuthorizationInfo.Builder, com.google.cloud.audit.AuthorizationInfoOrBuilder> authorizationInfoBuilder_;
+            com.google.cloud.audit.AuthorizationInfo,
+            com.google.cloud.audit.AuthorizationInfo.Builder,
+            com.google.cloud.audit.AuthorizationInfoOrBuilder>
+        authorizationInfoBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2664,6 +2936,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2680,6 +2954,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2696,6 +2972,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2704,8 +2982,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
      */
-    public Builder setAuthorizationInfo(
-        int index, com.google.cloud.audit.AuthorizationInfo value) {
+    public Builder setAuthorizationInfo(int index, com.google.cloud.audit.AuthorizationInfo value) {
       if (authorizationInfoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2719,6 +2996,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2739,6 +3018,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2761,6 +3042,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2769,8 +3052,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
      */
-    public Builder addAuthorizationInfo(
-        int index, com.google.cloud.audit.AuthorizationInfo value) {
+    public Builder addAuthorizationInfo(int index, com.google.cloud.audit.AuthorizationInfo value) {
       if (authorizationInfoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2784,6 +3066,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2804,6 +3088,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2824,6 +3110,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2836,8 +3124,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Iterable<? extends com.google.cloud.audit.AuthorizationInfo> values) {
       if (authorizationInfoBuilder_ == null) {
         ensureAuthorizationInfoIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, authorizationInfo_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, authorizationInfo_);
         onChanged();
       } else {
         authorizationInfoBuilder_.addAllMessages(values);
@@ -2845,6 +3132,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2864,6 +3153,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2883,6 +3174,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2891,11 +3184,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
      */
-    public com.google.cloud.audit.AuthorizationInfo.Builder getAuthorizationInfoBuilder(
-        int index) {
+    public com.google.cloud.audit.AuthorizationInfo.Builder getAuthorizationInfoBuilder(int index) {
       return getAuthorizationInfoFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2907,11 +3201,14 @@ private static final long serialVersionUID = 0L;
     public com.google.cloud.audit.AuthorizationInfoOrBuilder getAuthorizationInfoOrBuilder(
         int index) {
       if (authorizationInfoBuilder_ == null) {
-        return authorizationInfo_.get(index);  } else {
+        return authorizationInfo_.get(index);
+      } else {
         return authorizationInfoBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2920,8 +3217,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
      */
-    public java.util.List<? extends com.google.cloud.audit.AuthorizationInfoOrBuilder> 
-         getAuthorizationInfoOrBuilderList() {
+    public java.util.List<? extends com.google.cloud.audit.AuthorizationInfoOrBuilder>
+        getAuthorizationInfoOrBuilderList() {
       if (authorizationInfoBuilder_ != null) {
         return authorizationInfoBuilder_.getMessageOrBuilderList();
       } else {
@@ -2929,6 +3226,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2938,10 +3237,12 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
      */
     public com.google.cloud.audit.AuthorizationInfo.Builder addAuthorizationInfoBuilder() {
-      return getAuthorizationInfoFieldBuilder().addBuilder(
-          com.google.cloud.audit.AuthorizationInfo.getDefaultInstance());
+      return getAuthorizationInfoFieldBuilder()
+          .addBuilder(com.google.cloud.audit.AuthorizationInfo.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2950,12 +3251,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
      */
-    public com.google.cloud.audit.AuthorizationInfo.Builder addAuthorizationInfoBuilder(
-        int index) {
-      return getAuthorizationInfoFieldBuilder().addBuilder(
-          index, com.google.cloud.audit.AuthorizationInfo.getDefaultInstance());
+    public com.google.cloud.audit.AuthorizationInfo.Builder addAuthorizationInfoBuilder(int index) {
+      return getAuthorizationInfoFieldBuilder()
+          .addBuilder(index, com.google.cloud.audit.AuthorizationInfo.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Authorization information. If there are multiple
      * resources or permissions involved, then there is
@@ -2964,16 +3266,22 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.cloud.audit.AuthorizationInfo authorization_info = 9;</code>
      */
-    public java.util.List<com.google.cloud.audit.AuthorizationInfo.Builder> 
-         getAuthorizationInfoBuilderList() {
+    public java.util.List<com.google.cloud.audit.AuthorizationInfo.Builder>
+        getAuthorizationInfoBuilderList() {
       return getAuthorizationInfoFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.cloud.audit.AuthorizationInfo, com.google.cloud.audit.AuthorizationInfo.Builder, com.google.cloud.audit.AuthorizationInfoOrBuilder> 
+            com.google.cloud.audit.AuthorizationInfo,
+            com.google.cloud.audit.AuthorizationInfo.Builder,
+            com.google.cloud.audit.AuthorizationInfoOrBuilder>
         getAuthorizationInfoFieldBuilder() {
       if (authorizationInfoBuilder_ == null) {
-        authorizationInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.cloud.audit.AuthorizationInfo, com.google.cloud.audit.AuthorizationInfo.Builder, com.google.cloud.audit.AuthorizationInfoOrBuilder>(
+        authorizationInfoBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.cloud.audit.AuthorizationInfo,
+                com.google.cloud.audit.AuthorizationInfo.Builder,
+                com.google.cloud.audit.AuthorizationInfoOrBuilder>(
                 authorizationInfo_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -2985,34 +3293,47 @@ private static final long serialVersionUID = 0L;
 
     private com.google.cloud.audit.RequestMetadata requestMetadata_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.cloud.audit.RequestMetadata, com.google.cloud.audit.RequestMetadata.Builder, com.google.cloud.audit.RequestMetadataOrBuilder> requestMetadataBuilder_;
+            com.google.cloud.audit.RequestMetadata,
+            com.google.cloud.audit.RequestMetadata.Builder,
+            com.google.cloud.audit.RequestMetadataOrBuilder>
+        requestMetadataBuilder_;
     /**
+     *
+     *
      * <pre>
      * Metadata about the operation.
      * </pre>
      *
      * <code>.google.cloud.audit.RequestMetadata request_metadata = 4;</code>
+     *
      * @return Whether the requestMetadata field is set.
      */
     public boolean hasRequestMetadata() {
       return requestMetadataBuilder_ != null || requestMetadata_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Metadata about the operation.
      * </pre>
      *
      * <code>.google.cloud.audit.RequestMetadata request_metadata = 4;</code>
+     *
      * @return The requestMetadata.
      */
     public com.google.cloud.audit.RequestMetadata getRequestMetadata() {
       if (requestMetadataBuilder_ == null) {
-        return requestMetadata_ == null ? com.google.cloud.audit.RequestMetadata.getDefaultInstance() : requestMetadata_;
+        return requestMetadata_ == null
+            ? com.google.cloud.audit.RequestMetadata.getDefaultInstance()
+            : requestMetadata_;
       } else {
         return requestMetadataBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Metadata about the operation.
      * </pre>
@@ -3033,6 +3354,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Metadata about the operation.
      * </pre>
@@ -3051,6 +3374,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Metadata about the operation.
      * </pre>
@@ -3061,7 +3386,9 @@ private static final long serialVersionUID = 0L;
       if (requestMetadataBuilder_ == null) {
         if (requestMetadata_ != null) {
           requestMetadata_ =
-            com.google.cloud.audit.RequestMetadata.newBuilder(requestMetadata_).mergeFrom(value).buildPartial();
+              com.google.cloud.audit.RequestMetadata.newBuilder(requestMetadata_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           requestMetadata_ = value;
         }
@@ -3073,6 +3400,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Metadata about the operation.
      * </pre>
@@ -3091,6 +3420,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Metadata about the operation.
      * </pre>
@@ -3098,11 +3429,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.cloud.audit.RequestMetadata request_metadata = 4;</code>
      */
     public com.google.cloud.audit.RequestMetadata.Builder getRequestMetadataBuilder() {
-      
+
       onChanged();
       return getRequestMetadataFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Metadata about the operation.
      * </pre>
@@ -3113,11 +3446,14 @@ private static final long serialVersionUID = 0L;
       if (requestMetadataBuilder_ != null) {
         return requestMetadataBuilder_.getMessageOrBuilder();
       } else {
-        return requestMetadata_ == null ?
-            com.google.cloud.audit.RequestMetadata.getDefaultInstance() : requestMetadata_;
+        return requestMetadata_ == null
+            ? com.google.cloud.audit.RequestMetadata.getDefaultInstance()
+            : requestMetadata_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Metadata about the operation.
      * </pre>
@@ -3125,14 +3461,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.cloud.audit.RequestMetadata request_metadata = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.cloud.audit.RequestMetadata, com.google.cloud.audit.RequestMetadata.Builder, com.google.cloud.audit.RequestMetadataOrBuilder> 
+            com.google.cloud.audit.RequestMetadata,
+            com.google.cloud.audit.RequestMetadata.Builder,
+            com.google.cloud.audit.RequestMetadataOrBuilder>
         getRequestMetadataFieldBuilder() {
       if (requestMetadataBuilder_ == null) {
-        requestMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.cloud.audit.RequestMetadata, com.google.cloud.audit.RequestMetadata.Builder, com.google.cloud.audit.RequestMetadataOrBuilder>(
-                getRequestMetadata(),
-                getParentForChildren(),
-                isClean());
+        requestMetadataBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.cloud.audit.RequestMetadata,
+                com.google.cloud.audit.RequestMetadata.Builder,
+                com.google.cloud.audit.RequestMetadataOrBuilder>(
+                getRequestMetadata(), getParentForChildren(), isClean());
         requestMetadata_ = null;
       }
       return requestMetadataBuilder_;
@@ -3140,8 +3479,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Struct request_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> requestBuilder_;
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
+        requestBuilder_;
     /**
+     *
+     *
      * <pre>
      * The operation request. This may not include all request parameters,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3152,12 +3496,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct request = 16;</code>
+     *
      * @return Whether the request field is set.
      */
     public boolean hasRequest() {
       return requestBuilder_ != null || request_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The operation request. This may not include all request parameters,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3168,6 +3515,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct request = 16;</code>
+     *
      * @return The request.
      */
     public com.google.protobuf.Struct getRequest() {
@@ -3178,6 +3526,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The operation request. This may not include all request parameters,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3203,6 +3553,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The operation request. This may not include all request parameters,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3214,8 +3566,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Struct request = 16;</code>
      */
-    public Builder setRequest(
-        com.google.protobuf.Struct.Builder builderForValue) {
+    public Builder setRequest(com.google.protobuf.Struct.Builder builderForValue) {
       if (requestBuilder_ == null) {
         request_ = builderForValue.build();
         onChanged();
@@ -3226,6 +3577,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The operation request. This may not include all request parameters,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3241,7 +3594,7 @@ private static final long serialVersionUID = 0L;
       if (requestBuilder_ == null) {
         if (request_ != null) {
           request_ =
-            com.google.protobuf.Struct.newBuilder(request_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Struct.newBuilder(request_).mergeFrom(value).buildPartial();
         } else {
           request_ = value;
         }
@@ -3253,6 +3606,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The operation request. This may not include all request parameters,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3276,6 +3631,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The operation request. This may not include all request parameters,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3288,11 +3645,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct request = 16;</code>
      */
     public com.google.protobuf.Struct.Builder getRequestBuilder() {
-      
+
       onChanged();
       return getRequestFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The operation request. This may not include all request parameters,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3308,11 +3667,12 @@ private static final long serialVersionUID = 0L;
       if (requestBuilder_ != null) {
         return requestBuilder_.getMessageOrBuilder();
       } else {
-        return request_ == null ?
-            com.google.protobuf.Struct.getDefaultInstance() : request_;
+        return request_ == null ? com.google.protobuf.Struct.getDefaultInstance() : request_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The operation request. This may not include all request parameters,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3325,14 +3685,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct request = 16;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
         getRequestFieldBuilder() {
       if (requestBuilder_ == null) {
-        requestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                getRequest(),
-                getParentForChildren(),
-                isClean());
+        requestBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Struct,
+                com.google.protobuf.Struct.Builder,
+                com.google.protobuf.StructOrBuilder>(
+                getRequest(), getParentForChildren(), isClean());
         request_ = null;
       }
       return requestBuilder_;
@@ -3340,8 +3703,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Struct response_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> responseBuilder_;
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
+        responseBuilder_;
     /**
+     *
+     *
      * <pre>
      * The operation response. This may not include all response elements,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3352,12 +3720,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct response = 17;</code>
+     *
      * @return Whether the response field is set.
      */
     public boolean hasResponse() {
       return responseBuilder_ != null || response_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The operation response. This may not include all response elements,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3368,6 +3739,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct response = 17;</code>
+     *
      * @return The response.
      */
     public com.google.protobuf.Struct getResponse() {
@@ -3378,6 +3750,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The operation response. This may not include all response elements,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3403,6 +3777,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The operation response. This may not include all response elements,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3414,8 +3790,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Struct response = 17;</code>
      */
-    public Builder setResponse(
-        com.google.protobuf.Struct.Builder builderForValue) {
+    public Builder setResponse(com.google.protobuf.Struct.Builder builderForValue) {
       if (responseBuilder_ == null) {
         response_ = builderForValue.build();
         onChanged();
@@ -3426,6 +3801,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The operation response. This may not include all response elements,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3441,7 +3818,7 @@ private static final long serialVersionUID = 0L;
       if (responseBuilder_ == null) {
         if (response_ != null) {
           response_ =
-            com.google.protobuf.Struct.newBuilder(response_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Struct.newBuilder(response_).mergeFrom(value).buildPartial();
         } else {
           response_ = value;
         }
@@ -3453,6 +3830,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The operation response. This may not include all response elements,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3476,6 +3855,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The operation response. This may not include all response elements,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3488,11 +3869,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct response = 17;</code>
      */
     public com.google.protobuf.Struct.Builder getResponseBuilder() {
-      
+
       onChanged();
       return getResponseFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The operation response. This may not include all response elements,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3508,11 +3891,12 @@ private static final long serialVersionUID = 0L;
       if (responseBuilder_ != null) {
         return responseBuilder_.getMessageOrBuilder();
       } else {
-        return response_ == null ?
-            com.google.protobuf.Struct.getDefaultInstance() : response_;
+        return response_ == null ? com.google.protobuf.Struct.getDefaultInstance() : response_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The operation response. This may not include all response elements,
      * such as those that are too large, privacy-sensitive, or duplicated
@@ -3525,14 +3909,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct response = 17;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
         getResponseFieldBuilder() {
       if (responseBuilder_ == null) {
-        responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                getResponse(),
-                getParentForChildren(),
-                isClean());
+        responseBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Struct,
+                com.google.protobuf.Struct.Builder,
+                com.google.protobuf.StructOrBuilder>(
+                getResponse(), getParentForChildren(), isClean());
         response_ = null;
       }
       return responseBuilder_;
@@ -3540,26 +3927,35 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Struct metadata_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> metadataBuilder_;
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
+        metadataBuilder_;
     /**
+     *
+     *
      * <pre>
      * Other service-specific data about the request, response, and other
      * information associated with the current audited event.
      * </pre>
      *
      * <code>.google.protobuf.Struct metadata = 18;</code>
+     *
      * @return Whether the metadata field is set.
      */
     public boolean hasMetadata() {
       return metadataBuilder_ != null || metadata_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Other service-specific data about the request, response, and other
      * information associated with the current audited event.
      * </pre>
      *
      * <code>.google.protobuf.Struct metadata = 18;</code>
+     *
      * @return The metadata.
      */
     public com.google.protobuf.Struct getMetadata() {
@@ -3570,6 +3966,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Other service-specific data about the request, response, and other
      * information associated with the current audited event.
@@ -3591,6 +3989,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Other service-specific data about the request, response, and other
      * information associated with the current audited event.
@@ -3598,8 +3998,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Struct metadata = 18;</code>
      */
-    public Builder setMetadata(
-        com.google.protobuf.Struct.Builder builderForValue) {
+    public Builder setMetadata(com.google.protobuf.Struct.Builder builderForValue) {
       if (metadataBuilder_ == null) {
         metadata_ = builderForValue.build();
         onChanged();
@@ -3610,6 +4009,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Other service-specific data about the request, response, and other
      * information associated with the current audited event.
@@ -3621,7 +4022,7 @@ private static final long serialVersionUID = 0L;
       if (metadataBuilder_ == null) {
         if (metadata_ != null) {
           metadata_ =
-            com.google.protobuf.Struct.newBuilder(metadata_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Struct.newBuilder(metadata_).mergeFrom(value).buildPartial();
         } else {
           metadata_ = value;
         }
@@ -3633,6 +4034,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Other service-specific data about the request, response, and other
      * information associated with the current audited event.
@@ -3652,6 +4055,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Other service-specific data about the request, response, and other
      * information associated with the current audited event.
@@ -3660,11 +4065,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct metadata = 18;</code>
      */
     public com.google.protobuf.Struct.Builder getMetadataBuilder() {
-      
+
       onChanged();
       return getMetadataFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Other service-specific data about the request, response, and other
      * information associated with the current audited event.
@@ -3676,11 +4083,12 @@ private static final long serialVersionUID = 0L;
       if (metadataBuilder_ != null) {
         return metadataBuilder_.getMessageOrBuilder();
       } else {
-        return metadata_ == null ?
-            com.google.protobuf.Struct.getDefaultInstance() : metadata_;
+        return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Other service-specific data about the request, response, and other
      * information associated with the current audited event.
@@ -3689,14 +4097,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct metadata = 18;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
         getMetadataFieldBuilder() {
       if (metadataBuilder_ == null) {
-        metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                getMetadata(),
-                getParentForChildren(),
-                isClean());
+        metadataBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Struct,
+                com.google.protobuf.Struct.Builder,
+                com.google.protobuf.StructOrBuilder>(
+                getMetadata(), getParentForChildren(), isClean());
         metadata_ = null;
       }
       return metadataBuilder_;
@@ -3704,8 +4115,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Any serviceData_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> serviceDataBuilder_;
+            com.google.protobuf.Any,
+            com.google.protobuf.Any.Builder,
+            com.google.protobuf.AnyOrBuilder>
+        serviceDataBuilder_;
     /**
+     *
+     *
      * <pre>
      * Deprecated. Use the `metadata` field instead.
      * Other service-specific data about the request, response, and other
@@ -3713,12 +4129,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
+     *
      * @return Whether the serviceData field is set.
      */
-    @java.lang.Deprecated public boolean hasServiceData() {
+    @java.lang.Deprecated
+    public boolean hasServiceData() {
       return serviceDataBuilder_ != null || serviceData_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Deprecated. Use the `metadata` field instead.
      * Other service-specific data about the request, response, and other
@@ -3726,9 +4146,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
+     *
      * @return The serviceData.
      */
-    @java.lang.Deprecated public com.google.protobuf.Any getServiceData() {
+    @java.lang.Deprecated
+    public com.google.protobuf.Any getServiceData() {
       if (serviceDataBuilder_ == null) {
         return serviceData_ == null ? com.google.protobuf.Any.getDefaultInstance() : serviceData_;
       } else {
@@ -3736,6 +4158,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Deprecated. Use the `metadata` field instead.
      * Other service-specific data about the request, response, and other
@@ -3744,7 +4168,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
      */
-    @java.lang.Deprecated public Builder setServiceData(com.google.protobuf.Any value) {
+    @java.lang.Deprecated
+    public Builder setServiceData(com.google.protobuf.Any value) {
       if (serviceDataBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3758,6 +4183,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Deprecated. Use the `metadata` field instead.
      * Other service-specific data about the request, response, and other
@@ -3766,8 +4193,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
      */
-    @java.lang.Deprecated public Builder setServiceData(
-        com.google.protobuf.Any.Builder builderForValue) {
+    @java.lang.Deprecated
+    public Builder setServiceData(com.google.protobuf.Any.Builder builderForValue) {
       if (serviceDataBuilder_ == null) {
         serviceData_ = builderForValue.build();
         onChanged();
@@ -3778,6 +4205,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Deprecated. Use the `metadata` field instead.
      * Other service-specific data about the request, response, and other
@@ -3786,11 +4215,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
      */
-    @java.lang.Deprecated public Builder mergeServiceData(com.google.protobuf.Any value) {
+    @java.lang.Deprecated
+    public Builder mergeServiceData(com.google.protobuf.Any value) {
       if (serviceDataBuilder_ == null) {
         if (serviceData_ != null) {
           serviceData_ =
-            com.google.protobuf.Any.newBuilder(serviceData_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Any.newBuilder(serviceData_).mergeFrom(value).buildPartial();
         } else {
           serviceData_ = value;
         }
@@ -3802,6 +4232,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Deprecated. Use the `metadata` field instead.
      * Other service-specific data about the request, response, and other
@@ -3810,7 +4242,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
      */
-    @java.lang.Deprecated public Builder clearServiceData() {
+    @java.lang.Deprecated
+    public Builder clearServiceData() {
       if (serviceDataBuilder_ == null) {
         serviceData_ = null;
         onChanged();
@@ -3822,6 +4255,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Deprecated. Use the `metadata` field instead.
      * Other service-specific data about the request, response, and other
@@ -3830,12 +4265,15 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
      */
-    @java.lang.Deprecated public com.google.protobuf.Any.Builder getServiceDataBuilder() {
-      
+    @java.lang.Deprecated
+    public com.google.protobuf.Any.Builder getServiceDataBuilder() {
+
       onChanged();
       return getServiceDataFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Deprecated. Use the `metadata` field instead.
      * Other service-specific data about the request, response, and other
@@ -3844,15 +4282,17 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
      */
-    @java.lang.Deprecated public com.google.protobuf.AnyOrBuilder getServiceDataOrBuilder() {
+    @java.lang.Deprecated
+    public com.google.protobuf.AnyOrBuilder getServiceDataOrBuilder() {
       if (serviceDataBuilder_ != null) {
         return serviceDataBuilder_.getMessageOrBuilder();
       } else {
-        return serviceData_ == null ?
-            com.google.protobuf.Any.getDefaultInstance() : serviceData_;
+        return serviceData_ == null ? com.google.protobuf.Any.getDefaultInstance() : serviceData_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Deprecated. Use the `metadata` field instead.
      * Other service-specific data about the request, response, and other
@@ -3862,21 +4302,24 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+            com.google.protobuf.Any,
+            com.google.protobuf.Any.Builder,
+            com.google.protobuf.AnyOrBuilder>
         getServiceDataFieldBuilder() {
       if (serviceDataBuilder_ == null) {
-        serviceDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
-                getServiceData(),
-                getParentForChildren(),
-                isClean());
+        serviceDataBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Any,
+                com.google.protobuf.Any.Builder,
+                com.google.protobuf.AnyOrBuilder>(
+                getServiceData(), getParentForChildren(), isClean());
         serviceData_ = null;
       }
       return serviceDataBuilder_;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -3886,12 +4329,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.cloud.audit.AuditLog)
   }
 
   // @@protoc_insertion_point(class_scope:google.cloud.audit.AuditLog)
   private static final com.google.cloud.audit.AuditLog DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.cloud.audit.AuditLog();
   }
@@ -3900,16 +4343,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AuditLog>
-      PARSER = new com.google.protobuf.AbstractParser<AuditLog>() {
-    @java.lang.Override
-    public AuditLog parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AuditLog(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<AuditLog> PARSER =
+      new com.google.protobuf.AbstractParser<AuditLog>() {
+        @java.lang.Override
+        public AuditLog parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AuditLog(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<AuditLog> parser() {
     return PARSER;
@@ -3924,6 +4367,4 @@ private static final long serialVersionUID = 0L;
   public com.google.cloud.audit.AuditLog getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

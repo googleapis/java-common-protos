@@ -19,6 +19,8 @@
 package com.google.type;
 
 /**
+ *
+ *
  * <pre>
  * An object representing a phone number, suitable as an API wire format.
  * This representation:
@@ -43,31 +45,31 @@ package com.google.type;
  *
  * Protobuf type {@code google.type.PhoneNumber}
  */
-public final class PhoneNumber extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class PhoneNumber extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.type.PhoneNumber)
     PhoneNumberOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use PhoneNumber.newBuilder() to construct.
   private PhoneNumber(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private PhoneNumber() {
     extension_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new PhoneNumber();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private PhoneNumber(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -86,69 +88,76 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-            kindCase_ = 1;
-            kind_ = s;
-            break;
-          }
-          case 18: {
-            com.google.type.PhoneNumber.ShortCode.Builder subBuilder = null;
-            if (kindCase_ == 2) {
-              subBuilder = ((com.google.type.PhoneNumber.ShortCode) kind_).toBuilder();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              kindCase_ = 1;
+              kind_ = s;
+              break;
             }
-            kind_ =
-                input.readMessage(com.google.type.PhoneNumber.ShortCode.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.type.PhoneNumber.ShortCode) kind_);
-              kind_ = subBuilder.buildPartial();
+          case 18:
+            {
+              com.google.type.PhoneNumber.ShortCode.Builder subBuilder = null;
+              if (kindCase_ == 2) {
+                subBuilder = ((com.google.type.PhoneNumber.ShortCode) kind_).toBuilder();
+              }
+              kind_ =
+                  input.readMessage(
+                      com.google.type.PhoneNumber.ShortCode.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.type.PhoneNumber.ShortCode) kind_);
+                kind_ = subBuilder.buildPartial();
+              }
+              kindCase_ = 2;
+              break;
             }
-            kindCase_ = 2;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 26:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            extension_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+              extension_ = s;
+              break;
             }
-            break;
-          }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_fieldAccessorTable
+    return com.google.type.PhoneNumberProto
+        .internal_static_google_type_PhoneNumber_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.type.PhoneNumber.class, com.google.type.PhoneNumber.Builder.class);
   }
 
-  public interface ShortCodeOrBuilder extends
+  public interface ShortCodeOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:google.type.PhoneNumber.ShortCode)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Required. The BCP-47 region code of the location where calls to this
      * short code can be made, such as "US" and "BB".
@@ -157,10 +166,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_code = 1;</code>
+     *
      * @return The regionCode.
      */
     java.lang.String getRegionCode();
     /**
+     *
+     *
      * <pre>
      * Required. The BCP-47 region code of the location where calls to this
      * short code can be made, such as "US" and "BB".
@@ -169,34 +181,41 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_code = 1;</code>
+     *
      * @return The bytes for regionCode.
      */
-    com.google.protobuf.ByteString
-        getRegionCodeBytes();
+    com.google.protobuf.ByteString getRegionCodeBytes();
 
     /**
+     *
+     *
      * <pre>
      * Required. The short code digits, without a leading plus ('+') or country
      * calling code, e.g. "611".
      * </pre>
      *
      * <code>string number = 2;</code>
+     *
      * @return The number.
      */
     java.lang.String getNumber();
     /**
+     *
+     *
      * <pre>
      * Required. The short code digits, without a leading plus ('+') or country
      * calling code, e.g. "611".
      * </pre>
      *
      * <code>string number = 2;</code>
+     *
      * @return The bytes for number.
      */
-    com.google.protobuf.ByteString
-        getNumberBytes();
+    com.google.protobuf.ByteString getNumberBytes();
   }
   /**
+   *
+   *
    * <pre>
    * An object representing a short code, which is a phone number that is
    * typically much shorter than regular phone numbers and can be used to
@@ -210,15 +229,16 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.type.PhoneNumber.ShortCode}
    */
-  public static final class ShortCode extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class ShortCode extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:google.type.PhoneNumber.ShortCode)
       ShortCodeOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use ShortCode.newBuilder() to construct.
     private ShortCode(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private ShortCode() {
       regionCode_ = "";
       number_ = "";
@@ -226,16 +246,15 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new ShortCode();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private ShortCode(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -254,53 +273,59 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              regionCode_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              number_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                regionCode_ = s;
+                break;
               }
-              break;
-            }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                number_ = s;
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_ShortCode_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.type.PhoneNumberProto
+          .internal_static_google_type_PhoneNumber_ShortCode_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_ShortCode_fieldAccessorTable
+      return com.google.type.PhoneNumberProto
+          .internal_static_google_type_PhoneNumber_ShortCode_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.type.PhoneNumber.ShortCode.class, com.google.type.PhoneNumber.ShortCode.Builder.class);
+              com.google.type.PhoneNumber.ShortCode.class,
+              com.google.type.PhoneNumber.ShortCode.Builder.class);
     }
 
     public static final int REGION_CODE_FIELD_NUMBER = 1;
     private volatile java.lang.Object regionCode_;
     /**
+     *
+     *
      * <pre>
      * Required. The BCP-47 region code of the location where calls to this
      * short code can be made, such as "US" and "BB".
@@ -309,6 +334,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_code = 1;</code>
+     *
      * @return The regionCode.
      */
     @java.lang.Override
@@ -317,14 +343,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         regionCode_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Required. The BCP-47 region code of the location where calls to this
      * short code can be made, such as "US" and "BB".
@@ -333,16 +360,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_code = 1;</code>
+     *
      * @return The bytes for regionCode.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRegionCodeBytes() {
+    public com.google.protobuf.ByteString getRegionCodeBytes() {
       java.lang.Object ref = regionCode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         regionCode_ = b;
         return b;
       } else {
@@ -353,12 +379,15 @@ private static final long serialVersionUID = 0L;
     public static final int NUMBER_FIELD_NUMBER = 2;
     private volatile java.lang.Object number_;
     /**
+     *
+     *
      * <pre>
      * Required. The short code digits, without a leading plus ('+') or country
      * calling code, e.g. "611".
      * </pre>
      *
      * <code>string number = 2;</code>
+     *
      * @return The number.
      */
     @java.lang.Override
@@ -367,30 +396,30 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         number_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Required. The short code digits, without a leading plus ('+') or country
      * calling code, e.g. "611".
      * </pre>
      *
      * <code>string number = 2;</code>
+     *
      * @return The bytes for number.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNumberBytes() {
+    public com.google.protobuf.ByteString getNumberBytes() {
       java.lang.Object ref = number_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         number_ = b;
         return b;
       } else {
@@ -399,6 +428,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -410,8 +440,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (!getRegionCodeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, regionCode_);
       }
@@ -441,17 +470,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.google.type.PhoneNumber.ShortCode)) {
         return super.equals(obj);
       }
       com.google.type.PhoneNumber.ShortCode other = (com.google.type.PhoneNumber.ShortCode) obj;
 
-      if (!getRegionCode()
-          .equals(other.getRegionCode())) return false;
-      if (!getNumber()
-          .equals(other.getNumber())) return false;
+      if (!getRegionCode().equals(other.getRegionCode())) return false;
+      if (!getNumber().equals(other.getNumber())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -472,88 +499,94 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static com.google.type.PhoneNumber.ShortCode parseFrom(
-        java.nio.ByteBuffer data)
+    public static com.google.type.PhoneNumber.ShortCode parseFrom(java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.type.PhoneNumber.ShortCode parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.type.PhoneNumber.ShortCode parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.type.PhoneNumber.ShortCode parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.type.PhoneNumber.ShortCode parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.type.PhoneNumber.ShortCode parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.type.PhoneNumber.ShortCode parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.type.PhoneNumber.ShortCode parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
-    public static com.google.type.PhoneNumber.ShortCode parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
+
     public static com.google.type.PhoneNumber.ShortCode parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.google.type.PhoneNumber.ShortCode parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.google.type.PhoneNumber.ShortCode parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.type.PhoneNumber.ShortCode parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.google.type.PhoneNumber.ShortCode prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -563,6 +596,8 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * An object representing a short code, which is a phone number that is
      * typically much shorter than regular phone numbers and can be used to
@@ -576,21 +611,24 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code google.type.PhoneNumber.ShortCode}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:google.type.PhoneNumber.ShortCode)
         com.google.type.PhoneNumber.ShortCodeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_ShortCode_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.google.type.PhoneNumberProto
+            .internal_static_google_type_PhoneNumber_ShortCode_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_ShortCode_fieldAccessorTable
+        return com.google.type.PhoneNumberProto
+            .internal_static_google_type_PhoneNumber_ShortCode_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.type.PhoneNumber.ShortCode.class, com.google.type.PhoneNumber.ShortCode.Builder.class);
+                com.google.type.PhoneNumber.ShortCode.class,
+                com.google.type.PhoneNumber.ShortCode.Builder.class);
       }
 
       // Construct using com.google.type.PhoneNumber.ShortCode.newBuilder()
@@ -598,16 +636,15 @@ private static final long serialVersionUID = 0L;
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -619,9 +656,9 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_ShortCode_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.google.type.PhoneNumberProto
+            .internal_static_google_type_PhoneNumber_ShortCode_descriptor;
       }
 
       @java.lang.Override
@@ -640,7 +677,8 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public com.google.type.PhoneNumber.ShortCode buildPartial() {
-        com.google.type.PhoneNumber.ShortCode result = new com.google.type.PhoneNumber.ShortCode(this);
+        com.google.type.PhoneNumber.ShortCode result =
+            new com.google.type.PhoneNumber.ShortCode(this);
         result.regionCode_ = regionCode_;
         result.number_ = number_;
         onBuilt();
@@ -651,38 +689,41 @@ private static final long serialVersionUID = 0L;
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.type.PhoneNumber.ShortCode) {
-          return mergeFrom((com.google.type.PhoneNumber.ShortCode)other);
+          return mergeFrom((com.google.type.PhoneNumber.ShortCode) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -730,6 +771,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object regionCode_ = "";
       /**
+       *
+       *
        * <pre>
        * Required. The BCP-47 region code of the location where calls to this
        * short code can be made, such as "US" and "BB".
@@ -738,13 +781,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 1;</code>
+       *
        * @return The regionCode.
        */
       public java.lang.String getRegionCode() {
         java.lang.Object ref = regionCode_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           regionCode_ = s;
           return s;
@@ -753,6 +796,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Required. The BCP-47 region code of the location where calls to this
        * short code can be made, such as "US" and "BB".
@@ -761,15 +806,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 1;</code>
+       *
        * @return The bytes for regionCode.
        */
-      public com.google.protobuf.ByteString
-          getRegionCodeBytes() {
+      public com.google.protobuf.ByteString getRegionCodeBytes() {
         java.lang.Object ref = regionCode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           regionCode_ = b;
           return b;
         } else {
@@ -777,6 +821,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Required. The BCP-47 region code of the location where calls to this
        * short code can be made, such as "US" and "BB".
@@ -785,20 +831,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 1;</code>
+       *
        * @param value The regionCode to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionCode(
-          java.lang.String value) {
+      public Builder setRegionCode(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         regionCode_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Required. The BCP-47 region code of the location where calls to this
        * short code can be made, such as "US" and "BB".
@@ -807,15 +855,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 1;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearRegionCode() {
-        
+
         regionCode_ = getDefaultInstance().getRegionCode();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Required. The BCP-47 region code of the location where calls to this
        * short code can be made, such as "US" and "BB".
@@ -824,16 +875,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 1;</code>
+       *
        * @param value The bytes for regionCode to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionCodeBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setRegionCodeBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         regionCode_ = value;
         onChanged();
         return this;
@@ -841,19 +892,21 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object number_ = "";
       /**
+       *
+       *
        * <pre>
        * Required. The short code digits, without a leading plus ('+') or country
        * calling code, e.g. "611".
        * </pre>
        *
        * <code>string number = 2;</code>
+       *
        * @return The number.
        */
       public java.lang.String getNumber() {
         java.lang.Object ref = number_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           number_ = s;
           return s;
@@ -862,21 +915,22 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Required. The short code digits, without a leading plus ('+') or country
        * calling code, e.g. "611".
        * </pre>
        *
        * <code>string number = 2;</code>
+       *
        * @return The bytes for number.
        */
-      public com.google.protobuf.ByteString
-          getNumberBytes() {
+      public com.google.protobuf.ByteString getNumberBytes() {
         java.lang.Object ref = number_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           number_ = b;
           return b;
         } else {
@@ -884,61 +938,69 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Required. The short code digits, without a leading plus ('+') or country
        * calling code, e.g. "611".
        * </pre>
        *
        * <code>string number = 2;</code>
+       *
        * @param value The number to set.
        * @return This builder for chaining.
        */
-      public Builder setNumber(
-          java.lang.String value) {
+      public Builder setNumber(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         number_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Required. The short code digits, without a leading plus ('+') or country
        * calling code, e.g. "611".
        * </pre>
        *
        * <code>string number = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearNumber() {
-        
+
         number_ = getDefaultInstance().getNumber();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Required. The short code digits, without a leading plus ('+') or country
        * calling code, e.g. "611".
        * </pre>
        *
        * <code>string number = 2;</code>
+       *
        * @param value The bytes for number to set.
        * @return This builder for chaining.
        */
-      public Builder setNumberBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setNumberBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         number_ = value;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -951,12 +1013,12 @@ private static final long serialVersionUID = 0L;
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:google.type.PhoneNumber.ShortCode)
     }
 
     // @@protoc_insertion_point(class_scope:google.type.PhoneNumber.ShortCode)
     private static final com.google.type.PhoneNumber.ShortCode DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.google.type.PhoneNumber.ShortCode();
     }
@@ -965,16 +1027,16 @@ private static final long serialVersionUID = 0L;
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ShortCode>
-        PARSER = new com.google.protobuf.AbstractParser<ShortCode>() {
-      @java.lang.Override
-      public ShortCode parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ShortCode(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<ShortCode> PARSER =
+        new com.google.protobuf.AbstractParser<ShortCode>() {
+          @java.lang.Override
+          public ShortCode parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new ShortCode(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<ShortCode> parser() {
       return PARSER;
@@ -989,18 +1051,20 @@ private static final long serialVersionUID = 0L;
     public com.google.type.PhoneNumber.ShortCode getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
   private int kindCase_ = 0;
   private java.lang.Object kind_;
+
   public enum KindCase
-      implements com.google.protobuf.Internal.EnumLite,
+      implements
+          com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     E164_NUMBER(1),
     SHORT_CODE(2),
     KIND_NOT_SET(0);
     private final int value;
+
     private KindCase(int value) {
       this.value = value;
     }
@@ -1016,25 +1080,30 @@ private static final long serialVersionUID = 0L;
 
     public static KindCase forNumber(int value) {
       switch (value) {
-        case 1: return E164_NUMBER;
-        case 2: return SHORT_CODE;
-        case 0: return KIND_NOT_SET;
-        default: return null;
+        case 1:
+          return E164_NUMBER;
+        case 2:
+          return SHORT_CODE;
+        case 0:
+          return KIND_NOT_SET;
+        default:
+          return null;
       }
     }
+
     public int getNumber() {
       return this.value;
     }
   };
 
-  public KindCase
-  getKindCase() {
-    return KindCase.forNumber(
-        kindCase_);
+  public KindCase getKindCase() {
+    return KindCase.forNumber(kindCase_);
   }
 
   public static final int E164_NUMBER_FIELD_NUMBER = 1;
   /**
+   *
+   *
    * <pre>
    * The phone number, represented as a leading plus sign ('+'), followed by a
    * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -1052,12 +1121,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string e164_number = 1;</code>
+   *
    * @return Whether the e164Number field is set.
    */
   public boolean hasE164Number() {
     return kindCase_ == 1;
   }
   /**
+   *
+   *
    * <pre>
    * The phone number, represented as a leading plus sign ('+'), followed by a
    * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -1075,6 +1147,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string e164_number = 1;</code>
+   *
    * @return The e164Number.
    */
   public java.lang.String getE164Number() {
@@ -1085,8 +1158,7 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       if (kindCase_ == 1) {
         kind_ = s;
@@ -1095,6 +1167,8 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The phone number, represented as a leading plus sign ('+'), followed by a
    * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -1112,18 +1186,17 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string e164_number = 1;</code>
+   *
    * @return The bytes for e164Number.
    */
-  public com.google.protobuf.ByteString
-      getE164NumberBytes() {
+  public com.google.protobuf.ByteString getE164NumberBytes() {
     java.lang.Object ref = "";
     if (kindCase_ == 1) {
       ref = kind_;
     }
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       if (kindCase_ == 1) {
         kind_ = b;
       }
@@ -1135,6 +1208,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SHORT_CODE_FIELD_NUMBER = 2;
   /**
+   *
+   *
    * <pre>
    * A short code.
    * Reference(s):
@@ -1142,6 +1217,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.type.PhoneNumber.ShortCode short_code = 2;</code>
+   *
    * @return Whether the shortCode field is set.
    */
   @java.lang.Override
@@ -1149,6 +1225,8 @@ private static final long serialVersionUID = 0L;
     return kindCase_ == 2;
   }
   /**
+   *
+   *
    * <pre>
    * A short code.
    * Reference(s):
@@ -1156,16 +1234,19 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.type.PhoneNumber.ShortCode short_code = 2;</code>
+   *
    * @return The shortCode.
    */
   @java.lang.Override
   public com.google.type.PhoneNumber.ShortCode getShortCode() {
     if (kindCase_ == 2) {
-       return (com.google.type.PhoneNumber.ShortCode) kind_;
+      return (com.google.type.PhoneNumber.ShortCode) kind_;
     }
     return com.google.type.PhoneNumber.ShortCode.getDefaultInstance();
   }
   /**
+   *
+   *
    * <pre>
    * A short code.
    * Reference(s):
@@ -1177,7 +1258,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.type.PhoneNumber.ShortCodeOrBuilder getShortCodeOrBuilder() {
     if (kindCase_ == 2) {
-       return (com.google.type.PhoneNumber.ShortCode) kind_;
+      return (com.google.type.PhoneNumber.ShortCode) kind_;
     }
     return com.google.type.PhoneNumber.ShortCode.getDefaultInstance();
   }
@@ -1185,6 +1266,8 @@ private static final long serialVersionUID = 0L;
   public static final int EXTENSION_FIELD_NUMBER = 3;
   private volatile java.lang.Object extension_;
   /**
+   *
+   *
    * <pre>
    * The phone number's extension. The extension is not standardized in ITU
    * recommendations, except for being defined as a series of numbers with a
@@ -1197,6 +1280,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string extension = 3;</code>
+   *
    * @return The extension.
    */
   @java.lang.Override
@@ -1205,14 +1289,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       extension_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The phone number's extension. The extension is not standardized in ITU
    * recommendations, except for being defined as a series of numbers with a
@@ -1225,16 +1310,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string extension = 3;</code>
+   *
    * @return The bytes for extension.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getExtensionBytes() {
+  public com.google.protobuf.ByteString getExtensionBytes() {
     java.lang.Object ref = extension_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       extension_ = b;
       return b;
     } else {
@@ -1243,6 +1327,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -1254,8 +1339,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (kindCase_ == 1) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, kind_);
     }
@@ -1278,8 +1362,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, kind_);
     }
     if (kindCase_ == 2) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (com.google.type.PhoneNumber.ShortCode) kind_);
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(
+              2, (com.google.type.PhoneNumber.ShortCode) kind_);
     }
     if (!getExtensionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, extension_);
@@ -1292,24 +1377,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.type.PhoneNumber)) {
       return super.equals(obj);
     }
     com.google.type.PhoneNumber other = (com.google.type.PhoneNumber) obj;
 
-    if (!getExtension()
-        .equals(other.getExtension())) return false;
+    if (!getExtension().equals(other.getExtension())) return false;
     if (!getKindCase().equals(other.getKindCase())) return false;
     switch (kindCase_) {
       case 1:
-        if (!getE164Number()
-            .equals(other.getE164Number())) return false;
+        if (!getE164Number().equals(other.getE164Number())) return false;
         break;
       case 2:
-        if (!getShortCode()
-            .equals(other.getShortCode())) return false;
+        if (!getShortCode().equals(other.getShortCode())) return false;
         break;
       case 0:
       default:
@@ -1344,97 +1426,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.type.PhoneNumber parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.type.PhoneNumber parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.type.PhoneNumber parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.type.PhoneNumber parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.type.PhoneNumber parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.type.PhoneNumber parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.type.PhoneNumber parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.type.PhoneNumber parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.type.PhoneNumber parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.type.PhoneNumber parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.type.PhoneNumber parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.type.PhoneNumber parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.type.PhoneNumber parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.type.PhoneNumber parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.type.PhoneNumber parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.type.PhoneNumber prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * An object representing a phone number, suitable as an API wire format.
    * This representation:
@@ -1459,19 +1547,19 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.type.PhoneNumber}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.type.PhoneNumber)
       com.google.type.PhoneNumberOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_fieldAccessorTable
+      return com.google.type.PhoneNumberProto
+          .internal_static_google_type_PhoneNumber_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.type.PhoneNumber.class, com.google.type.PhoneNumber.Builder.class);
     }
@@ -1481,16 +1569,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1502,8 +1589,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.type.PhoneNumberProto.internal_static_google_type_PhoneNumber_descriptor;
     }
 
@@ -1544,38 +1630,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.type.PhoneNumber) {
-        return mergeFrom((com.google.type.PhoneNumber)other);
+        return mergeFrom((com.google.type.PhoneNumber) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1589,19 +1676,22 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       switch (other.getKindCase()) {
-        case E164_NUMBER: {
-          kindCase_ = 1;
-          kind_ = other.kind_;
-          onChanged();
-          break;
-        }
-        case SHORT_CODE: {
-          mergeShortCode(other.getShortCode());
-          break;
-        }
-        case KIND_NOT_SET: {
-          break;
-        }
+        case E164_NUMBER:
+          {
+            kindCase_ = 1;
+            kind_ = other.kind_;
+            onChanged();
+            break;
+          }
+        case SHORT_CODE:
+          {
+            mergeShortCode(other.getShortCode());
+            break;
+          }
+        case KIND_NOT_SET:
+          {
+            break;
+          }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1631,12 +1721,12 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int kindCase_ = 0;
     private java.lang.Object kind_;
-    public KindCase
-        getKindCase() {
-      return KindCase.forNumber(
-          kindCase_);
+
+    public KindCase getKindCase() {
+      return KindCase.forNumber(kindCase_);
     }
 
     public Builder clearKind() {
@@ -1646,8 +1736,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-
     /**
+     *
+     *
      * <pre>
      * The phone number, represented as a leading plus sign ('+'), followed by a
      * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -1665,6 +1756,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string e164_number = 1;</code>
+     *
      * @return Whether the e164Number field is set.
      */
     @java.lang.Override
@@ -1672,6 +1764,8 @@ private static final long serialVersionUID = 0L;
       return kindCase_ == 1;
     }
     /**
+     *
+     *
      * <pre>
      * The phone number, represented as a leading plus sign ('+'), followed by a
      * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -1689,6 +1783,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string e164_number = 1;</code>
+     *
      * @return The e164Number.
      */
     @java.lang.Override
@@ -1698,8 +1793,7 @@ private static final long serialVersionUID = 0L;
         ref = kind_;
       }
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (kindCase_ == 1) {
           kind_ = s;
@@ -1710,6 +1804,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The phone number, represented as a leading plus sign ('+'), followed by a
      * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -1727,19 +1823,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string e164_number = 1;</code>
+     *
      * @return The bytes for e164Number.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getE164NumberBytes() {
+    public com.google.protobuf.ByteString getE164NumberBytes() {
       java.lang.Object ref = "";
       if (kindCase_ == 1) {
         ref = kind_;
       }
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         if (kindCase_ == 1) {
           kind_ = b;
         }
@@ -1749,6 +1844,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The phone number, represented as a leading plus sign ('+'), followed by a
      * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -1766,20 +1863,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string e164_number = 1;</code>
+     *
      * @param value The e164Number to set.
      * @return This builder for chaining.
      */
-    public Builder setE164Number(
-        java.lang.String value) {
+    public Builder setE164Number(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  kindCase_ = 1;
+        throw new NullPointerException();
+      }
+      kindCase_ = 1;
       kind_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The phone number, represented as a leading plus sign ('+'), followed by a
      * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -1797,6 +1896,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string e164_number = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearE164Number() {
@@ -1808,6 +1908,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The phone number, represented as a leading plus sign ('+'), followed by a
      * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -1825,15 +1927,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string e164_number = 1;</code>
+     *
      * @param value The bytes for e164Number to set.
      * @return This builder for chaining.
      */
-    public Builder setE164NumberBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setE164NumberBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       kindCase_ = 1;
       kind_ = value;
       onChanged();
@@ -1841,8 +1943,13 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.type.PhoneNumber.ShortCode, com.google.type.PhoneNumber.ShortCode.Builder, com.google.type.PhoneNumber.ShortCodeOrBuilder> shortCodeBuilder_;
+            com.google.type.PhoneNumber.ShortCode,
+            com.google.type.PhoneNumber.ShortCode.Builder,
+            com.google.type.PhoneNumber.ShortCodeOrBuilder>
+        shortCodeBuilder_;
     /**
+     *
+     *
      * <pre>
      * A short code.
      * Reference(s):
@@ -1850,6 +1957,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.type.PhoneNumber.ShortCode short_code = 2;</code>
+     *
      * @return Whether the shortCode field is set.
      */
     @java.lang.Override
@@ -1857,6 +1965,8 @@ private static final long serialVersionUID = 0L;
       return kindCase_ == 2;
     }
     /**
+     *
+     *
      * <pre>
      * A short code.
      * Reference(s):
@@ -1864,6 +1974,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.type.PhoneNumber.ShortCode short_code = 2;</code>
+     *
      * @return The shortCode.
      */
     @java.lang.Override
@@ -1881,6 +1992,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A short code.
      * Reference(s):
@@ -1903,6 +2016,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A short code.
      * Reference(s):
@@ -1911,8 +2026,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.type.PhoneNumber.ShortCode short_code = 2;</code>
      */
-    public Builder setShortCode(
-        com.google.type.PhoneNumber.ShortCode.Builder builderForValue) {
+    public Builder setShortCode(com.google.type.PhoneNumber.ShortCode.Builder builderForValue) {
       if (shortCodeBuilder_ == null) {
         kind_ = builderForValue.build();
         onChanged();
@@ -1923,6 +2037,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A short code.
      * Reference(s):
@@ -1933,10 +2049,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeShortCode(com.google.type.PhoneNumber.ShortCode value) {
       if (shortCodeBuilder_ == null) {
-        if (kindCase_ == 2 &&
-            kind_ != com.google.type.PhoneNumber.ShortCode.getDefaultInstance()) {
-          kind_ = com.google.type.PhoneNumber.ShortCode.newBuilder((com.google.type.PhoneNumber.ShortCode) kind_)
-              .mergeFrom(value).buildPartial();
+        if (kindCase_ == 2 && kind_ != com.google.type.PhoneNumber.ShortCode.getDefaultInstance()) {
+          kind_ =
+              com.google.type.PhoneNumber.ShortCode.newBuilder(
+                      (com.google.type.PhoneNumber.ShortCode) kind_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           kind_ = value;
         }
@@ -1951,6 +2069,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A short code.
      * Reference(s):
@@ -1976,6 +2096,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A short code.
      * Reference(s):
@@ -1988,6 +2110,8 @@ private static final long serialVersionUID = 0L;
       return getShortCodeFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * A short code.
      * Reference(s):
@@ -2008,6 +2132,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A short code.
      * Reference(s):
@@ -2017,26 +2143,32 @@ private static final long serialVersionUID = 0L;
      * <code>.google.type.PhoneNumber.ShortCode short_code = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.type.PhoneNumber.ShortCode, com.google.type.PhoneNumber.ShortCode.Builder, com.google.type.PhoneNumber.ShortCodeOrBuilder> 
+            com.google.type.PhoneNumber.ShortCode,
+            com.google.type.PhoneNumber.ShortCode.Builder,
+            com.google.type.PhoneNumber.ShortCodeOrBuilder>
         getShortCodeFieldBuilder() {
       if (shortCodeBuilder_ == null) {
         if (!(kindCase_ == 2)) {
           kind_ = com.google.type.PhoneNumber.ShortCode.getDefaultInstance();
         }
-        shortCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.type.PhoneNumber.ShortCode, com.google.type.PhoneNumber.ShortCode.Builder, com.google.type.PhoneNumber.ShortCodeOrBuilder>(
-                (com.google.type.PhoneNumber.ShortCode) kind_,
-                getParentForChildren(),
-                isClean());
+        shortCodeBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.type.PhoneNumber.ShortCode,
+                com.google.type.PhoneNumber.ShortCode.Builder,
+                com.google.type.PhoneNumber.ShortCodeOrBuilder>(
+                (com.google.type.PhoneNumber.ShortCode) kind_, getParentForChildren(), isClean());
         kind_ = null;
       }
       kindCase_ = 2;
-      onChanged();;
+      onChanged();
+      ;
       return shortCodeBuilder_;
     }
 
     private java.lang.Object extension_ = "";
     /**
+     *
+     *
      * <pre>
      * The phone number's extension. The extension is not standardized in ITU
      * recommendations, except for being defined as a series of numbers with a
@@ -2049,13 +2181,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string extension = 3;</code>
+     *
      * @return The extension.
      */
     public java.lang.String getExtension() {
       java.lang.Object ref = extension_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         extension_ = s;
         return s;
@@ -2064,6 +2196,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The phone number's extension. The extension is not standardized in ITU
      * recommendations, except for being defined as a series of numbers with a
@@ -2076,15 +2210,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string extension = 3;</code>
+     *
      * @return The bytes for extension.
      */
-    public com.google.protobuf.ByteString
-        getExtensionBytes() {
+    public com.google.protobuf.ByteString getExtensionBytes() {
       java.lang.Object ref = extension_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         extension_ = b;
         return b;
       } else {
@@ -2092,6 +2225,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The phone number's extension. The extension is not standardized in ITU
      * recommendations, except for being defined as a series of numbers with a
@@ -2104,20 +2239,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string extension = 3;</code>
+     *
      * @param value The extension to set.
      * @return This builder for chaining.
      */
-    public Builder setExtension(
-        java.lang.String value) {
+    public Builder setExtension(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       extension_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The phone number's extension. The extension is not standardized in ITU
      * recommendations, except for being defined as a series of numbers with a
@@ -2130,15 +2267,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string extension = 3;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearExtension() {
-      
+
       extension_ = getDefaultInstance().getExtension();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The phone number's extension. The extension is not standardized in ITU
      * recommendations, except for being defined as a series of numbers with a
@@ -2151,23 +2291,23 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string extension = 3;</code>
+     *
      * @param value The bytes for extension to set.
      * @return This builder for chaining.
      */
-    public Builder setExtensionBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setExtensionBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       extension_ = value;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -2177,12 +2317,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.type.PhoneNumber)
   }
 
   // @@protoc_insertion_point(class_scope:google.type.PhoneNumber)
   private static final com.google.type.PhoneNumber DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.type.PhoneNumber();
   }
@@ -2191,16 +2331,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PhoneNumber>
-      PARSER = new com.google.protobuf.AbstractParser<PhoneNumber>() {
-    @java.lang.Override
-    public PhoneNumber parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PhoneNumber(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<PhoneNumber> PARSER =
+      new com.google.protobuf.AbstractParser<PhoneNumber>() {
+        @java.lang.Override
+        public PhoneNumber parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new PhoneNumber(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<PhoneNumber> parser() {
     return PARSER;
@@ -2215,6 +2355,4 @@ private static final long serialVersionUID = 0L;
   public com.google.type.PhoneNumber getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

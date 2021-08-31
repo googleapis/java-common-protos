@@ -18,11 +18,14 @@
 
 package com.google.longrunning;
 
-public interface OperationOrBuilder extends
+public interface OperationOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.longrunning.Operation)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The server-assigned name, which is only unique within the same service that
    * originally returns it. If you use the default HTTP mapping, the
@@ -30,10 +33,13 @@ public interface OperationOrBuilder extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The name.
    */
   java.lang.String getName();
   /**
+   *
+   *
    * <pre>
    * The server-assigned name, which is only unique within the same service that
    * originally returns it. If you use the default HTTP mapping, the
@@ -41,12 +47,14 @@ public interface OperationOrBuilder extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString
-      getNameBytes();
+  com.google.protobuf.ByteString getNameBytes();
 
   /**
+   *
+   *
    * <pre>
    * Service-specific metadata associated with the operation.  It typically
    * contains progress information and common metadata such as create time.
@@ -55,10 +63,13 @@ public interface OperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Any metadata = 2;</code>
+   *
    * @return Whether the metadata field is set.
    */
   boolean hasMetadata();
   /**
+   *
+   *
    * <pre>
    * Service-specific metadata associated with the operation.  It typically
    * contains progress information and common metadata such as create time.
@@ -67,10 +78,13 @@ public interface OperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Any metadata = 2;</code>
+   *
    * @return The metadata.
    */
   com.google.protobuf.Any getMetadata();
   /**
+   *
+   *
    * <pre>
    * Service-specific metadata associated with the operation.  It typically
    * contains progress information and common metadata such as create time.
@@ -83,6 +97,8 @@ public interface OperationOrBuilder extends
   com.google.protobuf.AnyOrBuilder getMetadataOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * If the value is `false`, it means the operation is still in progress.
    * If `true`, the operation is completed, and either `error` or `response` is
@@ -90,29 +106,38 @@ public interface OperationOrBuilder extends
    * </pre>
    *
    * <code>bool done = 3;</code>
+   *
    * @return The done.
    */
   boolean getDone();
 
   /**
+   *
+   *
    * <pre>
    * The error result of the operation in case of failure or cancellation.
    * </pre>
    *
    * <code>.google.rpc.Status error = 4;</code>
+   *
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
+   *
+   *
    * <pre>
    * The error result of the operation in case of failure or cancellation.
    * </pre>
    *
    * <code>.google.rpc.Status error = 4;</code>
+   *
    * @return The error.
    */
   com.google.rpc.Status getError();
   /**
+   *
+   *
    * <pre>
    * The error result of the operation in case of failure or cancellation.
    * </pre>
@@ -122,6 +147,8 @@ public interface OperationOrBuilder extends
   com.google.rpc.StatusOrBuilder getErrorOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * The normal response of the operation in case of success.  If the original
    * method returns no data on success, such as `Delete`, the response is
@@ -134,10 +161,13 @@ public interface OperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Any response = 5;</code>
+   *
    * @return Whether the response field is set.
    */
   boolean hasResponse();
   /**
+   *
+   *
    * <pre>
    * The normal response of the operation in case of success.  If the original
    * method returns no data on success, such as `Delete`, the response is
@@ -150,10 +180,13 @@ public interface OperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Any response = 5;</code>
+   *
    * @return The response.
    */
   com.google.protobuf.Any getResponse();
   /**
+   *
+   *
    * <pre>
    * The normal response of the operation in case of success.  If the original
    * method returns no data on success, such as `Delete`, the response is

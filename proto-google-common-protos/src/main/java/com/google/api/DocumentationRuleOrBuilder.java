@@ -18,11 +18,14 @@
 
 package com.google.api;
 
-public interface DocumentationRuleOrBuilder extends
+public interface DocumentationRuleOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.DocumentationRule)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The selector is a comma-separated list of patterns. Each pattern is a
    * qualified name of the element which may end in "*", indicating a wildcard.
@@ -33,10 +36,13 @@ public interface DocumentationRuleOrBuilder extends
    * </pre>
    *
    * <code>string selector = 1;</code>
+   *
    * @return The selector.
    */
   java.lang.String getSelector();
   /**
+   *
+   *
    * <pre>
    * The selector is a comma-separated list of patterns. Each pattern is a
    * qualified name of the element which may end in "*", indicating a wildcard.
@@ -47,50 +53,60 @@ public interface DocumentationRuleOrBuilder extends
    * </pre>
    *
    * <code>string selector = 1;</code>
+   *
    * @return The bytes for selector.
    */
-  com.google.protobuf.ByteString
-      getSelectorBytes();
+  com.google.protobuf.ByteString getSelectorBytes();
 
   /**
+   *
+   *
    * <pre>
    * Description of the selected API(s).
    * </pre>
    *
    * <code>string description = 2;</code>
+   *
    * @return The description.
    */
   java.lang.String getDescription();
   /**
+   *
+   *
    * <pre>
    * Description of the selected API(s).
    * </pre>
    *
    * <code>string description = 2;</code>
+   *
    * @return The bytes for description.
    */
-  com.google.protobuf.ByteString
-      getDescriptionBytes();
+  com.google.protobuf.ByteString getDescriptionBytes();
 
   /**
+   *
+   *
    * <pre>
    * Deprecation description of the selected element(s). It can be provided if
    * an element is marked as `deprecated`.
    * </pre>
    *
    * <code>string deprecation_description = 3;</code>
+   *
    * @return The deprecationDescription.
    */
   java.lang.String getDeprecationDescription();
   /**
+   *
+   *
    * <pre>
    * Deprecation description of the selected element(s). It can be provided if
    * an element is marked as `deprecated`.
    * </pre>
    *
    * <code>string deprecation_description = 3;</code>
+   *
    * @return The bytes for deprecationDescription.
    */
-  com.google.protobuf.ByteString
-      getDeprecationDescriptionBytes();
+  com.google.protobuf.ByteString getDeprecationDescriptionBytes();
 }

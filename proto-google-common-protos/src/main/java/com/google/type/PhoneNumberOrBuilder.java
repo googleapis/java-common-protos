@@ -18,11 +18,14 @@
 
 package com.google.type;
 
-public interface PhoneNumberOrBuilder extends
+public interface PhoneNumberOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.type.PhoneNumber)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The phone number, represented as a leading plus sign ('+'), followed by a
    * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -40,10 +43,13 @@ public interface PhoneNumberOrBuilder extends
    * </pre>
    *
    * <code>string e164_number = 1;</code>
+   *
    * @return Whether the e164Number field is set.
    */
   boolean hasE164Number();
   /**
+   *
+   *
    * <pre>
    * The phone number, represented as a leading plus sign ('+'), followed by a
    * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -61,10 +67,13 @@ public interface PhoneNumberOrBuilder extends
    * </pre>
    *
    * <code>string e164_number = 1;</code>
+   *
    * @return The e164Number.
    */
   java.lang.String getE164Number();
   /**
+   *
+   *
    * <pre>
    * The phone number, represented as a leading plus sign ('+'), followed by a
    * phone number that uses a relaxed ITU E.164 format consisting of the
@@ -82,12 +91,14 @@ public interface PhoneNumberOrBuilder extends
    * </pre>
    *
    * <code>string e164_number = 1;</code>
+   *
    * @return The bytes for e164Number.
    */
-  com.google.protobuf.ByteString
-      getE164NumberBytes();
+  com.google.protobuf.ByteString getE164NumberBytes();
 
   /**
+   *
+   *
    * <pre>
    * A short code.
    * Reference(s):
@@ -95,10 +106,13 @@ public interface PhoneNumberOrBuilder extends
    * </pre>
    *
    * <code>.google.type.PhoneNumber.ShortCode short_code = 2;</code>
+   *
    * @return Whether the shortCode field is set.
    */
   boolean hasShortCode();
   /**
+   *
+   *
    * <pre>
    * A short code.
    * Reference(s):
@@ -106,10 +120,13 @@ public interface PhoneNumberOrBuilder extends
    * </pre>
    *
    * <code>.google.type.PhoneNumber.ShortCode short_code = 2;</code>
+   *
    * @return The shortCode.
    */
   com.google.type.PhoneNumber.ShortCode getShortCode();
   /**
+   *
+   *
    * <pre>
    * A short code.
    * Reference(s):
@@ -121,6 +138,8 @@ public interface PhoneNumberOrBuilder extends
   com.google.type.PhoneNumber.ShortCodeOrBuilder getShortCodeOrBuilder();
 
   /**
+   *
+   *
    * <pre>
    * The phone number's extension. The extension is not standardized in ITU
    * recommendations, except for being defined as a series of numbers with a
@@ -133,10 +152,13 @@ public interface PhoneNumberOrBuilder extends
    * </pre>
    *
    * <code>string extension = 3;</code>
+   *
    * @return The extension.
    */
   java.lang.String getExtension();
   /**
+   *
+   *
    * <pre>
    * The phone number's extension. The extension is not standardized in ITU
    * recommendations, except for being defined as a series of numbers with a
@@ -149,10 +171,10 @@ public interface PhoneNumberOrBuilder extends
    * </pre>
    *
    * <code>string extension = 3;</code>
+   *
    * @return The bytes for extension.
    */
-  com.google.protobuf.ByteString
-      getExtensionBytes();
+  com.google.protobuf.ByteString getExtensionBytes();
 
   public com.google.type.PhoneNumber.KindCase getKindCase();
 }

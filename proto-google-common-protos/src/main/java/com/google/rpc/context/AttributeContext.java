@@ -19,6 +19,8 @@
 package com.google.rpc.context;
 
 /**
+ *
+ *
  * <pre>
  * This message defines the standard attribute vocabulary for Google APIs.
  * An attribute is a piece of metadata that describes an activity on a network
@@ -37,31 +39,31 @@ package com.google.rpc.context;
  *
  * Protobuf type {@code google.rpc.context.AttributeContext}
  */
-public final class AttributeContext extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class AttributeContext extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.rpc.context.AttributeContext)
     AttributeContextOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use AttributeContext.newBuilder() to construct.
   private AttributeContext(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private AttributeContext() {
     extensions_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new AttributeContext();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private AttributeContext(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -81,120 +83,141 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
-            if (source_ != null) {
-              subBuilder = source_.toBuilder();
-            }
-            source_ = input.readMessage(com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(source_);
-              source_ = subBuilder.buildPartial();
-            }
+          case 10:
+            {
+              com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
+              if (source_ != null) {
+                subBuilder = source_.toBuilder();
+              }
+              source_ =
+                  input.readMessage(
+                      com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(source_);
+                source_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 18: {
-            com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
-            if (destination_ != null) {
-              subBuilder = destination_.toBuilder();
+              break;
             }
-            destination_ = input.readMessage(com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(destination_);
-              destination_ = subBuilder.buildPartial();
-            }
+          case 18:
+            {
+              com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
+              if (destination_ != null) {
+                subBuilder = destination_.toBuilder();
+              }
+              destination_ =
+                  input.readMessage(
+                      com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(destination_);
+                destination_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 26: {
-            com.google.rpc.context.AttributeContext.Request.Builder subBuilder = null;
-            if (request_ != null) {
-              subBuilder = request_.toBuilder();
+              break;
             }
-            request_ = input.readMessage(com.google.rpc.context.AttributeContext.Request.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(request_);
-              request_ = subBuilder.buildPartial();
-            }
+          case 26:
+            {
+              com.google.rpc.context.AttributeContext.Request.Builder subBuilder = null;
+              if (request_ != null) {
+                subBuilder = request_.toBuilder();
+              }
+              request_ =
+                  input.readMessage(
+                      com.google.rpc.context.AttributeContext.Request.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(request_);
+                request_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 34: {
-            com.google.rpc.context.AttributeContext.Response.Builder subBuilder = null;
-            if (response_ != null) {
-              subBuilder = response_.toBuilder();
+              break;
             }
-            response_ = input.readMessage(com.google.rpc.context.AttributeContext.Response.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(response_);
-              response_ = subBuilder.buildPartial();
-            }
+          case 34:
+            {
+              com.google.rpc.context.AttributeContext.Response.Builder subBuilder = null;
+              if (response_ != null) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ =
+                  input.readMessage(
+                      com.google.rpc.context.AttributeContext.Response.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 42: {
-            com.google.rpc.context.AttributeContext.Resource.Builder subBuilder = null;
-            if (resource_ != null) {
-              subBuilder = resource_.toBuilder();
+              break;
             }
-            resource_ = input.readMessage(com.google.rpc.context.AttributeContext.Resource.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(resource_);
-              resource_ = subBuilder.buildPartial();
-            }
+          case 42:
+            {
+              com.google.rpc.context.AttributeContext.Resource.Builder subBuilder = null;
+              if (resource_ != null) {
+                subBuilder = resource_.toBuilder();
+              }
+              resource_ =
+                  input.readMessage(
+                      com.google.rpc.context.AttributeContext.Resource.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resource_);
+                resource_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 50: {
-            com.google.rpc.context.AttributeContext.Api.Builder subBuilder = null;
-            if (api_ != null) {
-              subBuilder = api_.toBuilder();
+              break;
             }
-            api_ = input.readMessage(com.google.rpc.context.AttributeContext.Api.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(api_);
-              api_ = subBuilder.buildPartial();
-            }
+          case 50:
+            {
+              com.google.rpc.context.AttributeContext.Api.Builder subBuilder = null;
+              if (api_ != null) {
+                subBuilder = api_.toBuilder();
+              }
+              api_ =
+                  input.readMessage(
+                      com.google.rpc.context.AttributeContext.Api.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(api_);
+                api_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 58: {
-            com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
-            if (origin_ != null) {
-              subBuilder = origin_.toBuilder();
+              break;
             }
-            origin_ = input.readMessage(com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(origin_);
-              origin_ = subBuilder.buildPartial();
-            }
+          case 58:
+            {
+              com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
+              if (origin_ != null) {
+                subBuilder = origin_.toBuilder();
+              }
+              origin_ =
+                  input.readMessage(
+                      com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(origin_);
+                origin_ = subBuilder.buildPartial();
+              }
 
-            break;
-          }
-          case 66: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              extensions_ = new java.util.ArrayList<com.google.protobuf.Any>();
-              mutable_bitField0_ |= 0x00000001;
+              break;
             }
-            extensions_.add(
-                input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          case 66:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                extensions_ = new java.util.ArrayList<com.google.protobuf.Any>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              extensions_.add(
+                  input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
+              break;
             }
-            break;
-          }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         extensions_ = java.util.Collections.unmodifiableList(extensions_);
@@ -203,54 +226,68 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_descriptor;
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    return com.google.rpc.context.AttributeContextProto
+        .internal_static_google_rpc_context_AttributeContext_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_fieldAccessorTable
+    return com.google.rpc.context.AttributeContextProto
+        .internal_static_google_rpc_context_AttributeContext_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.rpc.context.AttributeContext.class, com.google.rpc.context.AttributeContext.Builder.class);
+            com.google.rpc.context.AttributeContext.class,
+            com.google.rpc.context.AttributeContext.Builder.class);
   }
 
-  public interface PeerOrBuilder extends
+  public interface PeerOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:google.rpc.context.AttributeContext.Peer)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * The IP address of the peer.
      * </pre>
      *
      * <code>string ip = 1;</code>
+     *
      * @return The ip.
      */
     java.lang.String getIp();
     /**
+     *
+     *
      * <pre>
      * The IP address of the peer.
      * </pre>
      *
      * <code>string ip = 1;</code>
+     *
      * @return The bytes for ip.
      */
-    com.google.protobuf.ByteString
-        getIpBytes();
+    com.google.protobuf.ByteString getIpBytes();
 
     /**
+     *
+     *
      * <pre>
      * The network port of the peer.
      * </pre>
      *
      * <code>int64 port = 2;</code>
+     *
      * @return The port.
      */
     long getPort();
 
     /**
+     *
+     *
      * <pre>
      * The labels associated with the peer.
      * </pre>
@@ -259,52 +296,52 @@ private static final long serialVersionUID = 0L;
      */
     int getLabelsCount();
     /**
+     *
+     *
      * <pre>
      * The labels associated with the peer.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
-    boolean containsLabels(
-        java.lang.String key);
-    /**
-     * Use {@link #getLabelsMap()} instead.
-     */
+    boolean containsLabels(java.lang.String key);
+    /** Use {@link #getLabelsMap()} instead. */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getLabels();
+    java.util.Map<java.lang.String, java.lang.String> getLabels();
     /**
+     *
+     *
      * <pre>
      * The labels associated with the peer.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
-    java.util.Map<java.lang.String, java.lang.String>
-    getLabelsMap();
+    java.util.Map<java.lang.String, java.lang.String> getLabelsMap();
     /**
+     *
+     *
      * <pre>
      * The labels associated with the peer.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
-
-    java.lang.String getLabelsOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue);
+    java.lang.String getLabelsOrDefault(java.lang.String key, java.lang.String defaultValue);
     /**
+     *
+     *
      * <pre>
      * The labels associated with the peer.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
-
-    java.lang.String getLabelsOrThrow(
-        java.lang.String key);
+    java.lang.String getLabelsOrThrow(java.lang.String key);
 
     /**
+     *
+     *
      * <pre>
      * The identity of this peer. Similar to `Request.auth.principal`, but
      * relative to the peer instead of the request. For example, the
@@ -312,10 +349,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal = 7;</code>
+     *
      * @return The principal.
      */
     java.lang.String getPrincipal();
     /**
+     *
+     *
      * <pre>
      * The identity of this peer. Similar to `Request.auth.principal`, but
      * relative to the peer instead of the request. For example, the
@@ -323,12 +363,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal = 7;</code>
+     *
      * @return The bytes for principal.
      */
-    com.google.protobuf.ByteString
-        getPrincipalBytes();
+    com.google.protobuf.ByteString getPrincipalBytes();
 
     /**
+     *
+     *
      * <pre>
      * The CLDR country/region code associated with the above IP address.
      * If the IP address is private, the `region_code` should reflect the
@@ -336,10 +378,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_code = 8;</code>
+     *
      * @return The regionCode.
      */
     java.lang.String getRegionCode();
     /**
+     *
+     *
      * <pre>
      * The CLDR country/region code associated with the above IP address.
      * If the IP address is private, the `region_code` should reflect the
@@ -347,12 +392,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_code = 8;</code>
+     *
      * @return The bytes for regionCode.
      */
-    com.google.protobuf.ByteString
-        getRegionCodeBytes();
+    com.google.protobuf.ByteString getRegionCodeBytes();
   }
   /**
+   *
+   *
    * <pre>
    * This message defines attributes for a node that handles a network request.
    * The node can be either a service or an application that sends, forwards,
@@ -362,15 +409,16 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.rpc.context.AttributeContext.Peer}
    */
-  public static final class Peer extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class Peer extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:google.rpc.context.AttributeContext.Peer)
       PeerOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use Peer.newBuilder() to construct.
     private Peer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private Peer() {
       ip_ = "";
       principal_ = "";
@@ -379,16 +427,15 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Peer();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private Peer(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -408,94 +455,103 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              ip_ = s;
-              break;
-            }
-            case 16: {
-
-              port_ = input.readInt64();
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                labels_ = com.google.protobuf.MapField.newMapField(
-                    LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                ip_ = s;
+                break;
               }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              labels__ = input.readMessage(
-                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              labels_.getMutableMap().put(
-                  labels__.getKey(), labels__.getValue());
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              principal_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              regionCode_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+            case 16:
+              {
+                port_ = input.readInt64();
+                break;
               }
-              break;
-            }
+            case 50:
+              {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  labels_ =
+                      com.google.protobuf.MapField.newMapField(
+                          LabelsDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
+                    input.readMessage(
+                        LabelsDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                labels_.getMutableMap().put(labels__.getKey(), labels__.getValue());
+                break;
+              }
+            case 58:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                principal_ = s;
+                break;
+              }
+            case 66:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                regionCode_ = s;
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Peer_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Peer_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
     @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
+    protected com.google.protobuf.MapField internalGetMapField(int number) {
       switch (number) {
         case 6:
           return internalGetLabels();
         default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
+          throw new RuntimeException("Invalid map field number: " + number);
       }
     }
+
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Peer_fieldAccessorTable
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Peer_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.rpc.context.AttributeContext.Peer.class, com.google.rpc.context.AttributeContext.Peer.Builder.class);
+              com.google.rpc.context.AttributeContext.Peer.class,
+              com.google.rpc.context.AttributeContext.Peer.Builder.class);
     }
 
     public static final int IP_FIELD_NUMBER = 1;
     private volatile java.lang.Object ip_;
     /**
+     *
+     *
      * <pre>
      * The IP address of the peer.
      * </pre>
      *
      * <code>string ip = 1;</code>
+     *
      * @return The ip.
      */
     @java.lang.Override
@@ -504,29 +560,29 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         ip_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The IP address of the peer.
      * </pre>
      *
      * <code>string ip = 1;</code>
+     *
      * @return The bytes for ip.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIpBytes() {
+    public com.google.protobuf.ByteString getIpBytes() {
       java.lang.Object ref = ip_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         ip_ = b;
         return b;
       } else {
@@ -537,11 +593,14 @@ private static final long serialVersionUID = 0L;
     public static final int PORT_FIELD_NUMBER = 2;
     private long port_;
     /**
+     *
+     *
      * <pre>
      * The network port of the peer.
      * </pre>
      *
      * <code>int64 port = 2;</code>
+     *
      * @return The port.
      */
     @java.lang.Override
@@ -550,24 +609,23 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LABELS_FIELD_NUMBER = 6;
+
     private static final class LabelsDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Peer_LabelsEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
+      static final com.google.protobuf.MapEntry<java.lang.String, java.lang.String> defaultEntry =
+          com.google.protobuf.MapEntry.<java.lang.String, java.lang.String>newDefaultInstance(
+              com.google.rpc.context.AttributeContextProto
+                  .internal_static_google_rpc_context_AttributeContext_Peer_LabelsEntry_descriptor,
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "",
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "");
     }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> labels_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetLabels() {
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> labels_;
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetLabels() {
       if (labels_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            LabelsDefaultEntryHolder.defaultEntry);
+        return com.google.protobuf.MapField.emptyMapField(LabelsDefaultEntryHolder.defaultEntry);
       }
       return labels_;
     }
@@ -576,28 +634,30 @@ private static final long serialVersionUID = 0L;
       return internalGetLabels().getMap().size();
     }
     /**
+     *
+     *
      * <pre>
      * The labels associated with the peer.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
-
     @java.lang.Override
-    public boolean containsLabels(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+    public boolean containsLabels(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
       return internalGetLabels().getMap().containsKey(key);
     }
-    /**
-     * Use {@link #getLabelsMap()} instead.
-     */
+    /** Use {@link #getLabelsMap()} instead. */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
     }
     /**
+     *
+     *
      * <pre>
      * The labels associated with the peer.
      * </pre>
@@ -605,11 +665,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
     }
     /**
+     *
+     *
      * <pre>
      * The labels associated with the peer.
      * </pre>
@@ -617,16 +678,17 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
-
     public java.lang.String getLabelsOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetLabels().getMap();
+        java.lang.String key, java.lang.String defaultValue) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     *
+     *
      * <pre>
      * The labels associated with the peer.
      * </pre>
@@ -634,12 +696,11 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getLabelsOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetLabels().getMap();
+    public java.lang.String getLabelsOrThrow(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -649,6 +710,8 @@ private static final long serialVersionUID = 0L;
     public static final int PRINCIPAL_FIELD_NUMBER = 7;
     private volatile java.lang.Object principal_;
     /**
+     *
+     *
      * <pre>
      * The identity of this peer. Similar to `Request.auth.principal`, but
      * relative to the peer instead of the request. For example, the
@@ -656,6 +719,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal = 7;</code>
+     *
      * @return The principal.
      */
     @java.lang.Override
@@ -664,14 +728,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         principal_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The identity of this peer. Similar to `Request.auth.principal`, but
      * relative to the peer instead of the request. For example, the
@@ -679,16 +744,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal = 7;</code>
+     *
      * @return The bytes for principal.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPrincipalBytes() {
+    public com.google.protobuf.ByteString getPrincipalBytes() {
       java.lang.Object ref = principal_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         principal_ = b;
         return b;
       } else {
@@ -699,6 +763,8 @@ private static final long serialVersionUID = 0L;
     public static final int REGION_CODE_FIELD_NUMBER = 8;
     private volatile java.lang.Object regionCode_;
     /**
+     *
+     *
      * <pre>
      * The CLDR country/region code associated with the above IP address.
      * If the IP address is private, the `region_code` should reflect the
@@ -706,6 +772,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_code = 8;</code>
+     *
      * @return The regionCode.
      */
     @java.lang.Override
@@ -714,14 +781,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         regionCode_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The CLDR country/region code associated with the above IP address.
      * If the IP address is private, the `region_code` should reflect the
@@ -729,16 +797,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_code = 8;</code>
+     *
      * @return The bytes for regionCode.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRegionCodeBytes() {
+    public com.google.protobuf.ByteString getRegionCodeBytes() {
       java.lang.Object ref = regionCode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         regionCode_ = b;
         return b;
       } else {
@@ -747,6 +814,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -758,20 +826,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (!getIpBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ip_);
       }
       if (port_ != 0L) {
         output.writeInt64(2, port_);
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetLabels(),
-          LabelsDefaultEntryHolder.defaultEntry,
-          6);
+      com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
+          output, internalGetLabels(), LabelsDefaultEntryHolder.defaultEntry, 6);
       if (!getPrincipalBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, principal_);
       }
@@ -791,18 +854,17 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ip_);
       }
       if (port_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, port_);
+        size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, port_);
       }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetLabels().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(6, labels__);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
+          internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
+            LabelsDefaultEntryHolder.defaultEntry
+                .newBuilderForType()
+                .setKey(entry.getKey())
+                .setValue(entry.getValue())
+                .build();
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, labels__);
       }
       if (!getPrincipalBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, principal_);
@@ -818,23 +880,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.google.rpc.context.AttributeContext.Peer)) {
         return super.equals(obj);
       }
-      com.google.rpc.context.AttributeContext.Peer other = (com.google.rpc.context.AttributeContext.Peer) obj;
+      com.google.rpc.context.AttributeContext.Peer other =
+          (com.google.rpc.context.AttributeContext.Peer) obj;
 
-      if (!getIp()
-          .equals(other.getIp())) return false;
-      if (getPort()
-          != other.getPort()) return false;
-      if (!internalGetLabels().equals(
-          other.internalGetLabels())) return false;
-      if (!getPrincipal()
-          .equals(other.getPrincipal())) return false;
-      if (!getRegionCode()
-          .equals(other.getRegionCode())) return false;
+      if (!getIp().equals(other.getIp())) return false;
+      if (getPort() != other.getPort()) return false;
+      if (!internalGetLabels().equals(other.internalGetLabels())) return false;
+      if (!getPrincipal().equals(other.getPrincipal())) return false;
+      if (!getRegionCode().equals(other.getRegionCode())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -849,8 +907,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + IP_FIELD_NUMBER;
       hash = (53 * hash) + getIp().hashCode();
       hash = (37 * hash) + PORT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getPort());
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getPort());
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
@@ -864,88 +921,94 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static com.google.rpc.context.AttributeContext.Peer parseFrom(
-        java.nio.ByteBuffer data)
+    public static com.google.rpc.context.AttributeContext.Peer parseFrom(java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Peer parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Peer parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Peer parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Peer parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Peer parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Peer parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.rpc.context.AttributeContext.Peer parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
-    public static com.google.rpc.context.AttributeContext.Peer parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
+
     public static com.google.rpc.context.AttributeContext.Peer parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.google.rpc.context.AttributeContext.Peer parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.google.rpc.context.AttributeContext.Peer parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.rpc.context.AttributeContext.Peer parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.google.rpc.context.AttributeContext.Peer prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -955,6 +1018,8 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * This message defines attributes for a node that handles a network request.
      * The node can be either a service or an application that sends, forwards,
@@ -964,43 +1029,44 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code google.rpc.context.AttributeContext.Peer}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:google.rpc.context.AttributeContext.Peer)
         com.google.rpc.context.AttributeContext.PeerOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Peer_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Peer_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
+      protected com.google.protobuf.MapField internalGetMapField(int number) {
         switch (number) {
           case 6:
             return internalGetLabels();
           default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
+            throw new RuntimeException("Invalid map field number: " + number);
         }
       }
+
       @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
+      protected com.google.protobuf.MapField internalGetMutableMapField(int number) {
         switch (number) {
           case 6:
             return internalGetMutableLabels();
           default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
+            throw new RuntimeException("Invalid map field number: " + number);
         }
       }
+
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Peer_fieldAccessorTable
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Peer_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.rpc.context.AttributeContext.Peer.class, com.google.rpc.context.AttributeContext.Peer.Builder.class);
+                com.google.rpc.context.AttributeContext.Peer.class,
+                com.google.rpc.context.AttributeContext.Peer.Builder.class);
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Peer.newBuilder()
@@ -1008,16 +1074,15 @@ private static final long serialVersionUID = 0L;
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1034,9 +1099,9 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Peer_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Peer_descriptor;
       }
 
       @java.lang.Override
@@ -1055,7 +1120,8 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public com.google.rpc.context.AttributeContext.Peer buildPartial() {
-        com.google.rpc.context.AttributeContext.Peer result = new com.google.rpc.context.AttributeContext.Peer(this);
+        com.google.rpc.context.AttributeContext.Peer result =
+            new com.google.rpc.context.AttributeContext.Peer(this);
         int from_bitField0_ = bitField0_;
         result.ip_ = ip_;
         result.port_ = port_;
@@ -1071,38 +1137,41 @@ private static final long serialVersionUID = 0L;
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.rpc.context.AttributeContext.Peer) {
-          return mergeFrom((com.google.rpc.context.AttributeContext.Peer)other);
+          return mergeFrom((com.google.rpc.context.AttributeContext.Peer) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -1118,8 +1187,7 @@ private static final long serialVersionUID = 0L;
         if (other.getPort() != 0L) {
           setPort(other.getPort());
         }
-        internalGetMutableLabels().mergeFrom(
-            other.internalGetLabels());
+        internalGetMutableLabels().mergeFrom(other.internalGetLabels());
         if (!other.getPrincipal().isEmpty()) {
           principal_ = other.principal_;
           onChanged();
@@ -1156,22 +1224,25 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+
       private int bitField0_;
 
       private java.lang.Object ip_ = "";
       /**
+       *
+       *
        * <pre>
        * The IP address of the peer.
        * </pre>
        *
        * <code>string ip = 1;</code>
+       *
        * @return The ip.
        */
       public java.lang.String getIp() {
         java.lang.Object ref = ip_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           ip_ = s;
           return s;
@@ -1180,20 +1251,21 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The IP address of the peer.
        * </pre>
        *
        * <code>string ip = 1;</code>
+       *
        * @return The bytes for ip.
        */
-      public com.google.protobuf.ByteString
-          getIpBytes() {
+      public com.google.protobuf.ByteString getIpBytes() {
         java.lang.Object ref = ip_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           ip_ = b;
           return b;
         } else {
@@ -1201,66 +1273,76 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The IP address of the peer.
        * </pre>
        *
        * <code>string ip = 1;</code>
+       *
        * @param value The ip to set.
        * @return This builder for chaining.
        */
-      public Builder setIp(
-          java.lang.String value) {
+      public Builder setIp(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         ip_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The IP address of the peer.
        * </pre>
        *
        * <code>string ip = 1;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearIp() {
-        
+
         ip_ = getDefaultInstance().getIp();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The IP address of the peer.
        * </pre>
        *
        * <code>string ip = 1;</code>
+       *
        * @param value The bytes for ip to set.
        * @return This builder for chaining.
        */
-      public Builder setIpBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setIpBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         ip_ = value;
         onChanged();
         return this;
       }
 
-      private long port_ ;
+      private long port_;
       /**
+       *
+       *
        * <pre>
        * The network port of the peer.
        * </pre>
        *
        * <code>int64 port = 2;</code>
+       *
        * @return The port.
        */
       @java.lang.Override
@@ -1268,51 +1350,56 @@ private static final long serialVersionUID = 0L;
         return port_;
       }
       /**
+       *
+       *
        * <pre>
        * The network port of the peer.
        * </pre>
        *
        * <code>int64 port = 2;</code>
+       *
        * @param value The port to set.
        * @return This builder for chaining.
        */
       public Builder setPort(long value) {
-        
+
         port_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The network port of the peer.
        * </pre>
        *
        * <code>int64 port = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearPort() {
-        
+
         port_ = 0L;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> labels_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetLabels() {
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String> labels_;
+
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetLabels() {
         if (labels_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              LabelsDefaultEntryHolder.defaultEntry);
+          return com.google.protobuf.MapField.emptyMapField(LabelsDefaultEntryHolder.defaultEntry);
         }
         return labels_;
       }
+
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableLabels() {
-        onChanged();;
+          internalGetMutableLabels() {
+        onChanged();
+        ;
         if (labels_ == null) {
-          labels_ = com.google.protobuf.MapField.newMapField(
-              LabelsDefaultEntryHolder.defaultEntry);
+          labels_ = com.google.protobuf.MapField.newMapField(LabelsDefaultEntryHolder.defaultEntry);
         }
         if (!labels_.isMutable()) {
           labels_ = labels_.copy();
@@ -1324,28 +1411,30 @@ private static final long serialVersionUID = 0L;
         return internalGetLabels().getMap().size();
       }
       /**
+       *
+       *
        * <pre>
        * The labels associated with the peer.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
-
       @java.lang.Override
-      public boolean containsLabels(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+      public boolean containsLabels(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
         return internalGetLabels().getMap().containsKey(key);
       }
-      /**
-       * Use {@link #getLabelsMap()} instead.
-       */
+      /** Use {@link #getLabelsMap()} instead. */
       @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
       }
       /**
+       *
+       *
        * <pre>
        * The labels associated with the peer.
        * </pre>
@@ -1353,11 +1442,12 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
       }
       /**
+       *
+       *
        * <pre>
        * The labels associated with the peer.
        * </pre>
@@ -1365,16 +1455,17 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
-
       public java.lang.String getLabelsOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetLabels().getMap();
+          java.lang.String key, java.lang.String defaultValue) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       *
+       *
        * <pre>
        * The labels associated with the peer.
        * </pre>
@@ -1382,12 +1473,11 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getLabelsOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetLabels().getMap();
+      public java.lang.String getLabelsOrThrow(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
@@ -1395,66 +1485,67 @@ private static final long serialVersionUID = 0L;
       }
 
       public Builder clearLabels() {
-        internalGetMutableLabels().getMutableMap()
-            .clear();
+        internalGetMutableLabels().getMutableMap().clear();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The labels associated with the peer.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
-
-      public Builder removeLabels(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableLabels().getMutableMap()
-            .remove(key);
+      public Builder removeLabels(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableLabels().getMutableMap().remove(key);
         return this;
       }
-      /**
-       * Use alternate mutation accessors instead.
-       */
+      /** Use alternate mutation accessors instead. */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-      getMutableLabels() {
+      public java.util.Map<java.lang.String, java.lang.String> getMutableLabels() {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       *
+       *
        * <pre>
        * The labels associated with the peer.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
-      public Builder putLabels(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableLabels().getMutableMap()
-            .put(key, value);
+      public Builder putLabels(java.lang.String key, java.lang.String value) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        if (value == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableLabels().getMutableMap().put(key, value);
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The labels associated with the peer.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
-
-      public Builder putAllLabels(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableLabels().getMutableMap()
-            .putAll(values);
+      public Builder putAllLabels(java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap().putAll(values);
         return this;
       }
 
       private java.lang.Object principal_ = "";
       /**
+       *
+       *
        * <pre>
        * The identity of this peer. Similar to `Request.auth.principal`, but
        * relative to the peer instead of the request. For example, the
@@ -1462,13 +1553,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 7;</code>
+       *
        * @return The principal.
        */
       public java.lang.String getPrincipal() {
         java.lang.Object ref = principal_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           principal_ = s;
           return s;
@@ -1477,6 +1568,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The identity of this peer. Similar to `Request.auth.principal`, but
        * relative to the peer instead of the request. For example, the
@@ -1484,15 +1577,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 7;</code>
+       *
        * @return The bytes for principal.
        */
-      public com.google.protobuf.ByteString
-          getPrincipalBytes() {
+      public com.google.protobuf.ByteString getPrincipalBytes() {
         java.lang.Object ref = principal_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           principal_ = b;
           return b;
         } else {
@@ -1500,6 +1592,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The identity of this peer. Similar to `Request.auth.principal`, but
        * relative to the peer instead of the request. For example, the
@@ -1507,20 +1601,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 7;</code>
+       *
        * @param value The principal to set.
        * @return This builder for chaining.
        */
-      public Builder setPrincipal(
-          java.lang.String value) {
+      public Builder setPrincipal(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         principal_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The identity of this peer. Similar to `Request.auth.principal`, but
        * relative to the peer instead of the request. For example, the
@@ -1528,15 +1624,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 7;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearPrincipal() {
-        
+
         principal_ = getDefaultInstance().getPrincipal();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The identity of this peer. Similar to `Request.auth.principal`, but
        * relative to the peer instead of the request. For example, the
@@ -1544,16 +1643,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 7;</code>
+       *
        * @param value The bytes for principal to set.
        * @return This builder for chaining.
        */
-      public Builder setPrincipalBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setPrincipalBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         principal_ = value;
         onChanged();
         return this;
@@ -1561,6 +1660,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object regionCode_ = "";
       /**
+       *
+       *
        * <pre>
        * The CLDR country/region code associated with the above IP address.
        * If the IP address is private, the `region_code` should reflect the
@@ -1568,13 +1669,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 8;</code>
+       *
        * @return The regionCode.
        */
       public java.lang.String getRegionCode() {
         java.lang.Object ref = regionCode_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           regionCode_ = s;
           return s;
@@ -1583,6 +1684,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The CLDR country/region code associated with the above IP address.
        * If the IP address is private, the `region_code` should reflect the
@@ -1590,15 +1693,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 8;</code>
+       *
        * @return The bytes for regionCode.
        */
-      public com.google.protobuf.ByteString
-          getRegionCodeBytes() {
+      public com.google.protobuf.ByteString getRegionCodeBytes() {
         java.lang.Object ref = regionCode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           regionCode_ = b;
           return b;
         } else {
@@ -1606,6 +1708,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The CLDR country/region code associated with the above IP address.
        * If the IP address is private, the `region_code` should reflect the
@@ -1613,20 +1717,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 8;</code>
+       *
        * @param value The regionCode to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionCode(
-          java.lang.String value) {
+      public Builder setRegionCode(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         regionCode_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The CLDR country/region code associated with the above IP address.
        * If the IP address is private, the `region_code` should reflect the
@@ -1634,15 +1740,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 8;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearRegionCode() {
-        
+
         regionCode_ = getDefaultInstance().getRegionCode();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The CLDR country/region code associated with the above IP address.
        * If the IP address is private, the `region_code` should reflect the
@@ -1650,20 +1759,21 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string region_code = 8;</code>
+       *
        * @param value The bytes for regionCode to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionCodeBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setRegionCodeBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         regionCode_ = value;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1676,12 +1786,12 @@ private static final long serialVersionUID = 0L;
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:google.rpc.context.AttributeContext.Peer)
     }
 
     // @@protoc_insertion_point(class_scope:google.rpc.context.AttributeContext.Peer)
     private static final com.google.rpc.context.AttributeContext.Peer DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.google.rpc.context.AttributeContext.Peer();
     }
@@ -1690,16 +1800,16 @@ private static final long serialVersionUID = 0L;
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Peer>
-        PARSER = new com.google.protobuf.AbstractParser<Peer>() {
-      @java.lang.Override
-      public Peer parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Peer(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<Peer> PARSER =
+        new com.google.protobuf.AbstractParser<Peer>() {
+          @java.lang.Override
+          public Peer parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Peer(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<Peer> parser() {
       return PARSER;
@@ -1714,14 +1824,16 @@ private static final long serialVersionUID = 0L;
     public com.google.rpc.context.AttributeContext.Peer getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface ApiOrBuilder extends
+  public interface ApiOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:google.rpc.context.AttributeContext.Api)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * The API service name. It is a logical identifier for a networked API,
      * such as "pubsub.googleapis.com". The naming syntax depends on the
@@ -1729,10 +1841,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service = 1;</code>
+     *
      * @return The service.
      */
     java.lang.String getService();
     /**
+     *
+     *
      * <pre>
      * The API service name. It is a logical identifier for a networked API,
      * such as "pubsub.googleapis.com". The naming syntax depends on the
@@ -1740,12 +1855,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service = 1;</code>
+     *
      * @return The bytes for service.
      */
-    com.google.protobuf.ByteString
-        getServiceBytes();
+    com.google.protobuf.ByteString getServiceBytes();
 
     /**
+     *
+     *
      * <pre>
      * The API operation name. For gRPC requests, it is the fully qualified API
      * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
@@ -1753,10 +1870,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string operation = 2;</code>
+     *
      * @return The operation.
      */
     java.lang.String getOperation();
     /**
+     *
+     *
      * <pre>
      * The API operation name. For gRPC requests, it is the fully qualified API
      * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
@@ -1764,56 +1884,68 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string operation = 2;</code>
+     *
      * @return The bytes for operation.
      */
-    com.google.protobuf.ByteString
-        getOperationBytes();
+    com.google.protobuf.ByteString getOperationBytes();
 
     /**
+     *
+     *
      * <pre>
      * The API protocol used for sending the request, such as "http", "https",
      * "grpc", or "internal".
      * </pre>
      *
      * <code>string protocol = 3;</code>
+     *
      * @return The protocol.
      */
     java.lang.String getProtocol();
     /**
+     *
+     *
      * <pre>
      * The API protocol used for sending the request, such as "http", "https",
      * "grpc", or "internal".
      * </pre>
      *
      * <code>string protocol = 3;</code>
+     *
      * @return The bytes for protocol.
      */
-    com.google.protobuf.ByteString
-        getProtocolBytes();
+    com.google.protobuf.ByteString getProtocolBytes();
 
     /**
+     *
+     *
      * <pre>
      * The API version associated with the API operation above, such as "v1" or
      * "v1alpha1".
      * </pre>
      *
      * <code>string version = 4;</code>
+     *
      * @return The version.
      */
     java.lang.String getVersion();
     /**
+     *
+     *
      * <pre>
      * The API version associated with the API operation above, such as "v1" or
      * "v1alpha1".
      * </pre>
      *
      * <code>string version = 4;</code>
+     *
      * @return The bytes for version.
      */
-    com.google.protobuf.ByteString
-        getVersionBytes();
+    com.google.protobuf.ByteString getVersionBytes();
   }
   /**
+   *
+   *
    * <pre>
    * This message defines attributes associated with API operations, such as
    * a network API request. The terminology is based on the conventions used
@@ -1822,15 +1954,16 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.rpc.context.AttributeContext.Api}
    */
-  public static final class Api extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class Api extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:google.rpc.context.AttributeContext.Api)
       ApiOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use Api.newBuilder() to construct.
     private Api(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private Api() {
       service_ = "";
       operation_ = "";
@@ -1840,16 +1973,15 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Api();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private Api(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1868,65 +2000,73 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              service_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              operation_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              protocol_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              version_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                service_ = s;
+                break;
               }
-              break;
-            }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                operation_ = s;
+                break;
+              }
+            case 26:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                protocol_ = s;
+                break;
+              }
+            case 34:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                version_ = s;
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Api_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Api_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Api_fieldAccessorTable
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Api_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.rpc.context.AttributeContext.Api.class, com.google.rpc.context.AttributeContext.Api.Builder.class);
+              com.google.rpc.context.AttributeContext.Api.class,
+              com.google.rpc.context.AttributeContext.Api.Builder.class);
     }
 
     public static final int SERVICE_FIELD_NUMBER = 1;
     private volatile java.lang.Object service_;
     /**
+     *
+     *
      * <pre>
      * The API service name. It is a logical identifier for a networked API,
      * such as "pubsub.googleapis.com". The naming syntax depends on the
@@ -1934,6 +2074,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service = 1;</code>
+     *
      * @return The service.
      */
     @java.lang.Override
@@ -1942,14 +2083,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         service_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The API service name. It is a logical identifier for a networked API,
      * such as "pubsub.googleapis.com". The naming syntax depends on the
@@ -1957,16 +2099,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service = 1;</code>
+     *
      * @return The bytes for service.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServiceBytes() {
+    public com.google.protobuf.ByteString getServiceBytes() {
       java.lang.Object ref = service_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         service_ = b;
         return b;
       } else {
@@ -1977,6 +2118,8 @@ private static final long serialVersionUID = 0L;
     public static final int OPERATION_FIELD_NUMBER = 2;
     private volatile java.lang.Object operation_;
     /**
+     *
+     *
      * <pre>
      * The API operation name. For gRPC requests, it is the fully qualified API
      * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
@@ -1984,6 +2127,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string operation = 2;</code>
+     *
      * @return The operation.
      */
     @java.lang.Override
@@ -1992,14 +2136,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         operation_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The API operation name. For gRPC requests, it is the fully qualified API
      * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
@@ -2007,16 +2152,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string operation = 2;</code>
+     *
      * @return The bytes for operation.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getOperationBytes() {
+    public com.google.protobuf.ByteString getOperationBytes() {
       java.lang.Object ref = operation_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         operation_ = b;
         return b;
       } else {
@@ -2027,12 +2171,15 @@ private static final long serialVersionUID = 0L;
     public static final int PROTOCOL_FIELD_NUMBER = 3;
     private volatile java.lang.Object protocol_;
     /**
+     *
+     *
      * <pre>
      * The API protocol used for sending the request, such as "http", "https",
      * "grpc", or "internal".
      * </pre>
      *
      * <code>string protocol = 3;</code>
+     *
      * @return The protocol.
      */
     @java.lang.Override
@@ -2041,30 +2188,30 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         protocol_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The API protocol used for sending the request, such as "http", "https",
      * "grpc", or "internal".
      * </pre>
      *
      * <code>string protocol = 3;</code>
+     *
      * @return The bytes for protocol.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProtocolBytes() {
+    public com.google.protobuf.ByteString getProtocolBytes() {
       java.lang.Object ref = protocol_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         protocol_ = b;
         return b;
       } else {
@@ -2075,12 +2222,15 @@ private static final long serialVersionUID = 0L;
     public static final int VERSION_FIELD_NUMBER = 4;
     private volatile java.lang.Object version_;
     /**
+     *
+     *
      * <pre>
      * The API version associated with the API operation above, such as "v1" or
      * "v1alpha1".
      * </pre>
      *
      * <code>string version = 4;</code>
+     *
      * @return The version.
      */
     @java.lang.Override
@@ -2089,30 +2239,30 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         version_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The API version associated with the API operation above, such as "v1" or
      * "v1alpha1".
      * </pre>
      *
      * <code>string version = 4;</code>
+     *
      * @return The bytes for version.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getVersionBytes() {
+    public com.google.protobuf.ByteString getVersionBytes() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         version_ = b;
         return b;
       } else {
@@ -2121,6 +2271,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -2132,8 +2283,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (!getServiceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, service_);
       }
@@ -2175,21 +2325,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.google.rpc.context.AttributeContext.Api)) {
         return super.equals(obj);
       }
-      com.google.rpc.context.AttributeContext.Api other = (com.google.rpc.context.AttributeContext.Api) obj;
+      com.google.rpc.context.AttributeContext.Api other =
+          (com.google.rpc.context.AttributeContext.Api) obj;
 
-      if (!getService()
-          .equals(other.getService())) return false;
-      if (!getOperation()
-          .equals(other.getOperation())) return false;
-      if (!getProtocol()
-          .equals(other.getProtocol())) return false;
-      if (!getVersion()
-          .equals(other.getVersion())) return false;
+      if (!getService().equals(other.getService())) return false;
+      if (!getOperation().equals(other.getOperation())) return false;
+      if (!getProtocol().equals(other.getProtocol())) return false;
+      if (!getVersion().equals(other.getVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2214,88 +2361,94 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static com.google.rpc.context.AttributeContext.Api parseFrom(
-        java.nio.ByteBuffer data)
+    public static com.google.rpc.context.AttributeContext.Api parseFrom(java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Api parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Api parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Api parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Api parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Api parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Api parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.rpc.context.AttributeContext.Api parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
-    public static com.google.rpc.context.AttributeContext.Api parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
+
     public static com.google.rpc.context.AttributeContext.Api parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.google.rpc.context.AttributeContext.Api parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.google.rpc.context.AttributeContext.Api parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.rpc.context.AttributeContext.Api parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.google.rpc.context.AttributeContext.Api prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -2305,6 +2458,8 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * This message defines attributes associated with API operations, such as
      * a network API request. The terminology is based on the conventions used
@@ -2313,21 +2468,24 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code google.rpc.context.AttributeContext.Api}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:google.rpc.context.AttributeContext.Api)
         com.google.rpc.context.AttributeContext.ApiOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Api_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Api_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Api_fieldAccessorTable
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Api_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.rpc.context.AttributeContext.Api.class, com.google.rpc.context.AttributeContext.Api.Builder.class);
+                com.google.rpc.context.AttributeContext.Api.class,
+                com.google.rpc.context.AttributeContext.Api.Builder.class);
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Api.newBuilder()
@@ -2335,16 +2493,15 @@ private static final long serialVersionUID = 0L;
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -2360,9 +2517,9 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Api_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Api_descriptor;
       }
 
       @java.lang.Override
@@ -2381,7 +2538,8 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public com.google.rpc.context.AttributeContext.Api buildPartial() {
-        com.google.rpc.context.AttributeContext.Api result = new com.google.rpc.context.AttributeContext.Api(this);
+        com.google.rpc.context.AttributeContext.Api result =
+            new com.google.rpc.context.AttributeContext.Api(this);
         result.service_ = service_;
         result.operation_ = operation_;
         result.protocol_ = protocol_;
@@ -2394,38 +2552,41 @@ private static final long serialVersionUID = 0L;
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.rpc.context.AttributeContext.Api) {
-          return mergeFrom((com.google.rpc.context.AttributeContext.Api)other);
+          return mergeFrom((com.google.rpc.context.AttributeContext.Api) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -2481,6 +2642,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object service_ = "";
       /**
+       *
+       *
        * <pre>
        * The API service name. It is a logical identifier for a networked API,
        * such as "pubsub.googleapis.com". The naming syntax depends on the
@@ -2488,13 +2651,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @return The service.
        */
       public java.lang.String getService() {
         java.lang.Object ref = service_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           service_ = s;
           return s;
@@ -2503,6 +2666,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The API service name. It is a logical identifier for a networked API,
        * such as "pubsub.googleapis.com". The naming syntax depends on the
@@ -2510,15 +2675,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @return The bytes for service.
        */
-      public com.google.protobuf.ByteString
-          getServiceBytes() {
+      public com.google.protobuf.ByteString getServiceBytes() {
         java.lang.Object ref = service_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           service_ = b;
           return b;
         } else {
@@ -2526,6 +2690,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The API service name. It is a logical identifier for a networked API,
        * such as "pubsub.googleapis.com". The naming syntax depends on the
@@ -2533,20 +2699,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @param value The service to set.
        * @return This builder for chaining.
        */
-      public Builder setService(
-          java.lang.String value) {
+      public Builder setService(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         service_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The API service name. It is a logical identifier for a networked API,
        * such as "pubsub.googleapis.com". The naming syntax depends on the
@@ -2554,15 +2722,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearService() {
-        
+
         service_ = getDefaultInstance().getService();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The API service name. It is a logical identifier for a networked API,
        * such as "pubsub.googleapis.com". The naming syntax depends on the
@@ -2570,16 +2741,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @param value The bytes for service to set.
        * @return This builder for chaining.
        */
-      public Builder setServiceBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setServiceBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         service_ = value;
         onChanged();
         return this;
@@ -2587,6 +2758,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object operation_ = "";
       /**
+       *
+       *
        * <pre>
        * The API operation name. For gRPC requests, it is the fully qualified API
        * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
@@ -2594,13 +2767,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string operation = 2;</code>
+       *
        * @return The operation.
        */
       public java.lang.String getOperation() {
         java.lang.Object ref = operation_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           operation_ = s;
           return s;
@@ -2609,6 +2782,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The API operation name. For gRPC requests, it is the fully qualified API
        * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
@@ -2616,15 +2791,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string operation = 2;</code>
+       *
        * @return The bytes for operation.
        */
-      public com.google.protobuf.ByteString
-          getOperationBytes() {
+      public com.google.protobuf.ByteString getOperationBytes() {
         java.lang.Object ref = operation_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           operation_ = b;
           return b;
         } else {
@@ -2632,6 +2806,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The API operation name. For gRPC requests, it is the fully qualified API
        * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
@@ -2639,20 +2815,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string operation = 2;</code>
+       *
        * @param value The operation to set.
        * @return This builder for chaining.
        */
-      public Builder setOperation(
-          java.lang.String value) {
+      public Builder setOperation(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         operation_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The API operation name. For gRPC requests, it is the fully qualified API
        * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
@@ -2660,15 +2838,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string operation = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearOperation() {
-        
+
         operation_ = getDefaultInstance().getOperation();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The API operation name. For gRPC requests, it is the fully qualified API
        * method name, such as "google.pubsub.v1.Publisher.Publish". For OpenAPI
@@ -2676,16 +2857,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string operation = 2;</code>
+       *
        * @param value The bytes for operation to set.
        * @return This builder for chaining.
        */
-      public Builder setOperationBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setOperationBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         operation_ = value;
         onChanged();
         return this;
@@ -2693,19 +2874,21 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object protocol_ = "";
       /**
+       *
+       *
        * <pre>
        * The API protocol used for sending the request, such as "http", "https",
        * "grpc", or "internal".
        * </pre>
        *
        * <code>string protocol = 3;</code>
+       *
        * @return The protocol.
        */
       public java.lang.String getProtocol() {
         java.lang.Object ref = protocol_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           protocol_ = s;
           return s;
@@ -2714,21 +2897,22 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The API protocol used for sending the request, such as "http", "https",
        * "grpc", or "internal".
        * </pre>
        *
        * <code>string protocol = 3;</code>
+       *
        * @return The bytes for protocol.
        */
-      public com.google.protobuf.ByteString
-          getProtocolBytes() {
+      public com.google.protobuf.ByteString getProtocolBytes() {
         java.lang.Object ref = protocol_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           protocol_ = b;
           return b;
         } else {
@@ -2736,57 +2920,64 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The API protocol used for sending the request, such as "http", "https",
        * "grpc", or "internal".
        * </pre>
        *
        * <code>string protocol = 3;</code>
+       *
        * @param value The protocol to set.
        * @return This builder for chaining.
        */
-      public Builder setProtocol(
-          java.lang.String value) {
+      public Builder setProtocol(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         protocol_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The API protocol used for sending the request, such as "http", "https",
        * "grpc", or "internal".
        * </pre>
        *
        * <code>string protocol = 3;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearProtocol() {
-        
+
         protocol_ = getDefaultInstance().getProtocol();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The API protocol used for sending the request, such as "http", "https",
        * "grpc", or "internal".
        * </pre>
        *
        * <code>string protocol = 3;</code>
+       *
        * @param value The bytes for protocol to set.
        * @return This builder for chaining.
        */
-      public Builder setProtocolBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setProtocolBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         protocol_ = value;
         onChanged();
         return this;
@@ -2794,19 +2985,21 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object version_ = "";
       /**
+       *
+       *
        * <pre>
        * The API version associated with the API operation above, such as "v1" or
        * "v1alpha1".
        * </pre>
        *
        * <code>string version = 4;</code>
+       *
        * @return The version.
        */
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           version_ = s;
           return s;
@@ -2815,21 +3008,22 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The API version associated with the API operation above, such as "v1" or
        * "v1alpha1".
        * </pre>
        *
        * <code>string version = 4;</code>
+       *
        * @return The bytes for version.
        */
-      public com.google.protobuf.ByteString
-          getVersionBytes() {
+      public com.google.protobuf.ByteString getVersionBytes() {
         java.lang.Object ref = version_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           version_ = b;
           return b;
         } else {
@@ -2837,61 +3031,69 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The API version associated with the API operation above, such as "v1" or
        * "v1alpha1".
        * </pre>
        *
        * <code>string version = 4;</code>
+       *
        * @param value The version to set.
        * @return This builder for chaining.
        */
-      public Builder setVersion(
-          java.lang.String value) {
+      public Builder setVersion(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         version_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The API version associated with the API operation above, such as "v1" or
        * "v1alpha1".
        * </pre>
        *
        * <code>string version = 4;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        
+
         version_ = getDefaultInstance().getVersion();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The API version associated with the API operation above, such as "v1" or
        * "v1alpha1".
        * </pre>
        *
        * <code>string version = 4;</code>
+       *
        * @param value The bytes for version to set.
        * @return This builder for chaining.
        */
-      public Builder setVersionBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setVersionBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         version_ = value;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2904,12 +3106,12 @@ private static final long serialVersionUID = 0L;
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:google.rpc.context.AttributeContext.Api)
     }
 
     // @@protoc_insertion_point(class_scope:google.rpc.context.AttributeContext.Api)
     private static final com.google.rpc.context.AttributeContext.Api DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.google.rpc.context.AttributeContext.Api();
     }
@@ -2918,16 +3120,16 @@ private static final long serialVersionUID = 0L;
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Api>
-        PARSER = new com.google.protobuf.AbstractParser<Api>() {
-      @java.lang.Override
-      public Api parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Api(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<Api> PARSER =
+        new com.google.protobuf.AbstractParser<Api>() {
+          @java.lang.Override
+          public Api parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Api(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<Api> parser() {
       return PARSER;
@@ -2942,14 +3144,16 @@ private static final long serialVersionUID = 0L;
     public com.google.rpc.context.AttributeContext.Api getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface AuthOrBuilder extends
+  public interface AuthOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:google.rpc.context.AttributeContext.Auth)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * The authenticated principal. Reflects the issuer (`iss`) and subject
      * (`sub`) claims within a JWT. The issuer and subject should be `/`
@@ -2959,10 +3163,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal = 1;</code>
+     *
      * @return The principal.
      */
     java.lang.String getPrincipal();
     /**
+     *
+     *
      * <pre>
      * The authenticated principal. Reflects the issuer (`iss`) and subject
      * (`sub`) claims within a JWT. The issuer and subject should be `/`
@@ -2972,12 +3179,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal = 1;</code>
+     *
      * @return The bytes for principal.
      */
-    com.google.protobuf.ByteString
-        getPrincipalBytes();
+    com.google.protobuf.ByteString getPrincipalBytes();
 
     /**
+     *
+     *
      * <pre>
      * The intended audience(s) for this authentication information. Reflects
      * the audience (`aud`) claim within a JWT. The audience
@@ -2994,11 +3203,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string audiences = 2;</code>
+     *
      * @return A list containing the audiences.
      */
-    java.util.List<java.lang.String>
-        getAudiencesList();
+    java.util.List<java.lang.String> getAudiencesList();
     /**
+     *
+     *
      * <pre>
      * The intended audience(s) for this authentication information. Reflects
      * the audience (`aud`) claim within a JWT. The audience
@@ -3015,10 +3226,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string audiences = 2;</code>
+     *
      * @return The count of audiences.
      */
     int getAudiencesCount();
     /**
+     *
+     *
      * <pre>
      * The intended audience(s) for this authentication information. Reflects
      * the audience (`aud`) claim within a JWT. The audience
@@ -3035,11 +3249,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string audiences = 2;</code>
+     *
      * @param index The index of the element to return.
      * @return The audiences at the given index.
      */
     java.lang.String getAudiences(int index);
     /**
+     *
+     *
      * <pre>
      * The intended audience(s) for this authentication information. Reflects
      * the audience (`aud`) claim within a JWT. The audience
@@ -3056,13 +3273,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string audiences = 2;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the audiences at the given index.
      */
-    com.google.protobuf.ByteString
-        getAudiencesBytes(int index);
+    com.google.protobuf.ByteString getAudiencesBytes(int index);
 
     /**
+     *
+     *
      * <pre>
      * The authorized presenter of the credential. Reflects the optional
      * Authorized Presenter (`azp`) claim within a JWT or the
@@ -3071,10 +3290,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string presenter = 3;</code>
+     *
      * @return The presenter.
      */
     java.lang.String getPresenter();
     /**
+     *
+     *
      * <pre>
      * The authorized presenter of the credential. Reflects the optional
      * Authorized Presenter (`azp`) claim within a JWT or the
@@ -3083,12 +3305,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string presenter = 3;</code>
+     *
      * @return The bytes for presenter.
      */
-    com.google.protobuf.ByteString
-        getPresenterBytes();
+    com.google.protobuf.ByteString getPresenterBytes();
 
     /**
+     *
+     *
      * <pre>
      * Structured claims presented with the credential. JWTs include
      * `{key: value}` pairs for standard and private claims. The following
@@ -3106,10 +3330,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct claims = 4;</code>
+     *
      * @return Whether the claims field is set.
      */
     boolean hasClaims();
     /**
+     *
+     *
      * <pre>
      * Structured claims presented with the credential. JWTs include
      * `{key: value}` pairs for standard and private claims. The following
@@ -3127,10 +3354,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct claims = 4;</code>
+     *
      * @return The claims.
      */
     com.google.protobuf.Struct getClaims();
     /**
+     *
+     *
      * <pre>
      * Structured claims presented with the credential. JWTs include
      * `{key: value}` pairs for standard and private claims. The following
@@ -3152,6 +3382,8 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.StructOrBuilder getClaimsOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * A list of access level resource names that allow resources to be
      * accessed by authenticated requester. It is part of Secure GCP processing
@@ -3162,11 +3394,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string access_levels = 5;</code>
+     *
      * @return A list containing the accessLevels.
      */
-    java.util.List<java.lang.String>
-        getAccessLevelsList();
+    java.util.List<java.lang.String> getAccessLevelsList();
     /**
+     *
+     *
      * <pre>
      * A list of access level resource names that allow resources to be
      * accessed by authenticated requester. It is part of Secure GCP processing
@@ -3177,10 +3411,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string access_levels = 5;</code>
+     *
      * @return The count of accessLevels.
      */
     int getAccessLevelsCount();
     /**
+     *
+     *
      * <pre>
      * A list of access level resource names that allow resources to be
      * accessed by authenticated requester. It is part of Secure GCP processing
@@ -3191,11 +3428,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string access_levels = 5;</code>
+     *
      * @param index The index of the element to return.
      * @return The accessLevels at the given index.
      */
     java.lang.String getAccessLevels(int index);
     /**
+     *
+     *
      * <pre>
      * A list of access level resource names that allow resources to be
      * accessed by authenticated requester. It is part of Secure GCP processing
@@ -3206,13 +3446,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string access_levels = 5;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the accessLevels at the given index.
      */
-    com.google.protobuf.ByteString
-        getAccessLevelsBytes(int index);
+    com.google.protobuf.ByteString getAccessLevelsBytes(int index);
   }
   /**
+   *
+   *
    * <pre>
    * This message defines request authentication attributes. Terminology is
    * based on the JSON Web Token (JWT) standard, but the terms also
@@ -3221,15 +3463,16 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.rpc.context.AttributeContext.Auth}
    */
-  public static final class Auth extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class Auth extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:google.rpc.context.AttributeContext.Auth)
       AuthOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use Auth.newBuilder() to construct.
     private Auth(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private Auth() {
       principal_ = "";
       audiences_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -3239,16 +3482,15 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Auth();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private Auth(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3268,63 +3510,67 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              principal_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                audiences_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                principal_ = s;
+                break;
               }
-              audiences_.add(s);
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  audiences_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                audiences_.add(s);
+                break;
+              }
+            case 26:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              presenter_ = s;
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Struct.Builder subBuilder = null;
-              if (claims_ != null) {
-                subBuilder = claims_.toBuilder();
+                presenter_ = s;
+                break;
               }
-              claims_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(claims_);
-                claims_ = subBuilder.buildPartial();
-              }
+            case 34:
+              {
+                com.google.protobuf.Struct.Builder subBuilder = null;
+                if (claims_ != null) {
+                  subBuilder = claims_.toBuilder();
+                }
+                claims_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(claims_);
+                  claims_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                accessLevels_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                break;
               }
-              accessLevels_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+            case 42:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  accessLevels_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                accessLevels_.add(s);
+                break;
               }
-              break;
-            }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           audiences_ = audiences_.getUnmodifiableView();
@@ -3336,22 +3582,27 @@ private static final long serialVersionUID = 0L;
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Auth_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Auth_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Auth_fieldAccessorTable
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Auth_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.rpc.context.AttributeContext.Auth.class, com.google.rpc.context.AttributeContext.Auth.Builder.class);
+              com.google.rpc.context.AttributeContext.Auth.class,
+              com.google.rpc.context.AttributeContext.Auth.Builder.class);
     }
 
     public static final int PRINCIPAL_FIELD_NUMBER = 1;
     private volatile java.lang.Object principal_;
     /**
+     *
+     *
      * <pre>
      * The authenticated principal. Reflects the issuer (`iss`) and subject
      * (`sub`) claims within a JWT. The issuer and subject should be `/`
@@ -3361,6 +3612,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal = 1;</code>
+     *
      * @return The principal.
      */
     @java.lang.Override
@@ -3369,14 +3621,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         principal_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The authenticated principal. Reflects the issuer (`iss`) and subject
      * (`sub`) claims within a JWT. The issuer and subject should be `/`
@@ -3386,16 +3639,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal = 1;</code>
+     *
      * @return The bytes for principal.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPrincipalBytes() {
+    public com.google.protobuf.ByteString getPrincipalBytes() {
       java.lang.Object ref = principal_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         principal_ = b;
         return b;
       } else {
@@ -3406,6 +3658,8 @@ private static final long serialVersionUID = 0L;
     public static final int AUDIENCES_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList audiences_;
     /**
+     *
+     *
      * <pre>
      * The intended audience(s) for this authentication information. Reflects
      * the audience (`aud`) claim within a JWT. The audience
@@ -3422,13 +3676,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string audiences = 2;</code>
+     *
      * @return A list containing the audiences.
      */
-    public com.google.protobuf.ProtocolStringList
-        getAudiencesList() {
+    public com.google.protobuf.ProtocolStringList getAudiencesList() {
       return audiences_;
     }
     /**
+     *
+     *
      * <pre>
      * The intended audience(s) for this authentication information. Reflects
      * the audience (`aud`) claim within a JWT. The audience
@@ -3445,12 +3701,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string audiences = 2;</code>
+     *
      * @return The count of audiences.
      */
     public int getAudiencesCount() {
       return audiences_.size();
     }
     /**
+     *
+     *
      * <pre>
      * The intended audience(s) for this authentication information. Reflects
      * the audience (`aud`) claim within a JWT. The audience
@@ -3467,6 +3726,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string audiences = 2;</code>
+     *
      * @param index The index of the element to return.
      * @return The audiences at the given index.
      */
@@ -3474,6 +3734,8 @@ private static final long serialVersionUID = 0L;
       return audiences_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * The intended audience(s) for this authentication information. Reflects
      * the audience (`aud`) claim within a JWT. The audience
@@ -3490,17 +3752,19 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string audiences = 2;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the audiences at the given index.
      */
-    public com.google.protobuf.ByteString
-        getAudiencesBytes(int index) {
+    public com.google.protobuf.ByteString getAudiencesBytes(int index) {
       return audiences_.getByteString(index);
     }
 
     public static final int PRESENTER_FIELD_NUMBER = 3;
     private volatile java.lang.Object presenter_;
     /**
+     *
+     *
      * <pre>
      * The authorized presenter of the credential. Reflects the optional
      * Authorized Presenter (`azp`) claim within a JWT or the
@@ -3509,6 +3773,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string presenter = 3;</code>
+     *
      * @return The presenter.
      */
     @java.lang.Override
@@ -3517,14 +3782,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         presenter_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The authorized presenter of the credential. Reflects the optional
      * Authorized Presenter (`azp`) claim within a JWT or the
@@ -3533,16 +3799,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string presenter = 3;</code>
+     *
      * @return The bytes for presenter.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPresenterBytes() {
+    public com.google.protobuf.ByteString getPresenterBytes() {
       java.lang.Object ref = presenter_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         presenter_ = b;
         return b;
       } else {
@@ -3553,6 +3818,8 @@ private static final long serialVersionUID = 0L;
     public static final int CLAIMS_FIELD_NUMBER = 4;
     private com.google.protobuf.Struct claims_;
     /**
+     *
+     *
      * <pre>
      * Structured claims presented with the credential. JWTs include
      * `{key: value}` pairs for standard and private claims. The following
@@ -3570,6 +3837,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct claims = 4;</code>
+     *
      * @return Whether the claims field is set.
      */
     @java.lang.Override
@@ -3577,6 +3845,8 @@ private static final long serialVersionUID = 0L;
       return claims_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Structured claims presented with the credential. JWTs include
      * `{key: value}` pairs for standard and private claims. The following
@@ -3594,6 +3864,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct claims = 4;</code>
+     *
      * @return The claims.
      */
     @java.lang.Override
@@ -3601,6 +3872,8 @@ private static final long serialVersionUID = 0L;
       return claims_ == null ? com.google.protobuf.Struct.getDefaultInstance() : claims_;
     }
     /**
+     *
+     *
      * <pre>
      * Structured claims presented with the credential. JWTs include
      * `{key: value}` pairs for standard and private claims. The following
@@ -3627,6 +3900,8 @@ private static final long serialVersionUID = 0L;
     public static final int ACCESS_LEVELS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList accessLevels_;
     /**
+     *
+     *
      * <pre>
      * A list of access level resource names that allow resources to be
      * accessed by authenticated requester. It is part of Secure GCP processing
@@ -3637,13 +3912,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string access_levels = 5;</code>
+     *
      * @return A list containing the accessLevels.
      */
-    public com.google.protobuf.ProtocolStringList
-        getAccessLevelsList() {
+    public com.google.protobuf.ProtocolStringList getAccessLevelsList() {
       return accessLevels_;
     }
     /**
+     *
+     *
      * <pre>
      * A list of access level resource names that allow resources to be
      * accessed by authenticated requester. It is part of Secure GCP processing
@@ -3654,12 +3931,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string access_levels = 5;</code>
+     *
      * @return The count of accessLevels.
      */
     public int getAccessLevelsCount() {
       return accessLevels_.size();
     }
     /**
+     *
+     *
      * <pre>
      * A list of access level resource names that allow resources to be
      * accessed by authenticated requester. It is part of Secure GCP processing
@@ -3670,6 +3950,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string access_levels = 5;</code>
+     *
      * @param index The index of the element to return.
      * @return The accessLevels at the given index.
      */
@@ -3677,6 +3958,8 @@ private static final long serialVersionUID = 0L;
       return accessLevels_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of access level resource names that allow resources to be
      * accessed by authenticated requester. It is part of Secure GCP processing
@@ -3687,15 +3970,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string access_levels = 5;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the accessLevels at the given index.
      */
-    public com.google.protobuf.ByteString
-        getAccessLevelsBytes(int index) {
+    public com.google.protobuf.ByteString getAccessLevelsBytes(int index) {
       return accessLevels_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -3707,8 +3991,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (!getPrincipalBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, principal_);
       }
@@ -3748,8 +4031,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, presenter_);
       }
       if (claims_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getClaims());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getClaims());
       }
       {
         int dataSize = 0;
@@ -3767,26 +4049,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.google.rpc.context.AttributeContext.Auth)) {
         return super.equals(obj);
       }
-      com.google.rpc.context.AttributeContext.Auth other = (com.google.rpc.context.AttributeContext.Auth) obj;
+      com.google.rpc.context.AttributeContext.Auth other =
+          (com.google.rpc.context.AttributeContext.Auth) obj;
 
-      if (!getPrincipal()
-          .equals(other.getPrincipal())) return false;
-      if (!getAudiencesList()
-          .equals(other.getAudiencesList())) return false;
-      if (!getPresenter()
-          .equals(other.getPresenter())) return false;
+      if (!getPrincipal().equals(other.getPrincipal())) return false;
+      if (!getAudiencesList().equals(other.getAudiencesList())) return false;
+      if (!getPresenter().equals(other.getPresenter())) return false;
       if (hasClaims() != other.hasClaims()) return false;
       if (hasClaims()) {
-        if (!getClaims()
-            .equals(other.getClaims())) return false;
+        if (!getClaims().equals(other.getClaims())) return false;
       }
-      if (!getAccessLevelsList()
-          .equals(other.getAccessLevelsList())) return false;
+      if (!getAccessLevelsList().equals(other.getAccessLevelsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3819,88 +4097,94 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static com.google.rpc.context.AttributeContext.Auth parseFrom(
-        java.nio.ByteBuffer data)
+    public static com.google.rpc.context.AttributeContext.Auth parseFrom(java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Auth parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Auth parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Auth parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Auth parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Auth parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Auth parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.rpc.context.AttributeContext.Auth parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
-    public static com.google.rpc.context.AttributeContext.Auth parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
+
     public static com.google.rpc.context.AttributeContext.Auth parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.google.rpc.context.AttributeContext.Auth parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.google.rpc.context.AttributeContext.Auth parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.rpc.context.AttributeContext.Auth parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.google.rpc.context.AttributeContext.Auth prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -3910,6 +4194,8 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * This message defines request authentication attributes. Terminology is
      * based on the JSON Web Token (JWT) standard, but the terms also
@@ -3918,21 +4204,24 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code google.rpc.context.AttributeContext.Auth}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:google.rpc.context.AttributeContext.Auth)
         com.google.rpc.context.AttributeContext.AuthOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Auth_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Auth_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Auth_fieldAccessorTable
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Auth_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.rpc.context.AttributeContext.Auth.class, com.google.rpc.context.AttributeContext.Auth.Builder.class);
+                com.google.rpc.context.AttributeContext.Auth.class,
+                com.google.rpc.context.AttributeContext.Auth.Builder.class);
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Auth.newBuilder()
@@ -3940,16 +4229,15 @@ private static final long serialVersionUID = 0L;
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -3971,9 +4259,9 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Auth_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Auth_descriptor;
       }
 
       @java.lang.Override
@@ -3992,7 +4280,8 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public com.google.rpc.context.AttributeContext.Auth buildPartial() {
-        com.google.rpc.context.AttributeContext.Auth result = new com.google.rpc.context.AttributeContext.Auth(this);
+        com.google.rpc.context.AttributeContext.Auth result =
+            new com.google.rpc.context.AttributeContext.Auth(this);
         int from_bitField0_ = bitField0_;
         result.principal_ = principal_;
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -4019,38 +4308,41 @@ private static final long serialVersionUID = 0L;
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.rpc.context.AttributeContext.Auth) {
-          return mergeFrom((com.google.rpc.context.AttributeContext.Auth)other);
+          return mergeFrom((com.google.rpc.context.AttributeContext.Auth) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -4118,10 +4410,13 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+
       private int bitField0_;
 
       private java.lang.Object principal_ = "";
       /**
+       *
+       *
        * <pre>
        * The authenticated principal. Reflects the issuer (`iss`) and subject
        * (`sub`) claims within a JWT. The issuer and subject should be `/`
@@ -4131,13 +4426,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 1;</code>
+       *
        * @return The principal.
        */
       public java.lang.String getPrincipal() {
         java.lang.Object ref = principal_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           principal_ = s;
           return s;
@@ -4146,6 +4441,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The authenticated principal. Reflects the issuer (`iss`) and subject
        * (`sub`) claims within a JWT. The issuer and subject should be `/`
@@ -4155,15 +4452,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 1;</code>
+       *
        * @return The bytes for principal.
        */
-      public com.google.protobuf.ByteString
-          getPrincipalBytes() {
+      public com.google.protobuf.ByteString getPrincipalBytes() {
         java.lang.Object ref = principal_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           principal_ = b;
           return b;
         } else {
@@ -4171,6 +4467,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The authenticated principal. Reflects the issuer (`iss`) and subject
        * (`sub`) claims within a JWT. The issuer and subject should be `/`
@@ -4180,20 +4478,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 1;</code>
+       *
        * @param value The principal to set.
        * @return This builder for chaining.
        */
-      public Builder setPrincipal(
-          java.lang.String value) {
+      public Builder setPrincipal(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         principal_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The authenticated principal. Reflects the issuer (`iss`) and subject
        * (`sub`) claims within a JWT. The issuer and subject should be `/`
@@ -4203,15 +4503,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 1;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearPrincipal() {
-        
+
         principal_ = getDefaultInstance().getPrincipal();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The authenticated principal. Reflects the issuer (`iss`) and subject
        * (`sub`) claims within a JWT. The issuer and subject should be `/`
@@ -4221,29 +4524,33 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string principal = 1;</code>
+       *
        * @param value The bytes for principal to set.
        * @return This builder for chaining.
        */
-      public Builder setPrincipalBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setPrincipalBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         principal_ = value;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList audiences_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringList audiences_ =
+          com.google.protobuf.LazyStringArrayList.EMPTY;
+
       private void ensureAudiencesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           audiences_ = new com.google.protobuf.LazyStringArrayList(audiences_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
       /**
+       *
+       *
        * <pre>
        * The intended audience(s) for this authentication information. Reflects
        * the audience (`aud`) claim within a JWT. The audience
@@ -4260,13 +4567,15 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string audiences = 2;</code>
+       *
        * @return A list containing the audiences.
        */
-      public com.google.protobuf.ProtocolStringList
-          getAudiencesList() {
+      public com.google.protobuf.ProtocolStringList getAudiencesList() {
         return audiences_.getUnmodifiableView();
       }
       /**
+       *
+       *
        * <pre>
        * The intended audience(s) for this authentication information. Reflects
        * the audience (`aud`) claim within a JWT. The audience
@@ -4283,12 +4592,15 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string audiences = 2;</code>
+       *
        * @return The count of audiences.
        */
       public int getAudiencesCount() {
         return audiences_.size();
       }
       /**
+       *
+       *
        * <pre>
        * The intended audience(s) for this authentication information. Reflects
        * the audience (`aud`) claim within a JWT. The audience
@@ -4305,6 +4617,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string audiences = 2;</code>
+       *
        * @param index The index of the element to return.
        * @return The audiences at the given index.
        */
@@ -4312,6 +4625,8 @@ private static final long serialVersionUID = 0L;
         return audiences_.get(index);
       }
       /**
+       *
+       *
        * <pre>
        * The intended audience(s) for this authentication information. Reflects
        * the audience (`aud`) claim within a JWT. The audience
@@ -4328,14 +4643,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string audiences = 2;</code>
+       *
        * @param index The index of the value to return.
        * @return The bytes of the audiences at the given index.
        */
-      public com.google.protobuf.ByteString
-          getAudiencesBytes(int index) {
+      public com.google.protobuf.ByteString getAudiencesBytes(int index) {
         return audiences_.getByteString(index);
       }
       /**
+       *
+       *
        * <pre>
        * The intended audience(s) for this authentication information. Reflects
        * the audience (`aud`) claim within a JWT. The audience
@@ -4352,21 +4669,23 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string audiences = 2;</code>
+       *
        * @param index The index to set the value at.
        * @param value The audiences to set.
        * @return This builder for chaining.
        */
-      public Builder setAudiences(
-          int index, java.lang.String value) {
+      public Builder setAudiences(int index, java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAudiencesIsMutable();
+          throw new NullPointerException();
+        }
+        ensureAudiencesIsMutable();
         audiences_.set(index, value);
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The intended audience(s) for this authentication information. Reflects
        * the audience (`aud`) claim within a JWT. The audience
@@ -4383,20 +4702,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string audiences = 2;</code>
+       *
        * @param value The audiences to add.
        * @return This builder for chaining.
        */
-      public Builder addAudiences(
-          java.lang.String value) {
+      public Builder addAudiences(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAudiencesIsMutable();
+          throw new NullPointerException();
+        }
+        ensureAudiencesIsMutable();
         audiences_.add(value);
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The intended audience(s) for this authentication information. Reflects
        * the audience (`aud`) claim within a JWT. The audience
@@ -4413,18 +4734,19 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string audiences = 2;</code>
+       *
        * @param values The audiences to add.
        * @return This builder for chaining.
        */
-      public Builder addAllAudiences(
-          java.lang.Iterable<java.lang.String> values) {
+      public Builder addAllAudiences(java.lang.Iterable<java.lang.String> values) {
         ensureAudiencesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, audiences_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, audiences_);
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The intended audience(s) for this authentication information. Reflects
        * the audience (`aud`) claim within a JWT. The audience
@@ -4441,6 +4763,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string audiences = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearAudiences() {
@@ -4450,6 +4773,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The intended audience(s) for this authentication information. Reflects
        * the audience (`aud`) claim within a JWT. The audience
@@ -4466,15 +4791,15 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string audiences = 2;</code>
+       *
        * @param value The bytes of the audiences to add.
        * @return This builder for chaining.
        */
-      public Builder addAudiencesBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder addAudiencesBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
         ensureAudiencesIsMutable();
         audiences_.add(value);
         onChanged();
@@ -4483,6 +4808,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object presenter_ = "";
       /**
+       *
+       *
        * <pre>
        * The authorized presenter of the credential. Reflects the optional
        * Authorized Presenter (`azp`) claim within a JWT or the
@@ -4491,13 +4818,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string presenter = 3;</code>
+       *
        * @return The presenter.
        */
       public java.lang.String getPresenter() {
         java.lang.Object ref = presenter_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           presenter_ = s;
           return s;
@@ -4506,6 +4833,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The authorized presenter of the credential. Reflects the optional
        * Authorized Presenter (`azp`) claim within a JWT or the
@@ -4514,15 +4843,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string presenter = 3;</code>
+       *
        * @return The bytes for presenter.
        */
-      public com.google.protobuf.ByteString
-          getPresenterBytes() {
+      public com.google.protobuf.ByteString getPresenterBytes() {
         java.lang.Object ref = presenter_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           presenter_ = b;
           return b;
         } else {
@@ -4530,6 +4858,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The authorized presenter of the credential. Reflects the optional
        * Authorized Presenter (`azp`) claim within a JWT or the
@@ -4538,20 +4868,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string presenter = 3;</code>
+       *
        * @param value The presenter to set.
        * @return This builder for chaining.
        */
-      public Builder setPresenter(
-          java.lang.String value) {
+      public Builder setPresenter(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         presenter_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The authorized presenter of the credential. Reflects the optional
        * Authorized Presenter (`azp`) claim within a JWT or the
@@ -4560,15 +4892,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string presenter = 3;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearPresenter() {
-        
+
         presenter_ = getDefaultInstance().getPresenter();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The authorized presenter of the credential. Reflects the optional
        * Authorized Presenter (`azp`) claim within a JWT or the
@@ -4577,16 +4912,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string presenter = 3;</code>
+       *
        * @param value The bytes for presenter to set.
        * @return This builder for chaining.
        */
-      public Builder setPresenterBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setPresenterBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         presenter_ = value;
         onChanged();
         return this;
@@ -4594,8 +4929,13 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Struct claims_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> claimsBuilder_;
+              com.google.protobuf.Struct,
+              com.google.protobuf.Struct.Builder,
+              com.google.protobuf.StructOrBuilder>
+          claimsBuilder_;
       /**
+       *
+       *
        * <pre>
        * Structured claims presented with the credential. JWTs include
        * `{key: value}` pairs for standard and private claims. The following
@@ -4613,12 +4953,15 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Struct claims = 4;</code>
+       *
        * @return Whether the claims field is set.
        */
       public boolean hasClaims() {
         return claimsBuilder_ != null || claims_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Structured claims presented with the credential. JWTs include
        * `{key: value}` pairs for standard and private claims. The following
@@ -4636,6 +4979,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Struct claims = 4;</code>
+       *
        * @return The claims.
        */
       public com.google.protobuf.Struct getClaims() {
@@ -4646,6 +4990,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Structured claims presented with the credential. JWTs include
        * `{key: value}` pairs for standard and private claims. The following
@@ -4678,6 +5024,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Structured claims presented with the credential. JWTs include
        * `{key: value}` pairs for standard and private claims. The following
@@ -4696,8 +5044,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.Struct claims = 4;</code>
        */
-      public Builder setClaims(
-          com.google.protobuf.Struct.Builder builderForValue) {
+      public Builder setClaims(com.google.protobuf.Struct.Builder builderForValue) {
         if (claimsBuilder_ == null) {
           claims_ = builderForValue.build();
           onChanged();
@@ -4708,6 +5055,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Structured claims presented with the credential. JWTs include
        * `{key: value}` pairs for standard and private claims. The following
@@ -4730,7 +5079,7 @@ private static final long serialVersionUID = 0L;
         if (claimsBuilder_ == null) {
           if (claims_ != null) {
             claims_ =
-              com.google.protobuf.Struct.newBuilder(claims_).mergeFrom(value).buildPartial();
+                com.google.protobuf.Struct.newBuilder(claims_).mergeFrom(value).buildPartial();
           } else {
             claims_ = value;
           }
@@ -4742,6 +5091,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Structured claims presented with the credential. JWTs include
        * `{key: value}` pairs for standard and private claims. The following
@@ -4772,6 +5123,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Structured claims presented with the credential. JWTs include
        * `{key: value}` pairs for standard and private claims. The following
@@ -4791,11 +5144,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Struct claims = 4;</code>
        */
       public com.google.protobuf.Struct.Builder getClaimsBuilder() {
-        
+
         onChanged();
         return getClaimsFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Structured claims presented with the credential. JWTs include
        * `{key: value}` pairs for standard and private claims. The following
@@ -4818,11 +5173,12 @@ private static final long serialVersionUID = 0L;
         if (claimsBuilder_ != null) {
           return claimsBuilder_.getMessageOrBuilder();
         } else {
-          return claims_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : claims_;
+          return claims_ == null ? com.google.protobuf.Struct.getDefaultInstance() : claims_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Structured claims presented with the credential. JWTs include
        * `{key: value}` pairs for standard and private claims. The following
@@ -4842,27 +5198,34 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Struct claims = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+              com.google.protobuf.Struct,
+              com.google.protobuf.Struct.Builder,
+              com.google.protobuf.StructOrBuilder>
           getClaimsFieldBuilder() {
         if (claimsBuilder_ == null) {
-          claimsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getClaims(),
-                  getParentForChildren(),
-                  isClean());
+          claimsBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Struct,
+                  com.google.protobuf.Struct.Builder,
+                  com.google.protobuf.StructOrBuilder>(
+                  getClaims(), getParentForChildren(), isClean());
           claims_ = null;
         }
         return claimsBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList accessLevels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringList accessLevels_ =
+          com.google.protobuf.LazyStringArrayList.EMPTY;
+
       private void ensureAccessLevelsIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
           accessLevels_ = new com.google.protobuf.LazyStringArrayList(accessLevels_);
           bitField0_ |= 0x00000002;
-         }
+        }
       }
       /**
+       *
+       *
        * <pre>
        * A list of access level resource names that allow resources to be
        * accessed by authenticated requester. It is part of Secure GCP processing
@@ -4873,13 +5236,15 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string access_levels = 5;</code>
+       *
        * @return A list containing the accessLevels.
        */
-      public com.google.protobuf.ProtocolStringList
-          getAccessLevelsList() {
+      public com.google.protobuf.ProtocolStringList getAccessLevelsList() {
         return accessLevels_.getUnmodifiableView();
       }
       /**
+       *
+       *
        * <pre>
        * A list of access level resource names that allow resources to be
        * accessed by authenticated requester. It is part of Secure GCP processing
@@ -4890,12 +5255,15 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string access_levels = 5;</code>
+       *
        * @return The count of accessLevels.
        */
       public int getAccessLevelsCount() {
         return accessLevels_.size();
       }
       /**
+       *
+       *
        * <pre>
        * A list of access level resource names that allow resources to be
        * accessed by authenticated requester. It is part of Secure GCP processing
@@ -4906,6 +5274,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string access_levels = 5;</code>
+       *
        * @param index The index of the element to return.
        * @return The accessLevels at the given index.
        */
@@ -4913,6 +5282,8 @@ private static final long serialVersionUID = 0L;
         return accessLevels_.get(index);
       }
       /**
+       *
+       *
        * <pre>
        * A list of access level resource names that allow resources to be
        * accessed by authenticated requester. It is part of Secure GCP processing
@@ -4923,14 +5294,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string access_levels = 5;</code>
+       *
        * @param index The index of the value to return.
        * @return The bytes of the accessLevels at the given index.
        */
-      public com.google.protobuf.ByteString
-          getAccessLevelsBytes(int index) {
+      public com.google.protobuf.ByteString getAccessLevelsBytes(int index) {
         return accessLevels_.getByteString(index);
       }
       /**
+       *
+       *
        * <pre>
        * A list of access level resource names that allow resources to be
        * accessed by authenticated requester. It is part of Secure GCP processing
@@ -4941,21 +5314,23 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string access_levels = 5;</code>
+       *
        * @param index The index to set the value at.
        * @param value The accessLevels to set.
        * @return This builder for chaining.
        */
-      public Builder setAccessLevels(
-          int index, java.lang.String value) {
+      public Builder setAccessLevels(int index, java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAccessLevelsIsMutable();
+          throw new NullPointerException();
+        }
+        ensureAccessLevelsIsMutable();
         accessLevels_.set(index, value);
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A list of access level resource names that allow resources to be
        * accessed by authenticated requester. It is part of Secure GCP processing
@@ -4966,20 +5341,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string access_levels = 5;</code>
+       *
        * @param value The accessLevels to add.
        * @return This builder for chaining.
        */
-      public Builder addAccessLevels(
-          java.lang.String value) {
+      public Builder addAccessLevels(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAccessLevelsIsMutable();
+          throw new NullPointerException();
+        }
+        ensureAccessLevelsIsMutable();
         accessLevels_.add(value);
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A list of access level resource names that allow resources to be
        * accessed by authenticated requester. It is part of Secure GCP processing
@@ -4990,18 +5367,19 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string access_levels = 5;</code>
+       *
        * @param values The accessLevels to add.
        * @return This builder for chaining.
        */
-      public Builder addAllAccessLevels(
-          java.lang.Iterable<java.lang.String> values) {
+      public Builder addAllAccessLevels(java.lang.Iterable<java.lang.String> values) {
         ensureAccessLevelsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, accessLevels_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, accessLevels_);
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A list of access level resource names that allow resources to be
        * accessed by authenticated requester. It is part of Secure GCP processing
@@ -5012,6 +5390,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string access_levels = 5;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearAccessLevels() {
@@ -5021,6 +5400,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A list of access level resource names that allow resources to be
        * accessed by authenticated requester. It is part of Secure GCP processing
@@ -5031,20 +5412,21 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string access_levels = 5;</code>
+       *
        * @param value The bytes of the accessLevels to add.
        * @return This builder for chaining.
        */
-      public Builder addAccessLevelsBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder addAccessLevelsBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
         ensureAccessLevelsIsMutable();
         accessLevels_.add(value);
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5057,12 +5439,12 @@ private static final long serialVersionUID = 0L;
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:google.rpc.context.AttributeContext.Auth)
     }
 
     // @@protoc_insertion_point(class_scope:google.rpc.context.AttributeContext.Auth)
     private static final com.google.rpc.context.AttributeContext.Auth DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.google.rpc.context.AttributeContext.Auth();
     }
@@ -5071,16 +5453,16 @@ private static final long serialVersionUID = 0L;
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Auth>
-        PARSER = new com.google.protobuf.AbstractParser<Auth>() {
-      @java.lang.Override
-      public Auth parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Auth(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<Auth> PARSER =
+        new com.google.protobuf.AbstractParser<Auth>() {
+          @java.lang.Override
+          public Auth parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Auth(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<Auth> parser() {
       return PARSER;
@@ -5095,14 +5477,16 @@ private static final long serialVersionUID = 0L;
     public com.google.rpc.context.AttributeContext.Auth getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RequestOrBuilder extends
+  public interface RequestOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:google.rpc.context.AttributeContext.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * The unique ID for a request, which can be propagated to downstream
      * systems. The ID should have low probability of collision
@@ -5110,10 +5494,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string id = 1;</code>
+     *
      * @return The id.
      */
     java.lang.String getId();
     /**
+     *
+     *
      * <pre>
      * The unique ID for a request, which can be propagated to downstream
      * systems. The ID should have low probability of collision
@@ -5121,32 +5508,39 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string id = 1;</code>
+     *
      * @return The bytes for id.
      */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    com.google.protobuf.ByteString getIdBytes();
 
     /**
+     *
+     *
      * <pre>
      * The HTTP request method, such as `GET`, `POST`.
      * </pre>
      *
      * <code>string method = 2;</code>
+     *
      * @return The method.
      */
     java.lang.String getMethod();
     /**
+     *
+     *
      * <pre>
      * The HTTP request method, such as `GET`, `POST`.
      * </pre>
      *
      * <code>string method = 2;</code>
+     *
      * @return The bytes for method.
      */
-    com.google.protobuf.ByteString
-        getMethodBytes();
+    com.google.protobuf.ByteString getMethodBytes();
 
     /**
+     *
+     *
      * <pre>
      * The HTTP request headers. If multiple headers share the same key, they
      * must be merged according to the HTTP spec. All header keys must be
@@ -5157,6 +5551,8 @@ private static final long serialVersionUID = 0L;
      */
     int getHeadersCount();
     /**
+     *
+     *
      * <pre>
      * The HTTP request headers. If multiple headers share the same key, they
      * must be merged according to the HTTP spec. All header keys must be
@@ -5165,15 +5561,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-    boolean containsHeaders(
-        java.lang.String key);
-    /**
-     * Use {@link #getHeadersMap()} instead.
-     */
+    boolean containsHeaders(java.lang.String key);
+    /** Use {@link #getHeadersMap()} instead. */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getHeaders();
+    java.util.Map<java.lang.String, java.lang.String> getHeaders();
     /**
+     *
+     *
      * <pre>
      * The HTTP request headers. If multiple headers share the same key, they
      * must be merged according to the HTTP spec. All header keys must be
@@ -5182,9 +5576,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-    java.util.Map<java.lang.String, java.lang.String>
-    getHeadersMap();
+    java.util.Map<java.lang.String, java.lang.String> getHeadersMap();
     /**
+     *
+     *
      * <pre>
      * The HTTP request headers. If multiple headers share the same key, they
      * must be merged according to the HTTP spec. All header keys must be
@@ -5193,11 +5588,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-
-    java.lang.String getHeadersOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue);
+    java.lang.String getHeadersOrDefault(java.lang.String key, java.lang.String defaultValue);
     /**
+     *
+     *
      * <pre>
      * The HTTP request headers. If multiple headers share the same key, they
      * must be merged according to the HTTP spec. All header keys must be
@@ -5206,113 +5600,139 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-
-    java.lang.String getHeadersOrThrow(
-        java.lang.String key);
+    java.lang.String getHeadersOrThrow(java.lang.String key);
 
     /**
+     *
+     *
      * <pre>
      * The HTTP URL path.
      * </pre>
      *
      * <code>string path = 4;</code>
+     *
      * @return The path.
      */
     java.lang.String getPath();
     /**
+     *
+     *
      * <pre>
      * The HTTP URL path.
      * </pre>
      *
      * <code>string path = 4;</code>
+     *
      * @return The bytes for path.
      */
-    com.google.protobuf.ByteString
-        getPathBytes();
+    com.google.protobuf.ByteString getPathBytes();
 
     /**
+     *
+     *
      * <pre>
      * The HTTP request `Host` header value.
      * </pre>
      *
      * <code>string host = 5;</code>
+     *
      * @return The host.
      */
     java.lang.String getHost();
     /**
+     *
+     *
      * <pre>
      * The HTTP request `Host` header value.
      * </pre>
      *
      * <code>string host = 5;</code>
+     *
      * @return The bytes for host.
      */
-    com.google.protobuf.ByteString
-        getHostBytes();
+    com.google.protobuf.ByteString getHostBytes();
 
     /**
+     *
+     *
      * <pre>
      * The HTTP URL scheme, such as `http` and `https`.
      * </pre>
      *
      * <code>string scheme = 6;</code>
+     *
      * @return The scheme.
      */
     java.lang.String getScheme();
     /**
+     *
+     *
      * <pre>
      * The HTTP URL scheme, such as `http` and `https`.
      * </pre>
      *
      * <code>string scheme = 6;</code>
+     *
      * @return The bytes for scheme.
      */
-    com.google.protobuf.ByteString
-        getSchemeBytes();
+    com.google.protobuf.ByteString getSchemeBytes();
 
     /**
+     *
+     *
      * <pre>
      * The HTTP URL query in the format of `name1=value1&amp;name2=value2`, as it
      * appears in the first line of the HTTP request. No decoding is performed.
      * </pre>
      *
      * <code>string query = 7;</code>
+     *
      * @return The query.
      */
     java.lang.String getQuery();
     /**
+     *
+     *
      * <pre>
      * The HTTP URL query in the format of `name1=value1&amp;name2=value2`, as it
      * appears in the first line of the HTTP request. No decoding is performed.
      * </pre>
      *
      * <code>string query = 7;</code>
+     *
      * @return The bytes for query.
      */
-    com.google.protobuf.ByteString
-        getQueryBytes();
+    com.google.protobuf.ByteString getQueryBytes();
 
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service receives the last byte of
      * the request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 9;</code>
+     *
      * @return Whether the time field is set.
      */
     boolean hasTime();
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service receives the last byte of
      * the request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 9;</code>
+     *
      * @return The time.
      */
     com.google.protobuf.Timestamp getTime();
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service receives the last byte of
      * the request.
@@ -5323,16 +5743,21 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * The HTTP request size in bytes. If unknown, it must be -1.
      * </pre>
      *
      * <code>int64 size = 10;</code>
+     *
      * @return The size.
      */
     long getSize();
 
     /**
+     *
+     *
      * <pre>
      * The network protocol used with the request, such as "http/1.1",
      * "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
@@ -5341,10 +5766,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string protocol = 11;</code>
+     *
      * @return The protocol.
      */
     java.lang.String getProtocol();
     /**
+     *
+     *
      * <pre>
      * The network protocol used with the request, such as "http/1.1",
      * "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
@@ -5353,54 +5781,67 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string protocol = 11;</code>
+     *
      * @return The bytes for protocol.
      */
-    com.google.protobuf.ByteString
-        getProtocolBytes();
+    com.google.protobuf.ByteString getProtocolBytes();
 
     /**
+     *
+     *
      * <pre>
      * A special parameter for request reason. It is used by security systems
      * to associate auditing information with a request.
      * </pre>
      *
      * <code>string reason = 12;</code>
+     *
      * @return The reason.
      */
     java.lang.String getReason();
     /**
+     *
+     *
      * <pre>
      * A special parameter for request reason. It is used by security systems
      * to associate auditing information with a request.
      * </pre>
      *
      * <code>string reason = 12;</code>
+     *
      * @return The bytes for reason.
      */
-    com.google.protobuf.ByteString
-        getReasonBytes();
+    com.google.protobuf.ByteString getReasonBytes();
 
     /**
+     *
+     *
      * <pre>
      * The request authentication. May be absent for unauthenticated requests.
      * Derived from the HTTP request `Authorization` header or equivalent.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Auth auth = 13;</code>
+     *
      * @return Whether the auth field is set.
      */
     boolean hasAuth();
     /**
+     *
+     *
      * <pre>
      * The request authentication. May be absent for unauthenticated requests.
      * Derived from the HTTP request `Authorization` header or equivalent.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Auth auth = 13;</code>
+     *
      * @return The auth.
      */
     com.google.rpc.context.AttributeContext.Auth getAuth();
     /**
+     *
+     *
      * <pre>
      * The request authentication. May be absent for unauthenticated requests.
      * Derived from the HTTP request `Authorization` header or equivalent.
@@ -5411,6 +5852,8 @@ private static final long serialVersionUID = 0L;
     com.google.rpc.context.AttributeContext.AuthOrBuilder getAuthOrBuilder();
   }
   /**
+   *
+   *
    * <pre>
    * This message defines attributes for an HTTP request. If the actual
    * request is not an HTTP request, the runtime system should try to map
@@ -5419,15 +5862,16 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.rpc.context.AttributeContext.Request}
    */
-  public static final class Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class Request extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:google.rpc.context.AttributeContext.Request)
       RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
     private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private Request() {
       id_ = "";
       method_ = "";
@@ -5441,16 +5885,15 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Request();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private Request(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5470,145 +5913,163 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              method_ = s;
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                headers_ = com.google.protobuf.MapField.newMapField(
-                    HeadersDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                id_ = s;
+                break;
               }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              headers__ = input.readMessage(
-                  HeadersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              headers_.getMutableMap().put(
-                  headers__.getKey(), headers__.getValue());
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              path_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              host_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              scheme_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              query_ = s;
-              break;
-            }
-            case 74: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (time_ != null) {
-                subBuilder = time_.toBuilder();
+                method_ = s;
+                break;
               }
-              time_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(time_);
-                time_ = subBuilder.buildPartial();
+            case 26:
+              {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  headers_ =
+                      com.google.protobuf.MapField.newMapField(
+                          HeadersDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
+                    input.readMessage(
+                        HeadersDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                headers_.getMutableMap().put(headers__.getKey(), headers__.getValue());
+                break;
               }
+            case 34:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              break;
-            }
-            case 80: {
-
-              size_ = input.readInt64();
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              protocol_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              reason_ = s;
-              break;
-            }
-            case 106: {
-              com.google.rpc.context.AttributeContext.Auth.Builder subBuilder = null;
-              if (auth_ != null) {
-                subBuilder = auth_.toBuilder();
+                path_ = s;
+                break;
               }
-              auth_ = input.readMessage(com.google.rpc.context.AttributeContext.Auth.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(auth_);
-                auth_ = subBuilder.buildPartial();
-              }
+            case 42:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                host_ = s;
+                break;
               }
-              break;
-            }
+            case 50:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                scheme_ = s;
+                break;
+              }
+            case 58:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                query_ = s;
+                break;
+              }
+            case 74:
+              {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (time_ != null) {
+                  subBuilder = time_.toBuilder();
+                }
+                time_ =
+                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(time_);
+                  time_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+            case 80:
+              {
+                size_ = input.readInt64();
+                break;
+              }
+            case 90:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                protocol_ = s;
+                break;
+              }
+            case 98:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                reason_ = s;
+                break;
+              }
+            case 106:
+              {
+                com.google.rpc.context.AttributeContext.Auth.Builder subBuilder = null;
+                if (auth_ != null) {
+                  subBuilder = auth_.toBuilder();
+                }
+                auth_ =
+                    input.readMessage(
+                        com.google.rpc.context.AttributeContext.Auth.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(auth_);
+                  auth_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Request_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Request_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
     @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
+    protected com.google.protobuf.MapField internalGetMapField(int number) {
       switch (number) {
         case 3:
           return internalGetHeaders();
         default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
+          throw new RuntimeException("Invalid map field number: " + number);
       }
     }
+
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Request_fieldAccessorTable
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.rpc.context.AttributeContext.Request.class, com.google.rpc.context.AttributeContext.Request.Builder.class);
+              com.google.rpc.context.AttributeContext.Request.class,
+              com.google.rpc.context.AttributeContext.Request.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     *
+     *
      * <pre>
      * The unique ID for a request, which can be propagated to downstream
      * systems. The ID should have low probability of collision
@@ -5616,6 +6077,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string id = 1;</code>
+     *
      * @return The id.
      */
     @java.lang.Override
@@ -5624,14 +6086,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The unique ID for a request, which can be propagated to downstream
      * systems. The ID should have low probability of collision
@@ -5639,16 +6102,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string id = 1;</code>
+     *
      * @return The bytes for id.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
+    public com.google.protobuf.ByteString getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         id_ = b;
         return b;
       } else {
@@ -5659,11 +6121,14 @@ private static final long serialVersionUID = 0L;
     public static final int METHOD_FIELD_NUMBER = 2;
     private volatile java.lang.Object method_;
     /**
+     *
+     *
      * <pre>
      * The HTTP request method, such as `GET`, `POST`.
      * </pre>
      *
      * <code>string method = 2;</code>
+     *
      * @return The method.
      */
     @java.lang.Override
@@ -5672,29 +6137,29 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         method_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP request method, such as `GET`, `POST`.
      * </pre>
      *
      * <code>string method = 2;</code>
+     *
      * @return The bytes for method.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMethodBytes() {
+    public com.google.protobuf.ByteString getMethodBytes() {
       java.lang.Object ref = method_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         method_ = b;
         return b;
       } else {
@@ -5703,24 +6168,23 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int HEADERS_FIELD_NUMBER = 3;
+
     private static final class HeadersDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Request_HeadersEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
+      static final com.google.protobuf.MapEntry<java.lang.String, java.lang.String> defaultEntry =
+          com.google.protobuf.MapEntry.<java.lang.String, java.lang.String>newDefaultInstance(
+              com.google.rpc.context.AttributeContextProto
+                  .internal_static_google_rpc_context_AttributeContext_Request_HeadersEntry_descriptor,
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "",
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "");
     }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> headers_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetHeaders() {
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> headers_;
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetHeaders() {
       if (headers_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            HeadersDefaultEntryHolder.defaultEntry);
+        return com.google.protobuf.MapField.emptyMapField(HeadersDefaultEntryHolder.defaultEntry);
       }
       return headers_;
     }
@@ -5729,6 +6193,8 @@ private static final long serialVersionUID = 0L;
       return internalGetHeaders().getMap().size();
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP request headers. If multiple headers share the same key, they
      * must be merged according to the HTTP spec. All header keys must be
@@ -5737,22 +6203,22 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-
     @java.lang.Override
-    public boolean containsHeaders(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+    public boolean containsHeaders(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
       return internalGetHeaders().getMap().containsKey(key);
     }
-    /**
-     * Use {@link #getHeadersMap()} instead.
-     */
+    /** Use {@link #getHeadersMap()} instead. */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
       return getHeadersMap();
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP request headers. If multiple headers share the same key, they
      * must be merged according to the HTTP spec. All header keys must be
@@ -5762,11 +6228,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
       return internalGetHeaders().getMap();
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP request headers. If multiple headers share the same key, they
      * must be merged according to the HTTP spec. All header keys must be
@@ -5776,16 +6243,17 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
     @java.lang.Override
-
     public java.lang.String getHeadersOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetHeaders().getMap();
+        java.lang.String key, java.lang.String defaultValue) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP request headers. If multiple headers share the same key, they
      * must be merged according to the HTTP spec. All header keys must be
@@ -5795,12 +6263,11 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getHeadersOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetHeaders().getMap();
+    public java.lang.String getHeadersOrThrow(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -5810,11 +6277,14 @@ private static final long serialVersionUID = 0L;
     public static final int PATH_FIELD_NUMBER = 4;
     private volatile java.lang.Object path_;
     /**
+     *
+     *
      * <pre>
      * The HTTP URL path.
      * </pre>
      *
      * <code>string path = 4;</code>
+     *
      * @return The path.
      */
     @java.lang.Override
@@ -5823,29 +6293,29 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         path_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP URL path.
      * </pre>
      *
      * <code>string path = 4;</code>
+     *
      * @return The bytes for path.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPathBytes() {
+    public com.google.protobuf.ByteString getPathBytes() {
       java.lang.Object ref = path_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         path_ = b;
         return b;
       } else {
@@ -5856,11 +6326,14 @@ private static final long serialVersionUID = 0L;
     public static final int HOST_FIELD_NUMBER = 5;
     private volatile java.lang.Object host_;
     /**
+     *
+     *
      * <pre>
      * The HTTP request `Host` header value.
      * </pre>
      *
      * <code>string host = 5;</code>
+     *
      * @return The host.
      */
     @java.lang.Override
@@ -5869,29 +6342,29 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         host_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP request `Host` header value.
      * </pre>
      *
      * <code>string host = 5;</code>
+     *
      * @return The bytes for host.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getHostBytes() {
+    public com.google.protobuf.ByteString getHostBytes() {
       java.lang.Object ref = host_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         host_ = b;
         return b;
       } else {
@@ -5902,11 +6375,14 @@ private static final long serialVersionUID = 0L;
     public static final int SCHEME_FIELD_NUMBER = 6;
     private volatile java.lang.Object scheme_;
     /**
+     *
+     *
      * <pre>
      * The HTTP URL scheme, such as `http` and `https`.
      * </pre>
      *
      * <code>string scheme = 6;</code>
+     *
      * @return The scheme.
      */
     @java.lang.Override
@@ -5915,29 +6391,29 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         scheme_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP URL scheme, such as `http` and `https`.
      * </pre>
      *
      * <code>string scheme = 6;</code>
+     *
      * @return The bytes for scheme.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSchemeBytes() {
+    public com.google.protobuf.ByteString getSchemeBytes() {
       java.lang.Object ref = scheme_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         scheme_ = b;
         return b;
       } else {
@@ -5948,12 +6424,15 @@ private static final long serialVersionUID = 0L;
     public static final int QUERY_FIELD_NUMBER = 7;
     private volatile java.lang.Object query_;
     /**
+     *
+     *
      * <pre>
      * The HTTP URL query in the format of `name1=value1&amp;name2=value2`, as it
      * appears in the first line of the HTTP request. No decoding is performed.
      * </pre>
      *
      * <code>string query = 7;</code>
+     *
      * @return The query.
      */
     @java.lang.Override
@@ -5962,30 +6441,30 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         query_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP URL query in the format of `name1=value1&amp;name2=value2`, as it
      * appears in the first line of the HTTP request. No decoding is performed.
      * </pre>
      *
      * <code>string query = 7;</code>
+     *
      * @return The bytes for query.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getQueryBytes() {
+    public com.google.protobuf.ByteString getQueryBytes() {
       java.lang.Object ref = query_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         query_ = b;
         return b;
       } else {
@@ -5996,12 +6475,15 @@ private static final long serialVersionUID = 0L;
     public static final int TIME_FIELD_NUMBER = 9;
     private com.google.protobuf.Timestamp time_;
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service receives the last byte of
      * the request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 9;</code>
+     *
      * @return Whether the time field is set.
      */
     @java.lang.Override
@@ -6009,12 +6491,15 @@ private static final long serialVersionUID = 0L;
       return time_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service receives the last byte of
      * the request.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 9;</code>
+     *
      * @return The time.
      */
     @java.lang.Override
@@ -6022,6 +6507,8 @@ private static final long serialVersionUID = 0L;
       return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
     }
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service receives the last byte of
      * the request.
@@ -6037,11 +6524,14 @@ private static final long serialVersionUID = 0L;
     public static final int SIZE_FIELD_NUMBER = 10;
     private long size_;
     /**
+     *
+     *
      * <pre>
      * The HTTP request size in bytes. If unknown, it must be -1.
      * </pre>
      *
      * <code>int64 size = 10;</code>
+     *
      * @return The size.
      */
     @java.lang.Override
@@ -6052,6 +6542,8 @@ private static final long serialVersionUID = 0L;
     public static final int PROTOCOL_FIELD_NUMBER = 11;
     private volatile java.lang.Object protocol_;
     /**
+     *
+     *
      * <pre>
      * The network protocol used with the request, such as "http/1.1",
      * "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
@@ -6060,6 +6552,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string protocol = 11;</code>
+     *
      * @return The protocol.
      */
     @java.lang.Override
@@ -6068,14 +6561,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         protocol_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The network protocol used with the request, such as "http/1.1",
      * "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
@@ -6084,16 +6578,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string protocol = 11;</code>
+     *
      * @return The bytes for protocol.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProtocolBytes() {
+    public com.google.protobuf.ByteString getProtocolBytes() {
       java.lang.Object ref = protocol_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         protocol_ = b;
         return b;
       } else {
@@ -6104,12 +6597,15 @@ private static final long serialVersionUID = 0L;
     public static final int REASON_FIELD_NUMBER = 12;
     private volatile java.lang.Object reason_;
     /**
+     *
+     *
      * <pre>
      * A special parameter for request reason. It is used by security systems
      * to associate auditing information with a request.
      * </pre>
      *
      * <code>string reason = 12;</code>
+     *
      * @return The reason.
      */
     @java.lang.Override
@@ -6118,30 +6614,30 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         reason_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A special parameter for request reason. It is used by security systems
      * to associate auditing information with a request.
      * </pre>
      *
      * <code>string reason = 12;</code>
+     *
      * @return The bytes for reason.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getReasonBytes() {
+    public com.google.protobuf.ByteString getReasonBytes() {
       java.lang.Object ref = reason_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         reason_ = b;
         return b;
       } else {
@@ -6152,12 +6648,15 @@ private static final long serialVersionUID = 0L;
     public static final int AUTH_FIELD_NUMBER = 13;
     private com.google.rpc.context.AttributeContext.Auth auth_;
     /**
+     *
+     *
      * <pre>
      * The request authentication. May be absent for unauthenticated requests.
      * Derived from the HTTP request `Authorization` header or equivalent.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Auth auth = 13;</code>
+     *
      * @return Whether the auth field is set.
      */
     @java.lang.Override
@@ -6165,19 +6664,26 @@ private static final long serialVersionUID = 0L;
       return auth_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The request authentication. May be absent for unauthenticated requests.
      * Derived from the HTTP request `Authorization` header or equivalent.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Auth auth = 13;</code>
+     *
      * @return The auth.
      */
     @java.lang.Override
     public com.google.rpc.context.AttributeContext.Auth getAuth() {
-      return auth_ == null ? com.google.rpc.context.AttributeContext.Auth.getDefaultInstance() : auth_;
+      return auth_ == null
+          ? com.google.rpc.context.AttributeContext.Auth.getDefaultInstance()
+          : auth_;
     }
     /**
+     *
+     *
      * <pre>
      * The request authentication. May be absent for unauthenticated requests.
      * Derived from the HTTP request `Authorization` header or equivalent.
@@ -6191,6 +6697,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -6202,20 +6709,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (!getMethodBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, method_);
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetHeaders(),
-          HeadersDefaultEntryHolder.defaultEntry,
-          3);
+      com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
+          output, internalGetHeaders(), HeadersDefaultEntryHolder.defaultEntry, 3);
       if (!getPathBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, path_);
       }
@@ -6258,15 +6760,15 @@ private static final long serialVersionUID = 0L;
       if (!getMethodBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, method_);
       }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetHeaders().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        headers__ = HeadersDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, headers__);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
+          internalGetHeaders().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
+            HeadersDefaultEntryHolder.defaultEntry
+                .newBuilderForType()
+                .setKey(entry.getKey())
+                .setValue(entry.getValue())
+                .build();
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, headers__);
       }
       if (!getPathBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, path_);
@@ -6281,12 +6783,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, query_);
       }
       if (time_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getTime());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(9, getTime());
       }
       if (size_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(10, size_);
+        size += com.google.protobuf.CodedOutputStream.computeInt64Size(10, size_);
       }
       if (!getProtocolBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, protocol_);
@@ -6295,8 +6795,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, reason_);
       }
       if (auth_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getAuth());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(13, getAuth());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6306,42 +6805,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.google.rpc.context.AttributeContext.Request)) {
         return super.equals(obj);
       }
-      com.google.rpc.context.AttributeContext.Request other = (com.google.rpc.context.AttributeContext.Request) obj;
+      com.google.rpc.context.AttributeContext.Request other =
+          (com.google.rpc.context.AttributeContext.Request) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getMethod()
-          .equals(other.getMethod())) return false;
-      if (!internalGetHeaders().equals(
-          other.internalGetHeaders())) return false;
-      if (!getPath()
-          .equals(other.getPath())) return false;
-      if (!getHost()
-          .equals(other.getHost())) return false;
-      if (!getScheme()
-          .equals(other.getScheme())) return false;
-      if (!getQuery()
-          .equals(other.getQuery())) return false;
+      if (!getId().equals(other.getId())) return false;
+      if (!getMethod().equals(other.getMethod())) return false;
+      if (!internalGetHeaders().equals(other.internalGetHeaders())) return false;
+      if (!getPath().equals(other.getPath())) return false;
+      if (!getHost().equals(other.getHost())) return false;
+      if (!getScheme().equals(other.getScheme())) return false;
+      if (!getQuery().equals(other.getQuery())) return false;
       if (hasTime() != other.hasTime()) return false;
       if (hasTime()) {
-        if (!getTime()
-            .equals(other.getTime())) return false;
+        if (!getTime().equals(other.getTime())) return false;
       }
-      if (getSize()
-          != other.getSize()) return false;
-      if (!getProtocol()
-          .equals(other.getProtocol())) return false;
-      if (!getReason()
-          .equals(other.getReason())) return false;
+      if (getSize() != other.getSize()) return false;
+      if (!getProtocol().equals(other.getProtocol())) return false;
+      if (!getReason().equals(other.getReason())) return false;
       if (hasAuth() != other.hasAuth()) return false;
       if (hasAuth()) {
-        if (!getAuth()
-            .equals(other.getAuth())) return false;
+        if (!getAuth().equals(other.getAuth())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -6375,8 +6863,7 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getTime().hashCode();
       }
       hash = (37 * hash) + SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSize());
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getSize());
       hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
       hash = (53 * hash) + getProtocol().hashCode();
       hash = (37 * hash) + REASON_FIELD_NUMBER;
@@ -6391,87 +6878,93 @@ private static final long serialVersionUID = 0L;
     }
 
     public static com.google.rpc.context.AttributeContext.Request parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Request parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Request parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.rpc.context.AttributeContext.Request parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.google.rpc.context.AttributeContext.Request parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.google.rpc.context.AttributeContext.Request parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.google.rpc.context.AttributeContext.Request parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Request parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.google.rpc.context.AttributeContext.Request parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.google.rpc.context.AttributeContext.Request parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.rpc.context.AttributeContext.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.google.rpc.context.AttributeContext.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -6481,6 +6974,8 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * This message defines attributes for an HTTP request. If the actual
      * request is not an HTTP request, the runtime system should try to map
@@ -6489,43 +6984,44 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code google.rpc.context.AttributeContext.Request}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:google.rpc.context.AttributeContext.Request)
         com.google.rpc.context.AttributeContext.RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Request_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Request_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
+      protected com.google.protobuf.MapField internalGetMapField(int number) {
         switch (number) {
           case 3:
             return internalGetHeaders();
           default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
+            throw new RuntimeException("Invalid map field number: " + number);
         }
       }
+
       @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
+      protected com.google.protobuf.MapField internalGetMutableMapField(int number) {
         switch (number) {
           case 3:
             return internalGetMutableHeaders();
           default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
+            throw new RuntimeException("Invalid map field number: " + number);
         }
       }
+
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Request_fieldAccessorTable
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.rpc.context.AttributeContext.Request.class, com.google.rpc.context.AttributeContext.Request.Builder.class);
+                com.google.rpc.context.AttributeContext.Request.class,
+                com.google.rpc.context.AttributeContext.Request.Builder.class);
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Request.newBuilder()
@@ -6533,16 +7029,15 @@ private static final long serialVersionUID = 0L;
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -6581,9 +7076,9 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Request_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Request_descriptor;
       }
 
       @java.lang.Override
@@ -6602,7 +7097,8 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public com.google.rpc.context.AttributeContext.Request buildPartial() {
-        com.google.rpc.context.AttributeContext.Request result = new com.google.rpc.context.AttributeContext.Request(this);
+        com.google.rpc.context.AttributeContext.Request result =
+            new com.google.rpc.context.AttributeContext.Request(this);
         int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.method_ = method_;
@@ -6633,38 +7129,41 @@ private static final long serialVersionUID = 0L;
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.rpc.context.AttributeContext.Request) {
-          return mergeFrom((com.google.rpc.context.AttributeContext.Request)other);
+          return mergeFrom((com.google.rpc.context.AttributeContext.Request) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -6672,7 +7171,8 @@ private static final long serialVersionUID = 0L;
       }
 
       public Builder mergeFrom(com.google.rpc.context.AttributeContext.Request other) {
-        if (other == com.google.rpc.context.AttributeContext.Request.getDefaultInstance()) return this;
+        if (other == com.google.rpc.context.AttributeContext.Request.getDefaultInstance())
+          return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -6681,8 +7181,7 @@ private static final long serialVersionUID = 0L;
           method_ = other.method_;
           onChanged();
         }
-        internalGetMutableHeaders().mergeFrom(
-            other.internalGetHeaders());
+        internalGetMutableHeaders().mergeFrom(other.internalGetHeaders());
         if (!other.getPath().isEmpty()) {
           path_ = other.path_;
           onChanged();
@@ -6735,7 +7234,8 @@ private static final long serialVersionUID = 0L;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.rpc.context.AttributeContext.Request) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.google.rpc.context.AttributeContext.Request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6744,10 +7244,13 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+
       private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
+       *
+       *
        * <pre>
        * The unique ID for a request, which can be propagated to downstream
        * systems. The ID should have low probability of collision
@@ -6755,13 +7258,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string id = 1;</code>
+       *
        * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           id_ = s;
           return s;
@@ -6770,6 +7273,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique ID for a request, which can be propagated to downstream
        * systems. The ID should have low probability of collision
@@ -6777,15 +7282,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string id = 1;</code>
+       *
        * @return The bytes for id.
        */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
+      public com.google.protobuf.ByteString getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           id_ = b;
           return b;
         } else {
@@ -6793,6 +7297,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique ID for a request, which can be propagated to downstream
        * systems. The ID should have low probability of collision
@@ -6800,20 +7306,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string id = 1;</code>
+       *
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
+      public Builder setId(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         id_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique ID for a request, which can be propagated to downstream
        * systems. The ID should have low probability of collision
@@ -6821,15 +7329,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string id = 1;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique ID for a request, which can be propagated to downstream
        * systems. The ID should have low probability of collision
@@ -6837,16 +7348,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string id = 1;</code>
+       *
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setIdBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         id_ = value;
         onChanged();
         return this;
@@ -6854,18 +7365,20 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object method_ = "";
       /**
+       *
+       *
        * <pre>
        * The HTTP request method, such as `GET`, `POST`.
        * </pre>
        *
        * <code>string method = 2;</code>
+       *
        * @return The method.
        */
       public java.lang.String getMethod() {
         java.lang.Object ref = method_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           method_ = s;
           return s;
@@ -6874,20 +7387,21 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request method, such as `GET`, `POST`.
        * </pre>
        *
        * <code>string method = 2;</code>
+       *
        * @return The bytes for method.
        */
-      public com.google.protobuf.ByteString
-          getMethodBytes() {
+      public com.google.protobuf.ByteString getMethodBytes() {
         java.lang.Object ref = method_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           method_ = b;
           return b;
         } else {
@@ -6895,75 +7409,83 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request method, such as `GET`, `POST`.
        * </pre>
        *
        * <code>string method = 2;</code>
+       *
        * @param value The method to set.
        * @return This builder for chaining.
        */
-      public Builder setMethod(
-          java.lang.String value) {
+      public Builder setMethod(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         method_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request method, such as `GET`, `POST`.
        * </pre>
        *
        * <code>string method = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearMethod() {
-        
+
         method_ = getDefaultInstance().getMethod();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request method, such as `GET`, `POST`.
        * </pre>
        *
        * <code>string method = 2;</code>
+       *
        * @param value The bytes for method to set.
        * @return This builder for chaining.
        */
-      public Builder setMethodBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setMethodBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         method_ = value;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> headers_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String> headers_;
+
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetHeaders() {
+          internalGetHeaders() {
         if (headers_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              HeadersDefaultEntryHolder.defaultEntry);
+          return com.google.protobuf.MapField.emptyMapField(HeadersDefaultEntryHolder.defaultEntry);
         }
         return headers_;
       }
+
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableHeaders() {
-        onChanged();;
+          internalGetMutableHeaders() {
+        onChanged();
+        ;
         if (headers_ == null) {
-          headers_ = com.google.protobuf.MapField.newMapField(
-              HeadersDefaultEntryHolder.defaultEntry);
+          headers_ =
+              com.google.protobuf.MapField.newMapField(HeadersDefaultEntryHolder.defaultEntry);
         }
         if (!headers_.isMutable()) {
           headers_ = headers_.copy();
@@ -6975,6 +7497,8 @@ private static final long serialVersionUID = 0L;
         return internalGetHeaders().getMap().size();
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request headers. If multiple headers share the same key, they
        * must be merged according to the HTTP spec. All header keys must be
@@ -6983,22 +7507,22 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
-
       @java.lang.Override
-      public boolean containsHeaders(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+      public boolean containsHeaders(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
         return internalGetHeaders().getMap().containsKey(key);
       }
-      /**
-       * Use {@link #getHeadersMap()} instead.
-       */
+      /** Use {@link #getHeadersMap()} instead. */
       @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
         return getHeadersMap();
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request headers. If multiple headers share the same key, they
        * must be merged according to the HTTP spec. All header keys must be
@@ -7008,11 +7532,12 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
         return internalGetHeaders().getMap();
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request headers. If multiple headers share the same key, they
        * must be merged according to the HTTP spec. All header keys must be
@@ -7022,16 +7547,17 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
       @java.lang.Override
-
       public java.lang.String getHeadersOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetHeaders().getMap();
+          java.lang.String key, java.lang.String defaultValue) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request headers. If multiple headers share the same key, they
        * must be merged according to the HTTP spec. All header keys must be
@@ -7041,12 +7567,11 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getHeadersOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetHeaders().getMap();
+      public java.lang.String getHeadersOrThrow(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
@@ -7054,11 +7579,12 @@ private static final long serialVersionUID = 0L;
       }
 
       public Builder clearHeaders() {
-        internalGetMutableHeaders().getMutableMap()
-            .clear();
+        internalGetMutableHeaders().getMutableMap().clear();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request headers. If multiple headers share the same key, they
        * must be merged according to the HTTP spec. All header keys must be
@@ -7067,23 +7593,21 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
-
-      public Builder removeHeaders(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableHeaders().getMutableMap()
-            .remove(key);
+      public Builder removeHeaders(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableHeaders().getMutableMap().remove(key);
         return this;
       }
-      /**
-       * Use alternate mutation accessors instead.
-       */
+      /** Use alternate mutation accessors instead. */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-      getMutableHeaders() {
+      public java.util.Map<java.lang.String, java.lang.String> getMutableHeaders() {
         return internalGetMutableHeaders().getMutableMap();
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request headers. If multiple headers share the same key, they
        * must be merged according to the HTTP spec. All header keys must be
@@ -7092,16 +7616,19 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
-      public Builder putHeaders(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableHeaders().getMutableMap()
-            .put(key, value);
+      public Builder putHeaders(java.lang.String key, java.lang.String value) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        if (value == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableHeaders().getMutableMap().put(key, value);
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request headers. If multiple headers share the same key, they
        * must be merged according to the HTTP spec. All header keys must be
@@ -7110,28 +7637,27 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
-
-      public Builder putAllHeaders(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableHeaders().getMutableMap()
-            .putAll(values);
+      public Builder putAllHeaders(java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableHeaders().getMutableMap().putAll(values);
         return this;
       }
 
       private java.lang.Object path_ = "";
       /**
+       *
+       *
        * <pre>
        * The HTTP URL path.
        * </pre>
        *
        * <code>string path = 4;</code>
+       *
        * @return The path.
        */
       public java.lang.String getPath() {
         java.lang.Object ref = path_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           path_ = s;
           return s;
@@ -7140,20 +7666,21 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL path.
        * </pre>
        *
        * <code>string path = 4;</code>
+       *
        * @return The bytes for path.
        */
-      public com.google.protobuf.ByteString
-          getPathBytes() {
+      public com.google.protobuf.ByteString getPathBytes() {
         java.lang.Object ref = path_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           path_ = b;
           return b;
         } else {
@@ -7161,54 +7688,61 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL path.
        * </pre>
        *
        * <code>string path = 4;</code>
+       *
        * @param value The path to set.
        * @return This builder for chaining.
        */
-      public Builder setPath(
-          java.lang.String value) {
+      public Builder setPath(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         path_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL path.
        * </pre>
        *
        * <code>string path = 4;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearPath() {
-        
+
         path_ = getDefaultInstance().getPath();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL path.
        * </pre>
        *
        * <code>string path = 4;</code>
+       *
        * @param value The bytes for path to set.
        * @return This builder for chaining.
        */
-      public Builder setPathBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setPathBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         path_ = value;
         onChanged();
         return this;
@@ -7216,18 +7750,20 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object host_ = "";
       /**
+       *
+       *
        * <pre>
        * The HTTP request `Host` header value.
        * </pre>
        *
        * <code>string host = 5;</code>
+       *
        * @return The host.
        */
       public java.lang.String getHost() {
         java.lang.Object ref = host_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           host_ = s;
           return s;
@@ -7236,20 +7772,21 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request `Host` header value.
        * </pre>
        *
        * <code>string host = 5;</code>
+       *
        * @return The bytes for host.
        */
-      public com.google.protobuf.ByteString
-          getHostBytes() {
+      public com.google.protobuf.ByteString getHostBytes() {
         java.lang.Object ref = host_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           host_ = b;
           return b;
         } else {
@@ -7257,54 +7794,61 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request `Host` header value.
        * </pre>
        *
        * <code>string host = 5;</code>
+       *
        * @param value The host to set.
        * @return This builder for chaining.
        */
-      public Builder setHost(
-          java.lang.String value) {
+      public Builder setHost(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         host_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request `Host` header value.
        * </pre>
        *
        * <code>string host = 5;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearHost() {
-        
+
         host_ = getDefaultInstance().getHost();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request `Host` header value.
        * </pre>
        *
        * <code>string host = 5;</code>
+       *
        * @param value The bytes for host to set.
        * @return This builder for chaining.
        */
-      public Builder setHostBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setHostBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         host_ = value;
         onChanged();
         return this;
@@ -7312,18 +7856,20 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object scheme_ = "";
       /**
+       *
+       *
        * <pre>
        * The HTTP URL scheme, such as `http` and `https`.
        * </pre>
        *
        * <code>string scheme = 6;</code>
+       *
        * @return The scheme.
        */
       public java.lang.String getScheme() {
         java.lang.Object ref = scheme_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           scheme_ = s;
           return s;
@@ -7332,20 +7878,21 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL scheme, such as `http` and `https`.
        * </pre>
        *
        * <code>string scheme = 6;</code>
+       *
        * @return The bytes for scheme.
        */
-      public com.google.protobuf.ByteString
-          getSchemeBytes() {
+      public com.google.protobuf.ByteString getSchemeBytes() {
         java.lang.Object ref = scheme_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           scheme_ = b;
           return b;
         } else {
@@ -7353,54 +7900,61 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL scheme, such as `http` and `https`.
        * </pre>
        *
        * <code>string scheme = 6;</code>
+       *
        * @param value The scheme to set.
        * @return This builder for chaining.
        */
-      public Builder setScheme(
-          java.lang.String value) {
+      public Builder setScheme(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         scheme_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL scheme, such as `http` and `https`.
        * </pre>
        *
        * <code>string scheme = 6;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearScheme() {
-        
+
         scheme_ = getDefaultInstance().getScheme();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL scheme, such as `http` and `https`.
        * </pre>
        *
        * <code>string scheme = 6;</code>
+       *
        * @param value The bytes for scheme to set.
        * @return This builder for chaining.
        */
-      public Builder setSchemeBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setSchemeBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         scheme_ = value;
         onChanged();
         return this;
@@ -7408,19 +7962,21 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object query_ = "";
       /**
+       *
+       *
        * <pre>
        * The HTTP URL query in the format of `name1=value1&amp;name2=value2`, as it
        * appears in the first line of the HTTP request. No decoding is performed.
        * </pre>
        *
        * <code>string query = 7;</code>
+       *
        * @return The query.
        */
       public java.lang.String getQuery() {
         java.lang.Object ref = query_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           query_ = s;
           return s;
@@ -7429,21 +7985,22 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL query in the format of `name1=value1&amp;name2=value2`, as it
        * appears in the first line of the HTTP request. No decoding is performed.
        * </pre>
        *
        * <code>string query = 7;</code>
+       *
        * @return The bytes for query.
        */
-      public com.google.protobuf.ByteString
-          getQueryBytes() {
+      public com.google.protobuf.ByteString getQueryBytes() {
         java.lang.Object ref = query_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           query_ = b;
           return b;
         } else {
@@ -7451,57 +8008,64 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL query in the format of `name1=value1&amp;name2=value2`, as it
        * appears in the first line of the HTTP request. No decoding is performed.
        * </pre>
        *
        * <code>string query = 7;</code>
+       *
        * @param value The query to set.
        * @return This builder for chaining.
        */
-      public Builder setQuery(
-          java.lang.String value) {
+      public Builder setQuery(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         query_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL query in the format of `name1=value1&amp;name2=value2`, as it
        * appears in the first line of the HTTP request. No decoding is performed.
        * </pre>
        *
        * <code>string query = 7;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearQuery() {
-        
+
         query_ = getDefaultInstance().getQuery();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP URL query in the format of `name1=value1&amp;name2=value2`, as it
        * appears in the first line of the HTTP request. No decoding is performed.
        * </pre>
        *
        * <code>string query = 7;</code>
+       *
        * @param value The bytes for query to set.
        * @return This builder for chaining.
        */
-      public Builder setQueryBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setQueryBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         query_ = value;
         onChanged();
         return this;
@@ -7509,26 +8073,35 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Timestamp time_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
+          timeBuilder_;
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service receives the last byte of
        * the request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 9;</code>
+       *
        * @return Whether the time field is set.
        */
       public boolean hasTime() {
         return timeBuilder_ != null || time_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service receives the last byte of
        * the request.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 9;</code>
+       *
        * @return The time.
        */
       public com.google.protobuf.Timestamp getTime() {
@@ -7539,6 +8112,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service receives the last byte of
        * the request.
@@ -7560,6 +8135,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service receives the last byte of
        * the request.
@@ -7567,8 +8144,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.Timestamp time = 9;</code>
        */
-      public Builder setTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
+      public Builder setTime(com.google.protobuf.Timestamp.Builder builderForValue) {
         if (timeBuilder_ == null) {
           time_ = builderForValue.build();
           onChanged();
@@ -7579,6 +8155,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service receives the last byte of
        * the request.
@@ -7589,8 +8167,7 @@ private static final long serialVersionUID = 0L;
       public Builder mergeTime(com.google.protobuf.Timestamp value) {
         if (timeBuilder_ == null) {
           if (time_ != null) {
-            time_ =
-              com.google.protobuf.Timestamp.newBuilder(time_).mergeFrom(value).buildPartial();
+            time_ = com.google.protobuf.Timestamp.newBuilder(time_).mergeFrom(value).buildPartial();
           } else {
             time_ = value;
           }
@@ -7602,6 +8179,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service receives the last byte of
        * the request.
@@ -7621,6 +8200,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service receives the last byte of
        * the request.
@@ -7629,11 +8210,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp time = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getTimeBuilder() {
-        
+
         onChanged();
         return getTimeFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service receives the last byte of
        * the request.
@@ -7645,11 +8228,12 @@ private static final long serialVersionUID = 0L;
         if (timeBuilder_ != null) {
           return timeBuilder_.getMessageOrBuilder();
         } else {
-          return time_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+          return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service receives the last byte of
        * the request.
@@ -7658,26 +8242,32 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp time = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
           getTimeFieldBuilder() {
         if (timeBuilder_ == null) {
-          timeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTime(),
-                  getParentForChildren(),
-                  isClean());
+          timeBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp,
+                  com.google.protobuf.Timestamp.Builder,
+                  com.google.protobuf.TimestampOrBuilder>(
+                  getTime(), getParentForChildren(), isClean());
           time_ = null;
         }
         return timeBuilder_;
       }
 
-      private long size_ ;
+      private long size_;
       /**
+       *
+       *
        * <pre>
        * The HTTP request size in bytes. If unknown, it must be -1.
        * </pre>
        *
        * <code>int64 size = 10;</code>
+       *
        * @return The size.
        */
       @java.lang.Override
@@ -7685,30 +8275,36 @@ private static final long serialVersionUID = 0L;
         return size_;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request size in bytes. If unknown, it must be -1.
        * </pre>
        *
        * <code>int64 size = 10;</code>
+       *
        * @param value The size to set.
        * @return This builder for chaining.
        */
       public Builder setSize(long value) {
-        
+
         size_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP request size in bytes. If unknown, it must be -1.
        * </pre>
        *
        * <code>int64 size = 10;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearSize() {
-        
+
         size_ = 0L;
         onChanged();
         return this;
@@ -7716,6 +8312,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object protocol_ = "";
       /**
+       *
+       *
        * <pre>
        * The network protocol used with the request, such as "http/1.1",
        * "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
@@ -7724,13 +8322,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string protocol = 11;</code>
+       *
        * @return The protocol.
        */
       public java.lang.String getProtocol() {
         java.lang.Object ref = protocol_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           protocol_ = s;
           return s;
@@ -7739,6 +8337,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The network protocol used with the request, such as "http/1.1",
        * "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
@@ -7747,15 +8347,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string protocol = 11;</code>
+       *
        * @return The bytes for protocol.
        */
-      public com.google.protobuf.ByteString
-          getProtocolBytes() {
+      public com.google.protobuf.ByteString getProtocolBytes() {
         java.lang.Object ref = protocol_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           protocol_ = b;
           return b;
         } else {
@@ -7763,6 +8362,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The network protocol used with the request, such as "http/1.1",
        * "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
@@ -7771,20 +8372,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string protocol = 11;</code>
+       *
        * @param value The protocol to set.
        * @return This builder for chaining.
        */
-      public Builder setProtocol(
-          java.lang.String value) {
+      public Builder setProtocol(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         protocol_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The network protocol used with the request, such as "http/1.1",
        * "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
@@ -7793,15 +8396,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string protocol = 11;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearProtocol() {
-        
+
         protocol_ = getDefaultInstance().getProtocol();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The network protocol used with the request, such as "http/1.1",
        * "spdy/3", "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
@@ -7810,16 +8416,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string protocol = 11;</code>
+       *
        * @param value The bytes for protocol to set.
        * @return This builder for chaining.
        */
-      public Builder setProtocolBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setProtocolBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         protocol_ = value;
         onChanged();
         return this;
@@ -7827,19 +8433,21 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object reason_ = "";
       /**
+       *
+       *
        * <pre>
        * A special parameter for request reason. It is used by security systems
        * to associate auditing information with a request.
        * </pre>
        *
        * <code>string reason = 12;</code>
+       *
        * @return The reason.
        */
       public java.lang.String getReason() {
         java.lang.Object ref = reason_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           reason_ = s;
           return s;
@@ -7848,21 +8456,22 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * A special parameter for request reason. It is used by security systems
        * to associate auditing information with a request.
        * </pre>
        *
        * <code>string reason = 12;</code>
+       *
        * @return The bytes for reason.
        */
-      public com.google.protobuf.ByteString
-          getReasonBytes() {
+      public com.google.protobuf.ByteString getReasonBytes() {
         java.lang.Object ref = reason_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           reason_ = b;
           return b;
         } else {
@@ -7870,57 +8479,64 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * A special parameter for request reason. It is used by security systems
        * to associate auditing information with a request.
        * </pre>
        *
        * <code>string reason = 12;</code>
+       *
        * @param value The reason to set.
        * @return This builder for chaining.
        */
-      public Builder setReason(
-          java.lang.String value) {
+      public Builder setReason(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         reason_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A special parameter for request reason. It is used by security systems
        * to associate auditing information with a request.
        * </pre>
        *
        * <code>string reason = 12;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearReason() {
-        
+
         reason_ = getDefaultInstance().getReason();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A special parameter for request reason. It is used by security systems
        * to associate auditing information with a request.
        * </pre>
        *
        * <code>string reason = 12;</code>
+       *
        * @param value The bytes for reason to set.
        * @return This builder for chaining.
        */
-      public Builder setReasonBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setReasonBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         reason_ = value;
         onChanged();
         return this;
@@ -7928,36 +8544,49 @@ private static final long serialVersionUID = 0L;
 
       private com.google.rpc.context.AttributeContext.Auth auth_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.context.AttributeContext.Auth, com.google.rpc.context.AttributeContext.Auth.Builder, com.google.rpc.context.AttributeContext.AuthOrBuilder> authBuilder_;
+              com.google.rpc.context.AttributeContext.Auth,
+              com.google.rpc.context.AttributeContext.Auth.Builder,
+              com.google.rpc.context.AttributeContext.AuthOrBuilder>
+          authBuilder_;
       /**
+       *
+       *
        * <pre>
        * The request authentication. May be absent for unauthenticated requests.
        * Derived from the HTTP request `Authorization` header or equivalent.
        * </pre>
        *
        * <code>.google.rpc.context.AttributeContext.Auth auth = 13;</code>
+       *
        * @return Whether the auth field is set.
        */
       public boolean hasAuth() {
         return authBuilder_ != null || auth_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * The request authentication. May be absent for unauthenticated requests.
        * Derived from the HTTP request `Authorization` header or equivalent.
        * </pre>
        *
        * <code>.google.rpc.context.AttributeContext.Auth auth = 13;</code>
+       *
        * @return The auth.
        */
       public com.google.rpc.context.AttributeContext.Auth getAuth() {
         if (authBuilder_ == null) {
-          return auth_ == null ? com.google.rpc.context.AttributeContext.Auth.getDefaultInstance() : auth_;
+          return auth_ == null
+              ? com.google.rpc.context.AttributeContext.Auth.getDefaultInstance()
+              : auth_;
         } else {
           return authBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * The request authentication. May be absent for unauthenticated requests.
        * Derived from the HTTP request `Authorization` header or equivalent.
@@ -7979,6 +8608,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The request authentication. May be absent for unauthenticated requests.
        * Derived from the HTTP request `Authorization` header or equivalent.
@@ -7986,8 +8617,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.rpc.context.AttributeContext.Auth auth = 13;</code>
        */
-      public Builder setAuth(
-          com.google.rpc.context.AttributeContext.Auth.Builder builderForValue) {
+      public Builder setAuth(com.google.rpc.context.AttributeContext.Auth.Builder builderForValue) {
         if (authBuilder_ == null) {
           auth_ = builderForValue.build();
           onChanged();
@@ -7998,6 +8628,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The request authentication. May be absent for unauthenticated requests.
        * Derived from the HTTP request `Authorization` header or equivalent.
@@ -8009,7 +8641,9 @@ private static final long serialVersionUID = 0L;
         if (authBuilder_ == null) {
           if (auth_ != null) {
             auth_ =
-              com.google.rpc.context.AttributeContext.Auth.newBuilder(auth_).mergeFrom(value).buildPartial();
+                com.google.rpc.context.AttributeContext.Auth.newBuilder(auth_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             auth_ = value;
           }
@@ -8021,6 +8655,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The request authentication. May be absent for unauthenticated requests.
        * Derived from the HTTP request `Authorization` header or equivalent.
@@ -8040,6 +8676,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The request authentication. May be absent for unauthenticated requests.
        * Derived from the HTTP request `Authorization` header or equivalent.
@@ -8048,11 +8686,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.rpc.context.AttributeContext.Auth auth = 13;</code>
        */
       public com.google.rpc.context.AttributeContext.Auth.Builder getAuthBuilder() {
-        
+
         onChanged();
         return getAuthFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * The request authentication. May be absent for unauthenticated requests.
        * Derived from the HTTP request `Authorization` header or equivalent.
@@ -8064,11 +8704,14 @@ private static final long serialVersionUID = 0L;
         if (authBuilder_ != null) {
           return authBuilder_.getMessageOrBuilder();
         } else {
-          return auth_ == null ?
-              com.google.rpc.context.AttributeContext.Auth.getDefaultInstance() : auth_;
+          return auth_ == null
+              ? com.google.rpc.context.AttributeContext.Auth.getDefaultInstance()
+              : auth_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The request authentication. May be absent for unauthenticated requests.
        * Derived from the HTTP request `Authorization` header or equivalent.
@@ -8077,18 +8720,22 @@ private static final long serialVersionUID = 0L;
        * <code>.google.rpc.context.AttributeContext.Auth auth = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.context.AttributeContext.Auth, com.google.rpc.context.AttributeContext.Auth.Builder, com.google.rpc.context.AttributeContext.AuthOrBuilder> 
+              com.google.rpc.context.AttributeContext.Auth,
+              com.google.rpc.context.AttributeContext.Auth.Builder,
+              com.google.rpc.context.AttributeContext.AuthOrBuilder>
           getAuthFieldBuilder() {
         if (authBuilder_ == null) {
-          authBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.rpc.context.AttributeContext.Auth, com.google.rpc.context.AttributeContext.Auth.Builder, com.google.rpc.context.AttributeContext.AuthOrBuilder>(
-                  getAuth(),
-                  getParentForChildren(),
-                  isClean());
+          authBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.rpc.context.AttributeContext.Auth,
+                  com.google.rpc.context.AttributeContext.Auth.Builder,
+                  com.google.rpc.context.AttributeContext.AuthOrBuilder>(
+                  getAuth(), getParentForChildren(), isClean());
           auth_ = null;
         }
         return authBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8101,12 +8748,12 @@ private static final long serialVersionUID = 0L;
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:google.rpc.context.AttributeContext.Request)
     }
 
     // @@protoc_insertion_point(class_scope:google.rpc.context.AttributeContext.Request)
     private static final com.google.rpc.context.AttributeContext.Request DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.google.rpc.context.AttributeContext.Request();
     }
@@ -8115,16 +8762,16 @@ private static final long serialVersionUID = 0L;
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Request>
-        PARSER = new com.google.protobuf.AbstractParser<Request>() {
-      @java.lang.Override
-      public Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Request(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<Request> PARSER =
+        new com.google.protobuf.AbstractParser<Request>() {
+          @java.lang.Override
+          public Request parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Request(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<Request> parser() {
       return PARSER;
@@ -8139,34 +8786,42 @@ private static final long serialVersionUID = 0L;
     public com.google.rpc.context.AttributeContext.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface ResponseOrBuilder extends
+  public interface ResponseOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:google.rpc.context.AttributeContext.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * The HTTP response status code, such as `200` and `404`.
      * </pre>
      *
      * <code>int64 code = 1;</code>
+     *
      * @return The code.
      */
     long getCode();
 
     /**
+     *
+     *
      * <pre>
      * The HTTP response size in bytes. If unknown, it must be -1.
      * </pre>
      *
      * <code>int64 size = 2;</code>
+     *
      * @return The size.
      */
     long getSize();
 
     /**
+     *
+     *
      * <pre>
      * The HTTP response headers. If multiple headers share the same key, they
      * must be merged according to HTTP spec. All header keys must be
@@ -8177,6 +8832,8 @@ private static final long serialVersionUID = 0L;
      */
     int getHeadersCount();
     /**
+     *
+     *
      * <pre>
      * The HTTP response headers. If multiple headers share the same key, they
      * must be merged according to HTTP spec. All header keys must be
@@ -8185,15 +8842,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-    boolean containsHeaders(
-        java.lang.String key);
-    /**
-     * Use {@link #getHeadersMap()} instead.
-     */
+    boolean containsHeaders(java.lang.String key);
+    /** Use {@link #getHeadersMap()} instead. */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getHeaders();
+    java.util.Map<java.lang.String, java.lang.String> getHeaders();
     /**
+     *
+     *
      * <pre>
      * The HTTP response headers. If multiple headers share the same key, they
      * must be merged according to HTTP spec. All header keys must be
@@ -8202,9 +8857,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-    java.util.Map<java.lang.String, java.lang.String>
-    getHeadersMap();
+    java.util.Map<java.lang.String, java.lang.String> getHeadersMap();
     /**
+     *
+     *
      * <pre>
      * The HTTP response headers. If multiple headers share the same key, they
      * must be merged according to HTTP spec. All header keys must be
@@ -8213,11 +8869,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-
-    java.lang.String getHeadersOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue);
+    java.lang.String getHeadersOrDefault(java.lang.String key, java.lang.String defaultValue);
     /**
+     *
+     *
      * <pre>
      * The HTTP response headers. If multiple headers share the same key, they
      * must be merged according to HTTP spec. All header keys must be
@@ -8226,31 +8881,37 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-
-    java.lang.String getHeadersOrThrow(
-        java.lang.String key);
+    java.lang.String getHeadersOrThrow(java.lang.String key);
 
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service sends the last byte of
      * the response.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 4;</code>
+     *
      * @return Whether the time field is set.
      */
     boolean hasTime();
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service sends the last byte of
      * the response.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 4;</code>
+     *
      * @return The time.
      */
     com.google.protobuf.Timestamp getTime();
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service sends the last byte of
      * the response.
@@ -8261,6 +8922,8 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * The length of time it takes the backend service to fully respond to a
      * request. Measured from when the destination service starts to send the
@@ -8269,10 +8932,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Duration backend_latency = 5;</code>
+     *
      * @return Whether the backendLatency field is set.
      */
     boolean hasBackendLatency();
     /**
+     *
+     *
      * <pre>
      * The length of time it takes the backend service to fully respond to a
      * request. Measured from when the destination service starts to send the
@@ -8281,10 +8947,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Duration backend_latency = 5;</code>
+     *
      * @return The backendLatency.
      */
     com.google.protobuf.Duration getBackendLatency();
     /**
+     *
+     *
      * <pre>
      * The length of time it takes the backend service to fully respond to a
      * request. Measured from when the destination service starts to send the
@@ -8297,6 +8966,8 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.DurationOrBuilder getBackendLatencyOrBuilder();
   }
   /**
+   *
+   *
    * <pre>
    * This message defines attributes for a typical network response. It
    * generally models semantics of an HTTP response.
@@ -8304,30 +8975,29 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.rpc.context.AttributeContext.Response}
    */
-  public static final class Response extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class Response extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:google.rpc.context.AttributeContext.Response)
       ResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
     private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Response() {
-    }
+
+    private Response() {}
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Response();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private Response(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8347,107 +9017,117 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
+            case 8:
+              {
+                code_ = input.readInt64();
+                break;
+              }
+            case 16:
+              {
+                size_ = input.readInt64();
+                break;
+              }
+            case 26:
+              {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  headers_ =
+                      com.google.protobuf.MapField.newMapField(
+                          HeadersDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
+                    input.readMessage(
+                        HeadersDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                headers_.getMutableMap().put(headers__.getKey(), headers__.getValue());
+                break;
+              }
+            case 34:
+              {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (time_ != null) {
+                  subBuilder = time_.toBuilder();
+                }
+                time_ =
+                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(time_);
+                  time_ = subBuilder.buildPartial();
+                }
 
-              code_ = input.readInt64();
-              break;
-            }
-            case 16: {
+                break;
+              }
+            case 42:
+              {
+                com.google.protobuf.Duration.Builder subBuilder = null;
+                if (backendLatency_ != null) {
+                  subBuilder = backendLatency_.toBuilder();
+                }
+                backendLatency_ =
+                    input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(backendLatency_);
+                  backendLatency_ = subBuilder.buildPartial();
+                }
 
-              size_ = input.readInt64();
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                headers_ = com.google.protobuf.MapField.newMapField(
-                    HeadersDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                break;
               }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              headers__ = input.readMessage(
-                  HeadersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              headers_.getMutableMap().put(
-                  headers__.getKey(), headers__.getValue());
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (time_ != null) {
-                subBuilder = time_.toBuilder();
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
               }
-              time_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(time_);
-                time_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              com.google.protobuf.Duration.Builder subBuilder = null;
-              if (backendLatency_ != null) {
-                subBuilder = backendLatency_.toBuilder();
-              }
-              backendLatency_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(backendLatency_);
-                backendLatency_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Response_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Response_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
     @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
+    protected com.google.protobuf.MapField internalGetMapField(int number) {
       switch (number) {
         case 3:
           return internalGetHeaders();
         default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
+          throw new RuntimeException("Invalid map field number: " + number);
       }
     }
+
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Response_fieldAccessorTable
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.rpc.context.AttributeContext.Response.class, com.google.rpc.context.AttributeContext.Response.Builder.class);
+              com.google.rpc.context.AttributeContext.Response.class,
+              com.google.rpc.context.AttributeContext.Response.Builder.class);
     }
 
     public static final int CODE_FIELD_NUMBER = 1;
     private long code_;
     /**
+     *
+     *
      * <pre>
      * The HTTP response status code, such as `200` and `404`.
      * </pre>
      *
      * <code>int64 code = 1;</code>
+     *
      * @return The code.
      */
     @java.lang.Override
@@ -8458,11 +9138,14 @@ private static final long serialVersionUID = 0L;
     public static final int SIZE_FIELD_NUMBER = 2;
     private long size_;
     /**
+     *
+     *
      * <pre>
      * The HTTP response size in bytes. If unknown, it must be -1.
      * </pre>
      *
      * <code>int64 size = 2;</code>
+     *
      * @return The size.
      */
     @java.lang.Override
@@ -8471,24 +9154,23 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int HEADERS_FIELD_NUMBER = 3;
+
     private static final class HeadersDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Response_HeadersEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
+      static final com.google.protobuf.MapEntry<java.lang.String, java.lang.String> defaultEntry =
+          com.google.protobuf.MapEntry.<java.lang.String, java.lang.String>newDefaultInstance(
+              com.google.rpc.context.AttributeContextProto
+                  .internal_static_google_rpc_context_AttributeContext_Response_HeadersEntry_descriptor,
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "",
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "");
     }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> headers_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetHeaders() {
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> headers_;
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetHeaders() {
       if (headers_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            HeadersDefaultEntryHolder.defaultEntry);
+        return com.google.protobuf.MapField.emptyMapField(HeadersDefaultEntryHolder.defaultEntry);
       }
       return headers_;
     }
@@ -8497,6 +9179,8 @@ private static final long serialVersionUID = 0L;
       return internalGetHeaders().getMap().size();
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP response headers. If multiple headers share the same key, they
      * must be merged according to HTTP spec. All header keys must be
@@ -8505,22 +9189,22 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
-
     @java.lang.Override
-    public boolean containsHeaders(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+    public boolean containsHeaders(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
       return internalGetHeaders().getMap().containsKey(key);
     }
-    /**
-     * Use {@link #getHeadersMap()} instead.
-     */
+    /** Use {@link #getHeadersMap()} instead. */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
       return getHeadersMap();
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP response headers. If multiple headers share the same key, they
      * must be merged according to HTTP spec. All header keys must be
@@ -8530,11 +9214,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
       return internalGetHeaders().getMap();
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP response headers. If multiple headers share the same key, they
      * must be merged according to HTTP spec. All header keys must be
@@ -8544,16 +9229,17 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
     @java.lang.Override
-
     public java.lang.String getHeadersOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetHeaders().getMap();
+        java.lang.String key, java.lang.String defaultValue) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     *
+     *
      * <pre>
      * The HTTP response headers. If multiple headers share the same key, they
      * must be merged according to HTTP spec. All header keys must be
@@ -8563,12 +9249,11 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; headers = 3;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getHeadersOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetHeaders().getMap();
+    public java.lang.String getHeadersOrThrow(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -8578,12 +9263,15 @@ private static final long serialVersionUID = 0L;
     public static final int TIME_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp time_;
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service sends the last byte of
      * the response.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 4;</code>
+     *
      * @return Whether the time field is set.
      */
     @java.lang.Override
@@ -8591,12 +9279,15 @@ private static final long serialVersionUID = 0L;
       return time_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service sends the last byte of
      * the response.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 4;</code>
+     *
      * @return The time.
      */
     @java.lang.Override
@@ -8604,6 +9295,8 @@ private static final long serialVersionUID = 0L;
       return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
     }
     /**
+     *
+     *
      * <pre>
      * The timestamp when the `destination` service sends the last byte of
      * the response.
@@ -8619,6 +9312,8 @@ private static final long serialVersionUID = 0L;
     public static final int BACKEND_LATENCY_FIELD_NUMBER = 5;
     private com.google.protobuf.Duration backendLatency_;
     /**
+     *
+     *
      * <pre>
      * The length of time it takes the backend service to fully respond to a
      * request. Measured from when the destination service starts to send the
@@ -8627,6 +9322,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Duration backend_latency = 5;</code>
+     *
      * @return Whether the backendLatency field is set.
      */
     @java.lang.Override
@@ -8634,6 +9330,8 @@ private static final long serialVersionUID = 0L;
       return backendLatency_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The length of time it takes the backend service to fully respond to a
      * request. Measured from when the destination service starts to send the
@@ -8642,13 +9340,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Duration backend_latency = 5;</code>
+     *
      * @return The backendLatency.
      */
     @java.lang.Override
     public com.google.protobuf.Duration getBackendLatency() {
-      return backendLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : backendLatency_;
+      return backendLatency_ == null
+          ? com.google.protobuf.Duration.getDefaultInstance()
+          : backendLatency_;
     }
     /**
+     *
+     *
      * <pre>
      * The length of time it takes the backend service to fully respond to a
      * request. Measured from when the destination service starts to send the
@@ -8664,6 +9367,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -8675,20 +9379,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (code_ != 0L) {
         output.writeInt64(1, code_);
       }
       if (size_ != 0L) {
         output.writeInt64(2, size_);
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetHeaders(),
-          HeadersDefaultEntryHolder.defaultEntry,
-          3);
+      com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
+          output, internalGetHeaders(), HeadersDefaultEntryHolder.defaultEntry, 3);
       if (time_ != null) {
         output.writeMessage(4, getTime());
       }
@@ -8705,30 +9404,26 @@ private static final long serialVersionUID = 0L;
 
       size = 0;
       if (code_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, code_);
+        size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, code_);
       }
       if (size_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, size_);
+        size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, size_);
       }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetHeaders().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        headers__ = HeadersDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, headers__);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
+          internalGetHeaders().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
+            HeadersDefaultEntryHolder.defaultEntry
+                .newBuilderForType()
+                .setKey(entry.getKey())
+                .setValue(entry.getValue())
+                .build();
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, headers__);
       }
       if (time_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getTime());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getTime());
       }
       if (backendLatency_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getBackendLatency());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, getBackendLatency());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8738,28 +9433,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.google.rpc.context.AttributeContext.Response)) {
         return super.equals(obj);
       }
-      com.google.rpc.context.AttributeContext.Response other = (com.google.rpc.context.AttributeContext.Response) obj;
+      com.google.rpc.context.AttributeContext.Response other =
+          (com.google.rpc.context.AttributeContext.Response) obj;
 
-      if (getCode()
-          != other.getCode()) return false;
-      if (getSize()
-          != other.getSize()) return false;
-      if (!internalGetHeaders().equals(
-          other.internalGetHeaders())) return false;
+      if (getCode() != other.getCode()) return false;
+      if (getSize() != other.getSize()) return false;
+      if (!internalGetHeaders().equals(other.internalGetHeaders())) return false;
       if (hasTime() != other.hasTime()) return false;
       if (hasTime()) {
-        if (!getTime()
-            .equals(other.getTime())) return false;
+        if (!getTime().equals(other.getTime())) return false;
       }
       if (hasBackendLatency() != other.hasBackendLatency()) return false;
       if (hasBackendLatency()) {
-        if (!getBackendLatency()
-            .equals(other.getBackendLatency())) return false;
+        if (!getBackendLatency().equals(other.getBackendLatency())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -8773,11 +9464,9 @@ private static final long serialVersionUID = 0L;
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCode());
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getCode());
       hash = (37 * hash) + SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSize());
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getSize());
       if (!internalGetHeaders().getMap().isEmpty()) {
         hash = (37 * hash) + HEADERS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetHeaders().hashCode();
@@ -8796,87 +9485,93 @@ private static final long serialVersionUID = 0L;
     }
 
     public static com.google.rpc.context.AttributeContext.Response parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Response parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Response parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.rpc.context.AttributeContext.Response parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.google.rpc.context.AttributeContext.Response parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.google.rpc.context.AttributeContext.Response parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.google.rpc.context.AttributeContext.Response parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Response parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.google.rpc.context.AttributeContext.Response parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.google.rpc.context.AttributeContext.Response parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.rpc.context.AttributeContext.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.google.rpc.context.AttributeContext.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -8886,6 +9581,8 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * This message defines attributes for a typical network response. It
      * generally models semantics of an HTTP response.
@@ -8893,43 +9590,44 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code google.rpc.context.AttributeContext.Response}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:google.rpc.context.AttributeContext.Response)
         com.google.rpc.context.AttributeContext.ResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Response_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Response_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
+      protected com.google.protobuf.MapField internalGetMapField(int number) {
         switch (number) {
           case 3:
             return internalGetHeaders();
           default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
+            throw new RuntimeException("Invalid map field number: " + number);
         }
       }
+
       @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
+      protected com.google.protobuf.MapField internalGetMutableMapField(int number) {
         switch (number) {
           case 3:
             return internalGetMutableHeaders();
           default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
+            throw new RuntimeException("Invalid map field number: " + number);
         }
       }
+
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Response_fieldAccessorTable
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.rpc.context.AttributeContext.Response.class, com.google.rpc.context.AttributeContext.Response.Builder.class);
+                com.google.rpc.context.AttributeContext.Response.class,
+                com.google.rpc.context.AttributeContext.Response.Builder.class);
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Response.newBuilder()
@@ -8937,16 +9635,15 @@ private static final long serialVersionUID = 0L;
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -8971,9 +9668,9 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Response_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Response_descriptor;
       }
 
       @java.lang.Override
@@ -8992,7 +9689,8 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public com.google.rpc.context.AttributeContext.Response buildPartial() {
-        com.google.rpc.context.AttributeContext.Response result = new com.google.rpc.context.AttributeContext.Response(this);
+        com.google.rpc.context.AttributeContext.Response result =
+            new com.google.rpc.context.AttributeContext.Response(this);
         int from_bitField0_ = bitField0_;
         result.code_ = code_;
         result.size_ = size_;
@@ -9016,38 +9714,41 @@ private static final long serialVersionUID = 0L;
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.rpc.context.AttributeContext.Response) {
-          return mergeFrom((com.google.rpc.context.AttributeContext.Response)other);
+          return mergeFrom((com.google.rpc.context.AttributeContext.Response) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -9055,15 +9756,15 @@ private static final long serialVersionUID = 0L;
       }
 
       public Builder mergeFrom(com.google.rpc.context.AttributeContext.Response other) {
-        if (other == com.google.rpc.context.AttributeContext.Response.getDefaultInstance()) return this;
+        if (other == com.google.rpc.context.AttributeContext.Response.getDefaultInstance())
+          return this;
         if (other.getCode() != 0L) {
           setCode(other.getCode());
         }
         if (other.getSize() != 0L) {
           setSize(other.getSize());
         }
-        internalGetMutableHeaders().mergeFrom(
-            other.internalGetHeaders());
+        internalGetMutableHeaders().mergeFrom(other.internalGetHeaders());
         if (other.hasTime()) {
           mergeTime(other.getTime());
         }
@@ -9089,7 +9790,8 @@ private static final long serialVersionUID = 0L;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.rpc.context.AttributeContext.Response) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.google.rpc.context.AttributeContext.Response) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9098,15 +9800,19 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+
       private int bitField0_;
 
-      private long code_ ;
+      private long code_;
       /**
+       *
+       *
        * <pre>
        * The HTTP response status code, such as `200` and `404`.
        * </pre>
        *
        * <code>int64 code = 1;</code>
+       *
        * @return The code.
        */
       @java.lang.Override
@@ -9114,42 +9820,51 @@ private static final long serialVersionUID = 0L;
         return code_;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response status code, such as `200` and `404`.
        * </pre>
        *
        * <code>int64 code = 1;</code>
+       *
        * @param value The code to set.
        * @return This builder for chaining.
        */
       public Builder setCode(long value) {
-        
+
         code_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response status code, such as `200` and `404`.
        * </pre>
        *
        * <code>int64 code = 1;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearCode() {
-        
+
         code_ = 0L;
         onChanged();
         return this;
       }
 
-      private long size_ ;
+      private long size_;
       /**
+       *
+       *
        * <pre>
        * The HTTP response size in bytes. If unknown, it must be -1.
        * </pre>
        *
        * <code>int64 size = 2;</code>
+       *
        * @return The size.
        */
       @java.lang.Override
@@ -9157,51 +9872,58 @@ private static final long serialVersionUID = 0L;
         return size_;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response size in bytes. If unknown, it must be -1.
        * </pre>
        *
        * <code>int64 size = 2;</code>
+       *
        * @param value The size to set.
        * @return This builder for chaining.
        */
       public Builder setSize(long value) {
-        
+
         size_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response size in bytes. If unknown, it must be -1.
        * </pre>
        *
        * <code>int64 size = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearSize() {
-        
+
         size_ = 0L;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> headers_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String> headers_;
+
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetHeaders() {
+          internalGetHeaders() {
         if (headers_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              HeadersDefaultEntryHolder.defaultEntry);
+          return com.google.protobuf.MapField.emptyMapField(HeadersDefaultEntryHolder.defaultEntry);
         }
         return headers_;
       }
+
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableHeaders() {
-        onChanged();;
+          internalGetMutableHeaders() {
+        onChanged();
+        ;
         if (headers_ == null) {
-          headers_ = com.google.protobuf.MapField.newMapField(
-              HeadersDefaultEntryHolder.defaultEntry);
+          headers_ =
+              com.google.protobuf.MapField.newMapField(HeadersDefaultEntryHolder.defaultEntry);
         }
         if (!headers_.isMutable()) {
           headers_ = headers_.copy();
@@ -9213,6 +9935,8 @@ private static final long serialVersionUID = 0L;
         return internalGetHeaders().getMap().size();
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response headers. If multiple headers share the same key, they
        * must be merged according to HTTP spec. All header keys must be
@@ -9221,22 +9945,22 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
-
       @java.lang.Override
-      public boolean containsHeaders(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+      public boolean containsHeaders(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
         return internalGetHeaders().getMap().containsKey(key);
       }
-      /**
-       * Use {@link #getHeadersMap()} instead.
-       */
+      /** Use {@link #getHeadersMap()} instead. */
       @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getHeaders() {
         return getHeadersMap();
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response headers. If multiple headers share the same key, they
        * must be merged according to HTTP spec. All header keys must be
@@ -9246,11 +9970,12 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getHeadersMap() {
         return internalGetHeaders().getMap();
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response headers. If multiple headers share the same key, they
        * must be merged according to HTTP spec. All header keys must be
@@ -9260,16 +9985,17 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
       @java.lang.Override
-
       public java.lang.String getHeadersOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetHeaders().getMap();
+          java.lang.String key, java.lang.String defaultValue) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response headers. If multiple headers share the same key, they
        * must be merged according to HTTP spec. All header keys must be
@@ -9279,12 +10005,11 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getHeadersOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetHeaders().getMap();
+      public java.lang.String getHeadersOrThrow(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
@@ -9292,11 +10017,12 @@ private static final long serialVersionUID = 0L;
       }
 
       public Builder clearHeaders() {
-        internalGetMutableHeaders().getMutableMap()
-            .clear();
+        internalGetMutableHeaders().getMutableMap().clear();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response headers. If multiple headers share the same key, they
        * must be merged according to HTTP spec. All header keys must be
@@ -9305,23 +10031,21 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
-
-      public Builder removeHeaders(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableHeaders().getMutableMap()
-            .remove(key);
+      public Builder removeHeaders(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableHeaders().getMutableMap().remove(key);
         return this;
       }
-      /**
-       * Use alternate mutation accessors instead.
-       */
+      /** Use alternate mutation accessors instead. */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-      getMutableHeaders() {
+      public java.util.Map<java.lang.String, java.lang.String> getMutableHeaders() {
         return internalGetMutableHeaders().getMutableMap();
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response headers. If multiple headers share the same key, they
        * must be merged according to HTTP spec. All header keys must be
@@ -9330,16 +10054,19 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
-      public Builder putHeaders(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableHeaders().getMutableMap()
-            .put(key, value);
+      public Builder putHeaders(java.lang.String key, java.lang.String value) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        if (value == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableHeaders().getMutableMap().put(key, value);
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The HTTP response headers. If multiple headers share the same key, they
        * must be merged according to HTTP spec. All header keys must be
@@ -9348,36 +10075,42 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; headers = 3;</code>
        */
-
-      public Builder putAllHeaders(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableHeaders().getMutableMap()
-            .putAll(values);
+      public Builder putAllHeaders(java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableHeaders().getMutableMap().putAll(values);
         return this;
       }
 
       private com.google.protobuf.Timestamp time_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
+          timeBuilder_;
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service sends the last byte of
        * the response.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 4;</code>
+       *
        * @return Whether the time field is set.
        */
       public boolean hasTime() {
         return timeBuilder_ != null || time_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service sends the last byte of
        * the response.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 4;</code>
+       *
        * @return The time.
        */
       public com.google.protobuf.Timestamp getTime() {
@@ -9388,6 +10121,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service sends the last byte of
        * the response.
@@ -9409,6 +10144,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service sends the last byte of
        * the response.
@@ -9416,8 +10153,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.Timestamp time = 4;</code>
        */
-      public Builder setTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
+      public Builder setTime(com.google.protobuf.Timestamp.Builder builderForValue) {
         if (timeBuilder_ == null) {
           time_ = builderForValue.build();
           onChanged();
@@ -9428,6 +10164,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service sends the last byte of
        * the response.
@@ -9438,8 +10176,7 @@ private static final long serialVersionUID = 0L;
       public Builder mergeTime(com.google.protobuf.Timestamp value) {
         if (timeBuilder_ == null) {
           if (time_ != null) {
-            time_ =
-              com.google.protobuf.Timestamp.newBuilder(time_).mergeFrom(value).buildPartial();
+            time_ = com.google.protobuf.Timestamp.newBuilder(time_).mergeFrom(value).buildPartial();
           } else {
             time_ = value;
           }
@@ -9451,6 +10188,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service sends the last byte of
        * the response.
@@ -9470,6 +10209,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service sends the last byte of
        * the response.
@@ -9478,11 +10219,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp time = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getTimeBuilder() {
-        
+
         onChanged();
         return getTimeFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service sends the last byte of
        * the response.
@@ -9494,11 +10237,12 @@ private static final long serialVersionUID = 0L;
         if (timeBuilder_ != null) {
           return timeBuilder_.getMessageOrBuilder();
         } else {
-          return time_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+          return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The timestamp when the `destination` service sends the last byte of
        * the response.
@@ -9507,14 +10251,17 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp time = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
           getTimeFieldBuilder() {
         if (timeBuilder_ == null) {
-          timeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTime(),
-                  getParentForChildren(),
-                  isClean());
+          timeBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp,
+                  com.google.protobuf.Timestamp.Builder,
+                  com.google.protobuf.TimestampOrBuilder>(
+                  getTime(), getParentForChildren(), isClean());
           time_ = null;
         }
         return timeBuilder_;
@@ -9522,8 +10269,13 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Duration backendLatency_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> backendLatencyBuilder_;
+              com.google.protobuf.Duration,
+              com.google.protobuf.Duration.Builder,
+              com.google.protobuf.DurationOrBuilder>
+          backendLatencyBuilder_;
       /**
+       *
+       *
        * <pre>
        * The length of time it takes the backend service to fully respond to a
        * request. Measured from when the destination service starts to send the
@@ -9532,12 +10284,15 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Duration backend_latency = 5;</code>
+       *
        * @return Whether the backendLatency field is set.
        */
       public boolean hasBackendLatency() {
         return backendLatencyBuilder_ != null || backendLatency_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * The length of time it takes the backend service to fully respond to a
        * request. Measured from when the destination service starts to send the
@@ -9546,16 +10301,21 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Duration backend_latency = 5;</code>
+       *
        * @return The backendLatency.
        */
       public com.google.protobuf.Duration getBackendLatency() {
         if (backendLatencyBuilder_ == null) {
-          return backendLatency_ == null ? com.google.protobuf.Duration.getDefaultInstance() : backendLatency_;
+          return backendLatency_ == null
+              ? com.google.protobuf.Duration.getDefaultInstance()
+              : backendLatency_;
         } else {
           return backendLatencyBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * The length of time it takes the backend service to fully respond to a
        * request. Measured from when the destination service starts to send the
@@ -9579,6 +10339,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The length of time it takes the backend service to fully respond to a
        * request. Measured from when the destination service starts to send the
@@ -9588,8 +10350,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.Duration backend_latency = 5;</code>
        */
-      public Builder setBackendLatency(
-          com.google.protobuf.Duration.Builder builderForValue) {
+      public Builder setBackendLatency(com.google.protobuf.Duration.Builder builderForValue) {
         if (backendLatencyBuilder_ == null) {
           backendLatency_ = builderForValue.build();
           onChanged();
@@ -9600,6 +10361,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The length of time it takes the backend service to fully respond to a
        * request. Measured from when the destination service starts to send the
@@ -9613,7 +10376,9 @@ private static final long serialVersionUID = 0L;
         if (backendLatencyBuilder_ == null) {
           if (backendLatency_ != null) {
             backendLatency_ =
-              com.google.protobuf.Duration.newBuilder(backendLatency_).mergeFrom(value).buildPartial();
+                com.google.protobuf.Duration.newBuilder(backendLatency_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             backendLatency_ = value;
           }
@@ -9625,6 +10390,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The length of time it takes the backend service to fully respond to a
        * request. Measured from when the destination service starts to send the
@@ -9646,6 +10413,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The length of time it takes the backend service to fully respond to a
        * request. Measured from when the destination service starts to send the
@@ -9656,11 +10425,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Duration backend_latency = 5;</code>
        */
       public com.google.protobuf.Duration.Builder getBackendLatencyBuilder() {
-        
+
         onChanged();
         return getBackendLatencyFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * The length of time it takes the backend service to fully respond to a
        * request. Measured from when the destination service starts to send the
@@ -9674,11 +10445,14 @@ private static final long serialVersionUID = 0L;
         if (backendLatencyBuilder_ != null) {
           return backendLatencyBuilder_.getMessageOrBuilder();
         } else {
-          return backendLatency_ == null ?
-              com.google.protobuf.Duration.getDefaultInstance() : backendLatency_;
+          return backendLatency_ == null
+              ? com.google.protobuf.Duration.getDefaultInstance()
+              : backendLatency_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The length of time it takes the backend service to fully respond to a
        * request. Measured from when the destination service starts to send the
@@ -9689,18 +10463,22 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Duration backend_latency = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+              com.google.protobuf.Duration,
+              com.google.protobuf.Duration.Builder,
+              com.google.protobuf.DurationOrBuilder>
           getBackendLatencyFieldBuilder() {
         if (backendLatencyBuilder_ == null) {
-          backendLatencyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
-                  getBackendLatency(),
-                  getParentForChildren(),
-                  isClean());
+          backendLatencyBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Duration,
+                  com.google.protobuf.Duration.Builder,
+                  com.google.protobuf.DurationOrBuilder>(
+                  getBackendLatency(), getParentForChildren(), isClean());
           backendLatency_ = null;
         }
         return backendLatencyBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9713,12 +10491,12 @@ private static final long serialVersionUID = 0L;
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:google.rpc.context.AttributeContext.Response)
     }
 
     // @@protoc_insertion_point(class_scope:google.rpc.context.AttributeContext.Response)
     private static final com.google.rpc.context.AttributeContext.Response DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.google.rpc.context.AttributeContext.Response();
     }
@@ -9727,16 +10505,16 @@ private static final long serialVersionUID = 0L;
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Response>
-        PARSER = new com.google.protobuf.AbstractParser<Response>() {
-      @java.lang.Override
-      public Response parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Response(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<Response> PARSER =
+        new com.google.protobuf.AbstractParser<Response>() {
+          @java.lang.Override
+          public Response parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Response(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<Response> parser() {
       return PARSER;
@@ -9751,14 +10529,16 @@ private static final long serialVersionUID = 0L;
     public com.google.rpc.context.AttributeContext.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface ResourceOrBuilder extends
+  public interface ResourceOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:google.rpc.context.AttributeContext.Resource)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * The name of the service that this resource belongs to, such as
      * `pubsub.googleapis.com`. The service may be different from the DNS
@@ -9766,10 +10546,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service = 1;</code>
+     *
      * @return The service.
      */
     java.lang.String getService();
     /**
+     *
+     *
      * <pre>
      * The name of the service that this resource belongs to, such as
      * `pubsub.googleapis.com`. The service may be different from the DNS
@@ -9777,12 +10560,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service = 1;</code>
+     *
      * @return The bytes for service.
      */
-    com.google.protobuf.ByteString
-        getServiceBytes();
+    com.google.protobuf.ByteString getServiceBytes();
 
     /**
+     *
+     *
      * <pre>
      * The stable identifier (name) of a resource on the `service`. A resource
      * can be logically identified as "//{resource.service}/{resource.name}".
@@ -9797,10 +10582,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     *
      * @return The name.
      */
     java.lang.String getName();
     /**
+     *
+     *
      * <pre>
      * The stable identifier (name) of a resource on the `service`. A resource
      * can be logically identified as "//{resource.service}/{resource.name}".
@@ -9815,12 +10603,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     *
      * @return The bytes for name.
      */
-    com.google.protobuf.ByteString
-        getNameBytes();
+    com.google.protobuf.ByteString getNameBytes();
 
     /**
+     *
+     *
      * <pre>
      * The type of the resource. The syntax is platform-specific because
      * different platforms define their resources differently.
@@ -9828,10 +10618,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 3;</code>
+     *
      * @return The type.
      */
     java.lang.String getType();
     /**
+     *
+     *
      * <pre>
      * The type of the resource. The syntax is platform-specific because
      * different platforms define their resources differently.
@@ -9839,12 +10632,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 3;</code>
+     *
      * @return The bytes for type.
      */
-    com.google.protobuf.ByteString
-        getTypeBytes();
+    com.google.protobuf.ByteString getTypeBytes();
 
     /**
+     *
+     *
      * <pre>
      * The labels or tags on the resource, such as AWS resource tags and
      * Kubernetes resource labels.
@@ -9854,6 +10649,8 @@ private static final long serialVersionUID = 0L;
      */
     int getLabelsCount();
     /**
+     *
+     *
      * <pre>
      * The labels or tags on the resource, such as AWS resource tags and
      * Kubernetes resource labels.
@@ -9861,15 +10658,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
-    boolean containsLabels(
-        java.lang.String key);
-    /**
-     * Use {@link #getLabelsMap()} instead.
-     */
+    boolean containsLabels(java.lang.String key);
+    /** Use {@link #getLabelsMap()} instead. */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getLabels();
+    java.util.Map<java.lang.String, java.lang.String> getLabels();
     /**
+     *
+     *
      * <pre>
      * The labels or tags on the resource, such as AWS resource tags and
      * Kubernetes resource labels.
@@ -9877,9 +10672,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
-    java.util.Map<java.lang.String, java.lang.String>
-    getLabelsMap();
+    java.util.Map<java.lang.String, java.lang.String> getLabelsMap();
     /**
+     *
+     *
      * <pre>
      * The labels or tags on the resource, such as AWS resource tags and
      * Kubernetes resource labels.
@@ -9887,11 +10683,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
-
-    java.lang.String getLabelsOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue);
+    java.lang.String getLabelsOrDefault(java.lang.String key, java.lang.String defaultValue);
     /**
+     *
+     *
      * <pre>
      * The labels or tags on the resource, such as AWS resource tags and
      * Kubernetes resource labels.
@@ -9899,11 +10694,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
-
-    java.lang.String getLabelsOrThrow(
-        java.lang.String key);
+    java.lang.String getLabelsOrThrow(java.lang.String key);
 
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the resource. UID is unique in the time
      * and space for this resource within the scope of the service. It is
@@ -9913,10 +10708,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string uid = 5;</code>
+     *
      * @return The uid.
      */
     java.lang.String getUid();
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the resource. UID is unique in the time
      * and space for this resource within the scope of the service. It is
@@ -9926,12 +10724,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string uid = 5;</code>
+     *
      * @return The bytes for uid.
      */
-    com.google.protobuf.ByteString
-        getUidBytes();
+    com.google.protobuf.ByteString getUidBytes();
 
     /**
+     *
+     *
      * <pre>
      * Annotations is an unstructured key-value map stored with a resource that
      * may be set by external tools to store and retrieve arbitrary metadata.
@@ -9943,6 +10743,8 @@ private static final long serialVersionUID = 0L;
      */
     int getAnnotationsCount();
     /**
+     *
+     *
      * <pre>
      * Annotations is an unstructured key-value map stored with a resource that
      * may be set by external tools to store and retrieve arbitrary metadata.
@@ -9952,15 +10754,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; annotations = 6;</code>
      */
-    boolean containsAnnotations(
-        java.lang.String key);
-    /**
-     * Use {@link #getAnnotationsMap()} instead.
-     */
+    boolean containsAnnotations(java.lang.String key);
+    /** Use {@link #getAnnotationsMap()} instead. */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getAnnotations();
+    java.util.Map<java.lang.String, java.lang.String> getAnnotations();
     /**
+     *
+     *
      * <pre>
      * Annotations is an unstructured key-value map stored with a resource that
      * may be set by external tools to store and retrieve arbitrary metadata.
@@ -9970,9 +10770,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; annotations = 6;</code>
      */
-    java.util.Map<java.lang.String, java.lang.String>
-    getAnnotationsMap();
+    java.util.Map<java.lang.String, java.lang.String> getAnnotationsMap();
     /**
+     *
+     *
      * <pre>
      * Annotations is an unstructured key-value map stored with a resource that
      * may be set by external tools to store and retrieve arbitrary metadata.
@@ -9982,11 +10783,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; annotations = 6;</code>
      */
-
-    java.lang.String getAnnotationsOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue);
+    java.lang.String getAnnotationsOrDefault(java.lang.String key, java.lang.String defaultValue);
     /**
+     *
+     *
      * <pre>
      * Annotations is an unstructured key-value map stored with a resource that
      * may be set by external tools to store and retrieve arbitrary metadata.
@@ -9996,51 +10796,62 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; annotations = 6;</code>
      */
-
-    java.lang.String getAnnotationsOrThrow(
-        java.lang.String key);
+    java.lang.String getAnnotationsOrThrow(java.lang.String key);
 
     /**
+     *
+     *
      * <pre>
      * Mutable. The display name set by clients. Must be &lt;= 63 characters.
      * </pre>
      *
      * <code>string display_name = 7;</code>
+     *
      * @return The displayName.
      */
     java.lang.String getDisplayName();
     /**
+     *
+     *
      * <pre>
      * Mutable. The display name set by clients. Must be &lt;= 63 characters.
      * </pre>
      *
      * <code>string display_name = 7;</code>
+     *
      * @return The bytes for displayName.
      */
-    com.google.protobuf.ByteString
-        getDisplayNameBytes();
+    com.google.protobuf.ByteString getDisplayNameBytes();
 
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was created. This may
      * be either the time creation was initiated or when it was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 8;</code>
+     *
      * @return Whether the createTime field is set.
      */
     boolean hasCreateTime();
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was created. This may
      * be either the time creation was initiated or when it was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 8;</code>
+     *
      * @return The createTime.
      */
     com.google.protobuf.Timestamp getCreateTime();
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was created. This may
      * be either the time creation was initiated or when it was completed.
@@ -10051,6 +10862,8 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was last updated. Any
      * change to the resource made by users must refresh this value.
@@ -10058,10 +10871,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Timestamp update_time = 9;</code>
+     *
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was last updated. Any
      * change to the resource made by users must refresh this value.
@@ -10069,10 +10885,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Timestamp update_time = 9;</code>
+     *
      * @return The updateTime.
      */
     com.google.protobuf.Timestamp getUpdateTime();
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was last updated. Any
      * change to the resource made by users must refresh this value.
@@ -10084,26 +10903,34 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was deleted.
      * If the resource is not deleted, this must be empty.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 10;</code>
+     *
      * @return Whether the deleteTime field is set.
      */
     boolean hasDeleteTime();
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was deleted.
      * If the resource is not deleted, this must be empty.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 10;</code>
+     *
      * @return The deleteTime.
      */
     com.google.protobuf.Timestamp getDeleteTime();
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was deleted.
      * If the resource is not deleted, this must be empty.
@@ -10114,6 +10941,8 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * Output only. An opaque value that uniquely identifies a version or
      * generation of a resource. It can be used to confirm that the client
@@ -10121,10 +10950,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string etag = 11;</code>
+     *
      * @return The etag.
      */
     java.lang.String getEtag();
     /**
+     *
+     *
      * <pre>
      * Output only. An opaque value that uniquely identifies a version or
      * generation of a resource. It can be used to confirm that the client
@@ -10132,12 +10964,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string etag = 11;</code>
+     *
      * @return The bytes for etag.
      */
-    com.google.protobuf.ByteString
-        getEtagBytes();
+    com.google.protobuf.ByteString getEtagBytes();
 
     /**
+     *
+     *
      * <pre>
      * Immutable. The location of the resource. The location encoding is
      * specific to the service provider, and new encoding may be introduced
@@ -10149,10 +10983,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string location = 12;</code>
+     *
      * @return The location.
      */
     java.lang.String getLocation();
     /**
+     *
+     *
      * <pre>
      * Immutable. The location of the resource. The location encoding is
      * specific to the service provider, and new encoding may be introduced
@@ -10164,12 +11001,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string location = 12;</code>
+     *
      * @return The bytes for location.
      */
-    com.google.protobuf.ByteString
-        getLocationBytes();
+    com.google.protobuf.ByteString getLocationBytes();
   }
   /**
+   *
+   *
    * <pre>
    * This message defines core attributes for a resource. A resource is an
    * addressable (named) entity provided by the destination service. For
@@ -10178,15 +11017,16 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.rpc.context.AttributeContext.Resource}
    */
-  public static final class Resource extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class Resource extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:google.rpc.context.AttributeContext.Resource)
       ResourceOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use Resource.newBuilder() to construct.
     private Resource(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private Resource() {
       service_ = "";
       name_ = "";
@@ -10199,16 +11039,15 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Resource();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private Resource(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10228,162 +11067,182 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              service_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              type_ = s;
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                labels_ = com.google.protobuf.MapField.newMapField(
-                    LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                service_ = s;
+                break;
               }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              labels__ = input.readMessage(
-                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              labels_.getMutableMap().put(
-                  labels__.getKey(), labels__.getValue());
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              uid_ = s;
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                annotations_ = com.google.protobuf.MapField.newMapField(
-                    AnnotationsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
+                name_ = s;
+                break;
               }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              annotations__ = input.readMessage(
-                  AnnotationsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              annotations_.getMutableMap().put(
-                  annotations__.getKey(), annotations__.getValue());
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 26:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              displayName_ = s;
-              break;
-            }
-            case 66: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createTime_ != null) {
-                subBuilder = createTime_.toBuilder();
+                type_ = s;
+                break;
               }
-              createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(createTime_);
-                createTime_ = subBuilder.buildPartial();
+            case 34:
+              {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  labels_ =
+                      com.google.protobuf.MapField.newMapField(
+                          LabelsDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
+                    input.readMessage(
+                        LabelsDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                labels_.getMutableMap().put(labels__.getKey(), labels__.getValue());
+                break;
               }
+            case 42:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              break;
-            }
-            case 74: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updateTime_ != null) {
-                subBuilder = updateTime_.toBuilder();
+                uid_ = s;
+                break;
               }
-              updateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(updateTime_);
-                updateTime_ = subBuilder.buildPartial();
+            case 50:
+              {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  annotations_ =
+                      com.google.protobuf.MapField.newMapField(
+                          AnnotationsDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> annotations__ =
+                    input.readMessage(
+                        AnnotationsDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                annotations_.getMutableMap().put(annotations__.getKey(), annotations__.getValue());
+                break;
               }
+            case 58:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              break;
-            }
-            case 82: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (deleteTime_ != null) {
-                subBuilder = deleteTime_.toBuilder();
+                displayName_ = s;
+                break;
               }
-              deleteTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(deleteTime_);
-                deleteTime_ = subBuilder.buildPartial();
+            case 66:
+              {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (createTime_ != null) {
+                  subBuilder = createTime_.toBuilder();
+                }
+                createTime_ =
+                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(createTime_);
+                  createTime_ = subBuilder.buildPartial();
+                }
+
+                break;
               }
+            case 74:
+              {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (updateTime_ != null) {
+                  subBuilder = updateTime_.toBuilder();
+                }
+                updateTime_ =
+                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(updateTime_);
+                  updateTime_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              etag_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              location_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            case 82:
+              {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (deleteTime_ != null) {
+                  subBuilder = deleteTime_.toBuilder();
+                }
+                deleteTime_ =
+                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(deleteTime_);
+                  deleteTime_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+            case 90:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                etag_ = s;
+                break;
+              }
+            case 98:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                location_ = s;
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Resource_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Resource_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
     @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
+    protected com.google.protobuf.MapField internalGetMapField(int number) {
       switch (number) {
         case 4:
           return internalGetLabels();
         case 6:
           return internalGetAnnotations();
         default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
+          throw new RuntimeException("Invalid map field number: " + number);
       }
     }
+
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Resource_fieldAccessorTable
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_Resource_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.rpc.context.AttributeContext.Resource.class, com.google.rpc.context.AttributeContext.Resource.Builder.class);
+              com.google.rpc.context.AttributeContext.Resource.class,
+              com.google.rpc.context.AttributeContext.Resource.Builder.class);
     }
 
     public static final int SERVICE_FIELD_NUMBER = 1;
     private volatile java.lang.Object service_;
     /**
+     *
+     *
      * <pre>
      * The name of the service that this resource belongs to, such as
      * `pubsub.googleapis.com`. The service may be different from the DNS
@@ -10391,6 +11250,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service = 1;</code>
+     *
      * @return The service.
      */
     @java.lang.Override
@@ -10399,14 +11259,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         service_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the service that this resource belongs to, such as
      * `pubsub.googleapis.com`. The service may be different from the DNS
@@ -10414,16 +11275,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service = 1;</code>
+     *
      * @return The bytes for service.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServiceBytes() {
+    public com.google.protobuf.ByteString getServiceBytes() {
       java.lang.Object ref = service_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         service_ = b;
         return b;
       } else {
@@ -10434,6 +11294,8 @@ private static final long serialVersionUID = 0L;
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     *
+     *
      * <pre>
      * The stable identifier (name) of a resource on the `service`. A resource
      * can be logically identified as "//{resource.service}/{resource.name}".
@@ -10448,6 +11310,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     *
      * @return The name.
      */
     @java.lang.Override
@@ -10456,14 +11319,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The stable identifier (name) of a resource on the `service`. A resource
      * can be logically identified as "//{resource.service}/{resource.name}".
@@ -10478,16 +11342,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     *
      * @return The bytes for name.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
+    public com.google.protobuf.ByteString getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -10498,6 +11361,8 @@ private static final long serialVersionUID = 0L;
     public static final int TYPE_FIELD_NUMBER = 3;
     private volatile java.lang.Object type_;
     /**
+     *
+     *
      * <pre>
      * The type of the resource. The syntax is platform-specific because
      * different platforms define their resources differently.
@@ -10505,6 +11370,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 3;</code>
+     *
      * @return The type.
      */
     @java.lang.Override
@@ -10513,14 +11379,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The type of the resource. The syntax is platform-specific because
      * different platforms define their resources differently.
@@ -10528,16 +11395,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 3;</code>
+     *
      * @return The bytes for type.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTypeBytes() {
+    public com.google.protobuf.ByteString getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         type_ = b;
         return b;
       } else {
@@ -10546,24 +11412,23 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LABELS_FIELD_NUMBER = 4;
+
     private static final class LabelsDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Resource_LabelsEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
+      static final com.google.protobuf.MapEntry<java.lang.String, java.lang.String> defaultEntry =
+          com.google.protobuf.MapEntry.<java.lang.String, java.lang.String>newDefaultInstance(
+              com.google.rpc.context.AttributeContextProto
+                  .internal_static_google_rpc_context_AttributeContext_Resource_LabelsEntry_descriptor,
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "",
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "");
     }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> labels_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetLabels() {
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> labels_;
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetLabels() {
       if (labels_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            LabelsDefaultEntryHolder.defaultEntry);
+        return com.google.protobuf.MapField.emptyMapField(LabelsDefaultEntryHolder.defaultEntry);
       }
       return labels_;
     }
@@ -10572,6 +11437,8 @@ private static final long serialVersionUID = 0L;
       return internalGetLabels().getMap().size();
     }
     /**
+     *
+     *
      * <pre>
      * The labels or tags on the resource, such as AWS resource tags and
      * Kubernetes resource labels.
@@ -10579,22 +11446,22 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
-
     @java.lang.Override
-    public boolean containsLabels(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+    public boolean containsLabels(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
       return internalGetLabels().getMap().containsKey(key);
     }
-    /**
-     * Use {@link #getLabelsMap()} instead.
-     */
+    /** Use {@link #getLabelsMap()} instead. */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getLabels() {
       return getLabelsMap();
     }
     /**
+     *
+     *
      * <pre>
      * The labels or tags on the resource, such as AWS resource tags and
      * Kubernetes resource labels.
@@ -10603,11 +11470,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
     }
     /**
+     *
+     *
      * <pre>
      * The labels or tags on the resource, such as AWS resource tags and
      * Kubernetes resource labels.
@@ -10616,16 +11484,17 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
-
     public java.lang.String getLabelsOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetLabels().getMap();
+        java.lang.String key, java.lang.String defaultValue) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     *
+     *
      * <pre>
      * The labels or tags on the resource, such as AWS resource tags and
      * Kubernetes resource labels.
@@ -10634,12 +11503,11 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getLabelsOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetLabels().getMap();
+    public java.lang.String getLabelsOrThrow(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -10649,6 +11517,8 @@ private static final long serialVersionUID = 0L;
     public static final int UID_FIELD_NUMBER = 5;
     private volatile java.lang.Object uid_;
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the resource. UID is unique in the time
      * and space for this resource within the scope of the service. It is
@@ -10658,6 +11528,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string uid = 5;</code>
+     *
      * @return The uid.
      */
     @java.lang.Override
@@ -10666,14 +11537,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         uid_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the resource. UID is unique in the time
      * and space for this resource within the scope of the service. It is
@@ -10683,16 +11555,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string uid = 5;</code>
+     *
      * @return The bytes for uid.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUidBytes() {
+    public com.google.protobuf.ByteString getUidBytes() {
       java.lang.Object ref = uid_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         uid_ = b;
         return b;
       } else {
@@ -10701,21 +11572,22 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ANNOTATIONS_FIELD_NUMBER = 6;
+
     private static final class AnnotationsDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Resource_AnnotationsEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
+      static final com.google.protobuf.MapEntry<java.lang.String, java.lang.String> defaultEntry =
+          com.google.protobuf.MapEntry.<java.lang.String, java.lang.String>newDefaultInstance(
+              com.google.rpc.context.AttributeContextProto
+                  .internal_static_google_rpc_context_AttributeContext_Resource_AnnotationsEntry_descriptor,
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "",
+              com.google.protobuf.WireFormat.FieldType.STRING,
+              "");
     }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> annotations_;
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> annotations_;
+
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetAnnotations() {
+        internalGetAnnotations() {
       if (annotations_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             AnnotationsDefaultEntryHolder.defaultEntry);
@@ -10727,6 +11599,8 @@ private static final long serialVersionUID = 0L;
       return internalGetAnnotations().getMap().size();
     }
     /**
+     *
+     *
      * <pre>
      * Annotations is an unstructured key-value map stored with a resource that
      * may be set by external tools to store and retrieve arbitrary metadata.
@@ -10736,22 +11610,22 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, string&gt; annotations = 6;</code>
      */
-
     @java.lang.Override
-    public boolean containsAnnotations(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+    public boolean containsAnnotations(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
       return internalGetAnnotations().getMap().containsKey(key);
     }
-    /**
-     * Use {@link #getAnnotationsMap()} instead.
-     */
+    /** Use {@link #getAnnotationsMap()} instead. */
     @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getAnnotations() {
       return getAnnotationsMap();
     }
     /**
+     *
+     *
      * <pre>
      * Annotations is an unstructured key-value map stored with a resource that
      * may be set by external tools to store and retrieve arbitrary metadata.
@@ -10762,11 +11636,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; annotations = 6;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getAnnotationsMap() {
       return internalGetAnnotations().getMap();
     }
     /**
+     *
+     *
      * <pre>
      * Annotations is an unstructured key-value map stored with a resource that
      * may be set by external tools to store and retrieve arbitrary metadata.
@@ -10777,16 +11652,17 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; annotations = 6;</code>
      */
     @java.lang.Override
-
     public java.lang.String getAnnotationsOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetAnnotations().getMap();
+        java.lang.String key, java.lang.String defaultValue) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetAnnotations().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     *
+     *
      * <pre>
      * Annotations is an unstructured key-value map stored with a resource that
      * may be set by external tools to store and retrieve arbitrary metadata.
@@ -10797,12 +11673,11 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; annotations = 6;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getAnnotationsOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetAnnotations().getMap();
+    public java.lang.String getAnnotationsOrThrow(java.lang.String key) {
+      if (key == null) {
+        throw new java.lang.NullPointerException();
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetAnnotations().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -10812,11 +11687,14 @@ private static final long serialVersionUID = 0L;
     public static final int DISPLAY_NAME_FIELD_NUMBER = 7;
     private volatile java.lang.Object displayName_;
     /**
+     *
+     *
      * <pre>
      * Mutable. The display name set by clients. Must be &lt;= 63 characters.
      * </pre>
      *
      * <code>string display_name = 7;</code>
+     *
      * @return The displayName.
      */
     @java.lang.Override
@@ -10825,29 +11703,29 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         displayName_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Mutable. The display name set by clients. Must be &lt;= 63 characters.
      * </pre>
      *
      * <code>string display_name = 7;</code>
+     *
      * @return The bytes for displayName.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDisplayNameBytes() {
+    public com.google.protobuf.ByteString getDisplayNameBytes() {
       java.lang.Object ref = displayName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         displayName_ = b;
         return b;
       } else {
@@ -10858,12 +11736,15 @@ private static final long serialVersionUID = 0L;
     public static final int CREATE_TIME_FIELD_NUMBER = 8;
     private com.google.protobuf.Timestamp createTime_;
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was created. This may
      * be either the time creation was initiated or when it was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 8;</code>
+     *
      * @return Whether the createTime field is set.
      */
     @java.lang.Override
@@ -10871,12 +11752,15 @@ private static final long serialVersionUID = 0L;
       return createTime_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was created. This may
      * be either the time creation was initiated or when it was completed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp create_time = 8;</code>
+     *
      * @return The createTime.
      */
     @java.lang.Override
@@ -10884,6 +11768,8 @@ private static final long serialVersionUID = 0L;
       return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was created. This may
      * be either the time creation was initiated or when it was completed.
@@ -10899,6 +11785,8 @@ private static final long serialVersionUID = 0L;
     public static final int UPDATE_TIME_FIELD_NUMBER = 9;
     private com.google.protobuf.Timestamp updateTime_;
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was last updated. Any
      * change to the resource made by users must refresh this value.
@@ -10906,6 +11794,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Timestamp update_time = 9;</code>
+     *
      * @return Whether the updateTime field is set.
      */
     @java.lang.Override
@@ -10913,6 +11802,8 @@ private static final long serialVersionUID = 0L;
       return updateTime_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was last updated. Any
      * change to the resource made by users must refresh this value.
@@ -10920,6 +11811,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Timestamp update_time = 9;</code>
+     *
      * @return The updateTime.
      */
     @java.lang.Override
@@ -10927,6 +11819,8 @@ private static final long serialVersionUID = 0L;
       return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was last updated. Any
      * change to the resource made by users must refresh this value.
@@ -10943,12 +11837,15 @@ private static final long serialVersionUID = 0L;
     public static final int DELETE_TIME_FIELD_NUMBER = 10;
     private com.google.protobuf.Timestamp deleteTime_;
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was deleted.
      * If the resource is not deleted, this must be empty.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 10;</code>
+     *
      * @return Whether the deleteTime field is set.
      */
     @java.lang.Override
@@ -10956,12 +11853,15 @@ private static final long serialVersionUID = 0L;
       return deleteTime_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was deleted.
      * If the resource is not deleted, this must be empty.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delete_time = 10;</code>
+     *
      * @return The deleteTime.
      */
     @java.lang.Override
@@ -10969,6 +11869,8 @@ private static final long serialVersionUID = 0L;
       return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
     }
     /**
+     *
+     *
      * <pre>
      * Output only. The timestamp when the resource was deleted.
      * If the resource is not deleted, this must be empty.
@@ -10984,6 +11886,8 @@ private static final long serialVersionUID = 0L;
     public static final int ETAG_FIELD_NUMBER = 11;
     private volatile java.lang.Object etag_;
     /**
+     *
+     *
      * <pre>
      * Output only. An opaque value that uniquely identifies a version or
      * generation of a resource. It can be used to confirm that the client
@@ -10991,6 +11895,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string etag = 11;</code>
+     *
      * @return The etag.
      */
     @java.lang.Override
@@ -10999,14 +11904,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         etag_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Output only. An opaque value that uniquely identifies a version or
      * generation of a resource. It can be used to confirm that the client
@@ -11014,16 +11920,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string etag = 11;</code>
+     *
      * @return The bytes for etag.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getEtagBytes() {
+    public com.google.protobuf.ByteString getEtagBytes() {
       java.lang.Object ref = etag_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         etag_ = b;
         return b;
       } else {
@@ -11034,6 +11939,8 @@ private static final long serialVersionUID = 0L;
     public static final int LOCATION_FIELD_NUMBER = 12;
     private volatile java.lang.Object location_;
     /**
+     *
+     *
      * <pre>
      * Immutable. The location of the resource. The location encoding is
      * specific to the service provider, and new encoding may be introduced
@@ -11045,6 +11952,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string location = 12;</code>
+     *
      * @return The location.
      */
     @java.lang.Override
@@ -11053,14 +11961,15 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         location_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Immutable. The location of the resource. The location encoding is
      * specific to the service provider, and new encoding may be introduced
@@ -11072,16 +11981,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string location = 12;</code>
+     *
      * @return The bytes for location.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLocationBytes() {
+    public com.google.protobuf.ByteString getLocationBytes() {
       java.lang.Object ref = location_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         location_ = b;
         return b;
       } else {
@@ -11090,6 +11998,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -11101,8 +12010,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (!getServiceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, service_);
       }
@@ -11112,21 +12020,13 @@ private static final long serialVersionUID = 0L;
       if (!getTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetLabels(),
-          LabelsDefaultEntryHolder.defaultEntry,
-          4);
+      com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
+          output, internalGetLabels(), LabelsDefaultEntryHolder.defaultEntry, 4);
       if (!getUidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, uid_);
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetAnnotations(),
-          AnnotationsDefaultEntryHolder.defaultEntry,
-          6);
+      com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
+          output, internalGetAnnotations(), AnnotationsDefaultEntryHolder.defaultEntry, 6);
       if (!getDisplayNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, displayName_);
       }
@@ -11163,43 +12063,40 @@ private static final long serialVersionUID = 0L;
       if (!getTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
       }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetLabels().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(4, labels__);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
+          internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
+            LabelsDefaultEntryHolder.defaultEntry
+                .newBuilderForType()
+                .setKey(entry.getKey())
+                .setValue(entry.getValue())
+                .build();
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, labels__);
       }
       if (!getUidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, uid_);
       }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetAnnotations().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        annotations__ = AnnotationsDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(6, annotations__);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
+          internalGetAnnotations().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String> annotations__ =
+            AnnotationsDefaultEntryHolder.defaultEntry
+                .newBuilderForType()
+                .setKey(entry.getKey())
+                .setValue(entry.getValue())
+                .build();
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, annotations__);
       }
       if (!getDisplayNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, displayName_);
       }
       if (createTime_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getCreateTime());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(8, getCreateTime());
       }
       if (updateTime_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getUpdateTime());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(9, getUpdateTime());
       }
       if (deleteTime_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getDeleteTime());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(10, getDeleteTime());
       }
       if (!getEtagBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, etag_);
@@ -11215,46 +12112,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.google.rpc.context.AttributeContext.Resource)) {
         return super.equals(obj);
       }
-      com.google.rpc.context.AttributeContext.Resource other = (com.google.rpc.context.AttributeContext.Resource) obj;
+      com.google.rpc.context.AttributeContext.Resource other =
+          (com.google.rpc.context.AttributeContext.Resource) obj;
 
-      if (!getService()
-          .equals(other.getService())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (!internalGetLabels().equals(
-          other.internalGetLabels())) return false;
-      if (!getUid()
-          .equals(other.getUid())) return false;
-      if (!internalGetAnnotations().equals(
-          other.internalGetAnnotations())) return false;
-      if (!getDisplayName()
-          .equals(other.getDisplayName())) return false;
+      if (!getService().equals(other.getService())) return false;
+      if (!getName().equals(other.getName())) return false;
+      if (!getType().equals(other.getType())) return false;
+      if (!internalGetLabels().equals(other.internalGetLabels())) return false;
+      if (!getUid().equals(other.getUid())) return false;
+      if (!internalGetAnnotations().equals(other.internalGetAnnotations())) return false;
+      if (!getDisplayName().equals(other.getDisplayName())) return false;
       if (hasCreateTime() != other.hasCreateTime()) return false;
       if (hasCreateTime()) {
-        if (!getCreateTime()
-            .equals(other.getCreateTime())) return false;
+        if (!getCreateTime().equals(other.getCreateTime())) return false;
       }
       if (hasUpdateTime() != other.hasUpdateTime()) return false;
       if (hasUpdateTime()) {
-        if (!getUpdateTime()
-            .equals(other.getUpdateTime())) return false;
+        if (!getUpdateTime().equals(other.getUpdateTime())) return false;
       }
       if (hasDeleteTime() != other.hasDeleteTime()) return false;
       if (hasDeleteTime()) {
-        if (!getDeleteTime()
-            .equals(other.getDeleteTime())) return false;
+        if (!getDeleteTime().equals(other.getDeleteTime())) return false;
       }
-      if (!getEtag()
-          .equals(other.getEtag())) return false;
-      if (!getLocation()
-          .equals(other.getLocation())) return false;
+      if (!getEtag().equals(other.getEtag())) return false;
+      if (!getLocation().equals(other.getLocation())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11306,87 +12192,93 @@ private static final long serialVersionUID = 0L;
     }
 
     public static com.google.rpc.context.AttributeContext.Resource parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Resource parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Resource parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Resource parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Resource parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.rpc.context.AttributeContext.Resource parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.rpc.context.AttributeContext.Resource parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.google.rpc.context.AttributeContext.Resource parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.google.rpc.context.AttributeContext.Resource parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.google.rpc.context.AttributeContext.Resource parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.google.rpc.context.AttributeContext.Resource parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.google.rpc.context.AttributeContext.Resource parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.google.rpc.context.AttributeContext.Resource parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.rpc.context.AttributeContext.Resource parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.google.rpc.context.AttributeContext.Resource prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -11396,6 +12288,8 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * This message defines core attributes for a resource. A resource is an
      * addressable (named) entity provided by the destination service. For
@@ -11404,47 +12298,48 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code google.rpc.context.AttributeContext.Resource}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:google.rpc.context.AttributeContext.Resource)
         com.google.rpc.context.AttributeContext.ResourceOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Resource_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Resource_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
+      protected com.google.protobuf.MapField internalGetMapField(int number) {
         switch (number) {
           case 4:
             return internalGetLabels();
           case 6:
             return internalGetAnnotations();
           default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
+            throw new RuntimeException("Invalid map field number: " + number);
         }
       }
+
       @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
+      protected com.google.protobuf.MapField internalGetMutableMapField(int number) {
         switch (number) {
           case 4:
             return internalGetMutableLabels();
           case 6:
             return internalGetMutableAnnotations();
           default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
+            throw new RuntimeException("Invalid map field number: " + number);
         }
       }
+
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Resource_fieldAccessorTable
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Resource_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.rpc.context.AttributeContext.Resource.class, com.google.rpc.context.AttributeContext.Resource.Builder.class);
+                com.google.rpc.context.AttributeContext.Resource.class,
+                com.google.rpc.context.AttributeContext.Resource.Builder.class);
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Resource.newBuilder()
@@ -11452,16 +12347,15 @@ private static final long serialVersionUID = 0L;
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -11503,9 +12397,9 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_Resource_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.google.rpc.context.AttributeContextProto
+            .internal_static_google_rpc_context_AttributeContext_Resource_descriptor;
       }
 
       @java.lang.Override
@@ -11524,7 +12418,8 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public com.google.rpc.context.AttributeContext.Resource buildPartial() {
-        com.google.rpc.context.AttributeContext.Resource result = new com.google.rpc.context.AttributeContext.Resource(this);
+        com.google.rpc.context.AttributeContext.Resource result =
+            new com.google.rpc.context.AttributeContext.Resource(this);
         int from_bitField0_ = bitField0_;
         result.service_ = service_;
         result.name_ = name_;
@@ -11560,38 +12455,41 @@ private static final long serialVersionUID = 0L;
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.rpc.context.AttributeContext.Resource) {
-          return mergeFrom((com.google.rpc.context.AttributeContext.Resource)other);
+          return mergeFrom((com.google.rpc.context.AttributeContext.Resource) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -11599,7 +12497,8 @@ private static final long serialVersionUID = 0L;
       }
 
       public Builder mergeFrom(com.google.rpc.context.AttributeContext.Resource other) {
-        if (other == com.google.rpc.context.AttributeContext.Resource.getDefaultInstance()) return this;
+        if (other == com.google.rpc.context.AttributeContext.Resource.getDefaultInstance())
+          return this;
         if (!other.getService().isEmpty()) {
           service_ = other.service_;
           onChanged();
@@ -11612,14 +12511,12 @@ private static final long serialVersionUID = 0L;
           type_ = other.type_;
           onChanged();
         }
-        internalGetMutableLabels().mergeFrom(
-            other.internalGetLabels());
+        internalGetMutableLabels().mergeFrom(other.internalGetLabels());
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
           onChanged();
         }
-        internalGetMutableAnnotations().mergeFrom(
-            other.internalGetAnnotations());
+        internalGetMutableAnnotations().mergeFrom(other.internalGetAnnotations());
         if (!other.getDisplayName().isEmpty()) {
           displayName_ = other.displayName_;
           onChanged();
@@ -11660,7 +12557,8 @@ private static final long serialVersionUID = 0L;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.rpc.context.AttributeContext.Resource) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.google.rpc.context.AttributeContext.Resource) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11669,10 +12567,13 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+
       private int bitField0_;
 
       private java.lang.Object service_ = "";
       /**
+       *
+       *
        * <pre>
        * The name of the service that this resource belongs to, such as
        * `pubsub.googleapis.com`. The service may be different from the DNS
@@ -11680,13 +12581,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @return The service.
        */
       public java.lang.String getService() {
         java.lang.Object ref = service_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           service_ = s;
           return s;
@@ -11695,6 +12596,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The name of the service that this resource belongs to, such as
        * `pubsub.googleapis.com`. The service may be different from the DNS
@@ -11702,15 +12605,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @return The bytes for service.
        */
-      public com.google.protobuf.ByteString
-          getServiceBytes() {
+      public com.google.protobuf.ByteString getServiceBytes() {
         java.lang.Object ref = service_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           service_ = b;
           return b;
         } else {
@@ -11718,6 +12620,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The name of the service that this resource belongs to, such as
        * `pubsub.googleapis.com`. The service may be different from the DNS
@@ -11725,20 +12629,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @param value The service to set.
        * @return This builder for chaining.
        */
-      public Builder setService(
-          java.lang.String value) {
+      public Builder setService(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         service_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The name of the service that this resource belongs to, such as
        * `pubsub.googleapis.com`. The service may be different from the DNS
@@ -11746,15 +12652,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearService() {
-        
+
         service_ = getDefaultInstance().getService();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The name of the service that this resource belongs to, such as
        * `pubsub.googleapis.com`. The service may be different from the DNS
@@ -11762,16 +12671,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string service = 1;</code>
+       *
        * @param value The bytes for service to set.
        * @return This builder for chaining.
        */
-      public Builder setServiceBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setServiceBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         service_ = value;
         onChanged();
         return this;
@@ -11779,6 +12688,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object name_ = "";
       /**
+       *
+       *
        * <pre>
        * The stable identifier (name) of a resource on the `service`. A resource
        * can be logically identified as "//{resource.service}/{resource.name}".
@@ -11793,13 +12704,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       *
        * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
@@ -11808,6 +12719,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The stable identifier (name) of a resource on the `service`. A resource
        * can be logically identified as "//{resource.service}/{resource.name}".
@@ -11822,15 +12735,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       *
        * @return The bytes for name.
        */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
+      public com.google.protobuf.ByteString getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -11838,6 +12750,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The stable identifier (name) of a resource on the `service`. A resource
        * can be logically identified as "//{resource.service}/{resource.name}".
@@ -11852,20 +12766,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       *
        * @param value The name to set.
        * @return This builder for chaining.
        */
-      public Builder setName(
-          java.lang.String value) {
+      public Builder setName(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         name_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The stable identifier (name) of a resource on the `service`. A resource
        * can be logically identified as "//{resource.service}/{resource.name}".
@@ -11880,15 +12796,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
+
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The stable identifier (name) of a resource on the `service`. A resource
        * can be logically identified as "//{resource.service}/{resource.name}".
@@ -11903,16 +12822,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       *
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setNameBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         name_ = value;
         onChanged();
         return this;
@@ -11920,6 +12839,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object type_ = "";
       /**
+       *
+       *
        * <pre>
        * The type of the resource. The syntax is platform-specific because
        * different platforms define their resources differently.
@@ -11927,13 +12848,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 3;</code>
+       *
        * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           type_ = s;
           return s;
@@ -11942,6 +12863,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The type of the resource. The syntax is platform-specific because
        * different platforms define their resources differently.
@@ -11949,15 +12872,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 3;</code>
+       *
        * @return The bytes for type.
        */
-      public com.google.protobuf.ByteString
-          getTypeBytes() {
+      public com.google.protobuf.ByteString getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           type_ = b;
           return b;
         } else {
@@ -11965,6 +12887,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The type of the resource. The syntax is platform-specific because
        * different platforms define their resources differently.
@@ -11972,20 +12896,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 3;</code>
+       *
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(
-          java.lang.String value) {
+      public Builder setType(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         type_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The type of the resource. The syntax is platform-specific because
        * different platforms define their resources differently.
@@ -11993,15 +12919,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 3;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
+
         type_ = getDefaultInstance().getType();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The type of the resource. The syntax is platform-specific because
        * different platforms define their resources differently.
@@ -12009,37 +12938,36 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 3;</code>
+       *
        * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
-      public Builder setTypeBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setTypeBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         type_ = value;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> labels_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetLabels() {
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String> labels_;
+
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetLabels() {
         if (labels_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              LabelsDefaultEntryHolder.defaultEntry);
+          return com.google.protobuf.MapField.emptyMapField(LabelsDefaultEntryHolder.defaultEntry);
         }
         return labels_;
       }
+
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableLabels() {
-        onChanged();;
+          internalGetMutableLabels() {
+        onChanged();
+        ;
         if (labels_ == null) {
-          labels_ = com.google.protobuf.MapField.newMapField(
-              LabelsDefaultEntryHolder.defaultEntry);
+          labels_ = com.google.protobuf.MapField.newMapField(LabelsDefaultEntryHolder.defaultEntry);
         }
         if (!labels_.isMutable()) {
           labels_ = labels_.copy();
@@ -12051,6 +12979,8 @@ private static final long serialVersionUID = 0L;
         return internalGetLabels().getMap().size();
       }
       /**
+       *
+       *
        * <pre>
        * The labels or tags on the resource, such as AWS resource tags and
        * Kubernetes resource labels.
@@ -12058,22 +12988,22 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
-
       @java.lang.Override
-      public boolean containsLabels(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+      public boolean containsLabels(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
         return internalGetLabels().getMap().containsKey(key);
       }
-      /**
-       * Use {@link #getLabelsMap()} instead.
-       */
+      /** Use {@link #getLabelsMap()} instead. */
       @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getLabels() {
         return getLabelsMap();
       }
       /**
+       *
+       *
        * <pre>
        * The labels or tags on the resource, such as AWS resource tags and
        * Kubernetes resource labels.
@@ -12082,11 +13012,12 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
       }
       /**
+       *
+       *
        * <pre>
        * The labels or tags on the resource, such as AWS resource tags and
        * Kubernetes resource labels.
@@ -12095,16 +13026,17 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
-
       public java.lang.String getLabelsOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetLabels().getMap();
+          java.lang.String key, java.lang.String defaultValue) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       *
+       *
        * <pre>
        * The labels or tags on the resource, such as AWS resource tags and
        * Kubernetes resource labels.
@@ -12113,12 +13045,11 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getLabelsOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetLabels().getMap();
+      public java.lang.String getLabelsOrThrow(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
@@ -12126,11 +13057,12 @@ private static final long serialVersionUID = 0L;
       }
 
       public Builder clearLabels() {
-        internalGetMutableLabels().getMutableMap()
-            .clear();
+        internalGetMutableLabels().getMutableMap().clear();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The labels or tags on the resource, such as AWS resource tags and
        * Kubernetes resource labels.
@@ -12138,23 +13070,21 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
-
-      public Builder removeLabels(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableLabels().getMutableMap()
-            .remove(key);
+      public Builder removeLabels(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableLabels().getMutableMap().remove(key);
         return this;
       }
-      /**
-       * Use alternate mutation accessors instead.
-       */
+      /** Use alternate mutation accessors instead. */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-      getMutableLabels() {
+      public java.util.Map<java.lang.String, java.lang.String> getMutableLabels() {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       *
+       *
        * <pre>
        * The labels or tags on the resource, such as AWS resource tags and
        * Kubernetes resource labels.
@@ -12162,16 +13092,19 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
-      public Builder putLabels(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableLabels().getMutableMap()
-            .put(key, value);
+      public Builder putLabels(java.lang.String key, java.lang.String value) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        if (value == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableLabels().getMutableMap().put(key, value);
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The labels or tags on the resource, such as AWS resource tags and
        * Kubernetes resource labels.
@@ -12179,16 +13112,15 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
-
-      public Builder putAllLabels(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableLabels().getMutableMap()
-            .putAll(values);
+      public Builder putAllLabels(java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap().putAll(values);
         return this;
       }
 
       private java.lang.Object uid_ = "";
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the resource. UID is unique in the time
        * and space for this resource within the scope of the service. It is
@@ -12198,13 +13130,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string uid = 5;</code>
+       *
        * @return The uid.
        */
       public java.lang.String getUid() {
         java.lang.Object ref = uid_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           uid_ = s;
           return s;
@@ -12213,6 +13145,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the resource. UID is unique in the time
        * and space for this resource within the scope of the service. It is
@@ -12222,15 +13156,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string uid = 5;</code>
+       *
        * @return The bytes for uid.
        */
-      public com.google.protobuf.ByteString
-          getUidBytes() {
+      public com.google.protobuf.ByteString getUidBytes() {
         java.lang.Object ref = uid_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           uid_ = b;
           return b;
         } else {
@@ -12238,6 +13171,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the resource. UID is unique in the time
        * and space for this resource within the scope of the service. It is
@@ -12247,20 +13182,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string uid = 5;</code>
+       *
        * @param value The uid to set.
        * @return This builder for chaining.
        */
-      public Builder setUid(
-          java.lang.String value) {
+      public Builder setUid(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         uid_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the resource. UID is unique in the time
        * and space for this resource within the scope of the service. It is
@@ -12270,15 +13207,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string uid = 5;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        
+
         uid_ = getDefaultInstance().getUid();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the resource. UID is unique in the time
        * and space for this resource within the scope of the service. It is
@@ -12288,37 +13228,39 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string uid = 5;</code>
+       *
        * @param value The bytes for uid to set.
        * @return This builder for chaining.
        */
-      public Builder setUidBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setUidBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         uid_ = value;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> annotations_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String> annotations_;
+
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetAnnotations() {
+          internalGetAnnotations() {
         if (annotations_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               AnnotationsDefaultEntryHolder.defaultEntry);
         }
         return annotations_;
       }
+
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableAnnotations() {
-        onChanged();;
+          internalGetMutableAnnotations() {
+        onChanged();
+        ;
         if (annotations_ == null) {
-          annotations_ = com.google.protobuf.MapField.newMapField(
-              AnnotationsDefaultEntryHolder.defaultEntry);
+          annotations_ =
+              com.google.protobuf.MapField.newMapField(AnnotationsDefaultEntryHolder.defaultEntry);
         }
         if (!annotations_.isMutable()) {
           annotations_ = annotations_.copy();
@@ -12330,6 +13272,8 @@ private static final long serialVersionUID = 0L;
         return internalGetAnnotations().getMap().size();
       }
       /**
+       *
+       *
        * <pre>
        * Annotations is an unstructured key-value map stored with a resource that
        * may be set by external tools to store and retrieve arbitrary metadata.
@@ -12339,22 +13283,22 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; annotations = 6;</code>
        */
-
       @java.lang.Override
-      public boolean containsAnnotations(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+      public boolean containsAnnotations(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
         return internalGetAnnotations().getMap().containsKey(key);
       }
-      /**
-       * Use {@link #getAnnotationsMap()} instead.
-       */
+      /** Use {@link #getAnnotationsMap()} instead. */
       @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getAnnotations() {
         return getAnnotationsMap();
       }
       /**
+       *
+       *
        * <pre>
        * Annotations is an unstructured key-value map stored with a resource that
        * may be set by external tools to store and retrieve arbitrary metadata.
@@ -12365,11 +13309,12 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; annotations = 6;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getAnnotationsMap() {
         return internalGetAnnotations().getMap();
       }
       /**
+       *
+       *
        * <pre>
        * Annotations is an unstructured key-value map stored with a resource that
        * may be set by external tools to store and retrieve arbitrary metadata.
@@ -12380,16 +13325,17 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; annotations = 6;</code>
        */
       @java.lang.Override
-
       public java.lang.String getAnnotationsOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetAnnotations().getMap();
+          java.lang.String key, java.lang.String defaultValue) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetAnnotations().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       *
+       *
        * <pre>
        * Annotations is an unstructured key-value map stored with a resource that
        * may be set by external tools to store and retrieve arbitrary metadata.
@@ -12400,12 +13346,11 @@ private static final long serialVersionUID = 0L;
        * <code>map&lt;string, string&gt; annotations = 6;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getAnnotationsOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetAnnotations().getMap();
+      public java.lang.String getAnnotationsOrThrow(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        java.util.Map<java.lang.String, java.lang.String> map = internalGetAnnotations().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
@@ -12413,11 +13358,12 @@ private static final long serialVersionUID = 0L;
       }
 
       public Builder clearAnnotations() {
-        internalGetMutableAnnotations().getMutableMap()
-            .clear();
+        internalGetMutableAnnotations().getMutableMap().clear();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Annotations is an unstructured key-value map stored with a resource that
        * may be set by external tools to store and retrieve arbitrary metadata.
@@ -12427,23 +13373,21 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; annotations = 6;</code>
        */
-
-      public Builder removeAnnotations(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableAnnotations().getMutableMap()
-            .remove(key);
+      public Builder removeAnnotations(java.lang.String key) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableAnnotations().getMutableMap().remove(key);
         return this;
       }
-      /**
-       * Use alternate mutation accessors instead.
-       */
+      /** Use alternate mutation accessors instead. */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-      getMutableAnnotations() {
+      public java.util.Map<java.lang.String, java.lang.String> getMutableAnnotations() {
         return internalGetMutableAnnotations().getMutableMap();
       }
       /**
+       *
+       *
        * <pre>
        * Annotations is an unstructured key-value map stored with a resource that
        * may be set by external tools to store and retrieve arbitrary metadata.
@@ -12453,16 +13397,19 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; annotations = 6;</code>
        */
-      public Builder putAnnotations(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableAnnotations().getMutableMap()
-            .put(key, value);
+      public Builder putAnnotations(java.lang.String key, java.lang.String value) {
+        if (key == null) {
+          throw new java.lang.NullPointerException();
+        }
+        if (value == null) {
+          throw new java.lang.NullPointerException();
+        }
+        internalGetMutableAnnotations().getMutableMap().put(key, value);
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Annotations is an unstructured key-value map stored with a resource that
        * may be set by external tools to store and retrieve arbitrary metadata.
@@ -12472,28 +13419,27 @@ private static final long serialVersionUID = 0L;
        *
        * <code>map&lt;string, string&gt; annotations = 6;</code>
        */
-
-      public Builder putAllAnnotations(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableAnnotations().getMutableMap()
-            .putAll(values);
+      public Builder putAllAnnotations(java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableAnnotations().getMutableMap().putAll(values);
         return this;
       }
 
       private java.lang.Object displayName_ = "";
       /**
+       *
+       *
        * <pre>
        * Mutable. The display name set by clients. Must be &lt;= 63 characters.
        * </pre>
        *
        * <code>string display_name = 7;</code>
+       *
        * @return The displayName.
        */
       public java.lang.String getDisplayName() {
         java.lang.Object ref = displayName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           displayName_ = s;
           return s;
@@ -12502,20 +13448,21 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Mutable. The display name set by clients. Must be &lt;= 63 characters.
        * </pre>
        *
        * <code>string display_name = 7;</code>
+       *
        * @return The bytes for displayName.
        */
-      public com.google.protobuf.ByteString
-          getDisplayNameBytes() {
+      public com.google.protobuf.ByteString getDisplayNameBytes() {
         java.lang.Object ref = displayName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           displayName_ = b;
           return b;
         } else {
@@ -12523,54 +13470,61 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Mutable. The display name set by clients. Must be &lt;= 63 characters.
        * </pre>
        *
        * <code>string display_name = 7;</code>
+       *
        * @param value The displayName to set.
        * @return This builder for chaining.
        */
-      public Builder setDisplayName(
-          java.lang.String value) {
+      public Builder setDisplayName(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         displayName_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Mutable. The display name set by clients. Must be &lt;= 63 characters.
        * </pre>
        *
        * <code>string display_name = 7;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearDisplayName() {
-        
+
         displayName_ = getDefaultInstance().getDisplayName();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Mutable. The display name set by clients. Must be &lt;= 63 characters.
        * </pre>
        *
        * <code>string display_name = 7;</code>
+       *
        * @param value The bytes for displayName to set.
        * @return This builder for chaining.
        */
-      public Builder setDisplayNameBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setDisplayNameBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         displayName_ = value;
         onChanged();
         return this;
@@ -12578,36 +13532,49 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Timestamp createTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
+          createTimeBuilder_;
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was created. This may
        * be either the time creation was initiated or when it was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp create_time = 8;</code>
+       *
        * @return Whether the createTime field is set.
        */
       public boolean hasCreateTime() {
         return createTimeBuilder_ != null || createTime_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was created. This may
        * be either the time creation was initiated or when it was completed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp create_time = 8;</code>
+       *
        * @return The createTime.
        */
       public com.google.protobuf.Timestamp getCreateTime() {
         if (createTimeBuilder_ == null) {
-          return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+          return createTime_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : createTime_;
         } else {
           return createTimeBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was created. This may
        * be either the time creation was initiated or when it was completed.
@@ -12629,6 +13596,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was created. This may
        * be either the time creation was initiated or when it was completed.
@@ -12636,8 +13605,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.Timestamp create_time = 8;</code>
        */
-      public Builder setCreateTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
+      public Builder setCreateTime(com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createTimeBuilder_ == null) {
           createTime_ = builderForValue.build();
           onChanged();
@@ -12648,6 +13616,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was created. This may
        * be either the time creation was initiated or when it was completed.
@@ -12659,7 +13629,9 @@ private static final long serialVersionUID = 0L;
         if (createTimeBuilder_ == null) {
           if (createTime_ != null) {
             createTime_ =
-              com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
+                com.google.protobuf.Timestamp.newBuilder(createTime_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             createTime_ = value;
           }
@@ -12671,6 +13643,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was created. This may
        * be either the time creation was initiated or when it was completed.
@@ -12690,6 +13664,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was created. This may
        * be either the time creation was initiated or when it was completed.
@@ -12698,11 +13674,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp create_time = 8;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-        
+
         onChanged();
         return getCreateTimeFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was created. This may
        * be either the time creation was initiated or when it was completed.
@@ -12714,11 +13692,14 @@ private static final long serialVersionUID = 0L;
         if (createTimeBuilder_ != null) {
           return createTimeBuilder_.getMessageOrBuilder();
         } else {
-          return createTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+          return createTime_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : createTime_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was created. This may
        * be either the time creation was initiated or when it was completed.
@@ -12727,14 +13708,17 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp create_time = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
           getCreateTimeFieldBuilder() {
         if (createTimeBuilder_ == null) {
-          createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getCreateTime(),
-                  getParentForChildren(),
-                  isClean());
+          createTimeBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp,
+                  com.google.protobuf.Timestamp.Builder,
+                  com.google.protobuf.TimestampOrBuilder>(
+                  getCreateTime(), getParentForChildren(), isClean());
           createTime_ = null;
         }
         return createTimeBuilder_;
@@ -12742,8 +13726,13 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Timestamp updateTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
+          updateTimeBuilder_;
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was last updated. Any
        * change to the resource made by users must refresh this value.
@@ -12751,12 +13740,15 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Timestamp update_time = 9;</code>
+       *
        * @return Whether the updateTime field is set.
        */
       public boolean hasUpdateTime() {
         return updateTimeBuilder_ != null || updateTime_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was last updated. Any
        * change to the resource made by users must refresh this value.
@@ -12764,16 +13756,21 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Timestamp update_time = 9;</code>
+       *
        * @return The updateTime.
        */
       public com.google.protobuf.Timestamp getUpdateTime() {
         if (updateTimeBuilder_ == null) {
-          return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+          return updateTime_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : updateTime_;
         } else {
           return updateTimeBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was last updated. Any
        * change to the resource made by users must refresh this value.
@@ -12796,6 +13793,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was last updated. Any
        * change to the resource made by users must refresh this value.
@@ -12804,8 +13803,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.Timestamp update_time = 9;</code>
        */
-      public Builder setUpdateTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
+      public Builder setUpdateTime(com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updateTimeBuilder_ == null) {
           updateTime_ = builderForValue.build();
           onChanged();
@@ -12816,6 +13814,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was last updated. Any
        * change to the resource made by users must refresh this value.
@@ -12828,7 +13828,9 @@ private static final long serialVersionUID = 0L;
         if (updateTimeBuilder_ == null) {
           if (updateTime_ != null) {
             updateTime_ =
-              com.google.protobuf.Timestamp.newBuilder(updateTime_).mergeFrom(value).buildPartial();
+                com.google.protobuf.Timestamp.newBuilder(updateTime_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             updateTime_ = value;
           }
@@ -12840,6 +13842,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was last updated. Any
        * change to the resource made by users must refresh this value.
@@ -12860,6 +13864,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was last updated. Any
        * change to the resource made by users must refresh this value.
@@ -12869,11 +13875,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp update_time = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-        
+
         onChanged();
         return getUpdateTimeFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was last updated. Any
        * change to the resource made by users must refresh this value.
@@ -12886,11 +13894,14 @@ private static final long serialVersionUID = 0L;
         if (updateTimeBuilder_ != null) {
           return updateTimeBuilder_.getMessageOrBuilder();
         } else {
-          return updateTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
+          return updateTime_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : updateTime_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was last updated. Any
        * change to the resource made by users must refresh this value.
@@ -12900,14 +13911,17 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp update_time = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
           getUpdateTimeFieldBuilder() {
         if (updateTimeBuilder_ == null) {
-          updateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getUpdateTime(),
-                  getParentForChildren(),
-                  isClean());
+          updateTimeBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp,
+                  com.google.protobuf.Timestamp.Builder,
+                  com.google.protobuf.TimestampOrBuilder>(
+                  getUpdateTime(), getParentForChildren(), isClean());
           updateTime_ = null;
         }
         return updateTimeBuilder_;
@@ -12915,36 +13929,49 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Timestamp deleteTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteTimeBuilder_;
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
+          deleteTimeBuilder_;
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was deleted.
        * If the resource is not deleted, this must be empty.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delete_time = 10;</code>
+       *
        * @return Whether the deleteTime field is set.
        */
       public boolean hasDeleteTime() {
         return deleteTimeBuilder_ != null || deleteTime_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was deleted.
        * If the resource is not deleted, this must be empty.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delete_time = 10;</code>
+       *
        * @return The deleteTime.
        */
       public com.google.protobuf.Timestamp getDeleteTime() {
         if (deleteTimeBuilder_ == null) {
-          return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+          return deleteTime_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : deleteTime_;
         } else {
           return deleteTimeBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was deleted.
        * If the resource is not deleted, this must be empty.
@@ -12966,6 +13993,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was deleted.
        * If the resource is not deleted, this must be empty.
@@ -12973,8 +14002,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.Timestamp delete_time = 10;</code>
        */
-      public Builder setDeleteTime(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
+      public Builder setDeleteTime(com.google.protobuf.Timestamp.Builder builderForValue) {
         if (deleteTimeBuilder_ == null) {
           deleteTime_ = builderForValue.build();
           onChanged();
@@ -12985,6 +14013,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was deleted.
        * If the resource is not deleted, this must be empty.
@@ -12996,7 +14026,9 @@ private static final long serialVersionUID = 0L;
         if (deleteTimeBuilder_ == null) {
           if (deleteTime_ != null) {
             deleteTime_ =
-              com.google.protobuf.Timestamp.newBuilder(deleteTime_).mergeFrom(value).buildPartial();
+                com.google.protobuf.Timestamp.newBuilder(deleteTime_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             deleteTime_ = value;
           }
@@ -13008,6 +14040,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was deleted.
        * If the resource is not deleted, this must be empty.
@@ -13027,6 +14061,8 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was deleted.
        * If the resource is not deleted, this must be empty.
@@ -13035,11 +14071,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp delete_time = 10;</code>
        */
       public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
-        
+
         onChanged();
         return getDeleteTimeFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was deleted.
        * If the resource is not deleted, this must be empty.
@@ -13051,11 +14089,14 @@ private static final long serialVersionUID = 0L;
         if (deleteTimeBuilder_ != null) {
           return deleteTimeBuilder_.getMessageOrBuilder();
         } else {
-          return deleteTime_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+          return deleteTime_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : deleteTime_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Output only. The timestamp when the resource was deleted.
        * If the resource is not deleted, this must be empty.
@@ -13064,14 +14105,17 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp delete_time = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
           getDeleteTimeFieldBuilder() {
         if (deleteTimeBuilder_ == null) {
-          deleteTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getDeleteTime(),
-                  getParentForChildren(),
-                  isClean());
+          deleteTimeBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp,
+                  com.google.protobuf.Timestamp.Builder,
+                  com.google.protobuf.TimestampOrBuilder>(
+                  getDeleteTime(), getParentForChildren(), isClean());
           deleteTime_ = null;
         }
         return deleteTimeBuilder_;
@@ -13079,6 +14123,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object etag_ = "";
       /**
+       *
+       *
        * <pre>
        * Output only. An opaque value that uniquely identifies a version or
        * generation of a resource. It can be used to confirm that the client
@@ -13086,13 +14132,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string etag = 11;</code>
+       *
        * @return The etag.
        */
       public java.lang.String getEtag() {
         java.lang.Object ref = etag_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           etag_ = s;
           return s;
@@ -13101,6 +14147,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Output only. An opaque value that uniquely identifies a version or
        * generation of a resource. It can be used to confirm that the client
@@ -13108,15 +14156,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string etag = 11;</code>
+       *
        * @return The bytes for etag.
        */
-      public com.google.protobuf.ByteString
-          getEtagBytes() {
+      public com.google.protobuf.ByteString getEtagBytes() {
         java.lang.Object ref = etag_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           etag_ = b;
           return b;
         } else {
@@ -13124,6 +14171,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Output only. An opaque value that uniquely identifies a version or
        * generation of a resource. It can be used to confirm that the client
@@ -13131,20 +14180,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string etag = 11;</code>
+       *
        * @param value The etag to set.
        * @return This builder for chaining.
        */
-      public Builder setEtag(
-          java.lang.String value) {
+      public Builder setEtag(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         etag_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. An opaque value that uniquely identifies a version or
        * generation of a resource. It can be used to confirm that the client
@@ -13152,15 +14203,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string etag = 11;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearEtag() {
-        
+
         etag_ = getDefaultInstance().getEtag();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Output only. An opaque value that uniquely identifies a version or
        * generation of a resource. It can be used to confirm that the client
@@ -13168,16 +14222,16 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string etag = 11;</code>
+       *
        * @param value The bytes for etag to set.
        * @return This builder for chaining.
        */
-      public Builder setEtagBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setEtagBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         etag_ = value;
         onChanged();
         return this;
@@ -13185,6 +14239,8 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object location_ = "";
       /**
+       *
+       *
        * <pre>
        * Immutable. The location of the resource. The location encoding is
        * specific to the service provider, and new encoding may be introduced
@@ -13196,13 +14252,13 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string location = 12;</code>
+       *
        * @return The location.
        */
       public java.lang.String getLocation() {
         java.lang.Object ref = location_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           location_ = s;
           return s;
@@ -13211,6 +14267,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Immutable. The location of the resource. The location encoding is
        * specific to the service provider, and new encoding may be introduced
@@ -13222,15 +14280,14 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string location = 12;</code>
+       *
        * @return The bytes for location.
        */
-      public com.google.protobuf.ByteString
-          getLocationBytes() {
+      public com.google.protobuf.ByteString getLocationBytes() {
         java.lang.Object ref = location_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           location_ = b;
           return b;
         } else {
@@ -13238,6 +14295,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Immutable. The location of the resource. The location encoding is
        * specific to the service provider, and new encoding may be introduced
@@ -13249,20 +14308,22 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string location = 12;</code>
+       *
        * @param value The location to set.
        * @return This builder for chaining.
        */
-      public Builder setLocation(
-          java.lang.String value) {
+      public Builder setLocation(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         location_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Immutable. The location of the resource. The location encoding is
        * specific to the service provider, and new encoding may be introduced
@@ -13274,15 +14335,18 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string location = 12;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearLocation() {
-        
+
         location_ = getDefaultInstance().getLocation();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Immutable. The location of the resource. The location encoding is
        * specific to the service provider, and new encoding may be introduced
@@ -13294,20 +14358,21 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string location = 12;</code>
+       *
        * @param value The bytes for location to set.
        * @return This builder for chaining.
        */
-      public Builder setLocationBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setLocationBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         location_ = value;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13320,12 +14385,12 @@ private static final long serialVersionUID = 0L;
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:google.rpc.context.AttributeContext.Resource)
     }
 
     // @@protoc_insertion_point(class_scope:google.rpc.context.AttributeContext.Resource)
     private static final com.google.rpc.context.AttributeContext.Resource DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.google.rpc.context.AttributeContext.Resource();
     }
@@ -13334,16 +14399,16 @@ private static final long serialVersionUID = 0L;
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Resource>
-        PARSER = new com.google.protobuf.AbstractParser<Resource>() {
-      @java.lang.Override
-      public Resource parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Resource(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<Resource> PARSER =
+        new com.google.protobuf.AbstractParser<Resource>() {
+          @java.lang.Override
+          public Resource parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Resource(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<Resource> parser() {
       return PARSER;
@@ -13358,12 +14423,13 @@ private static final long serialVersionUID = 0L;
     public com.google.rpc.context.AttributeContext.Resource getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
   public static final int ORIGIN_FIELD_NUMBER = 7;
   private com.google.rpc.context.AttributeContext.Peer origin_;
   /**
+   *
+   *
    * <pre>
    * The origin of a network activity. In a multi hop network activity,
    * the origin represents the sender of the first hop. For the first hop,
@@ -13371,6 +14437,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer origin = 7;</code>
+   *
    * @return Whether the origin field is set.
    */
   @java.lang.Override
@@ -13378,6 +14445,8 @@ private static final long serialVersionUID = 0L;
     return origin_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The origin of a network activity. In a multi hop network activity,
    * the origin represents the sender of the first hop. For the first hop,
@@ -13385,13 +14454,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer origin = 7;</code>
+   *
    * @return The origin.
    */
   @java.lang.Override
   public com.google.rpc.context.AttributeContext.Peer getOrigin() {
-    return origin_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : origin_;
+    return origin_ == null
+        ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+        : origin_;
   }
   /**
+   *
+   *
    * <pre>
    * The origin of a network activity. In a multi hop network activity,
    * the origin represents the sender of the first hop. For the first hop,
@@ -13408,6 +14482,8 @@ private static final long serialVersionUID = 0L;
   public static final int SOURCE_FIELD_NUMBER = 1;
   private com.google.rpc.context.AttributeContext.Peer source_;
   /**
+   *
+   *
    * <pre>
    * The source of a network activity, such as starting a TCP connection.
    * In a multi hop network activity, the source represents the sender of the
@@ -13415,6 +14491,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer source = 1;</code>
+   *
    * @return Whether the source field is set.
    */
   @java.lang.Override
@@ -13422,6 +14499,8 @@ private static final long serialVersionUID = 0L;
     return source_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The source of a network activity, such as starting a TCP connection.
    * In a multi hop network activity, the source represents the sender of the
@@ -13429,13 +14508,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer source = 1;</code>
+   *
    * @return The source.
    */
   @java.lang.Override
   public com.google.rpc.context.AttributeContext.Peer getSource() {
-    return source_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : source_;
+    return source_ == null
+        ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+        : source_;
   }
   /**
+   *
+   *
    * <pre>
    * The source of a network activity, such as starting a TCP connection.
    * In a multi hop network activity, the source represents the sender of the
@@ -13452,6 +14536,8 @@ private static final long serialVersionUID = 0L;
   public static final int DESTINATION_FIELD_NUMBER = 2;
   private com.google.rpc.context.AttributeContext.Peer destination_;
   /**
+   *
+   *
    * <pre>
    * The destination of a network activity, such as accepting a TCP connection.
    * In a multi hop network activity, the destination represents the receiver of
@@ -13459,6 +14545,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer destination = 2;</code>
+   *
    * @return Whether the destination field is set.
    */
   @java.lang.Override
@@ -13466,6 +14553,8 @@ private static final long serialVersionUID = 0L;
     return destination_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The destination of a network activity, such as accepting a TCP connection.
    * In a multi hop network activity, the destination represents the receiver of
@@ -13473,13 +14562,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Peer destination = 2;</code>
+   *
    * @return The destination.
    */
   @java.lang.Override
   public com.google.rpc.context.AttributeContext.Peer getDestination() {
-    return destination_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : destination_;
+    return destination_ == null
+        ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+        : destination_;
   }
   /**
+   *
+   *
    * <pre>
    * The destination of a network activity, such as accepting a TCP connection.
    * In a multi hop network activity, the destination represents the receiver of
@@ -13496,11 +14590,14 @@ private static final long serialVersionUID = 0L;
   public static final int REQUEST_FIELD_NUMBER = 3;
   private com.google.rpc.context.AttributeContext.Request request_;
   /**
+   *
+   *
    * <pre>
    * Represents a network request, such as an HTTP request.
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Request request = 3;</code>
+   *
    * @return Whether the request field is set.
    */
   @java.lang.Override
@@ -13508,18 +14605,25 @@ private static final long serialVersionUID = 0L;
     return request_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Represents a network request, such as an HTTP request.
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Request request = 3;</code>
+   *
    * @return The request.
    */
   @java.lang.Override
   public com.google.rpc.context.AttributeContext.Request getRequest() {
-    return request_ == null ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance() : request_;
+    return request_ == null
+        ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance()
+        : request_;
   }
   /**
+   *
+   *
    * <pre>
    * Represents a network request, such as an HTTP request.
    * </pre>
@@ -13534,11 +14638,14 @@ private static final long serialVersionUID = 0L;
   public static final int RESPONSE_FIELD_NUMBER = 4;
   private com.google.rpc.context.AttributeContext.Response response_;
   /**
+   *
+   *
    * <pre>
    * Represents a network response, such as an HTTP response.
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Response response = 4;</code>
+   *
    * @return Whether the response field is set.
    */
   @java.lang.Override
@@ -13546,18 +14653,25 @@ private static final long serialVersionUID = 0L;
     return response_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Represents a network response, such as an HTTP response.
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Response response = 4;</code>
+   *
    * @return The response.
    */
   @java.lang.Override
   public com.google.rpc.context.AttributeContext.Response getResponse() {
-    return response_ == null ? com.google.rpc.context.AttributeContext.Response.getDefaultInstance() : response_;
+    return response_ == null
+        ? com.google.rpc.context.AttributeContext.Response.getDefaultInstance()
+        : response_;
   }
   /**
+   *
+   *
    * <pre>
    * Represents a network response, such as an HTTP response.
    * </pre>
@@ -13572,6 +14686,8 @@ private static final long serialVersionUID = 0L;
   public static final int RESOURCE_FIELD_NUMBER = 5;
   private com.google.rpc.context.AttributeContext.Resource resource_;
   /**
+   *
+   *
    * <pre>
    * Represents a target resource that is involved with a network activity.
    * If multiple resources are involved with an activity, this must be the
@@ -13579,6 +14695,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Resource resource = 5;</code>
+   *
    * @return Whether the resource field is set.
    */
   @java.lang.Override
@@ -13586,6 +14703,8 @@ private static final long serialVersionUID = 0L;
     return resource_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Represents a target resource that is involved with a network activity.
    * If multiple resources are involved with an activity, this must be the
@@ -13593,13 +14712,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Resource resource = 5;</code>
+   *
    * @return The resource.
    */
   @java.lang.Override
   public com.google.rpc.context.AttributeContext.Resource getResource() {
-    return resource_ == null ? com.google.rpc.context.AttributeContext.Resource.getDefaultInstance() : resource_;
+    return resource_ == null
+        ? com.google.rpc.context.AttributeContext.Resource.getDefaultInstance()
+        : resource_;
   }
   /**
+   *
+   *
    * <pre>
    * Represents a target resource that is involved with a network activity.
    * If multiple resources are involved with an activity, this must be the
@@ -13616,11 +14740,14 @@ private static final long serialVersionUID = 0L;
   public static final int API_FIELD_NUMBER = 6;
   private com.google.rpc.context.AttributeContext.Api api_;
   /**
+   *
+   *
    * <pre>
    * Represents an API operation that is involved to a network activity.
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Api api = 6;</code>
+   *
    * @return Whether the api field is set.
    */
   @java.lang.Override
@@ -13628,11 +14755,14 @@ private static final long serialVersionUID = 0L;
     return api_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * Represents an API operation that is involved to a network activity.
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Api api = 6;</code>
+   *
    * @return The api.
    */
   @java.lang.Override
@@ -13640,6 +14770,8 @@ private static final long serialVersionUID = 0L;
     return api_ == null ? com.google.rpc.context.AttributeContext.Api.getDefaultInstance() : api_;
   }
   /**
+   *
+   *
    * <pre>
    * Represents an API operation that is involved to a network activity.
    * </pre>
@@ -13654,6 +14786,8 @@ private static final long serialVersionUID = 0L;
   public static final int EXTENSIONS_FIELD_NUMBER = 8;
   private java.util.List<com.google.protobuf.Any> extensions_;
   /**
+   *
+   *
    * <pre>
    * Supports extensions for advanced use cases, such as logs and metrics.
    * </pre>
@@ -13665,6 +14799,8 @@ private static final long serialVersionUID = 0L;
     return extensions_;
   }
   /**
+   *
+   *
    * <pre>
    * Supports extensions for advanced use cases, such as logs and metrics.
    * </pre>
@@ -13672,11 +14808,12 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.protobuf.Any extensions = 8;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
-      getExtensionsOrBuilderList() {
+  public java.util.List<? extends com.google.protobuf.AnyOrBuilder> getExtensionsOrBuilderList() {
     return extensions_;
   }
   /**
+   *
+   *
    * <pre>
    * Supports extensions for advanced use cases, such as logs and metrics.
    * </pre>
@@ -13688,6 +14825,8 @@ private static final long serialVersionUID = 0L;
     return extensions_.size();
   }
   /**
+   *
+   *
    * <pre>
    * Supports extensions for advanced use cases, such as logs and metrics.
    * </pre>
@@ -13699,6 +14838,8 @@ private static final long serialVersionUID = 0L;
     return extensions_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * Supports extensions for advanced use cases, such as logs and metrics.
    * </pre>
@@ -13706,12 +14847,12 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.protobuf.Any extensions = 8;</code>
    */
   @java.lang.Override
-  public com.google.protobuf.AnyOrBuilder getExtensionsOrBuilder(
-      int index) {
+  public com.google.protobuf.AnyOrBuilder getExtensionsOrBuilder(int index) {
     return extensions_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -13723,8 +14864,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (source_ != null) {
       output.writeMessage(1, getSource());
     }
@@ -13759,36 +14899,28 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (source_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getSource());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getSource());
     }
     if (destination_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getDestination());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getDestination());
     }
     if (request_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getRequest());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getRequest());
     }
     if (response_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getResponse());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getResponse());
     }
     if (resource_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getResource());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, getResource());
     }
     if (api_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getApi());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, getApi());
     }
     if (origin_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getOrigin());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(7, getOrigin());
     }
     for (int i = 0; i < extensions_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, extensions_.get(i));
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(8, extensions_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -13798,7 +14930,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.rpc.context.AttributeContext)) {
       return super.equals(obj);
@@ -13807,41 +14939,33 @@ private static final long serialVersionUID = 0L;
 
     if (hasOrigin() != other.hasOrigin()) return false;
     if (hasOrigin()) {
-      if (!getOrigin()
-          .equals(other.getOrigin())) return false;
+      if (!getOrigin().equals(other.getOrigin())) return false;
     }
     if (hasSource() != other.hasSource()) return false;
     if (hasSource()) {
-      if (!getSource()
-          .equals(other.getSource())) return false;
+      if (!getSource().equals(other.getSource())) return false;
     }
     if (hasDestination() != other.hasDestination()) return false;
     if (hasDestination()) {
-      if (!getDestination()
-          .equals(other.getDestination())) return false;
+      if (!getDestination().equals(other.getDestination())) return false;
     }
     if (hasRequest() != other.hasRequest()) return false;
     if (hasRequest()) {
-      if (!getRequest()
-          .equals(other.getRequest())) return false;
+      if (!getRequest().equals(other.getRequest())) return false;
     }
     if (hasResponse() != other.hasResponse()) return false;
     if (hasResponse()) {
-      if (!getResponse()
-          .equals(other.getResponse())) return false;
+      if (!getResponse().equals(other.getResponse())) return false;
     }
     if (hasResource() != other.hasResource()) return false;
     if (hasResource()) {
-      if (!getResource()
-          .equals(other.getResource())) return false;
+      if (!getResource().equals(other.getResource())) return false;
     }
     if (hasApi() != other.hasApi()) return false;
     if (hasApi()) {
-      if (!getApi()
-          .equals(other.getApi())) return false;
+      if (!getApi().equals(other.getApi())) return false;
     }
-    if (!getExtensionsList()
-        .equals(other.getExtensionsList())) return false;
+    if (!getExtensionsList().equals(other.getExtensionsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -13890,97 +15014,104 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.rpc.context.AttributeContext parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.rpc.context.AttributeContext parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.rpc.context.AttributeContext parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.rpc.context.AttributeContext parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.rpc.context.AttributeContext parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.rpc.context.AttributeContext parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.rpc.context.AttributeContext parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.rpc.context.AttributeContext parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.rpc.context.AttributeContext parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.rpc.context.AttributeContext parseDelimitedFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
-  }
+
   public static com.google.rpc.context.AttributeContext parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      java.io.InputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
+  public static com.google.rpc.context.AttributeContext parseDelimitedFrom(
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
+  }
+
   public static com.google.rpc.context.AttributeContext parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.rpc.context.AttributeContext parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.rpc.context.AttributeContext prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * This message defines the standard attribute vocabulary for Google APIs.
    * An attribute is a piece of metadata that describes an activity on a network
@@ -13999,21 +15130,23 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.rpc.context.AttributeContext}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.rpc.context.AttributeContext)
       com.google.rpc.context.AttributeContextOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_fieldAccessorTable
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.rpc.context.AttributeContext.class, com.google.rpc.context.AttributeContext.Builder.class);
+              com.google.rpc.context.AttributeContext.class,
+              com.google.rpc.context.AttributeContext.Builder.class);
     }
 
     // Construct using com.google.rpc.context.AttributeContext.newBuilder()
@@ -14021,17 +15154,17 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getExtensionsFieldBuilder();
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -14087,9 +15220,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.google.rpc.context.AttributeContextProto.internal_static_google_rpc_context_AttributeContext_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return com.google.rpc.context.AttributeContextProto
+          .internal_static_google_rpc_context_AttributeContext_descriptor;
     }
 
     @java.lang.Override
@@ -14108,7 +15241,8 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.rpc.context.AttributeContext buildPartial() {
-      com.google.rpc.context.AttributeContext result = new com.google.rpc.context.AttributeContext(this);
+      com.google.rpc.context.AttributeContext result =
+          new com.google.rpc.context.AttributeContext(this);
       int from_bitField0_ = bitField0_;
       if (originBuilder_ == null) {
         result.origin_ = origin_;
@@ -14162,38 +15296,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.rpc.context.AttributeContext) {
-        return mergeFrom((com.google.rpc.context.AttributeContext)other);
+        return mergeFrom((com.google.rpc.context.AttributeContext) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -14241,9 +15376,10 @@ private static final long serialVersionUID = 0L;
             extensionsBuilder_ = null;
             extensions_ = other.extensions_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            extensionsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getExtensionsFieldBuilder() : null;
+            extensionsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getExtensionsFieldBuilder()
+                    : null;
           } else {
             extensionsBuilder_.addAllMessages(other.extensions_);
           }
@@ -14277,12 +15413,18 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private com.google.rpc.context.AttributeContext.Peer origin_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> originBuilder_;
+            com.google.rpc.context.AttributeContext.Peer,
+            com.google.rpc.context.AttributeContext.Peer.Builder,
+            com.google.rpc.context.AttributeContext.PeerOrBuilder>
+        originBuilder_;
     /**
+     *
+     *
      * <pre>
      * The origin of a network activity. In a multi hop network activity,
      * the origin represents the sender of the first hop. For the first hop,
@@ -14290,12 +15432,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Peer origin = 7;</code>
+     *
      * @return Whether the origin field is set.
      */
     public boolean hasOrigin() {
       return originBuilder_ != null || origin_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The origin of a network activity. In a multi hop network activity,
      * the origin represents the sender of the first hop. For the first hop,
@@ -14303,16 +15448,21 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Peer origin = 7;</code>
+     *
      * @return The origin.
      */
     public com.google.rpc.context.AttributeContext.Peer getOrigin() {
       if (originBuilder_ == null) {
-        return origin_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : origin_;
+        return origin_ == null
+            ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+            : origin_;
       } else {
         return originBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * The origin of a network activity. In a multi hop network activity,
      * the origin represents the sender of the first hop. For the first hop,
@@ -14335,6 +15485,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The origin of a network activity. In a multi hop network activity,
      * the origin represents the sender of the first hop. For the first hop,
@@ -14343,8 +15495,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.rpc.context.AttributeContext.Peer origin = 7;</code>
      */
-    public Builder setOrigin(
-        com.google.rpc.context.AttributeContext.Peer.Builder builderForValue) {
+    public Builder setOrigin(com.google.rpc.context.AttributeContext.Peer.Builder builderForValue) {
       if (originBuilder_ == null) {
         origin_ = builderForValue.build();
         onChanged();
@@ -14355,6 +15506,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The origin of a network activity. In a multi hop network activity,
      * the origin represents the sender of the first hop. For the first hop,
@@ -14367,7 +15520,9 @@ private static final long serialVersionUID = 0L;
       if (originBuilder_ == null) {
         if (origin_ != null) {
           origin_ =
-            com.google.rpc.context.AttributeContext.Peer.newBuilder(origin_).mergeFrom(value).buildPartial();
+              com.google.rpc.context.AttributeContext.Peer.newBuilder(origin_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           origin_ = value;
         }
@@ -14379,6 +15534,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The origin of a network activity. In a multi hop network activity,
      * the origin represents the sender of the first hop. For the first hop,
@@ -14399,6 +15556,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The origin of a network activity. In a multi hop network activity,
      * the origin represents the sender of the first hop. For the first hop,
@@ -14408,11 +15567,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Peer origin = 7;</code>
      */
     public com.google.rpc.context.AttributeContext.Peer.Builder getOriginBuilder() {
-      
+
       onChanged();
       return getOriginFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The origin of a network activity. In a multi hop network activity,
      * the origin represents the sender of the first hop. For the first hop,
@@ -14425,11 +15586,14 @@ private static final long serialVersionUID = 0L;
       if (originBuilder_ != null) {
         return originBuilder_.getMessageOrBuilder();
       } else {
-        return origin_ == null ?
-            com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : origin_;
+        return origin_ == null
+            ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+            : origin_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The origin of a network activity. In a multi hop network activity,
      * the origin represents the sender of the first hop. For the first hop,
@@ -14439,14 +15603,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Peer origin = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> 
+            com.google.rpc.context.AttributeContext.Peer,
+            com.google.rpc.context.AttributeContext.Peer.Builder,
+            com.google.rpc.context.AttributeContext.PeerOrBuilder>
         getOriginFieldBuilder() {
       if (originBuilder_ == null) {
-        originBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder>(
-                getOrigin(),
-                getParentForChildren(),
-                isClean());
+        originBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.context.AttributeContext.Peer,
+                com.google.rpc.context.AttributeContext.Peer.Builder,
+                com.google.rpc.context.AttributeContext.PeerOrBuilder>(
+                getOrigin(), getParentForChildren(), isClean());
         origin_ = null;
       }
       return originBuilder_;
@@ -14454,8 +15621,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.rpc.context.AttributeContext.Peer source_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> sourceBuilder_;
+            com.google.rpc.context.AttributeContext.Peer,
+            com.google.rpc.context.AttributeContext.Peer.Builder,
+            com.google.rpc.context.AttributeContext.PeerOrBuilder>
+        sourceBuilder_;
     /**
+     *
+     *
      * <pre>
      * The source of a network activity, such as starting a TCP connection.
      * In a multi hop network activity, the source represents the sender of the
@@ -14463,12 +15635,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Peer source = 1;</code>
+     *
      * @return Whether the source field is set.
      */
     public boolean hasSource() {
       return sourceBuilder_ != null || source_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The source of a network activity, such as starting a TCP connection.
      * In a multi hop network activity, the source represents the sender of the
@@ -14476,16 +15651,21 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Peer source = 1;</code>
+     *
      * @return The source.
      */
     public com.google.rpc.context.AttributeContext.Peer getSource() {
       if (sourceBuilder_ == null) {
-        return source_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : source_;
+        return source_ == null
+            ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+            : source_;
       } else {
         return sourceBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * The source of a network activity, such as starting a TCP connection.
      * In a multi hop network activity, the source represents the sender of the
@@ -14508,6 +15688,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The source of a network activity, such as starting a TCP connection.
      * In a multi hop network activity, the source represents the sender of the
@@ -14516,8 +15698,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.rpc.context.AttributeContext.Peer source = 1;</code>
      */
-    public Builder setSource(
-        com.google.rpc.context.AttributeContext.Peer.Builder builderForValue) {
+    public Builder setSource(com.google.rpc.context.AttributeContext.Peer.Builder builderForValue) {
       if (sourceBuilder_ == null) {
         source_ = builderForValue.build();
         onChanged();
@@ -14528,6 +15709,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The source of a network activity, such as starting a TCP connection.
      * In a multi hop network activity, the source represents the sender of the
@@ -14540,7 +15723,9 @@ private static final long serialVersionUID = 0L;
       if (sourceBuilder_ == null) {
         if (source_ != null) {
           source_ =
-            com.google.rpc.context.AttributeContext.Peer.newBuilder(source_).mergeFrom(value).buildPartial();
+              com.google.rpc.context.AttributeContext.Peer.newBuilder(source_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           source_ = value;
         }
@@ -14552,6 +15737,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The source of a network activity, such as starting a TCP connection.
      * In a multi hop network activity, the source represents the sender of the
@@ -14572,6 +15759,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The source of a network activity, such as starting a TCP connection.
      * In a multi hop network activity, the source represents the sender of the
@@ -14581,11 +15770,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Peer source = 1;</code>
      */
     public com.google.rpc.context.AttributeContext.Peer.Builder getSourceBuilder() {
-      
+
       onChanged();
       return getSourceFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The source of a network activity, such as starting a TCP connection.
      * In a multi hop network activity, the source represents the sender of the
@@ -14598,11 +15789,14 @@ private static final long serialVersionUID = 0L;
       if (sourceBuilder_ != null) {
         return sourceBuilder_.getMessageOrBuilder();
       } else {
-        return source_ == null ?
-            com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : source_;
+        return source_ == null
+            ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+            : source_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The source of a network activity, such as starting a TCP connection.
      * In a multi hop network activity, the source represents the sender of the
@@ -14612,14 +15806,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Peer source = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> 
+            com.google.rpc.context.AttributeContext.Peer,
+            com.google.rpc.context.AttributeContext.Peer.Builder,
+            com.google.rpc.context.AttributeContext.PeerOrBuilder>
         getSourceFieldBuilder() {
       if (sourceBuilder_ == null) {
-        sourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder>(
-                getSource(),
-                getParentForChildren(),
-                isClean());
+        sourceBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.context.AttributeContext.Peer,
+                com.google.rpc.context.AttributeContext.Peer.Builder,
+                com.google.rpc.context.AttributeContext.PeerOrBuilder>(
+                getSource(), getParentForChildren(), isClean());
         source_ = null;
       }
       return sourceBuilder_;
@@ -14627,8 +15824,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.rpc.context.AttributeContext.Peer destination_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> destinationBuilder_;
+            com.google.rpc.context.AttributeContext.Peer,
+            com.google.rpc.context.AttributeContext.Peer.Builder,
+            com.google.rpc.context.AttributeContext.PeerOrBuilder>
+        destinationBuilder_;
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -14636,12 +15838,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Peer destination = 2;</code>
+     *
      * @return Whether the destination field is set.
      */
     public boolean hasDestination() {
       return destinationBuilder_ != null || destination_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -14649,16 +15854,21 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Peer destination = 2;</code>
+     *
      * @return The destination.
      */
     public com.google.rpc.context.AttributeContext.Peer getDestination() {
       if (destinationBuilder_ == null) {
-        return destination_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : destination_;
+        return destination_ == null
+            ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+            : destination_;
       } else {
         return destinationBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -14681,6 +15891,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -14701,6 +15913,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -14713,7 +15927,9 @@ private static final long serialVersionUID = 0L;
       if (destinationBuilder_ == null) {
         if (destination_ != null) {
           destination_ =
-            com.google.rpc.context.AttributeContext.Peer.newBuilder(destination_).mergeFrom(value).buildPartial();
+              com.google.rpc.context.AttributeContext.Peer.newBuilder(destination_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           destination_ = value;
         }
@@ -14725,6 +15941,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -14745,6 +15963,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -14754,11 +15974,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Peer destination = 2;</code>
      */
     public com.google.rpc.context.AttributeContext.Peer.Builder getDestinationBuilder() {
-      
+
       onChanged();
       return getDestinationFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -14771,11 +15993,14 @@ private static final long serialVersionUID = 0L;
       if (destinationBuilder_ != null) {
         return destinationBuilder_.getMessageOrBuilder();
       } else {
-        return destination_ == null ?
-            com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : destination_;
+        return destination_ == null
+            ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance()
+            : destination_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The destination of a network activity, such as accepting a TCP connection.
      * In a multi hop network activity, the destination represents the receiver of
@@ -14785,14 +16010,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Peer destination = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> 
+            com.google.rpc.context.AttributeContext.Peer,
+            com.google.rpc.context.AttributeContext.Peer.Builder,
+            com.google.rpc.context.AttributeContext.PeerOrBuilder>
         getDestinationFieldBuilder() {
       if (destinationBuilder_ == null) {
-        destinationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder>(
-                getDestination(),
-                getParentForChildren(),
-                isClean());
+        destinationBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.context.AttributeContext.Peer,
+                com.google.rpc.context.AttributeContext.Peer.Builder,
+                com.google.rpc.context.AttributeContext.PeerOrBuilder>(
+                getDestination(), getParentForChildren(), isClean());
         destination_ = null;
       }
       return destinationBuilder_;
@@ -14800,34 +16028,47 @@ private static final long serialVersionUID = 0L;
 
     private com.google.rpc.context.AttributeContext.Request request_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Request, com.google.rpc.context.AttributeContext.Request.Builder, com.google.rpc.context.AttributeContext.RequestOrBuilder> requestBuilder_;
+            com.google.rpc.context.AttributeContext.Request,
+            com.google.rpc.context.AttributeContext.Request.Builder,
+            com.google.rpc.context.AttributeContext.RequestOrBuilder>
+        requestBuilder_;
     /**
+     *
+     *
      * <pre>
      * Represents a network request, such as an HTTP request.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Request request = 3;</code>
+     *
      * @return Whether the request field is set.
      */
     public boolean hasRequest() {
       return requestBuilder_ != null || request_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network request, such as an HTTP request.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Request request = 3;</code>
+     *
      * @return The request.
      */
     public com.google.rpc.context.AttributeContext.Request getRequest() {
       if (requestBuilder_ == null) {
-        return request_ == null ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance() : request_;
+        return request_ == null
+            ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance()
+            : request_;
       } else {
         return requestBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network request, such as an HTTP request.
      * </pre>
@@ -14848,6 +16089,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network request, such as an HTTP request.
      * </pre>
@@ -14866,6 +16109,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network request, such as an HTTP request.
      * </pre>
@@ -14876,7 +16121,9 @@ private static final long serialVersionUID = 0L;
       if (requestBuilder_ == null) {
         if (request_ != null) {
           request_ =
-            com.google.rpc.context.AttributeContext.Request.newBuilder(request_).mergeFrom(value).buildPartial();
+              com.google.rpc.context.AttributeContext.Request.newBuilder(request_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           request_ = value;
         }
@@ -14888,6 +16135,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network request, such as an HTTP request.
      * </pre>
@@ -14906,6 +16155,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network request, such as an HTTP request.
      * </pre>
@@ -14913,11 +16164,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Request request = 3;</code>
      */
     public com.google.rpc.context.AttributeContext.Request.Builder getRequestBuilder() {
-      
+
       onChanged();
       return getRequestFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network request, such as an HTTP request.
      * </pre>
@@ -14928,11 +16181,14 @@ private static final long serialVersionUID = 0L;
       if (requestBuilder_ != null) {
         return requestBuilder_.getMessageOrBuilder();
       } else {
-        return request_ == null ?
-            com.google.rpc.context.AttributeContext.Request.getDefaultInstance() : request_;
+        return request_ == null
+            ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance()
+            : request_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network request, such as an HTTP request.
      * </pre>
@@ -14940,14 +16196,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Request request = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Request, com.google.rpc.context.AttributeContext.Request.Builder, com.google.rpc.context.AttributeContext.RequestOrBuilder> 
+            com.google.rpc.context.AttributeContext.Request,
+            com.google.rpc.context.AttributeContext.Request.Builder,
+            com.google.rpc.context.AttributeContext.RequestOrBuilder>
         getRequestFieldBuilder() {
       if (requestBuilder_ == null) {
-        requestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.context.AttributeContext.Request, com.google.rpc.context.AttributeContext.Request.Builder, com.google.rpc.context.AttributeContext.RequestOrBuilder>(
-                getRequest(),
-                getParentForChildren(),
-                isClean());
+        requestBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.context.AttributeContext.Request,
+                com.google.rpc.context.AttributeContext.Request.Builder,
+                com.google.rpc.context.AttributeContext.RequestOrBuilder>(
+                getRequest(), getParentForChildren(), isClean());
         request_ = null;
       }
       return requestBuilder_;
@@ -14955,34 +16214,47 @@ private static final long serialVersionUID = 0L;
 
     private com.google.rpc.context.AttributeContext.Response response_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Response, com.google.rpc.context.AttributeContext.Response.Builder, com.google.rpc.context.AttributeContext.ResponseOrBuilder> responseBuilder_;
+            com.google.rpc.context.AttributeContext.Response,
+            com.google.rpc.context.AttributeContext.Response.Builder,
+            com.google.rpc.context.AttributeContext.ResponseOrBuilder>
+        responseBuilder_;
     /**
+     *
+     *
      * <pre>
      * Represents a network response, such as an HTTP response.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Response response = 4;</code>
+     *
      * @return Whether the response field is set.
      */
     public boolean hasResponse() {
       return responseBuilder_ != null || response_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network response, such as an HTTP response.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Response response = 4;</code>
+     *
      * @return The response.
      */
     public com.google.rpc.context.AttributeContext.Response getResponse() {
       if (responseBuilder_ == null) {
-        return response_ == null ? com.google.rpc.context.AttributeContext.Response.getDefaultInstance() : response_;
+        return response_ == null
+            ? com.google.rpc.context.AttributeContext.Response.getDefaultInstance()
+            : response_;
       } else {
         return responseBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network response, such as an HTTP response.
      * </pre>
@@ -15003,6 +16275,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network response, such as an HTTP response.
      * </pre>
@@ -15021,6 +16295,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network response, such as an HTTP response.
      * </pre>
@@ -15031,7 +16307,9 @@ private static final long serialVersionUID = 0L;
       if (responseBuilder_ == null) {
         if (response_ != null) {
           response_ =
-            com.google.rpc.context.AttributeContext.Response.newBuilder(response_).mergeFrom(value).buildPartial();
+              com.google.rpc.context.AttributeContext.Response.newBuilder(response_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           response_ = value;
         }
@@ -15043,6 +16321,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network response, such as an HTTP response.
      * </pre>
@@ -15061,6 +16341,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network response, such as an HTTP response.
      * </pre>
@@ -15068,11 +16350,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Response response = 4;</code>
      */
     public com.google.rpc.context.AttributeContext.Response.Builder getResponseBuilder() {
-      
+
       onChanged();
       return getResponseFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network response, such as an HTTP response.
      * </pre>
@@ -15083,11 +16367,14 @@ private static final long serialVersionUID = 0L;
       if (responseBuilder_ != null) {
         return responseBuilder_.getMessageOrBuilder();
       } else {
-        return response_ == null ?
-            com.google.rpc.context.AttributeContext.Response.getDefaultInstance() : response_;
+        return response_ == null
+            ? com.google.rpc.context.AttributeContext.Response.getDefaultInstance()
+            : response_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Represents a network response, such as an HTTP response.
      * </pre>
@@ -15095,14 +16382,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Response response = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Response, com.google.rpc.context.AttributeContext.Response.Builder, com.google.rpc.context.AttributeContext.ResponseOrBuilder> 
+            com.google.rpc.context.AttributeContext.Response,
+            com.google.rpc.context.AttributeContext.Response.Builder,
+            com.google.rpc.context.AttributeContext.ResponseOrBuilder>
         getResponseFieldBuilder() {
       if (responseBuilder_ == null) {
-        responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.context.AttributeContext.Response, com.google.rpc.context.AttributeContext.Response.Builder, com.google.rpc.context.AttributeContext.ResponseOrBuilder>(
-                getResponse(),
-                getParentForChildren(),
-                isClean());
+        responseBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.context.AttributeContext.Response,
+                com.google.rpc.context.AttributeContext.Response.Builder,
+                com.google.rpc.context.AttributeContext.ResponseOrBuilder>(
+                getResponse(), getParentForChildren(), isClean());
         response_ = null;
       }
       return responseBuilder_;
@@ -15110,8 +16400,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.rpc.context.AttributeContext.Resource resource_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Resource, com.google.rpc.context.AttributeContext.Resource.Builder, com.google.rpc.context.AttributeContext.ResourceOrBuilder> resourceBuilder_;
+            com.google.rpc.context.AttributeContext.Resource,
+            com.google.rpc.context.AttributeContext.Resource.Builder,
+            com.google.rpc.context.AttributeContext.ResourceOrBuilder>
+        resourceBuilder_;
     /**
+     *
+     *
      * <pre>
      * Represents a target resource that is involved with a network activity.
      * If multiple resources are involved with an activity, this must be the
@@ -15119,12 +16414,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Resource resource = 5;</code>
+     *
      * @return Whether the resource field is set.
      */
     public boolean hasResource() {
       return resourceBuilder_ != null || resource_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a target resource that is involved with a network activity.
      * If multiple resources are involved with an activity, this must be the
@@ -15132,16 +16430,21 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Resource resource = 5;</code>
+     *
      * @return The resource.
      */
     public com.google.rpc.context.AttributeContext.Resource getResource() {
       if (resourceBuilder_ == null) {
-        return resource_ == null ? com.google.rpc.context.AttributeContext.Resource.getDefaultInstance() : resource_;
+        return resource_ == null
+            ? com.google.rpc.context.AttributeContext.Resource.getDefaultInstance()
+            : resource_;
       } else {
         return resourceBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Represents a target resource that is involved with a network activity.
      * If multiple resources are involved with an activity, this must be the
@@ -15164,6 +16467,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a target resource that is involved with a network activity.
      * If multiple resources are involved with an activity, this must be the
@@ -15184,6 +16489,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a target resource that is involved with a network activity.
      * If multiple resources are involved with an activity, this must be the
@@ -15196,7 +16503,9 @@ private static final long serialVersionUID = 0L;
       if (resourceBuilder_ == null) {
         if (resource_ != null) {
           resource_ =
-            com.google.rpc.context.AttributeContext.Resource.newBuilder(resource_).mergeFrom(value).buildPartial();
+              com.google.rpc.context.AttributeContext.Resource.newBuilder(resource_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           resource_ = value;
         }
@@ -15208,6 +16517,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a target resource that is involved with a network activity.
      * If multiple resources are involved with an activity, this must be the
@@ -15228,6 +16539,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents a target resource that is involved with a network activity.
      * If multiple resources are involved with an activity, this must be the
@@ -15237,11 +16550,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Resource resource = 5;</code>
      */
     public com.google.rpc.context.AttributeContext.Resource.Builder getResourceBuilder() {
-      
+
       onChanged();
       return getResourceFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Represents a target resource that is involved with a network activity.
      * If multiple resources are involved with an activity, this must be the
@@ -15254,11 +16569,14 @@ private static final long serialVersionUID = 0L;
       if (resourceBuilder_ != null) {
         return resourceBuilder_.getMessageOrBuilder();
       } else {
-        return resource_ == null ?
-            com.google.rpc.context.AttributeContext.Resource.getDefaultInstance() : resource_;
+        return resource_ == null
+            ? com.google.rpc.context.AttributeContext.Resource.getDefaultInstance()
+            : resource_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Represents a target resource that is involved with a network activity.
      * If multiple resources are involved with an activity, this must be the
@@ -15268,14 +16586,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Resource resource = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Resource, com.google.rpc.context.AttributeContext.Resource.Builder, com.google.rpc.context.AttributeContext.ResourceOrBuilder> 
+            com.google.rpc.context.AttributeContext.Resource,
+            com.google.rpc.context.AttributeContext.Resource.Builder,
+            com.google.rpc.context.AttributeContext.ResourceOrBuilder>
         getResourceFieldBuilder() {
       if (resourceBuilder_ == null) {
-        resourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.context.AttributeContext.Resource, com.google.rpc.context.AttributeContext.Resource.Builder, com.google.rpc.context.AttributeContext.ResourceOrBuilder>(
-                getResource(),
-                getParentForChildren(),
-                isClean());
+        resourceBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.context.AttributeContext.Resource,
+                com.google.rpc.context.AttributeContext.Resource.Builder,
+                com.google.rpc.context.AttributeContext.ResourceOrBuilder>(
+                getResource(), getParentForChildren(), isClean());
         resource_ = null;
       }
       return resourceBuilder_;
@@ -15283,34 +16604,47 @@ private static final long serialVersionUID = 0L;
 
     private com.google.rpc.context.AttributeContext.Api api_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Api, com.google.rpc.context.AttributeContext.Api.Builder, com.google.rpc.context.AttributeContext.ApiOrBuilder> apiBuilder_;
+            com.google.rpc.context.AttributeContext.Api,
+            com.google.rpc.context.AttributeContext.Api.Builder,
+            com.google.rpc.context.AttributeContext.ApiOrBuilder>
+        apiBuilder_;
     /**
+     *
+     *
      * <pre>
      * Represents an API operation that is involved to a network activity.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Api api = 6;</code>
+     *
      * @return Whether the api field is set.
      */
     public boolean hasApi() {
       return apiBuilder_ != null || api_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Represents an API operation that is involved to a network activity.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Api api = 6;</code>
+     *
      * @return The api.
      */
     public com.google.rpc.context.AttributeContext.Api getApi() {
       if (apiBuilder_ == null) {
-        return api_ == null ? com.google.rpc.context.AttributeContext.Api.getDefaultInstance() : api_;
+        return api_ == null
+            ? com.google.rpc.context.AttributeContext.Api.getDefaultInstance()
+            : api_;
       } else {
         return apiBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * Represents an API operation that is involved to a network activity.
      * </pre>
@@ -15331,14 +16665,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents an API operation that is involved to a network activity.
      * </pre>
      *
      * <code>.google.rpc.context.AttributeContext.Api api = 6;</code>
      */
-    public Builder setApi(
-        com.google.rpc.context.AttributeContext.Api.Builder builderForValue) {
+    public Builder setApi(com.google.rpc.context.AttributeContext.Api.Builder builderForValue) {
       if (apiBuilder_ == null) {
         api_ = builderForValue.build();
         onChanged();
@@ -15349,6 +16684,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents an API operation that is involved to a network activity.
      * </pre>
@@ -15359,7 +16696,9 @@ private static final long serialVersionUID = 0L;
       if (apiBuilder_ == null) {
         if (api_ != null) {
           api_ =
-            com.google.rpc.context.AttributeContext.Api.newBuilder(api_).mergeFrom(value).buildPartial();
+              com.google.rpc.context.AttributeContext.Api.newBuilder(api_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           api_ = value;
         }
@@ -15371,6 +16710,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents an API operation that is involved to a network activity.
      * </pre>
@@ -15389,6 +16730,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Represents an API operation that is involved to a network activity.
      * </pre>
@@ -15396,11 +16739,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Api api = 6;</code>
      */
     public com.google.rpc.context.AttributeContext.Api.Builder getApiBuilder() {
-      
+
       onChanged();
       return getApiFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * Represents an API operation that is involved to a network activity.
      * </pre>
@@ -15411,11 +16756,14 @@ private static final long serialVersionUID = 0L;
       if (apiBuilder_ != null) {
         return apiBuilder_.getMessageOrBuilder();
       } else {
-        return api_ == null ?
-            com.google.rpc.context.AttributeContext.Api.getDefaultInstance() : api_;
+        return api_ == null
+            ? com.google.rpc.context.AttributeContext.Api.getDefaultInstance()
+            : api_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Represents an API operation that is involved to a network activity.
      * </pre>
@@ -15423,32 +16771,40 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.context.AttributeContext.Api api = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.context.AttributeContext.Api, com.google.rpc.context.AttributeContext.Api.Builder, com.google.rpc.context.AttributeContext.ApiOrBuilder> 
+            com.google.rpc.context.AttributeContext.Api,
+            com.google.rpc.context.AttributeContext.Api.Builder,
+            com.google.rpc.context.AttributeContext.ApiOrBuilder>
         getApiFieldBuilder() {
       if (apiBuilder_ == null) {
-        apiBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.context.AttributeContext.Api, com.google.rpc.context.AttributeContext.Api.Builder, com.google.rpc.context.AttributeContext.ApiOrBuilder>(
-                getApi(),
-                getParentForChildren(),
-                isClean());
+        apiBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.context.AttributeContext.Api,
+                com.google.rpc.context.AttributeContext.Api.Builder,
+                com.google.rpc.context.AttributeContext.ApiOrBuilder>(
+                getApi(), getParentForChildren(), isClean());
         api_ = null;
       }
       return apiBuilder_;
     }
 
-    private java.util.List<com.google.protobuf.Any> extensions_ =
-      java.util.Collections.emptyList();
+    private java.util.List<com.google.protobuf.Any> extensions_ = java.util.Collections.emptyList();
+
     private void ensureExtensionsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         extensions_ = new java.util.ArrayList<com.google.protobuf.Any>(extensions_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> extensionsBuilder_;
+            com.google.protobuf.Any,
+            com.google.protobuf.Any.Builder,
+            com.google.protobuf.AnyOrBuilder>
+        extensionsBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
@@ -15463,6 +16819,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
@@ -15477,6 +16835,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
@@ -15491,14 +16851,15 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public Builder setExtensions(
-        int index, com.google.protobuf.Any value) {
+    public Builder setExtensions(int index, com.google.protobuf.Any value) {
       if (extensionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -15512,14 +16873,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public Builder setExtensions(
-        int index, com.google.protobuf.Any.Builder builderForValue) {
+    public Builder setExtensions(int index, com.google.protobuf.Any.Builder builderForValue) {
       if (extensionsBuilder_ == null) {
         ensureExtensionsIsMutable();
         extensions_.set(index, builderForValue.build());
@@ -15530,6 +16892,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
@@ -15550,14 +16914,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public Builder addExtensions(
-        int index, com.google.protobuf.Any value) {
+    public Builder addExtensions(int index, com.google.protobuf.Any value) {
       if (extensionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -15571,14 +16936,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public Builder addExtensions(
-        com.google.protobuf.Any.Builder builderForValue) {
+    public Builder addExtensions(com.google.protobuf.Any.Builder builderForValue) {
       if (extensionsBuilder_ == null) {
         ensureExtensionsIsMutable();
         extensions_.add(builderForValue.build());
@@ -15589,14 +16955,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public Builder addExtensions(
-        int index, com.google.protobuf.Any.Builder builderForValue) {
+    public Builder addExtensions(int index, com.google.protobuf.Any.Builder builderForValue) {
       if (extensionsBuilder_ == null) {
         ensureExtensionsIsMutable();
         extensions_.add(index, builderForValue.build());
@@ -15607,18 +16974,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public Builder addAllExtensions(
-        java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+    public Builder addAllExtensions(java.lang.Iterable<? extends com.google.protobuf.Any> values) {
       if (extensionsBuilder_ == null) {
         ensureExtensionsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, extensions_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, extensions_);
         onChanged();
       } else {
         extensionsBuilder_.addAllMessages(values);
@@ -15626,6 +16993,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
@@ -15643,6 +17012,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
@@ -15660,39 +17031,43 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public com.google.protobuf.Any.Builder getExtensionsBuilder(
-        int index) {
+    public com.google.protobuf.Any.Builder getExtensionsBuilder(int index) {
       return getExtensionsFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public com.google.protobuf.AnyOrBuilder getExtensionsOrBuilder(
-        int index) {
+    public com.google.protobuf.AnyOrBuilder getExtensionsOrBuilder(int index) {
       if (extensionsBuilder_ == null) {
-        return extensions_.get(index);  } else {
+        return extensions_.get(index);
+      } else {
         return extensionsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
-         getExtensionsOrBuilderList() {
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> getExtensionsOrBuilderList() {
       if (extensionsBuilder_ != null) {
         return extensionsBuilder_.getMessageOrBuilderList();
       } else {
@@ -15700,6 +17075,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
@@ -15707,49 +17084,53 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
     public com.google.protobuf.Any.Builder addExtensionsBuilder() {
-      return getExtensionsFieldBuilder().addBuilder(
-          com.google.protobuf.Any.getDefaultInstance());
+      return getExtensionsFieldBuilder().addBuilder(com.google.protobuf.Any.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public com.google.protobuf.Any.Builder addExtensionsBuilder(
-        int index) {
-      return getExtensionsFieldBuilder().addBuilder(
-          index, com.google.protobuf.Any.getDefaultInstance());
+    public com.google.protobuf.Any.Builder addExtensionsBuilder(int index) {
+      return getExtensionsFieldBuilder()
+          .addBuilder(index, com.google.protobuf.Any.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Supports extensions for advanced use cases, such as logs and metrics.
      * </pre>
      *
      * <code>repeated .google.protobuf.Any extensions = 8;</code>
      */
-    public java.util.List<com.google.protobuf.Any.Builder> 
-         getExtensionsBuilderList() {
+    public java.util.List<com.google.protobuf.Any.Builder> getExtensionsBuilderList() {
       return getExtensionsFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+            com.google.protobuf.Any,
+            com.google.protobuf.Any.Builder,
+            com.google.protobuf.AnyOrBuilder>
         getExtensionsFieldBuilder() {
       if (extensionsBuilder_ == null) {
-        extensionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
-                extensions_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
+        extensionsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.protobuf.Any,
+                com.google.protobuf.Any.Builder,
+                com.google.protobuf.AnyOrBuilder>(
+                extensions_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
         extensions_ = null;
       }
       return extensionsBuilder_;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -15759,12 +17140,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.rpc.context.AttributeContext)
   }
 
   // @@protoc_insertion_point(class_scope:google.rpc.context.AttributeContext)
   private static final com.google.rpc.context.AttributeContext DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.rpc.context.AttributeContext();
   }
@@ -15773,16 +17154,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AttributeContext>
-      PARSER = new com.google.protobuf.AbstractParser<AttributeContext>() {
-    @java.lang.Override
-    public AttributeContext parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AttributeContext(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<AttributeContext> PARSER =
+      new com.google.protobuf.AbstractParser<AttributeContext>() {
+        @java.lang.Override
+        public AttributeContext parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AttributeContext(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<AttributeContext> parser() {
     return PARSER;
@@ -15797,6 +17178,4 @@ private static final long serialVersionUID = 0L;
   public com.google.rpc.context.AttributeContext getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

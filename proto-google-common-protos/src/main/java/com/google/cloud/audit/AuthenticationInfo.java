@@ -19,21 +19,24 @@
 package com.google.cloud.audit;
 
 /**
+ *
+ *
  * <pre>
  * Authentication information for the operation.
  * </pre>
  *
  * Protobuf type {@code google.cloud.audit.AuthenticationInfo}
  */
-public final class AuthenticationInfo extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class AuthenticationInfo extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.cloud.audit.AuthenticationInfo)
     AuthenticationInfoOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use AuthenticationInfo.newBuilder() to construct.
   private AuthenticationInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private AuthenticationInfo() {
     principalEmail_ = "";
     authoritySelector_ = "";
@@ -44,16 +47,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new AuthenticationInfo();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private AuthenticationInfo(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -73,90 +75,105 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            principalEmail_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            authoritySelector_ = s;
-            break;
-          }
-          case 34: {
-            com.google.protobuf.Struct.Builder subBuilder = null;
-            if (thirdPartyPrincipal_ != null) {
-              subBuilder = thirdPartyPrincipal_.toBuilder();
+              principalEmail_ = s;
+              break;
             }
-            thirdPartyPrincipal_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(thirdPartyPrincipal_);
-              thirdPartyPrincipal_ = subBuilder.buildPartial();
-            }
+          case 18:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            serviceAccountKeyName_ = s;
-            break;
-          }
-          case 50: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              serviceAccountDelegationInfo_ = new java.util.ArrayList<com.google.cloud.audit.ServiceAccountDelegationInfo>();
-              mutable_bitField0_ |= 0x00000001;
+              authoritySelector_ = s;
+              break;
             }
-            serviceAccountDelegationInfo_.add(
-                input.readMessage(com.google.cloud.audit.ServiceAccountDelegationInfo.parser(), extensionRegistry));
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 34:
+            {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (thirdPartyPrincipal_ != null) {
+                subBuilder = thirdPartyPrincipal_.toBuilder();
+              }
+              thirdPartyPrincipal_ =
+                  input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(thirdPartyPrincipal_);
+                thirdPartyPrincipal_ = subBuilder.buildPartial();
+              }
 
-            principalSubject_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+              break;
             }
-            break;
-          }
+          case 42:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountKeyName_ = s;
+              break;
+            }
+          case 50:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                serviceAccountDelegationInfo_ =
+                    new java.util.ArrayList<com.google.cloud.audit.ServiceAccountDelegationInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              serviceAccountDelegationInfo_.add(
+                  input.readMessage(
+                      com.google.cloud.audit.ServiceAccountDelegationInfo.parser(),
+                      extensionRegistry));
+              break;
+            }
+          case 66:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              principalSubject_ = s;
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        serviceAccountDelegationInfo_ = java.util.Collections.unmodifiableList(serviceAccountDelegationInfo_);
+        serviceAccountDelegationInfo_ =
+            java.util.Collections.unmodifiableList(serviceAccountDelegationInfo_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuthenticationInfo_descriptor;
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    return com.google.cloud.audit.AuditLogProto
+        .internal_static_google_cloud_audit_AuthenticationInfo_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuthenticationInfo_fieldAccessorTable
+    return com.google.cloud.audit.AuditLogProto
+        .internal_static_google_cloud_audit_AuthenticationInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.cloud.audit.AuthenticationInfo.class, com.google.cloud.audit.AuthenticationInfo.Builder.class);
+            com.google.cloud.audit.AuthenticationInfo.class,
+            com.google.cloud.audit.AuthenticationInfo.Builder.class);
   }
 
   public static final int PRINCIPAL_EMAIL_FIELD_NUMBER = 1;
   private volatile java.lang.Object principalEmail_;
   /**
+   *
+   *
    * <pre>
    * The email address of the authenticated user (or service account on behalf
    * of third party principal) making the request. For third party identity
@@ -167,6 +184,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string principal_email = 1;</code>
+   *
    * @return The principalEmail.
    */
   @java.lang.Override
@@ -175,14 +193,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       principalEmail_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The email address of the authenticated user (or service account on behalf
    * of third party principal) making the request. For third party identity
@@ -193,16 +212,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string principal_email = 1;</code>
+   *
    * @return The bytes for principalEmail.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getPrincipalEmailBytes() {
+  public com.google.protobuf.ByteString getPrincipalEmailBytes() {
     java.lang.Object ref = principalEmail_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       principalEmail_ = b;
       return b;
     } else {
@@ -213,12 +231,15 @@ private static final long serialVersionUID = 0L;
   public static final int AUTHORITY_SELECTOR_FIELD_NUMBER = 2;
   private volatile java.lang.Object authoritySelector_;
   /**
+   *
+   *
    * <pre>
    * The authority selector specified by the requestor, if any.
    * It is not guaranteed that the principal was allowed to use this authority.
    * </pre>
    *
    * <code>string authority_selector = 2;</code>
+   *
    * @return The authoritySelector.
    */
   @java.lang.Override
@@ -227,30 +248,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       authoritySelector_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The authority selector specified by the requestor, if any.
    * It is not guaranteed that the principal was allowed to use this authority.
    * </pre>
    *
    * <code>string authority_selector = 2;</code>
+   *
    * @return The bytes for authoritySelector.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getAuthoritySelectorBytes() {
+  public com.google.protobuf.ByteString getAuthoritySelectorBytes() {
     java.lang.Object ref = authoritySelector_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       authoritySelector_ = b;
       return b;
     } else {
@@ -261,6 +282,8 @@ private static final long serialVersionUID = 0L;
   public static final int THIRD_PARTY_PRINCIPAL_FIELD_NUMBER = 4;
   private com.google.protobuf.Struct thirdPartyPrincipal_;
   /**
+   *
+   *
    * <pre>
    * The third party identification (if any) of the authenticated user making
    * the request.
@@ -269,6 +292,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+   *
    * @return Whether the thirdPartyPrincipal field is set.
    */
   @java.lang.Override
@@ -276,6 +300,8 @@ private static final long serialVersionUID = 0L;
     return thirdPartyPrincipal_ != null;
   }
   /**
+   *
+   *
    * <pre>
    * The third party identification (if any) of the authenticated user making
    * the request.
@@ -284,13 +310,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+   *
    * @return The thirdPartyPrincipal.
    */
   @java.lang.Override
   public com.google.protobuf.Struct getThirdPartyPrincipal() {
-    return thirdPartyPrincipal_ == null ? com.google.protobuf.Struct.getDefaultInstance() : thirdPartyPrincipal_;
+    return thirdPartyPrincipal_ == null
+        ? com.google.protobuf.Struct.getDefaultInstance()
+        : thirdPartyPrincipal_;
   }
   /**
+   *
+   *
    * <pre>
    * The third party identification (if any) of the authenticated user making
    * the request.
@@ -308,6 +339,8 @@ private static final long serialVersionUID = 0L;
   public static final int SERVICE_ACCOUNT_KEY_NAME_FIELD_NUMBER = 5;
   private volatile java.lang.Object serviceAccountKeyName_;
   /**
+   *
+   *
    * <pre>
    * The name of the service account key used to create or exchange
    * credentials for authenticating the service account making the request.
@@ -316,6 +349,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string service_account_key_name = 5;</code>
+   *
    * @return The serviceAccountKeyName.
    */
   @java.lang.Override
@@ -324,14 +358,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       serviceAccountKeyName_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The name of the service account key used to create or exchange
    * credentials for authenticating the service account making the request.
@@ -340,16 +375,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string service_account_key_name = 5;</code>
+   *
    * @return The bytes for serviceAccountKeyName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getServiceAccountKeyNameBytes() {
+  public com.google.protobuf.ByteString getServiceAccountKeyNameBytes() {
     java.lang.Object ref = serviceAccountKeyName_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       serviceAccountKeyName_ = b;
       return b;
     } else {
@@ -358,8 +392,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SERVICE_ACCOUNT_DELEGATION_INFO_FIELD_NUMBER = 6;
-  private java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo> serviceAccountDelegationInfo_;
+  private java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo>
+      serviceAccountDelegationInfo_;
   /**
+   *
+   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -368,13 +405,18 @@ private static final long serialVersionUID = 0L;
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+   * <code>
+   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+   * </code>
    */
   @java.lang.Override
-  public java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo> getServiceAccountDelegationInfoList() {
+  public java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo>
+      getServiceAccountDelegationInfoList() {
     return serviceAccountDelegationInfo_;
   }
   /**
+   *
+   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -383,14 +425,18 @@ private static final long serialVersionUID = 0L;
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+   * <code>
+   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+   * </code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder> 
+  public java.util.List<? extends com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder>
       getServiceAccountDelegationInfoOrBuilderList() {
     return serviceAccountDelegationInfo_;
   }
   /**
+   *
+   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -399,13 +445,17 @@ private static final long serialVersionUID = 0L;
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+   * <code>
+   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+   * </code>
    */
   @java.lang.Override
   public int getServiceAccountDelegationInfoCount() {
     return serviceAccountDelegationInfo_.size();
   }
   /**
+   *
+   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -414,13 +464,18 @@ private static final long serialVersionUID = 0L;
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+   * <code>
+   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+   * </code>
    */
   @java.lang.Override
-  public com.google.cloud.audit.ServiceAccountDelegationInfo getServiceAccountDelegationInfo(int index) {
+  public com.google.cloud.audit.ServiceAccountDelegationInfo getServiceAccountDelegationInfo(
+      int index) {
     return serviceAccountDelegationInfo_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * Identity delegation history of an authenticated service account that makes
    * the request. It contains information on the real authorities that try to
@@ -429,23 +484,28 @@ private static final long serialVersionUID = 0L;
    * ordering of the identity delegation events.
    * </pre>
    *
-   * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+   * <code>
+   * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+   * </code>
    */
   @java.lang.Override
-  public com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder getServiceAccountDelegationInfoOrBuilder(
-      int index) {
+  public com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder
+      getServiceAccountDelegationInfoOrBuilder(int index) {
     return serviceAccountDelegationInfo_.get(index);
   }
 
   public static final int PRINCIPAL_SUBJECT_FIELD_NUMBER = 8;
   private volatile java.lang.Object principalSubject_;
   /**
+   *
+   *
    * <pre>
    * String representation of identity of requesting party.
    * Populated for both first and third party identities.
    * </pre>
    *
    * <code>string principal_subject = 8;</code>
+   *
    * @return The principalSubject.
    */
   @java.lang.Override
@@ -454,30 +514,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       principalSubject_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * String representation of identity of requesting party.
    * Populated for both first and third party identities.
    * </pre>
    *
    * <code>string principal_subject = 8;</code>
+   *
    * @return The bytes for principalSubject.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getPrincipalSubjectBytes() {
+  public com.google.protobuf.ByteString getPrincipalSubjectBytes() {
     java.lang.Object ref = principalSubject_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       principalSubject_ = b;
       return b;
     } else {
@@ -486,6 +546,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -497,8 +558,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getPrincipalEmailBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, principalEmail_);
     }
@@ -533,15 +593,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, authoritySelector_);
     }
     if (thirdPartyPrincipal_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getThirdPartyPrincipal());
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getThirdPartyPrincipal());
     }
     if (!getServiceAccountKeyNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, serviceAccountKeyName_);
     }
     for (int i = 0; i < serviceAccountDelegationInfo_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, serviceAccountDelegationInfo_.get(i));
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(
+              6, serviceAccountDelegationInfo_.get(i));
     }
     if (!getPrincipalSubjectBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, principalSubject_);
@@ -554,28 +614,24 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.cloud.audit.AuthenticationInfo)) {
       return super.equals(obj);
     }
-    com.google.cloud.audit.AuthenticationInfo other = (com.google.cloud.audit.AuthenticationInfo) obj;
+    com.google.cloud.audit.AuthenticationInfo other =
+        (com.google.cloud.audit.AuthenticationInfo) obj;
 
-    if (!getPrincipalEmail()
-        .equals(other.getPrincipalEmail())) return false;
-    if (!getAuthoritySelector()
-        .equals(other.getAuthoritySelector())) return false;
+    if (!getPrincipalEmail().equals(other.getPrincipalEmail())) return false;
+    if (!getAuthoritySelector().equals(other.getAuthoritySelector())) return false;
     if (hasThirdPartyPrincipal() != other.hasThirdPartyPrincipal()) return false;
     if (hasThirdPartyPrincipal()) {
-      if (!getThirdPartyPrincipal()
-          .equals(other.getThirdPartyPrincipal())) return false;
+      if (!getThirdPartyPrincipal().equals(other.getThirdPartyPrincipal())) return false;
     }
-    if (!getServiceAccountKeyName()
-        .equals(other.getServiceAccountKeyName())) return false;
-    if (!getServiceAccountDelegationInfoList()
-        .equals(other.getServiceAccountDelegationInfoList())) return false;
-    if (!getPrincipalSubject()
-        .equals(other.getPrincipalSubject())) return false;
+    if (!getServiceAccountKeyName().equals(other.getServiceAccountKeyName())) return false;
+    if (!getServiceAccountDelegationInfoList().equals(other.getServiceAccountDelegationInfoList()))
+      return false;
+    if (!getPrincipalSubject().equals(other.getPrincipalSubject())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -608,118 +664,127 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.cloud.audit.AuthenticationInfo parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.cloud.audit.AuthenticationInfo parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.cloud.audit.AuthenticationInfo parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.cloud.audit.AuthenticationInfo parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.cloud.audit.AuthenticationInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.cloud.audit.AuthenticationInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.cloud.audit.AuthenticationInfo parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.cloud.audit.AuthenticationInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.cloud.audit.AuthenticationInfo parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.cloud.audit.AuthenticationInfo parseDelimitedFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
-  }
+
   public static com.google.cloud.audit.AuthenticationInfo parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      java.io.InputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
+  public static com.google.cloud.audit.AuthenticationInfo parseDelimitedFrom(
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
+  }
+
   public static com.google.cloud.audit.AuthenticationInfo parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.cloud.audit.AuthenticationInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.cloud.audit.AuthenticationInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Authentication information for the operation.
    * </pre>
    *
    * Protobuf type {@code google.cloud.audit.AuthenticationInfo}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.cloud.audit.AuthenticationInfo)
       com.google.cloud.audit.AuthenticationInfoOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuthenticationInfo_descriptor;
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.cloud.audit.AuditLogProto
+          .internal_static_google_cloud_audit_AuthenticationInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuthenticationInfo_fieldAccessorTable
+      return com.google.cloud.audit.AuditLogProto
+          .internal_static_google_cloud_audit_AuthenticationInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.cloud.audit.AuthenticationInfo.class, com.google.cloud.audit.AuthenticationInfo.Builder.class);
+              com.google.cloud.audit.AuthenticationInfo.class,
+              com.google.cloud.audit.AuthenticationInfo.Builder.class);
     }
 
     // Construct using com.google.cloud.audit.AuthenticationInfo.newBuilder()
@@ -727,17 +792,17 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getServiceAccountDelegationInfoFieldBuilder();
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -765,9 +830,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-      return com.google.cloud.audit.AuditLogProto.internal_static_google_cloud_audit_AuthenticationInfo_descriptor;
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return com.google.cloud.audit.AuditLogProto
+          .internal_static_google_cloud_audit_AuthenticationInfo_descriptor;
     }
 
     @java.lang.Override
@@ -786,7 +851,8 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.cloud.audit.AuthenticationInfo buildPartial() {
-      com.google.cloud.audit.AuthenticationInfo result = new com.google.cloud.audit.AuthenticationInfo(this);
+      com.google.cloud.audit.AuthenticationInfo result =
+          new com.google.cloud.audit.AuthenticationInfo(this);
       int from_bitField0_ = bitField0_;
       result.principalEmail_ = principalEmail_;
       result.authoritySelector_ = authoritySelector_;
@@ -798,7 +864,8 @@ private static final long serialVersionUID = 0L;
       result.serviceAccountKeyName_ = serviceAccountKeyName_;
       if (serviceAccountDelegationInfoBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
-          serviceAccountDelegationInfo_ = java.util.Collections.unmodifiableList(serviceAccountDelegationInfo_);
+          serviceAccountDelegationInfo_ =
+              java.util.Collections.unmodifiableList(serviceAccountDelegationInfo_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.serviceAccountDelegationInfo_ = serviceAccountDelegationInfo_;
@@ -814,38 +881,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.cloud.audit.AuthenticationInfo) {
-        return mergeFrom((com.google.cloud.audit.AuthenticationInfo)other);
+        return mergeFrom((com.google.cloud.audit.AuthenticationInfo) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -887,11 +955,13 @@ private static final long serialVersionUID = 0L;
             serviceAccountDelegationInfoBuilder_ = null;
             serviceAccountDelegationInfo_ = other.serviceAccountDelegationInfo_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            serviceAccountDelegationInfoBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getServiceAccountDelegationInfoFieldBuilder() : null;
+            serviceAccountDelegationInfoBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getServiceAccountDelegationInfoFieldBuilder()
+                    : null;
           } else {
-            serviceAccountDelegationInfoBuilder_.addAllMessages(other.serviceAccountDelegationInfo_);
+            serviceAccountDelegationInfoBuilder_.addAllMessages(
+                other.serviceAccountDelegationInfo_);
           }
         }
       }
@@ -927,10 +997,13 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.lang.Object principalEmail_ = "";
     /**
+     *
+     *
      * <pre>
      * The email address of the authenticated user (or service account on behalf
      * of third party principal) making the request. For third party identity
@@ -941,13 +1014,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal_email = 1;</code>
+     *
      * @return The principalEmail.
      */
     public java.lang.String getPrincipalEmail() {
       java.lang.Object ref = principalEmail_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         principalEmail_ = s;
         return s;
@@ -956,6 +1029,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The email address of the authenticated user (or service account on behalf
      * of third party principal) making the request. For third party identity
@@ -966,15 +1041,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal_email = 1;</code>
+     *
      * @return The bytes for principalEmail.
      */
-    public com.google.protobuf.ByteString
-        getPrincipalEmailBytes() {
+    public com.google.protobuf.ByteString getPrincipalEmailBytes() {
       java.lang.Object ref = principalEmail_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         principalEmail_ = b;
         return b;
       } else {
@@ -982,6 +1056,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The email address of the authenticated user (or service account on behalf
      * of third party principal) making the request. For third party identity
@@ -992,20 +1068,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal_email = 1;</code>
+     *
      * @param value The principalEmail to set.
      * @return This builder for chaining.
      */
-    public Builder setPrincipalEmail(
-        java.lang.String value) {
+    public Builder setPrincipalEmail(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       principalEmail_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The email address of the authenticated user (or service account on behalf
      * of third party principal) making the request. For third party identity
@@ -1016,15 +1094,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal_email = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearPrincipalEmail() {
-      
+
       principalEmail_ = getDefaultInstance().getPrincipalEmail();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The email address of the authenticated user (or service account on behalf
      * of third party principal) making the request. For third party identity
@@ -1035,16 +1116,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string principal_email = 1;</code>
+     *
      * @param value The bytes for principalEmail to set.
      * @return This builder for chaining.
      */
-    public Builder setPrincipalEmailBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setPrincipalEmailBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       principalEmail_ = value;
       onChanged();
       return this;
@@ -1052,19 +1133,21 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object authoritySelector_ = "";
     /**
+     *
+     *
      * <pre>
      * The authority selector specified by the requestor, if any.
      * It is not guaranteed that the principal was allowed to use this authority.
      * </pre>
      *
      * <code>string authority_selector = 2;</code>
+     *
      * @return The authoritySelector.
      */
     public java.lang.String getAuthoritySelector() {
       java.lang.Object ref = authoritySelector_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         authoritySelector_ = s;
         return s;
@@ -1073,21 +1156,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The authority selector specified by the requestor, if any.
      * It is not guaranteed that the principal was allowed to use this authority.
      * </pre>
      *
      * <code>string authority_selector = 2;</code>
+     *
      * @return The bytes for authoritySelector.
      */
-    public com.google.protobuf.ByteString
-        getAuthoritySelectorBytes() {
+    public com.google.protobuf.ByteString getAuthoritySelectorBytes() {
       java.lang.Object ref = authoritySelector_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         authoritySelector_ = b;
         return b;
       } else {
@@ -1095,57 +1179,64 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The authority selector specified by the requestor, if any.
      * It is not guaranteed that the principal was allowed to use this authority.
      * </pre>
      *
      * <code>string authority_selector = 2;</code>
+     *
      * @param value The authoritySelector to set.
      * @return This builder for chaining.
      */
-    public Builder setAuthoritySelector(
-        java.lang.String value) {
+    public Builder setAuthoritySelector(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       authoritySelector_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The authority selector specified by the requestor, if any.
      * It is not guaranteed that the principal was allowed to use this authority.
      * </pre>
      *
      * <code>string authority_selector = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearAuthoritySelector() {
-      
+
       authoritySelector_ = getDefaultInstance().getAuthoritySelector();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The authority selector specified by the requestor, if any.
      * It is not guaranteed that the principal was allowed to use this authority.
      * </pre>
      *
      * <code>string authority_selector = 2;</code>
+     *
      * @param value The bytes for authoritySelector to set.
      * @return This builder for chaining.
      */
-    public Builder setAuthoritySelectorBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setAuthoritySelectorBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       authoritySelector_ = value;
       onChanged();
       return this;
@@ -1153,8 +1244,13 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Struct thirdPartyPrincipal_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> thirdPartyPrincipalBuilder_;
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
+        thirdPartyPrincipalBuilder_;
     /**
+     *
+     *
      * <pre>
      * The third party identification (if any) of the authenticated user making
      * the request.
@@ -1163,12 +1259,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+     *
      * @return Whether the thirdPartyPrincipal field is set.
      */
     public boolean hasThirdPartyPrincipal() {
       return thirdPartyPrincipalBuilder_ != null || thirdPartyPrincipal_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The third party identification (if any) of the authenticated user making
      * the request.
@@ -1177,16 +1276,21 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+     *
      * @return The thirdPartyPrincipal.
      */
     public com.google.protobuf.Struct getThirdPartyPrincipal() {
       if (thirdPartyPrincipalBuilder_ == null) {
-        return thirdPartyPrincipal_ == null ? com.google.protobuf.Struct.getDefaultInstance() : thirdPartyPrincipal_;
+        return thirdPartyPrincipal_ == null
+            ? com.google.protobuf.Struct.getDefaultInstance()
+            : thirdPartyPrincipal_;
       } else {
         return thirdPartyPrincipalBuilder_.getMessage();
       }
     }
     /**
+     *
+     *
      * <pre>
      * The third party identification (if any) of the authenticated user making
      * the request.
@@ -1210,6 +1314,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The third party identification (if any) of the authenticated user making
      * the request.
@@ -1219,8 +1325,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Struct third_party_principal = 4;</code>
      */
-    public Builder setThirdPartyPrincipal(
-        com.google.protobuf.Struct.Builder builderForValue) {
+    public Builder setThirdPartyPrincipal(com.google.protobuf.Struct.Builder builderForValue) {
       if (thirdPartyPrincipalBuilder_ == null) {
         thirdPartyPrincipal_ = builderForValue.build();
         onChanged();
@@ -1231,6 +1336,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The third party identification (if any) of the authenticated user making
      * the request.
@@ -1244,7 +1351,9 @@ private static final long serialVersionUID = 0L;
       if (thirdPartyPrincipalBuilder_ == null) {
         if (thirdPartyPrincipal_ != null) {
           thirdPartyPrincipal_ =
-            com.google.protobuf.Struct.newBuilder(thirdPartyPrincipal_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Struct.newBuilder(thirdPartyPrincipal_)
+                  .mergeFrom(value)
+                  .buildPartial();
         } else {
           thirdPartyPrincipal_ = value;
         }
@@ -1256,6 +1365,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The third party identification (if any) of the authenticated user making
      * the request.
@@ -1277,6 +1388,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The third party identification (if any) of the authenticated user making
      * the request.
@@ -1287,11 +1400,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct third_party_principal = 4;</code>
      */
     public com.google.protobuf.Struct.Builder getThirdPartyPrincipalBuilder() {
-      
+
       onChanged();
       return getThirdPartyPrincipalFieldBuilder().getBuilder();
     }
     /**
+     *
+     *
      * <pre>
      * The third party identification (if any) of the authenticated user making
      * the request.
@@ -1305,11 +1420,14 @@ private static final long serialVersionUID = 0L;
       if (thirdPartyPrincipalBuilder_ != null) {
         return thirdPartyPrincipalBuilder_.getMessageOrBuilder();
       } else {
-        return thirdPartyPrincipal_ == null ?
-            com.google.protobuf.Struct.getDefaultInstance() : thirdPartyPrincipal_;
+        return thirdPartyPrincipal_ == null
+            ? com.google.protobuf.Struct.getDefaultInstance()
+            : thirdPartyPrincipal_;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The third party identification (if any) of the authenticated user making
      * the request.
@@ -1320,14 +1438,17 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Struct third_party_principal = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+            com.google.protobuf.Struct,
+            com.google.protobuf.Struct.Builder,
+            com.google.protobuf.StructOrBuilder>
         getThirdPartyPrincipalFieldBuilder() {
       if (thirdPartyPrincipalBuilder_ == null) {
-        thirdPartyPrincipalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                getThirdPartyPrincipal(),
-                getParentForChildren(),
-                isClean());
+        thirdPartyPrincipalBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Struct,
+                com.google.protobuf.Struct.Builder,
+                com.google.protobuf.StructOrBuilder>(
+                getThirdPartyPrincipal(), getParentForChildren(), isClean());
         thirdPartyPrincipal_ = null;
       }
       return thirdPartyPrincipalBuilder_;
@@ -1335,6 +1456,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object serviceAccountKeyName_ = "";
     /**
+     *
+     *
      * <pre>
      * The name of the service account key used to create or exchange
      * credentials for authenticating the service account making the request.
@@ -1343,13 +1466,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_account_key_name = 5;</code>
+     *
      * @return The serviceAccountKeyName.
      */
     public java.lang.String getServiceAccountKeyName() {
       java.lang.Object ref = serviceAccountKeyName_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         serviceAccountKeyName_ = s;
         return s;
@@ -1358,6 +1481,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the service account key used to create or exchange
      * credentials for authenticating the service account making the request.
@@ -1366,15 +1491,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_account_key_name = 5;</code>
+     *
      * @return The bytes for serviceAccountKeyName.
      */
-    public com.google.protobuf.ByteString
-        getServiceAccountKeyNameBytes() {
+    public com.google.protobuf.ByteString getServiceAccountKeyNameBytes() {
       java.lang.Object ref = serviceAccountKeyName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         serviceAccountKeyName_ = b;
         return b;
       } else {
@@ -1382,6 +1506,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the service account key used to create or exchange
      * credentials for authenticating the service account making the request.
@@ -1390,20 +1516,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_account_key_name = 5;</code>
+     *
      * @param value The serviceAccountKeyName to set.
      * @return This builder for chaining.
      */
-    public Builder setServiceAccountKeyName(
-        java.lang.String value) {
+    public Builder setServiceAccountKeyName(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       serviceAccountKeyName_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the service account key used to create or exchange
      * credentials for authenticating the service account making the request.
@@ -1412,15 +1540,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_account_key_name = 5;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearServiceAccountKeyName() {
-      
+
       serviceAccountKeyName_ = getDefaultInstance().getServiceAccountKeyName();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the service account key used to create or exchange
      * credentials for authenticating the service account making the request.
@@ -1429,34 +1560,42 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string service_account_key_name = 5;</code>
+     *
      * @param value The bytes for serviceAccountKeyName to set.
      * @return This builder for chaining.
      */
-    public Builder setServiceAccountKeyNameBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setServiceAccountKeyNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       serviceAccountKeyName_ = value;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo> serviceAccountDelegationInfo_ =
-      java.util.Collections.emptyList();
+    private java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo>
+        serviceAccountDelegationInfo_ = java.util.Collections.emptyList();
+
     private void ensureServiceAccountDelegationInfoIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        serviceAccountDelegationInfo_ = new java.util.ArrayList<com.google.cloud.audit.ServiceAccountDelegationInfo>(serviceAccountDelegationInfo_);
+        serviceAccountDelegationInfo_ =
+            new java.util.ArrayList<com.google.cloud.audit.ServiceAccountDelegationInfo>(
+                serviceAccountDelegationInfo_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.cloud.audit.ServiceAccountDelegationInfo, com.google.cloud.audit.ServiceAccountDelegationInfo.Builder, com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder> serviceAccountDelegationInfoBuilder_;
+            com.google.cloud.audit.ServiceAccountDelegationInfo,
+            com.google.cloud.audit.ServiceAccountDelegationInfo.Builder,
+            com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder>
+        serviceAccountDelegationInfoBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1465,9 +1604,12 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
-    public java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo> getServiceAccountDelegationInfoList() {
+    public java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo>
+        getServiceAccountDelegationInfoList() {
       if (serviceAccountDelegationInfoBuilder_ == null) {
         return java.util.Collections.unmodifiableList(serviceAccountDelegationInfo_);
       } else {
@@ -1475,6 +1617,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1483,7 +1627,9 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
     public int getServiceAccountDelegationInfoCount() {
       if (serviceAccountDelegationInfoBuilder_ == null) {
@@ -1493,6 +1639,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1501,9 +1649,12 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
-    public com.google.cloud.audit.ServiceAccountDelegationInfo getServiceAccountDelegationInfo(int index) {
+    public com.google.cloud.audit.ServiceAccountDelegationInfo getServiceAccountDelegationInfo(
+        int index) {
       if (serviceAccountDelegationInfoBuilder_ == null) {
         return serviceAccountDelegationInfo_.get(index);
       } else {
@@ -1511,6 +1662,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1519,7 +1672,9 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
     public Builder setServiceAccountDelegationInfo(
         int index, com.google.cloud.audit.ServiceAccountDelegationInfo value) {
@@ -1536,6 +1691,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1544,7 +1701,9 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
     public Builder setServiceAccountDelegationInfo(
         int index, com.google.cloud.audit.ServiceAccountDelegationInfo.Builder builderForValue) {
@@ -1558,6 +1717,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1566,9 +1727,12 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
-    public Builder addServiceAccountDelegationInfo(com.google.cloud.audit.ServiceAccountDelegationInfo value) {
+    public Builder addServiceAccountDelegationInfo(
+        com.google.cloud.audit.ServiceAccountDelegationInfo value) {
       if (serviceAccountDelegationInfoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1582,6 +1746,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1590,7 +1756,9 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
     public Builder addServiceAccountDelegationInfo(
         int index, com.google.cloud.audit.ServiceAccountDelegationInfo value) {
@@ -1607,6 +1775,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1615,7 +1785,9 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
     public Builder addServiceAccountDelegationInfo(
         com.google.cloud.audit.ServiceAccountDelegationInfo.Builder builderForValue) {
@@ -1629,6 +1801,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1637,7 +1811,9 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
     public Builder addServiceAccountDelegationInfo(
         int index, com.google.cloud.audit.ServiceAccountDelegationInfo.Builder builderForValue) {
@@ -1651,6 +1827,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1659,7 +1837,9 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
     public Builder addAllServiceAccountDelegationInfo(
         java.lang.Iterable<? extends com.google.cloud.audit.ServiceAccountDelegationInfo> values) {
@@ -1674,6 +1854,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1682,7 +1864,9 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
     public Builder clearServiceAccountDelegationInfo() {
       if (serviceAccountDelegationInfoBuilder_ == null) {
@@ -1695,6 +1879,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1703,7 +1889,9 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
     public Builder removeServiceAccountDelegationInfo(int index) {
       if (serviceAccountDelegationInfoBuilder_ == null) {
@@ -1716,6 +1904,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1724,13 +1914,17 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
-    public com.google.cloud.audit.ServiceAccountDelegationInfo.Builder getServiceAccountDelegationInfoBuilder(
-        int index) {
+    public com.google.cloud.audit.ServiceAccountDelegationInfo.Builder
+        getServiceAccountDelegationInfoBuilder(int index) {
       return getServiceAccountDelegationInfoFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1739,16 +1933,21 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
-    public com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder getServiceAccountDelegationInfoOrBuilder(
-        int index) {
+    public com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder
+        getServiceAccountDelegationInfoOrBuilder(int index) {
       if (serviceAccountDelegationInfoBuilder_ == null) {
-        return serviceAccountDelegationInfo_.get(index);  } else {
+        return serviceAccountDelegationInfo_.get(index);
+      } else {
         return serviceAccountDelegationInfoBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1757,10 +1956,12 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
-    public java.util.List<? extends com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder> 
-         getServiceAccountDelegationInfoOrBuilderList() {
+    public java.util.List<? extends com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder>
+        getServiceAccountDelegationInfoOrBuilderList() {
       if (serviceAccountDelegationInfoBuilder_ != null) {
         return serviceAccountDelegationInfoBuilder_.getMessageOrBuilderList();
       } else {
@@ -1768,6 +1969,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1776,13 +1979,18 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
-    public com.google.cloud.audit.ServiceAccountDelegationInfo.Builder addServiceAccountDelegationInfoBuilder() {
-      return getServiceAccountDelegationInfoFieldBuilder().addBuilder(
-          com.google.cloud.audit.ServiceAccountDelegationInfo.getDefaultInstance());
+    public com.google.cloud.audit.ServiceAccountDelegationInfo.Builder
+        addServiceAccountDelegationInfoBuilder() {
+      return getServiceAccountDelegationInfoFieldBuilder()
+          .addBuilder(com.google.cloud.audit.ServiceAccountDelegationInfo.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1791,14 +1999,19 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
-    public com.google.cloud.audit.ServiceAccountDelegationInfo.Builder addServiceAccountDelegationInfoBuilder(
-        int index) {
-      return getServiceAccountDelegationInfoFieldBuilder().addBuilder(
-          index, com.google.cloud.audit.ServiceAccountDelegationInfo.getDefaultInstance());
+    public com.google.cloud.audit.ServiceAccountDelegationInfo.Builder
+        addServiceAccountDelegationInfoBuilder(int index) {
+      return getServiceAccountDelegationInfoFieldBuilder()
+          .addBuilder(
+              index, com.google.cloud.audit.ServiceAccountDelegationInfo.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Identity delegation history of an authenticated service account that makes
      * the request. It contains information on the real authorities that try to
@@ -1807,18 +2020,26 @@ private static final long serialVersionUID = 0L;
      * ordering of the identity delegation events.
      * </pre>
      *
-     * <code>repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     * <code>
+     * repeated .google.cloud.audit.ServiceAccountDelegationInfo service_account_delegation_info = 6;
+     * </code>
      */
-    public java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo.Builder> 
-         getServiceAccountDelegationInfoBuilderList() {
+    public java.util.List<com.google.cloud.audit.ServiceAccountDelegationInfo.Builder>
+        getServiceAccountDelegationInfoBuilderList() {
       return getServiceAccountDelegationInfoFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.cloud.audit.ServiceAccountDelegationInfo, com.google.cloud.audit.ServiceAccountDelegationInfo.Builder, com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder> 
+            com.google.cloud.audit.ServiceAccountDelegationInfo,
+            com.google.cloud.audit.ServiceAccountDelegationInfo.Builder,
+            com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder>
         getServiceAccountDelegationInfoFieldBuilder() {
       if (serviceAccountDelegationInfoBuilder_ == null) {
-        serviceAccountDelegationInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.cloud.audit.ServiceAccountDelegationInfo, com.google.cloud.audit.ServiceAccountDelegationInfo.Builder, com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder>(
+        serviceAccountDelegationInfoBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.cloud.audit.ServiceAccountDelegationInfo,
+                com.google.cloud.audit.ServiceAccountDelegationInfo.Builder,
+                com.google.cloud.audit.ServiceAccountDelegationInfoOrBuilder>(
                 serviceAccountDelegationInfo_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -1830,19 +2051,21 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object principalSubject_ = "";
     /**
+     *
+     *
      * <pre>
      * String representation of identity of requesting party.
      * Populated for both first and third party identities.
      * </pre>
      *
      * <code>string principal_subject = 8;</code>
+     *
      * @return The principalSubject.
      */
     public java.lang.String getPrincipalSubject() {
       java.lang.Object ref = principalSubject_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         principalSubject_ = s;
         return s;
@@ -1851,21 +2074,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * String representation of identity of requesting party.
      * Populated for both first and third party identities.
      * </pre>
      *
      * <code>string principal_subject = 8;</code>
+     *
      * @return The bytes for principalSubject.
      */
-    public com.google.protobuf.ByteString
-        getPrincipalSubjectBytes() {
+    public com.google.protobuf.ByteString getPrincipalSubjectBytes() {
       java.lang.Object ref = principalSubject_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         principalSubject_ = b;
         return b;
       } else {
@@ -1873,64 +2097,71 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * String representation of identity of requesting party.
      * Populated for both first and third party identities.
      * </pre>
      *
      * <code>string principal_subject = 8;</code>
+     *
      * @param value The principalSubject to set.
      * @return This builder for chaining.
      */
-    public Builder setPrincipalSubject(
-        java.lang.String value) {
+    public Builder setPrincipalSubject(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       principalSubject_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * String representation of identity of requesting party.
      * Populated for both first and third party identities.
      * </pre>
      *
      * <code>string principal_subject = 8;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearPrincipalSubject() {
-      
+
       principalSubject_ = getDefaultInstance().getPrincipalSubject();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * String representation of identity of requesting party.
      * Populated for both first and third party identities.
      * </pre>
      *
      * <code>string principal_subject = 8;</code>
+     *
      * @param value The bytes for principalSubject to set.
      * @return This builder for chaining.
      */
-    public Builder setPrincipalSubjectBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setPrincipalSubjectBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       principalSubject_ = value;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1940,12 +2171,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.cloud.audit.AuthenticationInfo)
   }
 
   // @@protoc_insertion_point(class_scope:google.cloud.audit.AuthenticationInfo)
   private static final com.google.cloud.audit.AuthenticationInfo DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.cloud.audit.AuthenticationInfo();
   }
@@ -1954,16 +2185,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AuthenticationInfo>
-      PARSER = new com.google.protobuf.AbstractParser<AuthenticationInfo>() {
-    @java.lang.Override
-    public AuthenticationInfo parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AuthenticationInfo(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<AuthenticationInfo> PARSER =
+      new com.google.protobuf.AbstractParser<AuthenticationInfo>() {
+        @java.lang.Override
+        public AuthenticationInfo parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AuthenticationInfo(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<AuthenticationInfo> parser() {
     return PARSER;
@@ -1978,6 +2209,4 @@ private static final long serialVersionUID = 0L;
   public com.google.cloud.audit.AuthenticationInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

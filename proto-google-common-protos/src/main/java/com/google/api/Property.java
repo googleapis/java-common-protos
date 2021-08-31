@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * Defines project properties.
  * API services can define properties that can be assigned to consumer projects
@@ -32,15 +34,16 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Property}
  */
-public final class Property extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class Property extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.api.Property)
     PropertyOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use Property.newBuilder() to construct.
   private Property(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Property() {
     name_ = "";
     type_ = 0;
@@ -49,16 +52,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Property();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private Property(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -77,45 +79,47 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            name_ = s;
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-
-            type_ = rawValue;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+              name_ = s;
+              break;
             }
-            break;
-          }
+          case 16:
+            {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+          case 26:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.api.ConsumerProto.internal_static_google_api_Property_descriptor;
   }
 
@@ -128,15 +132,18 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
+   *
+   *
    * <pre>
    * Supported data type of the property values
    * </pre>
    *
    * Protobuf enum {@code google.api.Property.PropertyType}
    */
-  public enum PropertyType
-      implements com.google.protobuf.ProtocolMessageEnum {
+  public enum PropertyType implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     *
+     *
      * <pre>
      * The type is unspecified, and will result in an error.
      * </pre>
@@ -145,6 +152,8 @@ private static final long serialVersionUID = 0L;
      */
     UNSPECIFIED(0),
     /**
+     *
+     *
      * <pre>
      * The type is `int64`.
      * </pre>
@@ -153,6 +162,8 @@ private static final long serialVersionUID = 0L;
      */
     INT64(1),
     /**
+     *
+     *
      * <pre>
      * The type is `bool`.
      * </pre>
@@ -161,6 +172,8 @@ private static final long serialVersionUID = 0L;
      */
     BOOL(2),
     /**
+     *
+     *
      * <pre>
      * The type is `string`.
      * </pre>
@@ -169,6 +182,8 @@ private static final long serialVersionUID = 0L;
      */
     STRING(3),
     /**
+     *
+     *
      * <pre>
      * The type is 'double'.
      * </pre>
@@ -180,6 +195,8 @@ private static final long serialVersionUID = 0L;
     ;
 
     /**
+     *
+     *
      * <pre>
      * The type is unspecified, and will result in an error.
      * </pre>
@@ -188,6 +205,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int UNSPECIFIED_VALUE = 0;
     /**
+     *
+     *
      * <pre>
      * The type is `int64`.
      * </pre>
@@ -196,6 +215,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int INT64_VALUE = 1;
     /**
+     *
+     *
      * <pre>
      * The type is `bool`.
      * </pre>
@@ -204,6 +225,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int BOOL_VALUE = 2;
     /**
+     *
+     *
      * <pre>
      * The type is `string`.
      * </pre>
@@ -212,6 +235,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int STRING_VALUE = 3;
     /**
+     *
+     *
      * <pre>
      * The type is 'double'.
      * </pre>
@@ -219,7 +244,6 @@ private static final long serialVersionUID = 0L;
      * <code>DOUBLE = 4;</code>
      */
     public static final int DOUBLE_VALUE = 4;
-
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -245,51 +269,53 @@ private static final long serialVersionUID = 0L;
      */
     public static PropertyType forNumber(int value) {
       switch (value) {
-        case 0: return UNSPECIFIED;
-        case 1: return INT64;
-        case 2: return BOOL;
-        case 3: return STRING;
-        case 4: return DOUBLE;
-        default: return null;
+        case 0:
+          return UNSPECIFIED;
+        case 1:
+          return INT64;
+        case 2:
+          return BOOL;
+        case 3:
+          return STRING;
+        case 4:
+          return DOUBLE;
+        default:
+          return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<PropertyType>
-        internalGetValueMap() {
+    public static com.google.protobuf.Internal.EnumLiteMap<PropertyType> internalGetValueMap() {
       return internalValueMap;
     }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        PropertyType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PropertyType>() {
-            public PropertyType findValueByNumber(int number) {
-              return PropertyType.forNumber(number);
-            }
-          };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
+    private static final com.google.protobuf.Internal.EnumLiteMap<PropertyType> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<PropertyType>() {
+          public PropertyType findValueByNumber(int number) {
+            return PropertyType.forNumber(number);
+          }
+        };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
+
+    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
+
+    public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
       return com.google.api.Property.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final PropertyType[] VALUES = values();
 
-    public static PropertyType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+    public static PropertyType valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -309,11 +335,14 @@ private static final long serialVersionUID = 0L;
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
+   *
+   *
    * <pre>
    * The name of the property (a.k.a key).
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The name.
    */
   @java.lang.Override
@@ -322,29 +351,29 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       name_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The name of the property (a.k.a key).
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The bytes for name.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
+  public com.google.protobuf.ByteString getNameBytes() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       name_ = b;
       return b;
     } else {
@@ -355,38 +384,50 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 2;
   private int type_;
   /**
+   *
+   *
    * <pre>
    * The type of this property.
    * </pre>
    *
    * <code>.google.api.Property.PropertyType type = 2;</code>
+   *
    * @return The enum numeric value on the wire for type.
    */
-  @java.lang.Override public int getTypeValue() {
+  @java.lang.Override
+  public int getTypeValue() {
     return type_;
   }
   /**
+   *
+   *
    * <pre>
    * The type of this property.
    * </pre>
    *
    * <code>.google.api.Property.PropertyType type = 2;</code>
+   *
    * @return The type.
    */
-  @java.lang.Override public com.google.api.Property.PropertyType getType() {
+  @java.lang.Override
+  public com.google.api.Property.PropertyType getType() {
     @SuppressWarnings("deprecation")
-    com.google.api.Property.PropertyType result = com.google.api.Property.PropertyType.valueOf(type_);
+    com.google.api.Property.PropertyType result =
+        com.google.api.Property.PropertyType.valueOf(type_);
     return result == null ? com.google.api.Property.PropertyType.UNRECOGNIZED : result;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
   private volatile java.lang.Object description_;
   /**
+   *
+   *
    * <pre>
    * The description of the property
    * </pre>
    *
    * <code>string description = 3;</code>
+   *
    * @return The description.
    */
   @java.lang.Override
@@ -395,29 +436,29 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       description_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The description of the property
    * </pre>
    *
    * <code>string description = 3;</code>
+   *
    * @return The bytes for description.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDescriptionBytes() {
+  public com.google.protobuf.ByteString getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       description_ = b;
       return b;
     } else {
@@ -426,6 +467,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -437,8 +479,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
@@ -461,8 +502,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     if (type_ != com.google.api.Property.PropertyType.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, type_);
+      size += com.google.protobuf.CodedOutputStream.computeEnumSize(2, type_);
     }
     if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
@@ -475,18 +515,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.api.Property)) {
       return super.equals(obj);
     }
     com.google.api.Property other = (com.google.api.Property) obj;
 
-    if (!getName()
-        .equals(other.getName())) return false;
+    if (!getName().equals(other.getName())) return false;
     if (type_ != other.type_) return false;
-    if (!getDescription()
-        .equals(other.getDescription())) return false;
+    if (!getDescription().equals(other.getDescription())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -509,97 +547,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.api.Property parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.api.Property parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Property parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.api.Property parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.api.Property parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Property parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Property parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Property parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Property parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Property parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.Property parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.api.Property parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.api.Property parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.api.Property parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Property parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.api.Property prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Defines project properties.
    * API services can define properties that can be assigned to consumer projects
@@ -613,12 +657,11 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.Property}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.api.Property)
       com.google.api.PropertyOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.api.ConsumerProto.internal_static_google_api_Property_descriptor;
     }
 
@@ -635,16 +678,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -658,8 +700,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.api.ConsumerProto.internal_static_google_api_Property_descriptor;
     }
 
@@ -691,38 +732,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Property) {
-        return mergeFrom((com.google.api.Property)other);
+        return mergeFrom((com.google.api.Property) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -773,18 +815,20 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     *
+     *
      * <pre>
      * The name of the property (a.k.a key).
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
@@ -793,20 +837,21 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the property (a.k.a key).
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @return The bytes for name.
      */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
+    public com.google.protobuf.ByteString getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -814,54 +859,61 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The name of the property (a.k.a key).
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @param value The name to set.
      * @return This builder for chaining.
      */
-    public Builder setName(
-        java.lang.String value) {
+    public Builder setName(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       name_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the property (a.k.a key).
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
+
       name_ = getDefaultInstance().getName();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The name of the property (a.k.a key).
      * </pre>
      *
      * <code>string name = 1;</code>
+     *
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       name_ = value;
       onChanged();
       return this;
@@ -869,51 +921,65 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
+     *
+     *
      * <pre>
      * The type of this property.
      * </pre>
      *
      * <code>.google.api.Property.PropertyType type = 2;</code>
+     *
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
+     *
+     *
      * <pre>
      * The type of this property.
      * </pre>
      *
      * <code>.google.api.Property.PropertyType type = 2;</code>
+     *
      * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
+
       type_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The type of this property.
      * </pre>
      *
      * <code>.google.api.Property.PropertyType type = 2;</code>
+     *
      * @return The type.
      */
     @java.lang.Override
     public com.google.api.Property.PropertyType getType() {
       @SuppressWarnings("deprecation")
-      com.google.api.Property.PropertyType result = com.google.api.Property.PropertyType.valueOf(type_);
+      com.google.api.Property.PropertyType result =
+          com.google.api.Property.PropertyType.valueOf(type_);
       return result == null ? com.google.api.Property.PropertyType.UNRECOGNIZED : result;
     }
     /**
+     *
+     *
      * <pre>
      * The type of this property.
      * </pre>
      *
      * <code>.google.api.Property.PropertyType type = 2;</code>
+     *
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -921,21 +987,24 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+
       type_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The type of this property.
      * </pre>
      *
      * <code>.google.api.Property.PropertyType type = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+
       type_ = 0;
       onChanged();
       return this;
@@ -943,18 +1012,20 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     *
+     *
      * <pre>
      * The description of the property
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @return The description.
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
         return s;
@@ -963,20 +1034,21 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The description of the property
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @return The bytes for description.
      */
-    public com.google.protobuf.ByteString
-        getDescriptionBytes() {
+    public com.google.protobuf.ByteString getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         description_ = b;
         return b;
       } else {
@@ -984,61 +1056,68 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The description of the property
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @param value The description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescription(
-        java.lang.String value) {
+    public Builder setDescription(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       description_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The description of the property
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
+
       description_ = getDefaultInstance().getDescription();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The description of the property
      * </pre>
      *
      * <code>string description = 3;</code>
+     *
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
-    public Builder setDescriptionBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setDescriptionBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       description_ = value;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1048,12 +1127,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.api.Property)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Property)
   private static final com.google.api.Property DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.api.Property();
   }
@@ -1062,16 +1141,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Property>
-      PARSER = new com.google.protobuf.AbstractParser<Property>() {
-    @java.lang.Override
-    public Property parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Property(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<Property> PARSER =
+      new com.google.protobuf.AbstractParser<Property>() {
+        @java.lang.Override
+        public Property parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Property(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<Property> parser() {
     return PARSER;
@@ -1086,6 +1165,4 @@ private static final long serialVersionUID = 0L;
   public com.google.api.Property getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

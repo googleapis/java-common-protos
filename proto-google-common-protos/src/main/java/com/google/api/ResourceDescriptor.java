@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * A simple descriptor of a resource type.
  * ResourceDescriptor annotates a resource message (either by means of a
@@ -117,15 +119,16 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.ResourceDescriptor}
  */
-public final class ResourceDescriptor extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class ResourceDescriptor extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.api.ResourceDescriptor)
     ResourceDescriptorOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use ResourceDescriptor.newBuilder() to construct.
   private ResourceDescriptor(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private ResourceDescriptor() {
     type_ = "";
     pattern_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -138,16 +141,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new ResourceDescriptor();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private ResourceDescriptor(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -167,82 +169,89 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 10:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
 
-            type_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              pattern_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
+              type_ = s;
+              break;
             }
-            pattern_.add(s);
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            nameField_ = s;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            history_ = rawValue;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            plural_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            singular_ = s;
-            break;
-          }
-          case 80: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              style_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000002;
+          case 18:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                pattern_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pattern_.add(s);
+              break;
             }
-            style_.add(rawValue);
-            break;
-          }
-          case 82: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
+          case 26:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nameField_ = s;
+              break;
+            }
+          case 32:
+            {
+              int rawValue = input.readEnum();
+
+              history_ = rawValue;
+              break;
+            }
+          case 42:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              plural_ = s;
+              break;
+            }
+          case 50:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              singular_ = s;
+              break;
+            }
+          case 80:
+            {
               int rawValue = input.readEnum();
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 style_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000002;
               }
               style_.add(rawValue);
+              break;
             }
-            input.popLimit(oldLimit);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          case 82:
+            {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while (input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  style_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                style_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
             }
-            break;
-          }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         pattern_ = pattern_.getUnmodifiableView();
@@ -254,20 +263,24 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.api.ResourceProto.internal_static_google_api_ResourceDescriptor_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.api.ResourceProto.internal_static_google_api_ResourceDescriptor_fieldAccessorTable
+    return com.google.api.ResourceProto
+        .internal_static_google_api_ResourceDescriptor_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.api.ResourceDescriptor.class, com.google.api.ResourceDescriptor.Builder.class);
+            com.google.api.ResourceDescriptor.class,
+            com.google.api.ResourceDescriptor.Builder.class);
   }
 
   /**
+   *
+   *
    * <pre>
    * A description of the historical or future-looking state of the
    * resource pattern.
@@ -275,9 +288,10 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf enum {@code google.api.ResourceDescriptor.History}
    */
-  public enum History
-      implements com.google.protobuf.ProtocolMessageEnum {
+  public enum History implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     *
+     *
      * <pre>
      * The "unset" value.
      * </pre>
@@ -286,6 +300,8 @@ private static final long serialVersionUID = 0L;
      */
     HISTORY_UNSPECIFIED(0),
     /**
+     *
+     *
      * <pre>
      * The resource originally had one pattern and launched as such, and
      * additional patterns were added later.
@@ -295,6 +311,8 @@ private static final long serialVersionUID = 0L;
      */
     ORIGINALLY_SINGLE_PATTERN(1),
     /**
+     *
+     *
      * <pre>
      * The resource has one pattern, but the API owner expects to add more
      * later. (This is the inverse of ORIGINALLY_SINGLE_PATTERN, and prevents
@@ -308,6 +326,8 @@ private static final long serialVersionUID = 0L;
     ;
 
     /**
+     *
+     *
      * <pre>
      * The "unset" value.
      * </pre>
@@ -316,6 +336,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int HISTORY_UNSPECIFIED_VALUE = 0;
     /**
+     *
+     *
      * <pre>
      * The resource originally had one pattern and launched as such, and
      * additional patterns were added later.
@@ -325,6 +347,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int ORIGINALLY_SINGLE_PATTERN_VALUE = 1;
     /**
+     *
+     *
      * <pre>
      * The resource has one pattern, but the API owner expects to add more
      * later. (This is the inverse of ORIGINALLY_SINGLE_PATTERN, and prevents
@@ -334,7 +358,6 @@ private static final long serialVersionUID = 0L;
      * <code>FUTURE_MULTI_PATTERN = 2;</code>
      */
     public static final int FUTURE_MULTI_PATTERN_VALUE = 2;
-
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -360,49 +383,49 @@ private static final long serialVersionUID = 0L;
      */
     public static History forNumber(int value) {
       switch (value) {
-        case 0: return HISTORY_UNSPECIFIED;
-        case 1: return ORIGINALLY_SINGLE_PATTERN;
-        case 2: return FUTURE_MULTI_PATTERN;
-        default: return null;
+        case 0:
+          return HISTORY_UNSPECIFIED;
+        case 1:
+          return ORIGINALLY_SINGLE_PATTERN;
+        case 2:
+          return FUTURE_MULTI_PATTERN;
+        default:
+          return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<History>
-        internalGetValueMap() {
+    public static com.google.protobuf.Internal.EnumLiteMap<History> internalGetValueMap() {
       return internalValueMap;
     }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        History> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<History>() {
-            public History findValueByNumber(int number) {
-              return History.forNumber(number);
-            }
-          };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
+    private static final com.google.protobuf.Internal.EnumLiteMap<History> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<History>() {
+          public History findValueByNumber(int number) {
+            return History.forNumber(number);
+          }
+        };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
+
+    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
+
+    public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
       return com.google.api.ResourceDescriptor.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final History[] VALUES = values();
 
-    public static History valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+    public static History valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -420,15 +443,18 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
+   *
+   *
    * <pre>
    * A flag representing a specific style that a resource claims to conform to.
    * </pre>
    *
    * Protobuf enum {@code google.api.ResourceDescriptor.Style}
    */
-  public enum Style
-      implements com.google.protobuf.ProtocolMessageEnum {
+  public enum Style implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     *
+     *
      * <pre>
      * The unspecified value. Do not use.
      * </pre>
@@ -437,6 +463,8 @@ private static final long serialVersionUID = 0L;
      */
     STYLE_UNSPECIFIED(0),
     /**
+     *
+     *
      * <pre>
      * This resource is intended to be "declarative-friendly".
      * Declarative-friendly resources must be more strictly consistent, and
@@ -453,6 +481,8 @@ private static final long serialVersionUID = 0L;
     ;
 
     /**
+     *
+     *
      * <pre>
      * The unspecified value. Do not use.
      * </pre>
@@ -461,6 +491,8 @@ private static final long serialVersionUID = 0L;
      */
     public static final int STYLE_UNSPECIFIED_VALUE = 0;
     /**
+     *
+     *
      * <pre>
      * This resource is intended to be "declarative-friendly".
      * Declarative-friendly resources must be more strictly consistent, and
@@ -473,7 +505,6 @@ private static final long serialVersionUID = 0L;
      * <code>DECLARATIVE_FRIENDLY = 1;</code>
      */
     public static final int DECLARATIVE_FRIENDLY_VALUE = 1;
-
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -499,48 +530,47 @@ private static final long serialVersionUID = 0L;
      */
     public static Style forNumber(int value) {
       switch (value) {
-        case 0: return STYLE_UNSPECIFIED;
-        case 1: return DECLARATIVE_FRIENDLY;
-        default: return null;
+        case 0:
+          return STYLE_UNSPECIFIED;
+        case 1:
+          return DECLARATIVE_FRIENDLY;
+        default:
+          return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<Style>
-        internalGetValueMap() {
+    public static com.google.protobuf.Internal.EnumLiteMap<Style> internalGetValueMap() {
       return internalValueMap;
     }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        Style> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<Style>() {
-            public Style findValueByNumber(int number) {
-              return Style.forNumber(number);
-            }
-          };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
+    private static final com.google.protobuf.Internal.EnumLiteMap<Style> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<Style>() {
+          public Style findValueByNumber(int number) {
+            return Style.forNumber(number);
+          }
+        };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
             "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
+
+    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
+
+    public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
       return com.google.api.ResourceDescriptor.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final Style[] VALUES = values();
 
-    public static Style valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+    public static Style valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
+        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -560,6 +590,8 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 1;
   private volatile java.lang.Object type_;
   /**
+   *
+   *
    * <pre>
    * The resource type. It must be in the format of
    * {service_name}/{resource_type_kind}. The `resource_type_kind` must be
@@ -572,6 +604,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string type = 1;</code>
+   *
    * @return The type.
    */
   @java.lang.Override
@@ -580,14 +613,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       type_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The resource type. It must be in the format of
    * {service_name}/{resource_type_kind}. The `resource_type_kind` must be
@@ -600,16 +634,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string type = 1;</code>
+   *
    * @return The bytes for type.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTypeBytes() {
+  public com.google.protobuf.ByteString getTypeBytes() {
     java.lang.Object ref = type_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       type_ = b;
       return b;
     } else {
@@ -620,6 +653,8 @@ private static final long serialVersionUID = 0L;
   public static final int PATTERN_FIELD_NUMBER = 2;
   private com.google.protobuf.LazyStringList pattern_;
   /**
+   *
+   *
    * <pre>
    * Optional. The relative resource name pattern associated with this resource
    * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -638,13 +673,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string pattern = 2;</code>
+   *
    * @return A list containing the pattern.
    */
-  public com.google.protobuf.ProtocolStringList
-      getPatternList() {
+  public com.google.protobuf.ProtocolStringList getPatternList() {
     return pattern_;
   }
   /**
+   *
+   *
    * <pre>
    * Optional. The relative resource name pattern associated with this resource
    * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -663,12 +700,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string pattern = 2;</code>
+   *
    * @return The count of pattern.
    */
   public int getPatternCount() {
     return pattern_.size();
   }
   /**
+   *
+   *
    * <pre>
    * Optional. The relative resource name pattern associated with this resource
    * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -687,6 +727,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string pattern = 2;</code>
+   *
    * @param index The index of the element to return.
    * @return The pattern at the given index.
    */
@@ -694,6 +735,8 @@ private static final long serialVersionUID = 0L;
     return pattern_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * Optional. The relative resource name pattern associated with this resource
    * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -712,23 +755,26 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string pattern = 2;</code>
+   *
    * @param index The index of the value to return.
    * @return The bytes of the pattern at the given index.
    */
-  public com.google.protobuf.ByteString
-      getPatternBytes(int index) {
+  public com.google.protobuf.ByteString getPatternBytes(int index) {
     return pattern_.getByteString(index);
   }
 
   public static final int NAME_FIELD_FIELD_NUMBER = 3;
   private volatile java.lang.Object nameField_;
   /**
+   *
+   *
    * <pre>
    * Optional. The field on the resource that designates the resource name
    * field. If omitted, this is assumed to be "name".
    * </pre>
    *
    * <code>string name_field = 3;</code>
+   *
    * @return The nameField.
    */
   @java.lang.Override
@@ -737,30 +783,30 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       nameField_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * Optional. The field on the resource that designates the resource name
    * field. If omitted, this is assumed to be "name".
    * </pre>
    *
    * <code>string name_field = 3;</code>
+   *
    * @return The bytes for nameField.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameFieldBytes() {
+  public com.google.protobuf.ByteString getNameFieldBytes() {
     java.lang.Object ref = nameField_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       nameField_ = b;
       return b;
     } else {
@@ -771,6 +817,8 @@ private static final long serialVersionUID = 0L;
   public static final int HISTORY_FIELD_NUMBER = 4;
   private int history_;
   /**
+   *
+   *
    * <pre>
    * Optional. The historical or future-looking state of the resource pattern.
    * Example:
@@ -788,12 +836,16 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.api.ResourceDescriptor.History history = 4;</code>
+   *
    * @return The enum numeric value on the wire for history.
    */
-  @java.lang.Override public int getHistoryValue() {
+  @java.lang.Override
+  public int getHistoryValue() {
     return history_;
   }
   /**
+   *
+   *
    * <pre>
    * Optional. The historical or future-looking state of the resource pattern.
    * Example:
@@ -811,17 +863,22 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.api.ResourceDescriptor.History history = 4;</code>
+   *
    * @return The history.
    */
-  @java.lang.Override public com.google.api.ResourceDescriptor.History getHistory() {
+  @java.lang.Override
+  public com.google.api.ResourceDescriptor.History getHistory() {
     @SuppressWarnings("deprecation")
-    com.google.api.ResourceDescriptor.History result = com.google.api.ResourceDescriptor.History.valueOf(history_);
+    com.google.api.ResourceDescriptor.History result =
+        com.google.api.ResourceDescriptor.History.valueOf(history_);
     return result == null ? com.google.api.ResourceDescriptor.History.UNRECOGNIZED : result;
   }
 
   public static final int PLURAL_FIELD_NUMBER = 5;
   private volatile java.lang.Object plural_;
   /**
+   *
+   *
    * <pre>
    * The plural name used in the resource name and permission names, such as
    * 'projects' for the resource name of 'projects/{project}' and the permission
@@ -833,6 +890,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string plural = 5;</code>
+   *
    * @return The plural.
    */
   @java.lang.Override
@@ -841,14 +899,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       plural_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The plural name used in the resource name and permission names, such as
    * 'projects' for the resource name of 'projects/{project}' and the permission
@@ -860,16 +919,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string plural = 5;</code>
+   *
    * @return The bytes for plural.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getPluralBytes() {
+  public com.google.protobuf.ByteString getPluralBytes() {
     java.lang.Object ref = plural_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       plural_ = b;
       return b;
     } else {
@@ -880,6 +938,8 @@ private static final long serialVersionUID = 0L;
   public static final int SINGULAR_FIELD_NUMBER = 6;
   private volatile java.lang.Object singular_;
   /**
+   *
+   *
    * <pre>
    * The same concept of the `singular` field in k8s CRD spec
    * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
@@ -887,6 +947,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string singular = 6;</code>
+   *
    * @return The singular.
    */
   @java.lang.Override
@@ -895,14 +956,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       singular_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * The same concept of the `singular` field in k8s CRD spec
    * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
@@ -910,16 +972,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string singular = 6;</code>
+   *
    * @return The bytes for singular.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getSingularBytes() {
+  public com.google.protobuf.ByteString getSingularBytes() {
     java.lang.Object ref = singular_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       singular_ = b;
       return b;
     } else {
@@ -930,16 +991,20 @@ private static final long serialVersionUID = 0L;
   public static final int STYLE_FIELD_NUMBER = 10;
   private java.util.List<java.lang.Integer> style_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, com.google.api.ResourceDescriptor.Style> style_converter_ =
+          java.lang.Integer, com.google.api.ResourceDescriptor.Style>
+      style_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.api.ResourceDescriptor.Style>() {
             public com.google.api.ResourceDescriptor.Style convert(java.lang.Integer from) {
               @SuppressWarnings("deprecation")
-              com.google.api.ResourceDescriptor.Style result = com.google.api.ResourceDescriptor.Style.valueOf(from);
+              com.google.api.ResourceDescriptor.Style result =
+                  com.google.api.ResourceDescriptor.Style.valueOf(from);
               return result == null ? com.google.api.ResourceDescriptor.Style.UNRECOGNIZED : result;
             }
           };
   /**
+   *
+   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -947,6 +1012,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+   *
    * @return A list containing the style.
    */
   @java.lang.Override
@@ -955,6 +1021,8 @@ private static final long serialVersionUID = 0L;
         java.lang.Integer, com.google.api.ResourceDescriptor.Style>(style_, style_converter_);
   }
   /**
+   *
+   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -962,6 +1030,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+   *
    * @return The count of style.
    */
   @java.lang.Override
@@ -969,6 +1038,8 @@ private static final long serialVersionUID = 0L;
     return style_.size();
   }
   /**
+   *
+   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -976,6 +1047,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+   *
    * @param index The index of the element to return.
    * @return The style at the given index.
    */
@@ -984,6 +1056,8 @@ private static final long serialVersionUID = 0L;
     return style_converter_.convert(style_.get(index));
   }
   /**
+   *
+   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -991,14 +1065,16 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+   *
    * @return A list containing the enum numeric values on the wire for style.
    */
   @java.lang.Override
-  public java.util.List<java.lang.Integer>
-  getStyleValueList() {
+  public java.util.List<java.lang.Integer> getStyleValueList() {
     return style_;
   }
   /**
+   *
+   *
    * <pre>
    * Style flag(s) for this resource.
    * These indicate that a resource is expected to conform to a given
@@ -1006,6 +1082,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+   *
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of style at the given index.
    */
@@ -1013,9 +1090,11 @@ private static final long serialVersionUID = 0L;
   public int getStyleValue(int index) {
     return style_.get(index);
   }
+
   private int styleMemoizedSerializedSize;
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -1027,8 +1106,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     getSerializedSize();
     if (!getTypeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
@@ -1079,8 +1157,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nameField_);
     }
     if (history_ != com.google.api.ResourceDescriptor.History.HISTORY_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, history_);
+      size += com.google.protobuf.CodedOutputStream.computeEnumSize(4, history_);
     }
     if (!getPluralBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, plural_);
@@ -1091,14 +1168,14 @@ private static final long serialVersionUID = 0L;
     {
       int dataSize = 0;
       for (int i = 0; i < style_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeEnumSizeNoTag(style_.get(i));
+        dataSize += com.google.protobuf.CodedOutputStream.computeEnumSizeNoTag(style_.get(i));
       }
       size += dataSize;
-      if (!getStyleList().isEmpty()) {  size += 1;
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32SizeNoTag(dataSize);
-      }styleMemoizedSerializedSize = dataSize;
+      if (!getStyleList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(dataSize);
+      }
+      styleMemoizedSerializedSize = dataSize;
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1108,24 +1185,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.api.ResourceDescriptor)) {
       return super.equals(obj);
     }
     com.google.api.ResourceDescriptor other = (com.google.api.ResourceDescriptor) obj;
 
-    if (!getType()
-        .equals(other.getType())) return false;
-    if (!getPatternList()
-        .equals(other.getPatternList())) return false;
-    if (!getNameField()
-        .equals(other.getNameField())) return false;
+    if (!getType().equals(other.getType())) return false;
+    if (!getPatternList().equals(other.getPatternList())) return false;
+    if (!getNameField().equals(other.getNameField())) return false;
     if (history_ != other.history_) return false;
-    if (!getPlural()
-        .equals(other.getPlural())) return false;
-    if (!getSingular()
-        .equals(other.getSingular())) return false;
+    if (!getPlural().equals(other.getPlural())) return false;
+    if (!getSingular().equals(other.getSingular())) return false;
     if (!style_.equals(other.style_)) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -1161,97 +1233,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.api.ResourceDescriptor parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.api.ResourceDescriptor parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.ResourceDescriptor parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.api.ResourceDescriptor parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.api.ResourceDescriptor parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.ResourceDescriptor parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.ResourceDescriptor parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.ResourceDescriptor parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.ResourceDescriptor parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.ResourceDescriptor parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.ResourceDescriptor parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.api.ResourceDescriptor parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.ResourceDescriptor parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+      com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.ResourceDescriptor parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.api.ResourceDescriptor prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * A simple descriptor of a resource type.
    * ResourceDescriptor annotates a resource message (either by means of a
@@ -1350,21 +1428,22 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.ResourceDescriptor}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.api.ResourceDescriptor)
       com.google.api.ResourceDescriptorOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.api.ResourceProto.internal_static_google_api_ResourceDescriptor_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.ResourceProto.internal_static_google_api_ResourceDescriptor_fieldAccessorTable
+      return com.google.api.ResourceProto
+          .internal_static_google_api_ResourceDescriptor_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.api.ResourceDescriptor.class, com.google.api.ResourceDescriptor.Builder.class);
+              com.google.api.ResourceDescriptor.class,
+              com.google.api.ResourceDescriptor.Builder.class);
     }
 
     // Construct using com.google.api.ResourceDescriptor.newBuilder()
@@ -1372,16 +1451,15 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1403,8 +1481,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.api.ResourceProto.internal_static_google_api_ResourceDescriptor_descriptor;
     }
 
@@ -1449,38 +1526,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.ResourceDescriptor) {
-        return mergeFrom((com.google.api.ResourceDescriptor)other);
+        return mergeFrom((com.google.api.ResourceDescriptor) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1556,10 +1634,13 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.lang.Object type_ = "";
     /**
+     *
+     *
      * <pre>
      * The resource type. It must be in the format of
      * {service_name}/{resource_type_kind}. The `resource_type_kind` must be
@@ -1572,13 +1653,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     *
      * @return The type.
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
         return s;
@@ -1587,6 +1668,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource type. It must be in the format of
      * {service_name}/{resource_type_kind}. The `resource_type_kind` must be
@@ -1599,15 +1682,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     *
      * @return The bytes for type.
      */
-    public com.google.protobuf.ByteString
-        getTypeBytes() {
+    public com.google.protobuf.ByteString getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         type_ = b;
         return b;
       } else {
@@ -1615,6 +1697,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The resource type. It must be in the format of
      * {service_name}/{resource_type_kind}. The `resource_type_kind` must be
@@ -1627,20 +1711,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     *
      * @param value The type to set.
      * @return This builder for chaining.
      */
-    public Builder setType(
-        java.lang.String value) {
+    public Builder setType(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       type_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource type. It must be in the format of
      * {service_name}/{resource_type_kind}. The `resource_type_kind` must be
@@ -1653,15 +1739,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+
       type_ = getDefaultInstance().getType();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The resource type. It must be in the format of
      * {service_name}/{resource_type_kind}. The `resource_type_kind` must be
@@ -1674,29 +1763,33 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     *
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */
-    public Builder setTypeBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setTypeBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       type_ = value;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList pattern_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringList pattern_ =
+        com.google.protobuf.LazyStringArrayList.EMPTY;
+
     private void ensurePatternIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         pattern_ = new com.google.protobuf.LazyStringArrayList(pattern_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The relative resource name pattern associated with this resource
      * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -1715,13 +1808,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string pattern = 2;</code>
+     *
      * @return A list containing the pattern.
      */
-    public com.google.protobuf.ProtocolStringList
-        getPatternList() {
+    public com.google.protobuf.ProtocolStringList getPatternList() {
       return pattern_.getUnmodifiableView();
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The relative resource name pattern associated with this resource
      * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -1740,12 +1835,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string pattern = 2;</code>
+     *
      * @return The count of pattern.
      */
     public int getPatternCount() {
       return pattern_.size();
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The relative resource name pattern associated with this resource
      * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -1764,6 +1862,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string pattern = 2;</code>
+     *
      * @param index The index of the element to return.
      * @return The pattern at the given index.
      */
@@ -1771,6 +1870,8 @@ private static final long serialVersionUID = 0L;
       return pattern_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The relative resource name pattern associated with this resource
      * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -1789,14 +1890,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string pattern = 2;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the pattern at the given index.
      */
-    public com.google.protobuf.ByteString
-        getPatternBytes(int index) {
+    public com.google.protobuf.ByteString getPatternBytes(int index) {
       return pattern_.getByteString(index);
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The relative resource name pattern associated with this resource
      * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -1815,21 +1918,23 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string pattern = 2;</code>
+     *
      * @param index The index to set the value at.
      * @param value The pattern to set.
      * @return This builder for chaining.
      */
-    public Builder setPattern(
-        int index, java.lang.String value) {
+    public Builder setPattern(int index, java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePatternIsMutable();
+        throw new NullPointerException();
+      }
+      ensurePatternIsMutable();
       pattern_.set(index, value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The relative resource name pattern associated with this resource
      * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -1848,20 +1953,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string pattern = 2;</code>
+     *
      * @param value The pattern to add.
      * @return This builder for chaining.
      */
-    public Builder addPattern(
-        java.lang.String value) {
+    public Builder addPattern(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePatternIsMutable();
+        throw new NullPointerException();
+      }
+      ensurePatternIsMutable();
       pattern_.add(value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The relative resource name pattern associated with this resource
      * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -1880,18 +1987,19 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string pattern = 2;</code>
+     *
      * @param values The pattern to add.
      * @return This builder for chaining.
      */
-    public Builder addAllPattern(
-        java.lang.Iterable<java.lang.String> values) {
+    public Builder addAllPattern(java.lang.Iterable<java.lang.String> values) {
       ensurePatternIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, pattern_);
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, pattern_);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The relative resource name pattern associated with this resource
      * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -1910,6 +2018,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string pattern = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearPattern() {
@@ -1919,6 +2028,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The relative resource name pattern associated with this resource
      * type. The DNS prefix of the full resource name shouldn't be specified here.
@@ -1937,15 +2048,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string pattern = 2;</code>
+     *
      * @param value The bytes of the pattern to add.
      * @return This builder for chaining.
      */
-    public Builder addPatternBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder addPatternBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       ensurePatternIsMutable();
       pattern_.add(value);
       onChanged();
@@ -1954,19 +2065,21 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object nameField_ = "";
     /**
+     *
+     *
      * <pre>
      * Optional. The field on the resource that designates the resource name
      * field. If omitted, this is assumed to be "name".
      * </pre>
      *
      * <code>string name_field = 3;</code>
+     *
      * @return The nameField.
      */
     public java.lang.String getNameField() {
       java.lang.Object ref = nameField_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         nameField_ = s;
         return s;
@@ -1975,21 +2088,22 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The field on the resource that designates the resource name
      * field. If omitted, this is assumed to be "name".
      * </pre>
      *
      * <code>string name_field = 3;</code>
+     *
      * @return The bytes for nameField.
      */
-    public com.google.protobuf.ByteString
-        getNameFieldBytes() {
+    public com.google.protobuf.ByteString getNameFieldBytes() {
       java.lang.Object ref = nameField_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         nameField_ = b;
         return b;
       } else {
@@ -1997,57 +2111,64 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The field on the resource that designates the resource name
      * field. If omitted, this is assumed to be "name".
      * </pre>
      *
      * <code>string name_field = 3;</code>
+     *
      * @param value The nameField to set.
      * @return This builder for chaining.
      */
-    public Builder setNameField(
-        java.lang.String value) {
+    public Builder setNameField(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       nameField_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The field on the resource that designates the resource name
      * field. If omitted, this is assumed to be "name".
      * </pre>
      *
      * <code>string name_field = 3;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearNameField() {
-      
+
       nameField_ = getDefaultInstance().getNameField();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The field on the resource that designates the resource name
      * field. If omitted, this is assumed to be "name".
      * </pre>
      *
      * <code>string name_field = 3;</code>
+     *
      * @param value The bytes for nameField to set.
      * @return This builder for chaining.
      */
-    public Builder setNameFieldBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setNameFieldBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       nameField_ = value;
       onChanged();
       return this;
@@ -2055,6 +2176,8 @@ private static final long serialVersionUID = 0L;
 
     private int history_ = 0;
     /**
+     *
+     *
      * <pre>
      * Optional. The historical or future-looking state of the resource pattern.
      * Example:
@@ -2072,12 +2195,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.api.ResourceDescriptor.History history = 4;</code>
+     *
      * @return The enum numeric value on the wire for history.
      */
-    @java.lang.Override public int getHistoryValue() {
+    @java.lang.Override
+    public int getHistoryValue() {
       return history_;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The historical or future-looking state of the resource pattern.
      * Example:
@@ -2095,16 +2222,19 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.api.ResourceDescriptor.History history = 4;</code>
+     *
      * @param value The enum numeric value on the wire for history to set.
      * @return This builder for chaining.
      */
     public Builder setHistoryValue(int value) {
-      
+
       history_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The historical or future-looking state of the resource pattern.
      * Example:
@@ -2122,15 +2252,19 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.api.ResourceDescriptor.History history = 4;</code>
+     *
      * @return The history.
      */
     @java.lang.Override
     public com.google.api.ResourceDescriptor.History getHistory() {
       @SuppressWarnings("deprecation")
-      com.google.api.ResourceDescriptor.History result = com.google.api.ResourceDescriptor.History.valueOf(history_);
+      com.google.api.ResourceDescriptor.History result =
+          com.google.api.ResourceDescriptor.History.valueOf(history_);
       return result == null ? com.google.api.ResourceDescriptor.History.UNRECOGNIZED : result;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The historical or future-looking state of the resource pattern.
      * Example:
@@ -2148,6 +2282,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.api.ResourceDescriptor.History history = 4;</code>
+     *
      * @param value The history to set.
      * @return This builder for chaining.
      */
@@ -2155,12 +2290,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+
       history_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Optional. The historical or future-looking state of the resource pattern.
      * Example:
@@ -2178,10 +2315,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.api.ResourceDescriptor.History history = 4;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearHistory() {
-      
+
       history_ = 0;
       onChanged();
       return this;
@@ -2189,6 +2327,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object plural_ = "";
     /**
+     *
+     *
      * <pre>
      * The plural name used in the resource name and permission names, such as
      * 'projects' for the resource name of 'projects/{project}' and the permission
@@ -2200,13 +2340,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string plural = 5;</code>
+     *
      * @return The plural.
      */
     public java.lang.String getPlural() {
       java.lang.Object ref = plural_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         plural_ = s;
         return s;
@@ -2215,6 +2355,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The plural name used in the resource name and permission names, such as
      * 'projects' for the resource name of 'projects/{project}' and the permission
@@ -2226,15 +2368,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string plural = 5;</code>
+     *
      * @return The bytes for plural.
      */
-    public com.google.protobuf.ByteString
-        getPluralBytes() {
+    public com.google.protobuf.ByteString getPluralBytes() {
       java.lang.Object ref = plural_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         plural_ = b;
         return b;
       } else {
@@ -2242,6 +2383,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The plural name used in the resource name and permission names, such as
      * 'projects' for the resource name of 'projects/{project}' and the permission
@@ -2253,20 +2396,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string plural = 5;</code>
+     *
      * @param value The plural to set.
      * @return This builder for chaining.
      */
-    public Builder setPlural(
-        java.lang.String value) {
+    public Builder setPlural(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       plural_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The plural name used in the resource name and permission names, such as
      * 'projects' for the resource name of 'projects/{project}' and the permission
@@ -2278,15 +2423,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string plural = 5;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearPlural() {
-      
+
       plural_ = getDefaultInstance().getPlural();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The plural name used in the resource name and permission names, such as
      * 'projects' for the resource name of 'projects/{project}' and the permission
@@ -2298,16 +2446,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string plural = 5;</code>
+     *
      * @param value The bytes for plural to set.
      * @return This builder for chaining.
      */
-    public Builder setPluralBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setPluralBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       plural_ = value;
       onChanged();
       return this;
@@ -2315,6 +2463,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object singular_ = "";
     /**
+     *
+     *
      * <pre>
      * The same concept of the `singular` field in k8s CRD spec
      * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
@@ -2322,13 +2472,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string singular = 6;</code>
+     *
      * @return The singular.
      */
     public java.lang.String getSingular() {
       java.lang.Object ref = singular_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         singular_ = s;
         return s;
@@ -2337,6 +2487,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The same concept of the `singular` field in k8s CRD spec
      * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
@@ -2344,15 +2496,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string singular = 6;</code>
+     *
      * @return The bytes for singular.
      */
-    public com.google.protobuf.ByteString
-        getSingularBytes() {
+    public com.google.protobuf.ByteString getSingularBytes() {
       java.lang.Object ref = singular_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         singular_ = b;
         return b;
       } else {
@@ -2360,6 +2511,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The same concept of the `singular` field in k8s CRD spec
      * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
@@ -2367,20 +2520,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string singular = 6;</code>
+     *
      * @param value The singular to set.
      * @return This builder for chaining.
      */
-    public Builder setSingular(
-        java.lang.String value) {
+    public Builder setSingular(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       singular_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The same concept of the `singular` field in k8s CRD spec
      * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
@@ -2388,15 +2543,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string singular = 6;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearSingular() {
-      
+
       singular_ = getDefaultInstance().getSingular();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The same concept of the `singular` field in k8s CRD spec
      * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
@@ -2404,23 +2562,23 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string singular = 6;</code>
+     *
      * @param value The bytes for singular to set.
      * @return This builder for chaining.
      */
-    public Builder setSingularBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setSingularBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       singular_ = value;
       onChanged();
       return this;
     }
 
-    private java.util.List<java.lang.Integer> style_ =
-      java.util.Collections.emptyList();
+    private java.util.List<java.lang.Integer> style_ = java.util.Collections.emptyList();
+
     private void ensureStyleIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
         style_ = new java.util.ArrayList<java.lang.Integer>(style_);
@@ -2428,6 +2586,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2435,6 +2595,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @return A list containing the style.
      */
     public java.util.List<com.google.api.ResourceDescriptor.Style> getStyleList() {
@@ -2442,6 +2603,8 @@ private static final long serialVersionUID = 0L;
           java.lang.Integer, com.google.api.ResourceDescriptor.Style>(style_, style_converter_);
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2449,12 +2612,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @return The count of style.
      */
     public int getStyleCount() {
       return style_.size();
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2462,6 +2628,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @param index The index of the element to return.
      * @return The style at the given index.
      */
@@ -2469,6 +2636,8 @@ private static final long serialVersionUID = 0L;
       return style_converter_.convert(style_.get(index));
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2476,12 +2645,12 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @param index The index to set the value at.
      * @param value The style to set.
      * @return This builder for chaining.
      */
-    public Builder setStyle(
-        int index, com.google.api.ResourceDescriptor.Style value) {
+    public Builder setStyle(int index, com.google.api.ResourceDescriptor.Style value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -2491,6 +2660,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2498,6 +2669,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @param value The style to add.
      * @return This builder for chaining.
      */
@@ -2511,6 +2683,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2518,6 +2692,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @param values The style to add.
      * @return This builder for chaining.
      */
@@ -2531,6 +2706,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2538,6 +2715,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearStyle() {
@@ -2547,6 +2725,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2554,13 +2734,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @return A list containing the enum numeric values on the wire for style.
      */
-    public java.util.List<java.lang.Integer>
-    getStyleValueList() {
+    public java.util.List<java.lang.Integer> getStyleValueList() {
       return java.util.Collections.unmodifiableList(style_);
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2568,6 +2750,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of style at the given index.
      */
@@ -2575,6 +2758,8 @@ private static final long serialVersionUID = 0L;
       return style_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2582,18 +2767,20 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of style at the given index.
      * @return This builder for chaining.
      */
-    public Builder setStyleValue(
-        int index, int value) {
+    public Builder setStyleValue(int index, int value) {
       ensureStyleIsMutable();
       style_.set(index, value);
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2601,6 +2788,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @param value The enum numeric value on the wire for style to add.
      * @return This builder for chaining.
      */
@@ -2611,6 +2799,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Style flag(s) for this resource.
      * These indicate that a resource is expected to conform to a given
@@ -2618,11 +2808,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.api.ResourceDescriptor.Style style = 10;</code>
+     *
      * @param values The enum numeric values on the wire for style to add.
      * @return This builder for chaining.
      */
-    public Builder addAllStyleValue(
-        java.lang.Iterable<java.lang.Integer> values) {
+    public Builder addAllStyleValue(java.lang.Iterable<java.lang.Integer> values) {
       ensureStyleIsMutable();
       for (int value : values) {
         style_.add(value);
@@ -2630,9 +2820,9 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -2642,12 +2832,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.api.ResourceDescriptor)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.ResourceDescriptor)
   private static final com.google.api.ResourceDescriptor DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.api.ResourceDescriptor();
   }
@@ -2656,16 +2846,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ResourceDescriptor>
-      PARSER = new com.google.protobuf.AbstractParser<ResourceDescriptor>() {
-    @java.lang.Override
-    public ResourceDescriptor parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ResourceDescriptor(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<ResourceDescriptor> PARSER =
+      new com.google.protobuf.AbstractParser<ResourceDescriptor>() {
+        @java.lang.Override
+        public ResourceDescriptor parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ResourceDescriptor(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<ResourceDescriptor> parser() {
     return PARSER;
@@ -2680,6 +2870,4 @@ private static final long serialVersionUID = 0L;
   public com.google.api.ResourceDescriptor getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

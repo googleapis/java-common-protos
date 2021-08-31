@@ -19,6 +19,8 @@
 package com.google.logging.type;
 
 /**
+ *
+ *
  * <pre>
  * The severity of the event described in a log entry, expressed as one of the
  * standard severity levels listed below.  For your reference, the levels are
@@ -36,9 +38,10 @@ package com.google.logging.type;
  *
  * Protobuf enum {@code google.logging.type.LogSeverity}
  */
-public enum LogSeverity
-    implements com.google.protobuf.ProtocolMessageEnum {
+public enum LogSeverity implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   *
+   *
    * <pre>
    * (0) The log entry has no assigned severity level.
    * </pre>
@@ -47,6 +50,8 @@ public enum LogSeverity
    */
   DEFAULT(0),
   /**
+   *
+   *
    * <pre>
    * (100) Debug or trace information.
    * </pre>
@@ -55,6 +60,8 @@ public enum LogSeverity
    */
   DEBUG(100),
   /**
+   *
+   *
    * <pre>
    * (200) Routine information, such as ongoing status or performance.
    * </pre>
@@ -63,6 +70,8 @@ public enum LogSeverity
    */
   INFO(200),
   /**
+   *
+   *
    * <pre>
    * (300) Normal but significant events, such as start up, shut down, or
    * a configuration change.
@@ -72,6 +81,8 @@ public enum LogSeverity
    */
   NOTICE(300),
   /**
+   *
+   *
    * <pre>
    * (400) Warning events might cause problems.
    * </pre>
@@ -80,6 +91,8 @@ public enum LogSeverity
    */
   WARNING(400),
   /**
+   *
+   *
    * <pre>
    * (500) Error events are likely to cause problems.
    * </pre>
@@ -88,6 +101,8 @@ public enum LogSeverity
    */
   ERROR(500),
   /**
+   *
+   *
    * <pre>
    * (600) Critical events cause more severe problems or outages.
    * </pre>
@@ -96,6 +111,8 @@ public enum LogSeverity
    */
   CRITICAL(600),
   /**
+   *
+   *
    * <pre>
    * (700) A person must take an action immediately.
    * </pre>
@@ -104,6 +121,8 @@ public enum LogSeverity
    */
   ALERT(700),
   /**
+   *
+   *
    * <pre>
    * (800) One or more systems are unusable.
    * </pre>
@@ -115,6 +134,8 @@ public enum LogSeverity
   ;
 
   /**
+   *
+   *
    * <pre>
    * (0) The log entry has no assigned severity level.
    * </pre>
@@ -123,6 +144,8 @@ public enum LogSeverity
    */
   public static final int DEFAULT_VALUE = 0;
   /**
+   *
+   *
    * <pre>
    * (100) Debug or trace information.
    * </pre>
@@ -131,6 +154,8 @@ public enum LogSeverity
    */
   public static final int DEBUG_VALUE = 100;
   /**
+   *
+   *
    * <pre>
    * (200) Routine information, such as ongoing status or performance.
    * </pre>
@@ -139,6 +164,8 @@ public enum LogSeverity
    */
   public static final int INFO_VALUE = 200;
   /**
+   *
+   *
    * <pre>
    * (300) Normal but significant events, such as start up, shut down, or
    * a configuration change.
@@ -148,6 +175,8 @@ public enum LogSeverity
    */
   public static final int NOTICE_VALUE = 300;
   /**
+   *
+   *
    * <pre>
    * (400) Warning events might cause problems.
    * </pre>
@@ -156,6 +185,8 @@ public enum LogSeverity
    */
   public static final int WARNING_VALUE = 400;
   /**
+   *
+   *
    * <pre>
    * (500) Error events are likely to cause problems.
    * </pre>
@@ -164,6 +195,8 @@ public enum LogSeverity
    */
   public static final int ERROR_VALUE = 500;
   /**
+   *
+   *
    * <pre>
    * (600) Critical events cause more severe problems or outages.
    * </pre>
@@ -172,6 +205,8 @@ public enum LogSeverity
    */
   public static final int CRITICAL_VALUE = 600;
   /**
+   *
+   *
    * <pre>
    * (700) A person must take an action immediately.
    * </pre>
@@ -180,6 +215,8 @@ public enum LogSeverity
    */
   public static final int ALERT_VALUE = 700;
   /**
+   *
+   *
    * <pre>
    * (800) One or more systems are unusable.
    * </pre>
@@ -187,7 +224,6 @@ public enum LogSeverity
    * <code>EMERGENCY = 800;</code>
    */
   public static final int EMERGENCY_VALUE = 800;
-
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -213,55 +249,61 @@ public enum LogSeverity
    */
   public static LogSeverity forNumber(int value) {
     switch (value) {
-      case 0: return DEFAULT;
-      case 100: return DEBUG;
-      case 200: return INFO;
-      case 300: return NOTICE;
-      case 400: return WARNING;
-      case 500: return ERROR;
-      case 600: return CRITICAL;
-      case 700: return ALERT;
-      case 800: return EMERGENCY;
-      default: return null;
+      case 0:
+        return DEFAULT;
+      case 100:
+        return DEBUG;
+      case 200:
+        return INFO;
+      case 300:
+        return NOTICE;
+      case 400:
+        return WARNING;
+      case 500:
+        return ERROR;
+      case 600:
+        return CRITICAL;
+      case 700:
+        return ALERT;
+      case 800:
+        return EMERGENCY;
+      default:
+        return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<LogSeverity>
-      internalGetValueMap() {
+  public static com.google.protobuf.Internal.EnumLiteMap<LogSeverity> internalGetValueMap() {
     return internalValueMap;
   }
-  private static final com.google.protobuf.Internal.EnumLiteMap<
-      LogSeverity> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<LogSeverity>() {
-          public LogSeverity findValueByNumber(int number) {
-            return LogSeverity.forNumber(number);
-          }
-        };
 
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor
-      getValueDescriptor() {
+  private static final com.google.protobuf.Internal.EnumLiteMap<LogSeverity> internalValueMap =
+      new com.google.protobuf.Internal.EnumLiteMap<LogSeverity>() {
+        public LogSeverity findValueByNumber(int number) {
+          return LogSeverity.forNumber(number);
+        }
+      };
+
+  public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
-  public final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptorForType() {
+
+  public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
     return getDescriptor();
   }
-  public static final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
     return com.google.logging.type.LogSeverityProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final LogSeverity[] VALUES = values();
 
-  public static LogSeverity valueOf(
-      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+  public static LogSeverity valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException(
-        "EnumValueDescriptor is not for this type.");
+      throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -277,4 +319,3 @@ public enum LogSeverity
 
   // @@protoc_insertion_point(enum_scope:google.logging.type.LogSeverity)
 }
-

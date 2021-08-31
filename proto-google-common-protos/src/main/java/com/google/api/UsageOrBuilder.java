@@ -18,11 +18,14 @@
 
 package com.google.api;
 
-public interface UsageOrBuilder extends
+public interface UsageOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.Usage)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * Requirements that must be satisfied before a consumer project can use the
    * service. Each requirement is of the form &lt;service.name&gt;/&lt;requirement-id&gt;;
@@ -35,11 +38,13 @@ public interface UsageOrBuilder extends
    * </pre>
    *
    * <code>repeated string requirements = 1;</code>
+   *
    * @return A list containing the requirements.
    */
-  java.util.List<java.lang.String>
-      getRequirementsList();
+  java.util.List<java.lang.String> getRequirementsList();
   /**
+   *
+   *
    * <pre>
    * Requirements that must be satisfied before a consumer project can use the
    * service. Each requirement is of the form &lt;service.name&gt;/&lt;requirement-id&gt;;
@@ -52,10 +57,13 @@ public interface UsageOrBuilder extends
    * </pre>
    *
    * <code>repeated string requirements = 1;</code>
+   *
    * @return The count of requirements.
    */
   int getRequirementsCount();
   /**
+   *
+   *
    * <pre>
    * Requirements that must be satisfied before a consumer project can use the
    * service. Each requirement is of the form &lt;service.name&gt;/&lt;requirement-id&gt;;
@@ -68,11 +76,14 @@ public interface UsageOrBuilder extends
    * </pre>
    *
    * <code>repeated string requirements = 1;</code>
+   *
    * @param index The index of the element to return.
    * @return The requirements at the given index.
    */
   java.lang.String getRequirements(int index);
   /**
+   *
+   *
    * <pre>
    * Requirements that must be satisfied before a consumer project can use the
    * service. Each requirement is of the form &lt;service.name&gt;/&lt;requirement-id&gt;;
@@ -85,13 +96,15 @@ public interface UsageOrBuilder extends
    * </pre>
    *
    * <code>repeated string requirements = 1;</code>
+   *
    * @param index The index of the value to return.
    * @return The bytes of the requirements at the given index.
    */
-  com.google.protobuf.ByteString
-      getRequirementsBytes(int index);
+  com.google.protobuf.ByteString getRequirementsBytes(int index);
 
   /**
+   *
+   *
    * <pre>
    * A list of usage rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -99,9 +112,10 @@ public interface UsageOrBuilder extends
    *
    * <code>repeated .google.api.UsageRule rules = 6;</code>
    */
-  java.util.List<com.google.api.UsageRule> 
-      getRulesList();
+  java.util.List<com.google.api.UsageRule> getRulesList();
   /**
+   *
+   *
    * <pre>
    * A list of usage rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -111,6 +125,8 @@ public interface UsageOrBuilder extends
    */
   com.google.api.UsageRule getRules(int index);
   /**
+   *
+   *
    * <pre>
    * A list of usage rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -120,6 +136,8 @@ public interface UsageOrBuilder extends
    */
   int getRulesCount();
   /**
+   *
+   *
    * <pre>
    * A list of usage rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -127,9 +145,10 @@ public interface UsageOrBuilder extends
    *
    * <code>repeated .google.api.UsageRule rules = 6;</code>
    */
-  java.util.List<? extends com.google.api.UsageRuleOrBuilder> 
-      getRulesOrBuilderList();
+  java.util.List<? extends com.google.api.UsageRuleOrBuilder> getRulesOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * A list of usage rules that apply to individual API methods.
    * **NOTE:** All service configuration rules follow "last one wins" order.
@@ -137,10 +156,11 @@ public interface UsageOrBuilder extends
    *
    * <code>repeated .google.api.UsageRule rules = 6;</code>
    */
-  com.google.api.UsageRuleOrBuilder getRulesOrBuilder(
-      int index);
+  com.google.api.UsageRuleOrBuilder getRulesOrBuilder(int index);
 
   /**
+   *
+   *
    * <pre>
    * The full resource name of a channel used for sending notifications to the
    * service producer.
@@ -152,10 +172,13 @@ public interface UsageOrBuilder extends
    * </pre>
    *
    * <code>string producer_notification_channel = 7;</code>
+   *
    * @return The producerNotificationChannel.
    */
   java.lang.String getProducerNotificationChannel();
   /**
+   *
+   *
    * <pre>
    * The full resource name of a channel used for sending notifications to the
    * service producer.
@@ -167,8 +190,8 @@ public interface UsageOrBuilder extends
    * </pre>
    *
    * <code>string producer_notification_channel = 7;</code>
+   *
    * @return The bytes for producerNotificationChannel.
    */
-  com.google.protobuf.ByteString
-      getProducerNotificationChannelBytes();
+  com.google.protobuf.ByteString getProducerNotificationChannelBytes();
 }

@@ -18,11 +18,14 @@
 
 package com.google.cloud.audit;
 
-public interface AuthorizationInfoOrBuilder extends
+public interface AuthorizationInfoOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.cloud.audit.AuthorizationInfo)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The resource being accessed, as a REST-style or cloud resource string.
    * For example:
@@ -32,10 +35,13 @@ public interface AuthorizationInfoOrBuilder extends
    * </pre>
    *
    * <code>string resource = 1;</code>
+   *
    * @return The resource.
    */
   java.lang.String getResource();
   /**
+   *
+   *
    * <pre>
    * The resource being accessed, as a REST-style or cloud resource string.
    * For example:
@@ -45,43 +51,53 @@ public interface AuthorizationInfoOrBuilder extends
    * </pre>
    *
    * <code>string resource = 1;</code>
+   *
    * @return The bytes for resource.
    */
-  com.google.protobuf.ByteString
-      getResourceBytes();
+  com.google.protobuf.ByteString getResourceBytes();
 
   /**
+   *
+   *
    * <pre>
    * The required IAM permission.
    * </pre>
    *
    * <code>string permission = 2;</code>
+   *
    * @return The permission.
    */
   java.lang.String getPermission();
   /**
+   *
+   *
    * <pre>
    * The required IAM permission.
    * </pre>
    *
    * <code>string permission = 2;</code>
+   *
    * @return The bytes for permission.
    */
-  com.google.protobuf.ByteString
-      getPermissionBytes();
+  com.google.protobuf.ByteString getPermissionBytes();
 
   /**
+   *
+   *
    * <pre>
    * Whether or not authorization for `resource` and `permission`
    * was granted.
    * </pre>
    *
    * <code>bool granted = 3;</code>
+   *
    * @return The granted.
    */
   boolean getGranted();
 
   /**
+   *
+   *
    * <pre>
    * Resource attributes used in IAM condition evaluation. This field contains
    * resource attributes like resource type and resource name.
@@ -91,10 +107,13 @@ public interface AuthorizationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+   *
    * @return Whether the resourceAttributes field is set.
    */
   boolean hasResourceAttributes();
   /**
+   *
+   *
    * <pre>
    * Resource attributes used in IAM condition evaluation. This field contains
    * resource attributes like resource type and resource name.
@@ -104,10 +123,13 @@ public interface AuthorizationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+   *
    * @return The resourceAttributes.
    */
   com.google.rpc.context.AttributeContext.Resource getResourceAttributes();
   /**
+   *
+   *
    * <pre>
    * Resource attributes used in IAM condition evaluation. This field contains
    * resource attributes like resource type and resource name.

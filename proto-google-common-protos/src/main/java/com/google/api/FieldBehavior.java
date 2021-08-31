@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * An indicator of the behavior of a given field (for example, that a field
  * is required in requests, or given as output but ignored as input).
@@ -29,9 +31,10 @@ package com.google.api;
  *
  * Protobuf enum {@code google.api.FieldBehavior}
  */
-public enum FieldBehavior
-    implements com.google.protobuf.ProtocolMessageEnum {
+public enum FieldBehavior implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   *
+   *
    * <pre>
    * Conventional default for enums. Do not use this.
    * </pre>
@@ -40,6 +43,8 @@ public enum FieldBehavior
    */
   FIELD_BEHAVIOR_UNSPECIFIED(0),
   /**
+   *
+   *
    * <pre>
    * Specifically denotes a field as optional.
    * While all fields in protocol buffers are optional, this may be specified
@@ -50,6 +55,8 @@ public enum FieldBehavior
    */
   OPTIONAL(1),
   /**
+   *
+   *
    * <pre>
    * Denotes a field as required.
    * This indicates that the field **must** be provided as part of the request,
@@ -60,6 +67,8 @@ public enum FieldBehavior
    */
   REQUIRED(2),
   /**
+   *
+   *
    * <pre>
    * Denotes a field as output only.
    * This indicates that the field is provided in responses, but including the
@@ -71,6 +80,8 @@ public enum FieldBehavior
    */
   OUTPUT_ONLY(3),
   /**
+   *
+   *
    * <pre>
    * Denotes a field as input only.
    * This indicates that the field is provided in requests, and the
@@ -81,6 +92,8 @@ public enum FieldBehavior
    */
   INPUT_ONLY(4),
   /**
+   *
+   *
    * <pre>
    * Denotes a field as immutable.
    * This indicates that the field may be set once in a request to create a
@@ -91,6 +104,8 @@ public enum FieldBehavior
    */
   IMMUTABLE(5),
   /**
+   *
+   *
    * <pre>
    * Denotes that a (repeated) field is an unordered list.
    * This indicates that the service may provide the elements of the list
@@ -102,6 +117,8 @@ public enum FieldBehavior
    */
   UNORDERED_LIST(6),
   /**
+   *
+   *
    * <pre>
    * Denotes that this field returns a non-empty default value if not set.
    * This indicates that if the user provides the empty value in a request,
@@ -116,6 +133,8 @@ public enum FieldBehavior
   ;
 
   /**
+   *
+   *
    * <pre>
    * Conventional default for enums. Do not use this.
    * </pre>
@@ -124,6 +143,8 @@ public enum FieldBehavior
    */
   public static final int FIELD_BEHAVIOR_UNSPECIFIED_VALUE = 0;
   /**
+   *
+   *
    * <pre>
    * Specifically denotes a field as optional.
    * While all fields in protocol buffers are optional, this may be specified
@@ -134,6 +155,8 @@ public enum FieldBehavior
    */
   public static final int OPTIONAL_VALUE = 1;
   /**
+   *
+   *
    * <pre>
    * Denotes a field as required.
    * This indicates that the field **must** be provided as part of the request,
@@ -144,6 +167,8 @@ public enum FieldBehavior
    */
   public static final int REQUIRED_VALUE = 2;
   /**
+   *
+   *
    * <pre>
    * Denotes a field as output only.
    * This indicates that the field is provided in responses, but including the
@@ -155,6 +180,8 @@ public enum FieldBehavior
    */
   public static final int OUTPUT_ONLY_VALUE = 3;
   /**
+   *
+   *
    * <pre>
    * Denotes a field as input only.
    * This indicates that the field is provided in requests, and the
@@ -165,6 +192,8 @@ public enum FieldBehavior
    */
   public static final int INPUT_ONLY_VALUE = 4;
   /**
+   *
+   *
    * <pre>
    * Denotes a field as immutable.
    * This indicates that the field may be set once in a request to create a
@@ -175,6 +204,8 @@ public enum FieldBehavior
    */
   public static final int IMMUTABLE_VALUE = 5;
   /**
+   *
+   *
    * <pre>
    * Denotes that a (repeated) field is an unordered list.
    * This indicates that the service may provide the elements of the list
@@ -186,6 +217,8 @@ public enum FieldBehavior
    */
   public static final int UNORDERED_LIST_VALUE = 6;
   /**
+   *
+   *
    * <pre>
    * Denotes that this field returns a non-empty default value if not set.
    * This indicates that if the user provides the empty value in a request,
@@ -196,7 +229,6 @@ public enum FieldBehavior
    * <code>NON_EMPTY_DEFAULT = 7;</code>
    */
   public static final int NON_EMPTY_DEFAULT_VALUE = 7;
-
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -222,54 +254,59 @@ public enum FieldBehavior
    */
   public static FieldBehavior forNumber(int value) {
     switch (value) {
-      case 0: return FIELD_BEHAVIOR_UNSPECIFIED;
-      case 1: return OPTIONAL;
-      case 2: return REQUIRED;
-      case 3: return OUTPUT_ONLY;
-      case 4: return INPUT_ONLY;
-      case 5: return IMMUTABLE;
-      case 6: return UNORDERED_LIST;
-      case 7: return NON_EMPTY_DEFAULT;
-      default: return null;
+      case 0:
+        return FIELD_BEHAVIOR_UNSPECIFIED;
+      case 1:
+        return OPTIONAL;
+      case 2:
+        return REQUIRED;
+      case 3:
+        return OUTPUT_ONLY;
+      case 4:
+        return INPUT_ONLY;
+      case 5:
+        return IMMUTABLE;
+      case 6:
+        return UNORDERED_LIST;
+      case 7:
+        return NON_EMPTY_DEFAULT;
+      default:
+        return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<FieldBehavior>
-      internalGetValueMap() {
+  public static com.google.protobuf.Internal.EnumLiteMap<FieldBehavior> internalGetValueMap() {
     return internalValueMap;
   }
-  private static final com.google.protobuf.Internal.EnumLiteMap<
-      FieldBehavior> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<FieldBehavior>() {
-          public FieldBehavior findValueByNumber(int number) {
-            return FieldBehavior.forNumber(number);
-          }
-        };
 
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor
-      getValueDescriptor() {
+  private static final com.google.protobuf.Internal.EnumLiteMap<FieldBehavior> internalValueMap =
+      new com.google.protobuf.Internal.EnumLiteMap<FieldBehavior>() {
+        public FieldBehavior findValueByNumber(int number) {
+          return FieldBehavior.forNumber(number);
+        }
+      };
+
+  public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
-  public final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptorForType() {
+
+  public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
     return getDescriptor();
   }
-  public static final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
     return com.google.api.FieldBehaviorProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final FieldBehavior[] VALUES = values();
 
-  public static FieldBehavior valueOf(
-      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+  public static FieldBehavior valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException(
-        "EnumValueDescriptor is not for this type.");
+      throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -285,4 +322,3 @@ public enum FieldBehavior
 
   // @@protoc_insertion_point(enum_scope:google.api.FieldBehavior)
 }
-

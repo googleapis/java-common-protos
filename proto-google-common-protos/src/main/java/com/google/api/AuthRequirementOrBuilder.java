@@ -18,11 +18,14 @@
 
 package com.google.api;
 
-public interface AuthRequirementOrBuilder extends
+public interface AuthRequirementOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.AuthRequirement)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * [id][google.api.AuthProvider.id] from authentication provider.
    * Example:
@@ -30,10 +33,13 @@ public interface AuthRequirementOrBuilder extends
    * </pre>
    *
    * <code>string provider_id = 1;</code>
+   *
    * @return The providerId.
    */
   java.lang.String getProviderId();
   /**
+   *
+   *
    * <pre>
    * [id][google.api.AuthProvider.id] from authentication provider.
    * Example:
@@ -41,12 +47,14 @@ public interface AuthRequirementOrBuilder extends
    * </pre>
    *
    * <code>string provider_id = 1;</code>
+   *
    * @return The bytes for providerId.
    */
-  com.google.protobuf.ByteString
-      getProviderIdBytes();
+  com.google.protobuf.ByteString getProviderIdBytes();
 
   /**
+   *
+   *
    * <pre>
    * NOTE: This will be deprecated soon, once AuthProvider.audiences is
    * implemented and accepted in all the runtime components.
@@ -64,10 +72,13 @@ public interface AuthRequirementOrBuilder extends
    * </pre>
    *
    * <code>string audiences = 2;</code>
+   *
    * @return The audiences.
    */
   java.lang.String getAudiences();
   /**
+   *
+   *
    * <pre>
    * NOTE: This will be deprecated soon, once AuthProvider.audiences is
    * implemented and accepted in all the runtime components.
@@ -85,8 +96,8 @@ public interface AuthRequirementOrBuilder extends
    * </pre>
    *
    * <code>string audiences = 2;</code>
+   *
    * @return The bytes for audiences.
    */
-  com.google.protobuf.ByteString
-      getAudiencesBytes();
+  com.google.protobuf.ByteString getAudiencesBytes();
 }

@@ -19,6 +19,8 @@
 package com.google.rpc;
 
 /**
+ *
+ *
  * <pre>
  * The `Status` type defines a logical error model that is suitable for
  * different programming environments, including REST APIs and RPC APIs. It is
@@ -30,15 +32,16 @@ package com.google.rpc;
  *
  * Protobuf type {@code google.rpc.Status}
  */
-public final class Status extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class Status extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.rpc.Status)
     StatusOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use Status.newBuilder() to construct.
   private Status(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Status() {
     message_ = "";
     details_ = java.util.Collections.emptyList();
@@ -46,16 +49,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Status();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private Status(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -75,40 +77,40 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
-
-            code_ = input.readInt32();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            message_ = s;
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              details_ = new java.util.ArrayList<com.google.protobuf.Any>();
-              mutable_bitField0_ |= 0x00000001;
+          case 8:
+            {
+              code_ = input.readInt32();
+              break;
             }
-            details_.add(
-                input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          case 18:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
+              break;
             }
-            break;
-          }
+          case 26:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                details_ = new java.util.ArrayList<com.google.protobuf.Any>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              details_.add(input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
+              break;
+            }
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         details_ = java.util.Collections.unmodifiableList(details_);
@@ -117,8 +119,8 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.rpc.StatusProto.internal_static_google_rpc_Status_descriptor;
   }
 
@@ -133,11 +135,14 @@ private static final long serialVersionUID = 0L;
   public static final int CODE_FIELD_NUMBER = 1;
   private int code_;
   /**
+   *
+   *
    * <pre>
    * The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].
    * </pre>
    *
    * <code>int32 code = 1;</code>
+   *
    * @return The code.
    */
   @java.lang.Override
@@ -148,6 +153,8 @@ private static final long serialVersionUID = 0L;
   public static final int MESSAGE_FIELD_NUMBER = 2;
   private volatile java.lang.Object message_;
   /**
+   *
+   *
    * <pre>
    * A developer-facing error message, which should be in English. Any
    * user-facing error message should be localized and sent in the
@@ -155,6 +162,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string message = 2;</code>
+   *
    * @return The message.
    */
   @java.lang.Override
@@ -163,14 +171,15 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       message_ = s;
       return s;
     }
   }
   /**
+   *
+   *
    * <pre>
    * A developer-facing error message, which should be in English. Any
    * user-facing error message should be localized and sent in the
@@ -178,16 +187,15 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string message = 2;</code>
+   *
    * @return The bytes for message.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getMessageBytes() {
+  public com.google.protobuf.ByteString getMessageBytes() {
     java.lang.Object ref = message_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       message_ = b;
       return b;
     } else {
@@ -198,6 +206,8 @@ private static final long serialVersionUID = 0L;
   public static final int DETAILS_FIELD_NUMBER = 3;
   private java.util.List<com.google.protobuf.Any> details_;
   /**
+   *
+   *
    * <pre>
    * A list of messages that carry the error details.  There is a common set of
    * message types for APIs to use.
@@ -210,6 +220,8 @@ private static final long serialVersionUID = 0L;
     return details_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of messages that carry the error details.  There is a common set of
    * message types for APIs to use.
@@ -218,11 +230,12 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.protobuf.Any details = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
-      getDetailsOrBuilderList() {
+  public java.util.List<? extends com.google.protobuf.AnyOrBuilder> getDetailsOrBuilderList() {
     return details_;
   }
   /**
+   *
+   *
    * <pre>
    * A list of messages that carry the error details.  There is a common set of
    * message types for APIs to use.
@@ -235,6 +248,8 @@ private static final long serialVersionUID = 0L;
     return details_.size();
   }
   /**
+   *
+   *
    * <pre>
    * A list of messages that carry the error details.  There is a common set of
    * message types for APIs to use.
@@ -247,6 +262,8 @@ private static final long serialVersionUID = 0L;
     return details_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * A list of messages that carry the error details.  There is a common set of
    * message types for APIs to use.
@@ -255,12 +272,12 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.protobuf.Any details = 3;</code>
    */
   @java.lang.Override
-  public com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(
-      int index) {
+  public com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(int index) {
     return details_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -272,8 +289,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     if (code_ != 0) {
       output.writeInt32(1, code_);
     }
@@ -293,15 +309,13 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (code_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, code_);
+      size += com.google.protobuf.CodedOutputStream.computeInt32Size(1, code_);
     }
     if (!getMessageBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
     }
     for (int i = 0; i < details_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, details_.get(i));
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, details_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -311,19 +325,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.rpc.Status)) {
       return super.equals(obj);
     }
     com.google.rpc.Status other = (com.google.rpc.Status) obj;
 
-    if (getCode()
-        != other.getCode()) return false;
-    if (!getMessage()
-        .equals(other.getMessage())) return false;
-    if (!getDetailsList()
-        .equals(other.getDetailsList())) return false;
+    if (getCode() != other.getCode()) return false;
+    if (!getMessage().equals(other.getMessage())) return false;
+    if (!getDetailsList().equals(other.getDetailsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -348,97 +359,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.rpc.Status parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.rpc.Status parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.rpc.Status parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.rpc.Status parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.rpc.Status parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.rpc.Status parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.rpc.Status parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.rpc.Status parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.rpc.Status parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.rpc.Status parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.rpc.Status parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.rpc.Status parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.rpc.Status parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.rpc.Status parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.rpc.Status parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.rpc.Status prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * The `Status` type defines a logical error model that is suitable for
    * different programming environments, including REST APIs and RPC APIs. It is
@@ -450,12 +467,11 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.rpc.Status}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.rpc.Status)
       com.google.rpc.StatusOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.rpc.StatusProto.internal_static_google_rpc_Status_descriptor;
     }
 
@@ -472,17 +488,17 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getDetailsFieldBuilder();
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -500,8 +516,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.rpc.StatusProto.internal_static_google_rpc_Status_descriptor;
     }
 
@@ -542,38 +557,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.rpc.Status) {
-        return mergeFrom((com.google.rpc.Status)other);
+        return mergeFrom((com.google.rpc.Status) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -607,9 +623,10 @@ private static final long serialVersionUID = 0L;
             detailsBuilder_ = null;
             details_ = other.details_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            detailsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getDetailsFieldBuilder() : null;
+            detailsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getDetailsFieldBuilder()
+                    : null;
           } else {
             detailsBuilder_.addAllMessages(other.details_);
           }
@@ -643,15 +660,19 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
-    private int code_ ;
+    private int code_;
     /**
+     *
+     *
      * <pre>
      * The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].
      * </pre>
      *
      * <code>int32 code = 1;</code>
+     *
      * @return The code.
      */
     @java.lang.Override
@@ -659,30 +680,36 @@ private static final long serialVersionUID = 0L;
       return code_;
     }
     /**
+     *
+     *
      * <pre>
      * The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].
      * </pre>
      *
      * <code>int32 code = 1;</code>
+     *
      * @param value The code to set.
      * @return This builder for chaining.
      */
     public Builder setCode(int value) {
-      
+
       code_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].
      * </pre>
      *
      * <code>int32 code = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearCode() {
-      
+
       code_ = 0;
       onChanged();
       return this;
@@ -690,6 +717,8 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object message_ = "";
     /**
+     *
+     *
      * <pre>
      * A developer-facing error message, which should be in English. Any
      * user-facing error message should be localized and sent in the
@@ -697,13 +726,13 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     *
      * @return The message.
      */
     public java.lang.String getMessage() {
       java.lang.Object ref = message_;
       if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         message_ = s;
         return s;
@@ -712,6 +741,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A developer-facing error message, which should be in English. Any
      * user-facing error message should be localized and sent in the
@@ -719,15 +750,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     *
      * @return The bytes for message.
      */
-    public com.google.protobuf.ByteString
-        getMessageBytes() {
+    public com.google.protobuf.ByteString getMessageBytes() {
       java.lang.Object ref = message_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         message_ = b;
         return b;
       } else {
@@ -735,6 +765,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A developer-facing error message, which should be in English. Any
      * user-facing error message should be localized and sent in the
@@ -742,20 +774,22 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     *
      * @param value The message to set.
      * @return This builder for chaining.
      */
-    public Builder setMessage(
-        java.lang.String value) {
+    public Builder setMessage(java.lang.String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       message_ = value;
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A developer-facing error message, which should be in English. Any
      * user-facing error message should be localized and sent in the
@@ -763,15 +797,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearMessage() {
-      
+
       message_ = getDefaultInstance().getMessage();
       onChanged();
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A developer-facing error message, which should be in English. Any
      * user-facing error message should be localized and sent in the
@@ -779,34 +816,39 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string message = 2;</code>
+     *
      * @param value The bytes for message to set.
      * @return This builder for chaining.
      */
-    public Builder setMessageBytes(
-        com.google.protobuf.ByteString value) {
+    public Builder setMessageBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       message_ = value;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.google.protobuf.Any> details_ =
-      java.util.Collections.emptyList();
+    private java.util.List<com.google.protobuf.Any> details_ = java.util.Collections.emptyList();
+
     private void ensureDetailsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         details_ = new java.util.ArrayList<com.google.protobuf.Any>(details_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> detailsBuilder_;
+            com.google.protobuf.Any,
+            com.google.protobuf.Any.Builder,
+            com.google.protobuf.AnyOrBuilder>
+        detailsBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -822,6 +864,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -837,6 +881,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -852,6 +898,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -859,8 +907,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public Builder setDetails(
-        int index, com.google.protobuf.Any value) {
+    public Builder setDetails(int index, com.google.protobuf.Any value) {
       if (detailsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -874,6 +921,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -881,8 +930,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public Builder setDetails(
-        int index, com.google.protobuf.Any.Builder builderForValue) {
+    public Builder setDetails(int index, com.google.protobuf.Any.Builder builderForValue) {
       if (detailsBuilder_ == null) {
         ensureDetailsIsMutable();
         details_.set(index, builderForValue.build());
@@ -893,6 +941,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -914,6 +964,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -921,8 +973,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public Builder addDetails(
-        int index, com.google.protobuf.Any value) {
+    public Builder addDetails(int index, com.google.protobuf.Any value) {
       if (detailsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -936,6 +987,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -943,8 +996,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public Builder addDetails(
-        com.google.protobuf.Any.Builder builderForValue) {
+    public Builder addDetails(com.google.protobuf.Any.Builder builderForValue) {
       if (detailsBuilder_ == null) {
         ensureDetailsIsMutable();
         details_.add(builderForValue.build());
@@ -955,6 +1007,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -962,8 +1016,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public Builder addDetails(
-        int index, com.google.protobuf.Any.Builder builderForValue) {
+    public Builder addDetails(int index, com.google.protobuf.Any.Builder builderForValue) {
       if (detailsBuilder_ == null) {
         ensureDetailsIsMutable();
         details_.add(index, builderForValue.build());
@@ -974,6 +1027,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -981,12 +1036,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public Builder addAllDetails(
-        java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+    public Builder addAllDetails(java.lang.Iterable<? extends com.google.protobuf.Any> values) {
       if (detailsBuilder_ == null) {
         ensureDetailsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, details_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, details_);
         onChanged();
       } else {
         detailsBuilder_.addAllMessages(values);
@@ -994,6 +1047,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -1012,6 +1067,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -1030,6 +1087,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -1037,11 +1096,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public com.google.protobuf.Any.Builder getDetailsBuilder(
-        int index) {
+    public com.google.protobuf.Any.Builder getDetailsBuilder(int index) {
       return getDetailsFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -1049,14 +1109,16 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(
-        int index) {
+    public com.google.protobuf.AnyOrBuilder getDetailsOrBuilder(int index) {
       if (detailsBuilder_ == null) {
-        return details_.get(index);  } else {
+        return details_.get(index);
+      } else {
         return detailsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -1064,8 +1126,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
-         getDetailsOrBuilderList() {
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> getDetailsOrBuilderList() {
       if (detailsBuilder_ != null) {
         return detailsBuilder_.getMessageOrBuilderList();
       } else {
@@ -1073,6 +1134,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -1081,10 +1144,11 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
     public com.google.protobuf.Any.Builder addDetailsBuilder() {
-      return getDetailsFieldBuilder().addBuilder(
-          com.google.protobuf.Any.getDefaultInstance());
+      return getDetailsFieldBuilder().addBuilder(com.google.protobuf.Any.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -1092,12 +1156,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public com.google.protobuf.Any.Builder addDetailsBuilder(
-        int index) {
-      return getDetailsFieldBuilder().addBuilder(
-          index, com.google.protobuf.Any.getDefaultInstance());
+    public com.google.protobuf.Any.Builder addDetailsBuilder(int index) {
+      return getDetailsFieldBuilder()
+          .addBuilder(index, com.google.protobuf.Any.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * A list of messages that carry the error details.  There is a common set of
      * message types for APIs to use.
@@ -1105,27 +1170,29 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Any details = 3;</code>
      */
-    public java.util.List<com.google.protobuf.Any.Builder> 
-         getDetailsBuilderList() {
+    public java.util.List<com.google.protobuf.Any.Builder> getDetailsBuilderList() {
       return getDetailsFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+            com.google.protobuf.Any,
+            com.google.protobuf.Any.Builder,
+            com.google.protobuf.AnyOrBuilder>
         getDetailsFieldBuilder() {
       if (detailsBuilder_ == null) {
-        detailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
-                details_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
+        detailsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.protobuf.Any,
+                com.google.protobuf.Any.Builder,
+                com.google.protobuf.AnyOrBuilder>(
+                details_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
         details_ = null;
       }
       return detailsBuilder_;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1135,12 +1202,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.rpc.Status)
   }
 
   // @@protoc_insertion_point(class_scope:google.rpc.Status)
   private static final com.google.rpc.Status DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.rpc.Status();
   }
@@ -1149,16 +1216,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Status>
-      PARSER = new com.google.protobuf.AbstractParser<Status>() {
-    @java.lang.Override
-    public Status parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Status(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<Status> PARSER =
+      new com.google.protobuf.AbstractParser<Status>() {
+        @java.lang.Override
+        public Status parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Status(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<Status> parser() {
     return PARSER;
@@ -1173,6 +1240,4 @@ private static final long serialVersionUID = 0L;
   public com.google.rpc.Status getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

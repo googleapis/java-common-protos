@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * The launch stage as defined by [Google Cloud Platform
  * Launch Stages](http://cloud.google.com/terms/launch-stages).
@@ -26,9 +28,10 @@ package com.google.api;
  *
  * Protobuf enum {@code google.api.LaunchStage}
  */
-public enum LaunchStage
-    implements com.google.protobuf.ProtocolMessageEnum {
+public enum LaunchStage implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   *
+   *
    * <pre>
    * Do not use this default value.
    * </pre>
@@ -37,6 +40,8 @@ public enum LaunchStage
    */
   LAUNCH_STAGE_UNSPECIFIED(0),
   /**
+   *
+   *
    * <pre>
    * The feature is not yet implemented. Users can not use it.
    * </pre>
@@ -45,6 +50,8 @@ public enum LaunchStage
    */
   UNIMPLEMENTED(6),
   /**
+   *
+   *
    * <pre>
    * Prelaunch features are hidden from users and are only visible internally.
    * </pre>
@@ -53,6 +60,8 @@ public enum LaunchStage
    */
   PRELAUNCH(7),
   /**
+   *
+   *
    * <pre>
    * Early Access features are limited to a closed group of testers. To use
    * these features, you must sign up in advance and sign a Trusted Tester
@@ -65,6 +74,8 @@ public enum LaunchStage
    */
   EARLY_ACCESS(1),
   /**
+   *
+   *
    * <pre>
    * Alpha is a limited availability test for releases before they are cleared
    * for widespread use. By Alpha, all significant design issues are resolved
@@ -81,6 +92,8 @@ public enum LaunchStage
    */
   ALPHA(2),
   /**
+   *
+   *
    * <pre>
    * Beta is the point at which we are ready to open a release for any
    * customer to use. There are no SLA or technical support obligations in a
@@ -93,6 +106,8 @@ public enum LaunchStage
    */
   BETA(3),
   /**
+   *
+   *
    * <pre>
    * GA features are open to all developers and are considered stable and
    * fully qualified for production use.
@@ -102,6 +117,8 @@ public enum LaunchStage
    */
   GA(4),
   /**
+   *
+   *
    * <pre>
    * Deprecated features are scheduled to be shut down and removed. For more
    * information, see the “Deprecation Policy” section of our [Terms of
@@ -117,6 +134,8 @@ public enum LaunchStage
   ;
 
   /**
+   *
+   *
    * <pre>
    * Do not use this default value.
    * </pre>
@@ -125,6 +144,8 @@ public enum LaunchStage
    */
   public static final int LAUNCH_STAGE_UNSPECIFIED_VALUE = 0;
   /**
+   *
+   *
    * <pre>
    * The feature is not yet implemented. Users can not use it.
    * </pre>
@@ -133,6 +154,8 @@ public enum LaunchStage
    */
   public static final int UNIMPLEMENTED_VALUE = 6;
   /**
+   *
+   *
    * <pre>
    * Prelaunch features are hidden from users and are only visible internally.
    * </pre>
@@ -141,6 +164,8 @@ public enum LaunchStage
    */
   public static final int PRELAUNCH_VALUE = 7;
   /**
+   *
+   *
    * <pre>
    * Early Access features are limited to a closed group of testers. To use
    * these features, you must sign up in advance and sign a Trusted Tester
@@ -153,6 +178,8 @@ public enum LaunchStage
    */
   public static final int EARLY_ACCESS_VALUE = 1;
   /**
+   *
+   *
    * <pre>
    * Alpha is a limited availability test for releases before they are cleared
    * for widespread use. By Alpha, all significant design issues are resolved
@@ -169,6 +196,8 @@ public enum LaunchStage
    */
   public static final int ALPHA_VALUE = 2;
   /**
+   *
+   *
    * <pre>
    * Beta is the point at which we are ready to open a release for any
    * customer to use. There are no SLA or technical support obligations in a
@@ -181,6 +210,8 @@ public enum LaunchStage
    */
   public static final int BETA_VALUE = 3;
   /**
+   *
+   *
    * <pre>
    * GA features are open to all developers and are considered stable and
    * fully qualified for production use.
@@ -190,6 +221,8 @@ public enum LaunchStage
    */
   public static final int GA_VALUE = 4;
   /**
+   *
+   *
    * <pre>
    * Deprecated features are scheduled to be shut down and removed. For more
    * information, see the “Deprecation Policy” section of our [Terms of
@@ -201,7 +234,6 @@ public enum LaunchStage
    * <code>DEPRECATED = 5;</code>
    */
   public static final int DEPRECATED_VALUE = 5;
-
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -227,54 +259,59 @@ public enum LaunchStage
    */
   public static LaunchStage forNumber(int value) {
     switch (value) {
-      case 0: return LAUNCH_STAGE_UNSPECIFIED;
-      case 6: return UNIMPLEMENTED;
-      case 7: return PRELAUNCH;
-      case 1: return EARLY_ACCESS;
-      case 2: return ALPHA;
-      case 3: return BETA;
-      case 4: return GA;
-      case 5: return DEPRECATED;
-      default: return null;
+      case 0:
+        return LAUNCH_STAGE_UNSPECIFIED;
+      case 6:
+        return UNIMPLEMENTED;
+      case 7:
+        return PRELAUNCH;
+      case 1:
+        return EARLY_ACCESS;
+      case 2:
+        return ALPHA;
+      case 3:
+        return BETA;
+      case 4:
+        return GA;
+      case 5:
+        return DEPRECATED;
+      default:
+        return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<LaunchStage>
-      internalGetValueMap() {
+  public static com.google.protobuf.Internal.EnumLiteMap<LaunchStage> internalGetValueMap() {
     return internalValueMap;
   }
-  private static final com.google.protobuf.Internal.EnumLiteMap<
-      LaunchStage> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<LaunchStage>() {
-          public LaunchStage findValueByNumber(int number) {
-            return LaunchStage.forNumber(number);
-          }
-        };
 
-  public final com.google.protobuf.Descriptors.EnumValueDescriptor
-      getValueDescriptor() {
+  private static final com.google.protobuf.Internal.EnumLiteMap<LaunchStage> internalValueMap =
+      new com.google.protobuf.Internal.EnumLiteMap<LaunchStage>() {
+        public LaunchStage findValueByNumber(int number) {
+          return LaunchStage.forNumber(number);
+        }
+      };
+
+  public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
-  public final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptorForType() {
+
+  public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
     return getDescriptor();
   }
-  public static final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
     return com.google.api.LaunchStageProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final LaunchStage[] VALUES = values();
 
-  public static LaunchStage valueOf(
-      com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+  public static LaunchStage valueOf(com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
-      throw new java.lang.IllegalArgumentException(
-        "EnumValueDescriptor is not for this type.");
+      throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -290,4 +327,3 @@ public enum LaunchStage
 
   // @@protoc_insertion_point(enum_scope:google.api.LaunchStage)
 }
-

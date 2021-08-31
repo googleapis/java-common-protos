@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * Monitoring configuration of the service.
  * The example below shows how to configure monitored resources and metrics
@@ -74,15 +76,16 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Monitoring}
  */
-public final class Monitoring extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class Monitoring extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.api.Monitoring)
     MonitoringOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use Monitoring.newBuilder() to construct.
   private Monitoring(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Monitoring() {
     producerDestinations_ = java.util.Collections.emptyList();
     consumerDestinations_ = java.util.Collections.emptyList();
@@ -90,16 +93,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Monitoring();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private Monitoring(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -119,38 +121,43 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              producerDestinations_ = new java.util.ArrayList<com.google.api.Monitoring.MonitoringDestination>();
-              mutable_bitField0_ |= 0x00000001;
+          case 10:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                producerDestinations_ =
+                    new java.util.ArrayList<com.google.api.Monitoring.MonitoringDestination>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              producerDestinations_.add(
+                  input.readMessage(
+                      com.google.api.Monitoring.MonitoringDestination.parser(), extensionRegistry));
+              break;
             }
-            producerDestinations_.add(
-                input.readMessage(com.google.api.Monitoring.MonitoringDestination.parser(), extensionRegistry));
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              consumerDestinations_ = new java.util.ArrayList<com.google.api.Monitoring.MonitoringDestination>();
-              mutable_bitField0_ |= 0x00000002;
+          case 18:
+            {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                consumerDestinations_ =
+                    new java.util.ArrayList<com.google.api.Monitoring.MonitoringDestination>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              consumerDestinations_.add(
+                  input.readMessage(
+                      com.google.api.Monitoring.MonitoringDestination.parser(), extensionRegistry));
+              break;
             }
-            consumerDestinations_.add(
-                input.readMessage(com.google.api.Monitoring.MonitoringDestination.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-            break;
-          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         producerDestinations_ = java.util.Collections.unmodifiableList(producerDestinations_);
@@ -162,8 +169,8 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.api.MonitoringProto.internal_static_google_api_Monitoring_descriptor;
   }
 
@@ -175,78 +182,96 @@ private static final long serialVersionUID = 0L;
             com.google.api.Monitoring.class, com.google.api.Monitoring.Builder.class);
   }
 
-  public interface MonitoringDestinationOrBuilder extends
+  public interface MonitoringDestinationOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:google.api.Monitoring.MonitoringDestination)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * The monitored resource type. The type must be defined in
      * [Service.monitored_resources][google.api.Service.monitored_resources] section.
      * </pre>
      *
      * <code>string monitored_resource = 1;</code>
+     *
      * @return The monitoredResource.
      */
     java.lang.String getMonitoredResource();
     /**
+     *
+     *
      * <pre>
      * The monitored resource type. The type must be defined in
      * [Service.monitored_resources][google.api.Service.monitored_resources] section.
      * </pre>
      *
      * <code>string monitored_resource = 1;</code>
+     *
      * @return The bytes for monitoredResource.
      */
-    com.google.protobuf.ByteString
-        getMonitoredResourceBytes();
+    com.google.protobuf.ByteString getMonitoredResourceBytes();
 
     /**
+     *
+     *
      * <pre>
      * Types of the metrics to report to this monitoring destination.
      * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
+     *
      * @return A list containing the metrics.
      */
-    java.util.List<java.lang.String>
-        getMetricsList();
+    java.util.List<java.lang.String> getMetricsList();
     /**
+     *
+     *
      * <pre>
      * Types of the metrics to report to this monitoring destination.
      * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
+     *
      * @return The count of metrics.
      */
     int getMetricsCount();
     /**
+     *
+     *
      * <pre>
      * Types of the metrics to report to this monitoring destination.
      * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
+     *
      * @param index The index of the element to return.
      * @return The metrics at the given index.
      */
     java.lang.String getMetrics(int index);
     /**
+     *
+     *
      * <pre>
      * Types of the metrics to report to this monitoring destination.
      * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the metrics at the given index.
      */
-    com.google.protobuf.ByteString
-        getMetricsBytes(int index);
+    com.google.protobuf.ByteString getMetricsBytes(int index);
   }
   /**
+   *
+   *
    * <pre>
    * Configuration of a specific monitoring destination (the producer project
    * or the consumer project).
@@ -254,15 +279,16 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.Monitoring.MonitoringDestination}
    */
-  public static final class MonitoringDestination extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class MonitoringDestination extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:google.api.Monitoring.MonitoringDestination)
       MonitoringDestinationOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use MonitoringDestination.newBuilder() to construct.
     private MonitoringDestination(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private MonitoringDestination() {
       monitoredResource_ = "";
       metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -270,16 +296,15 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new MonitoringDestination();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private MonitoringDestination(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -299,35 +324,36 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              monitoredResource_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                metrics_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                monitoredResource_ = s;
+                break;
               }
-              metrics_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  metrics_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                metrics_.add(s);
+                break;
               }
-              break;
-            }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           metrics_ = metrics_.getUnmodifiableView();
@@ -336,28 +362,34 @@ private static final long serialVersionUID = 0L;
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.api.MonitoringProto.internal_static_google_api_Monitoring_MonitoringDestination_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.api.MonitoringProto
+          .internal_static_google_api_Monitoring_MonitoringDestination_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.api.MonitoringProto.internal_static_google_api_Monitoring_MonitoringDestination_fieldAccessorTable
+      return com.google.api.MonitoringProto
+          .internal_static_google_api_Monitoring_MonitoringDestination_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.api.Monitoring.MonitoringDestination.class, com.google.api.Monitoring.MonitoringDestination.Builder.class);
+              com.google.api.Monitoring.MonitoringDestination.class,
+              com.google.api.Monitoring.MonitoringDestination.Builder.class);
     }
 
     public static final int MONITORED_RESOURCE_FIELD_NUMBER = 1;
     private volatile java.lang.Object monitoredResource_;
     /**
+     *
+     *
      * <pre>
      * The monitored resource type. The type must be defined in
      * [Service.monitored_resources][google.api.Service.monitored_resources] section.
      * </pre>
      *
      * <code>string monitored_resource = 1;</code>
+     *
      * @return The monitoredResource.
      */
     @java.lang.Override
@@ -366,30 +398,30 @@ private static final long serialVersionUID = 0L;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         monitoredResource_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The monitored resource type. The type must be defined in
      * [Service.monitored_resources][google.api.Service.monitored_resources] section.
      * </pre>
      *
      * <code>string monitored_resource = 1;</code>
+     *
      * @return The bytes for monitoredResource.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMonitoredResourceBytes() {
+    public com.google.protobuf.ByteString getMonitoredResourceBytes() {
       java.lang.Object ref = monitoredResource_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         monitoredResource_ = b;
         return b;
       } else {
@@ -400,37 +432,45 @@ private static final long serialVersionUID = 0L;
     public static final int METRICS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList metrics_;
     /**
+     *
+     *
      * <pre>
      * Types of the metrics to report to this monitoring destination.
      * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
+     *
      * @return A list containing the metrics.
      */
-    public com.google.protobuf.ProtocolStringList
-        getMetricsList() {
+    public com.google.protobuf.ProtocolStringList getMetricsList() {
       return metrics_;
     }
     /**
+     *
+     *
      * <pre>
      * Types of the metrics to report to this monitoring destination.
      * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
+     *
      * @return The count of metrics.
      */
     public int getMetricsCount() {
       return metrics_.size();
     }
     /**
+     *
+     *
      * <pre>
      * Types of the metrics to report to this monitoring destination.
      * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
+     *
      * @param index The index of the element to return.
      * @return The metrics at the given index.
      */
@@ -438,21 +478,24 @@ private static final long serialVersionUID = 0L;
       return metrics_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * Types of the metrics to report to this monitoring destination.
      * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
      * </pre>
      *
      * <code>repeated string metrics = 2;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the metrics at the given index.
      */
-    public com.google.protobuf.ByteString
-        getMetricsBytes(int index) {
+    public com.google.protobuf.ByteString getMetricsBytes(int index) {
       return metrics_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -464,8 +507,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (!getMonitoredResourceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, monitoredResource_);
       }
@@ -500,17 +542,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.google.api.Monitoring.MonitoringDestination)) {
         return super.equals(obj);
       }
-      com.google.api.Monitoring.MonitoringDestination other = (com.google.api.Monitoring.MonitoringDestination) obj;
+      com.google.api.Monitoring.MonitoringDestination other =
+          (com.google.api.Monitoring.MonitoringDestination) obj;
 
-      if (!getMonitoredResource()
-          .equals(other.getMonitoredResource())) return false;
-      if (!getMetricsList()
-          .equals(other.getMetricsList())) return false;
+      if (!getMonitoredResource().equals(other.getMonitoredResource())) return false;
+      if (!getMetricsList().equals(other.getMetricsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -534,87 +575,93 @@ private static final long serialVersionUID = 0L;
     }
 
     public static com.google.api.Monitoring.MonitoringDestination parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.api.Monitoring.MonitoringDestination parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.api.Monitoring.MonitoringDestination parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.api.Monitoring.MonitoringDestination parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.google.api.Monitoring.MonitoringDestination parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.google.api.Monitoring.MonitoringDestination parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.api.Monitoring.MonitoringDestination parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.google.api.Monitoring.MonitoringDestination parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.google.api.Monitoring.MonitoringDestination parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.google.api.Monitoring.MonitoringDestination parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.google.api.Monitoring.MonitoringDestination parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.google.api.Monitoring.MonitoringDestination parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.google.api.Monitoring.MonitoringDestination parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.google.api.Monitoring.MonitoringDestination parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.google.api.Monitoring.MonitoringDestination prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -624,6 +671,8 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * Configuration of a specific monitoring destination (the producer project
      * or the consumer project).
@@ -631,21 +680,24 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code google.api.Monitoring.MonitoringDestination}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:google.api.Monitoring.MonitoringDestination)
         com.google.api.Monitoring.MonitoringDestinationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.api.MonitoringProto.internal_static_google_api_Monitoring_MonitoringDestination_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.google.api.MonitoringProto
+            .internal_static_google_api_Monitoring_MonitoringDestination_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.api.MonitoringProto.internal_static_google_api_Monitoring_MonitoringDestination_fieldAccessorTable
+        return com.google.api.MonitoringProto
+            .internal_static_google_api_Monitoring_MonitoringDestination_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.api.Monitoring.MonitoringDestination.class, com.google.api.Monitoring.MonitoringDestination.Builder.class);
+                com.google.api.Monitoring.MonitoringDestination.class,
+                com.google.api.Monitoring.MonitoringDestination.Builder.class);
       }
 
       // Construct using com.google.api.Monitoring.MonitoringDestination.newBuilder()
@@ -653,16 +705,15 @@ private static final long serialVersionUID = 0L;
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -674,9 +725,9 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.api.MonitoringProto.internal_static_google_api_Monitoring_MonitoringDestination_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.google.api.MonitoringProto
+            .internal_static_google_api_Monitoring_MonitoringDestination_descriptor;
       }
 
       @java.lang.Override
@@ -695,7 +746,8 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public com.google.api.Monitoring.MonitoringDestination buildPartial() {
-        com.google.api.Monitoring.MonitoringDestination result = new com.google.api.Monitoring.MonitoringDestination(this);
+        com.google.api.Monitoring.MonitoringDestination result =
+            new com.google.api.Monitoring.MonitoringDestination(this);
         int from_bitField0_ = bitField0_;
         result.monitoredResource_ = monitoredResource_;
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -711,38 +763,41 @@ private static final long serialVersionUID = 0L;
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.api.Monitoring.MonitoringDestination) {
-          return mergeFrom((com.google.api.Monitoring.MonitoringDestination)other);
+          return mergeFrom((com.google.api.Monitoring.MonitoringDestination) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -750,7 +805,8 @@ private static final long serialVersionUID = 0L;
       }
 
       public Builder mergeFrom(com.google.api.Monitoring.MonitoringDestination other) {
-        if (other == com.google.api.Monitoring.MonitoringDestination.getDefaultInstance()) return this;
+        if (other == com.google.api.Monitoring.MonitoringDestination.getDefaultInstance())
+          return this;
         if (!other.getMonitoredResource().isEmpty()) {
           monitoredResource_ = other.monitoredResource_;
           onChanged();
@@ -784,7 +840,8 @@ private static final long serialVersionUID = 0L;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.api.Monitoring.MonitoringDestination) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.google.api.Monitoring.MonitoringDestination) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -793,23 +850,26 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+
       private int bitField0_;
 
       private java.lang.Object monitoredResource_ = "";
       /**
+       *
+       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
+       *
        * @return The monitoredResource.
        */
       public java.lang.String getMonitoredResource() {
         java.lang.Object ref = monitoredResource_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           monitoredResource_ = s;
           return s;
@@ -818,21 +878,22 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
+       *
        * @return The bytes for monitoredResource.
        */
-      public com.google.protobuf.ByteString
-          getMonitoredResourceBytes() {
+      public com.google.protobuf.ByteString getMonitoredResourceBytes() {
         java.lang.Object ref = monitoredResource_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           monitoredResource_ = b;
           return b;
         } else {
@@ -840,101 +901,118 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
+       *
        * @param value The monitoredResource to set.
        * @return This builder for chaining.
        */
-      public Builder setMonitoredResource(
-          java.lang.String value) {
+      public Builder setMonitoredResource(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         monitoredResource_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearMonitoredResource() {
-        
+
         monitoredResource_ = getDefaultInstance().getMonitoredResource();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The monitored resource type. The type must be defined in
        * [Service.monitored_resources][google.api.Service.monitored_resources] section.
        * </pre>
        *
        * <code>string monitored_resource = 1;</code>
+       *
        * @param value The bytes for monitoredResource to set.
        * @return This builder for chaining.
        */
-      public Builder setMonitoredResourceBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setMonitoredResourceBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         monitoredResource_ = value;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringList metrics_ =
+          com.google.protobuf.LazyStringArrayList.EMPTY;
+
       private void ensureMetricsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           metrics_ = new com.google.protobuf.LazyStringArrayList(metrics_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
       /**
+       *
+       *
        * <pre>
        * Types of the metrics to report to this monitoring destination.
        * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
+       *
        * @return A list containing the metrics.
        */
-      public com.google.protobuf.ProtocolStringList
-          getMetricsList() {
+      public com.google.protobuf.ProtocolStringList getMetricsList() {
         return metrics_.getUnmodifiableView();
       }
       /**
+       *
+       *
        * <pre>
        * Types of the metrics to report to this monitoring destination.
        * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
+       *
        * @return The count of metrics.
        */
       public int getMetricsCount() {
         return metrics_.size();
       }
       /**
+       *
+       *
        * <pre>
        * Types of the metrics to report to this monitoring destination.
        * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
+       *
        * @param index The index of the element to return.
        * @return The metrics at the given index.
        */
@@ -942,85 +1020,95 @@ private static final long serialVersionUID = 0L;
         return metrics_.get(index);
       }
       /**
+       *
+       *
        * <pre>
        * Types of the metrics to report to this monitoring destination.
        * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
+       *
        * @param index The index of the value to return.
        * @return The bytes of the metrics at the given index.
        */
-      public com.google.protobuf.ByteString
-          getMetricsBytes(int index) {
+      public com.google.protobuf.ByteString getMetricsBytes(int index) {
         return metrics_.getByteString(index);
       }
       /**
+       *
+       *
        * <pre>
        * Types of the metrics to report to this monitoring destination.
        * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
+       *
        * @param index The index to set the value at.
        * @param value The metrics to set.
        * @return This builder for chaining.
        */
-      public Builder setMetrics(
-          int index, java.lang.String value) {
+      public Builder setMetrics(int index, java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureMetricsIsMutable();
+          throw new NullPointerException();
+        }
+        ensureMetricsIsMutable();
         metrics_.set(index, value);
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Types of the metrics to report to this monitoring destination.
        * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
+       *
        * @param value The metrics to add.
        * @return This builder for chaining.
        */
-      public Builder addMetrics(
-          java.lang.String value) {
+      public Builder addMetrics(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureMetricsIsMutable();
+          throw new NullPointerException();
+        }
+        ensureMetricsIsMutable();
         metrics_.add(value);
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Types of the metrics to report to this monitoring destination.
        * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
+       *
        * @param values The metrics to add.
        * @return This builder for chaining.
        */
-      public Builder addAllMetrics(
-          java.lang.Iterable<java.lang.String> values) {
+      public Builder addAllMetrics(java.lang.Iterable<java.lang.String> values) {
         ensureMetricsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, metrics_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, metrics_);
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Types of the metrics to report to this monitoring destination.
        * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearMetrics() {
@@ -1030,26 +1118,29 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Types of the metrics to report to this monitoring destination.
        * Each type must be defined in [Service.metrics][google.api.Service.metrics] section.
        * </pre>
        *
        * <code>repeated string metrics = 2;</code>
+       *
        * @param value The bytes of the metrics to add.
        * @return This builder for chaining.
        */
-      public Builder addMetricsBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder addMetricsBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
         ensureMetricsIsMutable();
         metrics_.add(value);
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1062,12 +1153,12 @@ private static final long serialVersionUID = 0L;
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:google.api.Monitoring.MonitoringDestination)
     }
 
     // @@protoc_insertion_point(class_scope:google.api.Monitoring.MonitoringDestination)
     private static final com.google.api.Monitoring.MonitoringDestination DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.google.api.Monitoring.MonitoringDestination();
     }
@@ -1076,16 +1167,16 @@ private static final long serialVersionUID = 0L;
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MonitoringDestination>
-        PARSER = new com.google.protobuf.AbstractParser<MonitoringDestination>() {
-      @java.lang.Override
-      public MonitoringDestination parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MonitoringDestination(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<MonitoringDestination> PARSER =
+        new com.google.protobuf.AbstractParser<MonitoringDestination>() {
+          @java.lang.Override
+          public MonitoringDestination parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new MonitoringDestination(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<MonitoringDestination> parser() {
       return PARSER;
@@ -1100,12 +1191,13 @@ private static final long serialVersionUID = 0L;
     public com.google.api.Monitoring.MonitoringDestination getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
   public static final int PRODUCER_DESTINATIONS_FIELD_NUMBER = 1;
   private java.util.List<com.google.api.Monitoring.MonitoringDestination> producerDestinations_;
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -1118,10 +1210,13 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.Monitoring.MonitoringDestination producer_destinations = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<com.google.api.Monitoring.MonitoringDestination> getProducerDestinationsList() {
+  public java.util.List<com.google.api.Monitoring.MonitoringDestination>
+      getProducerDestinationsList() {
     return producerDestinations_;
   }
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -1134,11 +1229,13 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.Monitoring.MonitoringDestination producer_destinations = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder> 
+  public java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder>
       getProducerDestinationsOrBuilderList() {
     return producerDestinations_;
   }
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -1155,6 +1252,8 @@ private static final long serialVersionUID = 0L;
     return producerDestinations_.size();
   }
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -1171,6 +1270,8 @@ private static final long serialVersionUID = 0L;
     return producerDestinations_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the producer project.
    * There can be multiple producer destinations. A monitored resource type may
@@ -1191,6 +1292,8 @@ private static final long serialVersionUID = 0L;
   public static final int CONSUMER_DESTINATIONS_FIELD_NUMBER = 2;
   private java.util.List<com.google.api.Monitoring.MonitoringDestination> consumerDestinations_;
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may
@@ -1203,10 +1306,13 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.Monitoring.MonitoringDestination consumer_destinations = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<com.google.api.Monitoring.MonitoringDestination> getConsumerDestinationsList() {
+  public java.util.List<com.google.api.Monitoring.MonitoringDestination>
+      getConsumerDestinationsList() {
     return consumerDestinations_;
   }
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may
@@ -1219,11 +1325,13 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.Monitoring.MonitoringDestination consumer_destinations = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder> 
+  public java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder>
       getConsumerDestinationsOrBuilderList() {
     return consumerDestinations_;
   }
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may
@@ -1240,6 +1348,8 @@ private static final long serialVersionUID = 0L;
     return consumerDestinations_.size();
   }
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may
@@ -1256,6 +1366,8 @@ private static final long serialVersionUID = 0L;
     return consumerDestinations_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * Monitoring configurations for sending metrics to the consumer project.
    * There can be multiple consumer destinations. A monitored resource type may
@@ -1274,6 +1386,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -1285,8 +1398,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     for (int i = 0; i < producerDestinations_.size(); i++) {
       output.writeMessage(1, producerDestinations_.get(i));
     }
@@ -1303,12 +1415,12 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     for (int i = 0; i < producerDestinations_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, producerDestinations_.get(i));
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(1, producerDestinations_.get(i));
     }
     for (int i = 0; i < consumerDestinations_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, consumerDestinations_.get(i));
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(2, consumerDestinations_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1318,17 +1430,15 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.api.Monitoring)) {
       return super.equals(obj);
     }
     com.google.api.Monitoring other = (com.google.api.Monitoring) obj;
 
-    if (!getProducerDestinationsList()
-        .equals(other.getProducerDestinationsList())) return false;
-    if (!getConsumerDestinationsList()
-        .equals(other.getConsumerDestinationsList())) return false;
+    if (!getProducerDestinationsList().equals(other.getProducerDestinationsList())) return false;
+    if (!getConsumerDestinationsList().equals(other.getConsumerDestinationsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1353,97 +1463,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.api.Monitoring parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.api.Monitoring parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Monitoring parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.api.Monitoring parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.api.Monitoring parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Monitoring parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Monitoring parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Monitoring parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Monitoring parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Monitoring parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.Monitoring parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.api.Monitoring parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.api.Monitoring parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.api.Monitoring parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Monitoring parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.api.Monitoring prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Monitoring configuration of the service.
    * The example below shows how to configure monitored resources and metrics
@@ -1499,12 +1615,11 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.Monitoring}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.api.Monitoring)
       com.google.api.MonitoringOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.api.MonitoringProto.internal_static_google_api_Monitoring_descriptor;
     }
 
@@ -1521,18 +1636,18 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getProducerDestinationsFieldBuilder();
         getConsumerDestinationsFieldBuilder();
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -1552,8 +1667,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.api.MonitoringProto.internal_static_google_api_Monitoring_descriptor;
     }
 
@@ -1601,38 +1715,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Monitoring) {
-        return mergeFrom((com.google.api.Monitoring)other);
+        return mergeFrom((com.google.api.Monitoring) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -1659,9 +1774,10 @@ private static final long serialVersionUID = 0L;
             producerDestinationsBuilder_ = null;
             producerDestinations_ = other.producerDestinations_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            producerDestinationsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getProducerDestinationsFieldBuilder() : null;
+            producerDestinationsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getProducerDestinationsFieldBuilder()
+                    : null;
           } else {
             producerDestinationsBuilder_.addAllMessages(other.producerDestinations_);
           }
@@ -1685,9 +1801,10 @@ private static final long serialVersionUID = 0L;
             consumerDestinationsBuilder_ = null;
             consumerDestinations_ = other.consumerDestinations_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            consumerDestinationsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getConsumerDestinationsFieldBuilder() : null;
+            consumerDestinationsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getConsumerDestinationsFieldBuilder()
+                    : null;
           } else {
             consumerDestinationsBuilder_.addAllMessages(other.consumerDestinations_);
           }
@@ -1721,21 +1838,30 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.util.List<com.google.api.Monitoring.MonitoringDestination> producerDestinations_ =
-      java.util.Collections.emptyList();
+        java.util.Collections.emptyList();
+
     private void ensureProducerDestinationsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        producerDestinations_ = new java.util.ArrayList<com.google.api.Monitoring.MonitoringDestination>(producerDestinations_);
+        producerDestinations_ =
+            new java.util.ArrayList<com.google.api.Monitoring.MonitoringDestination>(
+                producerDestinations_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.Monitoring.MonitoringDestination, com.google.api.Monitoring.MonitoringDestination.Builder, com.google.api.Monitoring.MonitoringDestinationOrBuilder> producerDestinationsBuilder_;
+            com.google.api.Monitoring.MonitoringDestination,
+            com.google.api.Monitoring.MonitoringDestination.Builder,
+            com.google.api.Monitoring.MonitoringDestinationOrBuilder>
+        producerDestinationsBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1747,7 +1873,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination producer_destinations = 1;</code>
      */
-    public java.util.List<com.google.api.Monitoring.MonitoringDestination> getProducerDestinationsList() {
+    public java.util.List<com.google.api.Monitoring.MonitoringDestination>
+        getProducerDestinationsList() {
       if (producerDestinationsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(producerDestinations_);
       } else {
@@ -1755,6 +1882,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1774,6 +1903,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1793,6 +1924,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1819,6 +1952,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1842,6 +1977,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1867,6 +2004,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1893,6 +2032,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1916,6 +2057,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1939,6 +2082,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1954,8 +2099,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Iterable<? extends com.google.api.Monitoring.MonitoringDestination> values) {
       if (producerDestinationsBuilder_ == null) {
         ensureProducerDestinationsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, producerDestinations_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, producerDestinations_);
         onChanged();
       } else {
         producerDestinationsBuilder_.addAllMessages(values);
@@ -1963,6 +2107,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -1985,6 +2131,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -2007,6 +2155,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -2023,6 +2173,8 @@ private static final long serialVersionUID = 0L;
       return getProducerDestinationsFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -2034,14 +2186,17 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination producer_destinations = 1;</code>
      */
-    public com.google.api.Monitoring.MonitoringDestinationOrBuilder getProducerDestinationsOrBuilder(
-        int index) {
+    public com.google.api.Monitoring.MonitoringDestinationOrBuilder
+        getProducerDestinationsOrBuilder(int index) {
       if (producerDestinationsBuilder_ == null) {
-        return producerDestinations_.get(index);  } else {
+        return producerDestinations_.get(index);
+      } else {
         return producerDestinationsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -2053,8 +2208,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination producer_destinations = 1;</code>
      */
-    public java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder> 
-         getProducerDestinationsOrBuilderList() {
+    public java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder>
+        getProducerDestinationsOrBuilderList() {
       if (producerDestinationsBuilder_ != null) {
         return producerDestinationsBuilder_.getMessageOrBuilderList();
       } else {
@@ -2062,6 +2217,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -2073,11 +2230,14 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination producer_destinations = 1;</code>
      */
-    public com.google.api.Monitoring.MonitoringDestination.Builder addProducerDestinationsBuilder() {
-      return getProducerDestinationsFieldBuilder().addBuilder(
-          com.google.api.Monitoring.MonitoringDestination.getDefaultInstance());
+    public com.google.api.Monitoring.MonitoringDestination.Builder
+        addProducerDestinationsBuilder() {
+      return getProducerDestinationsFieldBuilder()
+          .addBuilder(com.google.api.Monitoring.MonitoringDestination.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -2091,10 +2251,12 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.api.Monitoring.MonitoringDestination.Builder addProducerDestinationsBuilder(
         int index) {
-      return getProducerDestinationsFieldBuilder().addBuilder(
-          index, com.google.api.Monitoring.MonitoringDestination.getDefaultInstance());
+      return getProducerDestinationsFieldBuilder()
+          .addBuilder(index, com.google.api.Monitoring.MonitoringDestination.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the producer project.
      * There can be multiple producer destinations. A monitored resource type may
@@ -2106,16 +2268,22 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination producer_destinations = 1;</code>
      */
-    public java.util.List<com.google.api.Monitoring.MonitoringDestination.Builder> 
-         getProducerDestinationsBuilderList() {
+    public java.util.List<com.google.api.Monitoring.MonitoringDestination.Builder>
+        getProducerDestinationsBuilderList() {
       return getProducerDestinationsFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.Monitoring.MonitoringDestination, com.google.api.Monitoring.MonitoringDestination.Builder, com.google.api.Monitoring.MonitoringDestinationOrBuilder> 
+            com.google.api.Monitoring.MonitoringDestination,
+            com.google.api.Monitoring.MonitoringDestination.Builder,
+            com.google.api.Monitoring.MonitoringDestinationOrBuilder>
         getProducerDestinationsFieldBuilder() {
       if (producerDestinationsBuilder_ == null) {
-        producerDestinationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.Monitoring.MonitoringDestination, com.google.api.Monitoring.MonitoringDestination.Builder, com.google.api.Monitoring.MonitoringDestinationOrBuilder>(
+        producerDestinationsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.api.Monitoring.MonitoringDestination,
+                com.google.api.Monitoring.MonitoringDestination.Builder,
+                com.google.api.Monitoring.MonitoringDestinationOrBuilder>(
                 producerDestinations_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -2126,18 +2294,26 @@ private static final long serialVersionUID = 0L;
     }
 
     private java.util.List<com.google.api.Monitoring.MonitoringDestination> consumerDestinations_ =
-      java.util.Collections.emptyList();
+        java.util.Collections.emptyList();
+
     private void ensureConsumerDestinationsIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        consumerDestinations_ = new java.util.ArrayList<com.google.api.Monitoring.MonitoringDestination>(consumerDestinations_);
+        consumerDestinations_ =
+            new java.util.ArrayList<com.google.api.Monitoring.MonitoringDestination>(
+                consumerDestinations_);
         bitField0_ |= 0x00000002;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.Monitoring.MonitoringDestination, com.google.api.Monitoring.MonitoringDestination.Builder, com.google.api.Monitoring.MonitoringDestinationOrBuilder> consumerDestinationsBuilder_;
+            com.google.api.Monitoring.MonitoringDestination,
+            com.google.api.Monitoring.MonitoringDestination.Builder,
+            com.google.api.Monitoring.MonitoringDestinationOrBuilder>
+        consumerDestinationsBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2149,7 +2325,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination consumer_destinations = 2;</code>
      */
-    public java.util.List<com.google.api.Monitoring.MonitoringDestination> getConsumerDestinationsList() {
+    public java.util.List<com.google.api.Monitoring.MonitoringDestination>
+        getConsumerDestinationsList() {
       if (consumerDestinationsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(consumerDestinations_);
       } else {
@@ -2157,6 +2334,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2176,6 +2355,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2195,6 +2376,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2221,6 +2404,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2244,6 +2429,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2269,6 +2456,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2295,6 +2484,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2318,6 +2509,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2341,6 +2534,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2356,8 +2551,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Iterable<? extends com.google.api.Monitoring.MonitoringDestination> values) {
       if (consumerDestinationsBuilder_ == null) {
         ensureConsumerDestinationsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, consumerDestinations_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, consumerDestinations_);
         onChanged();
       } else {
         consumerDestinationsBuilder_.addAllMessages(values);
@@ -2365,6 +2559,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2387,6 +2583,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2409,6 +2607,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2425,6 +2625,8 @@ private static final long serialVersionUID = 0L;
       return getConsumerDestinationsFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2436,14 +2638,17 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination consumer_destinations = 2;</code>
      */
-    public com.google.api.Monitoring.MonitoringDestinationOrBuilder getConsumerDestinationsOrBuilder(
-        int index) {
+    public com.google.api.Monitoring.MonitoringDestinationOrBuilder
+        getConsumerDestinationsOrBuilder(int index) {
       if (consumerDestinationsBuilder_ == null) {
-        return consumerDestinations_.get(index);  } else {
+        return consumerDestinations_.get(index);
+      } else {
         return consumerDestinationsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2455,8 +2660,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination consumer_destinations = 2;</code>
      */
-    public java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder> 
-         getConsumerDestinationsOrBuilderList() {
+    public java.util.List<? extends com.google.api.Monitoring.MonitoringDestinationOrBuilder>
+        getConsumerDestinationsOrBuilderList() {
       if (consumerDestinationsBuilder_ != null) {
         return consumerDestinationsBuilder_.getMessageOrBuilderList();
       } else {
@@ -2464,6 +2669,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2475,11 +2682,14 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination consumer_destinations = 2;</code>
      */
-    public com.google.api.Monitoring.MonitoringDestination.Builder addConsumerDestinationsBuilder() {
-      return getConsumerDestinationsFieldBuilder().addBuilder(
-          com.google.api.Monitoring.MonitoringDestination.getDefaultInstance());
+    public com.google.api.Monitoring.MonitoringDestination.Builder
+        addConsumerDestinationsBuilder() {
+      return getConsumerDestinationsFieldBuilder()
+          .addBuilder(com.google.api.Monitoring.MonitoringDestination.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2493,10 +2703,12 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.api.Monitoring.MonitoringDestination.Builder addConsumerDestinationsBuilder(
         int index) {
-      return getConsumerDestinationsFieldBuilder().addBuilder(
-          index, com.google.api.Monitoring.MonitoringDestination.getDefaultInstance());
+      return getConsumerDestinationsFieldBuilder()
+          .addBuilder(index, com.google.api.Monitoring.MonitoringDestination.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * Monitoring configurations for sending metrics to the consumer project.
      * There can be multiple consumer destinations. A monitored resource type may
@@ -2508,16 +2720,22 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.Monitoring.MonitoringDestination consumer_destinations = 2;</code>
      */
-    public java.util.List<com.google.api.Monitoring.MonitoringDestination.Builder> 
-         getConsumerDestinationsBuilderList() {
+    public java.util.List<com.google.api.Monitoring.MonitoringDestination.Builder>
+        getConsumerDestinationsBuilderList() {
       return getConsumerDestinationsFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.Monitoring.MonitoringDestination, com.google.api.Monitoring.MonitoringDestination.Builder, com.google.api.Monitoring.MonitoringDestinationOrBuilder> 
+            com.google.api.Monitoring.MonitoringDestination,
+            com.google.api.Monitoring.MonitoringDestination.Builder,
+            com.google.api.Monitoring.MonitoringDestinationOrBuilder>
         getConsumerDestinationsFieldBuilder() {
       if (consumerDestinationsBuilder_ == null) {
-        consumerDestinationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.Monitoring.MonitoringDestination, com.google.api.Monitoring.MonitoringDestination.Builder, com.google.api.Monitoring.MonitoringDestinationOrBuilder>(
+        consumerDestinationsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.api.Monitoring.MonitoringDestination,
+                com.google.api.Monitoring.MonitoringDestination.Builder,
+                com.google.api.Monitoring.MonitoringDestinationOrBuilder>(
                 consumerDestinations_,
                 ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
@@ -2526,9 +2744,9 @@ private static final long serialVersionUID = 0L;
       }
       return consumerDestinationsBuilder_;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -2538,12 +2756,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.api.Monitoring)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Monitoring)
   private static final com.google.api.Monitoring DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.api.Monitoring();
   }
@@ -2552,16 +2770,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Monitoring>
-      PARSER = new com.google.protobuf.AbstractParser<Monitoring>() {
-    @java.lang.Override
-    public Monitoring parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Monitoring(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<Monitoring> PARSER =
+      new com.google.protobuf.AbstractParser<Monitoring>() {
+        @java.lang.Override
+        public Monitoring parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Monitoring(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<Monitoring> parser() {
     return PARSER;
@@ -2576,6 +2794,4 @@ private static final long serialVersionUID = 0L;
   public com.google.api.Monitoring getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

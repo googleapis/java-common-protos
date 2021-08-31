@@ -18,11 +18,14 @@
 
 package com.google.type;
 
-public interface DecimalOrBuilder extends
+public interface DecimalOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.type.Decimal)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The decimal value, as a string.
    * The string representation consists of an optional sign, `+` (`U+002B`)
@@ -71,10 +74,13 @@ public interface DecimalOrBuilder extends
    * </pre>
    *
    * <code>string value = 1;</code>
+   *
    * @return The value.
    */
   java.lang.String getValue();
   /**
+   *
+   *
    * <pre>
    * The decimal value, as a string.
    * The string representation consists of an optional sign, `+` (`U+002B`)
@@ -123,8 +129,8 @@ public interface DecimalOrBuilder extends
    * </pre>
    *
    * <code>string value = 1;</code>
+   *
    * @return The bytes for value.
    */
-  com.google.protobuf.ByteString
-      getValueBytes();
+  com.google.protobuf.ByteString getValueBytes();
 }

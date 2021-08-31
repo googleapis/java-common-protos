@@ -19,6 +19,8 @@
 package com.google.api;
 
 /**
+ *
+ *
  * <pre>
  * Quota configuration helps to achieve fairness and budgeting in service
  * usage.
@@ -64,15 +66,16 @@ package com.google.api;
  *
  * Protobuf type {@code google.api.Quota}
  */
-public final class Quota extends
-    com.google.protobuf.GeneratedMessageV3 implements
+public final class Quota extends com.google.protobuf.GeneratedMessageV3
+    implements
     // @@protoc_insertion_point(message_implements:google.api.Quota)
     QuotaOrBuilder {
-private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
   // Use Quota.newBuilder() to construct.
   private Quota(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Quota() {
     limits_ = java.util.Collections.emptyList();
     metricRules_ = java.util.Collections.emptyList();
@@ -80,16 +83,15 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
-      UnusedPrivateParameter unused) {
+  protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Quota();
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
+  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
     return this.unknownFields;
   }
+
   private Quota(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -109,38 +111,38 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              limits_ = new java.util.ArrayList<com.google.api.QuotaLimit>();
-              mutable_bitField0_ |= 0x00000001;
+          case 26:
+            {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                limits_ = new java.util.ArrayList<com.google.api.QuotaLimit>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              limits_.add(input.readMessage(com.google.api.QuotaLimit.parser(), extensionRegistry));
+              break;
             }
-            limits_.add(
-                input.readMessage(com.google.api.QuotaLimit.parser(), extensionRegistry));
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              metricRules_ = new java.util.ArrayList<com.google.api.MetricRule>();
-              mutable_bitField0_ |= 0x00000002;
+          case 34:
+            {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                metricRules_ = new java.util.ArrayList<com.google.api.MetricRule>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              metricRules_.add(
+                  input.readMessage(com.google.api.MetricRule.parser(), extensionRegistry));
+              break;
             }
-            metricRules_.add(
-                input.readMessage(com.google.api.MetricRule.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
+          default:
+            {
+              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-            break;
-          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         limits_ = java.util.Collections.unmodifiableList(limits_);
@@ -152,8 +154,8 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.api.QuotaProto.internal_static_google_api_Quota_descriptor;
   }
 
@@ -168,6 +170,8 @@ private static final long serialVersionUID = 0L;
   public static final int LIMITS_FIELD_NUMBER = 3;
   private java.util.List<com.google.api.QuotaLimit> limits_;
   /**
+   *
+   *
    * <pre>
    * List of `QuotaLimit` definitions for the service.
    * </pre>
@@ -179,6 +183,8 @@ private static final long serialVersionUID = 0L;
     return limits_;
   }
   /**
+   *
+   *
    * <pre>
    * List of `QuotaLimit` definitions for the service.
    * </pre>
@@ -186,11 +192,12 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.QuotaLimit limits = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.QuotaLimitOrBuilder> 
-      getLimitsOrBuilderList() {
+  public java.util.List<? extends com.google.api.QuotaLimitOrBuilder> getLimitsOrBuilderList() {
     return limits_;
   }
   /**
+   *
+   *
    * <pre>
    * List of `QuotaLimit` definitions for the service.
    * </pre>
@@ -202,6 +209,8 @@ private static final long serialVersionUID = 0L;
     return limits_.size();
   }
   /**
+   *
+   *
    * <pre>
    * List of `QuotaLimit` definitions for the service.
    * </pre>
@@ -213,6 +222,8 @@ private static final long serialVersionUID = 0L;
     return limits_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * List of `QuotaLimit` definitions for the service.
    * </pre>
@@ -220,14 +231,15 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.QuotaLimit limits = 3;</code>
    */
   @java.lang.Override
-  public com.google.api.QuotaLimitOrBuilder getLimitsOrBuilder(
-      int index) {
+  public com.google.api.QuotaLimitOrBuilder getLimitsOrBuilder(int index) {
     return limits_.get(index);
   }
 
   public static final int METRIC_RULES_FIELD_NUMBER = 4;
   private java.util.List<com.google.api.MetricRule> metricRules_;
   /**
+   *
+   *
    * <pre>
    * List of `MetricRule` definitions, each one mapping a selected method to one
    * or more metrics.
@@ -240,6 +252,8 @@ private static final long serialVersionUID = 0L;
     return metricRules_;
   }
   /**
+   *
+   *
    * <pre>
    * List of `MetricRule` definitions, each one mapping a selected method to one
    * or more metrics.
@@ -248,11 +262,13 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.google.api.MetricRuleOrBuilder> 
+  public java.util.List<? extends com.google.api.MetricRuleOrBuilder>
       getMetricRulesOrBuilderList() {
     return metricRules_;
   }
   /**
+   *
+   *
    * <pre>
    * List of `MetricRule` definitions, each one mapping a selected method to one
    * or more metrics.
@@ -265,6 +281,8 @@ private static final long serialVersionUID = 0L;
     return metricRules_.size();
   }
   /**
+   *
+   *
    * <pre>
    * List of `MetricRule` definitions, each one mapping a selected method to one
    * or more metrics.
@@ -277,6 +295,8 @@ private static final long serialVersionUID = 0L;
     return metricRules_.get(index);
   }
   /**
+   *
+   *
    * <pre>
    * List of `MetricRule` definitions, each one mapping a selected method to one
    * or more metrics.
@@ -285,12 +305,12 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
    */
   @java.lang.Override
-  public com.google.api.MetricRuleOrBuilder getMetricRulesOrBuilder(
-      int index) {
+  public com.google.api.MetricRuleOrBuilder getMetricRulesOrBuilder(int index) {
     return metricRules_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -302,8 +322,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+  public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
     for (int i = 0; i < limits_.size(); i++) {
       output.writeMessage(3, limits_.get(i));
     }
@@ -320,12 +339,10 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     for (int i = 0; i < limits_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, limits_.get(i));
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, limits_.get(i));
     }
     for (int i = 0; i < metricRules_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, metricRules_.get(i));
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, metricRules_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -335,17 +352,15 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof com.google.api.Quota)) {
       return super.equals(obj);
     }
     com.google.api.Quota other = (com.google.api.Quota) obj;
 
-    if (!getLimitsList()
-        .equals(other.getLimitsList())) return false;
-    if (!getMetricRulesList()
-        .equals(other.getMetricRulesList())) return false;
+    if (!getLimitsList().equals(other.getLimitsList())) return false;
+    if (!getMetricRulesList().equals(other.getMetricRulesList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -370,97 +385,103 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.api.Quota parseFrom(
-      java.nio.ByteBuffer data)
+  public static com.google.api.Quota parseFrom(java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Quota parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.api.Quota parseFrom(
-      com.google.protobuf.ByteString data)
+
+  public static com.google.api.Quota parseFrom(com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Quota parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Quota parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.google.api.Quota parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.google.api.Quota parseFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Quota parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
+
   public static com.google.api.Quota parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.api.Quota parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+        PARSER, input, extensionRegistry);
   }
-  public static com.google.api.Quota parseFrom(
-      com.google.protobuf.CodedInputStream input)
+
+  public static com.google.api.Quota parseFrom(com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
   }
+
   public static com.google.api.Quota parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+    return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+        PARSER, input, extensionRegistry);
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.google.api.Quota prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
-    return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+    return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @java.lang.Override
-  protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+  protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
   /**
+   *
+   *
    * <pre>
    * Quota configuration helps to achieve fairness and budgeting in service
    * usage.
@@ -506,12 +527,11 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.api.Quota}
    */
-  public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+  public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+      implements
       // @@protoc_insertion_point(builder_implements:google.api.Quota)
       com.google.api.QuotaOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.api.QuotaProto.internal_static_google_api_Quota_descriptor;
     }
 
@@ -528,18 +548,18 @@ private static final long serialVersionUID = 0L;
       maybeForceBuilderInitialization();
     }
 
-    private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+    private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getLimitsFieldBuilder();
         getMetricRulesFieldBuilder();
       }
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -559,8 +579,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
       return com.google.api.QuotaProto.internal_static_google_api_Quota_descriptor;
     }
 
@@ -608,38 +627,39 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
-    public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+    public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
-    public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+    public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.api.Quota) {
-        return mergeFrom((com.google.api.Quota)other);
+        return mergeFrom((com.google.api.Quota) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -666,9 +686,10 @@ private static final long serialVersionUID = 0L;
             limitsBuilder_ = null;
             limits_ = other.limits_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            limitsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getLimitsFieldBuilder() : null;
+            limitsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getLimitsFieldBuilder()
+                    : null;
           } else {
             limitsBuilder_.addAllMessages(other.limits_);
           }
@@ -692,9 +713,10 @@ private static final long serialVersionUID = 0L;
             metricRulesBuilder_ = null;
             metricRules_ = other.metricRules_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            metricRulesBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getMetricRulesFieldBuilder() : null;
+            metricRulesBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getMetricRulesFieldBuilder()
+                    : null;
           } else {
             metricRulesBuilder_.addAllMessages(other.metricRules_);
           }
@@ -728,21 +750,27 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
-    private java.util.List<com.google.api.QuotaLimit> limits_ =
-      java.util.Collections.emptyList();
+    private java.util.List<com.google.api.QuotaLimit> limits_ = java.util.Collections.emptyList();
+
     private void ensureLimitsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         limits_ = new java.util.ArrayList<com.google.api.QuotaLimit>(limits_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.QuotaLimit, com.google.api.QuotaLimit.Builder, com.google.api.QuotaLimitOrBuilder> limitsBuilder_;
+            com.google.api.QuotaLimit,
+            com.google.api.QuotaLimit.Builder,
+            com.google.api.QuotaLimitOrBuilder>
+        limitsBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
@@ -757,6 +785,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
@@ -771,6 +801,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
@@ -785,14 +817,15 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public Builder setLimits(
-        int index, com.google.api.QuotaLimit value) {
+    public Builder setLimits(int index, com.google.api.QuotaLimit value) {
       if (limitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -806,14 +839,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public Builder setLimits(
-        int index, com.google.api.QuotaLimit.Builder builderForValue) {
+    public Builder setLimits(int index, com.google.api.QuotaLimit.Builder builderForValue) {
       if (limitsBuilder_ == null) {
         ensureLimitsIsMutable();
         limits_.set(index, builderForValue.build());
@@ -824,6 +858,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
@@ -844,14 +880,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public Builder addLimits(
-        int index, com.google.api.QuotaLimit value) {
+    public Builder addLimits(int index, com.google.api.QuotaLimit value) {
       if (limitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -865,14 +902,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public Builder addLimits(
-        com.google.api.QuotaLimit.Builder builderForValue) {
+    public Builder addLimits(com.google.api.QuotaLimit.Builder builderForValue) {
       if (limitsBuilder_ == null) {
         ensureLimitsIsMutable();
         limits_.add(builderForValue.build());
@@ -883,14 +921,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public Builder addLimits(
-        int index, com.google.api.QuotaLimit.Builder builderForValue) {
+    public Builder addLimits(int index, com.google.api.QuotaLimit.Builder builderForValue) {
       if (limitsBuilder_ == null) {
         ensureLimitsIsMutable();
         limits_.add(index, builderForValue.build());
@@ -901,18 +940,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public Builder addAllLimits(
-        java.lang.Iterable<? extends com.google.api.QuotaLimit> values) {
+    public Builder addAllLimits(java.lang.Iterable<? extends com.google.api.QuotaLimit> values) {
       if (limitsBuilder_ == null) {
         ensureLimitsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, limits_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, limits_);
         onChanged();
       } else {
         limitsBuilder_.addAllMessages(values);
@@ -920,6 +959,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
@@ -937,6 +978,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
@@ -954,39 +997,43 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public com.google.api.QuotaLimit.Builder getLimitsBuilder(
-        int index) {
+    public com.google.api.QuotaLimit.Builder getLimitsBuilder(int index) {
       return getLimitsFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public com.google.api.QuotaLimitOrBuilder getLimitsOrBuilder(
-        int index) {
+    public com.google.api.QuotaLimitOrBuilder getLimitsOrBuilder(int index) {
       if (limitsBuilder_ == null) {
-        return limits_.get(index);  } else {
+        return limits_.get(index);
+      } else {
         return limitsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public java.util.List<? extends com.google.api.QuotaLimitOrBuilder> 
-         getLimitsOrBuilderList() {
+    public java.util.List<? extends com.google.api.QuotaLimitOrBuilder> getLimitsOrBuilderList() {
       if (limitsBuilder_ != null) {
         return limitsBuilder_.getMessageOrBuilderList();
       } else {
@@ -994,6 +1041,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
@@ -1001,60 +1050,70 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
     public com.google.api.QuotaLimit.Builder addLimitsBuilder() {
-      return getLimitsFieldBuilder().addBuilder(
-          com.google.api.QuotaLimit.getDefaultInstance());
+      return getLimitsFieldBuilder().addBuilder(com.google.api.QuotaLimit.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public com.google.api.QuotaLimit.Builder addLimitsBuilder(
-        int index) {
-      return getLimitsFieldBuilder().addBuilder(
-          index, com.google.api.QuotaLimit.getDefaultInstance());
+    public com.google.api.QuotaLimit.Builder addLimitsBuilder(int index) {
+      return getLimitsFieldBuilder()
+          .addBuilder(index, com.google.api.QuotaLimit.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * List of `QuotaLimit` definitions for the service.
      * </pre>
      *
      * <code>repeated .google.api.QuotaLimit limits = 3;</code>
      */
-    public java.util.List<com.google.api.QuotaLimit.Builder> 
-         getLimitsBuilderList() {
+    public java.util.List<com.google.api.QuotaLimit.Builder> getLimitsBuilderList() {
       return getLimitsFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.QuotaLimit, com.google.api.QuotaLimit.Builder, com.google.api.QuotaLimitOrBuilder> 
+            com.google.api.QuotaLimit,
+            com.google.api.QuotaLimit.Builder,
+            com.google.api.QuotaLimitOrBuilder>
         getLimitsFieldBuilder() {
       if (limitsBuilder_ == null) {
-        limitsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.QuotaLimit, com.google.api.QuotaLimit.Builder, com.google.api.QuotaLimitOrBuilder>(
-                limits_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
+        limitsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.api.QuotaLimit,
+                com.google.api.QuotaLimit.Builder,
+                com.google.api.QuotaLimitOrBuilder>(
+                limits_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
         limits_ = null;
       }
       return limitsBuilder_;
     }
 
     private java.util.List<com.google.api.MetricRule> metricRules_ =
-      java.util.Collections.emptyList();
+        java.util.Collections.emptyList();
+
     private void ensureMetricRulesIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
         metricRules_ = new java.util.ArrayList<com.google.api.MetricRule>(metricRules_);
         bitField0_ |= 0x00000002;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.MetricRule, com.google.api.MetricRule.Builder, com.google.api.MetricRuleOrBuilder> metricRulesBuilder_;
+            com.google.api.MetricRule,
+            com.google.api.MetricRule.Builder,
+            com.google.api.MetricRuleOrBuilder>
+        metricRulesBuilder_;
 
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1070,6 +1129,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1085,6 +1146,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1100,6 +1163,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1107,8 +1172,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public Builder setMetricRules(
-        int index, com.google.api.MetricRule value) {
+    public Builder setMetricRules(int index, com.google.api.MetricRule value) {
       if (metricRulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1122,6 +1186,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1129,8 +1195,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public Builder setMetricRules(
-        int index, com.google.api.MetricRule.Builder builderForValue) {
+    public Builder setMetricRules(int index, com.google.api.MetricRule.Builder builderForValue) {
       if (metricRulesBuilder_ == null) {
         ensureMetricRulesIsMutable();
         metricRules_.set(index, builderForValue.build());
@@ -1141,6 +1206,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1162,6 +1229,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1169,8 +1238,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public Builder addMetricRules(
-        int index, com.google.api.MetricRule value) {
+    public Builder addMetricRules(int index, com.google.api.MetricRule value) {
       if (metricRulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1184,6 +1252,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1191,8 +1261,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public Builder addMetricRules(
-        com.google.api.MetricRule.Builder builderForValue) {
+    public Builder addMetricRules(com.google.api.MetricRule.Builder builderForValue) {
       if (metricRulesBuilder_ == null) {
         ensureMetricRulesIsMutable();
         metricRules_.add(builderForValue.build());
@@ -1203,6 +1272,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1210,8 +1281,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public Builder addMetricRules(
-        int index, com.google.api.MetricRule.Builder builderForValue) {
+    public Builder addMetricRules(int index, com.google.api.MetricRule.Builder builderForValue) {
       if (metricRulesBuilder_ == null) {
         ensureMetricRulesIsMutable();
         metricRules_.add(index, builderForValue.build());
@@ -1222,6 +1292,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1233,8 +1305,7 @@ private static final long serialVersionUID = 0L;
         java.lang.Iterable<? extends com.google.api.MetricRule> values) {
       if (metricRulesBuilder_ == null) {
         ensureMetricRulesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, metricRules_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, metricRules_);
         onChanged();
       } else {
         metricRulesBuilder_.addAllMessages(values);
@@ -1242,6 +1313,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1260,6 +1333,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1278,6 +1353,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1285,11 +1362,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public com.google.api.MetricRule.Builder getMetricRulesBuilder(
-        int index) {
+    public com.google.api.MetricRule.Builder getMetricRulesBuilder(int index) {
       return getMetricRulesFieldBuilder().getBuilder(index);
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1297,14 +1375,16 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public com.google.api.MetricRuleOrBuilder getMetricRulesOrBuilder(
-        int index) {
+    public com.google.api.MetricRuleOrBuilder getMetricRulesOrBuilder(int index) {
       if (metricRulesBuilder_ == null) {
-        return metricRules_.get(index);  } else {
+        return metricRules_.get(index);
+      } else {
         return metricRulesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1312,8 +1392,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public java.util.List<? extends com.google.api.MetricRuleOrBuilder> 
-         getMetricRulesOrBuilderList() {
+    public java.util.List<? extends com.google.api.MetricRuleOrBuilder>
+        getMetricRulesOrBuilderList() {
       if (metricRulesBuilder_ != null) {
         return metricRulesBuilder_.getMessageOrBuilderList();
       } else {
@@ -1321,6 +1401,8 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1329,10 +1411,12 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
     public com.google.api.MetricRule.Builder addMetricRulesBuilder() {
-      return getMetricRulesFieldBuilder().addBuilder(
-          com.google.api.MetricRule.getDefaultInstance());
+      return getMetricRulesFieldBuilder()
+          .addBuilder(com.google.api.MetricRule.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1340,12 +1424,13 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public com.google.api.MetricRule.Builder addMetricRulesBuilder(
-        int index) {
-      return getMetricRulesFieldBuilder().addBuilder(
-          index, com.google.api.MetricRule.getDefaultInstance());
+    public com.google.api.MetricRule.Builder addMetricRulesBuilder(int index) {
+      return getMetricRulesFieldBuilder()
+          .addBuilder(index, com.google.api.MetricRule.getDefaultInstance());
     }
     /**
+     *
+     *
      * <pre>
      * List of `MetricRule` definitions, each one mapping a selected method to one
      * or more metrics.
@@ -1353,27 +1438,29 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.api.MetricRule metric_rules = 4;</code>
      */
-    public java.util.List<com.google.api.MetricRule.Builder> 
-         getMetricRulesBuilderList() {
+    public java.util.List<com.google.api.MetricRule.Builder> getMetricRulesBuilderList() {
       return getMetricRulesFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.api.MetricRule, com.google.api.MetricRule.Builder, com.google.api.MetricRuleOrBuilder> 
+            com.google.api.MetricRule,
+            com.google.api.MetricRule.Builder,
+            com.google.api.MetricRuleOrBuilder>
         getMetricRulesFieldBuilder() {
       if (metricRulesBuilder_ == null) {
-        metricRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.api.MetricRule, com.google.api.MetricRule.Builder, com.google.api.MetricRuleOrBuilder>(
-                metricRules_,
-                ((bitField0_ & 0x00000002) != 0),
-                getParentForChildren(),
-                isClean());
+        metricRulesBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.api.MetricRule,
+                com.google.api.MetricRule.Builder,
+                com.google.api.MetricRuleOrBuilder>(
+                metricRules_, ((bitField0_ & 0x00000002) != 0), getParentForChildren(), isClean());
         metricRules_ = null;
       }
       return metricRulesBuilder_;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+    public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
@@ -1383,12 +1470,12 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:google.api.Quota)
   }
 
   // @@protoc_insertion_point(class_scope:google.api.Quota)
   private static final com.google.api.Quota DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.google.api.Quota();
   }
@@ -1397,16 +1484,16 @@ private static final long serialVersionUID = 0L;
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Quota>
-      PARSER = new com.google.protobuf.AbstractParser<Quota>() {
-    @java.lang.Override
-    public Quota parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Quota(input, extensionRegistry);
-    }
-  };
+  private static final com.google.protobuf.Parser<Quota> PARSER =
+      new com.google.protobuf.AbstractParser<Quota>() {
+        @java.lang.Override
+        public Quota parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Quota(input, extensionRegistry);
+        }
+      };
 
   public static com.google.protobuf.Parser<Quota> parser() {
     return PARSER;
@@ -1421,6 +1508,4 @@ private static final long serialVersionUID = 0L;
   public com.google.api.Quota getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
-
 }
-

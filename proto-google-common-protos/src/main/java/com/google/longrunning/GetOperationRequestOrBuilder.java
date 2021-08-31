@@ -18,27 +18,33 @@
 
 package com.google.longrunning;
 
-public interface GetOperationRequestOrBuilder extends
+public interface GetOperationRequestOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.longrunning.GetOperationRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The name of the operation resource.
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The name.
    */
   java.lang.String getName();
   /**
+   *
+   *
    * <pre>
    * The name of the operation resource.
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString
-      getNameBytes();
+  com.google.protobuf.ByteString getNameBytes();
 }

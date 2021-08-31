@@ -18,11 +18,14 @@
 
 package com.google.api;
 
-public interface LogDescriptorOrBuilder extends
+public interface LogDescriptorOrBuilder
+    extends
     // @@protoc_insertion_point(interface_extends:google.api.LogDescriptor)
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   *
+   *
    * <pre>
    * The name of the log. It must be less than 512 characters long and can
    * include the following characters: upper- and lower-case alphanumeric
@@ -31,10 +34,13 @@ public interface LogDescriptorOrBuilder extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The name.
    */
   java.lang.String getName();
   /**
+   *
+   *
    * <pre>
    * The name of the log. It must be less than 512 characters long and can
    * include the following characters: upper- and lower-case alphanumeric
@@ -43,12 +49,14 @@ public interface LogDescriptorOrBuilder extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   *
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString
-      getNameBytes();
+  com.google.protobuf.ByteString getNameBytes();
 
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -57,9 +65,10 @@ public interface LogDescriptorOrBuilder extends
    *
    * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
    */
-  java.util.List<com.google.api.LabelDescriptor> 
-      getLabelsList();
+  java.util.List<com.google.api.LabelDescriptor> getLabelsList();
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -70,6 +79,8 @@ public interface LogDescriptorOrBuilder extends
    */
   com.google.api.LabelDescriptor getLabels(int index);
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -80,6 +91,8 @@ public interface LogDescriptorOrBuilder extends
    */
   int getLabelsCount();
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -88,9 +101,10 @@ public interface LogDescriptorOrBuilder extends
    *
    * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
    */
-  java.util.List<? extends com.google.api.LabelDescriptorOrBuilder> 
-      getLabelsOrBuilderList();
+  java.util.List<? extends com.google.api.LabelDescriptorOrBuilder> getLabelsOrBuilderList();
   /**
+   *
+   *
    * <pre>
    * The set of labels that are available to describe a specific log entry.
    * Runtime requests that contain labels not specified here are
@@ -99,50 +113,59 @@ public interface LogDescriptorOrBuilder extends
    *
    * <code>repeated .google.api.LabelDescriptor labels = 2;</code>
    */
-  com.google.api.LabelDescriptorOrBuilder getLabelsOrBuilder(
-      int index);
+  com.google.api.LabelDescriptorOrBuilder getLabelsOrBuilder(int index);
 
   /**
+   *
+   *
    * <pre>
    * A human-readable description of this log. This information appears in
    * the documentation and can contain details.
    * </pre>
    *
    * <code>string description = 3;</code>
+   *
    * @return The description.
    */
   java.lang.String getDescription();
   /**
+   *
+   *
    * <pre>
    * A human-readable description of this log. This information appears in
    * the documentation and can contain details.
    * </pre>
    *
    * <code>string description = 3;</code>
+   *
    * @return The bytes for description.
    */
-  com.google.protobuf.ByteString
-      getDescriptionBytes();
+  com.google.protobuf.ByteString getDescriptionBytes();
 
   /**
+   *
+   *
    * <pre>
    * The human-readable name for this log. This information appears on
    * the user interface and should be concise.
    * </pre>
    *
    * <code>string display_name = 4;</code>
+   *
    * @return The displayName.
    */
   java.lang.String getDisplayName();
   /**
+   *
+   *
    * <pre>
    * The human-readable name for this log. This information appears on
    * the user interface and should be concise.
    * </pre>
    *
    * <code>string display_name = 4;</code>
+   *
    * @return The bytes for displayName.
    */
-  com.google.protobuf.ByteString
-      getDisplayNameBytes();
+  com.google.protobuf.ByteString getDisplayNameBytes();
 }
