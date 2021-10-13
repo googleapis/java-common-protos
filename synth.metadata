@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "161fdb449f454c4fa709dea8858b034e189b4431",
-        "internalRef": "399105877"
+        "sha": "de988112503e41b044e2b3f035d101a4f3d7c4ba",
+        "internalRef": "399862673"
       }
     },
     {
@@ -375,7 +375,6 @@
     "proto-google-common-protos/src/main/proto/google/api/monitoring.proto",
     "proto-google-common-protos/src/main/proto/google/api/quota.proto",
     "proto-google-common-protos/src/main/proto/google/api/resource.proto",
-    "proto-google-common-protos/src/main/proto/google/api/routing.proto",
     "proto-google-common-protos/src/main/proto/google/api/service.proto",
     "proto-google-common-protos/src/main/proto/google/api/source_info.proto",
     "proto-google-common-protos/src/main/proto/google/api/system_parameter.proto",
