@@ -38,9 +38,10 @@ package com.google.api;
  *       google.api.HttpBody http_body = 2;
  *     }
  *     service ResourceService {
- *       rpc GetResource(GetResourceRequest) returns (google.api.HttpBody);
- *       rpc UpdateResource(google.api.HttpBody) returns
- *       (google.protobuf.Empty);
+ *       rpc GetResource(GetResourceRequest)
+ *         returns (google.api.HttpBody);
+ *       rpc UpdateResource(google.api.HttpBody)
+ *         returns (google.protobuf.Empty);
  *     }
  * Example with streaming methods:
  *     service CaldavService {
@@ -494,9 +495,10 @@ public final class HttpBody extends com.google.protobuf.GeneratedMessageV3
    *       google.api.HttpBody http_body = 2;
    *     }
    *     service ResourceService {
-   *       rpc GetResource(GetResourceRequest) returns (google.api.HttpBody);
-   *       rpc UpdateResource(google.api.HttpBody) returns
-   *       (google.protobuf.Empty);
+   *       rpc GetResource(GetResourceRequest)
+   *         returns (google.api.HttpBody);
+   *       rpc UpdateResource(google.api.HttpBody)
+   *         returns (google.protobuf.Empty);
    *     }
    * Example with streaming methods:
    *     service CaldavService {
