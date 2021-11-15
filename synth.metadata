@@ -4,22 +4,22 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-common-protos.git",
-        "sha": "08b5c8545ed6f29a11ae4d3f061df47f40234bd1"
+        "sha": "9538fca854728674b7647b8e03283c441392cb15"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "aa15f328736501d01fac1d599655c392b5b12a3c",
-        "internalRef": "394033461"
+        "sha": "2921f9fb3bfbd16f6b2da0104373e2b47a80a65e",
+        "internalRef": "408420890"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "a4be3384ccb92364795d981f2863f6986fcee620"
+        "sha": "42a3786737c17ece39924d7025f3be481812da53"
       }
     }
   ],
@@ -46,7 +46,6 @@
     ".kokoro/common.sh",
     ".kokoro/continuous/common.cfg",
     ".kokoro/continuous/java8.cfg",
-    ".kokoro/dependencies.sh",
     ".kokoro/nightly/common.cfg",
     ".kokoro/nightly/integration.cfg",
     ".kokoro/nightly/java11.cfg",
@@ -59,6 +58,7 @@
     ".kokoro/presubmit/clirr.cfg",
     ".kokoro/presubmit/common.cfg",
     ".kokoro/presubmit/dependencies.cfg",
+    ".kokoro/presubmit/graalvm-native.cfg",
     ".kokoro/presubmit/integration.cfg",
     ".kokoro/presubmit/java11.cfg",
     ".kokoro/presubmit/java7.cfg",
@@ -375,6 +375,7 @@
     "proto-google-common-protos/src/main/proto/google/api/monitoring.proto",
     "proto-google-common-protos/src/main/proto/google/api/quota.proto",
     "proto-google-common-protos/src/main/proto/google/api/resource.proto",
+    "proto-google-common-protos/src/main/proto/google/api/routing.proto",
     "proto-google-common-protos/src/main/proto/google/api/service.proto",
     "proto-google-common-protos/src/main/proto/google/api/source_info.proto",
     "proto-google-common-protos/src/main/proto/google/api/system_parameter.proto",
