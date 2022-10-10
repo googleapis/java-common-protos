@@ -64,169 +64,6 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     return this.unknownFields;
   }
 
-  private AttributeContext(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
-              if (source_ != null) {
-                subBuilder = source_.toBuilder();
-              }
-              source_ =
-                  input.readMessage(
-                      com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(source_);
-                source_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 18:
-            {
-              com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
-              if (destination_ != null) {
-                subBuilder = destination_.toBuilder();
-              }
-              destination_ =
-                  input.readMessage(
-                      com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(destination_);
-                destination_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 26:
-            {
-              com.google.rpc.context.AttributeContext.Request.Builder subBuilder = null;
-              if (request_ != null) {
-                subBuilder = request_.toBuilder();
-              }
-              request_ =
-                  input.readMessage(
-                      com.google.rpc.context.AttributeContext.Request.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(request_);
-                request_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 34:
-            {
-              com.google.rpc.context.AttributeContext.Response.Builder subBuilder = null;
-              if (response_ != null) {
-                subBuilder = response_.toBuilder();
-              }
-              response_ =
-                  input.readMessage(
-                      com.google.rpc.context.AttributeContext.Response.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(response_);
-                response_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 42:
-            {
-              com.google.rpc.context.AttributeContext.Resource.Builder subBuilder = null;
-              if (resource_ != null) {
-                subBuilder = resource_.toBuilder();
-              }
-              resource_ =
-                  input.readMessage(
-                      com.google.rpc.context.AttributeContext.Resource.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(resource_);
-                resource_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 50:
-            {
-              com.google.rpc.context.AttributeContext.Api.Builder subBuilder = null;
-              if (api_ != null) {
-                subBuilder = api_.toBuilder();
-              }
-              api_ =
-                  input.readMessage(
-                      com.google.rpc.context.AttributeContext.Api.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(api_);
-                api_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 58:
-            {
-              com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
-              if (origin_ != null) {
-                subBuilder = origin_.toBuilder();
-              }
-              origin_ =
-                  input.readMessage(
-                      com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(origin_);
-                origin_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 66:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                extensions_ = new java.util.ArrayList<com.google.protobuf.Any>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              extensions_.add(
-                  input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry));
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        extensions_ = java.util.Collections.unmodifiableList(extensions_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.rpc.context.AttributeContextProto
         .internal_static_google_rpc_context_AttributeContext_descriptor;
@@ -436,85 +273,6 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       return this.unknownFields;
     }
 
-    private Peer(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                ip_ = s;
-                break;
-              }
-            case 16:
-              {
-                port_ = input.readInt64();
-                break;
-              }
-            case 50:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  labels_ =
-                      com.google.protobuf.MapField.newMapField(
-                          LabelsDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
-                    input.readMessage(
-                        LabelsDefaultEntryHolder.defaultEntry.getParserForType(),
-                        extensionRegistry);
-                labels_.getMutableMap().put(labels__.getKey(), labels__.getValue());
-                break;
-              }
-            case 58:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                principal_ = s;
-                break;
-              }
-            case 66:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                regionCode_ = s;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.rpc.context.AttributeContextProto
           .internal_static_google_rpc_context_AttributeContext_Peer_descriptor;
@@ -645,7 +403,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean containsLabels(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetLabels().getMap().containsKey(key);
     }
@@ -681,7 +439,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     public java.lang.String getLabelsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -698,7 +456,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public java.lang.String getLabelsOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -841,7 +599,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, regionCode_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -872,7 +630,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, regionCode_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -893,7 +651,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (!internalGetLabels().equals(other.internalGetLabels())) return false;
       if (!getPrincipal().equals(other.getPrincipal())) return false;
       if (!getRegionCode().equals(other.getRegionCode())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -916,7 +674,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       hash = (53 * hash) + getPrincipal().hashCode();
       hash = (37 * hash) + REGION_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getRegionCode().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1070,17 +828,10 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Peer.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -1196,7 +947,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           regionCode_ = other.regionCode_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1211,17 +962,66 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.rpc.context.AttributeContext.Peer parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  ip_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+              case 16:
+                {
+                  port_ = input.readInt64();
+
+                  break;
+                } // case 16
+              case 50:
+                {
+                  com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
+                      input.readMessage(
+                          LabelsDefaultEntryHolder.defaultEntry.getParserForType(),
+                          extensionRegistry);
+                  internalGetMutableLabels()
+                      .getMutableMap()
+                      .put(labels__.getKey(), labels__.getValue());
+                  break;
+                } // case 50
+              case 58:
+                {
+                  principal_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 58
+              case 66:
+                {
+                  regionCode_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 66
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.rpc.context.AttributeContext.Peer) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1422,7 +1222,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public boolean containsLabels(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         return internalGetLabels().getMap().containsKey(key);
       }
@@ -1458,7 +1258,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       public java.lang.String getLabelsOrDefault(
           java.lang.String key, java.lang.String defaultValue) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1475,7 +1275,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public java.lang.String getLabelsOrThrow(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -1499,7 +1299,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder removeLabels(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         internalGetMutableLabels().getMutableMap().remove(key);
         return this;
@@ -1520,11 +1320,12 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder putLabels(java.lang.String key, java.lang.String value) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         if (value == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map value");
         }
+
         internalGetMutableLabels().getMutableMap().put(key, value);
         return this;
       }
@@ -1807,7 +1608,19 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Peer(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -1980,71 +1793,6 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
-    }
-
-    private Api(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                service_ = s;
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                operation_ = s;
-                break;
-              }
-            case 26:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                protocol_ = s;
-                break;
-              }
-            case 34:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                version_ = s;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -2296,7 +2044,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, version_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2317,7 +2065,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, version_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2337,7 +2085,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (!getOperation().equals(other.getOperation())) return false;
       if (!getProtocol().equals(other.getProtocol())) return false;
       if (!getVersion().equals(other.getVersion())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2356,7 +2104,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       hash = (53 * hash) + getProtocol().hashCode();
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2489,17 +2237,10 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Api.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -2611,7 +2352,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           version_ = other.version_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2626,17 +2367,55 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.rpc.context.AttributeContext.Api parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  service_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+              case 18:
+                {
+                  operation_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 18
+              case 26:
+                {
+                  protocol_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 26
+              case 34:
+                {
+                  version_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 34
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.rpc.context.AttributeContext.Api) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3127,7 +2906,19 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Api(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -3489,98 +3280,6 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
-    }
-
-    private Auth(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                principal_ = s;
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  audiences_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                audiences_.add(s);
-                break;
-              }
-            case 26:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                presenter_ = s;
-                break;
-              }
-            case 34:
-              {
-                com.google.protobuf.Struct.Builder subBuilder = null;
-                if (claims_ != null) {
-                  subBuilder = claims_.toBuilder();
-                }
-                claims_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(claims_);
-                  claims_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 42:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                  accessLevels_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                accessLevels_.add(s);
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          audiences_ = audiences_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          accessLevels_ = accessLevels_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -4007,7 +3706,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       for (int i = 0; i < accessLevels_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, accessLevels_.getRaw(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4041,7 +3740,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
         size += dataSize;
         size += 1 * getAccessLevelsList().size();
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4065,7 +3764,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
         if (!getClaims().equals(other.getClaims())) return false;
       }
       if (!getAccessLevelsList().equals(other.getAccessLevelsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4092,7 +3791,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
         hash = (37 * hash) + ACCESS_LEVELS_FIELD_NUMBER;
         hash = (53 * hash) + getAccessLevelsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4225,17 +3924,10 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Auth.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -4382,7 +4074,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4397,17 +4089,63 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.rpc.context.AttributeContext.Auth parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  principal_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+              case 18:
+                {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureAudiencesIsMutable();
+                  audiences_.add(s);
+                  break;
+                } // case 18
+              case 26:
+                {
+                  presenter_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 26
+              case 34:
+                {
+                  input.readMessage(getClaimsFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 34
+              case 42:
+                {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureAccessLevelsIsMutable();
+                  accessLevels_.add(s);
+                  break;
+                } // case 42
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.rpc.context.AttributeContext.Auth) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -5460,7 +5198,19 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Auth(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -5894,151 +5644,6 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       return this.unknownFields;
     }
 
-    private Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                id_ = s;
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                method_ = s;
-                break;
-              }
-            case 26:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  headers_ =
-                      com.google.protobuf.MapField.newMapField(
-                          HeadersDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
-                    input.readMessage(
-                        HeadersDefaultEntryHolder.defaultEntry.getParserForType(),
-                        extensionRegistry);
-                headers_.getMutableMap().put(headers__.getKey(), headers__.getValue());
-                break;
-              }
-            case 34:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                path_ = s;
-                break;
-              }
-            case 42:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                host_ = s;
-                break;
-              }
-            case 50:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                scheme_ = s;
-                break;
-              }
-            case 58:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                query_ = s;
-                break;
-              }
-            case 74:
-              {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (time_ != null) {
-                  subBuilder = time_.toBuilder();
-                }
-                time_ =
-                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(time_);
-                  time_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 80:
-              {
-                size_ = input.readInt64();
-                break;
-              }
-            case 90:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                protocol_ = s;
-                break;
-              }
-            case 98:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                reason_ = s;
-                break;
-              }
-            case 106:
-              {
-                com.google.rpc.context.AttributeContext.Auth.Builder subBuilder = null;
-                if (auth_ != null) {
-                  subBuilder = auth_.toBuilder();
-                }
-                auth_ =
-                    input.readMessage(
-                        com.google.rpc.context.AttributeContext.Auth.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(auth_);
-                  auth_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.rpc.context.AttributeContextProto
           .internal_static_google_rpc_context_AttributeContext_Request_descriptor;
@@ -6206,7 +5811,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean containsHeaders(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetHeaders().getMap().containsKey(key);
     }
@@ -6246,7 +5851,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     public java.lang.String getHeadersOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6265,7 +5870,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public java.lang.String getHeadersOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
       if (!map.containsKey(key)) {
@@ -6745,7 +6350,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (auth_ != null) {
         output.writeMessage(13, getAuth());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6797,7 +6402,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (auth_ != null) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(13, getAuth());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6831,7 +6436,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (hasAuth()) {
         if (!getAuth().equals(other.getAuth())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6872,7 +6477,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
         hash = (37 * hash) + AUTH_FIELD_NUMBER;
         hash = (53 * hash) + getAuth().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7025,17 +6630,10 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Request.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -7215,7 +6813,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
         if (other.hasAuth()) {
           mergeAuth(other.getAuth());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7230,18 +6828,108 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.rpc.context.AttributeContext.Request parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  id_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+              case 18:
+                {
+                  method_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 18
+              case 26:
+                {
+                  com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
+                      input.readMessage(
+                          HeadersDefaultEntryHolder.defaultEntry.getParserForType(),
+                          extensionRegistry);
+                  internalGetMutableHeaders()
+                      .getMutableMap()
+                      .put(headers__.getKey(), headers__.getValue());
+                  break;
+                } // case 26
+              case 34:
+                {
+                  path_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 34
+              case 42:
+                {
+                  host_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 42
+              case 50:
+                {
+                  scheme_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 50
+              case 58:
+                {
+                  query_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 58
+              case 74:
+                {
+                  input.readMessage(getTimeFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 74
+              case 80:
+                {
+                  size_ = input.readInt64();
+
+                  break;
+                } // case 80
+              case 90:
+                {
+                  protocol_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 90
+              case 98:
+                {
+                  reason_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 98
+              case 106:
+                {
+                  input.readMessage(getAuthFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 106
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.rpc.context.AttributeContext.Request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -7510,7 +7198,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public boolean containsHeaders(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         return internalGetHeaders().getMap().containsKey(key);
       }
@@ -7550,7 +7238,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       public java.lang.String getHeadersOrDefault(
           java.lang.String key, java.lang.String defaultValue) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -7569,7 +7257,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public java.lang.String getHeadersOrThrow(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
         if (!map.containsKey(key)) {
@@ -7595,7 +7283,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder removeHeaders(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         internalGetMutableHeaders().getMutableMap().remove(key);
         return this;
@@ -7618,11 +7306,12 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder putHeaders(java.lang.String key, java.lang.String value) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         if (value == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map value");
         }
+
         internalGetMutableHeaders().getMutableMap().put(key, value);
         return this;
       }
@@ -8769,7 +8458,19 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Request(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -8998,99 +8699,6 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       return this.unknownFields;
     }
 
-    private Response(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8:
-              {
-                code_ = input.readInt64();
-                break;
-              }
-            case 16:
-              {
-                size_ = input.readInt64();
-                break;
-              }
-            case 26:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  headers_ =
-                      com.google.protobuf.MapField.newMapField(
-                          HeadersDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
-                    input.readMessage(
-                        HeadersDefaultEntryHolder.defaultEntry.getParserForType(),
-                        extensionRegistry);
-                headers_.getMutableMap().put(headers__.getKey(), headers__.getValue());
-                break;
-              }
-            case 34:
-              {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (time_ != null) {
-                  subBuilder = time_.toBuilder();
-                }
-                time_ =
-                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(time_);
-                  time_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 42:
-              {
-                com.google.protobuf.Duration.Builder subBuilder = null;
-                if (backendLatency_ != null) {
-                  subBuilder = backendLatency_.toBuilder();
-                }
-                backendLatency_ =
-                    input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(backendLatency_);
-                  backendLatency_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.rpc.context.AttributeContextProto
           .internal_static_google_rpc_context_AttributeContext_Response_descriptor;
@@ -9192,7 +8800,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean containsHeaders(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetHeaders().getMap().containsKey(key);
     }
@@ -9232,7 +8840,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     public java.lang.String getHeadersOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -9251,7 +8859,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public java.lang.String getHeadersOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
       if (!map.containsKey(key)) {
@@ -9394,7 +9002,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (backendLatency_ != null) {
         output.writeMessage(5, getBackendLatency());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -9425,7 +9033,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (backendLatency_ != null) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, getBackendLatency());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -9452,7 +9060,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (hasBackendLatency()) {
         if (!getBackendLatency().equals(other.getBackendLatency())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -9479,7 +9087,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
         hash = (37 * hash) + BACKEND_LATENCY_FIELD_NUMBER;
         hash = (53 * hash) + getBackendLatency().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -9631,17 +9239,10 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Response.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -9771,7 +9372,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
         if (other.hasBackendLatency()) {
           mergeBackendLatency(other.getBackendLatency());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -9786,18 +9387,67 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.rpc.context.AttributeContext.Response parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8:
+                {
+                  code_ = input.readInt64();
+
+                  break;
+                } // case 8
+              case 16:
+                {
+                  size_ = input.readInt64();
+
+                  break;
+                } // case 16
+              case 26:
+                {
+                  com.google.protobuf.MapEntry<java.lang.String, java.lang.String> headers__ =
+                      input.readMessage(
+                          HeadersDefaultEntryHolder.defaultEntry.getParserForType(),
+                          extensionRegistry);
+                  internalGetMutableHeaders()
+                      .getMutableMap()
+                      .put(headers__.getKey(), headers__.getValue());
+                  break;
+                } // case 26
+              case 34:
+                {
+                  input.readMessage(getTimeFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 34
+              case 42:
+                {
+                  input.readMessage(
+                      getBackendLatencyFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 42
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.rpc.context.AttributeContext.Response) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -9948,7 +9598,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public boolean containsHeaders(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         return internalGetHeaders().getMap().containsKey(key);
       }
@@ -9988,7 +9638,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       public java.lang.String getHeadersOrDefault(
           java.lang.String key, java.lang.String defaultValue) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -10007,7 +9657,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public java.lang.String getHeadersOrThrow(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetHeaders().getMap();
         if (!map.containsKey(key)) {
@@ -10033,7 +9683,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder removeHeaders(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         internalGetMutableHeaders().getMutableMap().remove(key);
         return this;
@@ -10056,11 +9706,12 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder putHeaders(java.lang.String key, java.lang.String value) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         if (value == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map value");
         }
+
         internalGetMutableHeaders().getMutableMap().put(key, value);
         return this;
       }
@@ -10512,7 +10163,19 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Response(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -11048,168 +10711,6 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       return this.unknownFields;
     }
 
-    private Resource(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                service_ = s;
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                name_ = s;
-                break;
-              }
-            case 26:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                type_ = s;
-                break;
-              }
-            case 34:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  labels_ =
-                      com.google.protobuf.MapField.newMapField(
-                          LabelsDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
-                    input.readMessage(
-                        LabelsDefaultEntryHolder.defaultEntry.getParserForType(),
-                        extensionRegistry);
-                labels_.getMutableMap().put(labels__.getKey(), labels__.getValue());
-                break;
-              }
-            case 42:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                uid_ = s;
-                break;
-              }
-            case 50:
-              {
-                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                  annotations_ =
-                      com.google.protobuf.MapField.newMapField(
-                          AnnotationsDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> annotations__ =
-                    input.readMessage(
-                        AnnotationsDefaultEntryHolder.defaultEntry.getParserForType(),
-                        extensionRegistry);
-                annotations_.getMutableMap().put(annotations__.getKey(), annotations__.getValue());
-                break;
-              }
-            case 58:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                displayName_ = s;
-                break;
-              }
-            case 66:
-              {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (createTime_ != null) {
-                  subBuilder = createTime_.toBuilder();
-                }
-                createTime_ =
-                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(createTime_);
-                  createTime_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 74:
-              {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (updateTime_ != null) {
-                  subBuilder = updateTime_.toBuilder();
-                }
-                updateTime_ =
-                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(updateTime_);
-                  updateTime_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 82:
-              {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (deleteTime_ != null) {
-                  subBuilder = deleteTime_.toBuilder();
-                }
-                deleteTime_ =
-                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(deleteTime_);
-                  deleteTime_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 90:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                etag_ = s;
-                break;
-              }
-            case 98:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                location_ = s;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.rpc.context.AttributeContextProto
           .internal_static_google_rpc_context_AttributeContext_Resource_descriptor;
@@ -11449,7 +10950,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean containsLabels(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetLabels().getMap().containsKey(key);
     }
@@ -11487,7 +10988,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     public java.lang.String getLabelsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -11505,7 +11006,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public java.lang.String getLabelsOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
       if (!map.containsKey(key)) {
@@ -11613,7 +11114,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean containsAnnotations(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetAnnotations().getMap().containsKey(key);
     }
@@ -11655,7 +11156,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     public java.lang.String getAnnotationsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetAnnotations().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -11675,7 +11176,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public java.lang.String getAnnotationsOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetAnnotations().getMap();
       if (!map.containsKey(key)) {
@@ -12045,7 +11546,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, location_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -12104,7 +11605,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, location_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -12141,7 +11642,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       }
       if (!getEtag().equals(other.getEtag())) return false;
       if (!getLocation().equals(other.getLocation())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -12186,7 +11687,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       hash = (53 * hash) + getEtag().hashCode();
       hash = (37 * hash) + LOCATION_FIELD_NUMBER;
       hash = (53 * hash) + getLocation().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -12343,17 +11844,10 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       }
 
       // Construct using com.google.rpc.context.AttributeContext.Resource.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -12538,7 +12032,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           location_ = other.location_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -12553,18 +12047,113 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.rpc.context.AttributeContext.Resource parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  service_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+              case 18:
+                {
+                  name_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 18
+              case 26:
+                {
+                  type_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 26
+              case 34:
+                {
+                  com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
+                      input.readMessage(
+                          LabelsDefaultEntryHolder.defaultEntry.getParserForType(),
+                          extensionRegistry);
+                  internalGetMutableLabels()
+                      .getMutableMap()
+                      .put(labels__.getKey(), labels__.getValue());
+                  break;
+                } // case 34
+              case 42:
+                {
+                  uid_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 42
+              case 50:
+                {
+                  com.google.protobuf.MapEntry<java.lang.String, java.lang.String> annotations__ =
+                      input.readMessage(
+                          AnnotationsDefaultEntryHolder.defaultEntry.getParserForType(),
+                          extensionRegistry);
+                  internalGetMutableAnnotations()
+                      .getMutableMap()
+                      .put(annotations__.getKey(), annotations__.getValue());
+                  break;
+                } // case 50
+              case 58:
+                {
+                  displayName_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 58
+              case 66:
+                {
+                  input.readMessage(getCreateTimeFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 66
+              case 74:
+                {
+                  input.readMessage(getUpdateTimeFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 74
+              case 82:
+                {
+                  input.readMessage(getDeleteTimeFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 82
+              case 90:
+                {
+                  etag_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 90
+              case 98:
+                {
+                  location_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 98
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.rpc.context.AttributeContext.Resource) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -12991,7 +12580,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public boolean containsLabels(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         return internalGetLabels().getMap().containsKey(key);
       }
@@ -13029,7 +12618,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       public java.lang.String getLabelsOrDefault(
           java.lang.String key, java.lang.String defaultValue) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -13047,7 +12636,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public java.lang.String getLabelsOrThrow(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
         if (!map.containsKey(key)) {
@@ -13072,7 +12661,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder removeLabels(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         internalGetMutableLabels().getMutableMap().remove(key);
         return this;
@@ -13094,11 +12683,12 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder putLabels(java.lang.String key, java.lang.String value) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         if (value == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map value");
         }
+
         internalGetMutableLabels().getMutableMap().put(key, value);
         return this;
       }
@@ -13286,7 +12876,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public boolean containsAnnotations(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         return internalGetAnnotations().getMap().containsKey(key);
       }
@@ -13328,7 +12918,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       public java.lang.String getAnnotationsOrDefault(
           java.lang.String key, java.lang.String defaultValue) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetAnnotations().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -13348,7 +12938,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       @java.lang.Override
       public java.lang.String getAnnotationsOrThrow(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, java.lang.String> map = internalGetAnnotations().getMap();
         if (!map.containsKey(key)) {
@@ -13375,7 +12965,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder removeAnnotations(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         internalGetMutableAnnotations().getMutableMap().remove(key);
         return this;
@@ -13399,11 +12989,12 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
        */
       public Builder putAnnotations(java.lang.String key, java.lang.String value) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         if (value == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map value");
         }
+
         internalGetMutableAnnotations().getMutableMap().put(key, value);
         return this;
       }
@@ -14406,7 +13997,19 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Resource(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -14889,7 +14492,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     for (int i = 0; i < extensions_.size(); i++) {
       output.writeMessage(8, extensions_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -14922,7 +14525,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     for (int i = 0; i < extensions_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(8, extensions_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -14966,7 +14569,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       if (!getApi().equals(other.getApi())) return false;
     }
     if (!getExtensionsList().equals(other.getExtensionsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -15009,7 +14612,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       hash = (37 * hash) + EXTENSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getExtensionsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -15150,19 +14753,10 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
     }
 
     // Construct using com.google.rpc.context.AttributeContext.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-        getExtensionsFieldBuilder();
-      }
     }
 
     @java.lang.Override
@@ -15212,10 +14806,11 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
       }
       if (extensionsBuilder_ == null) {
         extensions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        extensions_ = null;
         extensionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -15385,7 +14980,7 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -15400,17 +14995,85 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.rpc.context.AttributeContext parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                input.readMessage(getSourceFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 10
+            case 18:
+              {
+                input.readMessage(getDestinationFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 18
+            case 26:
+              {
+                input.readMessage(getRequestFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 26
+            case 34:
+              {
+                input.readMessage(getResponseFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 34
+            case 42:
+              {
+                input.readMessage(getResourceFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 42
+            case 50:
+              {
+                input.readMessage(getApiFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 50
+            case 58:
+              {
+                input.readMessage(getOriginFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 58
+            case 66:
+              {
+                com.google.protobuf.Any m =
+                    input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
+                if (extensionsBuilder_ == null) {
+                  ensureExtensionsIsMutable();
+                  extensions_.add(m);
+                } else {
+                  extensionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.rpc.context.AttributeContext) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -17161,7 +16824,18 @@ public final class AttributeContext extends com.google.protobuf.GeneratedMessage
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new AttributeContext(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 

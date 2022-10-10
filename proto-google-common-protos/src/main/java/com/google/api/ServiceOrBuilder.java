@@ -1049,6 +1049,7 @@ public interface ServiceOrBuilder
    *
    * <code>.google.protobuf.UInt32Value config_version = 20 [deprecated = true];</code>
    *
+   * @deprecated
    * @return Whether the configVersion field is set.
    */
   @java.lang.Deprecated
@@ -1064,6 +1065,7 @@ public interface ServiceOrBuilder
    *
    * <code>.google.protobuf.UInt32Value config_version = 20 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The configVersion.
    */
   @java.lang.Deprecated

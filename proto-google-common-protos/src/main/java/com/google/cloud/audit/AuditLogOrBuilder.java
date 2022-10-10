@@ -534,6 +534,7 @@ public interface AuditLogOrBuilder
    *
    * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
    *
+   * @deprecated
    * @return Whether the serviceData field is set.
    */
   @java.lang.Deprecated
@@ -549,6 +550,7 @@ public interface AuditLogOrBuilder
    *
    * <code>.google.protobuf.Any service_data = 15 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The serviceData.
    */
   @java.lang.Deprecated

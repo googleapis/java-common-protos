@@ -61,6 +61,7 @@ public interface EndpointOrBuilder
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return A list containing the aliases.
    */
   @java.lang.Deprecated
@@ -78,6 +79,7 @@ public interface EndpointOrBuilder
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The count of aliases.
    */
   @java.lang.Deprecated
@@ -95,6 +97,7 @@ public interface EndpointOrBuilder
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @param index The index of the element to return.
    * @return The aliases at the given index.
    */
@@ -113,6 +116,7 @@ public interface EndpointOrBuilder
    *
    * <code>repeated string aliases = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @param index The index of the value to return.
    * @return The bytes of the aliases at the given index.
    */
