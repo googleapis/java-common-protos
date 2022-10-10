@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.4](https://github.com/googleapis/java-common-protos/compare/v2.8.3...v2.8.4) (2022-10-10)
+
+
+### Dependencies
+
+* Test building with newer library version ([#453](https://github.com/googleapis/java-common-protos/issues/453)) ([6800fd0](https://github.com/googleapis/java-common-protos/commit/6800fd01ac38d834ee94b167324e4e1d7b5530a4))
+
 ### [2.8.3](https://github.com/googleapis/java-common-protos/compare/v2.8.2...v2.8.3) (2022-04-12)
 
 
