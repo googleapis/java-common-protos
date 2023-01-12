@@ -1,6 +1,6 @@
 # Google Common Protos
 
-🚌 In January 2023, this library has moved to [gapic-generator-java/java-common-protos](https://github.com/googleapis/gapic-generator-java/tree/main//java-common-protos). This repository will be archived in the future. Future releases will appear in the new repository (https://github.com/googleapis/gapic-generator-java/releases).
+🚌 In January 2023, this library has moved to [gapic-generator-java/java-common-protos](https://github.com/googleapis/gapic-generator-java/tree/main/java-common-protos). This repository will be archived in the future. Future releases will appear in the new repository (https://github.com/googleapis/gapic-generator-java/releases).
 The Maven artifact coordinates (com.google.api.grpc:google-common-protos-parent) remain the same.
 
 Java protobuf classes for Google's common protos.
