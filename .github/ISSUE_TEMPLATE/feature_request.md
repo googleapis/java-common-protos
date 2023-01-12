@@ -3,7 +3,7 @@ name: Feature request
 about: Suggest an idea for this library
 
 ---
-
+This library has moved to [gapic-generator-java/java-common-protos](https://github.com/googleapis/gapic-generator-java/tree/main/java-common-protos). This repository will be archived in the future. Future releases will appear in the new repository (https://github.com/googleapis/gapic-generator-java/releases).
 Thanks for stopping by to let us know something could be better!
 
 **PLEASE READ**: If you have a support contract with Google, please create an issue in the [support console](https://cloud.google.com/support/) instead of filing on GitHub. This will ensure a timely response.
