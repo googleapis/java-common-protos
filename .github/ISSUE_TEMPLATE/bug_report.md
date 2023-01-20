@@ -3,6 +3,8 @@ name: Bug report
 about: Create a report to help us improve
 
 ---
+In January 2023, this library has moved to [gapic-generator-java/java-common-protos](https://github.com/googleapis/gapic-generator-java/tree/main/java-common-protos). This repository will be archived in the future. Future releases will appear in the new repository (https://github.com/googleapis/gapic-generator-java/releases).
+
 
 Thanks for stopping by to let us know something could be better!
 
