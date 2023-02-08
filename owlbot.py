@@ -40,5 +40,8 @@ java.common_templates(excludes=[
   '.github/workflows/samples.yaml',
   '.kokoro/dependencies.sh',
   '.github/ISSUE_TEMPLATE/bug_report.md',
-  '.github/ISSUE_TEMPLATE/feature_request.md'
+  '.github/ISSUE_TEMPLATE/feature_request.md',
+  '.kokoro/nightly/integration.cfg',
+  '.kokoro/nightly/java11-integration.cfg',
+  '.kokoro/nightly/samples.cfg'
 ])
