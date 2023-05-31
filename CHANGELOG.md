@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.12.0](https://github.com/googleapis/java-common-protos/compare/v2.11.0...v2.12.0) (2023-05-31)
+
+
+### Features
+
+* Add the google.rpc.context.AuditContext and google.rpc.http message to the open source ([#491](https://github.com/googleapis/java-common-protos/issues/491)) ([e824e21](https://github.com/googleapis/java-common-protos/commit/e824e21dfc8d1ed9f41d9d14484fc71924f86859))
+
+
+### Bug Fixes
+
+* Javadoc link in README.md ([#492](https://github.com/googleapis/java-common-protos/issues/492)) ([0ae8300](https://github.com/googleapis/java-common-protos/commit/0ae8300ebac16ac4ad2a15b92da4849620b2c5e7))
+
+
+### Dependencies
+
+* Update dependency com.google.protobuf:protobuf-bom to v3.21.12 ([#488](https://github.com/googleapis/java-common-protos/issues/488)) ([8165652](https://github.com/googleapis/java-common-protos/commit/8165652da18b2bd6e044ccea69df7de758bc5563))
+* Update dependency com.google.protobuf:protobuf-java to v3.21.12 ([#489](https://github.com/googleapis/java-common-protos/issues/489)) ([95ab1d8](https://github.com/googleapis/java-common-protos/commit/95ab1d8cd7b8c4f28f3cc7045c5054adcb2618cb))
+* Update dependency io.grpc:grpc-bom to v1.51.1 ([#496](https://github.com/googleapis/java-common-protos/issues/496)) ([ac02d9e](https://github.com/googleapis/java-common-protos/commit/ac02d9e90f0dab2e63bab3be5ab8967dc9e36b07))
+* Update dependency io.grpc:grpc-protobuf to v1.51.1 ([#497](https://github.com/googleapis/java-common-protos/issues/497)) ([56c64be](https://github.com/googleapis/java-common-protos/commit/56c64beed4d578dfa3d3c667fc895fc3ec72a596))
+* Update dependency io.grpc:grpc-stub to v1.51.1 ([#498](https://github.com/googleapis/java-common-protos/issues/498)) ([b2862d5](https://github.com/googleapis/java-common-protos/commit/b2862d5cddbb8a01def6f76f7e8eb213b1922437))
+
 ## [2.11.0](https://github.com/googleapis/java-common-protos/compare/v2.10.0...v2.11.0) (2022-11-21)
 
 
